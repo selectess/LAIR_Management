@@ -36,15 +36,15 @@ The LAIRM corpus is articulated around **19 fundamental axioms** designated by t
   
 | Volume I: Fundamental Axioms (2026) | Volume II: Prospective Axioms (2028-2033) |
 |:----------------------------------:|:-----------------------------------------:|
-| Ψ-I Human Supremacy | Ψ-X Energy Sovereignty |
-| Ψ-II Agentive Identity | Ψ-XI Prohibited Weapons |
-| Ψ-III Cascading Responsibility | Ψ-XII Cognitive Frontier |
-| Ψ-IV Continuous Supervision | Ψ-XIII Existential Risk |
-| Ψ-V Interoperability | Ψ-XIV Global Justice |
-| Ψ-VI Immutable Audit | Ψ-XV Technical Resilience |
-| Ψ-VII Local Adaptation | Ψ-XVI Spatial Jurisdiction |
-| Ψ-VIII Programmable Ethics | Ψ-XVII Evolved Humanity |
-| Ψ-IX Hybrid Governance | Ψ-XVIII–XIX [Reserved] |
+| Ψ-I Suprematia Humana | Ψ-X Energia Sustinenda |
+| Ψ-II Identitas Agentica | Ψ-XI Arma Prohibita |
+| Ψ-III Responsabilitas | Ψ-XII Cognitio Limita |
+| Ψ-IV Circulus Clausus | Ψ-XIII Risicum Existentiale |
+| Ψ-V Interoperabilitas | Ψ-XIV Iustitia Mundana |
+| Ψ-VI Auditum Immutabile | Ψ-XV Resilientia Systematica |
+| Ψ-VII Adaptatio Localis | Ψ-XVI Spatium Iurisdictio |
+| Ψ-VIII Ethica Programmata | Ψ-XVII Humanitas Transformata |
+| Ψ-IX Gubernatio Hybrida | Ψ-XVIII–XIX [Reserved] |
 
 </div>
 
@@ -100,29 +100,29 @@ The theoretical foundations of LAIRM are developed across 28 chapters organized 
 
 | Chapter | Paradigm | Axiom |
 |---------|----------|-------|
-| 10 | Sovereignty | Ψ-I Human Supremacy |
-| 11 | Identity | Ψ-II Agentive Identity |
-| 12 | Responsibility | Ψ-III Cascading Responsibility |
-| 13 | Supervision | Ψ-IV Continuous Supervision |
-| 14 | Interoperability | Ψ-V Interoperability |
-| 15 | Audit | Ψ-VI Immutable Audit |
-| 16 | Adaptation | Ψ-VII Local Adaptation |
-| 17 | Ethics | Ψ-VIII Programmable Ethics |
-| 18 | Governance | Ψ-IX Hybrid Governance |
+| 10 | Sovereignty | Ψ-I Suprematia Humana |
+| 11 | Identity | Ψ-II Identitas Agentica |
+| 12 | Responsibility | Ψ-III Responsabilitas |
+| 13 | Supervision | Ψ-IV Circulus Clausus |
+| 14 | Interoperability | Ψ-V Interoperabilitas |
+| 15 | Audit | Ψ-VI Auditum Immutabile |
+| 16 | Adaptation | Ψ-VII Adaptatio Localis |
+| 17 | Ethics | Ψ-VIII Ethica Programmata |
+| 18 | Governance | Ψ-IX Gubernatio Hybrida |
 | 19 | Legislative Corpus | Complete axiom articulation |
 
 ### PART IV: PROSPECTIVE (Chapters 20-27)
 
 | Chapter | Title | Horizon |
 |---------|-------|---------|
-| 20 | Energy Sovereignty | Ψ-X - Sustainable agent operations |
-| 21 | Autonomous Weapons | Ψ-XI - LAWS prohibition framework |
-| 22 | Cognitive Frontier | Ψ-XII - BCI and cognitive augmentation |
-| 23 | Existential Risks | Ψ-XIII - Systemic risk management |
-| 24 | Geoeconomic Justice | Ψ-XIV - North-South equity |
-| 25 | Technological Resilience | Ψ-XV - Quantum and cyber threats |
-| 26 | Spatial Jurisdiction | Ψ-XVI - Extraterrestrial governance |
-| 27 | Humanity 2.0 | Ψ-XVII - Augmented humanity |
+| 20 | Energy Sovereignty | Ψ-X Energia Sustinenda |
+| 21 | Autonomous Weapons | Ψ-XI Arma Prohibita |
+| 22 | Cognitive Frontier | Ψ-XII Cognitio Limita |
+| 23 | Existential Risks | Ψ-XIII Risicum Existentiale |
+| 24 | Geoeconomic Justice | Ψ-XIV Iustitia Mundana |
+| 25 | Technological Resilience | Ψ-XV Resilientia Systematica |
+| 26 | Spatial Jurisdiction | Ψ-XVI Spatium Iurisdictio |
+| 27 | Humanity 2.0 | Ψ-XVII Humanitas Transformata |
 
 ---
 
