@@ -1,162 +1,240 @@
 <div align="center">
-  <img src="LAIRM/ImFro.jpeg" alt="LAIRM - The Cybernetic Criterion" width="600">
+  <img src="LAIRM/ImFro.jpeg" alt="LAIRM - The Cybernetic Criterion" width="700">
   
   <h1>LAIRM</h1>
   <h3>The Cybernetic Criterion</h3>
   <p><strong>Legislature for Autonomous Intelligent Resources Management</strong></p>
   <p><em>Global Agentive Constitution 2026–2036</em></p>
-  
-  <p>
-    <a href="#overview">Overview</a> •
-    <a href="#framework">Framework</a> •
-    <a href="#structure">Structure</a> •
-    <a href="#license">License</a>
-  </p>
 </div>
 
 ---
 
-## Overview
+In March 2026, the global economy counts approximately 127 million operational autonomous agents deployed across critical sectors—finance, healthcare, logistics, defense, energy, and governance. These systems make daily decisions with economic, social, and sometimes vital repercussions. They trade billions in milliseconds, diagnose medical conditions, optimize supply chains, manage power grids, and increasingly participate in decisions affecting human lives.
 
-LAIRM establishes the first comprehensive international legislative framework for autonomous agent governance. In an era where **127 million autonomous agents** operate without legal framework, LAIRM provides the constitutional foundation for responsible AI governance.
+Yet no coherent international legal framework defines their status, responsibilities, or applicable control mechanisms.
 
-### Key Statistics
+**LAIRM** (*Legislature for Autonomous Intelligent Resources Management*) constitutes the first comprehensive international legislative corpus for the governance of intelligent autonomous agents. This Global Agentive Constitution establishes the principles, norms, and control mechanisms necessary to ensure that autonomous AI systems operate in accordance with human values and the public interest.
 
-| Element | Count | Status |
-|---------|-------|--------|
-| **Fundamental Axioms** | 19 | ✅ Complete |
-| **Legislative Articles** | 361 | ✅ Complete |
-| **Reference Chapters** | 28 | ✅ Complete |
-| **Languages** | 11 | ✅ Complete |
-| **Implementations** | 10 | ✅ Production Ready |
+<div align="center">
+  <img src="https://img.shields.io/badge/Axioms-19-blue" alt="19 Axioms">
+  <img src="https://img.shields.io/badge/Articles-361-green" alt="361 Articles">
+  <img src="https://img.shields.io/badge/Chapters-28-orange" alt="28 Chapters">
+  <img src="https://img.shields.io/badge/License-CC--BY--SA--4.0-purple" alt="CC-BY-SA-4.0">
+</div>
 
 ---
 
-## Framework
+## THE PROJECT
 
-### The Problem
+LAIRM builds upon an intellectual tradition whose main references include Claude Shannon and his mathematical theory of communication, Norbert Wiener and cybernetics, Isaac Asimov and his Three Laws of Robotics—the first attempt at normative formalization for autonomous machines—as well as the contemporary works of Nick Bostrom on existential risks, Stuart Russell on value alignment, and the deep learning pioneers Yoshua Bengio and Geoffrey Hinton.
 
-```
-127M autonomous agents → 0 comprehensive frameworks → 14 major failures (Q1 2026)
-```
+The project's subtitle, "The Cybernetic Criterion," pays homage to this tradition. The criterion is this: for any autonomous system operating in human society, there must exist verifiable mechanisms ensuring alignment with human values, accountability for decisions, and the capacity for human intervention when systems deviate from their intended purposes. This criterion is not merely technical but fundamentally normative—it reflects a choice about the relationship between human agency and artificial agency.
 
-### The Solution
+The LAIRM corpus is articulated around **19 fundamental axioms** designated by the symbol Ψ (Psi), chosen for its connotation of fundamental principle in sciences. These axioms unfold into **361 executable articles**, each following a rigorous six-section structure: imperative norm, legal foundation, technical specification, reference implementation, verification mechanisms and sanctions, entry into force modalities.
 
-**Three Integrated Dimensions:**
-
-1. **Technical (ARAM)** — Agent Passport, Kill-Switch, MCP/A2A Protocols, Audit Ledger
-2. **Legislative (LAIRM)** — 19 Axioms, 361 Executable Articles, 6-Section Structure
-3. **Operational** — GPAI, ISO, UN Adoption Vectors
-
-### The 19 Fundamental Axioms
-
-| Volume I: Fundamental (2026) | Volume II: Prospective (2028-2033) |
-|------------------------------|-------------------------------------|
+<div align="center">
+  
+| Volume I: Fundamental Axioms (2026) | Volume II: Prospective Axioms (2028-2033) |
+|:----------------------------------:|:-----------------------------------------:|
 | Ψ-I Human Supremacy | Ψ-X Energy Sovereignty |
-| Ψ-II Agentive Identity | Ψ-XI Weapons Prohibition |
+| Ψ-II Agentive Identity | Ψ-XI Prohibited Weapons |
 | Ψ-III Cascading Responsibility | Ψ-XII Cognitive Frontier |
-| Ψ-IV Continuous Supervision | Ψ-XIII Existential Risks |
-| Ψ-V Interoperability | Ψ-XIV Economic Justice |
-| Ψ-VI Immutable Audit | Ψ-XV Systemic Resilience |
+| Ψ-IV Continuous Supervision | Ψ-XIII Existential Risk |
+| Ψ-V Interoperability | Ψ-XIV Global Justice |
+| Ψ-VI Immutable Audit | Ψ-XV Technical Resilience |
 | Ψ-VII Local Adaptation | Ψ-XVI Spatial Jurisdiction |
-| Ψ-VIII Programmable Ethics | Ψ-XVII Human Augmentation |
-| Ψ-IX Hybrid Governance | Ψ-XVIII Cosmic Charter |
-| | Ψ-XIX Global Justice |
+| Ψ-VIII Programmable Ethics | Ψ-XVII Evolved Humanity |
+| Ψ-IX Hybrid Governance | Ψ-XVIII–XIX [Reserved] |
+
+</div>
 
 ---
 
-## Structure
+## THREE INTEGRATED DIMENSIONS
 
-```
-LAIRM/
-├── 00-METADATA/                    # Project documentation
-│   ├── INTRODUCTION.md
-│   ├── TERMINOLOGY.md
-│   ├── glossary.md
-│   └── bibliography.md
-│
-├── 01-COMPENDIUM-REFERENCE/        # 28 theoretical chapters
-│   ├── PART-I-FOUNDATIONS/         # Chapters 0-5
-│   ├── PART-II-DIMENSIONS/         # Chapters 6-9
-│   ├── PART-III-PARADIGMS/         # Chapters 10-19
-│   └── PART-IV-PROSPECTIVE/        # Chapters 20-27
-│
-├── 02-COMPENDIUM-LEGISLATIVE/      # 361 legislative articles
-│   ├── AXIOM-I-SUPREMATIA/         # 19 articles
-│   ├── AXIOM-II-IDENTITAS/         # 19 articles
-│   └── ... (19 axioms total)
-│
-├── 03-TECHNICAL-ANNEXES/           # Specifications & implementations
-│   ├── specifications/             # Protocol specs
-│   ├── implementations/            # Python, Rust, Go, Solidity
-│   └── schemas/                    # JSON/YAML schemas
-│
-├── 04-REPORTS-ANALYSES/            # Case studies & impact analyses
-│   └── case-studies/               # Knight Capital, Flash Crash, Boeing
-│
-├── 05-TOOLS/                       # SDKs & developer tools
-│   ├── agent-framework/
-│   ├── audit-engine/
-│   └── compliance-checker/
-│
-└── 06-ACADEMIC-SUBMISSIONS/        # Academic papers & presentations
-```
+LAIRM distinguishes itself through the integration of three complementary dimensions that ensure the operability of the normative framework.
+
+<div align="center">
+  
+| Dimension | Component | Description |
+|-----------|-----------|-------------|
+| **Technical** | ARAM | Open-source implementation framework |
+| **Legislative** | LAIRM | Normative corpus (19 axioms, 361 articles) |
+| **Operational** | Adoption | International deployment strategy |
+
+</div>
+
+The **technical dimension** (ARAM—Autonomous Resources Allocation Management) provides the open-source tools necessary for concrete implementation of legislative obligations: Agent Passport (decentralized DID identity), Universal Kill-Switch (emergency stop under 500ms), MCP/A2A Protocols (communication standards), Audit Ledger (immutable decision register). These implementations are available in Python, Rust, Go, and Solidity.
+
+The **legislative dimension** constitutes the normative corpus proper, structured according to the 19 × 19 matrix with the standardized six-section structure.
+
+The **operational dimension** defines the international deployment strategy via three complementary vectors: GPAI (multilateral recommendations), ISO (technical standardization), UN (international treaties and arbitration).
 
 ---
 
-## Deployment Timeline
+## REFERENCE COMPENDIUM
 
-| Phase | Year | Jurisdictions | Objective |
-|-------|------|---------------|-----------|
-| **Pilot** | 2026 | 3+ | Technical feasibility |
-| **Expansion** | 2027 | 10+ | Regional adoption |
-| **Reference** | 2028 | 50+ | De facto standard |
-| **Universal** | 2030 | 100+ | Global governance |
+The theoretical foundations of LAIRM are developed across 28 chapters organized in four parts:
+
+### PART I: FOUNDATIONS (Chapters 0-5)
+
+| Chapter | Title | Focus |
+|---------|-------|-------|
+| 0 | General Introduction | Project genesis, architecture, methodology |
+| 1 | Historical Context | Evolution from Turing (1950) to agentic era (2026) |
+| 2 | Fundamental Principles | Core normative foundations |
+| 3 | Systemic Architecture | Structural framework design |
+| 4 | Methodology | Drafting approach and academic standards |
+| 5 | Legal Framework | Juridical foundations and transposition |
+
+### PART II: DIMENSIONS (Chapters 6-9)
+
+| Chapter | Title | Focus |
+|---------|-------|-------|
+| 6 | Technical Dimension | Protocols, architectures, implementations |
+| 7 | Legal Dimension | Liability, jurisdiction, enforcement |
+| 8 | Ethical Dimension | Values, alignment, moral frameworks |
+| 9 | Economic Dimension | Markets, externalities, incentives |
+
+### PART III: PARADIGMS (Chapters 10-19)
+
+| Chapter | Paradigm | Axiom |
+|---------|----------|-------|
+| 10 | Sovereignty | Ψ-I Human Supremacy |
+| 11 | Identity | Ψ-II Agentive Identity |
+| 12 | Responsibility | Ψ-III Cascading Responsibility |
+| 13 | Supervision | Ψ-IV Continuous Supervision |
+| 14 | Interoperability | Ψ-V Interoperability |
+| 15 | Audit | Ψ-VI Immutable Audit |
+| 16 | Adaptation | Ψ-VII Local Adaptation |
+| 17 | Ethics | Ψ-VIII Programmable Ethics |
+| 18 | Governance | Ψ-IX Hybrid Governance |
+| 19 | Legislative Corpus | Complete axiom articulation |
+
+### PART IV: PROSPECTIVE (Chapters 20-27)
+
+| Chapter | Title | Horizon |
+|---------|-------|---------|
+| 20 | Energy Sovereignty | Ψ-X - Sustainable agent operations |
+| 21 | Autonomous Weapons | Ψ-XI - LAWS prohibition framework |
+| 22 | Cognitive Frontier | Ψ-XII - BCI and cognitive augmentation |
+| 23 | Existential Risks | Ψ-XIII - Systemic risk management |
+| 24 | Geoeconomic Justice | Ψ-XIV - North-South equity |
+| 25 | Technological Resilience | Ψ-XV - Quantum and cyber threats |
+| 26 | Spatial Jurisdiction | Ψ-XVI - Extraterrestrial governance |
+| 27 | Humanity 2.0 | Ψ-XVII - Augmented humanity |
 
 ---
 
-## Quick Start
+## REPORTS AND ANALYSES
 
-### For Researchers
+### Case Studies
 
-```bash
-# Read the preface
-open LAIRM/00-METADATA/preface.md
+Documented incidents demonstrating systemic failures in autonomous system governance:
 
-# Explore the legislative corpus
-open LAIRM/02-COMPENDIUM-LEGISLATIVE/README.md
-```
+| Case | Year | Impact | Key Failure |
+|------|------|--------|-------------|
+| Knight Capital | 2012 | $440M loss in 45 min | Absent kill-switch |
+| Flash Crash | 2010 | Dow -998.5 points in 5 min | Non-attributable responsibility |
+| Boeing 737 MAX | 2018-2019 | 346 fatalities | Non-existent system identity |
 
-### For Developers
+### Impact Analyses
 
-```bash
-# Install LAIRM SDK
-pip install lairm-sdk
+- **Economic Impact Analysis** — Market effects, adoption trajectories, cost-benefit assessment
 
-# Run compliance checker
-python -m lairm.compliance_checker --agent-config config.yaml
+### Validation Reports
 
-# Start audit engine
-python -m lairm.audit_engine --port 8080
-```
-
-### For Policy Makers
-
-```bash
-# Read the framework overview
-open LAIRM/00-METADATA/INTRODUCTION.md
-
-# Review the 19 axioms
-open LAIRM/01-COMPENDIUM-REFERENCE/PART-III-PARADIGMS/
-```
+- **Framework Compliance Report** — Axiom verification, article validation, consistency metrics
 
 ---
 
-## Citation
+## VALIDITY PERIOD AND DEPLOYMENT
+
+The validity period **2026–2036** reflects the critical decade for establishing international standards. Historical technology adoption curves demonstrate the rapid proliferation of transformative technologies—smartphones reached one billion users in eight years, cloud computing in ten. Autonomous agent systems show similar adoption trajectories.
+
+<div align="center">
+  
+| Phase | Year | Objective | Acceptations |
+|-------|------|-----------|--------------|
+| Pilot | 2026 | Technical feasibility | Initial implementation |
+| Expansion | 2027 | Regional adoption | Open source contribution |
+| Reference | 2028 | De facto standard | Adoption & scale |
+| Universal | 2036 | Adoption | Evolution |
+
+</div>
+
+This exponential expansion leaves a limited time window to establish normative frameworks before the system becomes too complex to be effectively regulated.
+
+---
+
+## CALL FOR CONTRIBUTION
+
+LAIRM is designed as an open collaborative project. The complexity of issues raised by agentic systems requires multidisciplinary expertise and diversified geographical representation.
+
+<div align="center">
+  
+| Domain of Expertise | Sought Contributions |
+|---------------------|----------------------|
+| International law | Compatibility with existing instruments, enforcement mechanisms |
+| Philosophy and ethics | Normative foundations, theories of responsibility |
+| Systems engineering | Technical feasibility, control architectures |
+| Economic sciences | Impact analysis, incentive mechanisms |
+| Regulation and public policy | Practical applicability, transposition |
+| Civil society | Human rights, Global South representation |
+
+</div>
+
+**Contribution process**:
+
+1. Review of the concerned chapter or article
+2. Amendment submission via GitHub repository
+3. Review by editorial committee
+4. Integration with justification or reasoned rejection
+
+**Contact**: selectess@gmail.com  
+**Repository**: https://github.com/selectess/LAIR_Management
+
+### Editorial Committee
+
+**Current members**:
+- Mehdi Wahbi (Founder, System Architect)
+
+**Open positions (2026 recruitment)**:
+- 5 international legal scholars
+- 3 ethics philosophers
+- 4 systems engineers
+- 2 economists
+- 2 regulators
+- 2 civil society representatives
+
+Selection criteria include recognized expertise, academic publications or significant professional experience, and commitment to geographic and cultural diversity.
+
+---
+
+## WHAT LAIRM IS NOT
+
+It is important to clearly establish what this document is not:
+
+**This document is not a prediction** — The prospective scenarios presented constitute extrapolations based on trends observed in 2026, not certainties.
+
+**This document is not a dogma** — The proposed axioms constitute normative hypotheses subject to democratic debate and peer review.
+
+**This document is not a universal solution** — Implementation modalities will necessarily need to be adapted to local legal, cultural, and technological contexts.
+
+**This document is not definitive** — LAIRM is designed as an evolving instrument, intended to be amended, extended, and potentially replaced.
+
+However, this document constitutes:
+
+- **A structured starting point** — The first complete agentic constitution offering a coherent framework for international debate
+- **A call to action** — A response to the urgency created by the current legal void
+- **An invitation to collaboration** — An open project aiming to collectively build the normative foundations of the agentic era
+
+---
+
+## CITATION
 
 ```bibtex
 @misc{lairm2026,
-  author       = {Wahbi, Mehdi},
   title        = {LAIRM: The Cybernetic Criterion},
   subtitle     = {Legislature for Autonomous Intelligent Resources Management},
   year         = {2026},
@@ -168,21 +246,15 @@ open LAIRM/01-COMPENDIUM-REFERENCE/PART-III-PARADIGMS/
 
 ---
 
-## License
+## LICENSE
 
-This project is licensed under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC-BY-SA-4.0)**.
+This project is published under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC-BY-SA-4.0)**.
 
-You are free to:
-- **Share** — copy and redistribute the material in any medium or format
-- **Adapt** — remix, transform, and build upon the material for any purpose
-
-Under the following terms:
-- **Attribution** — You must give appropriate credit
-- **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license
+You are free to share and adapt the material, provided appropriate attribution is given and distribution is under the same license.
 
 ---
 
-## Contact
+## CONTACT
 
 **Founder & System Architect**: Mehdi Wahbi  
 **Email**: selectess@gmail.com  
@@ -192,9 +264,11 @@ Under the following terms:
 ---
 
 <div align="center">
-  <p><em>"Agentic systems represent a civilizational bifurcation. LAIRM proposes a path toward the responsible, beneficial agentic era aligned with fundamental human values."</em></p>
   
-  <p><strong>LAIRM — The Cybernetic Criterion</strong><br>
-  <em>Global Agentive Constitution 2026–2036</em><br>
-  <em>"Governing the Future of Autonomous Intelligence"</em></p>
+*"Agentic systems represent a civilizational bifurcation. LAIRM proposes a path toward the responsible, beneficial agentic era aligned with fundamental human values. This path is not imposed but offered to humanity's collective deliberation."*
+
+**LAIRM — The Cybernetic Criterion**  
+*Global Agentive Constitution 2026–2036*  
+*"Governing the Future of Autonomous Intelligence"*
+
 </div>
