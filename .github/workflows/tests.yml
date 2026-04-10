@@ -24,18 +24,18 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r LAIRM/05-OUTILS/requirements.txt
+        pip install -r LAIRM/05-TOOLS/requirements.txt
         pip install pytest pytest-cov pytest-xdist
 
     - name: Run tests
       run: |
-        cd LAIRM/05-OUTILS
+        cd LAIRM/05-TOOLS
         pytest tests/ -v --cov=. --cov-report=xml --cov-report=html
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
-        file: ./LAIRM/05-OUTILS/coverage.xml
+        file: ./LAIRM/05-TOOLS/coverage.xml
         flags: unittests
         name: codecov-umbrella
         fail_ci_if_error: false

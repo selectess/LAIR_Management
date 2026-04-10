@@ -34,7 +34,7 @@ jobs:
     
     - name: Run LAIRM structure validation
       run: |
-        python LAIRM/05-OUTILS/scripts/validate_structure.py
+        python LAIRM/05-TOOLS/scripts/validate_structure.py
     
     - name: Upload validation report
       if: always()

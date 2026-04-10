@@ -25,17 +25,17 @@ jobs:
 
     - name: Run Black (code formatter)
       run: |
-        black LAIRM/05-OUTILS --check --diff
+        black LAIRM/05-TOOLS --check --diff
 
     - name: Run isort (import sorter)
       run: |
-        isort LAIRM/05-OUTILS --check-only --diff
+        isort LAIRM/05-TOOLS --check-only --diff
 
     - name: Run Flake8 (linter)
       run: |
-        flake8 LAIRM/05-OUTILS --count --select=E9,F63,F7,F82 --show-source --statistics
-        flake8 LAIRM/05-OUTILS --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        flake8 LAIRM/05-TOOLS --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 LAIRM/05-TOOLS --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
     - name: Run mypy (type checker)
       run: |
-        mypy LAIRM/05-OUTILS --ignore-missing-imports || true
+        mypy LAIRM/05-TOOLS --ignore-missing-imports || true

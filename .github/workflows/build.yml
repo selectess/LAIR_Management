@@ -26,19 +26,19 @@ jobs:
 
     - name: Build package
       run: |
-        cd LAIRM/05-OUTILS
+        cd LAIRM/05-TOOLS
         python -m build
 
     - name: Check package
       run: |
-        cd LAIRM/05-OUTILS
+        cd LAIRM/05-TOOLS
         twine check dist/*
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
         name: python-package-distributions
-        path: LAIRM/05-OUTILS/dist/
+        path: LAIRM/05-TOOLS/dist/
 
   publish:
     if: startsWith(github.ref, 'refs/tags')
