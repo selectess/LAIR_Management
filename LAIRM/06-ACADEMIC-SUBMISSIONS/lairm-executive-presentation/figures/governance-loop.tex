@@ -1,0 +1,65 @@
+% Cybernetic Governance Loop
+% Illustrating the closed-loop control principle
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=3cm,
+    block/.style={rectangle, draw, fill=blue!20, text width=2.5cm, align=center, minimum height=1.5cm, rounded corners, font=\small\bfseries},
+    decision/.style={diamond, draw, fill=yellow!20, text width=2cm, align=center, aspect=2, font=\small},
+    arrow/.style={->, >=stealth, very thick},
+    feedback/.style={->, >=stealth, very thick, color=red!70, dashed}
+]
+
+% Main control loop
+\node[block] (human) {HUMAN AUTHORITY};
+\node[block, right=of human] (policy) {POLICY\\DEFINITION};
+\node[block, below=of policy] (agent) {AUTONOMOUS\\AGENT};
+\node[block, below=of human] (monitor) {MONITORING\\SYSTEM};
+\node[decision, right=of agent] (check) {Compliant?};
+\node[block, below=of check] (enforce) {ENFORCEMENT};
+
+% Forward path
+\draw[arrow] (human) -- (policy) node[midway, above, font=\footnotesize] {Axioms};
+\draw[arrow] (policy) -- (agent) node[midway, right, font=\footnotesize] {Rules};
+\draw[arrow] (agent) -- (check) node[midway, above, font=\footnotesize] {Actions};
+
+% Decision branches
+\draw[arrow, color=green!70] (check) -- ++(0,-1.5) node[midway, right, font=\footnotesize] {Yes} -- ++(-3,0) |- (monitor);
+\draw[arrow, color=red!70] (check) -- (enforce) node[midway, right, font=\footnotesize] {No};
+
+% Feedback loops
+\draw[feedback] (monitor) -- (human) node[midway, left, font=\footnotesize] {Audit Reports};
+\draw[feedback] (enforce) -| (human) node[near end, right, font=\footnotesize] {Violations};
+\draw[feedback] (enforce) -- (agent) node[midway, right, font=\footnotesize] {Sanctions};
+
+% Environment interaction
+\node[block, fill=gray!20, right=4cm of agent] (environment) {ENVIRONMENT\\(Users, Systems)};
+\draw[arrow, <->] (agent) -- (environment) node[midway, above, font=\footnotesize] {Interactions};
+\draw[feedback] (environment) |- (monitor) node[near end, above, font=\footnotesize] {Observations};
+
+% Annotations
+\node[above=0.3cm of human, font=\footnotesize\itshape, text width=3cm, align=center] {
+    \textit{Suprematia Humana}\\
+    (Axiom Ψ-I)
+};
+
+\node[below=0.3cm of agent, font=\footnotesize\itshape, text width=3cm, align=center] {
+    \textit{Identitas Perpetua}\\
+    (Axiom Ψ-II)
+};
+
+\node[below=0.3cm of monitor, font=\footnotesize\itshape, text width=3cm, align=center] {
+    \textit{Auditabilitas Perpetua}\\
+    (Axiom Ψ-V)
+};
+
+% Title box
+\node[draw, fill=white, text width=10cm, align=center, font=\small\bfseries, above=2.5cm of policy] {
+    THE CYBERNETIC CRITERION: CLOSED-LOOP GOVERNANCE
+};
+
+\end{tikzpicture}
+\caption{The Cybernetic Governance Loop: Implementing Wiener's principle of control through continuous feedback. Human authority defines policies, agents execute within constraints, monitoring systems detect deviations, and enforcement mechanisms close the loop—ensuring \textit{meaningful human control} over autonomous systems.}
+\label{fig:governance-loop}
+\end{figure}

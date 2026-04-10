@@ -1,0 +1,96 @@
+% Global Adoption Timeline 2026-2036
+% Gantt-style roadmap visualization
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    phase/.style={rectangle, draw, fill=#1, minimum height=0.8cm, anchor=west},
+    milestone/.style={circle, draw, fill=red!70, minimum size=0.4cm},
+    font=\small
+]
+
+% Timeline axis
+\draw[thick, ->] (0,0) -- (14,0) node[right] {Year};
+\foreach \x/\year in {0/2026, 2/2027, 4/2028, 6/2029, 8/2030, 10/2032, 12/2034, 14/2036} {
+    \draw (\x,0.1) -- (\x,-0.1) node[below, font=\footnotesize] {\year};
+}
+
+% Phase I: Pilot Programs (2026-2027)
+\node[phase=blue!30, minimum width=2cm] at (0,2) (p1) {};
+\node[right=0.1cm of p1.west, anchor=west] {\textbf{Phase I}: Pilot Programs};
+\node[below=0.1cm of p1, font=\footnotesize, text width=4cm, align=left] {
+    • 10 jurisdictions\\
+    • 1,000 certified agents\\
+    • Regulatory sandbox
+};
+
+% Milestone: First Certification
+\node[milestone] at (1,2) {};
+\node[above=0.1cm, font=\tiny] at (1,2) {First\\Cert};
+
+% Phase II: Regional Expansion (2027-2030)
+\node[phase=green!30, minimum width=6cm] at (2,4) (p2) {};
+\node[right=0.1cm of p2.west, anchor=west] {\textbf{Phase II}: Regional Expansion};
+\node[below=0.1cm of p2, font=\footnotesize, text width=6cm, align=left] {
+    • 100 jurisdictions\\
+    • 10M certified agents\\
+    • ISO standardization\\
+    • Industry consortia
+};
+
+% Milestone: ISO Standard
+\node[milestone] at (4,4) {};
+\node[above=0.1cm, font=\tiny] at (4,4) {ISO\\42002};
+
+% Milestone: 1M Agents
+\node[milestone] at (6,4) {};
+\node[above=0.1cm, font=\tiny] at (6,4) {1M\\Agents};
+
+% Phase III: Universal Adoption (2030-2036)
+\node[phase=orange!30, minimum width=6cm] at (8,6) (p3) {};
+\node[right=0.1cm of p3.west, anchor=west] {\textbf{Phase III}: Universal Adoption};
+\node[below=0.1cm of p3, font=\footnotesize, text width=6cm, align=left] {
+    • 195+ nations\\
+    • 500M+ certified agents\\
+    • UN treaty ratification\\
+    • Global enforcement
+};
+
+% Milestone: UN Treaty
+\node[milestone] at (10,6) {};
+\node[above=0.1cm, font=\tiny] at (10,6) {UN\\Treaty};
+
+% Milestone: Universal Coverage
+\node[milestone] at (14,6) {};
+\node[above=0.1cm, font=\tiny] at (14,6) {Universal\\Coverage};
+
+% Parallel tracks
+\draw[thick, dashed, color=purple!60] (0,1) -- (14,1);
+\node[left] at (0,1) {\footnotesize Technical Development};
+
+\draw[thick, dashed, color=brown!60] (0,0.3) -- (14,0.3);
+\node[left] at (0,0.3) {\footnotesize Legal Harmonization};
+
+% Key deliverables
+\node[draw, fill=purple!10, text width=2cm, align=center, font=\tiny] at (2,1) {ARAM v1.0};
+\node[draw, fill=purple!10, text width=2cm, align=center, font=\tiny] at (6,1) {ARAM v2.0\\(AGI-ready)};
+\node[draw, fill=purple!10, text width=2cm, align=center, font=\tiny] at (12,1) {ARAM v3.0\\(Quantum-safe)};
+
+\node[draw, fill=brown!10, text width=2cm, align=center, font=\tiny] at (3,0.3) {Model Law};
+\node[draw, fill=brown!10, text width=2cm, align=center, font=\tiny] at (7,0.3) {Regional Treaties};
+\node[draw, fill=brown!10, text width=2cm, align=center, font=\tiny] at (11,0.3) {Global Convention};
+
+% Legend
+\node[below=1.5cm of p1, anchor=west] (legend) {
+    \begin{tabular}{ll}
+    \tikz\node[phase=blue!30, minimum width=0.5cm, minimum height=0.3cm] {}; & Pilot Phase \\
+    \tikz\node[phase=green!30, minimum width=0.5cm, minimum height=0.3cm] {}; & Expansion Phase \\
+    \tikz\node[phase=orange!30, minimum width=0.5cm, minimum height=0.3cm] {}; & Universal Phase \\
+    \tikz\node[milestone, minimum size=0.2cm] {}; & Key Milestone \\
+    \end{tabular}
+};
+
+\end{tikzpicture}
+\caption{LAIRM Global Deployment Roadmap (2026-2036): A phased approach from pilot programs in 10 jurisdictions to universal adoption across 195+ nations, with parallel technical development and legal harmonization tracks. Key milestones include ISO standardization (2028), UN treaty ratification (2032), and universal coverage (2036).}
+\label{fig:timeline-adoption}
+\end{figure}

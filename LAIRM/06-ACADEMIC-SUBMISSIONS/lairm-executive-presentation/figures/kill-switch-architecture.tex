@@ -1,0 +1,32 @@
+% Kill-Switch Architecture Diagram
+\begin{tikzpicture}[scale=0.9, every node/.style={font=\small}]
+    % Main agent box
+    \draw[fill=axiomblue!10, draw=axiomblue, line width=2pt, rounded corners=5pt] (0,0) rectangle (4,3);
+    \node[font=\bfseries, color=axiomblue] at (2, 2.7) {Autonomous Agent};
+    
+    % Three kill-switch channels
+    \draw[fill=articlegreen!10, draw=articlegreen, line width=2pt, rounded corners=3pt] (-3, 2) rectangle (-1, 2.8);
+    \node[font=\bfseries\small, color=articlegreen] at (-2, 2.4) {Network Channel};
+    
+    \draw[fill=articlegreen!10, draw=articlegreen, line width=2pt, rounded corners=3pt] (-3, 0.8) rectangle (-1, 1.6);
+    \node[font=\bfseries\small, color=articlegreen] at (-2, 1.2) {Hardware Channel};
+    
+    \draw[fill=articlegreen!10, draw=articlegreen, line width=2pt, rounded corners=3pt] (-3, -0.4) rectangle (-1, 0.4);
+    \node[font=\bfseries\small, color=articlegreen] at (-2, 0) {Firmware Channel};
+    
+    % Connections to agent
+    \draw[->, line width=2pt, color=red] (-1, 2.4) -- (0, 2.4);
+    \draw[->, line width=2pt, color=red] (-1, 1.2) -- (0, 1.5);
+    \draw[->, line width=2pt, color=red] (-1, 0) -- (0, 0.6);
+    
+    % Shutdown state
+    \draw[fill=red!20, draw=red, line width=2pt, rounded corners=3pt] (5.5, 0.5) rectangle (8.5, 2.5);
+    \node[font=\bfseries, color=red] at (7, 2) {SHUTDOWN};
+    \node[font=\small] at (7, 1.2) {<500ms};
+    
+    % Arrow to shutdown
+    \draw[->, line width=3pt, color=red, dashed] (4, 1.5) -- (5.5, 1.5);
+    
+    % Redundancy indicator
+    \node[font=\tiny, color=mediumgray] at (2, -0.5) {Independent channels ensure no single point of failure};
+\end{tikzpicture}

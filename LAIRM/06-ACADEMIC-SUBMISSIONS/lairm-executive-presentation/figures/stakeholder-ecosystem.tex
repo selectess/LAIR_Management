@@ -1,0 +1,40 @@
+% LAIRM Stakeholder Ecosystem
+\begin{tikzpicture}[scale=0.85]
+  % Title
+  \node[font=\bfseries\Large, anchor=north] at (6, 10) {LAIRM Stakeholder Ecosystem};
+  
+  % Central LAIRM
+  \node[draw, fill=legislativeblue!30, circle, minimum size=1.5cm] at (6, 5.5) {LAIRM};
+  
+  % Governments
+  \node[draw, fill=green!20, rounded corners, minimum width=1.8cm, minimum height=0.7cm] at (1.5, 8.5) {Governments};
+  \draw[thick, ->] (2.3, 8) -- (5.2, 6.2);
+  
+  % Tech Companies
+  \node[draw, fill=blue!20, rounded corners, minimum width=1.8cm, minimum height=0.7cm] at (10.5, 8.5) {Tech Companies};
+  \draw[thick, ->] (9.7, 8) -- (6.8, 6.2);
+  
+  % Researchers
+  \node[draw, fill=orange!20, rounded corners, minimum width=1.8cm, minimum height=0.7cm] at (1.5, 2.5) {Researchers};
+  \draw[thick, ->] (2.3, 3) -- (5.2, 4.8);
+  
+  % Civil Society
+  \node[draw, fill=red!20, rounded corners, minimum width=1.8cm, minimum height=0.7cm] at (10.5, 2.5) {Civil Society};
+  \draw[thick, ->] (9.7, 3) -- (6.8, 4.8);
+  
+  % International Bodies
+  \node[draw, fill=purple!20, rounded corners, minimum width=1.8cm, minimum height=0.7cm] at (6, 9.5) {International Bodies};
+  \draw[thick, ->] (6, 9) -- (6, 7.2);
+  
+  % Citizens
+  \node[draw, fill=yellow!20, rounded corners, minimum width=1.8cm, minimum height=0.7cm] at (6, 1.5) {Citizens};
+  \draw[thick, ->] (6, 2) -- (6, 3.8);
+  
+  % Roles
+  \node[anchor=north, font=\tiny] at (1.5, 8) {Policy};
+  \node[anchor=north, font=\tiny] at (10.5, 8) {Implementation};
+  \node[anchor=north, font=\tiny] at (1.5, 2) {Validation};
+  \node[anchor=north, font=\tiny] at (10.5, 2) {Advocacy};
+  \node[anchor=north, font=\tiny] at (6, 9) {Coordination};
+  \node[anchor=north, font=\tiny] at (6, 1) {Participation};
+\end{tikzpicture}

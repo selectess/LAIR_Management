@@ -1,0 +1,41 @@
+% Feedback Loop Control System
+\begin{tikzpicture}[scale=0.85, every node/.style={font=\small}]
+    % System input
+    \draw[fill=axiomblue!10, draw=axiomblue, line width=2pt, rounded corners=3pt] (0, 3) rectangle (2, 3.8);
+    \node[font=\bfseries, color=axiomblue] at (1, 3.4) {Input};
+    
+    % Agent system
+    \draw[fill=axiomblue!15, draw=axiomblue, line width=2.5pt, rounded corners=4pt] (3, 2.5) rectangle (6, 4);
+    \node[font=\bfseries, color=axiomblue] at (4.5, 3.5) {Autonomous Agent};
+    \node[font=\tiny] at (4.5, 3.1) {Decision Logic};
+    
+    % Output
+    \draw[fill=articlegreen!10, draw=articlegreen, line width=2pt, rounded corners=3pt] (7, 3) rectangle (9, 3.8);
+    \node[font=\bfseries, color=articlegreen] at (8, 3.4) {Output};
+    
+    % Feedback loop (positive)
+    \draw[->, line width=2pt, color=red, bend left=40] (8, 3) -- (4.5, 2.5);
+    \node[font=\tiny, color=red] at (7, 2.2) {Positive Feedback};
+    
+    % Damping mechanism
+    \draw[fill=red!15, draw=red, line width=2pt, rounded corners=3pt] (3, 0.8) rectangle (6, 1.6);
+    \node[font=\bfseries, color=red] at (4.5, 1.3) {Damping Mechanism};
+    \node[font=\tiny] at (4.5, 0.95) {Detects & Reduces Gain};
+    
+    % Arrow from agent to damping
+    \draw[->, line width=1.5pt, color=red, dashed] (4.5, 2.5) -- (4.5, 1.6);
+    
+    % Stability zone
+    \draw[fill=articlegreen!5, draw=articlegreen, line width=1.5pt, dashed, rounded corners=3pt] (2.5, -0.5) rectangle (6.5, 0.5);
+    \node[font=\tiny, color=articlegreen] at (4.5, 0) {Stable Operating Zone};
+    
+    % Arrows from input to agent
+    \draw[->, line width=2pt, color=legislativeblue] (2, 3.4) -- (3, 3.4);
+    
+    % Arrow from agent to output
+    \draw[->, line width=2pt, color=legislativeblue] (6, 3.4) -- (7, 3.4);
+    
+    % Monitoring
+    \draw[fill=accentgold!10, draw=accentgold, line width=2pt, rounded corners=3pt] (0.5, -1.5) rectangle (8.5, -0.8);
+    \node[font=\bfseries, color=accentgold] at (4.5, -1.15) {Real-Time Monitoring: Feedback gain <100ms response time};
+\end{tikzpicture}

@@ -1,0 +1,107 @@
+% Axiom Structure and Legislative Cascade
+% Showing how axioms translate to executable articles
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    level1/.style={rectangle, draw, fill=blue!20, text width=3cm, align=center, minimum height=1cm, rounded corners, font=\small\bfseries},
+    level2/.style={rectangle, draw, fill=green!20, text width=2.5cm, align=center, minimum height=0.8cm, font=\footnotesize},
+    level3/.style={rectangle, draw, fill=yellow!20, text width=2cm, align=center, minimum height=0.7cm, font=\tiny},
+    level4/.style={rectangle, draw, fill=orange!20, text width=2cm, align=center, minimum height=0.7cm, font=\tiny},
+    level5/.style={rectangle, draw, fill=red!20, text width=2cm, align=center, minimum height=0.7cm, font=\tiny},
+    arrow/.style={->, >=stealth, thick}
+]
+
+% Top: Axiom
+\node[level1] (axiom) at (0,0) {AXIOM Ψ-I\\SUPREMATIA\\HUMANA};
+
+% Second level: Article categories
+\node[level2, below left=1.5cm and 1cm of axiom] (norm) {NORMATIVE\\(6 articles)};
+\node[level2, below=1.5cm of axiom] (legal) {LEGAL\\(4 articles)};
+\node[level2, below right=1.5cm and 1cm of axiom] (tech) {TECHNICAL\\(8 articles)};
+
+% Third level: Specific articles
+\node[level3, below left=1cm and 0.3cm of norm] (art1) {I-01-01\\Kill-Switch};
+\node[level3, below right=1cm and 0.3cm of norm] (art2) {I-01-02\\Override};
+
+\node[level3, below left=1cm and 0.3cm of legal] (art3) {I-01-08\\Liability};
+\node[level3, below right=1cm and 0.3cm of legal] (art4) {I-01-15\\Consent};
+
+\node[level3, below left=1cm and 0.3cm of tech] (art5) {I-01-03\\Monitoring};
+\node[level3, below right=1cm and 0.3cm of tech] (art6) {I-01-07\\Control};
+
+% Fourth level: Implementation
+\node[level4, below=1cm of art1] (impl1) {Hardware\\Mechanism};
+\node[level4, below=1cm of art3] (impl2) {Legal\\Framework};
+\node[level4, below=1cm of art5] (impl3) {Software\\Protocol};
+
+% Fifth level: Verification
+\node[level5, below=1cm of impl1] (verif1) {Test:\\500ms};
+\node[level5, below=1cm of impl2] (verif2) {Audit:\\Compliance};
+\node[level5, below=1cm of impl3] (verif3) {Monitor:\\Real-time};
+
+% Arrows
+\draw[arrow] (axiom) -- (norm);
+\draw[arrow] (axiom) -- (legal);
+\draw[arrow] (axiom) -- (tech);
+
+\draw[arrow] (norm) -- (art1);
+\draw[arrow] (norm) -- (art2);
+\draw[arrow] (legal) -- (art3);
+\draw[arrow] (legal) -- (art4);
+\draw[arrow] (tech) -- (art5);
+\draw[arrow] (tech) -- (art6);
+
+\draw[arrow] (art1) -- (impl1);
+\draw[arrow] (art3) -- (impl2);
+\draw[arrow] (art5) -- (impl3);
+
+\draw[arrow] (impl1) -- (verif1);
+\draw[arrow] (impl2) -- (verif2);
+\draw[arrow] (impl3) -- (verif3);
+
+% Side annotations
+\node[right=0.5cm of axiom, text width=3cm, font=\footnotesize, align=left] {
+    \textbf{Philosophical}\\
+    Latin formulation\\
+    Formal logic\\
+    Ethical foundation
+};
+
+\node[right=0.5cm of legal, text width=3cm, font=\footnotesize, align=left] {
+    \textbf{Legislative}\\
+    18 articles total\\
+    Binding obligations\\
+    Sanctions defined
+};
+
+\node[right=0.5cm of impl2, text width=3cm, font=\footnotesize, align=left] {
+    \textbf{Implementation}\\
+    Technical specs\\
+    Code examples\\
+    Standards compliance
+};
+
+\node[right=0.5cm of verif2, text width=3cm, font=\footnotesize, align=left] {
+    \textbf{Verification}\\
+    Automated testing\\
+    Compliance metrics\\
+    Enforcement triggers
+};
+
+% Bottom: Enforcement
+\node[draw, fill=red!40, text width=10cm, align=center, minimum height=0.8cm, font=\small\bfseries, below=1.5cm of verif2] (enforce) {
+    ENFORCEMENT: License Revocation • Fines • Criminal Liability
+};
+
+\draw[arrow, very thick, color=red!70] (verif1) |- (enforce);
+\draw[arrow, very thick, color=red!70] (verif2) -- (enforce);
+\draw[arrow, very thick, color=red!70] (verif3) |- (enforce);
+
+% Title
+\node[above=0.5cm of axiom, font=\large\bfseries] {Legislative Cascade: From Philosophy to Enforcement};
+
+\end{tikzpicture}
+\caption{The LAIRM Legislative Architecture: Each axiom cascades through five levels—from philosophical principle to normative/legal/technical articles, to implementation specifications, to verification protocols, culminating in enforcement mechanisms. This structure ensures that abstract ethical principles translate into concrete, verifiable, and enforceable requirements.}
+\label{fig:axiom-structure}
+\end{figure}

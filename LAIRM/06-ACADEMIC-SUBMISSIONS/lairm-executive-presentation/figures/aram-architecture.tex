@@ -1,0 +1,93 @@
+% ARAM System Architecture Diagram
+% High-quality TikZ diagram for academic publication
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=1.5cm and 2cm,
+    box/.style={rectangle, draw, fill=blue!10, text width=3cm, align=center, minimum height=1.2cm, rounded corners},
+    layer/.style={rectangle, draw, fill=gray!5, text width=12cm, align=center, minimum height=0.8cm, font=\small\bfseries},
+    arrow/.style={->, >=stealth, thick},
+    data/.style={->, >=stealth, dashed, thick, color=red!60},
+    control/.style={->, >=stealth, thick, color=blue!60}
+]
+
+% Layer 5: Enforcement
+\node[layer, fill=red!10] (enforcement) at (0,0) {LAYER 5: ENFORCEMENT MECHANISM};
+\node[box, below=0.5cm of enforcement, fill=red!20] (sanctions) {Sanctions \& Penalties};
+\node[box, right=0.5cm of sanctions, fill=red!20] (revocation) {License Revocation};
+\node[box, left=0.5cm of sanctions, fill=red!20] (killswitch) {Emergency Stop};
+
+% Layer 4: Compliance
+\node[layer, fill=orange!10, below=2cm of enforcement] (compliance) {LAYER 4: COMPLIANCE ENGINE};
+\node[box, below=0.5cm of compliance, fill=orange!20] (verification) {Real-time Verification};
+\node[box, right=0.5cm of verification, fill=orange!20] (metrics) {Compliance Metrics};
+\node[box, left=0.5cm of verification, fill=orange!20] (alerts) {Violation Detection};
+
+% Layer 3: Audit
+\node[layer, fill=yellow!10, below=2cm of compliance] (audit) {LAYER 3: IMMUTABLE AUDIT LEDGER};
+\node[box, below=0.5cm of audit, fill=yellow!20] (blockchain) {Blockchain Storage};
+\node[box, right=0.5cm of blockchain, fill=yellow!20] (merkle) {Merkle Trees};
+\node[box, left=0.5cm of blockchain, fill=yellow!20] (zkp) {Zero-Knowledge Proofs};
+
+% Layer 2: Communication
+\node[layer, fill=green!10, below=2cm of audit] (communication) {LAYER 2: COMMUNICATION PROTOCOL (MCP)};
+\node[box, below=0.5cm of communication, fill=green!20] (a2a) {Agent-to-Agent};
+\node[box, right=0.5cm of a2a, fill=green!20] (a2h) {Agent-to-Human};
+\node[box, left=0.5cm of a2a, fill=green!20] (auth) {Authentication};
+
+% Layer 1: Identity
+\node[layer, fill=blue!10, below=2cm of communication] (identity) {LAYER 1: IDENTITY LAYER};
+\node[box, below=0.5cm of identity, fill=blue!20] (did) {DID Registry};
+\node[box, right=0.5cm of did, fill=blue!20] (passport) {Agent Passports};
+\node[box, left=0.5cm of did, fill=blue!20] (crypto) {Cryptographic Keys};
+
+% Autonomous Agents at bottom
+\node[box, below=2cm of identity, fill=purple!20, text width=4cm] (agents) {AUTONOMOUS AGENTS\\(127M+ worldwide)};
+
+% Arrows - Data Flow
+\draw[arrow] (agents) -- (did);
+\draw[arrow] (did) -- (a2a);
+\draw[arrow] (a2a) -- (blockchain);
+\draw[arrow] (blockchain) -- (verification);
+\draw[arrow] (verification) -- (sanctions);
+
+% Control Flow
+\draw[control, <->] (killswitch) -- (agents) node[midway, right, font=\tiny] {500ms};
+\draw[control] (revocation) -- (passport);
+\draw[control] (alerts) -- (killswitch);
+
+% Side annotations
+\node[right=4cm of enforcement, text width=3cm, font=\footnotesize, align=left] {
+    \textbf{Human Oversight}\\
+    Continuous monitoring\\
+    Override authority\\
+    Final decision power
+};
+
+\node[right=4cm of audit, text width=3cm, font=\footnotesize, align=left] {
+    \textbf{Immutability}\\
+    Tamper-proof logs\\
+    Byzantine fault tolerance\\
+    Retroactive analysis
+};
+
+\node[right=4cm of identity, text width=3cm, font=\footnotesize, align=left] {
+    \textbf{Accountability}\\
+    Unique identification\\
+    Cryptographic binding\\
+    Legal attribution
+};
+
+% Legend
+\node[below=0.5cm of agents, font=\footnotesize] {
+    \begin{tabular}{ll}
+    \tikz\draw[arrow] (0,0) -- (0.5,0); & Data Flow \\
+    \tikz\draw[control] (0,0) -- (0.5,0); & Control Flow \\
+    \end{tabular}
+};
+
+\end{tikzpicture}
+\caption{ARAM Five-Layer Architecture: From agent identity to enforcement mechanisms, ensuring comprehensive governance of autonomous systems through cryptographic verification, immutable audit trails, and human oversight.}
+\label{fig:aram-architecture}
+\end{figure}

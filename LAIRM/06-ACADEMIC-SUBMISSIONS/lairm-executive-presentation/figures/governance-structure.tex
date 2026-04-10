@@ -1,0 +1,50 @@
+% Multi-Level Governance Structure
+\begin{tikzpicture}[scale=0.9]
+  % Title
+  \node[font=\bfseries\Large, anchor=north] at (6, 10) {LAIRM Governance Structure};
+  
+  % Global Level
+  \node[draw, fill=legislativeblue!20, rounded corners, minimum width=4cm, minimum height=0.8cm] at (6, 8.5) {Global Governance Council};
+  
+  % Regional Level
+  \node[draw, fill=accentgold!20, rounded corners, minimum width=2cm, minimum height=0.7cm] at (2, 6.5) {Regional Authority};
+  \node[draw, fill=accentgold!20, rounded corners, minimum width=2cm, minimum height=0.7cm] at (6, 6.5) {Regional Authority};
+  \node[draw, fill=accentgold!20, rounded corners, minimum width=2cm, minimum height=0.7cm] at (10, 6.5) {Regional Authority};
+  
+  % National Level
+  \node[draw, fill=green!20, rounded corners, minimum width=1.5cm, minimum height=0.6cm] at (1, 4.5) {National};
+  \node[draw, fill=green!20, rounded corners, minimum width=1.5cm, minimum height=0.6cm] at (3, 4.5) {National};
+  \node[draw, fill=green!20, rounded corners, minimum width=1.5cm, minimum height=0.6cm] at (5, 4.5) {National};
+  \node[draw, fill=green!20, rounded corners, minimum width=1.5cm, minimum height=0.6cm] at (7, 4.5) {National};
+  \node[draw, fill=green!20, rounded corners, minimum width=1.5cm, minimum height=0.6cm] at (9, 4.5) {National};
+  \node[draw, fill=green!20, rounded corners, minimum width=1.5cm, minimum height=0.6cm] at (11, 4.5) {National};
+  
+  % Local Level
+  \node[draw, fill=orange!20, rounded corners, minimum width=1.2cm, minimum height=0.5cm] at (0.5, 2.5) {Local};
+  \node[draw, fill=orange!20, rounded corners, minimum width=1.2cm, minimum height=0.5cm] at (1.8, 2.5) {Local};
+  \node[draw, fill=orange!20, rounded corners, minimum width=1.2cm, minimum height=0.5cm] at (3.1, 2.5) {Local};
+  \node[draw, fill=orange!20, rounded corners, minimum width=1.2cm, minimum height=0.5cm] at (4.4, 2.5) {Local};
+  \node[draw, fill=orange!20, rounded corners, minimum width=1.2cm, minimum height=0.5cm] at (5.7, 2.5) {Local};
+  \node[draw, fill=orange!20, rounded corners, minimum width=1.2cm, minimum height=0.5cm] at (7, 2.5) {Local};
+  \node[draw, fill=orange!20, rounded corners, minimum width=1.2cm, minimum height=0.5cm] at (8.3, 2.5) {Local};
+  \node[draw, fill=orange!20, rounded corners, minimum width=1.2cm, minimum height=0.5cm] at (9.6, 2.5) {Local};
+  \node[draw, fill=orange!20, rounded corners, minimum width=1.2cm, minimum height=0.5cm] at (10.9, 2.5) {Local};
+  
+  % Connections
+  \draw[thick, ->] (6, 8.1) -- (2, 6.9);
+  \draw[thick, ->] (6, 8.1) -- (6, 6.9);
+  \draw[thick, ->] (6, 8.1) -- (10, 6.9);
+  
+  \draw[thick, ->] (2, 6.1) -- (1, 4.9);
+  \draw[thick, ->] (2, 6.1) -- (3, 4.9);
+  \draw[thick, ->] (6, 6.1) -- (5, 4.9);
+  \draw[thick, ->] (6, 6.1) -- (7, 4.9);
+  \draw[thick, ->] (10, 6.1) -- (9, 4.9);
+  \draw[thick, ->] (10, 6.1) -- (11, 4.9);
+  
+  % Stakeholders
+  \node[anchor=north, font=\small] at (6, 1.5) {Stakeholders: Governments, Tech Companies, Civil Society, Researchers, Citizens};
+  
+  % Legend
+  \node[anchor=west, font=\small] at (0.5, 0.5) {Hierarchical coordination with multi-stakeholder participation at all levels};
+\end{tikzpicture}

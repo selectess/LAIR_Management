@@ -1,0 +1,44 @@
+% Accountability Chain Diagram
+\begin{tikzpicture}[scale=0.85, every node/.style={font=\small}]
+    % Developer box
+    \draw[fill=axiomblue!15, draw=axiomblue, line width=2pt, rounded corners=4pt] (0, 3) rectangle (2.5, 4);
+    \node[font=\bfseries, color=axiomblue] at (1.25, 3.5) {Developer};
+    \node[font=\tiny] at (1.25, 3.15) {40\% Liability};
+    
+    % Deployer box
+    \draw[fill=axiomblue!15, draw=axiomblue, line width=2pt, rounded corners=4pt] (3.5, 3) rectangle (6, 4);
+    \node[font=\bfseries, color=axiomblue] at (4.75, 3.5) {Deployer};
+    \node[font=\tiny] at (4.75, 3.15) {40\% Liability};
+    
+    % Operator box
+    \draw[fill=axiomblue!15, draw=axiomblue, line width=2pt, rounded corners=4pt] (7, 3) rectangle (9.5, 4);
+    \node[font=\bfseries, color=axiomblue] at (8.25, 3.5) {Operator};
+    \node[font=\tiny] at (8.25, 3.15) {20\% Liability};
+    
+    % Arrows showing flow
+    \draw[->, line width=2pt, color=legislativeblue] (2.5, 3.5) -- (3.5, 3.5);
+    \draw[->, line width=2pt, color=legislativeblue] (6, 3.5) -- (7, 3.5);
+    
+    % Autonomous Agent
+    \draw[fill=red!10, draw=red, line width=2.5pt, rounded corners=4pt] (3, 1) rectangle (6, 2);
+    \node[font=\bfseries, color=red] at (4.5, 1.5) {Autonomous Agent Action};
+    
+    % Arrows from all to agent
+    \draw[->, line width=1.5pt, color=red, dashed] (1.25, 3) -- (3.5, 2);
+    \draw[->, line width=1.5pt, color=red, dashed] (4.75, 3) -- (4.5, 2);
+    \draw[->, line width=1.5pt, color=red, dashed] (8.25, 3) -- (5.5, 2);
+    
+    % Victim/Harm box
+    \draw[fill=red!20, draw=red, line width=2pt, rounded corners=4pt] (3, -1) rectangle (6, 0);
+    \node[font=\bfseries, color=red] at (4.5, -0.5) {Harm / Failure};
+    
+    % Arrow from agent to harm
+    \draw[->, line width=2.5pt, color=red] (4.5, 1) -- (4.5, 0);
+    
+    % Liability recovery
+    \draw[fill=articlegreen!15, draw=articlegreen, line width=2pt, rounded corners=4pt] (0.5, -2.5) rectangle (8.5, -1.8);
+    \node[font=\bfseries, color=articlegreen] at (4.5, -2.15) {Joint and Several Liability — Victims recover from any party};
+    
+    % Arrow from harm to recovery
+    \draw[->, line width=2pt, color=articlegreen] (4.5, -1) -- (4.5, -1.8);
+\end{tikzpicture}

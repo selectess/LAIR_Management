@@ -1,0 +1,54 @@
+% Risk Assessment Framework
+\begin{tikzpicture}[scale=0.85]
+  % Title
+  \node[font=\bfseries\Large, anchor=north] at (6, 10.5) {Risk Assessment Framework};
+  
+  % Risk Matrix
+  \draw[thick] (1, 2) rectangle (11, 8);
+  
+  % Axes labels
+  \node[anchor=east, font=\bfseries] at (0.8, 5) {Impact};
+  \node[anchor=north, font=\bfseries] at (6, 1.7) {Probability};
+  
+  % Grid lines
+  \foreach \x in {3, 5, 7, 9} {
+    \draw[gray, thin] (\x, 2) -- (\x, 8);
+  }
+  \foreach \y in {3.2, 4.4, 5.6, 6.8} {
+    \draw[gray, thin] (1, \y) -- (11, \y);
+  }
+  
+  % Risk zones
+  \fill[red!30, opacity=0.5] (7, 5.6) rectangle (11, 8);
+  \fill[orange!30, opacity=0.5] (5, 3.2) rectangle (7, 5.6);
+  \fill[yellow!30, opacity=0.5] (3, 2) rectangle (5, 3.2);
+  \fill[green!30, opacity=0.5] (1, 2) rectangle (3, 3.2);
+  
+  % Risk labels
+  \node[font=\bfseries, color=darkred] at (9, 6.8) {Critical};
+  \node[font=\bfseries, color=darkorange] at (6, 4.4) {High};
+  \node[font=\bfseries, color=darkgoldenrod] at (4, 2.6) {Medium};
+  \node[font=\bfseries, color=darkgreen] at (2, 2.3) {Low};
+  
+  % Axis labels
+  \node[anchor=north] at (2, 1.5) {Low};
+  \node[anchor=north] at (4, 1.5) {Medium};
+  \node[anchor=north] at (6, 1.5) {High};
+  \node[anchor=north] at (8, 1.5) {Very High};
+  \node[anchor=north] at (10, 1.5) {Extreme};
+  
+  \node[anchor=east, rotate=90] at (0.5, 3.2) {Low};
+  \node[anchor=east, rotate=90] at (0.5, 4.4) {Medium};
+  \node[anchor=east, rotate=90] at (0.5, 5.6) {High};
+  \node[anchor=east, rotate=90] at (0.5, 6.8) {Extreme};
+  
+  % Example risks
+  \node[circle, fill=red, inner sep=3pt] at (9.5, 7.5) {};
+  \node[anchor=west, font=\small] at (9.8, 7.5) {Autonomous Weapons};
+  
+  \node[circle, fill=orange, inner sep=3pt] at (6.5, 5) {};
+  \node[anchor=west, font=\small] at (6.8, 5) {Feedback Loops};
+  
+  \node[circle, fill=yellow, inner sep=3pt] at (4, 2.8) {};
+  \node[anchor=west, font=\small] at (4.3, 2.8) {Bias in Hiring};
+\end{tikzpicture}

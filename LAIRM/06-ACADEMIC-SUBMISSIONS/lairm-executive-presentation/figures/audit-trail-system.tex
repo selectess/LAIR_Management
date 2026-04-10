@@ -1,0 +1,39 @@
+% Immutable Audit Trail System
+\begin{tikzpicture}[scale=0.8, every node/.style={font=\small}]
+    % Agent action
+    \draw[fill=axiomblue!10, draw=axiomblue, line width=2pt, rounded corners=3pt] (1, 4) rectangle (3, 4.8);
+    \node[font=\bfseries, color=axiomblue] at (2, 4.4) {Agent Action};
+    
+    % Logging layer
+    \draw[fill=articlegreen!10, draw=articlegreen, line width=2pt, rounded corners=3pt] (0.5, 2.8) rectangle (3.5, 3.6);
+    \node[font=\bfseries, color=articlegreen] at (2, 3.4) {Immutable Log Entry};
+    \node[font=\tiny] at (2, 3) {Timestamp | Agent ID | Action | Outcome};
+    
+    % Cryptographic signing
+    \draw[fill=accentgold!10, draw=accentgold, line width=2pt, rounded corners=3pt] (4.5, 2.8) rectangle (7.5, 3.6);
+    \node[font=\bfseries, color=accentgold] at (6, 3.4) {Cryptographic Hash};
+    \node[font=\tiny] at (6, 3) {SHA-256 | Digital Signature};
+    
+    % Arrow from action to log
+    \draw[->, line width=2pt, color=legislativeblue] (2, 4) -- (2, 3.6);
+    
+    % Arrow from log to hash
+    \draw[->, line width=2pt, color=legislativeblue] (3.5, 3.2) -- (4.5, 3.2);
+    
+    % Distributed ledger
+    \draw[fill=lightgray, draw=mediumgray, line width=2pt, rounded corners=3pt] (0.5, 1.2) rectangle (7.5, 2.4);
+    \node[font=\bfseries, color=darktext] at (4, 2.1) {Distributed Tamper-Proof Ledger};
+    \node[font=\tiny] at (4, 1.7) {Blockchain | 3+ Independent Jurisdictions | 10-Year Retention};
+    \node[font=\tiny] at (4, 1.4) {Accessible to Regulators 24/7};
+    
+    % Arrow from hash to ledger
+    \draw[->, line width=2pt, color=legislativeblue] (6, 2.8) -- (5, 2.4);
+    
+    % Verification
+    \draw[fill=articlegreen!15, draw=articlegreen, line width=2pt, rounded corners=3pt] (0.5, -0.2) rectangle (7.5, 0.8);
+    \node[font=\bfseries, color=articlegreen] at (4, 0.5) {Verification: Tamper-Proof | Authentic | Complete};
+    \node[font=\tiny] at (4, 0.1) {Independent auditor certification required};
+    
+    % Arrow from ledger to verification
+    \draw[->, line width=2pt, color=articlegreen] (4, 1.2) -- (4, 0.8);
+\end{tikzpicture}

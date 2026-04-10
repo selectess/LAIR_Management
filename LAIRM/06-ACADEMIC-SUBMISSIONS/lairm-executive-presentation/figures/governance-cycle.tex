@@ -1,0 +1,75 @@
+% FIGURE: Governance Cycle - Closed-Loop Control
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=1.3]
+    % Title
+    \node[font=\Large\bfseries] at (5,9) {Cybernetic Governance Cycle};
+    \node[font=\small,color=darkgray] at (5,8.6) {Closed-loop control system for autonomous agents};
+    
+    % Central agent
+    \node[draw,fill=unblue!20,circle,minimum size=1.5cm] (agent) at (5,5) {
+        \textbf{Autonomous}\\
+        \textbf{Agent}
+    };
+    
+    % Cycle steps
+    \node[draw,fill=ungold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (monitor) at (8,5) {
+        \textbf{1. Monitor}\\
+        Real-time observation
+    };
+    
+    \node[draw,fill=ungold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (detect) at (8,3) {
+        \textbf{2. Detect}\\
+        Anomaly detection
+    };
+    
+    \node[draw,fill=ungold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (alert) at (5,1.5) {
+        \textbf{3. Alert}\\
+        Human notification
+    };
+    
+    \node[draw,fill=ungold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (intervene) at (2,3) {
+        \textbf{4. Intervene}\\
+        Human override
+    };
+    
+    \node[draw,fill=ungold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (correct) at (2,5) {
+        \textbf{5. Correct}\\
+        Adjust parameters
+    };
+    
+    % Arrows forming cycle
+    \draw[->,line width=2pt,color=unblue] (agent) -- (monitor);
+    \draw[->,line width=2pt,color=unblue] (monitor) -- (detect);
+    \draw[->,line width=2pt,color=unblue] (detect) -- (alert);
+    \draw[->,line width=2pt,color=unblue] (alert) -- (intervene);
+    \draw[->,line width=2pt,color=unblue] (intervene) -- (correct);
+    \draw[->,line width=2pt,color=unblue] (correct) -- (agent);
+    
+    % Audit trail
+    \node[draw,fill=lightgray,minimum width=2.5cm,minimum height=0.8cm,rounded corners] (audit) at (5,7) {
+        \textbf{Immutable Audit Trail}\\
+        All actions logged
+    };
+    
+    \draw[->,line width=1.5pt,color=darkgray,dashed] (monitor) -- (audit);
+    \draw[->,line width=1.5pt,color=darkgray,dashed] (detect) -- (audit);
+    \draw[->,line width=1.5pt,color=darkgray,dashed] (alert) -- (audit);
+    \draw[->,line width=1.5pt,color=darkgray,dashed] (intervene) -- (audit);
+    
+    % Kill-switch
+    \node[draw,fill=red!20,minimum width=1.5cm,minimum height=0.6cm,rounded corners] (killswitch) at (0.5,5) {
+        \textbf{Kill-Switch}\\
+        <500ms
+    };
+    
+    \draw[->,line width=2pt,color=red] (killswitch) -- (agent);
+    
+    % Feedback loop label
+    \node[font=\small\itshape,color=unblue] at (5,-0.5) {Continuous feedback loop ensures human supremacy};
+    
+\end{tikzpicture}
+\caption{Cybernetic governance cycle: Closed-loop control with human-in-the-loop}
+\label{fig:governance-cycle}
+\end{figure}

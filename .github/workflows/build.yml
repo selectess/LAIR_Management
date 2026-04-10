@@ -1,0 +1,57 @@
+name: Build & Package
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build wheel twine
+
+    - name: Build package
+      run: |
+        cd LAIRM/05-OUTILS
+        python -m build
+
+    - name: Check package
+      run: |
+        cd LAIRM/05-OUTILS
+        twine check dist/*
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: python-package-distributions
+        path: LAIRM/05-OUTILS/dist/
+
+  publish:
+    if: startsWith(github.ref, 'refs/tags')
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/download-artifact@v3
+      with:
+        name: python-package-distributions
+        path: dist/
+
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}

@@ -1,0 +1,81 @@
+% FIGURE: Responsibility Cascade Model
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=1.2]
+    % Title
+    \node[font=\Large\bfseries] at (5,9) {Responsibility Cascade: 40-40-20 Model};
+    \node[font=\small,color=darkgray] at (5,8.6) {Eliminating the responsibility gap};
+    
+    % Harm event
+    \node[draw,fill=red!20,minimum width=3cm,minimum height=0.8cm,rounded corners] (harm) at (5,7.5) {
+        \textbf{Autonomous Agent Causes Harm}
+    };
+    
+    % Responsibility distribution
+    \node[draw,fill=unblue!20,minimum width=2.5cm,minimum height=1.2cm,rounded corners] (dev) at (1,5.5) {
+        \textbf{Developer}\\
+        \textbf{40\%}\\
+        Algorithm design\\
+        Training data\\
+        Objective function
+    };
+    
+    \node[draw,fill=unblue!20,minimum width=2.5cm,minimum height=1.2cm,rounded corners] (deploy) at (5,5.5) {
+        \textbf{Deployer}\\
+        \textbf{40\%}\\
+        System integration\\
+        Testing\\
+        Deployment decisions
+    };
+    
+    \node[draw,fill=unblue!20,minimum width=2.5cm,minimum height=1.2cm,rounded corners] (op) at (9,5.5) {
+        \textbf{Operator}\\
+        \textbf{20\%}\\
+        Parameter setting\\
+        Monitoring\\
+        Intervention failures
+    };
+    
+    % Arrows from harm to responsibility
+    \draw[->,line width=2pt] (harm) -- (dev);
+    \draw[->,line width=2pt] (harm) -- (deploy);
+    \draw[->,line width=2pt] (harm) -- (op);
+    
+    % Liability outcomes
+    \node[draw,fill=lightgray,minimum width=2.2cm,minimum height=1cm,rounded corners] (devliab) at (1,3) {
+        \textbf{Developer}\\
+        €X × 40\%\\
+        Liability
+    };
+    
+    \node[draw,fill=lightgray,minimum width=2.2cm,minimum height=1cm,rounded corners] (deployliab) at (5,3) {
+        \textbf{Deployer}\\
+        €X × 40\%\\
+        Liability
+    };
+    
+    \node[draw,fill=lightgray,minimum width=2.2cm,minimum height=1cm,rounded corners] (opliab) at (9,3) {
+        \textbf{Operator}\\
+        €X × 20\%\\
+        Liability
+    };
+    
+    % Arrows to liability
+    \draw[->,line width=1.5pt] (dev) -- (devliab);
+    \draw[->,line width=1.5pt] (deploy) -- (deployliab);
+    \draw[->,line width=1.5pt] (op) -- (opliab);
+    
+    % Total accountability
+    \node[draw,fill=ungold!20,minimum width=7cm,minimum height=0.8cm,rounded corners] (total) at (5,1) {
+        \textbf{100\% Accountability} — No responsibility gap
+    };
+    
+    \draw[->,line width=2pt,color=ungold] (devliab) -- (total);
+    \draw[->,line width=2pt,color=ungold] (deployliab) -- (total);
+    \draw[->,line width=2pt,color=ungold] (opliab) -- (total);
+    
+\end{tikzpicture}
+\caption{Responsibility cascade model: Distributed liability eliminates accountability gaps}
+\label{fig:responsibility-cascade}
+\end{figure}

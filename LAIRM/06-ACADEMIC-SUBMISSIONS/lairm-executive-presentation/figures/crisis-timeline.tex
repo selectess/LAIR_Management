@@ -1,0 +1,55 @@
+% FIGURE: Crisis Timeline - Autonomous System Failures
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=1.1]
+    % Title
+    \node[font=\Large\bfseries] at (5,9) {Autonomous System Failures: 2010-2019};
+    \node[font=\small,color=darkgray] at (5,8.6) {Documented catastrophic failures demonstrating governance gaps};
+    
+    % Timeline axis
+    \draw[line width=2pt] (1,5) -- (9,5);
+    
+    % 2010 Flash Crash
+    \node[draw,fill=red!20,minimum width=2cm,minimum height=1.2cm,rounded corners] (flash) at (2,7) {
+        \textbf{2010}\\
+        Flash Crash\\
+        \$1 trillion
+    };
+    \draw[->,line width=1.5pt,color=red] (flash) -- (2,5.3);
+    \node[below,font=\small] at (2,4.5) {May 6};
+    
+    % 2012 Knight Capital
+    \node[draw,fill=red!20,minimum width=2cm,minimum height=1.2cm,rounded corners] (knight) at (5,7) {
+        \textbf{2012}\\
+        Knight Capital\\
+        \$440 million
+    };
+    \draw[->,line width=1.5pt,color=red] (knight) -- (5,5.3);
+    \node[below,font=\small] at (5,4.5) {Aug 1};
+    
+    % 2018-2019 Boeing 737 MAX
+    \node[draw,fill=red!20,minimum width=2cm,minimum height=1.2cm,rounded corners] (boeing) at (8,7) {
+        \textbf{2018-19}\\
+        Boeing 737 MAX\\
+        346 deaths
+    };
+    \draw[->,line width=1.5pt,color=red] (boeing) -- (8,5.3);
+    \node[below,font=\small] at (8,4.5) {Oct-Mar};
+    
+    % Common failure patterns
+    \node[draw,fill=lightgray,minimum width=8cm,minimum height=2cm,rounded corners] (patterns) at (5,1.5) {
+        \textbf{Common Failure Patterns:}\\
+        ✗ No human supremacy • ✗ Unclear responsibility • ✗ No kill-switch\\
+        ✗ Insufficient audit trail • ✗ Single point of failure • ✗ Regulatory inadequacy
+    };
+    
+    % LAIRM solution
+    \node[draw,fill=ungold!20,minimum width=8cm,minimum height=1.2cm,rounded corners] (solution) at (5,-0.5) {
+        \textbf{LAIRM Solution:} Axioms Ψ-I to Ψ-VI would have prevented all three failures
+    };
+    
+\end{tikzpicture}
+\caption{Timeline of autonomous system failures: 2010-2019}
+\label{fig:crisis-timeline}
+\end{figure}

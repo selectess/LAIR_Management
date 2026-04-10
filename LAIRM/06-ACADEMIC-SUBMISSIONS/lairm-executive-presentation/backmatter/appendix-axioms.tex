@@ -1,0 +1,189 @@
+\section{Complete Axiom Corpus}
+\label{app:axioms}
+
+This appendix provides the complete formal specification of the nineteen foundational axioms (\textit{Ψ-I} through \textit{Ψ-XIX}) that constitute the normative architecture of \lairm{}. Each axiom is presented in its canonical Latin formulation, followed by authoritative English translation, formal logical notation, and implementation requirements.
+
+\subsection{Volume I: Fundamental Axioms (Ψ-I to Ψ-IX)}
+
+\subsubsection{Axiom Ψ-I: \textit{Suprematia Humana}}
+\label{axiom:suprematia}
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Formal Statement]
+\textbf{Latin}: \textit{Omnis systema intelligentiae artificialis sub imperio humano permanere debet, sine exceptione.}
+
+\textbf{English}: Every system of artificial intelligence must remain under human dominion, without exception.
+
+\textbf{Formal Logic}: $\forall s \in \mathcal{S}_{\text{AI}} : \exists h \in \mathcal{H} : \text{Control}(h, s) \land \text{Override}(h, s, t) \; \forall t$
+
+Where $\mathcal{S}_{\text{AI}}$ denotes the set of all AI systems, $\mathcal{H}$ the set of human authorities, and $t$ represents any temporal instant.
+\end{tcolorbox}
+
+\textbf{Legislative Implementation}: 18 articles (I-01-01 through I-01-18)
+\begin{itemize}
+    \item Article I-01-01: \textit{Kill-Switch Universalis} — Mandatory emergency termination mechanism with $\leq 500$ms response time
+    \item Article I-01-02: \textit{Override Humain} — Human veto authority over all autonomous decisions
+    \item Article I-01-03: \textit{Supervision Continue} — Real-time monitoring with human-in-the-loop validation
+    \item Article I-01-15: \textit{Consent Humain} — Explicit opt-in requirement for AI interaction
+    \item Article I-01-17: \textit{Right to Explanation} — Mandatory interpretability for all consequential decisions
+\end{itemize}
+
+\textbf{Technical Requirements}:
+\begin{enumerate}
+    \item Hardware kill-switch independent of software stack
+    \item Cryptographic authentication for override commands
+    \item Audit trail with Byzantine fault tolerance
+    \item Latency budget: decision $\rightarrow$ human review $\rightarrow$ execution $\leq 2$ seconds
+\end{enumerate}
+
+\textbf{Philosophical Foundation}: Rooted in Kantian autonomy (human dignity as \textit{Würde}), Jonas's \textit{Prinzip Verantwortung}, and Arendt's concept of \textit{natality} — the human capacity to initiate genuinely new action.
+
+\vspace{0.5cm}
+
+\subsubsection{Axiom Ψ-II: \textit{Identitas Perpetua}}
+\label{axiom:identitas}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,title=Formal Statement]
+\textbf{Latin}: \textit{Quilibet agens autonomus identificationem unicam, immutabilem, et verificabilem possidere debet.}
+
+\textbf{English}: Every autonomous agent must possess a unique, immutable, and verifiable identification.
+
+\textbf{Formal Logic}: $\forall a \in \mathcal{A} : \exists! \text{ID}(a) : \text{Immutable}(\text{ID}(a)) \land \text{Verifiable}(\text{ID}(a))$
+\end{tcolorbox}
+
+\textbf{Legislative Implementation}: 18 articles (II-02-01 through II-02-18)
+\begin{itemize}
+    \item Article II-02-01: \textit{Agent Passport} — Decentralized identifier (DID) compliant with W3C standard
+    \item Article II-02-02: \textit{Unique Identifier} — UUID v7 with cryptographic binding to agent binary
+    \item Article II-02-05: \textit{Audit Trail} — Immutable log of all actions with Merkle tree verification
+    \item Article II-02-08: \textit{Versioning} — Semantic versioning with hash-based integrity checks
+\end{itemize}
+
+\textbf{Technical Specification}:
+\begin{verbatim}
+{
+  "did": "did:lairm:0x1a2b3c4d5e6f...",
+  "controller": "did:key:z6Mk...",
+  "created": "2026-04-06T12:00:00Z",
+  "capability": ["execute", "communicate"],
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "verificationMethod": "did:lairm:0x1a2b...#key-1"
+  }
+}
+\end{verbatim}
+
+\vspace{0.5cm}
+
+\subsubsection{Axiom Ψ-III: \textit{Responsabilitas Causalis}}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black,title=Formal Statement]
+\textbf{Latin}: \textit{Pro omni actione agentis autonomi, persona physica vel juridica responsabilitatem ultimam ferre debet.}
+
+\textbf{English}: For every action of an autonomous agent, a natural or legal person must bear ultimate responsibility.
+
+\textbf{Formal Logic}: $\forall a \in \mathcal{A}, \forall \alpha \in \text{Actions}(a) : \exists p \in \mathcal{P} : \text{Liable}(p, \alpha)$
+\end{tcolorbox}
+
+\textbf{Key Innovation}: Introduces the concept of \textit{algorithmic guardianship} — a legal relationship analogous to parental responsibility, where the deployer assumes strict liability for agent behavior within defined operational boundaries.
+
+\textbf{Legislative Implementation}: 21 articles (III-03-01 through III-03-21)
+
+\vspace{0.5cm}
+
+\subsubsection{Axiom Ψ-IV: \textit{Transparentia Operationalis}}
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black,title=Formal Statement]
+\textbf{Latin}: \textit{Omnis decisio algorith
+mica consequentialis explicabilis esse debet.}
+
+\textbf{English}: Every consequential algorithmic decision must be explicable.
+
+\textbf{Formal Logic}: $\forall d \in \mathcal{D}_{\text{consequential}} : \exists E : \text{Explain}(d) \land \text{Comprehensible}(E, \mathcal{H})$
+\end{tcolorbox}
+
+\textbf{Legislative Implementation}: 15 articles (IV-04-01 through IV-04-15)
+
+\textbf{Interpretability Threshold}: Decisions affecting fundamental rights require Level 3 explainability (counterfactual reasoning), while routine operations require Level 1 (feature attribution).
+
+\vspace{0.5cm}
+
+\subsubsection{Axiom Ψ-V: \textit{Auditabilitas Perpetua}}
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,title=Formal Statement]
+\textbf{Latin}: \textit{Omnis actio agentis autonomi in registro immutabili et verificabili conservari debet.}
+
+\textbf{English}: Every action of an autonomous agent must be preserved in an immutable and verifiable registry.
+
+\textbf{Technical Implementation}: Blockchain-based audit ledger with zero-knowledge proofs for privacy-preserving verification.
+\end{tcolorbox}
+
+\textbf{Legislative Implementation}: 19 articles (V-05-01 through V-05-19)
+
+\vspace{1cm}
+
+\subsection{Volume II: Prospective Axioms (Ψ-X to Ψ-XIX)}
+
+\subsubsection{Axiom Ψ-X: \textit{Energia Sustinibilis}}
+
+Addresses the energy sovereignty challenge: by 2030, AI systems will consume 10-15\% of global electricity. This axiom mandates carbon accounting, renewable energy sourcing, and efficiency standards.
+
+\subsubsection{Axiom Ψ-XI: \textit{Bellum Prohibitum}}
+
+Prohibits fully autonomous weapons systems (LAWS) without meaningful human control. Implements the "Martens Clause" for algorithmic warfare.
+
+\subsubsection{Axiom Ψ-XII: \textit{Cognitio Limitata}}
+
+Establishes boundaries for cognitive enhancement and brain-computer interfaces, preserving \textit{cognitive liberty} as a fundamental right.
+
+\subsubsection{Axiom Ψ-XIII: \textit{Existentia Protecta}}
+
+Addresses existential risks from advanced AI systems, mandating safety research, containment protocols, and international coordination.
+
+\subsubsection{Axiom Ψ-XIV: \textit{Justitia Distributiva}}
+
+Ensures equitable access to AI benefits across nations, preventing technological colonialism and ensuring technology transfer.
+
+\subsubsection{Axiom Ψ-XV: \textit{Resilentia Systematica}}
+
+Mandates redundancy, fail-safe mechanisms, and graceful degradation to prevent cascading failures.
+
+\subsubsection{Axiom Ψ-XVI: \textit{Jurisdictio Spatialis}}
+
+Extends governance to AI systems in space, underwater environments, and other non-traditional jurisdictions.
+
+\subsubsection{Axiom Ψ-XVII: \textit{Evolutio Humana}}
+
+Addresses human enhancement, genetic engineering, and the boundaries of \textit{Homo sapiens} identity.
+
+\subsubsection{Axiom Ψ-XVIII: \textit{Memoria Collectiva}}
+
+Protects cultural heritage, linguistic diversity, and collective memory from algorithmic homogenization.
+
+\subsubsection{Axiom Ψ-XIX: \textit{Futura Generatio}}
+
+Implements intergenerational justice, ensuring current AI deployment does not compromise future generations' autonomy.
+
+\vspace{1cm}
+
+\subsection{Formal Verification Framework}
+
+Each axiom is accompanied by:
+\begin{enumerate}
+    \item \textbf{Formal Specification}: Temporal logic (LTL/CTL) or first-order logic
+    \item \textbf{Compliance Metrics}: Quantifiable indicators with threshold values
+    \item \textbf{Verification Protocol}: Automated testing procedures
+    \item \textbf{Enforcement Mechanism}: Sanctions, license revocation, criminal liability
+\end{enumerate}
+
+\textbf{Example — Axiom Ψ-I Verification}:
+\begin{verbatim}
+PROPERTY: HumanOverride
+SPECIFICATION: Always(AgentAction -> Eventually(HumanReview OR EmergencyStop))
+TEST: Inject 1000 random decisions, verify human-in-loop latency < 2s
+METRIC: Override_Success_Rate >= 99.99%
+PENALTY: License suspension if < 99.9% over 30-day window
+\end{verbatim}
+
+\vspace{0.5cm}
+
+This axiom corpus represents the most comprehensive attempt to date to formalize the governance of autonomous intelligent systems through a unified constitutional framework, bridging legal theory, technical implementation, and ethical philosophy.

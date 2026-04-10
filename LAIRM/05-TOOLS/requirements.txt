@@ -1,0 +1,27 @@
+# LAIRM Tools Ecosystem - Dependencies
+# Production Dependencies
+
+# Core
+PyYAML>=6.0
+python-dateutil>=2.8.2
+
+# Development Dependencies (optional)
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.0.0
+# isort>=5.0.0
+
+# Optional: For MCP Server
+# fastapi>=0.95.0
+# uvicorn>=0.21.0
+# pydantic>=1.10.0
+
+# Optional: For Database
+# sqlalchemy>=2.0.0
+# psycopg2-binary>=2.9.0
+
+# Optional: For Async
+# aiohttp>=3.8.0
+# asyncio-contextmanager>=1.0.0
