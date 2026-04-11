@@ -111,4 +111,3 @@ Immutable audit trails (blockchain-based, cryptographically verified, 7-year ret
 
 ---
 
-**Last Reviewed**: April 3, 2026

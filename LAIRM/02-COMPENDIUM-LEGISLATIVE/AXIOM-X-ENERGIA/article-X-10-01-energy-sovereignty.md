@@ -367,4 +367,3 @@ impl EnergySovereigntyManager {
 
 ---
 
-**Last Reviewed**: April 3, 2026

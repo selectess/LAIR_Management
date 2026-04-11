@@ -225,4 +225,3 @@ class GlobalJusticeManager:
 
 ---
 
-**Last Reviewed**: April 3, 2026

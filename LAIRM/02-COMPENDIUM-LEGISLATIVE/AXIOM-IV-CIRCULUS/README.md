@@ -156,7 +156,5 @@ Non-compliance with lifecycle requirements triggers:
 ---
 
 **Date of Creation**: 2024-03-18  
-**Last Updated**: 2026-03-30  
-**Last Reviewed**: 2026-04-03  
 **Founder**: Mehdi Wahbi  
 **Next Review**: January 2027

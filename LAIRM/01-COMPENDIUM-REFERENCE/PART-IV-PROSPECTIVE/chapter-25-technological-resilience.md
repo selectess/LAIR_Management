@@ -133,4 +133,3 @@ Technological resilience (systemic risk assessment, resilience engineering, circ
 ---
 
 
-**Last Reviewed**: April 3, 2026

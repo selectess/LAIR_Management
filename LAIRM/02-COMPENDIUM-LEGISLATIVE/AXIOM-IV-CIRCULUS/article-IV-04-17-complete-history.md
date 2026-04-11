@@ -642,4 +642,3 @@ Chaque événement DOIT être enregistré avec :
 
 ---
 
-**Last Reviewed**: April 3, 2026

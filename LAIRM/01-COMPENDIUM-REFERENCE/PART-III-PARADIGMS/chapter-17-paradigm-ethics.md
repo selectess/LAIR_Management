@@ -130,4 +130,3 @@ Programmable ethics (explicit constraints, bias detection, fairness ≥95%, ethi
 
 ---
 
-**Last Reviewed**: April 3, 2026

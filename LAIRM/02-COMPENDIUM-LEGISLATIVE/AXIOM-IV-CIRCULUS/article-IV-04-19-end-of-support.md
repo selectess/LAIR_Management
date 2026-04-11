@@ -681,4 +681,3 @@ Chaque fin de support DOIT être enregistrée avec :
 
 ---
 
-**Last Reviewed**: April 3, 2026

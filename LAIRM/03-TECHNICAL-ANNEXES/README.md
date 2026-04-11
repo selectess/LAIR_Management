@@ -131,7 +131,5 @@ def agent_action(params):
 
 ---
 
-**Last Updated**: March 30, 2026
 **Version**: 1.0.0-final
 
-**Last Reviewed**: April 3, 2026

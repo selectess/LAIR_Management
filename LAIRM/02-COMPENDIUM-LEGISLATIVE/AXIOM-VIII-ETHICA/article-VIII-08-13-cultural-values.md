@@ -340,4 +340,3 @@ class CulturalValuesManager:
 
 **Next Review** : January 2027
 
-**Last Reviewed**: April 3, 2026

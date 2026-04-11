@@ -414,9 +414,6 @@ The LAIRM deployment methodology follows a progressive approach in three phases:
 
 **End of Chapter 4: LAIRM Deployment Methodology**
 
-**Last Updated**: 2026-03-30  
-**Last Reviewed**: 2026-04-03  
-**Status**: Final  
 **Version**: Initiation
 
 **Related Chapters**:

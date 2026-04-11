@@ -109,6 +109,4 @@ class KillSwitchController:
 ---
 
 **Version** : 1.0.0
-**Last Updated** : 30 mars 2026
 
-**Last Reviewed**: April 3, 2026

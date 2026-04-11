@@ -27,7 +27,5 @@ This directory contains technical specifications and documentation for LAIRM fra
 ---
 
 **Date of Creation**: March 18, 2024  
-**Last Updated**: March 30, 2026  
 **Founder**: Mehdi Wahbi
 
-**Last Reviewed**: April 3, 2026

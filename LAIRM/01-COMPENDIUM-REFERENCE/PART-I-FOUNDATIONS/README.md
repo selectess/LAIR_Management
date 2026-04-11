@@ -26,7 +26,4 @@ This directory contains the resources and documentation for this section.
 
 ---
 
-**Last Updated**: 2026-03-30  
-**Last Reviewed**: 2026-04-03  
-**Status**: Final  
 **Version**: Initiation

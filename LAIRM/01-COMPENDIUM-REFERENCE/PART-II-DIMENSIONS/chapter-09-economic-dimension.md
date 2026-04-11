@@ -875,4 +875,3 @@ The economic architecture presented in this chapter ensures that agentic product
 - **Chapter 8**: Ethical dimension and fairness
 
 ---
-**Last Reviewed**: April 3, 2026

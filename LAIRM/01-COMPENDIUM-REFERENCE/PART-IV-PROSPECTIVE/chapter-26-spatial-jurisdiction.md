@@ -110,4 +110,3 @@ Spatial jurisdiction (high-latency protocols, jurisdictional frameworks, environ
 ---
 
 
-**Last Reviewed**: April 3, 2026

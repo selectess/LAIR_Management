@@ -95,7 +95,4 @@ The LAIRM project welcomes contributions from all participants in the AI ecosyst
 
 ---
 
-**Last Updated**: 2026-03-30  
-**Last Reviewed**: 2026-04-03  
-**Status**: Final  
 **Version**: Initiation

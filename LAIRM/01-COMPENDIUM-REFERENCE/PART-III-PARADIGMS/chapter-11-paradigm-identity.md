@@ -1245,4 +1245,3 @@ The paradigm of agentic identity transforms autonomous agents from anonymous sys
 
 ---
 
-**Last Reviewed**: April 3, 2026

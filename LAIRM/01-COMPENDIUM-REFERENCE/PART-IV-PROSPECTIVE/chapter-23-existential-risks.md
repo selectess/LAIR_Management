@@ -123,4 +123,3 @@ Existential risk management (mandatory safety research, international coordinati
 ---
 
 
-**Last Reviewed**: April 3, 2026

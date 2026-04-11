@@ -904,9 +904,7 @@ Implementation of Article I.1.18 will ensure that autonomous agents maintain acc
 ---
 
 **Article I.1.18: Right to Rectification**  
-**Status**: Final  
 **Effective Date**: 1 January 2027  
-**Last Reviewed**: April 4, 2026
 
 ---
 

@@ -540,4 +540,3 @@ class DisasterRecoveryManager:
 - NIST Cybersecurity Framework : Gestion des risques
 - NIST SP 800-34 : Contingency Planning
 
-**Last Reviewed**: April 3, 2026

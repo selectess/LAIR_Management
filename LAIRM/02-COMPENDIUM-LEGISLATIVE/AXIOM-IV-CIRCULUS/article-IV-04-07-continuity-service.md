@@ -697,4 +697,3 @@ Chaque opération de continuité DOIT être enregistrée avec :
 - Article IV.4.4 : Maintenance et Mise à Jour
 - Article IV.4.8 : Récupération d'Urgence
 
-**Last Reviewed**: April 3, 2026

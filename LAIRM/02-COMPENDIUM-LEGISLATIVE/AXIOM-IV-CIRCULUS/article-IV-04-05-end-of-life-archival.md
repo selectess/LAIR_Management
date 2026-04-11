@@ -707,4 +707,3 @@ mod tests {
 - NIST Cybersecurity Framework : Gestion des risques
 - GDPR : Droit à l'oubli et conservation des données
 
-**Last Reviewed**: April 3, 2026

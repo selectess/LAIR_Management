@@ -308,7 +308,4 @@ This glossary establishes the canonical terminology used throughout the LAIRM co
 
 ---
 
-**Last Updated**: 2026-03-30  
-**Last Reviewed**: 2026-04-03  
-**Status**: Final  
 **Version**: Initiation

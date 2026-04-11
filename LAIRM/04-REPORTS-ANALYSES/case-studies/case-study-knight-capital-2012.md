@@ -290,11 +290,9 @@ The Knight Capital incident of August 1, 2012, represents one of the most signif
 
 **Document Status**: Final  
 **Verification**: All facts verified against official sources  
-**Last Updated**: April 2, 2026  
 **Next Review**: April 2, 2027
 
 ---
 
 *This case study is based entirely on publicly available information from official investigations, regulatory filings, and peer-reviewed academic publications. All sources are cited and verifiable.*
 
-**Last Reviewed**: April 3, 2026

@@ -329,4 +329,3 @@ print(f"Response: {response}")
 - [DID Agent Specification](./did-agent-spec.md)
 - [Agent Passport Schema](../schemas/agent-passport-schema.md)
 
-**Last Reviewed**: April 3, 2026

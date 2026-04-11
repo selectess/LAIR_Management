@@ -519,4 +519,3 @@ impl CertificationManager {
 
 ---
 
-**Last Reviewed**: April 3, 2026

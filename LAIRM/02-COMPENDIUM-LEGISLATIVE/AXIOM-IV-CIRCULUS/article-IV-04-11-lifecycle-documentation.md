@@ -413,4 +413,3 @@ Chaque documentation DOIT être enregistrée avec :
 
 **Status** : Draft
 
-**Last Reviewed**: April 3, 2026

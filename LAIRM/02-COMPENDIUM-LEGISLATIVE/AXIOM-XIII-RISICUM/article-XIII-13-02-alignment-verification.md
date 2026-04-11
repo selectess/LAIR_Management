@@ -529,4 +529,3 @@ impl AlignmentVerificationManager {
 
 ---
 
-**Last Reviewed**: April 3, 2026

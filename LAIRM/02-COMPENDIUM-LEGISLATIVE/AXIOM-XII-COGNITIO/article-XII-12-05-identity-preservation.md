@@ -428,4 +428,3 @@ impl IdentityPreservationManager {
 
 ---
 
-**Last Reviewed**: April 3, 2026

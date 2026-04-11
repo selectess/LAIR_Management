@@ -671,4 +671,3 @@ mod tests {
 - Article IV.4.5 : Fin de Vie et Archivage
 - Article IV.4.3 : Opération Continue
 
-**Last Reviewed**: April 3, 2026

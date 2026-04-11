@@ -251,4 +251,3 @@ impl RecoveryVerificationManager {
 
 ---
 
-**Last Reviewed**: April 3, 2026

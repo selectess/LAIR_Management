@@ -1023,4 +1023,3 @@ The ethical architecture presented in this chapter ensures that autonomous agent
 - **Chapter 9**: Economic dimension and market impacts
 
 ---
-**Last Reviewed**: April 3, 2026

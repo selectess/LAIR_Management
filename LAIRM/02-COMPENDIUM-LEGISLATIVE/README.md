@@ -152,11 +152,8 @@ Use legal foundations for litigation and interpretation.
 ## Document Information
 
 **Total Articles**: 361  
-**Status**: Final (Ψ-I to Ψ-IX), Draft (Ψ-X to Ψ-XVII), Reserved (Ψ-XVIII to Ψ-XIX)  
-**Last Updated**: March 30, 2026  
 **Contributors**: Mehdi Wahbi  
 **License**: CC-BY-SA 4.0 International
 
 ---
 
-**Last Reviewed**: April 3, 2026

@@ -240,6 +240,4 @@ The action-record schema defines the standardized format for recording actions e
 ---
 
 **Version** : 1.0.0  
-**Last Updated** : March 30, 2026
 
-**Last Reviewed**: April 3, 2026

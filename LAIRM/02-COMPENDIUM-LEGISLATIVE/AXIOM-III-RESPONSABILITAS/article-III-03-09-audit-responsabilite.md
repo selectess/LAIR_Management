@@ -257,4 +257,3 @@ Each agent DOIT maintenir un registre immuable de :
 
 **Status** : Draft
 
-**Last Reviewed**: April 3, 2026

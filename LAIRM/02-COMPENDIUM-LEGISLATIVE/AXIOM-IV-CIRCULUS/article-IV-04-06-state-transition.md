@@ -641,4 +641,3 @@ mod tests {
 - NIST Cybersecurity Framework : Gestion des risques
 - State Machine Theory : Théorie des machines d'état
 
-**Last Reviewed**: April 3, 2026

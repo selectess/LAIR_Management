@@ -674,4 +674,3 @@ Each agent MUST register:
 
 ---
 
-**Last Reviewed**: April 3, 2026

@@ -137,4 +137,3 @@ Energy sovereignty (100% renewable by 2035, 50% efficiency by 2030, carbon accou
 ---
 
 
-**Last Reviewed**: April 3, 2026

@@ -346,9 +346,6 @@ The axioms follow a progressive logic: first ensure human control (I), then iden
 
 **End of Chapter 2: Fundamental Principles of LAIRM**
 
-**Last Updated**: 2026-03-30  
-**Last Reviewed**: 2026-04-03  
-**Status**: Final  
 **Version**: Initiation
 
 **Related Chapters**:

@@ -110,4 +110,3 @@ Absolute prohibition of fully autonomous weapons (LAWS) with meaningful human co
 ---
 
 
-**Last Reviewed**: April 3, 2026

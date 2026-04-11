@@ -204,4 +204,3 @@ The LAIRM legislative corpus (361 articles in 19 axioms) translates paradigms in
 
 ---
 
-**Last Reviewed**: April 3, 2026

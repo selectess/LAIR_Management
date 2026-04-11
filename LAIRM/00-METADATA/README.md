@@ -133,6 +133,4 @@ All metadata documents are living documents, updated as the project evolves:
 
 ---
 
-**Last Updated**: March 30, 2026  
 **Responsible**: Mehdi Wahbi  
-**Last Reviewed**: April 3, 2026

@@ -626,4 +626,3 @@ The responsibility cascade ensures justice for victims, accountability for actor
 
 ---
 
-**Last Reviewed**: April 3, 2026

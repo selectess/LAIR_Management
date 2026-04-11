@@ -133,6 +133,4 @@ The kill-signal schema defines the standardized format for universal emergency s
 ---
 
 **Version**: 1.0.0  
-**Last Updated**: March 30, 2026
 
-**Last Reviewed**: April 3, 2026

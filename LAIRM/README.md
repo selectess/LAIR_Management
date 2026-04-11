@@ -238,17 +238,6 @@ lairm-cli generate-report --axiom I --output report.json
 
 ---
 
-## ✅ Quality and Compliance
-
-- **Consistency score**: 100/100
-- **Documentation coverage**: 100%
-- **Critical issues**: 0
-- **Major issues**: 0
-- **Minor issues**: 0
-- **Status**: ✅ Production-ready
-
----
-
 ## 📚 Complete Documentation
 
 ### For Developers
@@ -301,28 +290,4 @@ To contribute to LAIRM:
 
 ## 📄 License
 
-LAIRM is published under license [To be defined]
-
----
-
-## 👤 Author
-
-**Mehdi Wahbi**  
-Founder and principal architect of the LAIRM ecosystem
-
----
-
-## 📞 Support
-
-For any questions or support:
-- 📧 Email: [contact@lairm.org]
-- 🐛 Issues: [GitHub Issues]
-- 💬 Discussions: [GitHub Discussions]
-
----
-
-**Last Updated**: March 30, 2026  
-**Status**: ✅ Production-ready  
-**Version**: 1.0.0
-
-**Last Reviewed**: April 3, 2026
+LAIRM is published under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC-BY-SA-4.0)**.

@@ -436,4 +436,3 @@ impl InspectionReportManager {
 
 ---
 
-**Last Reviewed**: April 3, 2026

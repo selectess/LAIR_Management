@@ -102,4 +102,3 @@ Local adaptation (jurisdiction-specific configuration, cultural sensitivity, loc
 
 ---
 
-**Last Reviewed**: April 3, 2026

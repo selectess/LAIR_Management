@@ -195,6 +195,4 @@ The compliance-report schema defines the standardized format for LAIRM axiom com
 ---
 
 **Version**: 1.0.0  
-**Last Updated**: March 30, 2026
 
-**Last Reviewed**: April 3, 2026

@@ -133,4 +133,3 @@ Humanity 2.0 governance (human dignity inviolable, right to remain unaugmented, 
 ---
 
 
-**Last Reviewed**: April 3, 2026

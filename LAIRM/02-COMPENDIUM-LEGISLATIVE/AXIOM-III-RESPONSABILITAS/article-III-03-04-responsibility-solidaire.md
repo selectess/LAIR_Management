@@ -321,4 +321,3 @@ impl JointLiabilityManager {
 
 **Statut** : ✅ Final | **Validation** : Légale ✅ | Technique ✅ | Éditoriale ✅ | **Prochain Examen** : Janvier 2027
 
-**Last Reviewed**: April 3, 2026

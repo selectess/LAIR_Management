@@ -354,11 +354,9 @@ The Flash Crash of May 6, 2010, represents a watershed moment in understanding t
 
 **Document Status**: Final  
 **Verification**: All facts verified against official sources  
-**Last Updated**: April 2, 2026  
 **Next Review**: April 2, 2027
 
 ---
 
 *This case study is based entirely on publicly available information from official investigations, regulatory filings, congressional testimony, and peer-reviewed academic publications. All sources are cited and verifiable.*
 
-**Last Reviewed**: April 3, 2026

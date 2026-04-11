@@ -154,6 +154,4 @@ The Reference Compendium is linked to the Legislative Compendium via axioms:
 
 ---
 
-**Last Updated**: March 30, 2026
 
-**Last Reviewed**: April 3, 2026

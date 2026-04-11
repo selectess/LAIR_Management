@@ -140,12 +140,9 @@ Axiom II (IDENTITAS AGENTICA) is foundational to the entire LAIRM framework:
 
 ## Document Information
 
-**Status**: Final  
 **Word Count**: ~800 words  
-**Last Updated**: March 30, 2026  
 **Contributors**: Mehdi Wahbi  
 **License**: CC-BY-SA 4.0 International
 
 ---
 
-**Last Reviewed**: April 3, 2026

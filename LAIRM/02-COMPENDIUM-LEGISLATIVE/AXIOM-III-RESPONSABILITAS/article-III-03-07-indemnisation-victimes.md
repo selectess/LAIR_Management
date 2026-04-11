@@ -346,4 +346,3 @@ Each agent DOIT maintenir un registre immuable de :
 
 ---
 
-**Last Reviewed**: April 3, 2026

@@ -224,4 +224,3 @@ Le registre public DOIT permettre :
 
 **Status** : Draft
 
-**Last Reviewed**: April 3, 2026

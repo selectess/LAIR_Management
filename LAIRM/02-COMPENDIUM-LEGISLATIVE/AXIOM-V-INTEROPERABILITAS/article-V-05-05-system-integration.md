@@ -414,4 +414,3 @@ Each integration MUST be registered with:
 
 ---
 
-**Last Reviewed**: April 3, 2026

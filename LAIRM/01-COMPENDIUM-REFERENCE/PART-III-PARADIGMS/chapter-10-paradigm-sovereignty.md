@@ -1145,4 +1145,3 @@ The paradigm of human sovereignty ensures that technological progress serves hum
 
 ---
 
-**Last Reviewed**: April 3, 2026

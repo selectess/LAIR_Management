@@ -446,7 +446,5 @@ Note: No-code enterprise agents
 
 ---
 
-**Last Updated**: March 30, 2026  
-**Last Reviewed**: April 3, 2026  
 **Contributors**: Mehdi Wahbi  
 **Contact**: selectess@gmail.com

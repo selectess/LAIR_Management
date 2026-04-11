@@ -70,7 +70,4 @@ ORCID: [0009-0007-0110-9437](https://orcid.org/0009-0007-0110-9437)
 
 ---
 
-**Last Updated**: March 30, 2026  
-**Last Reviewed**: April 3, 2026  
-**Status**: Final  
 **Version**: Initiation

@@ -316,12 +316,9 @@ Part III builds upon this dimensional analysis to present nine paradigmatic fram
 
 ## Document Information
 
-**Status**: Final  
 **Word Count**: ~2,100 words  
-**Last Updated**: March 30, 2026  
 **Contributors**: Mehdi Wahbi  
 **License**: CC-BY-SA-4.0
 
 ---
 
-**Last Reviewed**: April 3, 2026

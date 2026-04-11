@@ -117,4 +117,3 @@ Hybrid governance (separation of powers, complementary roles, transparent proces
 
 ---
 
-**Last Reviewed**: April 3, 2026

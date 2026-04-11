@@ -945,4 +945,3 @@ The legal architecture presented in this chapter provides the foundation for acc
 - **Legislative Corpus**: Articles implementing cascade liability
 
 ---
-**Last Reviewed**: April 3, 2026

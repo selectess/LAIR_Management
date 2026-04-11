@@ -99,4 +99,3 @@ Interoperability through open standards (MCP, A2A, JSON-LD) prevents vendor lock
 
 ---
 
-**Last Reviewed**: April 3, 2026

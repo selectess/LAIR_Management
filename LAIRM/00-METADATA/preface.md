@@ -129,7 +129,4 @@ ORCID: [0009-0007-0110-9437](https://orcid.org/0009-0007-0110-9437)
 
 ---
 
-**Last Updated**: 2026-03-30  
-**Last Reviewed**: 2026-04-03  
-**Status**: Final  
 **Version**: Initiation

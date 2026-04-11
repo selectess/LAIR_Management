@@ -712,4 +712,3 @@ Chaque rollback DOIT être enregistré avec :
 
 ---
 
-**Last Reviewed**: April 3, 2026

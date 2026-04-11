@@ -676,9 +676,6 @@ Agentic systems represent a civilizational bifurcation. LAIRM proposes a path to
 
 **End of Chapter 0: General Introduction to LAIRM**
 
-**Last Updated**: 2026-03-30  
-**Last Reviewed**: 2026-04-03  
-**Status**: Final  
 **Version**: Initiation
 
 **Next chapters**:

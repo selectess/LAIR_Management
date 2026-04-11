@@ -196,8 +196,6 @@ Example: SECTION-NORM-01
 ---
 
 **Document created**: March 30, 2026  
-**Last Reviewed**: April 3, 2026  
-**Status**: Final  
 **Version**: Initiation
 
 ---

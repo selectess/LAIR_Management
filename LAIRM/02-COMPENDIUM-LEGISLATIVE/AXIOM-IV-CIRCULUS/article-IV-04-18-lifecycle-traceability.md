@@ -634,4 +634,3 @@ Chaque trace DOIT être enregistrée avec :
 
 ---
 
-**Last Reviewed**: April 3, 2026

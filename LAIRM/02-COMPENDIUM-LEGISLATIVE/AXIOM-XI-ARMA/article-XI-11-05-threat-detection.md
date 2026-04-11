@@ -262,4 +262,3 @@ impl ThreatDetectionManager {
 
 ---
 
-**Last Reviewed**: April 3, 2026

@@ -121,4 +121,3 @@ Cognitive sovereignty (right to unaugmented cognition, informed consent, reversi
 ---
 
 
-**Last Reviewed**: April 3, 2026

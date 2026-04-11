@@ -521,4 +521,3 @@ mod tests {
 - Article IV.4.6 : Transition d'État
 - Article IV.4.16 : Rollback et Récupération
 
-**Last Reviewed**: April 3, 2026

@@ -321,4 +321,3 @@ Each agent DOIT avoir un profil public contenant :
 
 ---
 
-**Last Reviewed**: April 3, 2026

@@ -1124,4 +1124,3 @@ Complete reference implementation available at:
 
 ---
 
-**Last Reviewed**: April 3, 2026

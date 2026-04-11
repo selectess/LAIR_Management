@@ -412,9 +412,6 @@ The LAIRM legal framework establishes clear and equitable responsibility for dam
 
 **End of Chapter 5: Legal Framework and Legal Instruments**
 
-**Last Updated**: 2026-03-30  
-**Last Reviewed**: 2026-04-03  
-**Status**: Final  
 **Version**: Initiation
 
 **Related Chapters**:

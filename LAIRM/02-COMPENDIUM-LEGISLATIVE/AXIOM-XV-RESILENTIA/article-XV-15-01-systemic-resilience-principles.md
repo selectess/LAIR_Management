@@ -241,4 +241,3 @@ impl ResilienceManager {
 
 ---
 
-**Last Reviewed**: April 3, 2026

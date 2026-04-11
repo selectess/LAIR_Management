@@ -306,4 +306,3 @@ class EnergyRemediationManager:
 
 ---
 
-**Last Reviewed**: April 3, 2026

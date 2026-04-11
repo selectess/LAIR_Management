@@ -125,4 +125,3 @@ class FailureDetectionManager:
 
 ---
 
-**Last Reviewed**: April 3, 2026

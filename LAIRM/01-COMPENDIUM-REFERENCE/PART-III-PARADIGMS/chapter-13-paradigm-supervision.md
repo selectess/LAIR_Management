@@ -147,4 +147,3 @@ Continuous supervision with risk-based ratios (1:50 to 1:1000), real-time monito
 
 ---
 
-**Last Reviewed**: April 3, 2026
