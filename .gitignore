@@ -29,3 +29,28 @@ Temporary Items
 *.tmp
 *.temp
 *.log
+
+# Environment variables - NEVER COMMIT
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Supabase
+supabase/
+
+# Web projects
+lairm-web/
+docs/

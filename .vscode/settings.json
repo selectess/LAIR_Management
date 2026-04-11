@@ -1,7 +1,0 @@
-{
-    "telemetry.editStats.details.enabled": false,
-    "telemetry.editStats.showDecorations": false,
-    "application.experimental.rendererProfiling": false,
-    "github.gitProtocol": "https",
-    "html.autoCreateQuotes": true
-}
