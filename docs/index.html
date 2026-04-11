@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAIRM - The Cybernetic Criterion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        /* Cybernetic Grid Background */
+        .grid-bg {
+            position: fixed;
+            inset: 0;
+            background-image: 
+                linear-gradient(to right, #1a1a1a 1px, transparent 1px),
+                linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+            background-size: 4rem 4rem;
+            mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 110%);
+            z-index: 0;
+        }
+        
+        /* Animated Particles */
+        .particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: #06b6d4;
+            border-radius: 50%;
+            animation: pulse 3s infinite;
+            z-index: 1;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        /* Content */
+        .container {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        /* Hero Image */
+        .hero-wrapper {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-glow {
+            position: absolute;
+            inset: -1rem;
+            background: linear-gradient(to right, #06b6d4, #3b82f6, #a855f7);
+            border-radius: 1rem;
+            filter: blur(2rem);
+            opacity: 0.3;
+            animation: glow 3s infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.5; }
+        }
+        
+        .hero-image {
+            position: relative;
+            max-width: 800px;
+            width: 100%;
+            border-radius: 1rem;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Title */
+        h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #06b6d4, #3b82f6, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: pulse 2s infinite;
+        }
+        
+        .subtitle {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            color: #06b6d4;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .description {
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            color: #9ca3af;
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 42rem;
+        }
+        
+        .highlight {
+            color: #06b6d4;
+        }
+        
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #06b6d4;
+            transition: transform 0.3s;
+        }
+        
+        .stat-number:hover {
+            transform: scale(1.1);
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+        
+        /* Buttons */
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        @media (min-width: 768px) {
+            .buttons {
+                flex-direction: row;
+            }
+        }
+        
+        .btn {
+            position: relative;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            overflow: hidden;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, #0891b2, #3b82f6);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.5);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(to right, #9333ea, #ec4899);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+        }
+        
+        .arrow {
+            transition: transform 0.3s;
+        }
+        
+        .btn:hover .arrow {
+            transform: translateX(4px);
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+        
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+    
+    <!-- Animated Particles -->
+    <script>
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 3 + 's';
+            particle.style.animationDuration = (2 + Math.random() * 3) + 's';
+            document.body.appendChild(particle);
+        }
+    </script>
+    
+    <!-- Content -->
+    <div class="container">
+        <!-- Hero Image -->
+        <div class="hero-wrapper">
+            <div class="hero-glow"></div>
+            <img src="ImFro.jpeg" alt="LAIRM - The Cybernetic Criterion" class="hero-image">
+        </div>
+        
+        <!-- Title -->
+        <h1>LAIRM</h1>
+        <p class="subtitle">The Cybernetic Criterion</p>
+        <p class="description">
+            Legislature for Autonomous Intelligent Resources Management<br>
+            <span class="highlight">Global Agentive Constitution 2026–2036</span>
+        </p>
+        
+        <!-- Stats -->
+        <div class="stats">
+            <div>
+                <div class="stat-number">19</div>
+                <div class="stat-label">Axioms</div>
+            </div>
+            <div>
+                <div class="stat-number">361</div>
+                <div class="stat-label">Articles</div>
+            </div>
+            <div>
+                <div class="stat-number">28</div>
+                <div class="stat-label">Chapters</div>
+            </div>
+        </div>
+        
+        <!-- CTA Buttons -->
+        <div class="buttons">
+            <a href="manifesto/" class="btn btn-primary">
+                📖 Le Manifeste
+                <span class="arrow">→</span>
+            </a>
+            <a href="https://lairm-web.vercel.app" class="btn btn-secondary">
+                🌐 Cybernetic Criterion Platform
+                <span class="arrow">→</span>
+            </a>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>127 million autonomous agents • Zero legal framework</p>
+            <p>The first international agentive constitution</p>
+        </div>
+    </div>
+</body>
+</html>
