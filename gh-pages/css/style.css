@@ -483,6 +483,41 @@ a:hover {
   font-size: 1rem;
 }
 
+.axioms-graph {
+  max-width: 900px;
+  margin: 0 auto var(--space-16);
+  padding: var(--space-8);
+  background: linear-gradient(135deg, #f5f0e8 0%, #e8dfd0 100%);
+  border: 2px solid #001f3f;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 31, 63, 0.1);
+}
+
+.relationship-graph {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.relationship-graph circle {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.relationship-graph circle:hover {
+  filter: drop-shadow(0 0 8px rgba(201, 169, 98, 0.8));
+  transform: scale(1.1);
+}
+
+.relationship-graph line {
+  animation: pulse-line 2s ease-in-out infinite;
+}
+
+@keyframes pulse-line {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
 .axioms-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -491,21 +526,47 @@ a:hover {
 }
 
 .axiom-card {
-  padding: var(--space-8);
+  padding: 0;
   background: var(--bg-secondary);
-  border: 1px solid var(--border-default);
+  border: 2px solid var(--border-default);
   border-radius: 0.75rem;
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
   height: 280px;
   perspective: 1000px;
+  overflow: hidden;
+}
+
+.axiom-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #001f3f, #c9a962, #001f3f, #c9a962);
+  background-size: 400% 400%;
+  border-radius: 0.75rem;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: electric-border 3s ease infinite;
+}
+
+.axiom-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes electric-border {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .axiom-card:hover {
-  border-color: var(--border-hover);
-  box-shadow: 0 10px 30px rgba(201, 169, 98, 0.1);
   transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(201, 169, 98, 0.3);
 }
 
 .axiom-front,
@@ -519,25 +580,29 @@ a:hover {
   justify-content: center;
   backface-visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease;
+  border-radius: 0.75rem;
 }
 
 .axiom-front {
   opacity: 1;
   transform: rotateY(0deg);
+  background: var(--bg-secondary);
 }
 
 .axiom-back {
   opacity: 0;
   transform: rotateY(180deg);
-  background: linear-gradient(135deg, #001f3f 0%, #0a2a5a 100%);
-  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #f5f0e8 0%, #e8dfd0 100%);
+  border: 2px solid #001f3f;
+  box-shadow: inset 0 0 20px rgba(0, 31, 63, 0.1);
 }
 
 .axiom-back p {
-  color: #f5f0e8;
+  color: #001f3f;
   font-size: 0.9rem;
   line-height: 1.6;
   margin: 0;
+  font-weight: 500;
 }
 
 .axiom-card:hover .axiom-front {
