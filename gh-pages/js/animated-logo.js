@@ -1,270 +1,201 @@
-// Animated Logo - Robotic Lighthouse with Laser Web
+// Animated Logo - 19 Lighthouses in Pyramid Formation
 function createAnimatedLogo(size = 50) {
   // Create SVG canvas for animated logo
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('width', size);
   svg.setAttribute('height', size);
-  svg.setAttribute('viewBox', '0 0 100 100');
+  svg.setAttribute('viewBox', '0 0 200 200');
   svg.setAttribute('class', 'animated-logo-svg');
   
   // Define styles
   const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
   const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
   style.textContent = `
-    @keyframes rotate-lasers {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
     @keyframes pulse-light {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
     }
-    @keyframes glow-core {
-      0%, 100% { r: 6; opacity: 1; }
-      50% { r: 8; opacity: 0.7; }
-    }
-    @keyframes pulse-web {
+    @keyframes beam-sweep {
       0%, 100% { opacity: 0.3; }
       50% { opacity: 0.7; }
     }
-    .laser-group {
-      animation: rotate-lasers 12s linear infinite;
-      transform-origin: 50px 30px;
+    @keyframes glow-core {
+      0%, 100% { filter: brightness(1); }
+      50% { filter: brightness(1.5); }
     }
-    .light-pulse {
+    .lighthouse-beam {
+      animation: beam-sweep 3s ease-in-out infinite;
+    }
+    .lighthouse-light {
       animation: pulse-light 2s ease-in-out infinite;
     }
-    .core-glow {
+    .central-lighthouse {
       animation: glow-core 2s ease-in-out infinite;
-    }
-    .laser-web {
-      animation: pulse-web 3s ease-in-out infinite;
     }
   `;
   defs.appendChild(style);
-  
-  // Gradient for lighthouse
-  const gradient = document.createElementNS('http://www.w3.org/2000/svg', 'linearGradient');
-  gradient.setAttribute('id', 'lighthouseGradient');
-  gradient.setAttribute('x1', '0%');
-  gradient.setAttribute('y1', '0%');
-  gradient.setAttribute('x2', '0%');
-  gradient.setAttribute('y2', '100%');
-  
-  const stop1 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
-  stop1.setAttribute('offset', '0%');
-  stop1.setAttribute('style', 'stop-color:#001f3f;stop-opacity:1');
-  gradient.appendChild(stop1);
-  
-  const stop2 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
-  stop2.setAttribute('offset', '100%');
-  stop2.setAttribute('style', 'stop-color:#003366;stop-opacity:1');
-  gradient.appendChild(stop2);
-  
-  defs.appendChild(gradient);
   svg.appendChild(defs);
   
-  // Background circle
-  const bgCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-  bgCircle.setAttribute('cx', '50');
-  bgCircle.setAttribute('cy', '50');
-  bgCircle.setAttribute('r', '48');
-  bgCircle.setAttribute('fill', '#f5f0e8');
-  bgCircle.setAttribute('stroke', '#001f3f');
-  bgCircle.setAttribute('stroke-width', '1.5');
-  svg.appendChild(bgCircle);
+  // Background
+  const bgRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  bgRect.setAttribute('width', '200');
+  bgRect.setAttribute('height', '200');
+  bgRect.setAttribute('fill', '#f5f0e8');
+  svg.appendChild(bgRect);
   
-  // Ocean waves at bottom
-  const wave1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-  wave1.setAttribute('d', 'M 10 75 Q 25 70 40 75 T 70 75 T 90 75 L 90 95 L 10 95 Z');
-  wave1.setAttribute('fill', '#001f3f');
-  wave1.setAttribute('opacity', '0.3');
-  svg.appendChild(wave1);
+  // 19 Lighthouses positioned in pyramid formation
+  // Row 1 (back, smallest): 5 lighthouses
+  // Row 2: 4 lighthouses
+  // Row 3: 3 lighthouses
+  // Row 4: 3 lighthouses
+  // Row 5: 2 lighthouses
+  // Row 6 (front, center): 1 lighthouse (largest - Ψ-I)
+  // Row 7 (front sides): 1 lighthouse
   
-  const wave2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-  wave2.setAttribute('d', 'M 10 80 Q 30 77 50 80 T 90 80 L 90 95 L 10 95 Z');
-  wave2.setAttribute('fill', '#001f3f');
-  wave2.setAttribute('opacity', '0.2');
-  svg.appendChild(wave2);
-  
-  // Lighthouse base (wider at bottom)
-  const lighthouseBase = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-  lighthouseBase.setAttribute('d', 'M 42 75 L 40 55 L 60 55 L 58 75 Z');
-  lighthouseBase.setAttribute('fill', 'url(#lighthouseGradient)');
-  lighthouseBase.setAttribute('stroke', '#001f3f');
-  lighthouseBase.setAttribute('stroke-width', '1');
-  svg.appendChild(lighthouseBase);
-  
-  // Lighthouse middle section
-  const lighthouseMiddle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-  lighthouseMiddle.setAttribute('x', '40');
-  lighthouseMiddle.setAttribute('y', '35');
-  lighthouseMiddle.setAttribute('width', '20');
-  lighthouseMiddle.setAttribute('height', '20');
-  lighthouseMiddle.setAttribute('fill', 'url(#lighthouseGradient)');
-  lighthouseMiddle.setAttribute('stroke', '#001f3f');
-  lighthouseMiddle.setAttribute('stroke-width', '1');
-  svg.appendChild(lighthouseMiddle);
-  
-  // Robotic segments (horizontal lines)
-  for (let i = 0; i < 3; i++) {
-    const segment = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    segment.setAttribute('x1', '40');
-    segment.setAttribute('y1', 42 + (i * 6));
-    segment.setAttribute('x2', '60');
-    segment.setAttribute('y2', 42 + (i * 6));
-    segment.setAttribute('stroke', '#c9a962');
-    segment.setAttribute('stroke-width', '0.5');
-    segment.setAttribute('opacity', '0.6');
-    svg.appendChild(segment);
-  }
-  
-  // Lighthouse top (light chamber)
-  const lightChamber = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-  lightChamber.setAttribute('x', '38');
-  lightChamber.setAttribute('y', '25');
-  lightChamber.setAttribute('width', '24');
-  lightChamber.setAttribute('height', '10');
-  lightChamber.setAttribute('fill', '#001f3f');
-  lightChamber.setAttribute('stroke', '#c9a962');
-  lightChamber.setAttribute('stroke-width', '1.5');
-  svg.appendChild(lightChamber);
-  
-  // Lighthouse roof
-  const roof = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-  roof.setAttribute('d', 'M 35 25 L 50 18 L 65 25 Z');
-  roof.setAttribute('fill', '#c9a962');
-  roof.setAttribute('stroke', '#001f3f');
-  roof.setAttribute('stroke-width', '1');
-  svg.appendChild(roof);
-  
-  // Laser beams group (rotating) with web structure
-  const laserGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-  laserGroup.setAttribute('class', 'laser-group');
-  
-  // Create 8 main laser beams in beige
-  const laserAngles = [0, 45, 90, 135, 180, 225, 270, 315];
-  const laserEndPoints = [];
-  
-  laserAngles.forEach((angle, index) => {
-    const radian = (angle * Math.PI) / 180;
-    const x2 = 50 + Math.cos(radian) * 45;
-    const y2 = 30 + Math.sin(radian) * 45;
+  const lighthouses = [
+    // Back row (smallest, furthest) - 5 lighthouses
+    { x: 40, y: 30, height: 15, width: 4, light: 2, beam: 25, label: 'X' },
+    { x: 70, y: 28, height: 16, width: 4, light: 2, beam: 26, label: 'XI' },
+    { x: 100, y: 26, height: 17, width: 4, light: 2, beam: 27, label: 'XII' },
+    { x: 130, y: 28, height: 16, width: 4, light: 2, beam: 26, label: 'XIII' },
+    { x: 160, y: 30, height: 15, width: 4, light: 2, beam: 25, label: 'XIV' },
     
-    laserEndPoints.push({ x: x2, y: y2 });
+    // Row 2 - 4 lighthouses
+    { x: 55, y: 50, height: 20, width: 5, light: 2.5, beam: 30, label: 'XV' },
+    { x: 85, y: 48, height: 21, width: 5, light: 2.5, beam: 31, label: 'XVI' },
+    { x: 115, y: 48, height: 21, width: 5, light: 2.5, beam: 31, label: 'XVII' },
+    { x: 145, y: 50, height: 20, width: 5, light: 2.5, beam: 30, label: 'XVIII' },
     
-    const laser = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    laser.setAttribute('x1', '50');
-    laser.setAttribute('y1', '30');
-    laser.setAttribute('x2', x2);
-    laser.setAttribute('y2', y2);
-    laser.setAttribute('stroke', '#c9a962');
-    laser.setAttribute('stroke-width', '1.5');
-    laser.setAttribute('opacity', '0.7');
-    laser.setAttribute('class', 'light-pulse');
-    laser.setAttribute('style', `animation-delay: ${index * 0.25}s`);
-    laserGroup.appendChild(laser);
+    // Row 3 - 3 lighthouses
+    { x: 70, y: 70, height: 25, width: 6, light: 3, beam: 35, label: 'XIX' },
+    { x: 100, y: 68, height: 26, width: 6, light: 3, beam: 36, label: 'II' },
+    { x: 130, y: 70, height: 25, width: 6, light: 3, beam: 35, label: 'III' },
     
-    // Laser endpoint glow
-    const laserEnd = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    laserEnd.setAttribute('cx', x2);
-    laserEnd.setAttribute('cy', y2);
-    laserEnd.setAttribute('r', '2');
-    laserEnd.setAttribute('fill', '#c9a962');
-    laserEnd.setAttribute('opacity', '0.8');
-    laserGroup.appendChild(laserEnd);
+    // Row 4 - 3 lighthouses
+    { x: 60, y: 95, height: 30, width: 7, light: 3.5, beam: 40, label: 'IV' },
+    { x: 100, y: 93, height: 31, width: 7, light: 3.5, beam: 41, label: 'V' },
+    { x: 140, y: 95, height: 30, width: 7, light: 3.5, beam: 40, label: 'VI' },
+    
+    // Row 5 - 2 lighthouses
+    { x: 75, y: 120, height: 35, width: 8, light: 4, beam: 45, label: 'VII' },
+    { x: 125, y: 120, height: 35, width: 8, light: 4, beam: 45, label: 'VIII' },
+    
+    // Row 6 - 1 lighthouse (front side)
+    { x: 90, y: 145, height: 38, width: 9, light: 4.5, beam: 48, label: 'IX' },
+    
+    // Central lighthouse (largest, most luminous) - Ψ-I
+    { x: 100, y: 160, height: 45, width: 12, light: 6, beam: 55, label: 'I', central: true }
+  ];
+  
+  // Draw all light beams first (behind lighthouses)
+  const beamGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  beamGroup.setAttribute('opacity', '0.4');
+  
+  // Create crossing beams between lighthouses
+  lighthouses.forEach((lh1, i) => {
+    lighthouses.forEach((lh2, j) => {
+      if (i < j && Math.random() > 0.6) { // Random connections for visual interest
+        const beam = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        beam.setAttribute('x1', lh1.x);
+        beam.setAttribute('y1', lh1.y - lh1.height);
+        beam.setAttribute('x2', lh2.x);
+        beam.setAttribute('y2', lh2.y - lh2.height);
+        beam.setAttribute('stroke', '#c9a962');
+        beam.setAttribute('stroke-width', '0.5');
+        beam.setAttribute('class', 'lighthouse-beam');
+        beam.setAttribute('style', `animation-delay: ${i * 0.2}s`);
+        beamGroup.appendChild(beam);
+      }
+    });
   });
   
-  // Create web connections between laser endpoints (toile d'araignée)
-  const webGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-  webGroup.setAttribute('class', 'laser-web');
+  svg.appendChild(beamGroup);
   
-  // Connect adjacent endpoints to form octagon
-  for (let i = 0; i < laserEndPoints.length; i++) {
-    const next = (i + 1) % laserEndPoints.length;
-    const webLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    webLine.setAttribute('x1', laserEndPoints[i].x);
-    webLine.setAttribute('y1', laserEndPoints[i].y);
-    webLine.setAttribute('x2', laserEndPoints[next].x);
-    webLine.setAttribute('y2', laserEndPoints[next].y);
-    webLine.setAttribute('stroke', '#c9a962');
-    webLine.setAttribute('stroke-width', '0.8');
-    webLine.setAttribute('opacity', '0.4');
-    webGroup.appendChild(webLine);
-  }
-  
-  // Add inner web ring (connections at 60% distance)
-  const innerPoints = [];
-  laserAngles.forEach((angle) => {
-    const radian = (angle * Math.PI) / 180;
-    const x = 50 + Math.cos(radian) * 27;
-    const y = 30 + Math.sin(radian) * 27;
-    innerPoints.push({ x, y });
+  // Draw nodes where beams cross (simplified - at lighthouse tops)
+  lighthouses.forEach((lh, i) => {
+    const node = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    node.setAttribute('cx', lh.x);
+    node.setAttribute('cy', lh.y - lh.height);
+    node.setAttribute('r', lh.light * 0.8);
+    node.setAttribute('fill', '#c9a962');
+    node.setAttribute('opacity', '0.6');
+    node.setAttribute('class', 'lighthouse-light');
+    node.setAttribute('style', `animation-delay: ${i * 0.15}s`);
+    svg.appendChild(node);
   });
   
-  for (let i = 0; i < innerPoints.length; i++) {
-    const next = (i + 1) % innerPoints.length;
-    const innerWeb = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    innerWeb.setAttribute('x1', innerPoints[i].x);
-    innerWeb.setAttribute('y1', innerPoints[i].y);
-    innerWeb.setAttribute('x2', innerPoints[next].x);
-    innerWeb.setAttribute('y2', innerPoints[next].y);
-    innerWeb.setAttribute('stroke', '#c9a962');
-    innerWeb.setAttribute('stroke-width', '0.6');
-    innerWeb.setAttribute('opacity', '0.3');
-    webGroup.appendChild(innerWeb);
-  }
+  // Draw lighthouses from back to front
+  lighthouses.forEach((lh, index) => {
+    const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    if (lh.central) {
+      group.setAttribute('class', 'central-lighthouse');
+    }
+    
+    // Lighthouse base
+    const base = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    base.setAttribute('x', lh.x - lh.width / 2);
+    base.setAttribute('y', lh.y - lh.height * 0.3);
+    base.setAttribute('width', lh.width);
+    base.setAttribute('height', lh.height * 0.3);
+    base.setAttribute('fill', '#001f3f');
+    base.setAttribute('stroke', '#c9a962');
+    base.setAttribute('stroke-width', '0.5');
+    group.appendChild(base);
+    
+    // Lighthouse tower
+    const tower = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    tower.setAttribute('x', lh.x - lh.width / 2.5);
+    tower.setAttribute('y', lh.y - lh.height);
+    tower.setAttribute('width', lh.width / 1.25);
+    tower.setAttribute('height', lh.height * 0.7);
+    tower.setAttribute('fill', lh.central ? '#003366' : '#001f3f');
+    tower.setAttribute('stroke', '#c9a962');
+    tower.setAttribute('stroke-width', '0.5');
+    group.appendChild(tower);
+    
+    // Light chamber
+    const chamber = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    chamber.setAttribute('x', lh.x - lh.width / 2);
+    chamber.setAttribute('y', lh.y - lh.height);
+    chamber.setAttribute('width', lh.width);
+    chamber.setAttribute('height', lh.height * 0.15);
+    chamber.setAttribute('fill', '#c9a962');
+    chamber.setAttribute('opacity', lh.central ? '1' : '0.8');
+    group.appendChild(chamber);
+    
+    // Light source (glowing)
+    const light = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    light.setAttribute('cx', lh.x);
+    light.setAttribute('cy', lh.y - lh.height);
+    light.setAttribute('r', lh.light);
+    light.setAttribute('fill', '#c9a962');
+    light.setAttribute('opacity', lh.central ? '1' : '0.7');
+    light.setAttribute('class', 'lighthouse-light');
+    light.setAttribute('style', `animation-delay: ${index * 0.1}s`);
+    group.appendChild(light);
+    
+    // Light beam (upward)
+    const beamPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    const beamWidth = lh.beam;
+    beamPath.setAttribute('d', `M ${lh.x - beamWidth/2} ${lh.y - lh.height} L ${lh.x - beamWidth} ${lh.y - lh.height - lh.beam} L ${lh.x + beamWidth} ${lh.y - lh.height - lh.beam} L ${lh.x + beamWidth/2} ${lh.y - lh.height} Z`);
+    beamPath.setAttribute('fill', '#c9a962');
+    beamPath.setAttribute('opacity', lh.central ? '0.3' : '0.2');
+    beamPath.setAttribute('class', 'lighthouse-beam');
+    beamPath.setAttribute('style', `animation-delay: ${index * 0.1}s`);
+    group.appendChild(beamPath);
+    
+    svg.appendChild(group);
+  });
   
-  // Add cross connections for web effect
-  for (let i = 0; i < laserEndPoints.length; i += 2) {
-    const opposite = (i + 4) % laserEndPoints.length;
-    const crossWeb = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    crossWeb.setAttribute('x1', laserEndPoints[i].x);
-    crossWeb.setAttribute('y1', laserEndPoints[i].y);
-    crossWeb.setAttribute('x2', laserEndPoints[opposite].x);
-    crossWeb.setAttribute('y2', laserEndPoints[opposite].y);
-    crossWeb.setAttribute('stroke', '#c9a962');
-    crossWeb.setAttribute('stroke-width', '0.5');
-    crossWeb.setAttribute('opacity', '0.2');
-    webGroup.appendChild(crossWeb);
-  }
-  
-  laserGroup.appendChild(webGroup);
-  svg.appendChild(laserGroup);
-  
-  // Central light core (pulsing)
-  const lightCore = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-  lightCore.setAttribute('cx', '50');
-  lightCore.setAttribute('cy', '30');
-  lightCore.setAttribute('r', '6');
-  lightCore.setAttribute('fill', '#c9a962');
-  lightCore.setAttribute('class', 'core-glow');
-  svg.appendChild(lightCore);
-  
-  // Inner core
-  const innerCore = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-  innerCore.setAttribute('cx', '50');
-  innerCore.setAttribute('cy', '30');
-  innerCore.setAttribute('r', '3');
-  innerCore.setAttribute('fill', '#f5f0e8');
-  svg.appendChild(innerCore);
-  
-  // Robotic details - antenna on top
-  const antenna = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-  antenna.setAttribute('x1', '50');
-  antenna.setAttribute('y1', '18');
-  antenna.setAttribute('x2', '50');
-  antenna.setAttribute('y2', '12');
-  antenna.setAttribute('stroke', '#c9a962');
-  antenna.setAttribute('stroke-width', '1.5');
-  svg.appendChild(antenna);
-  
-  const antennaTop = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-  antennaTop.setAttribute('cx', '50');
-  antennaTop.setAttribute('cy', '12');
-  antennaTop.setAttribute('r', '2');
-  antennaTop.setAttribute('fill', '#c9a962');
-  svg.appendChild(antennaTop);
+  // Ground/water line
+  const ground = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  ground.setAttribute('x', '0');
+  ground.setAttribute('y', '180');
+  ground.setAttribute('width', '200');
+  ground.setAttribute('height', '20');
+  ground.setAttribute('fill', '#001f3f');
+  ground.setAttribute('opacity', '0.2');
+  svg.appendChild(ground);
   
   return svg;
 }
@@ -272,17 +203,21 @@ function createAnimatedLogo(size = 50) {
 document.addEventListener('DOMContentLoaded', function() {
   // Add logo to header
   const logoContainer = document.querySelector('.logo');
-  const h1 = logoContainer.querySelector('h1');
-  const headerLogo = createAnimatedLogo(60);
-  headerLogo.style.marginRight = '12px';
-  logoContainer.insertBefore(headerLogo, h1);
+  if (logoContainer) {
+    const h1 = logoContainer.querySelector('h1');
+    const headerLogo = createAnimatedLogo(60);
+    headerLogo.style.marginRight = '12px';
+    logoContainer.insertBefore(headerLogo, h1);
+  }
   
   // Add larger logo to hero section
   const heroContent = document.querySelector('.hero-content');
-  const heroTitle = heroContent.querySelector('.hero-title');
-  const heroLogoContainer = document.createElement('div');
-  heroLogoContainer.className = 'hero-logo-container';
-  const heroLogo = createAnimatedLogo(120);
-  heroLogoContainer.appendChild(heroLogo);
-  heroContent.insertBefore(heroLogoContainer, heroTitle);
+  if (heroContent) {
+    const heroTitle = heroContent.querySelector('.hero-title');
+    const heroLogoContainer = document.createElement('div');
+    heroLogoContainer.className = 'hero-logo-container';
+    const heroLogo = createAnimatedLogo(150);
+    heroLogoContainer.appendChild(heroLogo);
+    heroContent.insertBefore(heroLogoContainer, heroTitle);
+  }
 });
