@@ -13,7 +13,7 @@ license: CC-BY-SA-4.0
 # ACKNOWLEDGMENTS
 ## LAIRM Development, Governance, and Stakeholder Recognition
 
-**Contributor**: Mehdi Wahbi, Founder of the LAIRM Initiative  
+**Commissioned by**: Mehdi Wahbi, Founder of the LAIRM Initiative  
 **Date**: April 12, 2026
 
 ---
