@@ -1,4 +1,4 @@
-// Animated Logo - Robotic Lighthouse with Beige Lasers
+// Animated Logo - Robotic Lighthouse with Laser Web
 function createAnimatedLogo(size = 50) {
   // Create SVG canvas for animated logo
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -23,15 +23,22 @@ function createAnimatedLogo(size = 50) {
       0%, 100% { r: 6; opacity: 1; }
       50% { r: 8; opacity: 0.7; }
     }
+    @keyframes pulse-web {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.7; }
+    }
     .laser-group {
-      animation: rotate-lasers 8s linear infinite;
-      transform-origin: 50px 50px;
+      animation: rotate-lasers 12s linear infinite;
+      transform-origin: 50px 30px;
     }
     .light-pulse {
       animation: pulse-light 2s ease-in-out infinite;
     }
     .core-glow {
       animation: glow-core 2s ease-in-out infinite;
+    }
+    .laser-web {
+      animation: pulse-web 3s ease-in-out infinite;
     }
   `;
   defs.appendChild(style);
@@ -131,16 +138,20 @@ function createAnimatedLogo(size = 50) {
   roof.setAttribute('stroke-width', '1');
   svg.appendChild(roof);
   
-  // Laser beams group (rotating)
+  // Laser beams group (rotating) with web structure
   const laserGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
   laserGroup.setAttribute('class', 'laser-group');
   
-  // Create 6 laser beams in beige
-  const laserAngles = [0, 60, 120, 180, 240, 300];
+  // Create 8 main laser beams in beige
+  const laserAngles = [0, 45, 90, 135, 180, 225, 270, 315];
+  const laserEndPoints = [];
+  
   laserAngles.forEach((angle, index) => {
     const radian = (angle * Math.PI) / 180;
     const x2 = 50 + Math.cos(radian) * 45;
     const y2 = 30 + Math.sin(radian) * 45;
+    
+    laserEndPoints.push({ x: x2, y: y2 });
     
     const laser = document.createElementNS('http://www.w3.org/2000/svg', 'line');
     laser.setAttribute('x1', '50');
@@ -151,7 +162,7 @@ function createAnimatedLogo(size = 50) {
     laser.setAttribute('stroke-width', '1.5');
     laser.setAttribute('opacity', '0.7');
     laser.setAttribute('class', 'light-pulse');
-    laser.setAttribute('style', `animation-delay: ${index * 0.3}s`);
+    laser.setAttribute('style', `animation-delay: ${index * 0.25}s`);
     laserGroup.appendChild(laser);
     
     // Laser endpoint glow
@@ -164,6 +175,61 @@ function createAnimatedLogo(size = 50) {
     laserGroup.appendChild(laserEnd);
   });
   
+  // Create web connections between laser endpoints (toile d'araignée)
+  const webGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  webGroup.setAttribute('class', 'laser-web');
+  
+  // Connect adjacent endpoints to form octagon
+  for (let i = 0; i < laserEndPoints.length; i++) {
+    const next = (i + 1) % laserEndPoints.length;
+    const webLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    webLine.setAttribute('x1', laserEndPoints[i].x);
+    webLine.setAttribute('y1', laserEndPoints[i].y);
+    webLine.setAttribute('x2', laserEndPoints[next].x);
+    webLine.setAttribute('y2', laserEndPoints[next].y);
+    webLine.setAttribute('stroke', '#c9a962');
+    webLine.setAttribute('stroke-width', '0.8');
+    webLine.setAttribute('opacity', '0.4');
+    webGroup.appendChild(webLine);
+  }
+  
+  // Add inner web ring (connections at 60% distance)
+  const innerPoints = [];
+  laserAngles.forEach((angle) => {
+    const radian = (angle * Math.PI) / 180;
+    const x = 50 + Math.cos(radian) * 27;
+    const y = 30 + Math.sin(radian) * 27;
+    innerPoints.push({ x, y });
+  });
+  
+  for (let i = 0; i < innerPoints.length; i++) {
+    const next = (i + 1) % innerPoints.length;
+    const innerWeb = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    innerWeb.setAttribute('x1', innerPoints[i].x);
+    innerWeb.setAttribute('y1', innerPoints[i].y);
+    innerWeb.setAttribute('x2', innerPoints[next].x);
+    innerWeb.setAttribute('y2', innerPoints[next].y);
+    innerWeb.setAttribute('stroke', '#c9a962');
+    innerWeb.setAttribute('stroke-width', '0.6');
+    innerWeb.setAttribute('opacity', '0.3');
+    webGroup.appendChild(innerWeb);
+  }
+  
+  // Add cross connections for web effect
+  for (let i = 0; i < laserEndPoints.length; i += 2) {
+    const opposite = (i + 4) % laserEndPoints.length;
+    const crossWeb = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    crossWeb.setAttribute('x1', laserEndPoints[i].x);
+    crossWeb.setAttribute('y1', laserEndPoints[i].y);
+    crossWeb.setAttribute('x2', laserEndPoints[opposite].x);
+    crossWeb.setAttribute('y2', laserEndPoints[opposite].y);
+    crossWeb.setAttribute('stroke', '#c9a962');
+    crossWeb.setAttribute('stroke-width', '0.5');
+    crossWeb.setAttribute('opacity', '0.2');
+    webGroup.appendChild(crossWeb);
+  }
+  
+  laserGroup.appendChild(webGroup);
   svg.appendChild(laserGroup);
   
   // Central light core (pulsing)
