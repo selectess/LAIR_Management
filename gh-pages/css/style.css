@@ -3,13 +3,13 @@
    ============================================================================ */
 
 :root {
-  /* Colors - Beige/Blanc avec animations Bleu et Or */
+  /* Colors - Beige/Blanc avec animations Bleu Marine et Or */
   --bg-primary: #f5f0e8;
   --bg-secondary: #e8dfd0;
   --bg-tertiary: #ddd2c0;
   
   --accent-gold: #c9a962;
-  --accent-blue: #3b82f6;
+  --accent-blue: #001f3f;
   --accent-beige: #d4c4a8;
   --accent-cream: #faf8f5;
   
@@ -64,7 +64,7 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 20% 50%, rgba(0, 31, 63, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(201, 169, 98, 0.06) 0%, transparent 50%);
   animation: float-bg 25s ease-in-out infinite;
   pointer-events: none;
@@ -80,7 +80,7 @@ body::after {
   height: 100%;
   background: 
     radial-gradient(circle at 80% 20%, rgba(201, 169, 98, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.07) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(0, 31, 63, 0.07) 0%, transparent 50%);
   animation: float-bg 30s ease-in-out infinite reverse;
   pointer-events: none;
   z-index: 0;
@@ -163,7 +163,7 @@ a:hover {
 
 .logo h1 {
   font-size: 1.5rem;
-  color: var(--accent-gold);
+  color: #001f3f;
   margin: 0;
 }
 
@@ -231,9 +231,9 @@ a:hover {
 
 .hero-title {
   font-size: 6rem;
-  color: var(--accent-gold);
+  color: #001f3f;
   margin-bottom: var(--space-4);
-  text-shadow: 0 0 30px rgba(201, 169, 98, 0.2);
+  text-shadow: 0 0 30px rgba(0, 31, 63, 0.2);
 }
 
 .hero-subtitle {
@@ -274,7 +274,7 @@ a:hover {
 .stat-value {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--accent-gold);
+  color: #001f3f;
   margin-bottom: var(--space-2);
 }
 
@@ -344,7 +344,7 @@ a:hover {
 }
 
 .vision-content h2 {
-  color: var(--accent-gold);
+  color: #001f3f;
   margin-bottom: var(--space-12);
 }
 
@@ -365,7 +365,7 @@ a:hover {
 
 .axioms h2 {
   text-align: center;
-  color: var(--accent-gold);
+  color: #001f3f;
   margin-bottom: var(--space-4);
 }
 
@@ -401,7 +401,7 @@ a:hover {
 .axiom-number {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--accent-gold);
+  color: #001f3f;
   margin-bottom: var(--space-3);
 }
 
@@ -437,7 +437,7 @@ a:hover {
 
 .case-studies h2 {
   text-align: center;
-  color: var(--accent-gold);
+  color: #001f3f;
   margin-bottom: var(--space-4);
 }
 
@@ -463,7 +463,7 @@ a:hover {
 .case-year {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--accent-gold);
+  color: #001f3f;
   margin-bottom: var(--space-3);
 }
 
@@ -492,7 +492,7 @@ a:hover {
 }
 
 .cta-section h2 {
-  color: var(--accent-gold);
+  color: #001f3f;
   margin-bottom: var(--space-4);
 }
 
@@ -520,7 +520,7 @@ a:hover {
 }
 
 .footer-section h4 {
-  color: var(--accent-gold);
+  color: #001f3f;
   margin-bottom: var(--space-4);
 }
 
