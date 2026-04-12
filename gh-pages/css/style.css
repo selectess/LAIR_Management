@@ -161,6 +161,15 @@ a:hover {
   gap: var(--space-3);
 }
 
+.animated-logo-svg {
+  filter: drop-shadow(0 0 8px rgba(0, 31, 63, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.logo:hover .animated-logo-svg {
+  filter: drop-shadow(0 0 15px rgba(201, 169, 98, 0.5));
+}
+
 .logo h1 {
   font-size: 1.5rem;
   color: #001f3f;
@@ -356,93 +365,8 @@ a:hover {
 }
 
 /* ============================================================================
-   Global Map Section
+   Axioms Section
    ============================================================================ */
-
-.global-map {
-  padding: var(--space-24) 0;
-  background: var(--bg-primary);
-  border-bottom: 1px solid var(--border-default);
-}
-
-.global-map h2 {
-  text-align: center;
-  color: #001f3f;
-  margin-bottom: var(--space-4);
-}
-
-.map-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: var(--space-12);
-  background: var(--bg-secondary);
-  border-radius: 1rem;
-  border: 1px solid var(--border-default);
-}
-
-.world-map {
-  width: 100%;
-  height: auto;
-  min-height: 400px;
-}
-
-.agent-node {
-  animation: pulse-node 3s ease-in-out infinite;
-}
-
-@keyframes pulse-node {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
-.pulse-ring {
-  animation: expand-ring 2s ease-out infinite;
-}
-
-@keyframes expand-ring {
-  0% {
-    r: 12px;
-    opacity: 1;
-  }
-  100% {
-    r: 24px;
-    opacity: 0;
-  }
-}
-
-.cyber-symbol {
-  animation: rotate-symbol 8s linear infinite;
-}
-
-@keyframes rotate-symbol {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.connection-line {
-  animation: flow-line 4s ease-in-out infinite;
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-}
-
-@keyframes flow-line {
-  0%, 100% {
-    stroke-dashoffset: 100;
-    opacity: 0.2;
-  }
-  50% {
-    stroke-dashoffset: 0;
-    opacity: 0.6;
-  }
-}
 
 .axioms {
   padding: var(--space-24) 0;

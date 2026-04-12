@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="js/animated-logo.js"></script>
 </head>
 <body>
   <!-- Navigation -->
@@ -86,98 +87,6 @@
           the principles, norms, and control mechanisms to ensure autonomous AI systems operate 
           in alignment with human values and the public interest.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Global Agentivity Map Section -->
-  <section class="global-map">
-    <div class="container">
-      <h2>Global Agentive Network</h2>
-      <p class="section-subtitle">127 Million Autonomous Agents Worldwide</p>
-      
-      <div class="map-container">
-        <svg viewBox="0 0 1000 600" class="world-map">
-          <!-- Simplified world map outline -->
-          <g class="map-outline">
-            <!-- North America -->
-            <path d="M 100 150 L 150 120 L 180 140 L 170 200 L 120 210 Z" fill="none" stroke="#001f3f" stroke-width="2" opacity="0.3"/>
-            <!-- South America -->
-            <path d="M 150 220 L 180 200 L 190 280 L 160 300 Z" fill="none" stroke="#001f3f" stroke-width="2" opacity="0.3"/>
-            <!-- Europe -->
-            <path d="M 350 100 L 420 110 L 430 160 L 380 170 Z" fill="none" stroke="#001f3f" stroke-width="2" opacity="0.3"/>
-            <!-- Africa -->
-            <path d="M 420 160 L 480 150 L 500 280 L 450 300 Z" fill="none" stroke="#001f3f" stroke-width="2" opacity="0.3"/>
-            <!-- Asia -->
-            <path d="M 480 100 L 600 80 L 650 200 L 550 220 Z" fill="none" stroke="#001f3f" stroke-width="2" opacity="0.3"/>
-            <!-- Australia -->
-            <path d="M 650 300 L 700 310 L 690 360 L 640 350 Z" fill="none" stroke="#001f3f" stroke-width="2" opacity="0.3"/>
-          </g>
-
-          <!-- Animated agent nodes with cybernetic symbols -->
-          <!-- North America -->
-          <g class="agent-node" style="animation-delay: 0s">
-            <circle cx="130" cy="170" r="8" fill="#001f3f" opacity="0.6"/>
-            <circle cx="130" cy="170" r="12" fill="none" stroke="#c9a962" stroke-width="1.5" class="pulse-ring"/>
-            <g class="cyber-symbol" transform="translate(130, 170)">
-              <circle r="4" fill="#c9a962"/>
-              <line x1="-6" y1="0" x2="6" y2="0" stroke="#001f3f" stroke-width="1"/>
-              <line x1="0" y1="-6" x2="0" y2="6" stroke="#001f3f" stroke-width="1"/>
-            </g>
-          </g>
-
-          <!-- Europe -->
-          <g class="agent-node" style="animation-delay: 0.3s">
-            <circle cx="390" cy="130" r="8" fill="#001f3f" opacity="0.6"/>
-            <circle cx="390" cy="130" r="12" fill="none" stroke="#c9a962" stroke-width="1.5" class="pulse-ring"/>
-            <g class="cyber-symbol" transform="translate(390, 130)">
-              <circle r="4" fill="#c9a962"/>
-              <line x1="-6" y1="0" x2="6" y2="0" stroke="#001f3f" stroke-width="1"/>
-              <line x1="0" y1="-6" x2="0" y2="6" stroke="#001f3f" stroke-width="1"/>
-            </g>
-          </g>
-
-          <!-- Africa -->
-          <g class="agent-node" style="animation-delay: 0.6s">
-            <circle cx="450" cy="220" r="8" fill="#001f3f" opacity="0.6"/>
-            <circle cx="450" cy="220" r="12" fill="none" stroke="#c9a962" stroke-width="1.5" class="pulse-ring"/>
-            <g class="cyber-symbol" transform="translate(450, 220)">
-              <circle r="4" fill="#c9a962"/>
-              <line x1="-6" y1="0" x2="6" y2="0" stroke="#001f3f" stroke-width="1"/>
-              <line x1="0" y1="-6" x2="0" y2="6" stroke="#001f3f" stroke-width="1"/>
-            </g>
-          </g>
-
-          <!-- Asia -->
-          <g class="agent-node" style="animation-delay: 0.9s">
-            <circle cx="570" cy="140" r="8" fill="#001f3f" opacity="0.6"/>
-            <circle cx="570" cy="140" r="12" fill="none" stroke="#c9a962" stroke-width="1.5" class="pulse-ring"/>
-            <g class="cyber-symbol" transform="translate(570, 140)">
-              <circle r="4" fill="#c9a962"/>
-              <line x1="-6" y1="0" x2="6" y2="0" stroke="#001f3f" stroke-width="1"/>
-              <line x1="0" y1="-6" x2="0" y2="6" stroke="#001f3f" stroke-width="1"/>
-            </g>
-          </g>
-
-          <!-- Australia -->
-          <g class="agent-node" style="animation-delay: 1.2s">
-            <circle cx="670" cy="330" r="8" fill="#001f3f" opacity="0.6"/>
-            <circle cx="670" cy="330" r="12" fill="none" stroke="#c9a962" stroke-width="1.5" class="pulse-ring"/>
-            <g class="cyber-symbol" transform="translate(670, 330)">
-              <circle r="4" fill="#c9a962"/>
-              <line x1="-6" y1="0" x2="6" y2="0" stroke="#001f3f" stroke-width="1"/>
-              <line x1="0" y1="-6" x2="0" y2="6" stroke="#001f3f" stroke-width="1"/>
-            </g>
-          </g>
-
-          <!-- Connection lines between nodes -->
-          <g class="connections" opacity="0.3">
-            <line x1="130" y1="170" x2="390" y2="130" stroke="#c9a962" stroke-width="1" class="connection-line"/>
-            <line x1="390" y1="130" x2="570" y2="140" stroke="#c9a962" stroke-width="1" class="connection-line"/>
-            <line x1="450" y1="220" x2="570" y2="140" stroke="#c9a962" stroke-width="1" class="connection-line"/>
-            <line x1="570" y1="140" x2="670" y2="330" stroke="#c9a962" stroke-width="1" class="connection-line"/>
-          </g>
-        </svg>
       </div>
     </div>
   </section>
