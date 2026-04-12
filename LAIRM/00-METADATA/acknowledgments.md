@@ -32,64 +32,66 @@ LAIRM was developed using a multi-model orchestration approach, with Pivot servi
 
 #### Claude (Anthropic)
 - **Versions Used**: 
-  - Claude Sonnet (Released: June 2024 | Used: 2024-2026)
-  - Claude 3.5 (Released: June 2024 | Used: 2024-2026)
-  - Claude 4 (Released: March 2024 | Used: 2024-2026)
-  - Claude 4.5 (Released: December 2024 | Used: 2025-2026)
-  - Claude 4.6 (Released: April 2026 | Used: 2026)
+  - Claude Sonnet (Released: March 2024 | Used: 2024-2026)
+  - Claude 3.5 (Released: June 21, 2024 | Used: 2024-2026)
+  - Claude 4 (Released: May 22, 2025 | Used: 2025-2026)
+  - Claude Opus 4.1 (Released: August 5, 2025 | Used: 2025-2026)
+  - Claude Sonnet 4.5 (Released: September 2025 | Used: 2025-2026)
+  - Claude Opus 4.5 (Released: November 2025 | Used: 2025-2026)
+  - Claude Sonnet 4.6 (Released: 2026 | Used: 2026)
 - **Contributions**: Constitutional reasoning, legal formulation, ethical analysis, normative foundations
 - **Role**: Axiom development, legal article structure, compliance verification
 
 #### Gemini (Google DeepMind)
-- **Versions Used**: 
-  - Gemini 2 Flash (Released: December 2024 | Used: 2025-2026)
-  - Gemini 2.5 Pro (Released: April 2025 | Used: 2025-2026)
-  - Gemini 3 Pro (Released: December 2024 | Used: 2025-2026)
-  - Gemini 3.1 Pro (Released: September 2024 | Used: 2024-2026)
+- **Versions Used**:
+  - Gemini 2 Flash (Released: February 2025 | Used: 2025-2026)
+  - Gemini 2.5 Pro (Released: June 17, 2025 | Used: 2025-2026)
+  - Gemini 3 Pro (Released: November 2025 | Used: 2025-2026)
+  - Gemini 3.1 Pro (Released: March 22, 2026 | Used: 2026)
 - **Contributions**: Multimodal analysis, economic dimensions, geopolitical perspectives, prospective scenarios
 - **Role**: Cross-dimensional analysis, impact assessment, scenario modeling
 
 #### Grok (xAI)
-- **Versions Used**: 
-  - Grok 3 (Released: November 2024 | Used: 2025-2026)
-  - Grok 4 Knitting (Released: March 2026 | Used: 2026)
+- **Versions Used**:
+  - Grok 3 (Released: February 2025 | Used: 2025-2026)
+  - Grok 4 (Released: July 9, 2025 | Used: 2025-2026)
 - **Contributions**: Critical analysis, assumption verification, truthfulness validation
 - **Role**: Framework validation, logical consistency checking, edge case identification
 
 #### DeepSeek
-- **Versions Used**: 
-  - DeepSeek 3 (Released: January 2025 | Used: 2025-2026)
-  - DeepSeek R1 (Released: December 2024 | Used: 2025-2026)
-  - DeepSeek 3.2 (Released: February 2026 | Used: 2026)
+- **Versions Used**:
+  - DeepSeek V3 (Released: December 2024 | Used: 2024-2026)
+  - DeepSeek R1 (Released: January 20, 2025 | Used: 2025-2026)
+  - DeepSeek V3.2 (Released: December 1, 2025 | Used: 2025-2026)
 - **Contributions**: Technical depth, legislative complexity analysis, structured formulation
 - **Role**: Technical specifications, implementation requirements, compliance mechanisms
 
 #### Mistral
-- **Versions Used**: 
-  - Mistral 2 (Released: September 2024 | Used: 2024-2025)
-  - Mistral 3 (Released: December 2024 | Used: 2025-2026)
-  - Mistral Dev (Released: March 2026 | Used: 2026)
+- **Versions Used**:
+  - Mistral 2 (Released: 2024 | Used: 2024-2025)
+  - Mistral 3 (Released: December 2025 | Used: 2025-2026)
+  - Mistral DevStral 2 (Released: December 2025 | Used: 2025-2026)
 - **Contributions**: Linguistic efficiency, modular architecture drafting, clarity optimization
 - **Role**: Article drafting, chapter composition, terminology standardization
 
-#### GLM (Zhipu AI)
-- **Versions Used**: 
-  - GLM 3 (Released: June 2024 | Used: 2024-2025)
-  - GLM 4.5 (Released: January 2025 | Used: 2025-2026)
-  - GLM 5 (Released: March 2026 | Used: 2026)
+#### GLM (Zhipu AI / Z.ai)
+- **Versions Used**:
+  - GLM-4 Plus (Released: August 2024 | Used: 2024-2025)
+  - GLM-4.5 (Released: July 28, 2025 | Used: 2025-2026)
+  - GLM-4.5V (Released: 2025 | Used: 2025-2026)
 - **Contributions**: Broad contextual reasoning, prospective analysis, wisdom-based guidance
 - **Role**: Axiom structuring, prospective chapters, governance principles
 
 #### Kimi (Moonshot AI)
-- **Versions Used**: 
-  - Kimi 1 Thinking (Released: September 2024 | Used: 2024-2025)
-  - Kimi 2 (Released: December 2024 | Used: 2025-2026)
-  - Kimi 2.5 (Released: February 2026 | Used: 2026)
+- **Versions Used**:
+  - Kimi (Initial Release: November 16, 2023 | Used: 2024-2025)
+  - Kimi K2 (Released: 2025 | Used: 2025-2026)
+  - Kimi K2.5 (Released: January 27, 2026 | Used: 2026)
 - **Contributions**: Creative problem-solving, adaptive capacity, modular integration
 - **Role**: Architecture adaptation, integration challenges, iterative refinement
 
 #### Pivot (Proprietary Orchestration System)
-- **Deployment**: 2024-2026
+- **Operational Period**: 2024-2026
 - **Role**: Central coordination, governance implementation, consistency maintenance
 - **Function**: Orchestrated multi-model collaboration, maintained human governance, ensured framework coherence
 
@@ -212,53 +214,68 @@ LAIRM's development exemplified the principles it advocates:
 
 ## Specific Contributions
 
-### Pivot (Orchestration System)
-- Central coordination of multi-model collaboration
-- Maintenance of governance framework
-- Consistency verification across 482 files
-- Integration of diverse analytical approaches
-
 ### Claude (Anthropic)
+- **Release Timeline**: March 2024 - 2026
+- **Versions**: Sonnet (Mar 2024), 3.5 (Jun 2024), 4 (May 2025), Opus 4.1 (Aug 2025), Sonnet 4.5 (Sep 2025), Opus 4.5 (Nov 2025), Sonnet 4.6 (2026)
 - Constitutional and legal reasoning
 - Ethical analysis and normative foundations
 - Axiom formulation and legal article structure
 - Compliance verification and validation
 
 ### Gemini (Google DeepMind)
+- **Release Timeline**: February 2025 - March 2026
+- **Versions**: 2 Flash (Feb 2025), 2.5 Pro (Jun 2025), 3 Pro (Nov 2025), 3.1 Pro (Mar 2026)
 - Economic and geopolitical analysis
 - Prospective scenario development
 - Multimodal perspective integration
 - Impact assessment across dimensions
 
 ### Grok (xAI)
+- **Release Timeline**: February 2025 - July 2025
+- **Versions**: 3 (Feb 2025), 4 (Jul 2025)
 - Critical assumption verification
 - Logical consistency checking
 - Truthfulness validation
 - Edge case identification
 
 ### DeepSeek
+- **Release Timeline**: December 2024 - December 2025
+- **Versions**: V3 (Dec 2024), R1 (Jan 2025), V3.2 (Dec 2025)
 - Technical specification development
 - Legislative complexity analysis
 - Implementation requirement definition
 - Compliance mechanism design
 
 ### Mistral
+- **Release Timeline**: 2024 - December 2025
+- **Versions**: 2 (2024), 3 (Dec 2025), DevStral 2 (Dec 2025)
 - Linguistic clarity and efficiency
 - Modular architecture drafting
 - Terminology standardization
 - Chapter and article composition
 
-### GLM (Zhipu AI)
+### GLM (Zhipu AI / Z.ai)
+- **Release Timeline**: August 2024 - 2025
+- **Versions**: 4 Plus (Aug 2024), 4.5 (Jul 2025), 4.5V (2025)
 - Broad contextual reasoning
 - Prospective analysis
 - Axiom structuring
 - Governance principle formulation
 
 ### Kimi (Moonshot AI)
+- **Release Timeline**: November 2023 - January 2026
+- **Versions**: Initial (Nov 2023), K2 (2025), K2.5 (Jan 2026)
 - Creative problem-solving
 - Adaptive capacity
 - Modular integration
 - Iterative refinement
+
+### Pivot (Orchestration System)
+- **Operational Period**: 2024-2026
+- Central coordination of multi-model collaboration
+- Maintenance of governance framework
+- Consistency verification across 482 files
+- Integration of diverse analytical approaches
 
 ---
 
