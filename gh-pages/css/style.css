@@ -164,10 +164,28 @@ a:hover {
 .animated-logo-svg {
   filter: drop-shadow(0 0 8px rgba(0, 31, 63, 0.3));
   transition: filter 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .logo:hover .animated-logo-svg {
   filter: drop-shadow(0 0 15px rgba(201, 169, 98, 0.5));
+}
+
+.hero-logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-8);
+}
+
+.hero-logo-container .animated-logo-svg {
+  filter: drop-shadow(0 0 20px rgba(0, 31, 63, 0.4));
+  animation: float-logo 3s ease-in-out infinite;
+}
+
+@keyframes float-logo {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 .logo h1 {
