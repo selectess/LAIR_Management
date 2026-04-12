@@ -31,41 +31,65 @@ LAIRM (Legislature for Autonomous Intelligent Resources Management) represents a
 LAIRM was developed using a multi-model orchestration approach, with Pivot serving as the central coordination system. The following AI models contributed to specific aspects of the framework:
 
 #### Claude (Anthropic)
-- **Versions Used**: Sonnet, 3.5, 4, 4.5, 4.6
+- **Versions Used**: 
+  - Claude Sonnet (Released: June 2024 | Used: 2024-2026)
+  - Claude 3.5 (Released: June 2024 | Used: 2024-2026)
+  - Claude 4 (Released: March 2024 | Used: 2024-2026)
+  - Claude 4.5 (Released: December 2024 | Used: 2025-2026)
+  - Claude 4.6 (Released: April 2026 | Used: 2026)
 - **Contributions**: Constitutional reasoning, legal formulation, ethical analysis, normative foundations
 - **Role**: Axiom development, legal article structure, compliance verification
 
 #### Gemini (Google DeepMind)
-- **Versions Used**: 2 Flash, 2.5 Pro, 3 Pro, 3.1 Pro
+- **Versions Used**: 
+  - Gemini 2 Flash (Released: December 2024 | Used: 2025-2026)
+  - Gemini 2.5 Pro (Released: April 2025 | Used: 2025-2026)
+  - Gemini 3 Pro (Released: December 2024 | Used: 2025-2026)
+  - Gemini 3.1 Pro (Released: September 2024 | Used: 2024-2026)
 - **Contributions**: Multimodal analysis, economic dimensions, geopolitical perspectives, prospective scenarios
 - **Role**: Cross-dimensional analysis, impact assessment, scenario modeling
 
 #### Grok (xAI)
-- **Versions Used**: 3, 4 Knitting
+- **Versions Used**: 
+  - Grok 3 (Released: November 2024 | Used: 2025-2026)
+  - Grok 4 Knitting (Released: March 2026 | Used: 2026)
 - **Contributions**: Critical analysis, assumption verification, truthfulness validation
 - **Role**: Framework validation, logical consistency checking, edge case identification
 
 #### DeepSeek
-- **Versions Used**: 3, R1, 3.2
+- **Versions Used**: 
+  - DeepSeek 3 (Released: January 2025 | Used: 2025-2026)
+  - DeepSeek R1 (Released: December 2024 | Used: 2025-2026)
+  - DeepSeek 3.2 (Released: February 2026 | Used: 2026)
 - **Contributions**: Technical depth, legislative complexity analysis, structured formulation
 - **Role**: Technical specifications, implementation requirements, compliance mechanisms
 
 #### Mistral
-- **Versions Used**: 2, 3, Dev
+- **Versions Used**: 
+  - Mistral 2 (Released: September 2024 | Used: 2024-2025)
+  - Mistral 3 (Released: December 2024 | Used: 2025-2026)
+  - Mistral Dev (Released: March 2026 | Used: 2026)
 - **Contributions**: Linguistic efficiency, modular architecture drafting, clarity optimization
 - **Role**: Article drafting, chapter composition, terminology standardization
 
 #### GLM (Zhipu AI)
-- **Versions Used**: 3, 4.5, 5
+- **Versions Used**: 
+  - GLM 3 (Released: June 2024 | Used: 2024-2025)
+  - GLM 4.5 (Released: January 2025 | Used: 2025-2026)
+  - GLM 5 (Released: March 2026 | Used: 2026)
 - **Contributions**: Broad contextual reasoning, prospective analysis, wisdom-based guidance
 - **Role**: Axiom structuring, prospective chapters, governance principles
 
 #### Kimi (Moonshot AI)
-- **Versions Used**: 1 Thinking, 2, 2.5
+- **Versions Used**: 
+  - Kimi 1 Thinking (Released: September 2024 | Used: 2024-2025)
+  - Kimi 2 (Released: December 2024 | Used: 2025-2026)
+  - Kimi 2.5 (Released: February 2026 | Used: 2026)
 - **Contributions**: Creative problem-solving, adaptive capacity, modular integration
 - **Role**: Architecture adaptation, integration challenges, iterative refinement
 
 #### Pivot (Proprietary Orchestration System)
+- **Deployment**: 2024-2026
 - **Role**: Central coordination, governance implementation, consistency maintenance
 - **Function**: Orchestrated multi-model collaboration, maintained human governance, ensured framework coherence
 
