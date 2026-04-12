@@ -483,41 +483,6 @@ a:hover {
   font-size: 1rem;
 }
 
-.axioms-graph {
-  max-width: 900px;
-  margin: 0 auto var(--space-16);
-  padding: var(--space-8);
-  background: linear-gradient(135deg, #f5f0e8 0%, #e8dfd0 100%);
-  border: 2px solid #001f3f;
-  border-radius: 1rem;
-  box-shadow: 0 10px 40px rgba(0, 31, 63, 0.1);
-}
-
-.relationship-graph {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.relationship-graph circle {
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.relationship-graph circle:hover {
-  filter: drop-shadow(0 0 8px rgba(201, 169, 98, 0.8));
-  transform: scale(1.1);
-}
-
-.relationship-graph line {
-  animation: pulse-line 2s ease-in-out infinite;
-}
-
-@keyframes pulse-line {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
-}
-
 .axioms-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
