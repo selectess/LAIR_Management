@@ -412,32 +412,22 @@ body {
   background: linear-gradient(135deg, var(--background-tertiary) 0%, var(--background-primary) 100%);
 }
 
-.waitlist-form {
-  max-width: 600px;
+.waitlist-cta {
+  text-align: center;
   margin: var(--space-12) auto;
+  max-width: 600px;
 }
 
-.waitlist-form form {
-  display: flex;
-  gap: var(--space-4);
-  flex-wrap: wrap;
+.btn-large {
+  padding: var(--space-6) var(--space-12);
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 
-.waitlist-form input {
-  flex: 1;
-  min-width: 250px;
-  padding: var(--space-4);
-  font-size: 1rem;
-  border: 2px solid var(--border-default);
-  border-radius: 0.5rem;
-  background: var(--background-secondary);
-  color: var(--text-primary);
-  transition: border-color 0.3s ease;
-}
-
-.waitlist-form input:focus {
-  outline: none;
-  border-color: var(--accent-gold);
+.waitlist-note {
+  margin-top: var(--space-4);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 
 .cta-links {

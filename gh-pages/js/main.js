@@ -50,51 +50,6 @@ document.querySelectorAll('.scroll-animate').forEach(el => {
   observer.observe(el);
 });
 
-// Waitlist form submission
-const waitlistForm = document.getElementById('waitlistForm');
-if (waitlistForm) {
-  waitlistForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const email = e.target.querySelector('input[type="email"]').value;
-    const button = e.target.querySelector('button');
-    const originalText = button.textContent;
-    
-    // Disable button and show loading state
-    button.disabled = true;
-    button.textContent = 'Subscribing...';
-    
-    try {
-      // Here you would normally send to your backend
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Success state
-      button.textContent = '✓ Subscribed!';
-      button.style.background = '#4ade80';
-      e.target.querySelector('input[type="email"]').value = '';
-      
-      // Reset after 3 seconds
-      setTimeout(() => {
-        button.disabled = false;
-        button.textContent = originalText;
-        button.style.background = '';
-      }, 3000);
-      
-    } catch (error) {
-      // Error state
-      button.textContent = 'Error - Try again';
-      button.style.background = '#ef4444';
-      
-      setTimeout(() => {
-        button.disabled = false;
-        button.textContent = originalText;
-        button.style.background = '';
-      }, 3000);
-    }
-  });
-}
-
 // Add stagger animation to grid items
 const addStaggerAnimation = () => {
   const grids = document.querySelectorAll('.vision-grid, .axioms-grid, .framework-grid');
