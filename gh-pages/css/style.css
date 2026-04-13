@@ -157,61 +157,41 @@ body {
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 800;
-  color: var(--accent-blue);
+  font-weight: 900;
+  color: #003366;
   margin-bottom: var(--space-4);
   animation: slideUp 0.8s ease-out;
-  letter-spacing: -0.02em;
-  text-shadow: 0 2px 20px rgba(255, 255, 255, 0.9), 0 0 40px rgba(255, 255, 255, 0.6);
+  letter-spacing: -0.01em;
 }
 
 .hero-subtitle {
   font-family: var(--font-display);
   font-size: clamp(1.25rem, 3vw, 2rem);
-  background: linear-gradient(135deg, #c9a962 0%, #d4c4a8 50%, #c9a962 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #c9a962;
   margin-bottom: var(--space-6);
   animation: slideUp 0.8s ease-out 0.2s both;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-shadow: 0 0 30px rgba(201, 169, 98, 0.5);
-  filter: drop-shadow(0 2px 4px rgba(201, 169, 98, 0.3));
-  position: relative;
+  font-weight: 800;
+  letter-spacing: 0.05em;
 }
 
 .hero-subtitle::before {
-  content: 'The Cybernetic Criterion';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(135deg, #c9a962 0%, #d4c4a8 50%, #c9a962 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: blur(8px);
-  opacity: 0.6;
-  z-index: -1;
+  display: none;
 }
 
 .hero-description {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--text-primary);
+  color: #003366;
   margin-bottom: var(--space-8);
   line-height: 1.8;
   animation: slideUp 0.8s ease-out 0.4s both;
-  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .hero-period {
   display: block;
   margin-top: var(--space-2);
-  font-weight: 700;
-  color: var(--accent-gold);
-  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(201, 169, 98, 0.6);
+  font-weight: 900;
+  color: #c9a962;
 }
 
 .hero-cta {
