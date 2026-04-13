@@ -145,6 +145,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  filter: brightness(1.1) contrast(1.05);
 }
 
 .hero::before {
@@ -154,7 +155,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(245, 240, 232, 0.75) 0%, rgba(232, 223, 208, 0.75) 100%);
+  background: linear-gradient(135deg, rgba(245, 240, 232, 0.45) 0%, rgba(232, 223, 208, 0.50) 100%);
   z-index: 1;
 }
 
@@ -542,21 +543,66 @@ body {
 
 .license-info h3 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: var(--accent-blue);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
 }
 
-.license-info p {
+.license-info > p {
   color: var(--text-secondary);
   line-height: 1.8;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto var(--space-6);
+  font-size: 1.05rem;
 }
 
 .license-info strong {
   color: var(--accent-gold);
   font-weight: 600;
+}
+
+.contribute-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-8) 0;
+}
+
+.contribute-link {
+  padding: var(--space-4);
+  background: var(--background-secondary);
+  border: 2px solid var(--border-default);
+  border-radius: 0.75rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: all 0.3s ease;
+}
+
+.contribute-link:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 169, 98, 0.2);
+}
+
+.contribute-link strong {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--accent-blue);
+}
+
+.contribute-link span {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.license-note {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-default);
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
 .waitlist-cta {
