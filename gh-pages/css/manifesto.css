@@ -1,5 +1,322 @@
-/* LAIRM Manifesto Styles */
+/* LAIRM Documentary Manifesto Styles */
 @import url('style.css');
+
+/* Reading Time Badges */
+.reading-time {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.time-badge {
+  padding: var(--space-3) var(--space-6);
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(201, 169, 98, 0.4);
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Introduction Section */
+.doc-introduction {
+  padding: var(--space-16) var(--space-6);
+  background: var(--background-secondary);
+}
+
+.intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro-lead {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: var(--accent-blue);
+  font-weight: 500;
+  margin-bottom: var(--space-8);
+  padding: var(--space-6);
+  background: rgba(201, 169, 98, 0.05);
+  border-left: 4px solid var(--accent-gold);
+  border-radius: 0.5rem;
+}
+
+.intro-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--accent-blue);
+  margin: var(--space-8) 0 var(--space-4);
+}
+
+.intro-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+  text-align: justify;
+}
+
+.intro-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-12);
+}
+
+.stat-box {
+  padding: var(--space-6);
+  background: linear-gradient(135deg, #003366 0%, #004080 100%);
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.stat-box .stat-number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #c9a962;
+  margin-bottom: var(--space-2);
+}
+
+.stat-box .stat-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* TOC Grid */
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+.toc-card {
+  padding: var(--space-8);
+  background: var(--background-secondary);
+  border: 2px solid var(--border-default);
+  border-radius: 1rem;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.toc-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(201, 169, 98, 0.2);
+}
+
+.toc-number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  line-height: 1;
+}
+
+.toc-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+.toc-count {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.toc-time {
+  color: var(--accent-gold);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Documentary Container */
+.documentary-container {
+  background: var(--background-primary);
+  padding: var(--space-16) 0;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+  padding: var(--space-8);
+  background: linear-gradient(135deg, #003366 0%, #004080 100%);
+  border-radius: 1rem;
+  margin-bottom: var(--space-12);
+  color: white;
+}
+
+.section-number {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(201, 169, 98, 0.3);
+  line-height: 1;
+  min-width: 120px;
+}
+
+.section-info {
+  flex: 1;
+}
+
+.section-info .section-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: var(--space-3);
+}
+
+.section-info .section-subtitle {
+  font-size: 1.25rem;
+  color: #c9a962;
+  margin-bottom: var(--space-4);
+}
+
+.section-meta {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.meta-badge {
+  padding: var(--space-2) var(--space-4);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(201, 169, 98, 0.3);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Document Article */
+.doc-article {
+  margin-bottom: var(--space-16);
+  padding: var(--space-8);
+  background: var(--background-secondary);
+  border: 2px solid var(--border-default);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.doc-article:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 8px 24px rgba(201, 169, 98, 0.15);
+}
+
+.doc-header {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--border-default);
+}
+
+.doc-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  margin-bottom: var(--space-3);
+}
+
+.doc-title a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.doc-title a:hover {
+  color: var(--accent-gold);
+}
+
+.doc-meta-info {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.doc-badge {
+  padding: var(--space-1) var(--space-3);
+  background: rgba(201, 169, 98, 0.1);
+  border: 1px solid rgba(201, 169, 98, 0.3);
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.doc-reading-time {
+  padding: var(--space-1) var(--space-3);
+  background: rgba(0, 51, 102, 0.1);
+  border: 1px solid rgba(0, 51, 102, 0.3);
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+
+.doc-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+.doc-content .doc-lead {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--accent-blue);
+  margin-bottom: var(--space-6);
+  padding-left: var(--space-4);
+  border-left: 3px solid var(--accent-gold);
+}
+
+.doc-content p {
+  margin-bottom: var(--space-6);
+  text-align: justify;
+}
+
+/* Section Footer */
+.section-footer {
+  margin-top: var(--space-12);
+  padding: var(--space-8);
+  background: rgba(201, 169, 98, 0.05);
+  border: 2px solid var(--accent-gold);
+  border-radius: 1rem;
+}
+
+.footer-note {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.footer-note:last-child {
+  margin-bottom: 0;
+}
+
+.footer-note strong {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.footer-note a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.footer-note a:hover {
+  border-bottom-color: var(--accent-gold);
+}
 
 /* Manifesto Hero */
 .manifesto-hero {
