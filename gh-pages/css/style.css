@@ -152,10 +152,6 @@ body {
   animation: fadeIn 1s ease-out;
   position: relative;
   z-index: 2;
-  background: rgba(245, 240, 232, 0.85);
-  padding: var(--space-12) var(--space-8);
-  border-radius: 1.5rem;
-  backdrop-filter: blur(10px);
 }
 
 .hero-title {
@@ -166,7 +162,7 @@ body {
   margin-bottom: var(--space-4);
   animation: slideUp 0.8s ease-out;
   letter-spacing: -0.02em;
-  text-shadow: 0 2px 20px rgba(255, 255, 255, 0.8);
+  text-shadow: 0 2px 20px rgba(255, 255, 255, 0.9), 0 0 40px rgba(255, 255, 255, 0.6);
 }
 
 .hero-subtitle {
@@ -202,17 +198,20 @@ body {
 
 .hero-description {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--text-secondary);
+  color: var(--text-primary);
   margin-bottom: var(--space-8);
   line-height: 1.8;
   animation: slideUp 0.8s ease-out 0.4s both;
+  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+  font-weight: 500;
 }
 
 .hero-period {
   display: block;
   margin-top: var(--space-2);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--accent-gold);
+  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(201, 169, 98, 0.6);
 }
 
 .hero-cta {
