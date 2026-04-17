@@ -5,9 +5,10 @@
   --background-secondary: #ffffff;
   --background-tertiary: #e8dfd0;
 
-  /* Accent - Gold/Blue palette */
+  /* Accent - Gold/Midnight Blue palette */
   --accent-gold: #c9a962;
-  --accent-blue: #003366;
+  --accent-blue: #0a1929;
+  --accent-blue-dark: #051018;
   --accent-beige: #d4c4a8;
 
   /* Text */

@@ -1,18 +1,42 @@
 /* LAIRM Documentary Manifesto Styles */
 :root {
-  --background-primary: #f5f0e8;
-  --background-secondary: #ffffff;
-  --background-tertiary: #e8dfd0;
+  /* Background - ARAM Design System */
+  --background-primary: #0a0a0f;
+  --background-secondary: #0f0f1a;
+  --background-tertiary: #1a1a2e;
+  
+  /* Accent - Gold/Beige palette */
   --accent-gold: #c9a962;
-  --accent-blue: #003366;
   --accent-beige: #d4c4a8;
-  --text-primary: #0a0a0f;
-  --text-secondary: #4a4a5a;
+  --accent-cream: #f5f0e8;
+  
+  /* Accent - Midnight Blue */
+  --accent-blue: #0a1929;
+  --accent-blue-dark: #051018;
+  
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0b0;
   --text-muted: #6b6b7b;
+  
+  /* Border */
   --border-default: rgba(201, 169, 98, 0.2);
-  --border-hover: rgba(201, 169, 98, 0.6);
+  --border-hover: rgba(201, 169, 98, 0.4);
+  
+  /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
+  
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
 }
 
 * {
@@ -23,6 +47,28 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Animations from ARAM Design System */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px rgba(201, 169, 98, 0.1); }
+  100% { box-shadow: 0 0 30px rgba(201, 169, 98, 0.2); }
 }
 
 body {
@@ -36,7 +82,7 @@ body {
 /* Hero Section */
 .manifesto-hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #003366 0%, #004080 100%);
+  background: linear-gradient(135deg, #0a1929 0%, #051018 100%);
   color: white;
   padding: 4rem 2rem;
   display: flex;
@@ -109,7 +155,8 @@ body {
 
 /* Executive Introduction */
 .executive-introduction {
-  max-width: 900px;
+  max-width: 1100px;
+  width: 100%;
   margin: 0 auto 3rem;
   padding: 3rem;
   background: rgba(255, 255, 255, 0.95);
@@ -214,6 +261,32 @@ body {
 
 .toc-section-link:hover {
   color: var(--accent-gold);
+}
+
+.toc-subsections {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.toc-subsections li {
+  margin-bottom: 0.375rem;
+}
+
+.toc-subsections a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.toc-subsections a:hover {
+  background: var(--background-tertiary);
+  color: var(--accent-blue);
+  padding-left: 0.75rem;
 }
 
 .toc-list {
@@ -512,5 +585,358 @@ body {
   
   .executive-introduction {
     padding: 2rem;
+  }
+}
+
+
+/* Narrative Content Styles */
+.narrative-content {
+  max-width: 100%;
+  padding: 0;
+}
+
+.narrative-content section {
+  margin-bottom: 4rem;
+}
+
+.narrative-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--accent-blue);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--accent-gold);
+  font-weight: 700;
+}
+
+.narrative-content h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--accent-blue);
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+}
+
+.narrative-content p {
+  font-size: 1.125rem;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  text-align: justify;
+  hyphens: auto;
+}
+
+.narrative-content p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  line-height: 1;
+  float: left;
+  margin: 0.1em 0.1em 0 0;
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.narrative-content a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent-gold);
+  transition: all 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.narrative-content a:hover {
+  color: var(--accent-gold);
+  border-bottom-color: var(--accent-blue);
+  background: rgba(201, 169, 98, 0.1);
+}
+
+.narrative-content strong {
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+.continuation-note {
+  background: linear-gradient(135deg, rgba(0, 51, 102, 0.05), rgba(201, 169, 98, 0.05));
+  padding: 2rem;
+  border-left: 4px solid var(--accent-gold);
+  border-radius: 0.5rem;
+  margin: 3rem 0;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.github-cta {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #0a1929, #051018);
+  border-radius: 1rem;
+  margin: 4rem 0;
+}
+
+.github-cta a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 3px solid var(--accent-gold);
+  padding-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.github-cta a:hover {
+  color: var(--accent-gold);
+  border-bottom-color: white;
+}
+
+/* Executive Introduction */
+.executive-introduction {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 1rem;
+  margin: 3rem auto;
+  backdrop-filter: blur(10px);
+  max-width: 1100px;
+  width: 100%;
+}
+
+.executive-introduction h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--accent-gold);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.executive-introduction p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Hero CTA */
+.hero-cta {
+  display: inline-block;
+  padding: 1.25rem 3rem;
+  background: var(--accent-gold);
+  color: var(--accent-blue);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 3rem;
+  transition: all 0.3s ease;
+  margin: 2rem auto;
+  display: block;
+  width: fit-content;
+  text-align: center;
+}
+
+.hero-cta:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(201, 169, 98, 0.3);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .narrative-content p {
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .narrative-content h2 {
+    font-size: 1.75rem;
+  }
+  
+  .narrative-content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* ============================================
+   FOOTER STYLES - ARAM Design System
+   ============================================ */
+
+footer {
+  background: var(--background-secondary);
+  border-top: 2px solid var(--border-default);
+  padding: var(--space-16) var(--space-6);
+  margin-top: var(--space-24);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+footer:hover {
+  border-top-color: var(--border-hover);
+}
+
+.manifesto-footer {
+  background: var(--background-secondary);
+  border-top: 2px solid var(--border-default);
+  padding: var(--space-16) var(--space-6);
+  margin-top: var(--space-24);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.manifesto-footer:hover {
+  border-top-color: var(--border-hover);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-12);
+  padding: var(--space-12) 0;
+}
+
+.footer-section {
+  animation: slideUp 0.6s ease-in-out;
+  padding: var(--space-6);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-section:hover {
+  background: rgba(201, 169, 98, 0.05);
+  border-left: 3px solid var(--accent-gold);
+  padding-left: calc(var(--space-6) + 3px);
+}
+
+.footer-section h4 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--accent-gold);
+  margin-bottom: var(--space-6);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.footer-section p {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-4);
+  transition: color 0.3s ease;
+}
+
+.footer-section p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-section a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.footer-section a:hover {
+  color: var(--accent-cream);
+  border-bottom-color: var(--accent-gold);
+  text-decoration: none;
+}
+
+.footer-section strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* Footer Metrics */
+.footer-section p[style*="margin-top"] {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: var(--space-6) !important;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-default);
+}
+
+.footer-metrics {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-default);
+}
+
+.footer-license {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-default);
+}
+
+.footer-copyright {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Responsive Footer */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+  
+  .manifesto-footer {
+    padding: var(--space-12) var(--space-4);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  .manifesto-footer {
+    padding: var(--space-8) var(--space-4);
+    margin-top: var(--space-16);
+  }
+  
+  .footer-section {
+    padding: var(--space-4);
+  }
+  
+  .footer-section h4 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-4);
+  }
+  
+  .footer-section p {
+    font-size: var(--text-xs);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-content {
+    gap: var(--space-6);
+  }
+  
+  .manifesto-footer {
+    padding: var(--space-6) var(--space-3);
+    margin-top: var(--space-12);
+  }
+  
+  .footer-section {
+    padding: var(--space-3);
+  }
+  
+  .footer-section h4 {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-3);
+  }
+  
+  .footer-section p {
+    font-size: var(--text-xs);
+    margin-bottom: var(--space-2);
   }
 }

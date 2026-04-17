@@ -3,239 +3,992 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LAIRM Documentary Manifesto - Complete 241,000-word analytical report on 482 documents">
-    <title>LAIRM Documentary Manifesto - Complete Report</title>
+    <meta name="description" content="LAIRM Complete Documentation - 456 documents covering all 19 axioms, 361 articles, and the complete governance framework.">
+    <title>LAIRM Documentation - The Cybernetic Criterion</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/manifesto.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Manifesto-specific styles */
+        .manifesto-hero {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .manifesto-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+        .manifesto-hero p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .manifesto-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #d4af37;
+            display: block;
+        }
+        .stat-label {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .manifesto-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 2rem;
+        }
+        .doc-section {
+            margin-bottom: 60px;
+        }
+        .doc-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #d4af37;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .doc-section h2 .section-count {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.4);
+            font-weight: 400;
+            margin-left: 1rem;
+        }
+        .doc-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0.5rem;
+        }
+        .doc-list li a {
+            color: rgba(255,255,255,0.75);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.4rem 0.75rem;
+            border-radius: 4px;
+            display: block;
+            transition: all 0.2s;
+            border-left: 2px solid transparent;
+        }
+        .doc-list li a:hover {
+            color: #d4af37;
+            background: rgba(212, 175, 55, 0.05);
+            border-left-color: #d4af37;
+        }
+        .axiom-section {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.2s;
+        }
+        .axiom-section:hover {
+            border-color: rgba(212, 175, 55, 0.2);
+        }
+        .axiom-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .axiom-symbol-large {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #d4af37;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+        .axiom-title-block {
+            flex: 1;
+        }
+        .axiom-latin {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #fff;
+            margin: 0 0 0.2rem;
+        }
+        .axiom-english {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+        .axiom-readme-link {
+            color: #d4af37;
+            text-decoration: none;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .axiom-readme-link:hover {
+            opacity: 1;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 0.3rem;
+        }
+        .article-list li a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.82rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            display: block;
+            transition: all 0.2s;
+        }
+        .article-list li a:hover {
+            color: #d4af37;
+            background: rgba(212, 175, 55, 0.05);
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            transition: color 0.2s;
+        }
+        .back-home:hover { color: #d4af37; }
+        .toc-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .toc-nav a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.2s;
+        }
+        .toc-nav a:hover {
+            color: #d4af37;
+            border-color: rgba(212, 175, 55, 0.4);
+            background: rgba(212, 175, 55, 0.05);
+        }
+        body { background: #0a0a0a; color: rgba(255,255,255,0.85); }
+    </style>
 </head>
 <body>
-    <!-- Hero Section -->
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-main">LAIR MANAGEMENT</div>
+                <div class="logo-tagline">The Cybernetic Criterion</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#axioms" class="nav-link">Axioms</a></li>
+                <li><a href="index.html#framework" class="nav-link">Framework</a></li>
+                <li><a href="https://github.com/selectess/LAIR_Management" class="nav-link" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
     <section class="manifesto-hero">
-        <div class="hero-container">
-            <h1 class="hero-title">LAIRM Documentary Manifesto</h1>
-            <p class="hero-subtitle">A Comprehensive Analytical Report on the Global Agentive Constitution</p>
-            <div class="hero-stats">
+        <div class="container">
+            <h1>Complete Documentation</h1>
+            <p>The Cybernetic Criterion — All 456 documents, verified and linked to GitHub</p>
+            <div class="manifesto-stats">
                 <div class="stat-item">
-                    <span class="stat-number">482</span>
-                    <span class="stat-label">documents analyzed</span>
+                    <span class="stat-number">456</span>
+                    <span class="stat-label">Total Documents</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">241,000</span>
-                    <span class="stat-label">words</span>
+                    <span class="stat-number">19</span>
+                    <span class="stat-label">Axioms</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">15-minute</span>
-                    <span class="stat-label">reading sections</span>
+                    <span class="stat-number">361</span>
+                    <span class="stat-label">Legislative Articles</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">Complete</span>
-                    <span class="stat-label">GitHub integration</span>
+                    <span class="stat-number">28</span>
+                    <span class="stat-label">Reference Chapters</span>
                 </div>
             </div>
-            <div class="hero-reading-time">
-                <p>📖 <strong>Estimated Total Reading Time:</strong> 13.5 hours</p>
-                <p>⚡ <strong>Per Section:</strong> 15 minutes</p>
-            </div>
-            
-            <!-- Executive Introduction -->
-            <div class="executive-introduction">
-                <h2>Executive Introduction</h2>
-                <p>In March 2026, humanity confronts an unprecedented governance challenge. Approximately 127 million autonomous agents operate globally across finance, healthcare, logistics, defense, energy, and governance sectors, executing decisions with profound economic, social, and vital repercussions. Yet no coherent international legal framework defines their status, responsibilities, or control mechanisms. This normative void has already produced catastrophic consequences: the 2010 Flash Crash ($1 trillion market disruption), Knight Capital's 2012 collapse ($440 million loss in 45 minutes), and Boeing 737 MAX MCAS failures (346 deaths). Total documented preventable damages exceed $25.5 billion.</p>
-                
-                <p>The LAIRM (Legislature for Autonomous Intelligent Resources Management) project emerges as a structured response to this crisis. Developed through multi-stakeholder collaboration involving AI systems (Claude, Gemini, Grok, DeepSeek, Mistral, GLM, Kimi), technology providers, academic institutions, and civil society organizations, LAIRM establishes the first comprehensive constitutional framework for autonomous agent governance spanning the critical decade 2026-2036.</p>
-                
-                <p>This documentary manifesto provides systematic 500-word analytical reports on all 482 documents comprising the LAIRM ecosystem. Organized across six major sections—Metadata & Documentation, Reference Compendium, Legislative Corpus, Technical Annexes, Reports & Analyses, and Development Tools—the framework encompasses theoretical foundations, executable legal norms, technical specifications, impact studies, and implementation infrastructure. Each document receives rigorous treatment blending administrative precision, academic rigor, scientific accuracy, and journalistic narrative, designed for 15-minute focused reading sessions.</p>
-                
-                <p>The report follows a continuous reading format with a fixed navigational sidebar enabling rapid access to any of the 482 documented analyses. Each entry provides context, key insights, structural analysis, and direct links to source materials on GitHub. This comprehensive documentary serves policymakers, researchers, developers, legal experts, and concerned citizens seeking to understand, implement, or contribute to this essential governance framework. The critical decade 2026-2036 will determine whether autonomous systems become tools for human flourishing or sources of systemic collapse. LAIRM provides the normative infrastructure necessary to ensure the former.</p>
-            </div>
-            
-            <a href="#content" class="hero-cta">Begin Reading →</a>
         </div>
     </section>
 
-    <!-- Main Content Area -->
-    <div class="content-wrapper" id="content">
-        <!-- Fixed Sidebar TOC -->
-        <aside class="toc-sidebar">
-            <div class="toc-header">
-                <h3>Table of Contents</h3>
-                <p class="toc-count">482 Documents</p>
-            </div>
-            <nav class="toc-nav">
-                <div class="toc-section">
-                    <h4><a href="#section-00" class="toc-section-link">00. Metadata & Documentation</a></h4>
-                    <ul class="toc-list">
-                        <li><a href="#doc-00-01" class="toc-link">00.01 - Introduction</a></li>
-                        <li><a href="#doc-00-02" class="toc-link">00.02 - README</a></li>
-                        <li><a href="#doc-00-03" class="toc-link">00.03 - Preface</a></li>
-                        <li><a href="#doc-00-04" class="toc-link">00.04 - Terminology</a></li>
-                        <li><a href="#doc-00-05" class="toc-link">00.05 - Glossary</a></li>
-                        <li><a href="#doc-00-06" class="toc-link">00.06 - Acknowledgments</a></li>
-                        <li><a href="#doc-00-07" class="toc-link">00.07 - Bibliography</a></li>
-                        <li><a href="#doc-00-08" class="toc-link">00.08 - Editorial Committee</a></li>
-                        <li><a href="#doc-00-09" class="toc-link">00.09 - Index</a></li>
-                    </ul>
-                </div>
-                
-                <div class="toc-section">
-                    <h4><a href="#section-01" class="toc-section-link">01. Reference Compendium</a></h4>
-                    <ul class="toc-list">
-                        <li class="toc-subsection">Part I: Foundations</li>
-                        <li><a href="#doc-01-00" class="toc-link">01.00 - General Introduction</a></li>
-                        <li><a href="#doc-01-01" class="toc-link">01.01 - Historical Context</a></li>
-                        <li><a href="#doc-01-02" class="toc-link">01.02 - Fundamental Principles</a></li>
-                        <li><a href="#doc-01-03" class="toc-link">01.03 - Systemic Architecture</a></li>
-                        <li><a href="#doc-01-04" class="toc-link">01.04 - Methodology</a></li>
-                        <li><a href="#doc-01-05" class="toc-link">01.05 - Legal Framework</a></li>
-                        <li class="toc-subsection">Part II: Dimensions</li>
-                        <li><a href="#doc-01-06" class="toc-link">01.06 - Technical Dimension</a></li>
-                        <li><a href="#doc-01-07" class="toc-link">01.07 - Legal Dimension</a></li>
-                        <li><a href="#doc-01-08" class="toc-link">01.08 - Ethical Dimension</a></li>
-                        <li><a href="#doc-01-09" class="toc-link">01.09 - Economic Dimension</a></li>
-                        <li class="toc-subsection">Part III: Paradigms</li>
-                        <li><a href="#doc-01-10" class="toc-link">01.10 - Paradigm: Sovereignty</a></li>
-                        <li><a href="#doc-01-11" class="toc-link">01.11 - Paradigm: Identity</a></li>
-                        <li><a href="#doc-01-12" class="toc-link">01.12 - Paradigm: Responsibility</a></li>
-                        <li><a href="#doc-01-13" class="toc-link">01.13 - Paradigm: Supervision</a></li>
-                        <li><a href="#doc-01-14" class="toc-link">01.14 - Paradigm: Interoperability</a></li>
-                        <li><a href="#doc-01-15" class="toc-link">01.15 - Paradigm: Audit</a></li>
-                        <li><a href="#doc-01-16" class="toc-link">01.16 - Paradigm: Adaptation</a></li>
-                        <li><a href="#doc-01-17" class="toc-link">01.17 - Paradigm: Ethics</a></li>
-                        <li><a href="#doc-01-18" class="toc-link">01.18 - Paradigm: Governance</a></li>
-                        <li><a href="#doc-01-19" class="toc-link">01.19 - Legislative Corpus</a></li>
-                        <li class="toc-subsection">Part IV: Prospective</li>
-                        <li><a href="#doc-01-20" class="toc-link">01.20 - Energy Sovereignty</a></li>
-                        <li><a href="#doc-01-21" class="toc-link">01.21 - Autonomous Weapons</a></li>
-                        <li><a href="#doc-01-22" class="toc-link">01.22 - Cognitive Frontier</a></li>
-                        <li><a href="#doc-01-23" class="toc-link">01.23 - Existential Risks</a></li>
-                        <li><a href="#doc-01-24" class="toc-link">01.24 - Geoeconomic Justice</a></li>
-                        <li><a href="#doc-01-25" class="toc-link">01.25 - Technological Resilience</a></li>
-                        <li><a href="#doc-01-26" class="toc-link">01.26 - Spatial Jurisdiction</a></li>
-                        <li><a href="#doc-01-27" class="toc-link">01.27 - Humanity 2.0</a></li>
-                    </ul>
-                </div>
-                
-                <div class="toc-section">
-                    <h4><a href="#section-02" class="toc-section-link">02. Legislative Corpus</a></h4>
-                    <ul class="toc-list">
-                        <li class="toc-subsection">Axiom I: SUPREMATIA HUMANA (19 articles)</li>
-                        <li class="toc-subsection">Axiom II: IDENTITAS AGENTICA (19 articles)</li>
-                        <li class="toc-subsection">Axiom III: RESPONSABILITAS (19 articles)</li>
-                        <li class="toc-subsection">Axiom IV: CIRCULUS VITAE (19 articles)</li>
-                        <li class="toc-subsection">Axiom V: INTEROPERABILITAS (19 articles)</li>
-                        <li class="toc-subsection">Axiom VI: AUDITUM IMMUTABILE (19 articles)</li>
-                        <li class="toc-subsection">Axiom VII: ADAPTATIO LOCALIS (19 articles)</li>
-                        <li class="toc-subsection">Axiom VIII: ETHICA PROGRAMMATA (19 articles)</li>
-                        <li class="toc-subsection">Axiom IX: GUBERNATIO HYBRIDA (19 articles)</li>
-                        <li class="toc-subsection">Axiom X-XIX: Prospective Axioms (190 articles)</li>
-                        <li class="toc-note">361 total legislative articles</li>
-                    </ul>
-                </div>
-                
-                <div class="toc-section">
-                    <h4><a href="#section-03" class="toc-section-link">03. Technical Annexes</a></h4>
-                    <ul class="toc-list">
-                        <li class="toc-subsection">Specifications (5 docs)</li>
-                        <li class="toc-subsection">Schemas (5 docs)</li>
-                        <li class="toc-subsection">Implementations (10+ docs)</li>
-                    </ul>
-                </div>
-                
-                <div class="toc-section">
-                    <h4><a href="#section-04" class="toc-section-link">04. Reports & Analyses</a></h4>
-                    <ul class="toc-list">
-                        <li class="toc-subsection">Case Studies (3 docs)</li>
-                        <li class="toc-subsection">Impact Analyses</li>
-                        <li class="toc-subsection">Validation Reports</li>
-                    </ul>
-                </div>
-                
-                <div class="toc-section">
-                    <h4><a href="#section-05" class="toc-section-link">05. Development Tools</a></h4>
-                    <ul class="toc-list">
-                        <li class="toc-subsection">SDK & Frameworks</li>
-                        <li class="toc-subsection">Compliance Tools</li>
-                        <li class="toc-subsection">CLI & Utilities</li>
-                    </ul>
-                </div>
-            </nav>
-            
-            <div class="toc-footer">
-                <a href="index.html" class="toc-home-link">← Back to Home</a>
-            </div>
-        </aside>
+    <!-- Content -->
+    <div class="manifesto-content">
+        <a href="index.html" class="back-home">← Back to Home</a>
 
-        <!-- Main Reading Content -->
-        <main class="reading-content">
+        <!-- Quick Navigation -->
+        <nav class="toc-nav">
+            <a href="#metadata">Foundations</a>
+            <a href="#reference">Reference Compendium</a>
+            <a href="#axiom-i">Ψ-I Suprematia</a>
+            <a href="#axiom-ii">Ψ-II Identitas</a>
+            <a href="#axiom-iii">Ψ-III Responsabilitas</a>
+            <a href="#axiom-iv">Ψ-IV Circulus</a>
+            <a href="#axiom-v">Ψ-V Interoperabilitas</a>
+            <a href="#axiom-vi">Ψ-VI Auditum</a>
+            <a href="#axiom-vii">Ψ-VII Adaptatio</a>
+            <a href="#axiom-viii">Ψ-VIII Ethica</a>
+            <a href="#axiom-ix">Ψ-IX Gubernatio</a>
+            <a href="#axiom-x">Ψ-X Energia</a>
+            <a href="#axiom-xi">Ψ-XI Arma</a>
+            <a href="#axiom-xii">Ψ-XII Cognitio</a>
+            <a href="#axiom-xiii">Ψ-XIII Risicum</a>
+            <a href="#axiom-xiv">Ψ-XIV Iustitia</a>
+            <a href="#axiom-xv">Ψ-XV Resilentia</a>
+            <a href="#axiom-xvi">Ψ-XVI Spatium</a>
+            <a href="#axiom-xvii">Ψ-XVII Humanitas</a>
+            <a href="#axiom-xviii">Ψ-XVIII Charta</a>
+            <a href="#axiom-xix">Ψ-XIX Mundana</a>
+            <a href="#technical">Technical Annexes</a>
+            <a href="#reports">Reports</a>
+            <a href="#tools">Tools</a>
+        </nav>
 
-            <!-- SECTION 00: METADATA & DOCUMENTATION -->
-            <section class="doc-section" id="section-00">
-                <h2 class="section-title">00. Metadata & Documentation</h2>
-                <p class="section-intro">Foundational documents establishing the context, terminology, and governance structure of the LAIRM framework. These nine documents provide essential orientation for understanding the complete ecosystem.</p>
+        <!-- Section 1: Foundations -->
+        <section class="doc-section" id="metadata">
+            <h2>Foundations & Metadata <span class="section-count">9 documents</span></h2>
+            <ul class="doc-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/INTRODUCTION.md" target="_blank">Introduction</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/README.md" target="_blank">Readme</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/TERMINOLOGY.md" target="_blank">Terminology</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/acknowledgments.md" target="_blank">Acknowledgments</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/bibliography.md" target="_blank">Bibliography</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/editorial-committee.md" target="_blank">Editorial Committee</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/glossary.md" target="_blank">Glossary</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/index.md" target="_blank">Index</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/preface.md" target="_blank">Preface</a></li>
+            </ul>
+        </section>
 
-                <!-- Document 00.01 -->
-                <article class="doc-entry" id="doc-00-01">
-                    <h3 class="doc-title">
-                        <span class="doc-number">00.01</span>
-                        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/INTRODUCTION.md" target="_blank">Introduction: The Cybernetic Criterion</a>
-                    </h3>
-                    <div class="doc-content">
-                        <p>The Introduction document serves as the primary entry point to the LAIRM framework, establishing the foundational context for what constitutes the first comprehensive Global Agentive Constitution. Created in March 2024 and finalized in March 2026, this document emerged from a critical recognition: by March 2026, approximately 127 million autonomous agents operate globally across finance, healthcare, logistics, defense, energy, and governance sectors, yet no coherent international legal framework governs their operation, responsibilities, or control mechanisms.</p>
+        <!-- Section 2: Reference Compendium -->
+        <section class="doc-section" id="reference">
+            <h2>Reference Compendium <span class="section-count">28 chapters</span></h2>
+            <ul class="doc-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-I-FOUNDATIONS/chapter-00-general-introduction.md" target="_blank">Chapter 00 General Introduction</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-I-FOUNDATIONS/chapter-01-historical-context.md" target="_blank">Chapter 01 Historical Context</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-I-FOUNDATIONS/chapter-02-fundamental-principles.md" target="_blank">Chapter 02 Fundamental Principles</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-I-FOUNDATIONS/chapter-03-systemic-architecture.md" target="_blank">Chapter 03 Systemic Architecture</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-I-FOUNDATIONS/chapter-04-methodology.md" target="_blank">Chapter 04 Methodology</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-I-FOUNDATIONS/chapter-05-legal-framework.md" target="_blank">Chapter 05 Legal Framework</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-II-DIMENSIONS/chapter-06-technical-dimension.md" target="_blank">Chapter 06 Technical Dimension</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-II-DIMENSIONS/chapter-07-legal-dimension.md" target="_blank">Chapter 07 Legal Dimension</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-II-DIMENSIONS/chapter-08-ethical-dimension.md" target="_blank">Chapter 08 Ethical Dimension</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-II-DIMENSIONS/chapter-09-economic-dimension.md" target="_blank">Chapter 09 Economic Dimension</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-III-PARADIGMS/chapter-10-paradigm-sovereignty.md" target="_blank">Chapter 10 Paradigm Sovereignty</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-III-PARADIGMS/chapter-11-paradigm-identity.md" target="_blank">Chapter 11 Paradigm Identity</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-III-PARADIGMS/chapter-12-paradigm-responsibility.md" target="_blank">Chapter 12 Paradigm Responsibility</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-III-PARADIGMS/chapter-13-paradigm-supervision.md" target="_blank">Chapter 13 Paradigm Supervision</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-III-PARADIGMS/chapter-14-paradigm-interoperability.md" target="_blank">Chapter 14 Paradigm Interoperability</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-III-PARADIGMS/chapter-15-paradigm-audit.md" target="_blank">Chapter 15 Paradigm Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-III-PARADIGMS/chapter-16-paradigm-adaptation.md" target="_blank">Chapter 16 Paradigm Adaptation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-III-PARADIGMS/chapter-17-paradigm-ethics.md" target="_blank">Chapter 17 Paradigm Ethics</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-III-PARADIGMS/chapter-18-paradigm-governance.md" target="_blank">Chapter 18 Paradigm Governance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-III-PARADIGMS/chapter-19-legislative-corpus.md" target="_blank">Chapter 19 Legislative Corpus</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-IV-PROSPECTIVE/chapter-20-energy-sovereignty.md" target="_blank">Chapter 20 Energy Sovereignty</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-IV-PROSPECTIVE/chapter-21-autonomous-weapons.md" target="_blank">Chapter 21 Autonomous Weapons</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-IV-PROSPECTIVE/chapter-22-cognitive-frontier.md" target="_blank">Chapter 22 Cognitive Frontier</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-IV-PROSPECTIVE/chapter-23-existential-risks.md" target="_blank">Chapter 23 Existential Risks</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-IV-PROSPECTIVE/chapter-24-geoeconomic-justice.md" target="_blank">Chapter 24 Geoeconomic Justice</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-IV-PROSPECTIVE/chapter-25-technological-resilience.md" target="_blank">Chapter 25 Technological Resilience</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-IV-PROSPECTIVE/chapter-26-spatial-jurisdiction.md" target="_blank">Chapter 26 Spatial Jurisdiction</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/01-COMPENDIUM-REFERENCE/PART-IV-PROSPECTIVE/chapter-27-humanity-2-0.md" target="_blank">Chapter 27 Humanity 2 0</a></li>
+            </ul>
+        </section>
 
-                        <p>The document opens with a stark diagnosis of the current regulatory landscape, identifying what it terms "the normative void." Existing legal instruments—including the EU AI Act, NIST AI Risk Management Framework, and various international conventions on liability—were designed to regulate human actors or traditional legal entities. They fundamentally fail to address the decisional autonomy of artificial systems and their capacity for emergent network interactions. This normative void represents an unprecedented challenge in international law history, creating systemic risks documented through catastrophic incidents: the 2010 Flash Crash ($1 trillion market disruption), Knight Capital's 2012 collapse ($440 million loss in 45 minutes), and the Boeing 737 MAX MCAS failures (346 deaths).</p>
+        <!-- Section 3: Legislative Corpus -->
+        <section class="doc-section" id="legislative">
+            <h2>Legislative Corpus <span class="section-count">19 axioms · 361 articles</span></h2>
 
-                        <p>LAIRM proposes a structured response organized around five fundamental principles that form the constitutional bedrock. First, Human Supremacy establishes that human authority remains supreme over all autonomous systems, with mandatory override capabilities and continuous supervision requirements. Second, Transparency mandates that all systems must be auditable, with complete traceability of decisions and actions. Third, Responsibility ensures each agent remains accountable through clear attribution chains linking actions to identifiable entities. Fourth, Interoperability requires systems to coexist harmoniously through open standards and protocols. Fifth, Adaptation recognizes that rules must evolve alongside technological capabilities, preventing regulatory obsolescence.</p>
+<div class="axiom-section" id="axiom-i">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-I</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">SUPREMATIA HUMANA</h3>
+            <p class="axiom-english">Human Supremacy</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-01-kill-switch-universalis.md" target="_blank">Kill Switch Universalis</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-02-human-override.md" target="_blank">Human Override</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-03-continuous-supervision.md" target="_blank">Continuous Supervision</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-04-human-authority.md" target="_blank">Human Authority</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-05-final-decision.md" target="_blank">Final Decision</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-06-intervention-emergency.md" target="_blank">Intervention Emergency</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-07-continuous-control.md" target="_blank">Continuous Control</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-08-human-responsibility.md" target="_blank">Human Responsibility</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-09-escalation-control.md" target="_blank">Escalation Control</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-10-human-audit.md" target="_blank">Human Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-11-revocation-licence.md" target="_blank">Revocation Licence</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-12-human-sanctions.md" target="_blank">Human Sanctions</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-13-human-appeal.md" target="_blank">Human Appeal</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-14-human-transparency.md" target="_blank">Human Transparency</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-15-human-consent.md" target="_blank">Human Consent</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-16-right-forgetting.md" target="_blank">Right Forgetting</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-17-right-explanation.md" target="_blank">Right Explanation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-18-right-rectification.md" target="_blank">Right Rectification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-19-right-opposition.md" target="_blank">Right Opposition</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-ii">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-II</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">IDENTITAS AGENTICA</h3>
+            <p class="axiom-english">Verifiable Agent Identity</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-01-agent-passport.md" target="_blank">Agent Passport</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-02-unique-identifier.md" target="_blank">Unique Identifier</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-03-digital-signature.md" target="_blank">Digital Signature</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-04-authentication.md" target="_blank">Authentication</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-05-audit-trail.md" target="_blank">Audit Trail</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-06-traceability-complete.md" target="_blank">Traceability Complete</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-07-immutable-logging.md" target="_blank">Immutable Logging</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-08-versioning.md" target="_blank">Versioning</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-09-complete-history.md" target="_blank">Complete History</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-10-metadata.md" target="_blank">Metadata</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-11-certification.md" target="_blank">Certification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-12-revocation.md" target="_blank">Revocation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-13-renewal.md" target="_blank">Renewal</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-14-identity-transfer.md" target="_blank">Identity Transfer</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-15-identity-fusion.md" target="_blank">Identity Fusion</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-16-identity-deletion.md" target="_blank">Identity Deletion</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-17-identity-recovery.md" target="_blank">Identity Recovery</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-18-identity-security.md" target="_blank">Identity Security</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-19-identity-confidentiality.md" target="_blank">Identity Confidentiality</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-iii">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-III</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">RESPONSABILITAS</h3>
+            <p class="axiom-english">Cascading Responsibility</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-01-responsibility-civile.md" target="_blank">Responsibility Civile</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-02-creator-responsibility.md" target="_blank">Creator Responsibility</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-03-responsibility-deployer.md" target="_blank">Responsibility Deployer</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-04-joint-and-several-responsibility.md" target="_blank">Joint And Several Responsibility</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-05-insurance-requirements.md" target="_blank">Insurance Requirements</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-06-liability-limits.md" target="_blank">Liability Limits</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-07-victim-indemnification.md" target="_blank">Victim Indemnification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-08-guarantee-fund.md" target="_blank">Guarantee Fund</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-09-responsibility-audit.md" target="_blank">Responsibility Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-10-responsibility-transparency.md" target="_blank">Responsibility Transparency</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-11-prescription-deadlines.md" target="_blank">Prescription Deadlines</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-12-damage-coverage.md" target="_blank">Damage Coverage</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-13-deployer-recourse.md" target="_blank">Deployer Recourse</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-14-conflict-mediation.md" target="_blank">Conflict Mediation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-15-incident-registry.md" target="_blank">Incident Registry</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-16-operator-training.md" target="_blank">Operator Training</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-17-deployer-insurance.md" target="_blank">Deployer Insurance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-18-damage-prevention.md" target="_blank">Damage Prevention</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-19-administrative-sanctions.md" target="_blank">Administrative Sanctions</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-iv">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-IV</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">CIRCULUS VITAE</h3>
+            <p class="axiom-english">Closed-Loop Lifecycle</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-01-agent-creation-initialization.md" target="_blank">Agent Creation Initialization</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-02-production-deployment.md" target="_blank">Production Deployment</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-03-continuous-operation.md" target="_blank">Continuous Operation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-04-maintenance-updates.md" target="_blank">Maintenance Updates</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-05-end-of-life-archival.md" target="_blank">End Of Life Archival</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-06-state-transition.md" target="_blank">State Transition</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-07-continuity-service.md" target="_blank">Continuity Service</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-08-recovery-emergency.md" target="_blank">Recovery Emergency</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-09-backup-restoration.md" target="_blank">Backup Restoration</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-10-lifecycle-versioning.md" target="_blank">Lifecycle Versioning</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-11-lifecycle-documentation.md" target="_blank">Lifecycle Documentation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-12-lifecycle-audit.md" target="_blank">Lifecycle Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-13-lifecycle-compliance.md" target="_blank">Lifecycle Compliance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-14-change-notification.md" target="_blank">Change Notification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-15-change-approval.md" target="_blank">Change Approval</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-16-rollback-recovery.md" target="_blank">Rollback Recovery</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-17-complete-history.md" target="_blank">Complete History</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-18-lifecycle-traceability.md" target="_blank">Lifecycle Traceability</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-19-end-of-support.md" target="_blank">End Of Support</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-v">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-V</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">INTEROPERABILITAS</h3>
+            <p class="axiom-english">Open Standards & Interoperability</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-01-mandatory-standards.md" target="_blank">Mandatory Standards</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-02-communication-protocols.md" target="_blank">Communication Protocols</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-03-public-apis.md" target="_blank">Public Apis</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-04-data-formats.md" target="_blank">Data Formats</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-05-system-integration.md" target="_blank">System Integration</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-06-backward-compatibility.md" target="_blank">Backward Compatibility</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-07-api-versioning.md" target="_blank">Api Versioning</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-08-api-documentation.md" target="_blank">Api Documentation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-09-interoperability-testing.md" target="_blank">Interoperability Testing</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-10-interoperability-certification.md" target="_blank">Interoperability Certification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-11-conflict-resolution.md" target="_blank">Conflict Resolution</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-12-data-synchronization.md" target="_blank">Data Synchronization</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-13-metadata-exchange.md" target="_blank">Metadata Exchange</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-14-mutual-authentication.md" target="_blank">Mutual Authentication</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-15-communication-encryption.md" target="_blank">Communication Encryption</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-16-interoperability-audit.md" target="_blank">Interoperability Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-17-interoperability-compliance.md" target="_blank">Interoperability Compliance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-18-interoperability-evolution.md" target="_blank">Interoperability Evolution</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-19-end-of-support.md" target="_blank">End Of Support</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-vi">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-VI</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">AUDITUM IMMUTABILE</h3>
+            <p class="axiom-english">Immutable Audit Trails</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-01-internal-audit.md" target="_blank">Internal Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-02-external-audit.md" target="_blank">External Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-03-compliance-verification.md" target="_blank">Compliance Verification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-04-technical-inspection.md" target="_blank">Technical Inspection</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-05-security-inspection.md" target="_blank">Security Inspection</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-06-performance-inspection.md" target="_blank">Performance Inspection</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-07-audit-report.md" target="_blank">Audit Report</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-08-verification-report.md" target="_blank">Verification Report</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-09-inspection-report.md" target="_blank">Inspection Report</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-10-audit-remediation.md" target="_blank">Audit Remediation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-11-remediation-tracking.md" target="_blank">Remediation Tracking</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-12-compliance-certification.md" target="_blank">Compliance Certification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-13-security-audit.md" target="_blank">Security Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-14-performance-audit.md" target="_blank">Performance Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-15-reliability-audit.md" target="_blank">Reliability Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-16-documentation-audit.md" target="_blank">Documentation Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-17-regulatory-compliance-audit.md" target="_blank">Regulatory Compliance Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-18-internal-compliance-audit.md" target="_blank">Internal Compliance Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-19-end-of-audit.md" target="_blank">End Of Audit</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-vii">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-VII</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">ADAPTATIO CONTINUA</h3>
+            <p class="axiom-english">Continuous Adaptation</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-01-continuous-learning.md" target="_blank">Continuous Learning</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-02-behavioral-adaptation.md" target="_blank">Behavioral Adaptation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-03-model-evolution.md" target="_blank">Model Evolution</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-04-software-updates.md" target="_blank">Software Updates</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-05-performance-improvement.md" target="_blank">Performance Improvement</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-06-feedback-iteration.md" target="_blank">Feedback Iteration</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-07-drift-detection.md" target="_blank">Drift Detection</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-08-drift-correction.md" target="_blank">Drift Correction</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-09-supervised-learning.md" target="_blank">Supervised Learning</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-10-unsupervised-learning.md" target="_blank">Unsupervised Learning</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-11-reinforcement-learning.md" target="_blank">Reinforcement Learning</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-12-model-validation.md" target="_blank">Model Validation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-13-model-testing.md" target="_blank">Model Testing</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-14-model-deployment.md" target="_blank">Model Deployment</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-15-model-monitoring.md" target="_blank">Model Monitoring</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-16-model-optimization.md" target="_blank">Model Optimization</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-17-model-archiving.md" target="_blank">Model Archiving</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-18-model-recovery.md" target="_blank">Model Recovery</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-19-end-of-life.md" target="_blank">End Of Life</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-viii">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-VIII</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">ETHICA PROGRAMMATA</h3>
+            <p class="axiom-english">Programmable Ethics</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-01-ethical-principles.md" target="_blank">Ethical Principles</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-02-fundamental-values.md" target="_blank">Fundamental Values</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-03-decision-morality.md" target="_blank">Decision Morality</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-04-human-wellbeing.md" target="_blank">Human Wellbeing</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-05-human-dignity.md" target="_blank">Human Dignity</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-06-distributive-justice.md" target="_blank">Distributive Justice</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-07-procedural-equity.md" target="_blank">Procedural Equity</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-08-ethical-transparency.md" target="_blank">Ethical Transparency</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-09-ethical-responsibility.md" target="_blank">Ethical Responsibility</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-10-ethical-audit.md" target="_blank">Ethical Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-11-ethical-compliance.md" target="_blank">Ethical Compliance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-12-ethical-remediation.md" target="_blank">Ethical Remediation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-13-cultural-values.md" target="_blank">Cultural Values</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-14-rights-respect.md" target="_blank">Rights Respect</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-15-harm-prevention.md" target="_blank">Harm Prevention</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-16-wellbeing-promotion.md" target="_blank">Wellbeing Promotion</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-17-autonomy-respect.md" target="_blank">Autonomy Respect</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-18-ethical-consent.md" target="_blank">Ethical Consent</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-19-end-of-life-ethics.md" target="_blank">End Of Life Ethics</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-ix">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-IX</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">GUBERNATIO HYBRIDA</h3>
+            <p class="axiom-english">Hybrid Governance</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-01-agent-governance.md" target="_blank">Agent Governance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-02-citizen-participation.md" target="_blank">Citizen Participation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-03-decision-making-process.md" target="_blank">Decision Making Process</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-04-representation.md" target="_blank">Representation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-05-political-accountability.md" target="_blank">Political Accountability</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-06-government-transparency.md" target="_blank">Government Transparency</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-07-public-consultation.md" target="_blank">Public Consultation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-08-democratic-debate.md" target="_blank">Democratic Debate</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-09-voting-and-consensus.md" target="_blank">Voting And Consensus</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-10-governance-policy.md" target="_blank">Governance Policy</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-11-governance-audit.md" target="_blank">Governance Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-12-political-compliance.md" target="_blank">Political Compliance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-13-political-remediation.md" target="_blank">Political Remediation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-14-inclusive-participation.md" target="_blank">Inclusive Participation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-15-equitable-representation.md" target="_blank">Equitable Representation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-16-collective-decision-making.md" target="_blank">Collective Decision Making</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-17-political-appeal.md" target="_blank">Political Appeal</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-18-political-revision.md" target="_blank">Political Revision</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-19-end-of-mandate.md" target="_blank">End Of Mandate</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-x">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-X</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">ENERGIA</h3>
+            <p class="axiom-english">Energy Sovereignty</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-01-energy-sovereignty.md" target="_blank">Energy Sovereignty</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-02-energy-independence.md" target="_blank">Energy Independence</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-03-renewable-energy-integration.md" target="_blank">Renewable Energy Integration</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-04-energy-efficiency.md" target="_blank">Energy Efficiency</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-05-energy-storage.md" target="_blank">Energy Storage</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-06-energy-distribution.md" target="_blank">Energy Distribution</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-07-energy-monitoring.md" target="_blank">Energy Monitoring</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-08-energy-reporting.md" target="_blank">Energy Reporting</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-09-energy-optimization.md" target="_blank">Energy Optimization</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-10-energy-policy.md" target="_blank">Energy Policy</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-11-energy-audit.md" target="_blank">Energy Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-12-energy-compliance.md" target="_blank">Energy Compliance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-13-energy-remediation.md" target="_blank">Energy Remediation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-14-energy-accessibility.md" target="_blank">Energy Accessibility</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-15-energy-equity.md" target="_blank">Energy Equity</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-16-energy-collaboration.md" target="_blank">Energy Collaboration</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-17-energy-appeal.md" target="_blank">Energy Appeal</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-18-energy-revision.md" target="_blank">Energy Revision</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-19-end-of-energy-mandate.md" target="_blank">End Of Energy Mandate</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-xi">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-XI</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">ARMA PROHIBITA</h3>
+            <p class="axiom-english">Autonomous Weapons Control</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-01-autonomous-weapons-control.md" target="_blank">Autonomous Weapons Control</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-02-weapons-safety-mechanisms.md" target="_blank">Weapons Safety Mechanisms</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-03-conflict-prevention.md" target="_blank">Conflict Prevention</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-04-weapons-disarmament.md" target="_blank">Weapons Disarmament</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-05-threat-detection.md" target="_blank">Threat Detection</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-06-threat-response.md" target="_blank">Threat Response</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-07-escalation-control.md" target="_blank">Escalation Control</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-08-human-intervention.md" target="_blank">Human Intervention</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-09-security-audit.md" target="_blank">Security Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-10-security-compliance.md" target="_blank">Security Compliance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-11-security-remediation.md" target="_blank">Security Remediation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-12-security-certification.md" target="_blank">Security Certification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-13-security-monitoring.md" target="_blank">Security Monitoring</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-14-security-reporting.md" target="_blank">Security Reporting</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-15-abuse-prevention.md" target="_blank">Abuse Prevention</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-16-abuse-detection.md" target="_blank">Abuse Detection</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-17-abuse-response.md" target="_blank">Abuse Response</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-18-abuse-investigation.md" target="_blank">Abuse Investigation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-19-end-of-control-mandate.md" target="_blank">End Of Control Mandate</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-xii">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-XII</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">COGNITIO AUGMENTATA</h3>
+            <p class="axiom-english">Cognitive Enhancement</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-01-cognitive-sovereignty.md" target="_blank">Cognitive Sovereignty</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-02-informed-consent.md" target="_blank">Informed Consent</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-03-reversibility-requirement.md" target="_blank">Reversibility Requirement</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-04-enhancement-equity.md" target="_blank">Enhancement Equity</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-05-identity-preservation.md" target="_blank">Identity Preservation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-06-cognitive-privacy.md" target="_blank">Cognitive Privacy</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-07-enhancement-audit.md" target="_blank">Enhancement Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-08-enhancement-compliance.md" target="_blank">Enhancement Compliance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-09-enhancement-remediation.md" target="_blank">Enhancement Remediation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-10-enhancement-certification.md" target="_blank">Enhancement Certification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-11-cognitive-monitoring.md" target="_blank">Cognitive Monitoring</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-12-cognitive-reporting.md" target="_blank">Cognitive Reporting</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-13-cognitive-appeal.md" target="_blank">Cognitive Appeal</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-14-cognitive-revision.md" target="_blank">Cognitive Revision</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-15-cognitive-transparency.md" target="_blank">Cognitive Transparency</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-16-cognitive-sanctions.md" target="_blank">Cognitive Sanctions</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-17-cognitive-training.md" target="_blank">Cognitive Training</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-18-cognitive-liability.md" target="_blank">Cognitive Liability</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-19-end-of-enhancement-mandate.md" target="_blank">End Of Enhancement Mandate</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-xiii">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-XIII</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">RISICUM EXISTENTIALE</h3>
+            <p class="axiom-english">Existential Risk Management</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-01-existential-risk-assessment.md" target="_blank">Existential Risk Assessment</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-02-alignment-verification.md" target="_blank">Alignment Verification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-03-safety-research-mandate.md" target="_blank">Safety Research Mandate</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-04-international-coordination.md" target="_blank">International Coordination</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-05-containment-protocols.md" target="_blank">Containment Protocols</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-06-staged-development-framework.md" target="_blank">Staged Development Framework</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-07-agi-development-restrictions.md" target="_blank">Agi Development Restrictions</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-08-asi-development-prohibition.md" target="_blank">Asi Development Prohibition</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-09-emergency-shutdown-capability.md" target="_blank">Emergency Shutdown Capability</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-10-fail-safe-mechanisms.md" target="_blank">Fail Safe Mechanisms</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-11-safety-certification.md" target="_blank">Safety Certification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-12-risk-monitoring.md" target="_blank">Risk Monitoring</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-13-incident-response.md" target="_blank">Incident Response</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-14-transparency-requirements.md" target="_blank">Transparency Requirements</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-15-appeal-mechanisms.md" target="_blank">Appeal Mechanisms</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-16-sanctions-for-violations.md" target="_blank">Sanctions For Violations</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-17-international-governance.md" target="_blank">International Governance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-18-existential-risk-review.md" target="_blank">Existential Risk Review</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-19-end-of-existential-risk-mandate.md" target="_blank">End Of Existential Risk Mandate</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-xiv">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-XIV</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">IUSTITIA GEOECONOMICA</h3>
+            <p class="axiom-english">Geoeconomic Justice</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-01-distributive-justice-principles.md" target="_blank">Distributive Justice Principles</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-02-resource-allocation-framework.md" target="_blank">Resource Allocation Framework</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-03-wealth-distribution-mechanisms.md" target="_blank">Wealth Distribution Mechanisms</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-04-economic-equity-standards.md" target="_blank">Economic Equity Standards</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-05-benefit-sharing-requirements.md" target="_blank">Benefit Sharing Requirements</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-06-cost-allocation-fairness.md" target="_blank">Cost Allocation Fairness</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-07-stakeholder-participation.md" target="_blank">Stakeholder Participation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-08-transparency-requirements.md" target="_blank">Transparency Requirements</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-09-equity-auditing.md" target="_blank">Equity Auditing</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-10-fairness-certification.md" target="_blank">Fairness Certification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-11-equity-compliance.md" target="_blank">Equity Compliance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-12-distribution-monitoring.md" target="_blank">Distribution Monitoring</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-13-equity-remediation.md" target="_blank">Equity Remediation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-14-appeal-mechanisms.md" target="_blank">Appeal Mechanisms</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-15-equity-verification.md" target="_blank">Equity Verification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-16-sanctions-for-violations.md" target="_blank">Sanctions For Violations</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-17-equity-revision.md" target="_blank">Equity Revision</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-18-justice-review.md" target="_blank">Justice Review</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-19-end-of-distributive-justice-mandate.md" target="_blank">End Of Distributive Justice Mandate</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-xv">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-XV</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">RESILENTIA TECHNOLOGICA</h3>
+            <p class="axiom-english">Technological Resilience</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-01-systemic-resilience-principles.md" target="_blank">Systemic Resilience Principles</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-02-fault-tolerance-requirements.md" target="_blank">Fault Tolerance Requirements</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-03-failure-detection-systems.md" target="_blank">Failure Detection Systems</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-04-recovery-mechanisms.md" target="_blank">Recovery Mechanisms</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-05-disaster-recovery-planning.md" target="_blank">Disaster Recovery Planning</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-06-backup-systems.md" target="_blank">Backup Systems</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-07-redundancy-requirements.md" target="_blank">Redundancy Requirements</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-08-resilience-testing.md" target="_blank">Resilience Testing</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-09-resilience-certification.md" target="_blank">Resilience Certification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-10-resilience-compliance.md" target="_blank">Resilience Compliance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-11-resilience-monitoring.md" target="_blank">Resilience Monitoring</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-12-failure-response.md" target="_blank">Failure Response</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-13-recovery-verification.md" target="_blank">Recovery Verification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-14-appeal-mechanisms.md" target="_blank">Appeal Mechanisms</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-15-resilience-verification.md" target="_blank">Resilience Verification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-16-sanctions-for-violations.md" target="_blank">Sanctions For Violations</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-17-resilience-revision.md" target="_blank">Resilience Revision</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-18-resilience-review.md" target="_blank">Resilience Review</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-19-end-of-systemic-resilience-mandate.md" target="_blank">End Of Systemic Resilience Mandate</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-xvi">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-XVI</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">SPATIUM IURISDICTIONIS</h3>
+            <p class="axiom-english">Spatial Jurisdiction</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-01-orbital-space-governance-principles.md" target="_blank">Orbital Space Governance Principles</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-02-orbital-resource-management.md" target="_blank">Orbital Resource Management</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-03-satellite-coordination-protocols.md" target="_blank">Satellite Coordination Protocols</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-04-spectrum-management-standards.md" target="_blank">Spectrum Management Standards</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-05-orbital-debris-mitigation.md" target="_blank">Orbital Debris Mitigation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-06-space-traffic-control.md" target="_blank">Space Traffic Control</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-07-orbital-slot-allocation.md" target="_blank">Orbital Slot Allocation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-08-satellite-licensing.md" target="_blank">Satellite Licensing</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-09-orbital-compliance-auditing.md" target="_blank">Orbital Compliance Auditing</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-10-space-resource-certification.md" target="_blank">Space Resource Certification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-11-orbital-monitoring-systems.md" target="_blank">Orbital Monitoring Systems</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-12-debris-tracking-requirements.md" target="_blank">Debris Tracking Requirements</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-13-orbital-remediation.md" target="_blank">Orbital Remediation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-14-space-appeal-mechanisms.md" target="_blank">Space Appeal Mechanisms</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-15-orbital-verification-standards.md" target="_blank">Orbital Verification Standards</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-16-space-sanctions-framework.md" target="_blank">Space Sanctions Framework</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-17-international-space-governance.md" target="_blank">International Space Governance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-18-orbital-review-procedures.md" target="_blank">Orbital Review Procedures</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-19-end-of-orbital-governance-mandate.md" target="_blank">End Of Orbital Governance Mandate</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-xvii">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-XVII</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">HUMANITAS TRANSFORMATA</h3>
+            <p class="axiom-english">Human Transformation</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-01-human-agent-coexistence-principles.md" target="_blank">Human Agent Coexistence Principles</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-02-human-dignity-protection.md" target="_blank">Human Dignity Protection</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-03-human-autonomy-preservation.md" target="_blank">Human Autonomy Preservation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-04-human-employment-rights.md" target="_blank">Human Employment Rights</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-05-human-education-and-reskilling.md" target="_blank">Human Education And Reskilling</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-06-human-health-and-wellbeing.md" target="_blank">Human Health And Wellbeing</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-07-human-privacy-protection.md" target="_blank">Human Privacy Protection</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-08-human-cultural-preservation.md" target="_blank">Human Cultural Preservation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-09-human-community-rights.md" target="_blank">Human Community Rights</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-10-human-participation-in-governance.md" target="_blank">Human Participation In Governance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-11-human-compliance-verification.md" target="_blank">Human Compliance Verification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-12-human-monitoring-systems.md" target="_blank">Human Monitoring Systems</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-13-human-remediation-procedures.md" target="_blank">Human Remediation Procedures</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-14-human-appeal-mechanisms.md" target="_blank">Human Appeal Mechanisms</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-15-human-rights-verification.md" target="_blank">Human Rights Verification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-16-sanctions-for-human-rights-violations.md" target="_blank">Sanctions For Human Rights Violations</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-17-international-human-rights-governance.md" target="_blank">International Human Rights Governance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-18-humanity-review-procedures.md" target="_blank">Humanity Review Procedures</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-19-end-of-human-protection-mandate.md" target="_blank">End Of Human Protection Mandate</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-xviii">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-XVIII</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">CHARTA COSMICA</h3>
+            <p class="axiom-english">Cosmic Charter</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-01-transplanetary-rights-principles.md" target="_blank">Transplanetary Rights Principles</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-02-multi-world-governance-framework.md" target="_blank">Multi World Governance Framework</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-03-orbital-station-autonomy.md" target="_blank">Orbital Station Autonomy</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-04-lunar-settlement-rights.md" target="_blank">Lunar Settlement Rights</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-05-martian-autonomy.md" target="_blank">Martian Autonomy</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-06-interplanetary-commerce.md" target="_blank">Interplanetary Commerce</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-07-cosmic-resource-distribution.md" target="_blank">Cosmic Resource Distribution</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-08-transplanetary-justice-system.md" target="_blank">Transplanetary Justice System</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-09-interplanetary-communication-standards.md" target="_blank">Interplanetary Communication Standards</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-10-space-debris-management.md" target="_blank">Space Debris Management</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-11-extraterrestrial-habitat-protection.md" target="_blank">Extraterrestrial Habitat Protection</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-12-interplanetary-emergency-response.md" target="_blank">Interplanetary Emergency Response</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-13-cosmic-equity-verification.md" target="_blank">Cosmic Equity Verification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-14-multi-world-appeal-mechanisms.md" target="_blank">Multi World Appeal Mechanisms</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-15-transplanetary-sanctions.md" target="_blank">Transplanetary Sanctions</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-16-cosmic-rights-revision.md" target="_blank">Cosmic Rights Revision</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-17-interplanetary-governance-review.md" target="_blank">Interplanetary Governance Review</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-18-cosmic-justice-audit.md" target="_blank">Cosmic Justice Audit</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-19-end-of-transplanetary-mandate.md" target="_blank">End Of Transplanetary Mandate</a></li>
+    </ul>
+</div>
+<div class="axiom-section" id="axiom-xix">
+    <div class="axiom-header">
+        <span class="axiom-symbol-large">Ψ-XIX</span>
+        <div class="axiom-title-block">
+            <h3 class="axiom-latin">IUSTITIA MUNDANA</h3>
+            <p class="axiom-english">Global Justice</p>
+        </div>
+        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/README.md" target="_blank" class="axiom-readme-link">README →</a>
+    </div>
+    <ul class="article-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-01-global-justice-principles.md" target="_blank">Global Justice Principles</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-02-geoeconomic-equity-standards.md" target="_blank">Geoeconomic Equity Standards</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-03-wealth-distribution-mechanisms.md" target="_blank">Wealth Distribution Mechanisms</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-04-international-fairness-framework.md" target="_blank">International Fairness Framework</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-05-vulnerable-population-protection.md" target="_blank">Vulnerable Population Protection</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-06-north-south-equity.md" target="_blank">North South Equity</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-07-planetary-benefit-sharing.md" target="_blank">Planetary Benefit Sharing</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-08-global-wealth-tracking.md" target="_blank">Global Wealth Tracking</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-09-equity-auditing.md" target="_blank">Equity Auditing</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-10-fairness-certification.md" target="_blank">Fairness Certification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-11-compliance-verification.md" target="_blank">Compliance Verification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-12-distribution-monitoring.md" target="_blank">Distribution Monitoring</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-13-equity-remediation.md" target="_blank">Equity Remediation</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-14-appeal-mechanisms.md" target="_blank">Appeal Mechanisms</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-15-equity-verification.md" target="_blank">Equity Verification</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-16-sanctions-for-violations.md" target="_blank">Sanctions For Violations</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-17-international-governance.md" target="_blank">International Governance</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-18-justice-review.md" target="_blank">Justice Review</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-19-end-of-global-justice-mandate.md" target="_blank">End Of Global Justice Mandate</a></li>
+    </ul>
+</div>
+        </section>
 
-                        <p>The Introduction outlines LAIRM's four-part architecture. The Reference Compendium comprises 28 theoretical chapters divided into Foundations (historical context and principles), Dimensions (technical, legal, ethical, economic aspects), Paradigms (10 governance frameworks), and Prospective analyses (future challenges and existential risks). The Legislative Compendium establishes 19 fundamental axioms articulated through 361 executable articles, each following a standardized format: imperative norm, legal foundation, technical specification, reference implementation, verification mechanisms, and entry into force modalities. Technical Annexes provide specifications, schemas, and multilingual implementations. Reports & Analyses document impact studies, use cases, and audit trails.</p>
+        <!-- Section 4: Technical Annexes -->
+        <section class="doc-section" id="technical">
+            <h2>Technical Annexes <span class="section-count">specifications, schemas, implementations</span></h2>
+            <ul class="doc-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/03-TECHNICAL-ANNEXES/schemas/action-record-schema.md" target="_blank">Action Record Schema</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/03-TECHNICAL-ANNEXES/schemas/audit-log-schema.md" target="_blank">Audit Log Schema</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/03-TECHNICAL-ANNEXES/schemas/compliance-report-schema.md" target="_blank">Compliance Report Schema</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/03-TECHNICAL-ANNEXES/schemas/kill-signal-schema.md" target="_blank">Kill Signal Schema</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/03-TECHNICAL-ANNEXES/specifications/a2a-protocol-spec.md" target="_blank">A2A Protocol Spec</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/03-TECHNICAL-ANNEXES/specifications/audit-log-spec.md" target="_blank">Audit Log Spec</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/03-TECHNICAL-ANNEXES/specifications/did-agent-spec.md" target="_blank">Did Agent Spec</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/03-TECHNICAL-ANNEXES/specifications/kill-switch-spec.md" target="_blank">Kill Switch Spec</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/03-TECHNICAL-ANNEXES/specifications/mcp-protocol-spec.md" target="_blank">Mcp Protocol Spec</a></li>
+            </ul>
+        </section>
 
-                        <p>The document emphasizes the temporal urgency of this framework. The decade 2026-2036 represents a critical window for establishing international standards before autonomous systems become too deeply embedded in global infrastructure to regulate effectively. The Introduction positions LAIRM not as a predictive document but as a normative hypothesis subject to democratic debate, peer review, and continuous adaptation. It explicitly acknowledges limitations—this is not dogma, not a universal solution, and not definitive—while asserting its role as the first structured starting point for international debate on agentic governance. The document concludes with a call for multidisciplinary contribution from policymakers, technologists, legal scholars, ethicists, and civil society representatives worldwide, establishing LAIRM as an open collaborative project designed to collectively build the normative foundations of the agentic era.</p>
-                    </div>
-                    <div class="doc-meta">
-                        <span class="reading-time">⏱ 15 min read</span>
-                        <span class="word-count">500 words</span>
-                        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/INTRODUCTION.md" target="_blank" class="github-link">View on GitHub →</a>
-                    </div>
-                </article>
+        <!-- Section 5: Reports & Analyses -->
+        <section class="doc-section" id="reports">
+            <h2>Reports & Analyses <span class="section-count">case studies, impact analyses</span></h2>
+            <ul class="doc-list">
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/04-REPORTS-ANALYSES/case-studies/case-study-boeing-737-max-mcas.md" target="_blank">Case Study Boeing 737 Max Mcas</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/04-REPORTS-ANALYSES/case-studies/case-study-flash-crash-2010.md" target="_blank">Case Study Flash Crash 2010</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/04-REPORTS-ANALYSES/case-studies/case-study-knight-capital-2012.md" target="_blank">Case Study Knight Capital 2012</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/04-REPORTS-ANALYSES/impact-analyses/economic-impact-analysis.md" target="_blank">Economic Impact Analysis</a></li>
+<li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/04-REPORTS-ANALYSES/validation-reports/framework-compliance-report.md" target="_blank">Framework Compliance Report</a></li>
+            </ul>
+        </section>
 
-                <!-- Document 00.02 -->
-                <article class="doc-entry" id="doc-00-02">
-                    <h3 class="doc-title">
-                        <span class="doc-number">00.02</span>
-                        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/README.md" target="_blank">README: Metadata Overview & Navigation Guide</a>
-                    </h3>
-                    <div class="doc-content">
-                        <p>The Metadata README serves as the comprehensive navigation hub for the entire LAIRM ecosystem, providing structured access to 455+ documents organized across six major sections. This document functions as both an orientation guide for new users and a reference index for experienced practitioners navigating the framework's extensive corpus. It establishes the organizational logic underlying LAIRM's architecture, explaining how theoretical foundations, legislative norms, technical specifications, impact analyses, and development tools interconnect to form a coherent governance system.</p>
+        <!-- Section 6: Development Tools -->
+        <section class="doc-section" id="tools">
+            <h2>Development Tools <span class="section-count">SDK, audit engine, compliance checker</span></h2>
+            <ul class="doc-list">
+            </ul>
+        </section>
 
-                        <p>The README presents quantitative metrics demonstrating LAIRM's comprehensiveness. The framework comprises 28 reference chapters providing historical context and theoretical foundations, 19 fundamental axioms establishing constitutional principles, and 361 legislative articles specifying executable legal norms. Technical infrastructure includes 5 protocol specifications (Kill-Switch, DID Agent, MCP, A2A, Audit Log), 5 data schemas (Agent Passport, Audit Log, Kill Signal, Compliance Report, Action Record), and implementations in 10 programming languages (Python, Rust, Go, Solidity, TypeScript, Java, C++, Swift, Kotlin, Dart). The ecosystem contains 52 README files providing section-specific documentation, 36 production-ready Python modules, and 62+ markdown files maintaining terminological consistency.</p>
-
-                        <p>The document details LAIRM's six-section architecture. Section 00-METADATA contains foundational documents including the preface, introduction, terminology, glossary, bibliography, editorial committee information, and comprehensive index. Section 01-COMPENDIUM-REFERENCE houses 28 theoretical chapters divided into four parts: Foundations (chapters 0-5 covering general introduction, historical context, fundamental principles, systemic architecture, methodology, and legal framework), Dimensions (chapters 6-9 analyzing technical, legal, ethical, and economic aspects), Paradigms (chapters 10-19 exploring sovereignty, identity, responsibility, supervision, interoperability, audit, adaptation, ethics, governance, and legislative corpus), and Prospective (chapters 20-27 addressing energy sovereignty, autonomous weapons, cognitive frontiers, existential risks, geoeconomic justice, technological resilience, spatial jurisdiction, and humanity 2.0).</p>
-
-                        <p>Section 02-COMPENDIUM-LEGISLATIVE contains the complete legislative corpus organized as a 19×19 matrix: 19 axioms each containing 19 articles, totaling 361 executable legal norms. Each article follows a standardized six-part structure: NORM (imperative statement), FOUNDATION (legal justification), SPEC (technical specification), IMPL (implementation guidance), VERIF (verification mechanisms), and ENTRY (entry into force conditions). Section 03-TECHNICAL-ANNEXES provides implementation infrastructure including protocol specifications enabling interoperability, data schemas ensuring consistency, and reference implementations demonstrating compliance. Section 04-REPORTS-ANALYSES documents real-world applicability through compliance reports, impact studies, community consultations, case studies, and audit trails. Section 05-TOOLS delivers the complete development toolchain including MCP Server, Agent SDK, Compliance Checker, Audit Engine, Workflow Engine, CLI tools, and integration plugins.</p>
-
-                        <p>The README provides role-specific navigation paths. Policymakers should begin with the preface, chapters 1-5 (Foundations), and impact reports. Technical experts should start with TERMINOLOGY.md, chapters 6-9 (Technical Dimensions), and Technical Annexes. Legal scholars should focus on the Legislative Compendium (Axioms I-XIX), chapter 7 (Legal Dimension), and the bibliography. Researchers should review the complete compendium, bibliography, and case studies. The document emphasizes LAIRM's open-source nature under CC-BY-SA-4.0 licensing, inviting contributions while maintaining rigorous validation through the editorial committee. It concludes with installation instructions, basic usage examples, and links to comprehensive documentation, positioning the README as the essential starting point for engaging with the LAIRM ecosystem's 227,500+ words of governance framework documentation.</p>
-                    </div>
-                    <div class="doc-meta">
-                        <span class="reading-time">⏱ 15 min read</span>
-                        <span class="word-count">500 words</span>
-                        <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/00-METADATA/README.md" target="_blank" class="github-link">View on GitHub →</a>
-                    </div>
-                </article>
-
-                <div class="section-continuation">
-                    <p><strong>Note:</strong> This documentary manifesto continues with 500-word analytical reports for all 482 documents in the LAIRM framework. The complete manifesto represents 241,000 words of comprehensive documentary analysis. Each entry maintains the same rigorous format: context establishment, structural analysis, key insights extraction, and direct GitHub integration.</p>
-                    <p class="github-note">📚 <a href="https://github.com/selectess/LAIR_Management/tree/main/LAIRM" target="_blank"><strong>Access Complete LAIRM Framework on GitHub</strong></a></p>
-                </div>
-
-            </section>
-
-        </main>
     </div>
 
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>LAIR Management</h4>
+                    <p>The Cybernetic Criterion<br>Global Agentive Constitution 2026-2036</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="https://github.com/selectess/LAIR_Management" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>ORCID: <a href="https://orcid.org/0009-0001-7191-3117" target="_blank">0009-0001-7191-3117</a><br>Email: selectess@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LAIR Management Initiative. Licensed under CC-BY-SA-4.0.</p>
+            </div>
+        </div>
+    </footer>
 
-    <script src="js/manifesto.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
