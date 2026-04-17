@@ -170,3 +170,7 @@ For contribution guidelines, see the main LAIRM documentation.
 
 For detailed discussion of governance models and international coordination, see Chapter 18: Paradigm of Governance.
 
+
+---
+
+**Next review**: June 2026

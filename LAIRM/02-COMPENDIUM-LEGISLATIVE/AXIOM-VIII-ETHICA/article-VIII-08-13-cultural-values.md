@@ -1,25 +1,25 @@
 ---
-title: "Article VIII.8.13 : Cultural Values"
-Axiom: Ψ-VIII
-numero: VIII.8.13
+title: "Article VIII.8.13: Cultural Values"
+axiom: Ψ-VIII
+article_number: VIII.8.13
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Ethics
-  - Culture
-  - Diversity
+  - ethics
+  - culture
+  - diversity
 validations:
-  Legal: true
-  Technical: true
-  Editorial: true
+  legal: true
+  technical: true
+  editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article VIII.8.13 : Cultural Values
-## Axiom Ψ-VIII : ETHICA
+# Article VIII.8.13: Cultural Values
+## Axiom Ψ-VIII: ETHICA
 
 ---
 
@@ -40,7 +40,7 @@ Every autonomous agent MUST respect and accommodate diverse cultural values. Cul
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-VIII : ETHICA**
+**Axiom Ψ-VIII: ETHICA**
 
 Cultural values are fundamental to human identity and dignity. Autonomous agents MUST respect and accommodate diverse cultural perspectives.
 
@@ -333,10 +333,14 @@ class CulturalValuesManager:
 
 ## REFERENCES
 
-- Axiom Ψ-VIII : ETHICA
-- Chapter 17 : Paradigm Ethics
+- Axiom Ψ-VIII: ETHICA
+- Chapter 17: Paradigm Ethics
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - containment protocols
-  - AGI containment
-  - air-gapped systems
-  - isolation mechanisms
-  - fail-safe systems
+tags:
+  - containment-protocols
+  - AGI-containment
+  - air-gapped-systems
+  - isolation-mechanisms
+  - fail-safe-systems
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -421,13 +420,13 @@ impl ContainmentManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No air-gapping | 95% CA fine + system shutdown |
-| Unlimited I/O | 90% CA fine + I/O restriction |
-| No human oversight | 85% CA fine + oversight requirement |
-| Non-operational kill switch | 95% CA fine + immediate shutdown |
-| Breach not detected | 80% CA fine + detection system upgrade |
-| Slow shutdown response | 75% CA fine + response time reduction |
-| Single containment layer | 70% CA fine + redundancy requirement |
+| No air-gapping | 95% annual revenue fine + system shutdown |
+| Unlimited I/O | 90% annual revenue fine + I/O restriction |
+| No human oversight | 85% annual revenue fine + oversight requirement |
+| Non-operational kill switch | 95% annual revenue fine + immediate shutdown |
+| Breach not detected | 80% annual revenue fine + detection system upgrade |
+| Slow shutdown response | 75% annual revenue fine + response time reduction |
+| Single containment layer | 70% annual revenue fine + redundancy requirement |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -469,3 +468,7 @@ impl ContainmentManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

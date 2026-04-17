@@ -908,3 +908,7 @@ Implementation of Article I.1.17 will ensure that autonomous agents remain trans
 *This article is part of the Cybernetic Criterion - International Legislative Framework for Autonomous Intelligent Resources Management (2026-2036)*
 
 *"Transparency enables authority. Authority requires understanding."*
+
+---
+
+**Next review**: June 2026

@@ -1,7 +1,7 @@
 ---
 title: "Article X.5: Energy Storage"
 axiom: Ψ-X
-numero: X.5
+article_number: X.5
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
@@ -9,12 +9,12 @@ last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
   - ENERGIA
-  - Energy Storage
-  - Backup Systems
+  - energy-Storage
+  - backup-Systems
 validations:
-  Legal: true
-  Technical: true
-  Editorial: true
+  legal: true
+  technical: true
+  editorial: true
 license: CC-BY-SA-4.0
 ---
 
@@ -46,7 +46,7 @@ Energy storage ensures operational continuity during supply disruptions, grid fa
 
 **Fundamental Principles**:
 - Operational resilience through energy storage
-- Continuity of critical functions during disruptions
+- Continuousity of critical functions during disruptions
 - Redundancy and fault tolerance
 - Transparent storage capacity tracking
 - Continuous storage system maintenance
@@ -393,3 +393,7 @@ Agents found non-compliant must:
 
 ---
 
+
+---
+
+**Next review**: June 2026

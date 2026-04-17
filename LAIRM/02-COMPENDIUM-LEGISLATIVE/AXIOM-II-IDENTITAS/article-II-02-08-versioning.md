@@ -1,27 +1,27 @@
 ---
-title: "Article II.2.8 : Versioning"
-Axiom: Ψ-II
-numero: II.2.8
+title: "Article II.2.8: Versioning"
+axiom: Ψ-II
+article_number: II.2.8
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Identity
-  - Versioning
-  - History
-  - Modifications
-  - Traceability
+  - identity
+  - versioning
+  - history
+  - modifications
+  - traceability
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article II.2.8 : VERSIONING
-## Axiom Ψ-II : IDENTITAS AGENTICA
+# Article II.2.8: VERSIONING
+## Axiom Ψ-II: IDENTITAS AGENTICA
 
 ---
 
@@ -45,11 +45,11 @@ Every autonomous agent MUST maintain a complete history of its versions. Each mo
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II : IDENTITAS AGENTICA**
+**Axiom Ψ-II: IDENTITAS AGENTICA**
 
 Versioning ensures that each agent modification is traceable and reversible. Without versioning, there is no trace of modifications. Versioning ensures that each version can be audited and that modifications can be reversed if necessary.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Modification traceability (all versions)
 - Immutability (no deletion)
 - Reversibility (rollback possible)
@@ -68,9 +68,9 @@ Versioning ensures that each agent modification is traceable and reversible. Wit
 **Semantic Versioning** :
 - Format : `MAJOR.MINOR.PATCH`
 - Example : `2.1.3`
-- MAJOR : Incompatible changes
-- MINOR : New features
-- PATCH : Bug fixes
+- MAJOR: Incompatible changes
+- MINOR: New features
+- PATCH: Bug fixes
 
 ### 3.2 Version History
 
@@ -201,10 +201,10 @@ class VersioningSystem:
 ### 4.1 Use Case: HealthBot Versioning (Q1 2026)
 
 **Version History** :
-1. v1.0.0 (2026-01-01) : Initial release
-2. v1.1.0 (2026-02-01) : Bug fixes
-3. v1.2.0 (2026-03-01) : Performance improvements
-4. v2.0.0 (2026-03-15) : Major update (caused incident)
+1. v1.0.0 (2026-01-01): Initial release
+2. v1.1.0 (2026-02-01): Bug fixes
+3. v1.2.0 (2026-03-01): Performance improvements
+4. v2.0.0 (2026-03-15): Major update (caused incident)
 
 **Rollback** :
 - Incident detected in v2.0.0
@@ -227,17 +227,17 @@ class VersioningSystem:
 7. Audit trail test (history)
 8. Public access test (API)
 
-**Frequency** : Quarterly for all agents
+**Frequency**: Quarterly for all agents
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction | Deadline |
 |-----------|----------|----------|
-| Deleted version | Revocation + 45% CA fine | 7 days |
-| Modified version | Revocation + 50% CA fine | 7 days |
-| Incomplete history | 25% CA fine | 14 days |
-| Invalid signature | 20% CA fine | 14 days |
-| Impossible rollback | 30% CA fine | 14 days |
+| Deleted version | Revocation + 45% annual revenue fine | 7 days |
+| Modified version | Revocation + 50% annual revenue fine | 7 days |
+| Incomplete history | 25% annual revenue fine | 14 days |
+| Invalid signature | 20% annual revenue fine | 14 days |
+| Impossible rollback | 30% annual revenue fine | 14 days |
 | Recurrence | Permanent ban | Immediate |
 
 ---
@@ -273,12 +273,16 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.6 : Complete Traceability
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.6: Complete Traceability
 - Semantic Versioning 2.0.0
-- The Cybernetic Criterion : Chapters 0-5
+- The Cybernetic Criterion: Chapters 0-5
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

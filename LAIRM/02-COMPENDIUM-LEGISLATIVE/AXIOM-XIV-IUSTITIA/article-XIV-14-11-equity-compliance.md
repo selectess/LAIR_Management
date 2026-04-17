@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - equity compliance
-  - compliance standards
-  - compliance verification
-  - compliance enforcement
+tags:
+  - equity-compliance
+  - compliance-standards
+  - compliance-verification
+  - compliance-enforcement
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -233,10 +232,10 @@ impl ComplianceManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Non-compliance | 80% CA fine |
-| Enforcement failure | 82% CA fine |
-| Reporting failure | 85% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| Non-compliance | 80% annual revenue fine |
+| Enforcement failure | 82% annual revenue fine |
+| Reporting failure | 85% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -251,3 +250,7 @@ impl ComplianceManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

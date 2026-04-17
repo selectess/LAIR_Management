@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - inspection report
-  - inspection documentation
-  - inspection findings
-  - defect documentation
-  - inspection evidence
+tags:
+  - inspection-report
+  - inspection-documentation
+  - inspection-findings
+  - defect-documentation
+  - inspection-evidence
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA-4.0
 license: CC-BY-SA-4.0
 ---
 
@@ -405,13 +404,13 @@ impl InspectionReportManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Incomplete report | 40% CA fine |
-| Missing findings | 35% CA fine |
-| Missing defects | 45% CA fine |
-| Invalid severity assessment | 30% CA fine |
+| Incomplete report | 40% annual revenue fine |
+| Missing findings | 35% annual revenue fine |
+| Missing defects | 45% annual revenue fine |
+| Invalid severity assessment | 30% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Defect not corrected | 50% CA fine |
-| Falsified report | Immediate revocation + 70% CA |
+| Defect not corrected | 50% annual revenue fine |
+| Falsified report | Immediate revocation + 70% annual revenue |
 | Recurrence | Permanent ban |
 
 ---
@@ -436,3 +435,7 @@ impl InspectionReportManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

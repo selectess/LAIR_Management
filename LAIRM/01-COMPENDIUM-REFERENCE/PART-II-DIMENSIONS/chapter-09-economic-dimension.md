@@ -7,14 +7,14 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
+tags:
   - economics
   - market
   - employment
   - transformation
   - inequality
-  - economic justice
-  - just transition
+  - economic-justice
+  - just-transition
 internal_references:
   - ../PART-I-FOUNDATIONS/chapter-02-fundamental-principles.md
   - ../PART-III-PARADIGMS/chapter-24-paradigm-geoeconomic-justice.md
@@ -875,3 +875,7 @@ The economic architecture presented in this chapter ensures that agentic product
 - **Chapter 8**: Ethical dimension and fairness
 
 ---
+
+---
+
+**Next review**: June 2026

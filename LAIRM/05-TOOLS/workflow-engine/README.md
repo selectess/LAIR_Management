@@ -10,65 +10,65 @@ license: CC-BY-SA-4.0
 ---
 
 # WORKFLOW ENGINE LAIRM
-## Orchestration des Workflows LAIRM
+## LAIRM Workflow Orchestration
 
 ### Description
 
-Le Workflow Engine fournit un système d'orchestration pour exécuter des workflows complexes conformes au framework LAIRM.
+The Workflow Engine provides an orchestration system to execute complex workflows compliant with the LAIRM framework.
 
-### Fichiers
+### Files
 
-- `lairm_workflow_engine.py` - Moteur de workflow principal (400+ lignes)
-- `README.md` - Cette documentation
+- `lairm_workflow_engine.py` - Main workflow engine (400+ lines)
+- `README.md` - This documentation
 
-### Fonctionnalités
+### Features
 
-#### Types de Workflows
+#### Workflow Types
 
 1. **Compliance Workflow**
-   - Vérifier conformité
-   - Valider axiomes
-   - Générer rapport
+   - Verify compliance
+   - Validate axioms
+   - Generate report
 
 2. **Audit Workflow**
-   - Enregistrer actions
-   - Vérifier intégrité
-   - Générer rapport d'audit
+   - Record actions
+   - Verify integrity
+   - Generate audit report
 
 3. **Approval Workflow**
-   - Demander approbation
-   - Attendre décision humaine
-   - Exécuter si approuvé
+   - Request approval
+   - Wait for human decision
+   - Execute if approved
 
 4. **Escalation Workflow**
-   - Escalader à superviseur
-   - Notifier parties prenantes
-   - Enregistrer escalade
+   - Escalate to supervisor
+   - Notify stakeholders
+   - Record escalation
 
-#### Classe LAIRMWorkflowEngine
+#### LAIRMWorkflowEngine Class
 
 ```python
 class LAIRMWorkflowEngine:
     def __init__(self):
-        # Initialiser moteur
+        # Initialize engine
         
     def create_workflow(self, workflow_type, config):
-        # Créer workflow
+        # Create workflow
         
     def execute_workflow(self, workflow_id):
-        # Exécuter workflow
+        # Execute workflow
         
     def get_workflow_status(self, workflow_id):
-        # Obtenir Status
+        # Get status
         
     def cancel_workflow(self, workflow_id):
-        # Annuler workflow
+        # Cancel workflow
         
     def get_workflow_history(self):
-        # Obtenir historique
+        # Get history
 ```
 
-### Utilisation
+### Usage
 
 #### Compliance Workflow
 
@@ -77,20 +77,20 @@ from lairm_workflow_engine import LAIRMWorkflowEngine
 
 engine = LAIRMWorkflowEngine()
 
-# Créer workflow de conformité
+# Create compliance workflow
 workflow = engine.create_workflow(
     workflow_type="compliance",
     config={
         "agent_id": "agent-001",
-        "axiomes": ["I", "II", "III"],
+        "axioms": ["I", "II", "III"],
         "strict_mode": True
     }
 )
 
-# Exécuter workflow
+# Execute workflow
 result = engine.execute_workflow(workflow["id"])
 
-if result["Status"] == "compliant":
+if result["status"] == "compliant":
     print("✓ Agent is compliant")
 else:
     print("✗ Agent is not compliant")
@@ -100,7 +100,7 @@ else:
 #### Audit Workflow
 
 ```python
-# Créer workflow d'audit
+# Create audit workflow
 workflow = engine.create_workflow(
     workflow_type="audit",
     config={
@@ -110,7 +110,7 @@ workflow = engine.create_workflow(
     }
 )
 
-# Exécuter workflow
+# Execute workflow
 result = engine.execute_workflow(workflow["id"])
 
 print(f"✓ Audit completed")
@@ -122,21 +122,21 @@ print(f"  - Report: {result['report_path']}")
 #### Approval Workflow
 
 ```python
-# Créer workflow d'approbation
+# Create approval workflow
 workflow = engine.create_workflow(
     workflow_type="approval",
     config={
         "action": "critical_decision",
         "description": "Allocate 100 GPUs",
         "approvers": ["supervisor-001", "manager-001"],
-        "timeout": 3600  # 1 heure
+        "timeout": 3600  # 1 hour
     }
 )
 
-# Exécuter workflow
+# Execute workflow
 result = engine.execute_workflow(workflow["id"])
 
-if result["Status"] == "approved":
+if result["status"] == "approved":
     print("✓ Action approved")
     execute_action()
 else:
@@ -147,7 +147,7 @@ else:
 #### Escalation Workflow
 
 ```python
-# Créer workflow d'escalade
+# Create escalation workflow
 workflow = engine.create_workflow(
     workflow_type="escalation",
     config={
@@ -158,7 +158,7 @@ workflow = engine.create_workflow(
     }
 )
 
-# Exécuter workflow
+# Execute workflow
 result = engine.execute_workflow(workflow["id"])
 
 print(f"✓ Escalation initiated")
@@ -166,22 +166,22 @@ print(f"  - Ticket: {result['ticket_id']}")
 print(f"  - Assigned to: {result['assigned_to']}")
 ```
 
-### Callbacks et Hooks
+### Callbacks and Hooks
 
-Workflows supportent des callbacks:
+Workflows support callbacks:
 
 ```python
-# Définir callbacks
+# Define callbacks
 def on_start(workflow):
     print(f"Workflow {workflow['id']} started")
 
 def on_complete(workflow, result):
-    print(f"Workflow completed: {result['Status']}")
+    print(f"Workflow completed: {result['status']}")
 
 def on_error(workflow, error):
     print(f"Workflow error: {error}")
 
-# Créer workflow avec callbacks
+# Create workflow with callbacks
 workflow = engine.create_workflow(
     workflow_type="compliance",
     config={...},
@@ -193,72 +193,72 @@ workflow = engine.create_workflow(
 )
 ```
 
-### Status de Workflow
+### Workflow Status
 
-Chaque workflow a un Status:
-- `pending` - En attente
-- `running` - En cours
-- `completed` - Complété
-- `failed` - Échoué
-- `cancelled` - Annulé
+Each workflow has a status:
+- `pending` - Pending
+- `running` - Running
+- `completed` - Completed
+- `failed` - Failed
+- `cancelled` - Cancelled
 
-### Historique
+### History
 
 ```python
-# Obtenir historique
+# Get history
 history = engine.get_workflow_history()
 
 for workflow in history:
-    print(f"{workflow['type']}: {workflow['Status']}")
+    print(f"{workflow['type']}: {workflow['status']}")
     print(f"  - Started: {workflow['start_time']}")
     print(f"  - Duration: {workflow['duration']}s")
 ```
 
-### Cas d'Usage
+### Use Cases
 
-#### Avant Exécution d'Action
+#### Before Action Execution
 ```python
-# 1. Créer workflow de conformité
-# 2. Vérifier conformité
-# 3. Si conforme, créer workflow d'approbation
-# 4. Attendre approbation
-# 5. Exécuter action
-# 6. Créer workflow d'audit
+# 1. Create compliance workflow
+# 2. Verify compliance
+# 3. If compliant, create approval workflow
+# 4. Wait for approval
+# 5. Execute action
+# 6. Create audit workflow
 ```
 
-#### Audit Périodique
+#### Periodic Audit
 ```python
-# 1. Créer workflow d'audit
-# 2. Vérifier intégrité
-# 3. Générer rapport
-# 4. Envoyer rapport
-# 5. Archiver rapport
+# 1. Create audit workflow
+# 2. Verify integrity
+# 3. Generate report
+# 4. Send report
+# 5. Archive report
 ```
 
-#### Escalade d'Urgence
+#### Emergency Escalation
 ```python
-# 1. Détecter problème
-# 2. Créer workflow d'escalade
-# 3. Notifier superviseur
-# 4. Attendre décision
-# 5. Exécuter action
+# 1. Detect issue
+# 2. Create escalation workflow
+# 3. Notify supervisor
+# 4. Wait for decision
+# 5. Execute action
 ```
 
 ### Performance
 
-- Création workflow: ~10ms
-- Exécution compliance: ~100ms
-- Exécution audit: ~500ms
-- Exécution approbation: ~1000ms (+ attente)
-- Exécution escalade: ~500ms
+- Workflow creation: ~10ms
+- Compliance execution: ~100ms
+- Audit execution: ~500ms
+- Approval execution: ~1000ms (+ wait)
+- Escalation execution: ~500ms
 
 ### Status
 
-- **Implémentation** : ✅ Complète
-- **Tests** : ✅ Passés
-- **Production** : ✅ Prêt
+- **Implementation** : ✅ Complete
+- **Tests** : ✅ Passed
+- **Production** : ✅ Ready
 
-### Contributeurs
+### Contributors
 
 - Mehdi Wahbi (Founder)
 

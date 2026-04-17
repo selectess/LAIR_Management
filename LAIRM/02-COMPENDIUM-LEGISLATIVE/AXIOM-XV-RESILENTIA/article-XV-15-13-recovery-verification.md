@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - recovery verification
-  - recovery validation
-  - system recovery
-  - recovery testing
+tags:
+  - recovery-verification
+  - recovery-validation
+  - system-recovery
+  - recovery-testing
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -232,11 +231,11 @@ impl RecoveryVerificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No recovery verification | 80% CA fine |
-| Incomplete recovery | 82% CA fine |
-| Non-independent verification | 83% CA fine |
-| Missing documentation | 81% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No recovery verification | 80% annual revenue fine |
+| Incomplete recovery | 82% annual revenue fine |
+| Non-independent verification | 83% annual revenue fine |
+| Missing documentation | 81% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -251,3 +250,7 @@ impl RecoveryVerificationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

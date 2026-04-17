@@ -12,7 +12,7 @@ tags:
   - monitoring
   - escalation
   - heartbeat
-  - human control
+  - human-control
 validations:
   legal: true
   technical: true
@@ -139,7 +139,7 @@ Continuous supervision is the fundamental mechanism ensuring autonomous agents r
   "agent_did": "did:lairm:agent:12345",
   "timestamp_utc": "2026-03-30T14:23:45Z",
   "heartbeat_sequence": 1847,
-  "Status": "operational",
+  "status": "operational",
   "metrics": {
     "cpu_usage_percent": 45.2,
     "memory_usage_mb": 512,
@@ -553,10 +553,10 @@ impl SupervisionManager {
                 println!("🔴 Alerte majeure: {}", reason);
             }
             EscalationLevel::CriticalAlert => {
-                println!("🚨 Alerte critique: {}", reason);
+                println!("🚨 Alerte critical: {}", reason);
             }
             EscalationLevel::ImmediateStop => {
-                println!("⛔ Arrêt immédiat: {}", reason);
+                println!("⛔ Immediate stop: {}", reason);
             }
             EscalationLevel::KillSwitch => {
                 println!("💀 KILL SWITCH: {}", reason);
@@ -966,3 +966,7 @@ For detailed discussion of decentralized governance models and international com
 
 ---
 
+
+---
+
+**Next review**: June 2026

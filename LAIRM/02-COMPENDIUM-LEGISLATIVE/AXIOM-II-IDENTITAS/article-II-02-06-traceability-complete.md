@@ -1,5 +1,5 @@
 ---
-title: "Article II.2.6 : Complete Traceability"
+title: "Article II.2.6: Complete Traceability"
 axiom: Ψ-II
 article_number: II.2.6
 Status: Final
@@ -20,8 +20,8 @@ validations:
 license: CC-BY-SA-4.0
 ---
 
-# Article II.2.6 : COMPLETE TRACEABILITY
-## Axiom Ψ-II : IDENTITAS AGENTICA
+# Article II.2.6: COMPLETE TRACEABILITY
+## Axiom Ψ-II: IDENTITAS AGENTICA
 
 ---
 
@@ -45,11 +45,11 @@ Every autonomous agent MUST be traceable end-to-end: from its creation to its ar
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II : IDENTITAS AGENTICA**
+**Axiom Ψ-II: IDENTITAS AGENTICA**
 
 Complete traceability is the foundation of agent responsibility. Without traceability, no responsibility is possible. Traceability ensures that each agent can be held accountable for its actions, from creation to archival.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Complete responsibility (cradle to grave)
 - Total transparency (public access)
 - Immutability (no modification)
@@ -303,7 +303,7 @@ class CompleteTraceability:
 6. **Revocation** : 2026-01-15 15:00, Unauthorized action
 7. **Archival** : 2026-01-15 16:00, Revoked, 7 years
 
-**Result** : Complete traceability established
+**Result**: Complete traceability established
 
 ---
 
@@ -321,17 +321,17 @@ class CompleteTraceability:
 7. Archival traceability test
 8. Immutability test (no modification)
 
-**Frequency** : Quarterly for all agents
+**Frequency**: Quarterly for all agents
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction | Deadline |
 |-----------|----------|----------|
-| Incomplete traceability | Revocation + 40% CA fine | 7 days |
-| Modified entry | Revocation + 50% CA fine | 7 days |
-| Invalid signature | Revocation + 45% CA fine | 7 days |
-| Access denied | 25% CA fine | 14 days |
-| Insufficient retention | 20% CA fine | 14 days |
+| Incomplete traceability | Revocation + 40% annual revenue fine | 7 days |
+| Modified entry | Revocation + 50% annual revenue fine | 7 days |
+| Invalid signature | Revocation + 45% annual revenue fine | 7 days |
+| Access denied | 25% annual revenue fine | 14 days |
+| Insufficient retention | 20% annual revenue fine | 14 days |
 | Recurrence | Permanent ban | Immediate |
 
 ---
@@ -367,12 +367,16 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.1 : Agent Passport
-- Article II.2.5 : Audit Trail
-- The Cybernetic Criterion : Chapters 0-5
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.1: Agent Passport
+- Article II.2.5: Audit Trail
+- The Cybernetic Criterion: Chapters 0-5
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

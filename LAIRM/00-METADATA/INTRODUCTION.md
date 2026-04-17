@@ -190,3 +190,7 @@ See: [bibliography.md](bibliography.md)
 *The Cybernetic Criterion - Legislature for Autonomous Intelligent Resources Management*  
 *Global Agentive Constitution 2026-2036*  
 *"Governing the Future of Autonomous Intelligence"*
+
+---
+
+**Next review**: June 2026

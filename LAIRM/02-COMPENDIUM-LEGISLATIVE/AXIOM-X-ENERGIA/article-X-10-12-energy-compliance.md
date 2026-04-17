@@ -1,7 +1,7 @@
 ---
 title: "Article X.12: Energy Compliance"
 axiom: Ψ-X
-numero: X.12
+article_number: X.12
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
@@ -9,12 +9,12 @@ last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
   - ENERGIA
-  - Energy Compliance
-  - Enforcement
+  - energy-Compliance
+  - enforcement
 validations:
-  Legal: true
-  Technical: true
-  Editorial: true
+  legal: true
+  technical: true
+  editorial: true
 license: CC-BY-SA-4.0
 ---
 
@@ -446,16 +446,16 @@ impl EnergyComplianceManager {
 
 | Violation | Severity | Sanction | Correction Timeline |
 |-----------|----------|----------|-------------------|
-| Energy sovereignty not established | Critical | 75% CA fine | 14 days |
-| Energy independence < 30% | High | 65% CA fine | 21 days |
-| Renewable integration < 40% | High | 60% CA fine | 21 days |
-| Energy efficiency < 75% | Medium | 50% CA fine | 30 days |
-| Energy storage < 50% | Medium | 45% CA fine | 30 days |
-| Energy distribution < 85% | Medium | 40% CA fine | 30 days |
-| Energy monitoring < 99.5% | High | 55% CA fine | 14 days |
-| Energy reporting missing | Medium | 35% CA fine | 7 days |
-| Energy optimization < 5% | Low | 25% CA fine | 30 days |
-| Energy policy not established | Critical | 70% CA fine | 14 days |
+| Energy sovereignty not established | Critical | 75% annual revenue fine | 14 days |
+| Energy independence < 30% | High | 65% annual revenue fine | 21 days |
+| Renewable integration < 40% | High | 60% annual revenue fine | 21 days |
+| Energy efficiency < 75% | Medium | 50% annual revenue fine | 30 days |
+| Energy storage < 50% | Medium | 45% annual revenue fine | 30 days |
+| Energy distribution < 85% | Medium | 40% annual revenue fine | 30 days |
+| Energy monitoring < 99.5% | High | 55% annual revenue fine | 14 days |
+| Energy reporting missing | Medium | 35% annual revenue fine | 7 days |
+| Energy optimization < 5% | Low | 25% annual revenue fine | 30 days |
+| Energy policy not established | Critical | 70% annual revenue fine | 14 days |
 | Falsified compliance records | Critical | License revocation | Immediate |
 | Recurrence (3+ violations) | Critical | Permanent ban | Immediate |
 
@@ -509,5 +509,9 @@ impl EnergyComplianceManager {
 
 ---
 
-**Status** : ✅ Final | **Validation** : Legal ✅ | Technical ✅ | Editorial ✅ | **Next Review** : January 2027
+**Status** : ✅ Final | **Validation**: Legal ✅ | Technical ✅ | Editorial ✅ | **Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

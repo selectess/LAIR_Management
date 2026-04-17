@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - performance inspection
-  - performance metrics
-  - scalability testing
-  - load testing
-  - resource optimization
+tags:
+  - performance-inspection
+  - performance-metrics
+  - scalability-testing
+  - load-testing
+  - resource-optimization
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -334,12 +333,12 @@ impl PerformanceInspectionManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No inspection | Immediate revocation + 50% CA |
-| SLA violation | 40% CA fine |
-| Missing documentation | 35% CA fine |
-| Performance issue not corrected | 45% CA fine |
-| Automated monitoring disabled | 40% CA fine |
-| Falsified report | Immediate revocation + 60% CA |
+| No inspection | Immediate revocation + 50% annual revenue |
+| SLA violation | 40% annual revenue fine |
+| Missing documentation | 35% annual revenue fine |
+| Performance issue not corrected | 45% annual revenue fine |
+| Automated monitoring disabled | 40% annual revenue fine |
+| Falsified report | Immediate revocation + 60% annual revenue |
 | Recurrence | Permanent ban |
 
 ---
@@ -364,3 +363,7 @@ impl PerformanceInspectionManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

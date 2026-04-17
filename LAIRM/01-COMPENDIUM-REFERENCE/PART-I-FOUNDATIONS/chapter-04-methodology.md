@@ -5,12 +5,12 @@ part: I
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
+tags:
   - Methodology
   - Deployment
-  - Implementation Phases
-  - Progressive Adoption
-  - International Strategy
+  - Implementation-Phases
+  - Progressive-Adoption
+  - International-Strategy
 Status: Final
 Version: Initiation
 license: CC-BY-SA-4.0
@@ -422,3 +422,7 @@ The LAIRM deployment methodology follows a progressive approach in three phases:
 - [See Glossary](../../00-METADATA/glossary.md)
 
 ---
+
+---
+
+**Next review**: June 2026

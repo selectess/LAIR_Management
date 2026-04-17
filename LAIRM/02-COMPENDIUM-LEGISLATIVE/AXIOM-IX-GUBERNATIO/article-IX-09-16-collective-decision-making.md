@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - collective decision-making
-  - collaborative decisions
-  - stakeholder input
-  - decision collaboration
-  - collective governance
+tags:
+  - collective-decision-making
+  - collaborative-decisions
+  - stakeholder-input
+  - decision-collaboration
+  - collective-governance
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -170,12 +169,12 @@ class CollectiveDecisionMakingManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No collective decision-making | 75% CA fine |
-| Stakeholder input not collected | 65% CA fine |
-| Input not considered | 70% CA fine |
-| Process not transparent | 60% CA fine |
+| No collective decision-making | 75% annual revenue fine |
+| Stakeholder input not collected | 65% annual revenue fine |
+| Input not considered | 70% annual revenue fine |
+| Process not transparent | 60% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Falsified collective decision | Immediate revocation + 80% CA |
+| Falsified collective decision | Immediate revocation + 80% annual revenue |
 
 ---
 
@@ -194,3 +193,7 @@ class CollectiveDecisionMakingManager:
 
 ---
 
+
+---
+
+**Next review**: June 2026

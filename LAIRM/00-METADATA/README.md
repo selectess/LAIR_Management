@@ -26,11 +26,8 @@ Preface to the LAIRM corpus by Mehdi Wahbi, Founder of the initiative. Presents 
 **[INTRODUCTION.md](INTRODUCTION.md)**  
 General introduction to the LAIRM project, providing overview of the Cybernetic Criterion and Global Agentive Constitution.
 
-**[acknowledgments-founder.md](acknowledgments-founder.md)**  
-Founder's acknowledgment note on the LAIRM development process, documenting the human-AI collaboration model with transparency and intellectual honesty.
-
-**[acknowledgments-methodology.md](acknowledgments-methodology.md)**  
-Detailed methodological note on AI-assisted development, providing complete transparency about computational tools employed and governance processes.
+**[acknowledgments.md](acknowledgments.md)**  
+Acknowledgments documenting the LAIRM development process, including AI systems used, stakeholder contributions, and governance model demonstrating human-AI collaboration with transparency.
 
 ### Reference Documents
 

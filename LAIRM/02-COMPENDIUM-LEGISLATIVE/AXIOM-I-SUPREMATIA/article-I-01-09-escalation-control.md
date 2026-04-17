@@ -805,3 +805,7 @@ For detailed discussion of decentralized governance models and international com
 
 ---
 
+
+---
+
+**Next review**: June 2026

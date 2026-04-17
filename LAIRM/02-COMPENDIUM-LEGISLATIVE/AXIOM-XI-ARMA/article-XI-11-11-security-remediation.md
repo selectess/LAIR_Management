@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - security remediation
-  - vulnerability remediation
-  - remediation plans
-  - remediation verification
-  - remediation completion
+tags:
+  - security-remediation
+  - vulnerability-remediation
+  - remediation-plans
+  - remediation-verification
+  - remediation-completion
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -239,11 +238,11 @@ impl SecurityRemediationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No remediation plan | 65% CA fine |
-| Plan delayed > 7 days | 60% CA fine |
-| Remediation delayed > 30 days | 70% CA fine |
-| No verification | 55% CA fine |
-| Verification failed | 60% CA fine |
+| No remediation plan | 65% annual revenue fine |
+| Plan delayed > 7 days | 60% annual revenue fine |
+| Remediation delayed > 30 days | 70% annual revenue fine |
+| No verification | 55% annual revenue fine |
+| Verification failed | 60% annual revenue fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -263,3 +262,7 @@ impl SecurityRemediationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

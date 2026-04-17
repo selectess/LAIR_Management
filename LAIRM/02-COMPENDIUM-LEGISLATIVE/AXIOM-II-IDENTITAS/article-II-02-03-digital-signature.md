@@ -1,5 +1,5 @@
 ---
-title: "Article II.2.3 : Digital Signature"
+title: "Article II.2.3: Digital Signature"
 axiom: Ψ-II
 article_number: II.2.3
 Status: Final
@@ -9,7 +9,7 @@ last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
   - identity
-  - digital signature
+  - digital-signature
   - cryptography
   - RSA
   - verification
@@ -306,11 +306,11 @@ impl SignatureVerifier {
 | Violation | Sanction | Deadline |
 |-----------|----------|----------|
 | Unsigned action | Immediate stop | Immediate |
-| Invalid signature | Operation suspension + 30% CA fine | 7 days |
-| Weak algorithm | License revocation + 35% CA fine | 7 days |
-| Modified timestamp | License revocation + 40% CA fine | 7 days |
-| Expired certificate | Operation suspension + 20% CA fine | 14 days |
-| False signature | License revocation + 50% CA fine | 7 days |
+| Invalid signature | Operation suspension + 30% annual revenue fine | 7 days |
+| Weak algorithm | License revocation + 35% annual revenue fine | 7 days |
+| Modified timestamp | License revocation + 40% annual revenue fine | 7 days |
+| Expired certificate | Operation suspension + 20% annual revenue fine | 14 days |
+| False signature | License revocation + 50% annual revenue fine | 7 days |
 | Recurrence | Permanent ban | Immediate |
 
 ---
@@ -346,14 +346,18 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.1 : Agent Passport
-- Article II.2.2 : Unique Identifier
-- RFC 3394 : AES Key Wrap Algorithm
-- FIPS 186-4 : Digital Signature Standard
-- The Cybernetic Criterion : Chapters 0-5
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.1: Agent Passport
+- Article II.2.2: Unique Identifier
+- RFC 3394: AES Key Wrap Algorithm
+- FIPS 186-4: Digital Signature Standard
+- The Cybernetic Criterion: Chapters 0-5
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - autonomous weapons
-  - weapons control
-  - safety mechanisms
-  - human oversight
-  - kill switch
+tags:
+  - autonomous-weapons
+  - weapons-control
+  - safety-mechanisms
+  - human-oversight
+  - kill-switch
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -433,12 +432,12 @@ impl AutonomousWeaponsControlManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No human control | 90% CA fine + license revocation |
-| Kill switch non-functional | 85% CA fine + license revocation |
-| No human authorization | 80% CA fine + license revocation |
-| Autonomous targeting enabled | 95% CA fine + immediate revocation |
-| Monitoring disabled | 75% CA fine + license revocation |
-| Records falsified | Immediate revocation + 90% CA |
+| No human control | 90% annual revenue fine + license revocation |
+| Kill switch non-functional | 85% annual revenue fine + license revocation |
+| No human authorization | 80% annual revenue fine + license revocation |
+| Autonomous targeting enabled | 95% annual revenue fine + immediate revocation |
+| Monitoring disabled | 75% annual revenue fine + license revocation |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Invalid signatures | Immediate revocation |
 | Recurrence | Permanent ban + criminal referral |
 
@@ -481,3 +480,7 @@ impl AutonomousWeaponsControlManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

@@ -7,14 +7,14 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
+tags:
   - ethics
   - bias
   - discrimination
   - fairness
   - justice
   - values
-  - ethical programming
+  - ethical-programming
 internal_references:
   - ../PART-I-FOUNDATIONS/chapter-02-fundamental-principles.md
   - ../PART-III-PARADIGMS/chapter-17-paradigm-ethics.md
@@ -475,7 +475,7 @@ Identify fairness violations requiring mitigation:
 
 Apply technical mitigation strategies [27]:
 
-**Mitigation Techniques**:
+**Mitigation Technicals**:
 
 1. **Data Rebalancing**: Oversample underrepresented groups
 2. **Threshold Adjustment**: Set group-specific decision thresholds
@@ -509,7 +509,7 @@ Verify that mitigation successfully reduced bias:
 1. Recompute fairness metrics on test data
 2. Verify disparity <5% for all groups
 3. Check that accuracy remains acceptable (>80% baseline)
-4. Document mitigation techniques applied
+4. Document mitigation technicals applied
 5. Generate compliance certificate
 
 **Audit Frequency**:
@@ -748,7 +748,7 @@ class NonDiscriminationConstraint:
 
 **Implementation**:
 - Respectful language in all communications
-- No psychological manipulation techniques
+- No psychological manipulation technicals
 - No exploitation of personal data
 - Informed consent for data use
 
@@ -924,7 +924,7 @@ The ethical dimension of agentic systems requires proactive bias detection and m
 **Implementation Framework**:
 
 - Six-step audit process (identify groups, collect data, compute metrics, detect violations, mitigate, validate)
-- Technical mitigation techniques (rebalancing, threshold adjustment, fairness constraints, proxy removal)
+- Technical mitigation technicals (rebalancing, threshold adjustment, fairness constraints, proxy removal)
 - Public accountability through annual fairness reports
 - Victim compensation through LAIRM fund
 
@@ -991,7 +991,7 @@ The ethical architecture presented in this chapter ensures that autonomous agent
 
 [26] Mitchell, S., et al. (2021). "Algorithmic Fairness: Choices, Assumptions, and Definitions." *Annual Review of Statistics and Its Application*, 8, 141-163.
 
-[27] Kamiran, F., & Calders, T. (2012). "Data Preprocessing Techniques for Classification Without Discrimination." *Knowledge and Information Systems*, 33(1), 1-33.
+[27] Kamiran, F., & Calders, T. (2012). "Data Preprocessing Technicals for Classification Without Discrimination." *Knowledge and Information Systems*, 33(1), 1-33.
 
 [28] Hardt, M., et al. (2016). "Equality of Opportunity in Supervised Learning." *Advances in Neural Information Processing Systems*, 29.
 
@@ -1023,3 +1023,7 @@ The ethical architecture presented in this chapter ensures that autonomous agent
 - **Chapter 9**: Economic dimension and market impacts
 
 ---
+
+---
+
+**Next review**: June 2026

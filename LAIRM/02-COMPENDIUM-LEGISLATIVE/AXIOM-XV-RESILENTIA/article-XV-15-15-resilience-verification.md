@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - resilience verification
-  - verification standards
-  - compliance verification
-  - system verification
+tags:
+  - resilience-verification
+  - verification-standards
+  - compliance-verification
+  - system-verification
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -238,11 +237,11 @@ impl ResilienceVerificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Skipped verification | 80% CA fine |
-| Non-independent verification | 82% CA fine |
-| Insufficient coverage | 81% CA fine |
-| False verification data | 87% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| Skipped verification | 80% annual revenue fine |
+| Non-independent verification | 82% annual revenue fine |
+| Insufficient coverage | 81% annual revenue fine |
+| False verification data | 87% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -257,3 +256,7 @@ impl ResilienceVerificationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

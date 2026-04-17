@@ -153,3 +153,7 @@ Non-compliance with responsibility requirements triggers:
 **Date of Creation**: 2024-03-18  
 **Founder**: Mehdi Wahbi  
 **Next Review**: January 2027
+
+---
+
+**Next review**: June 2026

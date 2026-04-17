@@ -1,27 +1,27 @@
 ---
-title: "Article II.2.10 : Metadata"
-Axiom: Ψ-II
-numero: II.2.10
+title: "Article II.2.10: Metadata"
+axiom: Ψ-II
+article_number: II.2.10
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Identity
-  - Metadata
-  - Information
-  - Traceability
-  - Transparency
+  - identity
+  - metadata
+  - information
+  - traceability
+  - transparency
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article II.2.10 : METADATA
-## Axiom Ψ-II : IDENTITAS AGENTICA
+# Article II.2.10: METADATA
+## Axiom Ψ-II: IDENTITAS AGENTICA
 
 ---
 
@@ -45,11 +45,11 @@ Every autonomous agent MUST maintain complete and up-to-date metadata. Metadata 
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II : IDENTITAS AGENTICA**
+**Axiom Ψ-II: IDENTITAS AGENTICA**
 
 Metadata is essential information enabling understanding and auditing of an agent. Without complete metadata, no transparency is possible. Metadata ensures that each agent can be understood, audited, and held accountable.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Complete transparency (public metadata)
 - Completeness (all essential information)
 - Accuracy (current and verified)
@@ -114,7 +114,7 @@ Metadata is essential information enabling understanding and auditing of an agen
         "issued_by": "Certification Authority",
         "issued_date": "2026-01-01",
         "expiry_date": "2027-01-01",
-        "Status": "valid"
+        "status": "valid"
       }
     ],
     "contacts": {
@@ -252,14 +252,14 @@ Metadata MUST include :
 ### 4.1 Use Case: HealthBot Metadata (Q1 2026)
 
 **Complete Metadata** :
-- Creator : Acme Medical Inc. (US)
-- Model : MedicalAI-v3.2
-- Deployment : France, 2026-01-15
-- Capabilities : Diagnosis, Image Analysis, Recommendations
-- Limitations : No diagnosis without human review
-- Certificates : ISO-27001, SOC-2-type-II
+- Creator: Acme Medical Inc. (US)
+- Model: MedicalAI-v3.2
+- Deployment: France, 2026-01-15
+- Capabilities: Diagnosis, Image Analysis, Recommendations
+- Limitations: No diagnosis without human review
+- Certificates: ISO-27001, SOC-2-type-II
 - Contacts : support@acme-medical.com
-- Compliance : GDPR, AI Act, LAIRM
+- Compliance: GDPR, AI Act, LAIRM
 
 **Verification** :
 - ✓ Complete metadata
@@ -284,18 +284,18 @@ Metadata MUST include :
 7. Contact validity test
 8. Compliance test (standards)
 
-**Frequency** : Monthly for all agents
+**Frequency**: Monthly for all agents
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction | Deadline |
 |-----------|----------|----------|
-| Incomplete metadata | 20% CA fine | 14 days |
-| Obsolete metadata (> 30d) | 15% CA fine | 14 days |
-| Invalid signature | 25% CA fine | 14 days |
-| Expired certificate | 20% CA fine | 14 days |
-| Access denied | 30% CA fine | 14 days |
-| False metadata | Revocation + 40% CA fine | 7 days |
+| Incomplete metadata | 20% annual revenue fine | 14 days |
+| Obsolete metadata (> 30d) | 15% annual revenue fine | 14 days |
+| Invalid signature | 25% annual revenue fine | 14 days |
+| Expired certificate | 20% annual revenue fine | 14 days |
+| Access denied | 30% annual revenue fine | 14 days |
+| False metadata | Revocation + 40% annual revenue fine | 7 days |
 | Recurrence | Permanent ban | Immediate |
 
 ---
@@ -331,12 +331,16 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.1 : Agent Passport
-- Article II.2.6 : Complete Traceability
-- The Cybernetic Criterion : Chapters 0-5
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.1: Agent Passport
+- Article II.2.6: Complete Traceability
+- The Cybernetic Criterion: Chapters 0-5
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

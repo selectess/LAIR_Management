@@ -10,207 +10,207 @@ license: CC-BY-SA-4.0
 ---
 
 # COMPLIANCE CHECKER LAIRM
-## Vérificateur Automatique de Conformité
+## Automatic Compliance Verification Tool
 
 ### Description
 
-Le Compliance Checker fournit des outils pour vérifier automatiquement la conformité des agents, actions et configurations par rapport au framework LAIRM.
+The Compliance Checker provides tools to automatically verify the compliance of agents, actions, and configurations against the LAIRM framework.
 
-### Fichiers
+### Files
 
-- `lairm_compliance_checker.py` - Vérificateur principal (350+ lignes)
-- `README.md` - Cette documentation
+- `lairm_compliance_checker.py` - Main checker (350+ lines)
+- `README.md` - This documentation
 
-### Fonctionnalités
+### Features
 
-#### Vérifications Disponibles
+#### Available Checks
 
 1. **Axiom Compliance**
-   - Vérifier axiomes requis
-   - Valider axiomes acceptés
-   - Détecter axiomes manquants
+   - Verify required axioms
+   - Validate accepted axioms
+   - Detect missing axioms
 
 2. **Agent Compliance**
-   - Vérifier configuration d'agent
-   - Valider permissions
-   - Vérifier Status
+   - Verify agent configuration
+   - Validate permissions
+   - Check status
 
 3. **Action Compliance**
-   - Vérifier action avant exécution
-   - Valider paramètres
-   - Détecter violations
+   - Verify action before execution
+   - Validate parameters
+   - Detect violations
 
 4. **Framework Compliance**
-   - Vérifier intégrité du framework
-   - Valider tous les articles
-   - Générer rapport
+   - Verify framework integrity
+   - Validate all articles
+   - Generate report
 
-#### Classe LAIRMComplianceChecker
+#### LAIRMComplianceChecker Class
 
 ```python
 class LAIRMComplianceChecker:
     def __init__(self):
-        # Initialiser vérificateur
+        # Initialize checker
         
-    def check_axiome_compliance(self, Axiom, agent_config):
-        # Vérifier conformité Axiom
+    def check_axiom_compliance(self, axiom, agent_config):
+        # Check axiom compliance
         
     def check_agent_compliance(self, agent_config):
-        # Vérifier conformité agent
+        # Check agent compliance
         
     def check_action_compliance(self, action, agent_config):
-        # Vérifier conformité action
+        # Check action compliance
         
     def generate_compliance_report(self):
-        # Générer rapport de conformité
+        # Generate compliance report
         
     def get_compliance_score(self, agent_config):
-        # Obtenir score de conformité (0-100)
+        # Get compliance score (0-100)
 ```
 
-### Utilisation
+### Usage
 
-#### Vérifier Conformité Agent
+#### Verify Agent Compliance
 
 ```python
 from lairm_compliance_checker import LAIRMComplianceChecker
 
 checker = LAIRMComplianceChecker()
 
-# Configuration d'agent
+# Agent configuration
 agent_config = {
     "agent_id": "agent-001",
-    "axiomes": ["I", "II", "III"],
+    "axioms": ["I", "II", "III"],
     "permissions": ["read", "write"],
-    "Status": "active"
+    "status": "active"
 }
 
-# Vérifier conformité
+# Verify compliance
 compliance = checker.check_agent_compliance(agent_config)
 
 if compliance["compliant"]:
-    print("✓ Agent conforme")
+    print("✓ Agent compliant")
     print(f"Score: {compliance['score']}/100")
 else:
-    print("✗ Agent non-conforme")
+    print("✗ Agent non-compliant")
     print(f"Violations: {compliance['violations']}")
 ```
 
-#### Vérifier Conformité Action
+#### Verify Action Compliance
 
 ```python
-# Action à vérifier
+# Action to verify
 action = {
     "type": "allocate_resource",
     "resource": "gpu",
     "amount": 4,
-    "axiomes_required": ["I", "II"]
+    "axioms_required": ["I", "II"]
 }
 
-# Vérifier avant exécution
+# Verify before execution
 compliance = checker.check_action_compliance(action, agent_config)
 
 if compliance["compliant"]:
-    print("✓ Action autorisée")
+    print("✓ Action authorized")
     execute_action(action)
 else:
-    print("✗ Action refusée")
-    print(f"Raison: {compliance['reason']}")
+    print("✗ Action denied")
+    print(f"Reason: {compliance['reason']}")
 ```
 
-#### Vérifier Axiom Spécifique
+#### Verify Specific Axiom
 
 ```python
-# Vérifier Axiom I (Suprematia)
-axiome_compliance = checker.check_axiome_compliance("I", agent_config)
+# Verify Axiom I (Suprematia)
+axiom_compliance = checker.check_axiom_compliance("I", agent_config)
 
 print(f"Axiom I compliance:")
-print(f"  - Kill-switch: {axiome_compliance['kill_switch']}")
-print(f"  - Override humain: {axiome_compliance['human_override']}")
-print(f"  - Supervision: {axiome_compliance['supervision']}")
+print(f"  - Kill-switch: {axiom_compliance['kill_switch']}")
+print(f"  - Human override: {axiom_compliance['human_override']}")
+print(f"  - Supervision: {axiom_compliance['supervision']}")
 ```
 
-#### Générer Rapport
+#### Generate Report
 
 ```python
-# Générer rapport complet
+# Generate complete report
 report = checker.generate_compliance_report()
 
 print(f"Framework Compliance Report")
 print(f"  - Total articles: {report['total_articles']}")
-print(f"  - Conformes: {report['compliant_articles']}")
-print(f"  - Non-conformes: {report['non_compliant_articles']}")
-print(f"  - Score global: {report['global_score']}/100")
+print(f"  - Compliant: {report['compliant_articles']}")
+print(f"  - Non-compliant: {report['non_compliant_articles']}")
+print(f"  - Global score: {report['global_score']}/100")
 
-# Sauvegarder rapport
+# Save report
 with open("compliance_report.json", "w") as f:
     json.dump(report, f, indent=2)
 ```
 
-### Règles de Conformité
+### Compliance Rules
 
 #### Axiom I (Suprematia)
-- ✅ Kill-switch universel présent
-- ✅ Override humain possible
-- ✅ Supervision continue
-- ✅ Autorité humaine finale
+- ✅ Universal kill-switch present
+- ✅ Human override possible
+- ✅ Continuous supervision
+- ✅ Final human authority
 
 #### Axiom II (Identitas)
-- ✅ Identifiant unique
-- ✅ Signature numérique
-- ✅ Audit trail complet
-- ✅ Traçabilité
+- ✅ Unique identifier
+- ✅ Digital signature
+- ✅ Complete audit trail
+- ✅ Traceability
 
-#### Axiom III (RESPONSABILITAS)
-- ✅ Responsibility tracée
-- ✅ Chaîne de Responsibility
-- ✅ Audit immuable
-- ✅ Rapports d'audit
+#### Axiom III (Responsabilitas)
+- ✅ Responsibility traced
+- ✅ Responsibility chain
+- ✅ Immutable audit
+- ✅ Audit reports
 
-#### Autres Axiomes
-- Vérifications spécifiques par Axiom
-- Règles de conformité détaillées
-- Violations détectées automatiquement
+#### Other Axioms
+- Specific checks per axiom
+- Detailed compliance rules
+- Automatically detected violations
 
-### Scoring de Conformité
+### Compliance Scoring
 
-Score calculé sur 100 points:
-- Axiomes requis: 20 points
+Score calculated on 100 points:
+- Required axioms: 20 points
 - Permissions: 20 points
 - Status: 20 points
-- Historique: 20 points
+- History: 20 points
 - Audit trail: 20 points
 
-**Résultat**:
+**Result**:
 - 90-100: Excellent
-- 70-89: Bon
+- 70-89: Good
 - 50-69: Acceptable
-- 0-49: Non-conforme
+- 0-49: Non-compliant
 
-### Violations Détectées
+### Detected Violations
 
-Le checker détecte:
-- ✅ Axiomes manquants
-- ✅ Permissions insuffisantes
-- ✅ Status invalide
-- ✅ Actions non-autorisées
-- ✅ Violations d'audit trail
-- ✅ Configurations invalides
+The checker detects:
+- ✅ Missing axioms
+- ✅ Insufficient permissions
+- ✅ Invalid status
+- ✅ Unauthorized actions
+- ✅ Audit trail violations
+- ✅ Invalid configurations
 
 ### Performance
 
-- Vérification Axiom: ~5ms
-- Vérification agent: ~20ms
-- Vérification action: ~10ms
-- Rapport complet: ~500ms
+- Axiom verification: ~5ms
+- Agent verification: ~20ms
+- Action verification: ~10ms
+- Complete report: ~500ms
 
 ### Status
 
-- **Implémentation** : ✅ Complète
-- **Tests** : ✅ Passés
-- **Production** : ✅ Prêt
+- **Implementation** : ✅ Complete
+- **Tests** : ✅ Passed
+- **Production** : ✅ Ready
 
-### Contributeurs
+### Contributors
 
 - Mehdi Wahbi (Founder)
 

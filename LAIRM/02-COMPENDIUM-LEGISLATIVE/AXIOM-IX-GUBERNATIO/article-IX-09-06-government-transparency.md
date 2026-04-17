@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - government transparency
-  - transparency mechanisms
-  - information disclosure
-  - public access
-  - transparency reporting
+tags:
+  - government-transparency
+  - transparency-mechanisms
+  - information-disclosure
+  - public-access
+  - transparency-reporting
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -350,12 +349,12 @@ impl GovernmentTransparencyManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No transparency framework | 70% CA fine |
-| Information not disclosed | 65% CA fine |
-| Late disclosure | 55% CA fine |
-| No public access | 60% CA fine |
+| No transparency framework | 70% annual revenue fine |
+| Information not disclosed | 65% annual revenue fine |
+| Late disclosure | 55% annual revenue fine |
+| No public access | 60% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Falsified disclosures | Immediate revocation + 80% CA |
+| Falsified disclosures | Immediate revocation + 80% annual revenue |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -397,3 +396,7 @@ impl GovernmentTransparencyManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

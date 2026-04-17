@@ -8,13 +8,13 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - spatial jurisdiction
-  - extraterrestrial agents
-  - space law
-  - high-latency control
-  - lunar agents
-  - Mars agents
+tags:
+  - spatial-jurisdiction
+  - extraterrestrial-agents
+  - space-law
+  - high-latency-control
+  - lunar-agents
+  - Mars-agents
 internal_references:
   - ../PART-III-PARADIGMS/chapter-10-paradigm-sovereignty.md
   - chapter-20-energy-sovereignty.md
@@ -110,3 +110,7 @@ Spatial jurisdiction (high-latency protocols, jurisdictional frameworks, environ
 ---
 
 
+
+---
+
+**Next review**: June 2026

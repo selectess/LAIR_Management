@@ -251,17 +251,17 @@ class PassportVerifier:
         return calculated_hash == passport['hash']
     
     def _verify_immutability(self, passport: dict) -> bool:
-        """Vérifie l'immuabilité du Passport"""
+        """Verifies Passport immutability"""
         created = datetime.fromisoformat(passport['created'])
         now = datetime.utcnow()
         return True
     
     def _is_revoked(self, did: str) -> bool:
-        """Vérifie si le Passport est révoqué"""
+        """Checks if the Passport is revoked"""
         return did in self.revocation_list
     
     def _verify_certificates(self, passport: dict) -> bool:
-        """Vérifie les certificats de conformité"""
+        """Verifies compliance certificates"""
         compliance = passport.get('compliance', {})
         certifications = compliance.get('certifications', [])
         return len(certifications) > 0
@@ -332,7 +332,7 @@ class PassportGenerator:
             'timestamp': datetime.utcnow().isoformat(),
             'did': did,
             'creator': agent_config['creator']['name'],
-            'Status': 'generated'
+            'status': 'generated'
         })
         
         return passport
@@ -447,3 +447,7 @@ class PassportGenerator:
 
 ---
 
+
+---
+
+**Next review**: June 2026

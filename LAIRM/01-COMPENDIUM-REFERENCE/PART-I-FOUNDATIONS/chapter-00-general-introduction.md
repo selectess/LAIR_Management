@@ -5,12 +5,12 @@ part: I
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
+tags:
   - LAIRM
   - Legislature
-  - Autonomous agents
+  - Autonomous-agents
   - Governance
-  - Artificial intelligence
+  - Artificial-intelligence
 Status: Final
 Version: Initiation
 internal_references:
@@ -684,3 +684,7 @@ Agentic systems represent a civilizational bifurcation. LAIRM proposes a path to
 - [See Complete Table of Contents](../../00-METADATA/index.md)
 
 ---
+
+---
+
+**Next review**: June 2026

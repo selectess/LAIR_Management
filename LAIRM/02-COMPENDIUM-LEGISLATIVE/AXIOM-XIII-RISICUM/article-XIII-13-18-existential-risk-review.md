@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - risk review
-  - periodic review
-  - risk assessment
-  - policy evaluation
-  - continuous improvement
+tags:
+  - risk-review
+  - periodic-review
+  - risk-assessment
+  - policy-evaluation
+  - continuous-improvement
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -347,7 +346,7 @@ class ExistentialRiskReviewSystem:
 - **Breakthroughs**: Alignment verification methods proven effective
 - **Timeline**: Estimated 5-10 years to full safety criteria achievement
 - **Damages**: €0 (research advancement) - Model case study
-- **Outcome**: Continued research funding approved, prohibition maintained until criteria met
+- **Outcome**: Continuoused research funding approved, prohibition maintained until criteria met
 
 ### 4.2 Rust Implementation
 
@@ -455,12 +454,12 @@ impl RiskReviewManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No policy review | 85% CA fine + system halt |
-| Delayed risk assessment | 80% CA fine + system halt |
-| No safety research evaluation | 85% CA fine + system halt |
-| No timeline reassessment | 80% CA fine + system halt |
-| No criteria review | 85% CA fine + system halt |
-| Findings not published | 75% CA fine + system halt |
+| No policy review | 85% annual revenue fine + system halt |
+| Delayed risk assessment | 80% annual revenue fine + system halt |
+| No safety research evaluation | 85% annual revenue fine + system halt |
+| No timeline reassessment | 80% annual revenue fine + system halt |
+| No criteria review | 85% annual revenue fine + system halt |
+| Findings not published | 75% annual revenue fine + system halt |
 | Recurrence | Permanent ban + criminal prosecution |
 
 ### 5.3 Verification Process
@@ -503,3 +502,7 @@ impl RiskReviewManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

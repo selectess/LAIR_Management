@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - equity remediation
-  - remediation procedures
-  - violation remediation
-  - corrective action
+tags:
+  - equity-remediation
+  - remediation-procedures
+  - violation-remediation
+  - corrective-action
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -299,11 +298,11 @@ impl RemediationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No remediation plan | 85% CA fine |
-| Remediation delay | 82% CA fine |
-| Insufficient compensation | 88% CA fine |
-| Compensation delay | 80% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No remediation plan | 85% annual revenue fine |
+| Remediation delay | 82% annual revenue fine |
+| Insufficient compensation | 88% annual revenue fine |
+| Compensation delay | 80% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -318,3 +317,7 @@ impl RemediationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

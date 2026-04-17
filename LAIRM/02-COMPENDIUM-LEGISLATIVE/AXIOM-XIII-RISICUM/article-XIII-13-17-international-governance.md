@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - international governance
-  - global coordination
-  - international cooperation
-  - multilateral framework
-  - global standards
+tags:
+  - international-governance
+  - global-coordination
+  - international-cooperation
+  - multilateral-framework
+  - global-standards
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -417,11 +416,11 @@ impl InternationalGovernanceManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Non-participation | 90% CA fine + isolation |
-| Standard non-compliance | 85% CA fine + sanctions |
-| Verification refusal | 95% CA fine + isolation |
-| Dispute non-compliance | 90% CA fine + sanctions |
-| Concealment | 100% CA fine + criminal prosecution |
+| Non-participation | 90% annual revenue fine + isolation |
+| Standard non-compliance | 85% annual revenue fine + sanctions |
+| Verification refusal | 95% annual revenue fine + isolation |
+| Dispute non-compliance | 90% annual revenue fine + sanctions |
+| Concealment | 100% annual revenue fine + criminal prosecution |
 | Recurrence | Permanent isolation + criminal prosecution |
 
 ### 5.3 Verification Process
@@ -463,3 +462,7 @@ impl InternationalGovernanceManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

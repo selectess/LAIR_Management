@@ -448,3 +448,6 @@ Note: No-code enterprise agents
 
 **Contributors**: Mehdi Wahbi  
 **Contact**: selectess@gmail.com
+---
+
+**Next review**: June 2026

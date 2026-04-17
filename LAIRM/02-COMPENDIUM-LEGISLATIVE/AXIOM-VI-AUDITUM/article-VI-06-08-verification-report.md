@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - verification report
-  - verification documentation
-  - verification findings
-  - verification recommendations
-  - verification evidence
+tags:
+  - verification-report
+  - verification-documentation
+  - verification-findings
+  - verification-recommendations
+  - verification-evidence
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA-4.0
 license: CC-BY-SA-4.0
 ---
 
@@ -396,13 +395,13 @@ impl VerificationReportManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Incomplete report | 40% CA fine |
-| Missing findings | 35% CA fine |
-| Missing non-conformities | 40% CA fine |
+| Incomplete report | 40% annual revenue fine |
+| Missing findings | 35% annual revenue fine |
+| Missing non-conformities | 40% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Report not published | 45% CA fine |
-| Publication deadline missed | 40% CA fine |
-| Falsified report | Immediate revocation + 70% CA |
+| Report not published | 45% annual revenue fine |
+| Publication deadline missed | 40% annual revenue fine |
+| Falsified report | Immediate revocation + 70% annual revenue |
 | Recurrence | Permanent ban |
 
 ---
@@ -427,3 +426,7 @@ impl VerificationReportManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

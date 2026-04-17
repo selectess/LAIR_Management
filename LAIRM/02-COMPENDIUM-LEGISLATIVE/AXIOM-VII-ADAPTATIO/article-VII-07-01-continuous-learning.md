@@ -1,25 +1,25 @@
 ---
-title: "Article VII.7.1 : Continuous Learning"
-Axiom: Ψ-VII
-numero: VII.7.1
+title: "Article VII.7.1: Continuous Learning"
+axiom: Ψ-VII
+article_number: VII.7.1
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Learning
-  - Adaptation
-  - Machine Learning
+  - learning
+  - adaptation
+  - machine-learning
 validations:
-  Legal: true
-  Technical: true
-  Editorial: true
+  legal: true
+  technical: true
+  editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article VII.7.1 : Continuous Learning
-## Axiom Ψ-VII : ADAPTATIO CONTINUA
+# Article VII.7.1: Continuous Learning
+## Axiom Ψ-VII: ADAPTATIO CONTINUA
 
 ---
 
@@ -41,7 +41,7 @@ Every autonomous agent MUST implement supervised continuous learning. Learning M
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-VII : ADAPTATIO CONTINUA**
+**Axiom Ψ-VII: ADAPTATIO CONTINUA**
 
 Continuous learning ensures adaptation of autonomous agents to environmental changes and new data. It MUST be mandatory to maintain relevance and compliance.
 
@@ -160,9 +160,13 @@ class ContinuousLearningManager:
 
 ## REFERENCES
 
-- Axiom Ψ-VII : ADAPTATIO CONTINUA
+- Axiom Ψ-VII: ADAPTATIO CONTINUA
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - continuous operation
+tags:
+  - continuous-operation
   - supervision
   - maintenance
-  - incident management
+  - incident-management
   - lifecycle
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -614,3 +613,7 @@ impl ContinuousOperationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

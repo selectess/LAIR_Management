@@ -1,7 +1,7 @@
 ---
 title: "Article X.6: Energy Distribution"
 axiom: Ψ-X
-numero: X.6
+article_number: X.6
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
@@ -9,12 +9,12 @@ last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
   - ENERGIA
-  - Energy Distribution
-  - Network Systems
+  - energy-Distribution
+  - network-Systems
 validations:
-  Legal: true
-  Technical: true
-  Editorial: true
+  legal: true
+  technical: true
+  editorial: true
 license: CC-BY-SA-4.0
 ---
 
@@ -394,3 +394,7 @@ Agents found non-compliant must:
 
 ---
 
+
+---
+
+**Next review**: June 2026

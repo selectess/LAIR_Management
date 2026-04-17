@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - enhancement equity
-  - equitable access
-  - cognitive divide prevention
-  - affordable enhancement
+tags:
+  - enhancement-equity
+  - equitable-access
+  - cognitive-divide-prevention
+  - affordable-enhancement
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -368,12 +367,12 @@ impl EnhancementEquityManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No public provision | 85% CA fine |
-| Unaffordable access | 80% CA fine |
-| Employment condition | 90% CA fine + license revocation |
-| Discrimination | 90% CA fine + license revocation |
-| Unaugmented discrimination | 85% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No public provision | 85% annual revenue fine |
+| Unaffordable access | 80% annual revenue fine |
+| Employment condition | 90% annual revenue fine + license revocation |
+| Discrimination | 90% annual revenue fine + license revocation |
+| Unaugmented discrimination | 85% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -415,3 +414,7 @@ impl EnhancementEquityManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

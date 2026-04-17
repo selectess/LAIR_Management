@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - end of mandate
-  - mandate termination
-  - control termination
-  - final audit
+tags:
+  - end-of-mandate
+  - mandate-termination
+  - control-termination
+  - final-audit
   - decommissioning
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -284,11 +283,11 @@ impl EndOfMandateManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No mandate end date | 60% CA fine |
-| No final audit | 65% CA fine |
-| Compliance not verified | 60% CA fine |
-| No decommissioning documentation | 55% CA fine |
-| Records not archived | 50% CA fine |
+| No mandate end date | 60% annual revenue fine |
+| No final audit | 65% annual revenue fine |
+| Compliance not verified | 60% annual revenue fine |
+| No decommissioning documentation | 55% annual revenue fine |
+| Records not archived | 50% annual revenue fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -314,3 +313,7 @@ impl EndOfMandateManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

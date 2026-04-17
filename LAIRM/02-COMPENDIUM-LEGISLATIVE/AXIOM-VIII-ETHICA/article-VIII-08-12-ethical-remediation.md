@@ -1,25 +1,25 @@
 ---
-title: "Article VIII.8.12 : Ethical Remediation"
-Axiom: Ψ-VIII
-numero: VIII.8.12
+title: "Article VIII.8.12: Ethical Remediation"
+axiom: Ψ-VIII
+article_number: VIII.8.12
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Ethics
-  - Remediation
-  - Correction
+  - ethics
+  - remediation
+  - correction
 validations:
-  Legal: true
-  Technical: true
-  Editorial: true
+  legal: true
+  technical: true
+  editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article VIII.8.12 : Ethical Remediation
-## Axiom Ψ-VIII : ETHICA
+# Article VIII.8.12: Ethical Remediation
+## Axiom Ψ-VIII: ETHICA
 
 ---
 
@@ -40,7 +40,7 @@ Every autonomous agent MUST implement comprehensive remediation for ethical viol
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-VIII : ETHICA**
+**Axiom Ψ-VIII: ETHICA**
 
 Ethical remediation ensures that victims of ethical violations receive appropriate compensation and restoration. Autonomous agents MUST implement comprehensive remediation.
 
@@ -313,10 +313,14 @@ class EthicalRemediationManager:
 
 ## REFERENCES
 
-- Axiom Ψ-VIII : ETHICA
-- Chapter 17 : Paradigm Ethics
+- Axiom Ψ-VIII: ETHICA
+- Chapter 17: Paradigm Ethics
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

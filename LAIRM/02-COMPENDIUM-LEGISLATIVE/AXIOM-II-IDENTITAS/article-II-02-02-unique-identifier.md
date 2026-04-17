@@ -1,5 +1,5 @@
 ---
-title: "Article II.2.2 : Unique Identifier"
+title: "Article II.2.2: Unique Identifier"
 axiom: Ψ-II
 article_number: II.2.2
 Status: Final
@@ -9,7 +9,7 @@ last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
   - identity
-  - unique identifier
+  - unique-identifier
   - UUID
   - DID
   - immutability
@@ -350,12 +350,12 @@ impl IdentifierRegistry {
 
 | Violation | Sanction | Deadline |
 |-----------|----------|----------|
-| Non-unique identifier | License revocation + 40% CA fine | 7 days |
-| Modified identifier | License revocation + 45% CA fine | 7 days |
-| Identifier reuse | License revocation + 50% CA fine | 7 days |
-| Invalid format | Operation suspension + 20% CA fine | 14 days |
-| Non-immutable registry | Immediate stop + 60% CA fine | Immediate |
-| Missing logging | 15% CA fine | 14 days |
+| Non-unique identifier | License revocation + 40% annual revenue fine | 7 days |
+| Modified identifier | License revocation + 45% annual revenue fine | 7 days |
+| Identifier reuse | License revocation + 50% annual revenue fine | 7 days |
+| Invalid format | Operation suspension + 20% annual revenue fine | 14 days |
+| Non-immutable registry | Immediate stop + 60% annual revenue fine | Immediate |
+| Missing logging | 15% annual revenue fine | 14 days |
 | Collision detected | Immediate revocation | Immediate |
 | Recurrence | Permanent ban | Immediate |
 
@@ -399,13 +399,17 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.1 : Agent Passport
-- Article II.2.3 : Digital Signature
-- RFC 4122 : UUID Standard
-- The Cybernetic Criterion : Chapters 0-5
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.1: Agent Passport
+- Article II.2.3: Digital Signature
+- RFC 4122: UUID Standard
+- The Cybernetic Criterion: Chapters 0-5
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

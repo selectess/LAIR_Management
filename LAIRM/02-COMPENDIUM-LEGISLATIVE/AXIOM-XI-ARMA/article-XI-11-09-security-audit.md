@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - security audit
-  - security testing
-  - vulnerability assessment
-  - penetration testing
-  - security compliance
+tags:
+  - security-audit
+  - security-testing
+  - vulnerability-assessment
+  - penetration-testing
+  - security-compliance
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -239,11 +238,11 @@ impl SecurityAuditManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No security audit | 75% CA fine |
-| No penetration testing | 70% CA fine |
-| Vulnerabilities not documented | 65% CA fine |
-| No remediation plan | 60% CA fine |
-| Remediation not completed | 55% CA fine |
+| No security audit | 75% annual revenue fine |
+| No penetration testing | 70% annual revenue fine |
+| Vulnerabilities not documented | 65% annual revenue fine |
+| No remediation plan | 60% annual revenue fine |
+| Remediation not completed | 55% annual revenue fine |
 | Reports falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -263,3 +262,7 @@ impl SecurityAuditManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

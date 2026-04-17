@@ -6,17 +6,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - prospective analysis
-  - future challenges
-  - energy sovereignty
-  - autonomous weapons
-  - cognitive frontiers
-  - existential risks
-  - geoeconomic justice
-  - technological resilience
-  - spatial jurisdiction
-  - humanity 2.0
+tags:
+  - prospective-analysis
+  - future-challenges
+  - energy-sovereignty
+  - autonomous-weapons
+  - cognitive-frontiers
+  - existential-risks
+  - geoeconomic-justice
+  - technological-resilience
+  - spatial-jurisdiction
+  - humanity-2.0
 internal_references:
   - ../PART-III-PARADIGMS/README.md
 license: CC-BY-SA-4.0
@@ -155,3 +155,7 @@ The LAIRM project (Parts I-IV) provides comprehensive governance architecture fo
 
 ---
 
+
+---
+
+**Next review**: June 2026

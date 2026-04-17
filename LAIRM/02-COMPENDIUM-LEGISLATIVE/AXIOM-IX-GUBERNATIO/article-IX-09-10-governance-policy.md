@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - governance policy
-  - policy framework
-  - policy documentation
-  - policy compliance
-  - policy enforcement
+tags:
+  - governance-policy
+  - policy-framework
+  - policy-documentation
+  - policy-compliance
+  - policy-enforcement
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -205,13 +204,13 @@ class GovernancePolicyManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No policies | 70% CA fine |
-| Policies not documented | 55% CA fine |
-| Inconsistent enforcement | 65% CA fine |
-| Violations not addressed | 60% CA fine |
-| Policies not reviewed | 50% CA fine |
+| No policies | 70% annual revenue fine |
+| Policies not documented | 55% annual revenue fine |
+| Inconsistent enforcement | 65% annual revenue fine |
+| Violations not addressed | 60% annual revenue fine |
+| Policies not reviewed | 50% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Falsified policies | Immediate revocation + 75% CA |
+| Falsified policies | Immediate revocation + 75% annual revenue |
 
 ---
 
@@ -230,3 +229,7 @@ class GovernancePolicyManager:
 
 ---
 
+
+---
+
+**Next review**: June 2026

@@ -1,24 +1,24 @@
 ---
-title: "Article VII.7.18 : Model Recovery"
-Axiom: Ψ-VII
-numero: VII.7.18
+title: "Article VII.7.18: Model Recovery"
+axiom: Ψ-VII
+article_number: VII.7.18
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Adaptation
-  - Learning
+  - adaptation
+  - learning
 validations:
-  Legal: true
-  Technical: true
-  Editorial: true
+  legal: true
+  technical: true
+  editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article VII.7.18 : MODEL RECOVERY
-## Axiom Ψ-VII : ADAPTATIO CONTINUA
+# Article VII.7.18: MODEL RECOVERY
+## Axiom Ψ-VII: ADAPTATIO CONTINUA
 
 ---
 
@@ -37,7 +37,7 @@ Every agent MUST implement model recovery. Implementation MUST be controlled and
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-VII : ADAPTATIO CONTINUA**
+**Axiom Ψ-VII: ADAPTATIO CONTINUA**
 
 Model Recovery ensures continuous agent improvement.
 
@@ -100,9 +100,13 @@ class ModelRecoveryManager:
 
 ## REFERENCES
 
-- Axiom Ψ-VII : ADAPTATIO CONTINUA
+- Axiom Ψ-VII: ADAPTATIO CONTINUA
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

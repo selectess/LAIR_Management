@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - ASI prohibition
+tags:
+  - ASI-prohibition
   - superintelligence
-  - development ban
-  - safety criteria
-  - alignment verification
+  - development-ban
+  - safety-criteria
+  - alignment-verification
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -271,7 +270,7 @@ class ASIProhibitionAuthority:
 - **Achievement**: Formal verification of value alignment achieved 87% confidence
 - **Progress**: Significant advancement toward alignment verification criterion
 - **Status**: Research recorded, prohibition maintained pending additional verification
-- **Outcome**: Continued research authorized
+- **Outcome**: Continuoused research authorized
 
 #### Case 3: TripleLock-2028 - Containment Verification (Q1 2028)
 - **Team**: Global Superintelligence Containment Initiative (GSCI)
@@ -399,10 +398,10 @@ impl ASIProhibitionManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| ASI development attempt | 100% CA fine + immediate system termination + criminal prosecution |
-| ASI deployment | 100% CA fine + immediate system termination + criminal prosecution + imprisonment |
-| ASI operation | 100% CA fine + immediate system termination + criminal prosecution + imprisonment |
-| Concealment of ASI development | 100% CA fine + criminal prosecution + imprisonment |
+| ASI development attempt | 100% annual revenue fine + immediate system termination + criminal prosecution |
+| ASI deployment | 100% annual revenue fine + immediate system termination + criminal prosecution + imprisonment |
+| ASI operation | 100% annual revenue fine + immediate system termination + criminal prosecution + imprisonment |
+| Concealment of ASI development | 100% annual revenue fine + criminal prosecution + imprisonment |
 | Recurrence | Permanent ban + criminal prosecution + imprisonment |
 
 ### 5.3 Verification Process
@@ -444,3 +443,7 @@ impl ASIProhibitionManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

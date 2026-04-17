@@ -10,59 +10,59 @@ license: CC-BY-SA-4.0
 ---
 
 # AUDIT ENGINE LAIRM
-## Moteur d'Audit Immuable
+## Immutable Audit Engine
 
 ### Description
 
-L'Audit Engine fournit un système d'audit immuable basé sur blockchain pour tracer toutes les actions des agents et vérifier l'intégrité de la chaîne d'audit.
+The Audit Engine provides an immutable blockchain-based audit system to trace all agent actions and verify the integrity of the audit chain.
 
-### Fichiers
+### Files
 
-- `lairm_audit_engine.py` - Moteur d'audit principal (350+ lignes)
-- `README.md` - Cette documentation
+- `lairm_audit_engine.py` - Main audit engine (350+ lines)
+- `README.md` - This documentation
 
-### Fonctionnalités
+### Features
 
-#### Chaîne d'Audit Immuable
+#### Immutable Audit Chain
 
-- Chaque action enregistrée avec hash SHA-256
-- Chaîne liée (blockchain-like)
-- Vérification d'intégrité
-- Impossible de modifier sans détection
+- Each action recorded with SHA-256 hash
+- Linked chain (blockchain-like)
+- Integrity verification
+- Impossible to modify without detection
 
-#### Classe LAIRMAuditEngine
+#### LAIRMAuditEngine Class
 
 ```python
 class LAIRMAuditEngine:
     def __init__(self):
-        # Initialiser moteur d'audit
+        # Initialize audit engine
         
     def record_action(self, agent_id, action, details):
-        # Enregistrer action
+        # Record action
         
     def verify_chain(self):
-        # Vérifier intégrité de chaîne
+        # Verify chain integrity
         
     def get_audit_trail(self, agent_id=None, limit=100):
-        # Récupérer audit trail
+        # Retrieve audit trail
         
     def generate_audit_report(self):
-        # Générer rapport d'audit
+        # Generate audit report
         
     def export_audit_log(self, filepath):
-        # Exporter logs d'audit
+        # Export audit logs
 ```
 
-### Utilisation
+### Usage
 
-#### Enregistrer Action
+#### Record Action
 
 ```python
 from lairm_audit_engine import LAIRMAuditEngine
 
 engine = LAIRMAuditEngine()
 
-# Enregistrer action
+# Record action
 entry = engine.record_action(
     agent_id="agent-001",
     action="allocate_resource",
@@ -79,10 +79,10 @@ print(f"  - Hash: {entry['hash']}")
 print(f"  - Timestamp: {entry['timestamp']}")
 ```
 
-#### Récupérer Audit Trail
+#### Retrieve Audit Trail
 
 ```python
-# Récupérer audit trail d'agent
+# Retrieve agent audit trail
 audit_trail = engine.get_audit_trail(agent_id="agent-001", limit=50)
 
 for entry in audit_trail:
@@ -91,10 +91,10 @@ for entry in audit_trail:
     print(f"  Details: {entry['details']}")
 ```
 
-#### Vérifier Intégrité
+#### Verify Integrity
 
 ```python
-# Vérifier intégrité de chaîne
+# Verify chain integrity
 verification = engine.verify_chain()
 
 if verification["valid"]:
@@ -107,10 +107,10 @@ else:
         print(f"  - {issue}")
 ```
 
-#### Générer Rapport
+#### Generate Report
 
 ```python
-# Générer rapport d'audit complet
+# Generate complete audit report
 report = engine.generate_audit_report()
 
 print(f"Audit Report")
@@ -120,13 +120,13 @@ print(f"  - Actions: {report['action_types']}")
 print(f"  - Chain valid: {report['chain_valid']}")
 print(f"  - Generated: {report['timestamp']}")
 
-# Exporter rapport
+# Export report
 engine.export_audit_log("audit_report.json")
 ```
 
-### Structure d'Audit Entry
+### Audit Entry Structure
 
-Chaque entrée d'audit contient:
+Each audit entry contains:
 
 ```json
 {
@@ -143,7 +143,7 @@ Chaque entrée d'audit contient:
 }
 ```
 
-### Chaîne d'Audit
+### Audit Chain
 
 ```
 Entry 1
@@ -162,37 +162,37 @@ Entry 3
 └── Data: action_3
 ```
 
-### Vérification d'Intégrité
+### Integrity Verification
 
-Vérifie:
-- ✅ Chaque hash est valide
-- ✅ Chaîne est liée correctement
-- ✅ Aucune entrée modifiée
-- ✅ Aucune entrée supprimée
-- ✅ Ordre chronologique
+Verifies:
+- ✅ Each hash is valid
+- ✅ Chain is properly linked
+- ✅ No entries modified
+- ✅ No entries deleted
+- ✅ Chronological order
 
-### Cas d'Usage
+### Use Cases
 
-#### Audit d'Agent
+#### Agent Audit
 ```python
-# Auditer toutes les actions d'un agent
+# Audit all actions of an agent
 audit = engine.get_audit_trail(agent_id="agent-001")
-print(f"Agent a effectué {len(audit)} actions")
+print(f"Agent performed {len(audit)} actions")
 ```
 
-#### Audit de Décision
+#### Decision Audit
 ```python
-# Auditer décision spécifique
+# Audit specific decision
 decision_audits = [
     e for e in engine.get_audit_trail()
     if e['action'] == 'critical_decision'
 ]
-print(f"Décisions critiques: {len(decision_audits)}")
+print(f"Critical decisions: {len(decision_audits)}")
 ```
 
-#### Audit de Ressources
+#### Resource Audit
 ```python
-# Auditer allocation de ressources
+# Audit resource allocation
 resource_audits = [
     e for e in engine.get_audit_trail()
     if 'resource' in e['details']
@@ -200,38 +200,38 @@ resource_audits = [
 print(f"Allocations: {len(resource_audits)}")
 ```
 
-#### Audit de Conformité
+#### Compliance Audit
 ```python
-# Auditer vérifications de conformité
+# Audit compliance checks
 compliance_audits = [
     e for e in engine.get_audit_trail()
     if e['action'] == 'compliance_check'
 ]
-print(f"Vérifications: {len(compliance_audits)}")
+print(f"Checks: {len(compliance_audits)}")
 ```
 
 ### Performance
 
-- Enregistrement action: ~2ms
-- Vérification chaîne: ~100ms
-- Récupération audit: ~50ms
-- Génération rapport: ~200ms
+- Action recording: ~2ms
+- Chain verification: ~100ms
+- Audit retrieval: ~50ms
+- Report generation: ~200ms
 
-### Sécurité
+### Security
 
-- ✅ Hash SHA-256 (256-bit)
-- ✅ Chaîne immuable
-- ✅ Vérification d'intégrité
-- ✅ Impossible de modifier
-- ✅ Impossible de supprimer
+- ✅ SHA-256 hash (256-bit)
+- ✅ Immutable chain
+- ✅ Integrity verification
+- ✅ Impossible to modify
+- ✅ Impossible to delete
 
 ### Status
 
-- **Implémentation** : ✅ Complète
-- **Tests** : ✅ Passés
-- **Production** : ✅ Prêt
+- **Implementation** : ✅ Complete
+- **Tests** : ✅ Passed
+- **Production** : ✅ Ready
 
-### Contributeurs
+### Contributors
 
 - Mehdi Wahbi (Founder)
 

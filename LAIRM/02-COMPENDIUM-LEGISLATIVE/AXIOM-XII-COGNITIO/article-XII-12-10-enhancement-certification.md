@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - enhancement certification
-  - safety certification
-  - quality certification
-  - provider certification
+tags:
+  - enhancement-certification
+  - safety-certification
+  - quality-certification
+  - provider-certification
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -302,13 +301,13 @@ impl EnhancementCertificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No certification | 80% CA fine |
-| Expired certification | 75% CA fine |
-| Safety not verified | 85% CA fine |
-| Effectiveness not verified | 80% CA fine |
-| Provider not qualified | 75% CA fine |
-| Certifier biased | 85% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No certification | 80% annual revenue fine |
+| Expired certification | 75% annual revenue fine |
+| Safety not verified | 85% annual revenue fine |
+| Effectiveness not verified | 80% annual revenue fine |
+| Provider not qualified | 75% annual revenue fine |
+| Certifier biased | 85% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -350,3 +349,7 @@ impl EnhancementCertificationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

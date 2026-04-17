@@ -5,10 +5,10 @@ part: I
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - Systemic Architecture
-  - Technical Components
-  - LAIRM Infrastructure
+tags:
+  - Systemic-Architecture
+  - Technical-Components
+  - LAIRM-Infrastructure
   - Interoperability
   - Deployment
 Status: Final
@@ -469,3 +469,7 @@ The systemic architecture of LAIRM rests on four principal components: (1) the A
 - [See Glossary](../../00-METADATA/glossary.md)
 
 ---
+
+---
+
+**Next review**: June 2026

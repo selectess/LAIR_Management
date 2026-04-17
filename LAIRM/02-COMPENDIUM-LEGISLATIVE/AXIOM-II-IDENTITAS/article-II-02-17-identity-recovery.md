@@ -1,25 +1,25 @@
 ---
-title: "Article II.2.17 : Identity Recovery"
-Axiom: Ψ-II
-numero: II.2.17
+title: "Article II.2.17: Identity Recovery"
+axiom: Ψ-II
+article_number: II.2.17
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Identity
-  - Recovery
-  - Restoration
+  - identity
+  - recovery
+  - restoration
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article II.2.17 : IDENTITY RECOVERY
-## Axiom Ψ-II : IDENTITAS AGENTICA
+# Article II.2.17: IDENTITY RECOVERY
+## Axiom Ψ-II: IDENTITAS AGENTICA
 
 ---
 
@@ -41,11 +41,11 @@ Any competent authority MAY recover the identity of a deleted or archived agent 
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II : IDENTITAS AGENTICA**
+**Axiom Ψ-II: IDENTITAS AGENTICA**
 
 Identity recovery enables audit and investigation while protecting confidentiality. It ensures archived data remains accessible to competent authorities.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Controlled access
 - Possible audit
 - Protected confidentiality
@@ -89,7 +89,7 @@ class IdentityRecoveryManager:
             'reason': reason,
             'authority_id': authority_id,
             'requested_at': datetime.utcnow().isoformat() + 'Z',
-            'Status': 'pending'
+            'status': 'pending'
         }
         
         self.recovery_log.append(request)
@@ -151,7 +151,7 @@ class IdentityRecoveryManager:
             'recovered_by': request['authority_id'],
             'reason': request['reason'],
             'data': decrypted_data,
-            'Status': 'completed'
+            'status': 'completed'
         }
         
         # Register recovery
@@ -285,18 +285,18 @@ See Section 3.2 above.
 7. Restoration test
 8. Confidentiality test
 
-**Frequency** : Quarterly minimum
+**Frequency**: Quarterly minimum
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Unauthorized recovery | License revocation, 50% CA fine |
-| Uncontrolled access | Immediate stop, 45% CA fine |
-| Confidentiality violated | Immediate stop, 55% CA fine |
-| Missing approval | Operation suspension, 35% CA fine |
-| Missing logging | 20% CA fine |
-| Decryption failed | Immediate stop, 40% CA fine |
+| Unauthorized recovery | License revocation, 50% annual revenue fine |
+| Uncontrolled access | Immediate stop, 45% annual revenue fine |
+| Confidentiality violated | Immediate stop, 55% annual revenue fine |
+| Missing approval | Operation suspension, 35% annual revenue fine |
+| Missing logging | 20% annual revenue fine |
+| Decryption failed | Immediate stop, 40% annual revenue fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -340,13 +340,17 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.16 : Identity Deletion
-- Article II.2.12 : Identity Revocation
-- Chapter 11 : Paradigm of Agent Identity
-- Glossary : Recovery, Restoration
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.16: Identity Deletion
+- Article II.2.12: Identity Revocation
+- Chapter 11: Paradigm of Agent Identity
+- Glossary: Recovery, Restoration
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

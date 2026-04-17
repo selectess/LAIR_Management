@@ -8,13 +8,13 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
+tags:
   - responsibility
   - liability
-  - cascade model
-  - creator liability
-  - deployer liability
-  - supervisor liability
+  - cascade-model
+  - creator-liability
+  - deployer-liability
+  - supervisor-liability
   - accountability
 internal_references:
   - chapter-11-paradigm-identity.md
@@ -626,3 +626,7 @@ The responsibility cascade ensures justice for victims, accountability for actor
 
 ---
 
+
+---
+
+**Next review**: June 2026

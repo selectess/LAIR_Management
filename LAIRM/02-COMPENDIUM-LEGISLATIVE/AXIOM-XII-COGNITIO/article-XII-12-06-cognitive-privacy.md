@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - cognitive privacy
-  - mental privacy
-  - thought protection
-  - neural data protection
+tags:
+  - cognitive-privacy
+  - mental-privacy
+  - thought-protection
+  - neural-data-protection
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -387,12 +386,12 @@ impl CognitivePrivacyManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No privacy policy | 75% CA fine |
-| Unencrypted neural data | 90% CA fine + license revocation |
-| Thought monitoring | 95% CA fine + immediate revocation |
-| Mental content shared | 85% CA fine |
-| Brain data shared | 90% CA fine + license revocation |
-| Records falsified | Immediate revocation + 90% CA |
+| No privacy policy | 75% annual revenue fine |
+| Unencrypted neural data | 90% annual revenue fine + license revocation |
+| Thought monitoring | 95% annual revenue fine + immediate revocation |
+| Mental content shared | 85% annual revenue fine |
+| Brain data shared | 90% annual revenue fine + license revocation |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -434,3 +433,7 @@ impl CognitivePrivacyManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

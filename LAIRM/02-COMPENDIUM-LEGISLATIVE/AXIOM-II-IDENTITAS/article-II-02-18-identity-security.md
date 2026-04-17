@@ -1,25 +1,25 @@
 ---
-title: "Article II.2.18 : Identity Security"
-Axiom: Ψ-II
-numero: II.2.18
+title: "Article II.2.18: Identity Security"
+axiom: Ψ-II
+article_number: II.2.18
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Identity
-  - Security
-  - Protection
+  - identity
+  - security
+  - protection
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article II.2.18 : IDENTITY SECURITY
-## Axiom Ψ-II : IDENTITAS AGENTICA
+# Article II.2.18: IDENTITY SECURITY
+## Axiom Ψ-II: IDENTITAS AGENTICA
 
 ---
 
@@ -41,11 +41,11 @@ Every autonomous agent MUST implement robust security measures to protect its id
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II : IDENTITAS AGENTICA**
+**Axiom Ψ-II: IDENTITAS AGENTICA**
 
 Identity security is essential to ensure only the authorized agent can use its identity. It prevents impersonation and guarantees responsibility.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Protection against impersonation
 - Falsification prevention
 - Anomaly detection
@@ -106,7 +106,7 @@ class IdentitySecurityManager:
             'event_id': str(uuid.uuid4()),
             'timestamp': datetime.utcnow().isoformat() + 'Z',
             'event_type': 'encryption',
-            'Status': 'success'
+            'status': 'success'
         })
         
         return encrypted
@@ -125,7 +125,7 @@ class IdentitySecurityManager:
                 'event_id': str(uuid.uuid4()),
                 'timestamp': datetime.utcnow().isoformat() + 'Z',
                 'event_type': 'decryption',
-                'Status': 'success'
+                'status': 'success'
             })
             
             return identity_data
@@ -158,7 +158,7 @@ class IdentitySecurityManager:
             'alert_type': alert_type,
             'description': description,
             'severity': 'high',
-            'Status': 'active'
+            'status': 'active'
         }
         
         self.alerts.append(alert)
@@ -177,7 +177,7 @@ class IdentitySecurityManager:
             'alert_id': alert['alert_id'],
             'timestamp': datetime.utcnow().isoformat() + 'Z',
             'incident_type': alert['alert_type'],
-            'Status': 'open'
+            'status': 'open'
         }
         
         self.incidents.append(incident)
@@ -274,18 +274,18 @@ See Section 3.2 above.
 7. Incident response test
 8. Logging test
 
-**Frequency** : Monthly minimum
+**Frequency**: Monthly minimum
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Missing encryption | License revocation, 40% CA fine |
-| Weak authentication | Operation suspension, 30% CA fine |
-| Missing detection | Immediate stop, 35% CA fine |
-| Alert not raised | Immediate stop, 40% CA fine |
-| Missing incident response | Operation suspension, 25% CA fine |
-| Missing logging | 15% CA fine |
+| Missing encryption | License revocation, 40% annual revenue fine |
+| Weak authentication | Operation suspension, 30% annual revenue fine |
+| Missing detection | Immediate stop, 35% annual revenue fine |
+| Alert not raised | Immediate stop, 40% annual revenue fine |
+| Missing incident response | Operation suspension, 25% annual revenue fine |
+| Missing logging | 15% annual revenue fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -329,13 +329,17 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.3 : Digital Signature
-- Article II.2.4 : Robust Authentication
-- Chapter 11 : Paradigm of Agent Identity
-- Glossary : Security, Encryption
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.3: Digital Signature
+- Article II.2.4: Robust Authentication
+- Chapter 11: Paradigm of Agent Identity
+- Glossary: Security, Encryption
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

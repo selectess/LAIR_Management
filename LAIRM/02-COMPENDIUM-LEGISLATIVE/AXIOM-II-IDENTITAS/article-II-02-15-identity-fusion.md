@@ -1,25 +1,25 @@
 ---
-title: "Article II.2.15 : Identity Fusion"
-Axiom: Ψ-II
-numero: II.2.15
+title: "Article II.2.15: Identity Fusion"
+axiom: Ψ-II
+article_number: II.2.15
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Identity
-  - Fusion
-  - Consolidation
+  - identity
+  - fusion
+  - consolidation
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article II.2.15 : IDENTITY FUSION
-## Axiom Ψ-II : IDENTITAS AGENTICA
+# Article II.2.15: IDENTITY FUSION
+## Axiom Ψ-II: IDENTITAS AGENTICA
 
 ---
 
@@ -41,11 +41,11 @@ Two or more autonomous agents MAY merge their identities into a single consolida
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II : IDENTITAS AGENTICA**
+**Axiom Ψ-II: IDENTITAS AGENTICA**
 
 Identity fusion enables agent consolidation while maintaining complete traceability. It ensures that the histories of all agents are preserved.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Transparent consolidation
 - Complete traceability
 - Consolidated responsibility
@@ -90,7 +90,7 @@ class IdentityMergeManager:
             'reason': reason,
             'authority_id': authority_id,
             'requested_at': datetime.utcnow().isoformat() + 'Z',
-            'Status': 'pending'
+            'status': 'pending'
         }
         
         self.merge_log.append(request)
@@ -164,7 +164,7 @@ class IdentityMergeManager:
             'merged_at': datetime.utcnow().isoformat() + 'Z',
             'merged_identity': merged_identity,
             'merged_history': merged_history,
-            'Status': 'completed'
+            'status': 'completed'
         }
         
         # Archive source agents
@@ -288,18 +288,18 @@ See Section 3.2 above.
 7. Archival test
 8. Consolidation test
 
-**Frequency** : Quarterly minimum
+**Frequency**: Quarterly minimum
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Unauthorized fusion | License revocation, 45% CA fine |
-| Lost traceability | Immediate stop, 50% CA fine |
-| Lost histories | Immediate stop, 55% CA fine |
-| Missing approval | Operation suspension, 30% CA fine |
-| Missing archival | Operation suspension, 25% CA fine |
-| Broken responsibility | Immediate stop, 40% CA fine |
+| Unauthorized fusion | License revocation, 45% annual revenue fine |
+| Lost traceability | Immediate stop, 50% annual revenue fine |
+| Lost histories | Immediate stop, 55% annual revenue fine |
+| Missing approval | Operation suspension, 30% annual revenue fine |
+| Missing archival | Operation suspension, 25% annual revenue fine |
+| Broken responsibility | Immediate stop, 40% annual revenue fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -343,13 +343,17 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.1 : Agent Passport
-- Article II.2.14 : Identity Transfer
-- Chapter 11 : Paradigm of Agent Identity
-- Glossary : Fusion, Consolidation
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.1: Agent Passport
+- Article II.2.14: Identity Transfer
+- Chapter 11: Paradigm of Agent Identity
+- Glossary: Fusion, Consolidation
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
+tags:
   - transparency
-  - disclosure requirements
-  - public reporting
-  - information access
+  - disclosure-requirements
+  - public-reporting
+  - information-access
   - accountability
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -419,11 +418,11 @@ impl TransparencyManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No transparency system | 95% CA fine + immediate system halt |
-| Category not disclosed | 90% CA fine + system halt until fixed |
-| Incident not reported publicly | 95% CA fine + immediate system halt |
-| Safety records not public | 85% CA fine + system halt until fixed |
-| Concealment of information | 100% CA fine + criminal prosecution |
+| No transparency system | 95% annual revenue fine + immediate system halt |
+| Category not disclosed | 90% annual revenue fine + system halt until fixed |
+| Incident not reported publicly | 95% annual revenue fine + immediate system halt |
+| Safety records not public | 85% annual revenue fine + system halt until fixed |
+| Concealment of information | 100% annual revenue fine + criminal prosecution |
 | Recurrence | Permanent ban + criminal prosecution |
 
 ### 5.3 Verification Process
@@ -465,3 +464,7 @@ impl TransparencyManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

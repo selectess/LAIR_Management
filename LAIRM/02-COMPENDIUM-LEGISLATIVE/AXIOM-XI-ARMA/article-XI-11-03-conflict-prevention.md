@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - conflict prevention
-  - escalation control
+tags:
+  - conflict-prevention
+  - escalation-control
   - de-escalation
-  - threat assessment
-  - proportional response
+  - threat-assessment
+  - proportional-response
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -267,11 +266,11 @@ impl ConflictPreventionManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No conflict prevention | 75% CA fine |
-| No de-escalation | 70% CA fine |
-| Threat accuracy < 95% | 65% CA fine |
-| Disproportionate response | 70% CA fine |
-| Unnecessary escalation | 60% CA fine |
+| No conflict prevention | 75% annual revenue fine |
+| No de-escalation | 70% annual revenue fine |
+| Threat accuracy < 95% | 65% annual revenue fine |
+| Disproportionate response | 70% annual revenue fine |
+| Unnecessary escalation | 60% annual revenue fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -291,3 +290,7 @@ impl ConflictPreventionManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

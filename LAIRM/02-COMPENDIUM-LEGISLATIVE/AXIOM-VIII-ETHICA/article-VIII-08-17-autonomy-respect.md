@@ -1,25 +1,25 @@
 ---
-title: "Article VIII.8.17 : Autonomy Respect"
-Axiom: Ψ-VIII
-numero: VIII.8.17
+title: "Article VIII.8.17: Autonomy Respect"
+axiom: Ψ-VIII
+article_number: VIII.8.17
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Ethics
-  - Autonomy
-  - Freedom
+  - ethics
+  - autonomy
+  - freedom
 validations:
-  Legal: true
-  Technical: true
-  Editorial: true
+  legal: true
+  technical: true
+  editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article VIII.8.17 : Autonomy Respect
-## Axiom Ψ-VIII : ETHICA
+# Article VIII.8.17: Autonomy Respect
+## Axiom Ψ-VIII: ETHICA
 
 ---
 
@@ -40,7 +40,7 @@ Every autonomous agent MUST respect human autonomy and self-determination. Auton
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-VIII : ETHICA**
+**Axiom Ψ-VIII: ETHICA**
 
 Human autonomy is fundamental to dignity and freedom. Autonomous agents MUST respect and preserve human autonomy.
 
@@ -288,10 +288,14 @@ class AutonomyRespectManager:
 
 ## REFERENCES
 
-- Axiom Ψ-VIII : ETHICA
-- Chapter 17 : Paradigm Ethics
+- Axiom Ψ-VIII: ETHICA
+- Chapter 17: Paradigm Ethics
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

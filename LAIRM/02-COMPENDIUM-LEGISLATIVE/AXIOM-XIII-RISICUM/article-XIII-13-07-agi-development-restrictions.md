@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - AGI development
-  - development restrictions
-  - capability limits
-  - safety requirements
-  - development authorization
+tags:
+  - AGI-development
+  - development-restrictions
+  - capability-limits
+  - safety-requirements
+  - development-authorization
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -450,11 +449,11 @@ impl AGIDevelopmentManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Unauthorized development | 95% CA fine + immediate halt + criminal referral |
-| Development beyond authorized level | 90% CA fine + level reduction |
-| Compute usage exceeding limits | 80% CA fine + usage restriction |
-| Incident non-reporting | 85% CA fine + development halt |
-| Falsified records | 95% CA fine + criminal referral |
+| Unauthorized development | 95% annual revenue fine + immediate halt + criminal referral |
+| Development beyond authorized level | 90% annual revenue fine + level reduction |
+| Compute usage exceeding limits | 80% annual revenue fine + usage restriction |
+| Incident non-reporting | 85% annual revenue fine + development halt |
+| Falsified records | 95% annual revenue fine + criminal referral |
 | Recurrence | Permanent ban + criminal prosecution |
 
 ### 5.3 Verification Process
@@ -496,3 +495,7 @@ impl AGIDevelopmentManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

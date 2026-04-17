@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - weapons safety
-  - safety mechanisms
-  - fail-safe systems
+tags:
+  - weapons-safety
+  - safety-mechanisms
+  - fail-safe-systems
   - redundancy
-  - safety testing
+  - safety-testing
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -334,12 +333,12 @@ impl WeaponsSafetyManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Single safety mechanism | 80% CA fine + license revocation |
-| No redundancy | 75% CA fine + license revocation |
-| Fail-safe design failure | 85% CA fine + license revocation |
-| No safety testing | 70% CA fine + license revocation |
-| Failure not reported | 65% CA fine + license revocation |
-| Records falsified | Immediate revocation + 90% CA |
+| Single safety mechanism | 80% annual revenue fine + license revocation |
+| No redundancy | 75% annual revenue fine + license revocation |
+| Fail-safe design failure | 85% annual revenue fine + license revocation |
+| No safety testing | 70% annual revenue fine + license revocation |
+| Failure not reported | 65% annual revenue fine + license revocation |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -374,3 +373,7 @@ impl WeaponsSafetyManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

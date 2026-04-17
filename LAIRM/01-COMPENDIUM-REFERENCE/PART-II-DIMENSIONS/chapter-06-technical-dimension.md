@@ -7,14 +7,14 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
+tags:
   - MCP
   - A2A
   - LangGraph
   - Interoperability
   - protocols
   - standardization
-  - autonomous agents
+  - autonomous-agents
 internal_references:
   - ../PART-I-FOUNDATIONS/chapter-03-systemic-architecture.md
   - ../PART-III-PARADIGMS/chapter-14-paradigm-interoperability.md
@@ -759,7 +759,7 @@ The cost-benefit analysis demonstrates overwhelming economic justification for L
    - **Capabilities**: Situation assessment, priority setting, resource optimization
    - **Protocols**: A2A for negotiation with all other agents
 
-2. **Medical Agent (Médecins Sans Frontières)**
+2. **Medical Agent (Doctors Without Borders)**
    - **Role**: Medical triage and healthcare resource allocation
    - **Capabilities**: Patient assessment, medical supply tracking, hospital capacity management
    - **Protocols**: MCP for patient data access, A2A for coordination
@@ -1124,3 +1124,7 @@ Complete reference implementation available at:
 
 ---
 
+
+---
+
+**Next review**: June 2026

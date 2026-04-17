@@ -8,13 +8,13 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - humanity 2.0
+tags:
+  - humanity-2.0
   - post-human
-  - human augmentation
+  - human-augmentation
   - transhumanism
-  - species identity
-  - human dignity
+  - species-identity
+  - human-dignity
 internal_references:
   - chapter-22-cognitive-frontier.md
   - ../PART-III-PARADIGMS/chapter-17-paradigm-ethics.md
@@ -133,3 +133,7 @@ Humanity 2.0 governance (human dignity inviolable, right to remain unaugmented, 
 ---
 
 
+
+---
+
+**Next review**: June 2026

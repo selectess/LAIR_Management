@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - safety research
-  - AGI development
-  - alignment research
-  - control problem
-  - mandatory research
+tags:
+  - safety-research
+  - AGI-development
+  - alignment-research
+  - control-problem
+  - mandatory-research
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -374,10 +373,10 @@ impl SafetyResearchManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No safety research initiated | 90% CA fine + development ban |
-| Incomplete research areas | 85% CA fine |
-| Inadequate research documentation | 80% CA fine |
-| Research falsification | Immediate revocation + 95% CA |
+| No safety research initiated | 90% annual revenue fine + development ban |
+| Incomplete research areas | 85% annual revenue fine |
+| Inadequate research documentation | 80% annual revenue fine |
+| Research falsification | Immediate revocation + 95% annual revenue |
 | Unauthorized AGI development | Permanent ban + criminal referral |
 | Recurrence | Permanent ban + criminal referral |
 
@@ -419,3 +418,7 @@ impl SafetyResearchManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - energy sovereignty
-  - energy independence
-  - power management
-  - energy resources
-  - energy autonomy
+tags:
+  - energy-sovereignty
+  - energy-independence
+  - power-management
+  - energy-resources
+  - energy-autonomy
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -319,13 +318,13 @@ impl EnergySovereigntyManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No energy sovereignty | 75% CA fine |
-| Single energy source | 70% CA fine |
-| Non-sustainable energy | 65% CA fine |
-| Consumption not monitored | 55% CA fine |
-| No optimization | 50% CA fine |
+| No energy sovereignty | 75% annual revenue fine |
+| Single energy source | 70% annual revenue fine |
+| Non-sustainable energy | 65% annual revenue fine |
+| Consumption not monitored | 55% annual revenue fine |
+| No optimization | 50% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Falsified energy records | Immediate revocation + 80% CA |
+| Falsified energy records | Immediate revocation + 80% annual revenue |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -367,3 +366,7 @@ impl EnergySovereigntyManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

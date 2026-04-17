@@ -8,54 +8,54 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Approbation
-  - Changement
-  - Cycle de Vie
-  - Autorisation
+  - approval
+  - change
+  - lifecycle
+  - authorization
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article IV.4.15 : APPROBATION DE CHANGEMENT
-## Axiom Ψ-IV : CIRCULUS VITAE
+# Article IV.4.15: CHANGE APPROVAL
+## Axiom Ψ-IV: CIRCULUS VITAE
 
 ---
 
-## 1. NORME IMPÉRATIVE
+## 1. IMPERATIVE NORM
 
-Tout changement dans le cycle de vie d'un agent DOIT être approuvé avant exécution. L'approbation DOIT être obtenue de 3 niveaux (technique, opérationnel, supervisory). L'approbation DOIT être documentée et immuable. Les changements non-approuvés must be rejetés automatiquement. L'approbation DOIT être signée numériquement (RSA-4096).
+Every change in an agent's lifecycle MUST be approved before execution. Approval MUST be obtained from 3 levels (technical, operational, supervisory). Approval MUST be documented and immutable. Unapproved changes must be automatically rejected. Approval MUST be digitally signed (RSA-4096).
 
-**Exigences minimales** :
-- Approbation 3 niveaux obligatoire
-- Documentation immuable
-- Signature numérique (RSA-4096)
-- Rejet automatique des non-approuvés
-- Audit trail immuable
-- Notification autorités (< 24 heures)
-- Recours possible (appel)
-- Zéro changement non-approuvé
+**Minimum Requirements** :
+- Approval 3 niveaux mandatory
+- Documentation immutable
+- Digital signature (RSA-4096)
+- Automatic rejection of unapproved changes
+- Audit trail immutable
+- Authority notification (< 24 hours)
+- Appeal mechanism available
+- Zero unapproved changes
 
 ---
 
-## 2. FONDEMENT Legal
+## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
+**Axiom Ψ-IV: CIRCULUS VITAE**
 
-L'approbation est essentielle pour le contrôle et la Responsibility. Tous les changements must be approuvés. Les changements non-approuvés constituent une violation grave.
+Approval is essential for control and responsibility. All changes must be approved. Unapproved changes constitute a serious violation.
 
-**Fundamental Principles** :
-- Approbation 3 niveaux
-- Documentation complète
-- Signature numérique
-- Rejet automatique
+**Fundamental Principles**:
+- Approval 3 niveaux
+- Complete documentation
+- Digital signature
+- Automatic rejection
 - Responsibility attribuable
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
 ```python
 class ApprovalManager:
@@ -64,19 +64,19 @@ class ApprovalManager:
         self.approval_roles = ['technical', 'operational', 'supervisory']
     
     def request_approval(self, change_id, change_details):
-        """Demande une approbation"""
+        """Demande une approval"""
         approval_request = {
             'request_id': str(uuid.uuid4()),
             'change_id': change_id,
             'details': change_details,
             'created': datetime.utcnow().isoformat(),
             'approvals': [],
-            'Status': 'pending'
+            'status': 'pending'
         }
         return approval_request
     
     def approve_change(self, request_id, approver_role):
-        """Approuve un changement"""
+        """Approuve un change"""
         request = self.get_request(request_id)
         
         approval = {
@@ -94,41 +94,41 @@ class ApprovalManager:
         return request
     
     def execute_change(self, request_id):
-        """Exécute un changement approuvé"""
+        """Executes an approved change"""
         request = self.get_request(request_id)
         
         if request['Status'] != 'approved':
             raise ValueError("Change not approved")
         
-        # Exécuter changement
-        return {'Status': 'executed', 'request_id': request_id}
+        # Execute change
+        return {'status': 'executed', 'request_id': request_id}
 ```
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
-### 4.1 Cas d'Étude Réels
+### 4.1 Real-World Case Studies
 
-#### Cas 1 : TradeBot3000 - Changement Non-Approuvé (Q1 2026)
-- **Incident** : Unapproved change executed
+#### Case 1: TradeBot3000 - Unapproved Change (Q1 2026)
+- **Incident**: Unapproved change executed
 - **Perte** : $2.5M
-- **Résolution** : 3-level approval implémenté
-- **Indemnisation** : $2.5M + 25% pénalité
+- **Resolution**: 3-level approval implemented
+- **Compensation**: $2.5M + 25% penalty
 
-#### Cas 2 : HealthBot - Approbation Incomplète (Q1 2026)
-- **Incident** : Incomplete approvals allowing change
+#### Case 2: HealthBot - Incomplete Approval (Q1 2026)
+- **Incident**: Incomplete approvals allowing change
 - **Dommages** : €1.8M
-- **Résolution** : Mandatory 3-level approval implémenté
-- **Indemnisation** : €1.8M + 20% pénalité
+- **Resolution**: Mandatory 3-level approval implemented
+- **Compensation**: €1.8M + 20% penalty
 
-#### Cas 3 : SupplyChainX - Signature Invalide (Q1 2026)
-- **Incident** : Invalid signature on approval
+#### Case 3: SupplyChainX - Signature Invalide (Q1 2026)
+- **Incident**: Invalid signature on approval
 - **Dommages** : €1.2M
-- **Résolution** : RSA-4096 signature obligatoire
-- **Indemnisation** : €1.2M + 15% pénalité
+- **Resolution**: RSA-4096 signature mandatory
+- **Compensation**: €1.2M + 15% penalty
 
-### 4.2 Implémentation Rust
+### 4.2 Reference Code (Rust)
 
 ```rust
 use chrono::{DateTime, Utc};
@@ -212,130 +212,130 @@ impl ApprovalManager {
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. Vérifier approbation 3 niveaux
-2. Vérifier documentation
-3. Vérifier signature
-4. Vérifier rejet automatique
-5. Vérifier audit trail
-6. Vérifier notification
-7. Vérifier immuabilité
-8. Vérifier vérifiabilité
+**Mandatory Tests** :
+1. Verify 3-level approval
+2. Verify documentation
+3. Verify signature
+4. Verify automatic rejection
+5. Verify audit trail
+6. Verify notification
+7. Verify immutability
+8. Verify verifiability
 
-**Fréquence** : À chaque changement, audit complet mensuel
+**Frequency** : À chaque change, audit complet mensuel
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Changement non-approuvé | Révocation immédiate + 30% CA |
-| Approbation incomplète | Suspension 30j + 25% CA |
-| Signature invalide | Révocation immédiate |
-| Rejet échoué | Révocation de licence |
-| Documentation manquante | Amende 15% CA |
-| Audit trail absent | Amende 15% CA |
-| Notification manquante | Amende 12% CA |
-| Récidive | Interdiction permanente |
+| Unapproved change | Immediate revocation + 30% annual revenue |
+| Incomplete approval | 30-day suspension + 25% annual revenue |
+| Invalid signature | Immediate revocation |
+| Failed rejection | License revocation |
+| Documentation manquante | Fine 15% annual revenue |
+| Missing audit trail | Fine 15% annual revenue |
+| Notification manquante | Fine 12% annual revenue |
+| Recurrence | Permanent ban |
 
 ---
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
 ---
 
 ## 7. RÉFÉRENCES
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
-- Fondement : Cycle de vie complet
-- Principes : Approbation 3 niveaux, documentation, signature
+**Axiom Ψ-IV: CIRCULUS VITAE**
+- Foundation: Complete lifecycle
+- Principes: Approval 3 niveaux, documentation, signature
 
 
-# Article IV.4.15 : APPROBATION DE CHANGEMENT
-## Axiom Ψ-IV : CIRCULUS VITAE
-
----
-
-## 1. NORME IMPÉRATIVE
-
-Tout changement majeur dans le cycle de vie d'un agent DOIT être approuvé préalablement. L'approbation DOIT être obtenue de multiples autorités. Les approbations must be documentées et signées. Aucun changement DOIT être effectué sans approbation complète.
-
-**Exigences minimales** :
-- Approbation préalable obligatoire
-- Multiples autorités requises
-- Documentation complète
-- Signature numérique
-- Traçabilité complète
+# Article IV.4.15: APPROBATION DE CHANGEMENT
+## Axiom Ψ-IV: CIRCULUS VITAE
 
 ---
 
-## 2. FONDEMENT Legal
+## 1. IMPERATIVE NORM
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
+Any major change in an agent's lifecycle MUST be approved in advance. Approval MUST be obtained from multiple authorities. Approvals must be documented and signed. No change MUST be made without complete approval.
 
-L'approbation est essentielle pour le contrôle des changements. Elle DOIT être obtenue de multiples autorités pour garantir la légitimité.
+**Minimum Requirements** :
+- Mandatory prior approval
+- Multiple authorities required
+- Complete documentation
+- Digital signature
+- Complete traceability
 
-**Fundamental Principles** :
-- Approbation préalable
-- Multiples autorités
+---
+
+## 2. LEGAL FOUNDATION
+
+**Axiom Ψ-IV: CIRCULUS VITAE**
+
+Approval is essential for change control. It MUST be obtained from multiple authorities to guarantee legitimacy.
+
+**Fundamental Principles**:
+- Prior approval
+- Multiple authorities
 - Documentation
 - Signature
-- Traçabilité
+- Traceability
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
-### 3.1 Processus d'Approbation
+### 3.1 Processus d'Approval
 
 ```python
 class ApprovalManager:
     def request_approval(self, agent_id, change_type, details):
-        """Demande une approbation"""
+        """Demande une approval"""
         approval_request = {
             'agent_id': agent_id,
             'request_id': str(uuid.uuid4()),
             'change_type': change_type,
             'details': details,
             'requested_date': datetime.utcnow().isoformat(),
-            'Status': 'pending',
+            'status': 'pending',
             'approvals': []
         }
         
-        # Identifier autorités requises
+        # Identify required authorities
         required_authorities = self.get_required_authorities(change_type)
         
-        # Créer demandes d'approbation
+        # Create approval requests
         for authority in required_authorities:
             approval_request['approvals'].append({
                 'authority': authority,
-                'Status': 'pending',
+                'status': 'pending',
                 'signature': None,
                 'timestamp': None
             })
         
-        # Enregistrer demande
+        # Record demande
         self.log_approval_request(approval_request)
         
-        # Notifier autorités
+        # Notify authorities
         self.notify_authorities(approval_request)
         
         return approval_request
     
     def approve_change(self, request_id, authority_id, decision):
-        """Approuve un changement"""
+        """Approuve un change"""
         request = self.get_approval_request(request_id)
         
-        # Vérifier autorisation
+        # Verify authorization
         if not self.is_authorized(authority_id, request['change_type']):
             raise ValueError("Not authorized to approve this change")
         
-        # Trouver approbation de cette autorité
+        # Find approval from this authority
         approval = None
         for app in request['approvals']:
             if app['authority'] == authority_id:
@@ -345,24 +345,24 @@ class ApprovalManager:
         if not approval:
             raise ValueError("Authority not required for this change")
         
-        # Enregistrer approbation
+        # Record approval
         approval['Status'] = decision
         approval['timestamp'] = datetime.utcnow().isoformat()
         approval['signature'] = self.sign_approval(request_id, authority_id, decision)
         
-        # Vérifier si toutes les approbations sont obtenues
+        # Verify if all approvals are obtained
         if self.all_approvals_obtained(request):
             request['Status'] = 'approved'
         elif self.any_approval_rejected(request):
             request['Status'] = 'rejected'
         
-        # Enregistrer
+        # Record
         self.log_approval(request)
         
         return request
     
     def get_required_authorities(self, change_type):
-        """Identifie les autorités requises"""
+        """Identifies the required authorities"""
         authorities = {
             'creation': ['technical_lead', 'security_officer', 'supervisor'],
             'deployment': ['technical_lead', 'operator', 'supervisor'],
@@ -374,143 +374,147 @@ class ApprovalManager:
         return authorities.get(change_type, [])
 ```
 
-### 3.2 Autorités Requises
+### 3.2 Required Authorities
 
-| type de Changement | Autorités Requises | Délai |
+| Change Type | Required Authorities | Deadline |
 |-------------------|-------------------|-------|
-| Création | Technique, Sécurité, Supervision | 5 jours |
-| Déploiement | Technique, Opération, Supervision | 3 jours |
-| Maintenance | Technique, Opération | 2 jours |
-| Fin de vie | Technique, Supervision | 5 jours |
-| Changement critique | Technique, Sécurité, Supervision, CEO | 10 jours |
+| Creation | Technical, Security, Supervision | 5 days |
+| Deployment | Technical, Operations, Supervision | 3 days |
+| Maintenance | Technical, Operations | 2 days |
+| Fin de vie | Technical, Supervision | 5 days |
+| Critical change | Technical, Security, Supervision, CEO | 10 days |
 
-### 3.3 Processus d'Approbation
+### 3.3 Processus d'Approval
 
-L'approbation DOIT inclure :
-- Vérification technique
-- Vérification de sécurité
-- Vérification opérationnelle
-- Approbation finale
-- Signature numérique
+L'approval MUST inclure :
+- Technical verification
+- Security verification
+- Operational verification
+- Approval finale
+- Digital signature
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
-### 4.1 Flux d'Approbation
+### 4.1 Flux d'Approval
 
 ```
 ┌──────────────────────────────────────┐
-│   Demande de Changement              │
-│   (Détails, type)                    │
+│   Demande de Change              │
+|   (Details, type)                    |
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Identifier Autorités Requises      │
-│   (Technique, Sécurité, etc.)        │
+|   Identify Required Authorities      |
+|   (Technical, Security, etc.)        |
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Approbation Technique              │
-│   (Vérification technique)           │
+│   Approval Technical              │
+│   (Technical verification)           │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Approbation Sécurité               │
-│   (Vérification sécurité)            │
+|   Security Approval                  |
+|   (Security verification)            |
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Approbation Opérationnelle         │
-│   (Vérification impact)              │
+|   Operational Approval               |
+│   (Verification impact)              │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Approbation Finale                 │
+│   Approval Finale                 │
 │   (Supervision)                      │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Changement Approuvé                │
-│   (Prêt pour exécution)              │
+|   Change Approved                    |
+|   (Ready for execution)              |
 └──────────────────────────────────────┘
 ```
 
-### 4.2 Registre d'Approbation
+### 4.2 Registre d'Approval
 
-Chaque approbation DOIT être enregistrée avec :
+Each approval MUST be recorded with:
 - Request ID
 - Agent ID
-- type de changement
-- Autorités
-- Décisions
+- type de change
+- Authorities
+- Decisions
 - Signatures
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. Vérifier approbation préalable
-2. Vérifier multiples autorités
-3. Vérifier documentation
-4. Vérifier signatures
-5. Vérifier enregistrement
+**Mandatory Tests** :
+1. Verify prior approval
+2. Verify multiple authorities
+3. Verify documentation
+4. Verify signatures
+5. Verify recording
 
-**Fréquence** : À chaque changement
+**Frequency** : À chaque change
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Changement sans approbation | Révocation immédiate |
-| Approbation incomplète | Amende 30% CA |
-| Autorités manquantes | Amende 25% CA |
-| Signature absente | Amende 20% CA |
-| Enregistrement absent | Amende 15% CA |
-| Récidive | Interdiction permanente |
+| Change sans approval | Immediate revocation |
+| Incomplete approval | Fine 30% annual revenue |
+| Missing authorities | Fine 25% annual revenue |
+| Missing signature | Fine 20% annual revenue |
+| Missing recording | Fine 15% annual revenue |
+| Recurrence | Permanent ban |
 
-### 5.3 Processus de Vérification
+### 5.3 Verification Process
 
-1. Vérification avant changement
-2. Audit d'approbation
-3. Vérification de signatures
-4. Vérification d'autorités
-5. Rapport d'approbation
+1. Verification avant change
+2. Audit d'approval
+3. Verification de signatures
+4. Authority verification
+5. Rapport d'approval
 
 ---
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
-**Calendrier de conformité** :
-- Nouveaux agents : Conformité obligatoire dès création
-- Agents existants : Conformité obligatoire avant 1er janvier 2028
-- Agents critiques : Conformité obligatoire avant 1er juillet 2027
+**Compliance Calendar** :
+- New agents: Compliance mandatory from deployment
+- Existing agents: Compliance mandatory before January 1, 2028
+- Critical agents: Compliance mandatory before July 1, 2027
 
-**Dispositions transitoires** :
-- Agents existants : Audit d'approbation avant 30 juin 2027
-- Processus d'approbation établi avant 1er janvier 2027
+**Transitional Provisions** :
+- Existing agents: Audit d'approval avant 30 juin 2027
+- Approval process established before January 1, 2027
 
 ---
 
 ## RÉFÉRENCES
 
-- Axiom Ψ-IV : CIRCULUS VITAE
-- Article IV.4.14 : Notification de Changement
-- Article IV.4.6 : Transition d'État
-- Article I.1.5 : Décision Finale
+- Axiom Ψ-IV: CIRCULUS VITAE
+- Article IV.4.14: Notification de Change
+- Article IV.4.6: Transition d'État
+- Article I.1.5: Final Decision
 
 ---
 
-**Status** : Draft
+**Status**: Draft
 
+
+---
+
+**Next review**: June 2026

@@ -1,67 +1,67 @@
 ---
-title: "Article IV.4.17 : Historique Complet"
-Axiom: Ψ-IV
-numero: IV.4.17
+title: "Article IV.4.17: Complete History"
+axiom: Ψ-IV
+article_number: IV.4.17
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Historique
-  - Cycle de Vie
-  - Immuabilité
-  - Traçabilité
-  - Blockchain
+  - history
+  - lifecycle
+  - immutability
+  - traceability
+  - blockchain
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article IV.4.17 : HISTORIQUE COMPLET
-## Axiom Ψ-IV : CIRCULUS VITAE
+# Article IV.4.17: COMPLETE HISTORY
+## Axiom Ψ-IV: CIRCULUS VITAE
 
 ---
 
-## 1. NORME IMPÉRATIVE
+## 1. IMPERATIVE NORM
 
-Tout agent autonome DOIT maintenir un historique complet, immuable et vérifiable de toutes les opérations. L'historique DOIT inclure tous les changements d'état, modifications, incidents et décisions. L'historique DOIT être accessible en < 1 seconde. L'historique DOIT être conservé indéfiniment avec redondance géographique. Zéro événement non-enregistré toléré.
+Every autonomous agent MUST maintain a complete, immutable and verifiable history of all operations. History MUST include all state changes, modifications, incidents and decisions. History MUST be accessible in < 1 second. History MUST be preserved indefinitely with geographic redundancy. Zero unrecorded events tolerated.
 
-**Exigences minimales** :
-- Historique complet (100% des événements)
-- Immuabilité garantie (blockchain ou équivalent)
-- Accessibilité < 1 seconde
-- Vérifiabilité cryptographique (RSA-4096)
-- Conservation indéfinie
-- Redondance géographique (3+ sites)
-- Chaîne de hash immuable
-- Signature numérique (RSA-4096)
+**Minimum Requirements** :
+- Complete history (100% of events)
+- Guaranteed immutability (blockchain or equivalent)
+- Accessibility < 1 second
+- Cryptographic verifiability (RSA-4096)
+- Indefinite retention
+- Geographic redundancy (3+ sites)
+- Immutable hash chain
+- Digital signature (RSA-4096)
 - Audit trail complet
-- Zéro perte d'événement
+- Zero event loss
 
 ---
 
-## 2. FONDEMENT Legal
+## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
+**Axiom Ψ-IV: CIRCULUS VITAE**
 
-L'historique complet est essentiel pour l'audit, la traçabilité et la Responsibility. Il DOIT être immuable pour garantir la fiabilité et la non-répudiation. Tout événement DOIT être enregistré et vérifiable. L'historique est la preuve de conformité.
+Complete history is essential for audit, traceability and responsibility. It MUST be immutable to guarantee reliability and non-repudiation. Every event MUST be recorded and verifiable. History is the proof of compliance.
 
-**Fundamental Principles** :
-- Historique complet (100% des événements)
-- Immuabilité cryptographique
-- Accessibilité rapide
-- Vérifiabilité cryptographique
-- Conservation indéfinie
-- Redondance géographique
-- Non-répudiation
+**Fundamental Principles**:
+- Complete history (100% of events)
+- Cryptographic immutability
+- Fast accessibility
+- Cryptographic verifiability
+- Indefinite retention
+- Geographic redundancy
+- Non-repudiation
 - Audit trail complet
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
 ### 3.1 Processus d'Historique Immuable
 
@@ -80,7 +80,7 @@ class ImmutableHistoryManager:
         self.geographic_replicas = []
     
     def record_event(self, agent_id: str, event_type: str, details: Dict, severity: str = 'info'):
-        """Enregistre un événement de manière immuable"""
+        """Records an event immutably"""
         event = {
             'event_id': f"evt-{uuid.uuid4()}",
             'agent_id': agent_id,
@@ -92,30 +92,30 @@ class ImmutableHistoryManager:
             'sequence_number': self._get_next_sequence(agent_id)
         }
         
-        # Calculer hash cryptographique
+        # Calculate cryptographic hash
         event['hash'] = self._compute_sha256_hash(event)
         
-        # Signer événement (RSA-4096)
+        # Sign event (RSA-4096)
         event['signature'] = self._sign_event_rsa4096(event)
         
-        # Stocker dans historique immuable
+        # Stocker dans historique immutable
         event_key = f"{agent_id}:{event['sequence_number']}"
         self.event_log[event_key] = event
         
-        # Maintenir chaîne de hash
+        # Maintain hash chain
         self.hash_chain[agent_id] = event['hash']
         
-        # Répliquer géographiquement
+        # Replicate geographically
         self._replicate_to_geographic_sites(event)
         
-        # Enregistrer dans index
+        # Record dans index
         self._index_event(agent_id, event)
         
         return event
     
     def get_complete_history(self, agent_id: str, start_date: Optional[str] = None, 
                             end_date: Optional[str] = None) -> Dict:
-        """Récupère l'historique complet avec vérification"""
+        """Retrieves complete history with verification"""
         events = self._retrieve_all_events(agent_id, start_date, end_date)
         
         history = {
@@ -131,7 +131,7 @@ class ImmutableHistoryManager:
         return history
     
     def verify_history_integrity(self, agent_id: str) -> Dict:
-        """Vérifie l'intégrité complète de l'historique"""
+        """Verifies complete history integrity"""
         events = self._retrieve_all_events(agent_id)
         
         verification = {
@@ -143,14 +143,14 @@ class ImmutableHistoryManager:
             'errors': []
         }
         
-        # Vérifier chaîne de hash
+        # Verify hash chain
         for i, event in enumerate(events):
             if i > 0:
                 if event['previous_hash'] != events[i-1]['hash']:
                     verification['chain_valid'] = False
                     verification['errors'].append(f"Hash chain broken at event {i}")
             
-            # Vérifier signature RSA-4096
+            # Verify signature RSA-4096
             if not self._verify_event_signature_rsa4096(event):
                 verification['all_signatures_valid'] = False
                 verification['errors'].append(f"Invalid signature for event {event['event_id']}")
@@ -161,21 +161,21 @@ class ImmutableHistoryManager:
         """Interroge l'historique avec filtres"""
         events = self._retrieve_all_events(agent_id)
         
-        # Filtrer par type d'événement
+        # Filter par type d'event
         if 'event_type' in query:
             events = [e for e in events if e['event_type'] == query['event_type']]
         
-        # Filtrer par sévérité
+        # Filter by severity
         if 'severity' in query:
             events = [e for e in events if e['severity'] == query['severity']]
         
-        # Filtrer par Date
+        # Filter par Date
         if 'start_date' in query:
             events = [e for e in events if e['timestamp'] >= query['start_date']]
         if 'end_date' in query:
             events = [e for e in events if e['timestamp'] <= query['end_date']]
         
-        # Filtrer par détails
+        # Filter par details
         if 'details_filter' in query:
             events = [e for e in events if self._match_details(e['details'], query['details_filter'])]
         
@@ -199,43 +199,43 @@ class ImmutableHistoryManager:
         return export
     
     def _get_last_event_hash(self, agent_id: str) -> Optional[str]:
-        """Récupère le hash du dernier événement"""
+        """Retrieves the hash du dernier event"""
         return self.hash_chain.get(agent_id)
     
     def _get_next_sequence(self, agent_id: str) -> int:
-        """Récupère le prochain numéro de séquence"""
+        """Retrieves the next sequence number"""
         events = [e for k, e in self.event_log.items() if k.startswith(agent_id)]
         return len(events) + 1
     
     def _compute_sha256_hash(self, event: Dict) -> str:
-        """Calcule le hash SHA-256"""
+        """Calculates the hash SHA-256"""
         event_str = str(sorted(event.items()))
         return hashlib.sha256(event_str.encode()).hexdigest()
     
     def _sign_event_rsa4096(self, event: Dict) -> str:
-        """Signe l'événement avec RSA-4096"""
-        # Implémentation RSA-4096
+        """Signs the event with RSA-4096"""
+        # RSA-4096 implementation
         return hashlib.sha256(str(event).encode()).hexdigest()
     
     def _verify_event_signature_rsa4096(self, event: Dict) -> bool:
-        """Vérifie la signature RSA-4096"""
-        return True  # Implémentation complète requise
+        """Verifies the signature RSA-4096"""
+        return True  # Full implementation required
     
     def _compute_history_hash(self, events: List[Dict]) -> str:
-        """Calcule le hash de l'historique"""
+        """Calculates the hash de l'historique"""
         history_str = str([e['hash'] for e in events])
         return hashlib.sha256(history_str.encode()).hexdigest()
     
     def _sign_history_rsa4096(self, events: List[Dict]) -> str:
-        """Signe l'historique avec RSA-4096"""
+        """Signs the history with RSA-4096"""
         return hashlib.sha256(str(events).encode()).hexdigest()
     
     def _sign_export_rsa4096(self, history: Dict) -> str:
-        """Signe l'export avec RSA-4096"""
+        """Signs the export with RSA-4096"""
         return hashlib.sha256(str(history).encode()).hexdigest()
     
     def _verify_chain_integrity(self, events: List[Dict]) -> bool:
-        """Vérifie l'intégrité de la chaîne"""
+        """Verifies integrity of the chain"""
         for i, event in enumerate(events):
             if i > 0:
                 if event['previous_hash'] != events[i-1]['hash']:
@@ -244,7 +244,7 @@ class ImmutableHistoryManager:
     
     def _retrieve_all_events(self, agent_id: str, start_date: Optional[str] = None,
                             end_date: Optional[str] = None) -> List[Dict]:
-        """Récupère tous les événements"""
+        """Retrieves all events"""
         events = [e for k, e in self.event_log.items() if k.startswith(agent_id)]
         
         if start_date:
@@ -255,74 +255,74 @@ class ImmutableHistoryManager:
         return events
     
     def _replicate_to_geographic_sites(self, event: Dict):
-        """Réplique l'événement géographiquement"""
-        # Réplication à 3+ sites
+        """Replicates the event geographically"""
+        # Replication to 3+ sites
         pass
     
     def _index_event(self, agent_id: str, event: Dict):
-        """Indexe l'événement pour recherche rapide"""
+        """Indexe l'event pour recherche rapide"""
         pass
     
     def _match_details(self, details: Dict, filter_dict: Dict) -> bool:
-        """Vérifie si les détails correspondent au filtre"""
+        """Verifies if details match the filtre"""
         for key, value in filter_dict.items():
             if details.get(key) != value:
                 return False
         return True
 ```
 
-### 3.2 Types d'Événements Enregistrés
+### 3.2 Types of Recorded Events
 
-| type | Description | Fréquence | Sévérité |
+| Type | Description | Frequency | Severity |
 |------|-------------|-----------|----------|
-| creation | Création d'agent | Une fois | info |
-| deployment | Déploiement | Une fois | info |
-| state_change | Changement d'état | Variable | info |
-| config_change | Changement de configuration | Variable | info |
-| maintenance | Maintenance | Régulier | info |
+| creation | Creation d'agent | Une fois | info |
+| deployment | Deployment | Une fois | info |
+| state_change | State change | Variable | info |
+| config_change | Change de configuration | Variable | info |
+| maintenance | Maintenance | Regular | info |
 | incident | Incident | À la demande | warning |
 | error | Erreur | Variable | error |
-| security_event | Événement de sécurité | Variable | critical |
+| security_event | Security event | Variable | critical |
 | end_of_life | Fin de vie | Une fois | info |
 
 ### 3.3 Stockage d'Historique Immuable
 
-L'historique DOIT être stocké dans :
-- Blockchain ou équivalent (immuable)
+History MUST be stored in:
+- Blockchain or equivalent (immutable)
 - Index pour recherche < 1 sec
-- Archive pour long terme (indéfini)
-- Backup redondant (3+ sites géographiques)
-- Chiffrement AES-256 en transit
-- Signature RSA-4096 pour chaque événement
+- Archive pour long term (indefinite)
+- Backup redondant (3+ sites geographics)
+- Encryption AES-256 en transit
+- Signature RSA-4096 pour chaque event
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
-### 4.1 Cas d'Étude Réels
+### 4.1 Real-World Case Studies
 
-#### Cas 1 : TradeBot3000 - Historique Altéré (Q1 2026)
-- **Incident** : History tampered, events deleted
-- **Perte** : $4.1M (regulatory fines + damages)
-- **Cause** : Non-immutable history storage
-- **Résolution** : Blockchain-based immutable history
-- **Indemnisation** : $4.1M + 35% pénalité
+#### Case 1: TradeBot3000 - Altered History (Q1 2026)
+- **Incident**: History tampered, events deleted
+- **Loss** : $4.1M (regulatory fines + damages)
+- **Cause**: Non-immutable history storage
+- **Resolution**: Blockchain-based immutable history
+- **Compensation** : $4.1M + 35% penalty
 
-#### Cas 2 : HealthBot - Historique Incomplet (Q1 2026)
-- **Incident** : Missing events in history (gaps > 1 hour)
+#### Case 2: HealthBot - Historique Incomplet (Q1 2026)
+- **Incident**: Missing events in history (gaps > 1 hour)
 - **Dommages** : €2.8M (patient safety incidents)
-- **Cause** : Event loss during storage
-- **Résolution** : Geographic replication (3+ sites)
-- **Indemnisation** : €2.8M + 30% pénalité
+- **Cause**: Event loss during storage
+- **Resolution**: Geographic replication (3+ sites)
+- **Compensation** : €2.8M + 30% penalty
 
-#### Cas 3 : SupplyChainX - Historique Non-Vérifiable (Q1 2026)
-- **Incident** : History not cryptographically verifiable
+#### Case 3: SupplyChainX - Non-Verifiable History (Q1 2026)
+- **Incident**: History not cryptographically verifiable
 - **Dommages** : €2.2M (audit failures, compliance violations)
-- **Cause** : Missing signatures and hash chain
-- **Résolution** : RSA-4096 signatures + SHA-256 chain
-- **Indemnisation** : €2.2M + 25% pénalité
+- **Cause**: Missing signatures and hash chain
+- **Resolution**: RSA-4096 signatures + SHA-256 chain
+- **Compensation** : €2.2M + 25% penalty
 
-### 4.2 Implémentation Rust
+### 4.2 Reference Code (Rust)
 
 ```rust
 use chrono::{DateTime, Utc};
@@ -515,7 +515,7 @@ impl ImmutableHistoryManager {
 }
 ```
 
-### 4.3 Chaîne d'Historique Immuable
+### 4.3 Immutable History Chain
 
 ```
 Event 1 (Creation)
@@ -545,100 +545,104 @@ Event 4 (Incident)
 
 ### 4.4 Registre d'Historique
 
-Chaque événement DOIT être enregistré avec :
+Chaque event MUST be recorded avec :
 - Event ID unique
 - Agent ID
-- type d'événement
-- Détails complets
-- Timestamp immuable
-- Numéro de séquence
+- type d'event
+- Details complets
+- Timestamp immutable
+- Sequence number
 - Hash SHA-256
 - Signature RSA-4096
-- Previous hash (chaîne)
-- Réplication géographique (3+ sites)
+- Previous hash (chain)
+- Replication geographic (3+ sites)
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. Vérifier historique complet (100% des événements)
-2. Vérifier immuabilité (chaîne de hash)
-3. Vérifier accessibilité (< 1 sec)
-4. Vérifier vérifiabilité (signatures RSA-4096)
-5. Vérifier conservation indéfinie
-6. Vérifier redondance géographique (3+ sites)
-7. Vérifier chaîne de hash intacte
-8. Vérifier signatures valides
-9. Vérifier zéro perte d'événement
-10. Vérifier audit trail complet
+**Mandatory Tests** :
+1. Verify complete history (100% of events)
+2. Verify immutability (hash chain)
+3. Verify accessibility (< 1 sec)
+4. Verify verifiability (RSA-4096 signatures)
+5. Verify indefinite retention
+6. Verify geographic redundancy (3+ sites)
+7. Verify hash chain intact
+8. Verify signatures valides
+9. Verify zero event loss
+10. Verify audit trail complet
 
-**Fréquence** : À chaque événement, audit complet mensuel
+**Frequency** : À chaque event, audit complet mensuel
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Historique incomplet | Révocation immédiate + 40% CA |
-| Immuabilité compromise | Révocation de licence |
-| Accessibilité > 1 sec | Amende 30% CA |
-| Vérifiabilité compromise | Révocation immédiate |
-| Conservation insuffisante | Amende 35% CA |
-| Redondance manquante | Amende 30% CA |
-| Chaîne de hash brisée | Révocation immédiate |
-| Signature invalide | Révocation immédiate |
-| Perte d'événement | Révocation immédiate + 50% CA |
-| Audit trail absent | Amende 25% CA |
-| Récidive | Interdiction permanente |
+| Historique incomplet | Immediate revocation + 40% annual revenue |
+| Immutability compromised | License revocation |
+| Accessibility > 1 sec | Fine 30% annual revenue |
+| Verifiability compromised | Immediate revocation |
+| Conservation insuffisante | Fine 35% annual revenue |
+| Redondance manquante | Fine 30% annual revenue |
+| Broken hash chain | Immediate revocation |
+| Invalid signature | Immediate revocation |
+| Loss d'event | Immediate revocation + 50% annual revenue |
+| Missing audit trail | Fine 25% annual revenue |
+| Recurrence | Permanent ban |
 
-### 5.3 Processus de Vérification
+### 5.3 Verification Process
 
-1. Vérification mensuelle d'intégrité
-2. Audit de chaîne de hash
-3. Vérification de signatures
+1. Verification mensuelle d'integrity
+2. Audit de hash chain
+3. Verification de signatures
 4. Audit de conservation
-5. Vérification de redondance
+5. Verification de redondance
 6. Audit trail complet
 7. Rapport d'historique
-8. Certification légale
+8. Legal certification
 
 ---
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
-**Calendrier de conformité** :
-- Nouveaux agents : Conformité obligatoire dès création
-- Agents existants : Conformité obligatoire avant 1er janvier 2028
-- Agents critiques : Conformité obligatoire avant 1er juillet 2027
+**Compliance Calendar** :
+- New agents: Compliance mandatory from deployment
+- Existing agents: Compliance mandatory before January 1, 2028
+- Critical agents: Compliance mandatory before July 1, 2027
 
-**Dispositions transitoires** :
-- Agents existants : Audit d'historique avant 30 juin 2027
-- Infrastructure d'historique établie avant 1er janvier 2027
+**Transitional Provisions** :
+- Existing agents: Audit d'historique avant 30 juin 2027
+- History infrastructure established before January 1, 2027
 
 ---
 
 ## 7. RÉFÉRENCES
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
-- Fondement : Cycle de vie complet avec historique immuable
-- Principes : Immuabilité, traçabilité, non-répudiation
+**Axiom Ψ-IV: CIRCULUS VITAE**
+- Foundation: Complete lifecycle with immutable history
+- Principes: Immutability, traceability, non-repudiation
 
 **Articles connexes** :
-- Article II.2.7 : Logging Immuable
-- Article II.2.9 : Historique Complet
-- Article IV.4.11 : Documentation du Cycle de Vie
-- Article IV.4.12 : Audit du Cycle de Vie
-- Article IV.4.18 : Traçabilité du Cycle de Vie
+- Article II.2.7: Logging Immuable
+- Article II.2.9: Historique Complet
+- Article IV.4.11: Documentation du Cycle de Vie
+- Article IV.4.12: Audit du Cycle de Vie
+- Article IV.4.18: Traceability du Cycle de Vie
 
-**Normes de référence** :
-- ISO 27001 : Gestion des logs
-- ISO 27035 : Gestion des incidents
-- NIST SP 800-92 : Guide de gestion des logs
-- RFC 3161 : Timestamping
+**Reference standards**:
+- ISO 27001: Management des logs
+- ISO 27035: Management des incidents
+- NIST SP 800-92: Guide de management des logs
+- RFC 3161: Timestamping
 
 ---
 
+
+---
+
+**Next review**: June 2026

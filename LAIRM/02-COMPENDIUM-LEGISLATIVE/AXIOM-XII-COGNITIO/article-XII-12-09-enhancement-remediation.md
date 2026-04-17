@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - enhancement remediation
-  - harm remediation
-  - damage compensation
-  - corrective action
+tags:
+  - enhancement-remediation
+  - harm-remediation
+  - damage-compensation
+  - corrective-action
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -342,12 +341,12 @@ impl EnhancementRemediationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No remediation | 85% CA fine |
-| Delayed remediation | 75% CA fine |
-| Inadequate compensation | 80% CA fine |
-| No victim notification | 70% CA fine |
-| Ineffective remediation | 80% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No remediation | 85% annual revenue fine |
+| Delayed remediation | 75% annual revenue fine |
+| Inadequate compensation | 80% annual revenue fine |
+| No victim notification | 70% annual revenue fine |
+| Ineffective remediation | 80% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -389,3 +388,7 @@ impl EnhancementRemediationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

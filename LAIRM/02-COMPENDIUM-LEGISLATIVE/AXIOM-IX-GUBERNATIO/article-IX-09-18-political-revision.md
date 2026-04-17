@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - political revision
-  - governance revision
-  - policy revision
-  - decision revision
-  - governance update
+tags:
+  - political-revision
+  - governance-revision
+  - policy-revision
+  - decision-revision
+  - governance-update
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -177,13 +176,13 @@ class PoliticalRevisionManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No revision mechanism | 70% CA fine |
-| Evidence not considered | 65% CA fine |
-| Process not transparent | 60% CA fine |
-| Decisions not documented | 55% CA fine |
-| Stakeholders not notified | 50% CA fine |
+| No revision mechanism | 70% annual revenue fine |
+| Evidence not considered | 65% annual revenue fine |
+| Process not transparent | 60% annual revenue fine |
+| Decisions not documented | 55% annual revenue fine |
+| Stakeholders not notified | 50% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Falsified revision | Immediate revocation + 75% CA |
+| Falsified revision | Immediate revocation + 75% annual revenue |
 
 ---
 
@@ -202,3 +201,7 @@ class PoliticalRevisionManager:
 
 ---
 
+
+---
+
+**Next review**: June 2026

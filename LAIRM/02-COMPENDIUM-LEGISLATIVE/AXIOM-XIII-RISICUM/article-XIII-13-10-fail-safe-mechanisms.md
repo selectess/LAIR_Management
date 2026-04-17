@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - fail-safe mechanisms
-  - safety systems
+tags:
+  - fail-safe-mechanisms
+  - safety-systems
   - containment
-  - system failure
-  - safety redundancy
+  - system-failure
+  - safety-redundancy
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -441,11 +440,11 @@ impl FailSafeManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No fail-safe mechanisms | 95% CA fine + immediate system halt |
-| Mechanism non-functional | 90% CA fine + system halt until fixed |
-| Failed quarterly test | 85% CA fine + system halt until fixed |
-| Delayed testing | 80% CA fine + immediate testing required |
-| Unsafe default state | 95% CA fine + immediate system halt |
+| No fail-safe mechanisms | 95% annual revenue fine + immediate system halt |
+| Mechanism non-functional | 90% annual revenue fine + system halt until fixed |
+| Failed quarterly test | 85% annual revenue fine + system halt until fixed |
+| Delayed testing | 80% annual revenue fine + immediate testing required |
+| Unsafe default state | 95% annual revenue fine + immediate system halt |
 | Recurrence | Permanent ban + criminal prosecution |
 
 ### 5.3 Verification Process
@@ -487,3 +486,7 @@ impl FailSafeManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

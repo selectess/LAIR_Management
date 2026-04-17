@@ -1,24 +1,24 @@
 ---
-title: "Article VII.7.7 : Drift Detection"
-Axiom: Ψ-VII
-numero: VII.7.7
+title: "Article VII.7.7: Drift Detection"
+axiom: Ψ-VII
+article_number: VII.7.7
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Adaptation
-  - Learning
+  - adaptation
+  - learning
 validations:
-  Legal: true
-  Technical: true
-  Editorial: true
+  legal: true
+  technical: true
+  editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article VII.7.7 : DRIFT DETECTION
-## Axiom Ψ-VII : ADAPTATIO CONTINUA
+# Article VII.7.7: DRIFT DETECTION
+## Axiom Ψ-VII: ADAPTATIO CONTINUA
 
 ---
 
@@ -37,7 +37,7 @@ Every agent MUST implement drift detection. Implementation MUST be controlled an
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-VII : ADAPTATIO CONTINUA**
+**Axiom Ψ-VII: ADAPTATIO CONTINUA**
 
 Drift Detection ensures continuous agent improvement.
 
@@ -100,9 +100,13 @@ class DriftDetectionManager:
 
 ## REFERENCES
 
-- Axiom Ψ-VII : ADAPTATIO CONTINUA
+- Axiom Ψ-VII: ADAPTATIO CONTINUA
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - change notification
-  - lifecycle management
-  - stakeholder communication
-  - immutable records
-  - digital signature
+tags:
+  - change-notification
+  - lifecycle-management
+  - stakeholder-communication
+  - immutable-records
+  - digital-signature
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -346,13 +345,13 @@ impl ChangeNotificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Notification > 24 hours | 35% CA fine |
-| Stakeholder omitted | 40% CA fine |
-| Incomplete details | 30% CA fine |
+| Notification > 24 hours | 35% annual revenue fine |
+| Stakeholder omitted | 40% annual revenue fine |
+| Incomplete details | 30% annual revenue fine |
 | Immutability compromised | License revocation |
 | Invalid signature | Immediate revocation |
-| Audit trail absent | 40% CA fine |
-| Delivery unconfirmed | 35% CA fine |
+| Missing audit trail | 40% annual revenue fine |
+| Delivery unconfirmed | 35% annual revenue fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -394,3 +393,7 @@ impl ChangeNotificationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

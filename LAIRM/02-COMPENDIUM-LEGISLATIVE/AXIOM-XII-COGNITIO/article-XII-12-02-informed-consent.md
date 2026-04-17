@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - informed consent
-  - enhancement disclosure
-  - risk communication
-  - voluntary decision
+tags:
+  - informed-consent
+  - enhancement-disclosure
+  - risk-communication
+  - voluntary-decision
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -337,13 +336,13 @@ impl InformedConsentManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No consent document | 75% CA fine |
-| Incomplete disclosure | 80% CA fine |
-| Risks not disclosed | 85% CA fine |
-| Benefits not disclosed | 70% CA fine |
-| Alternatives not presented | 75% CA fine |
-| Coercive consent | 90% CA fine + license revocation |
-| Records falsified | Immediate revocation + 90% CA |
+| No consent document | 75% annual revenue fine |
+| Incomplete disclosure | 80% annual revenue fine |
+| Risks not disclosed | 85% annual revenue fine |
+| Benefits not disclosed | 70% annual revenue fine |
+| Alternatives not presented | 75% annual revenue fine |
+| Coercive consent | 90% annual revenue fine + license revocation |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -385,3 +384,7 @@ impl InformedConsentManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

@@ -1,67 +1,67 @@
 ---
-title: "Article IV.4.16 : Rollback et Récupération"
-Axiom: Ψ-IV
-numero: IV.4.16
+title: "Article IV.4.16: Rollback and Recovery"
+axiom: Ψ-IV
+article_number: IV.4.16
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Rollback
-  - Récupération
-  - Cycle de Vie
-  - Restauration
-  - Atomicité
+  - rollback
+  - recovery
+  - lifecycle
+  - restoration
+  - atomicity
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article IV.4.16 : ROLLBACK ET RÉCUPÉRATION
-## Axiom Ψ-IV : CIRCULUS VITAE
+# Article IV.4.16: ROLLBACK AND RECOVERY
+## Axiom Ψ-IV: CIRCULUS VITAE
 
 ---
 
-## 1. NORME IMPÉRATIVE
+## 1. IMPERATIVE NORM
 
-Tout agent autonome DOIT avoir la capacité de rollback atomique vers une Version antérieure. Le rollback DOIT être possible en moins de 5 minutes. Les données must be récupérables sans perte (RPO < 1 minute). Le rollback DOIT être automatique en cas d'erreur critique. Le rollback DOIT être documenté, signé numériquement (RSA-4096) et immuable. Zéro perte de données tolérée.
+Every autonomous agent MUST have the capability for atomic rollback to a previous version. Rollback MUST be possible in less than 5 minutes. Data must be recoverable without loss (RPO < 1 minute). Rollback MUST be automatic in case of critical error. Rollback MUST be documented, digitally signed (RSA-4096) and immutable. Zero data loss tolerated.
 
-**Exigences minimales** :
-- Rollback atomique obligatoire
-- RTO < 5 minutes (< 300 secondes)
-- RPO < 1 minute (< 60 secondes)
-- Rollback automatique en cas d'erreur critique
-- Documentation immuable
-- Signature numérique (RSA-4096)
-- Audit trail complet
-- Zéro perte de données
-- Vérification intégrité post-rollback
-- Notification automatique (< 5 minutes)
+**Minimum Requirements** :
+- Mandatory atomic rollback
+- RTO < 5 minutes (< 300 seconds)
+- RPO < 1 minute (< 60 seconds)
+- Automatic rollback in case of critical error
+- Immutable documentation
+- Digital signature (RSA-4096)
+- Complete audit trail
+- Zero data loss
+- Post-rollback integrity verification
+- Automatic notification (< 5 minutes)
 
 ---
 
-## 2. FONDEMENT Legal
+## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
+**Axiom Ψ-IV: CIRCULUS VITAE**
 
-Le rollback atomique est essentiel pour la récupération rapide et la continuité de service. Il DOIT être possible, automatique et testé régulièrement. La capacité de rollback est une exigence critique pour la Responsibility et la conformité. Tout agent DOIT pouvoir revenir à un état connu et stable en moins de 5 minutes.
+Atomic rollback is essential for rapid recovery and service continuity. It MUST be possible, automatic and tested regularly. Rollback capability is a critical requirement for Responsibility and compliance. Every agent MUST be able to return to a known and stable state in less than 5 minutes.
 
-**Fundamental Principles** :
-- Rollback atomique obligatoire
-- Récupération ultra-rapide (< 5 min)
-- Zéro perte de données
+**Fundamental Principles**:
+- Rollback atomic mandatory
+- Ultra-fast recovery (< 5 min)
+- Zero data loss
 - Automatisation en cas d'erreur
-- Documentation immuable
-- Signature numérique
+- Documentation immutable
+- Digital signature
 - Audit trail complet
-- Testabilité régulière
+- Regular testability
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
 ### 3.1 Processus de Rollback Atomique
 
@@ -79,7 +79,7 @@ class AtomicRollbackManager:
         self.max_rpo = 60  # 1 minute
     
     def initiate_rollback(self, agent_id: str, target_Version: str, reason: str, auto_trigger: bool = False):
-        """Initie un rollback atomique"""
+        """Initie un rollback atomic"""
         rollback = {
             'rollback_id': f"rbk-{uuid.uuid4()}",
             'agent_id': agent_id,
@@ -87,13 +87,13 @@ class AtomicRollbackManager:
             'reason': reason,
             'auto_trigger': auto_trigger,
             'initiated_date': datetime.utcnow().isoformat(),
-            'Status': 'initiated',
+            'status': 'initiated',
             'steps': [],
             'start_time': datetime.utcnow().timestamp(),
             'signature': None
         }
         
-        # Enregistrer demande
+        # Record demande
         self.log_rollback_request(rollback)
         
         # Notifier parties prenantes
@@ -102,46 +102,46 @@ class AtomicRollbackManager:
         return rollback
     
     def execute_atomic_rollback(self, rollback_id: str) -> Dict:
-        """Exécute un rollback atomique avec garanties ACID"""
+        """Executes a rollback atomic avec guarantees ACID"""
         rollback = self.get_rollback(rollback_id)
         agent_id = rollback['agent_id']
         start_time = datetime.utcnow().timestamp()
         
         try:
-            # Phase 1 : Préparation (< 1 min)
+            # Phase 1: Preparation (< 1 min)
             self._prepare_rollback(rollback)
             
-            # Phase 2 : Snapshot état actuel (< 1 min)
+            # Phase 2: Current state snapshot (< 1 min)
             current_snapshot = self._create_snapshot(agent_id)
-            rollback['steps'].append({'step': 'snapshot_current', 'Status': 'completed', 'duration': 60})
+            rollback['steps'].append({'step': 'snapshot_current', 'status': 'completed', 'duration': 60})
             
-            # Phase 3 : Arrêt agent (< 30 sec)
+            # Phase 3: Agent stop (< 30 sec)
             self._stop_agent_gracefully(agent_id)
-            rollback['steps'].append({'step': 'stop_agent', 'Status': 'completed', 'duration': 30})
+            rollback['steps'].append({'step': 'stop_agent', 'status': 'completed', 'duration': 30})
             
-            # Phase 4 : Récupération Version cible (< 1 min)
+            # Phase 4: Target version retrieval (< 1 min)
             target_Version = self._retrieve_Version(agent_id, rollback['target_Version'])
-            rollback['steps'].append({'step': 'retrieve_target', 'Status': 'completed', 'duration': 60})
+            rollback['steps'].append({'step': 'retrieve_target', 'status': 'completed', 'duration': 60})
             
-            # Phase 5 : Restauration atomique (< 1 min)
+            # Phase 5: Restoration atomic (< 1 min)
             self._restore_Version_atomic(agent_id, target_Version)
-            rollback['steps'].append({'step': 'restore_atomic', 'Status': 'completed', 'duration': 60})
+            rollback['steps'].append({'step': 'restore_atomic', 'status': 'completed', 'duration': 60})
             
-            # Phase 6 : Vérification intégrité (< 1 min)
+            # Phase 6: Integrity verification (< 1 min)
             integrity_check = self._verify_integrity(agent_id)
             if not integrity_check['valid']:
                 raise ValueError(f"Integrity check failed: {integrity_check['errors']}")
-            rollback['steps'].append({'step': 'verify_integrity', 'Status': 'completed', 'duration': 60})
+            rollback['steps'].append({'step': 'verify_integrity', 'status': 'completed', 'duration': 60})
             
-            # Phase 7 : Redémarrage agent (< 30 sec)
+            # Phase 7: Agent restart (< 30 sec)
             self._start_agent(agent_id)
-            rollback['steps'].append({'step': 'restart_agent', 'Status': 'completed', 'duration': 30})
+            rollback['steps'].append({'step': 'restart_agent', 'status': 'completed', 'duration': 30})
             
-            # Phase 8 : Vérification fonctionnalité (< 1 min)
+            # Phase 8: Functionality verification (< 1 min)
             functionality_check = self._verify_functionality(agent_id)
             if not functionality_check['valid']:
                 raise ValueError(f"Functionality check failed: {functionality_check['errors']}")
-            rollback['steps'].append({'step': 'verify_functionality', 'Status': 'completed', 'duration': 60})
+            rollback['steps'].append({'step': 'verify_functionality', 'status': 'completed', 'duration': 60})
             
             # Calcul temps total
             total_time = datetime.utcnow().timestamp() - start_time
@@ -154,7 +154,7 @@ class AtomicRollbackManager:
             rollback['signature'] = self._sign_rollback(rollback)
             
         except Exception as e:
-            # Rollback échoué : restaurer snapshot
+            # Failed rollback: restore snapshot
             self._restore_snapshot(agent_id, current_snapshot)
             rollback['Status'] = 'failed'
             rollback['error'] = str(e)
@@ -162,17 +162,17 @@ class AtomicRollbackManager:
             raise
         
         finally:
-            # Enregistrer rollback
+            # Record rollback
             self.log_rollback_execution(rollback)
         
         return rollback
     
     def auto_rollback_on_error(self, agent_id: str, error_severity: str):
-        """Déclenche un rollback automatique en cas d'erreur critique"""
+        """Triggers an automatic rollback on critical error"""
         if error_severity not in ['critical', 'fatal']:
             return None
         
-        # Récupérer dernière Version stable
+        # Retrieve last stable version
         last_stable = self._get_last_stable_Version(agent_id)
         
         # Initier rollback automatique
@@ -183,15 +183,15 @@ class AtomicRollbackManager:
             auto_trigger=True
         )
         
-        # Exécuter immédiatement
+        # Execute immediately
         return self.execute_atomic_rollback(rollback['rollback_id'])
     
     def _prepare_rollback(self, rollback: Dict):
-        """Prépare le rollback"""
-        rollback['steps'].append({'step': 'prepare', 'Status': 'completed'})
+        """Prepares the rollback"""
+        rollback['steps'].append({'step': 'prepare', 'status': 'completed'})
     
     def _create_snapshot(self, agent_id: str) -> Dict:
-        """Crée un snapshot de l'état actuel"""
+        """Creates a snapshot of the current state"""
         return {
             'agent_id': agent_id,
             'timestamp': datetime.utcnow().isoformat(),
@@ -200,63 +200,63 @@ class AtomicRollbackManager:
         }
     
     def _stop_agent_gracefully(self, agent_id: str):
-        """Arrête l'agent gracieusement"""
+        """Gracefully stops the agent"""
         pass
     
     def _retrieve_Version(self, agent_id: str, Version_id: str) -> Dict:
-        """Récupère une Version"""
+        """Retrieves a Version"""
         return self.Version_store.get(f"{agent_id}:{Version_id}", {})
     
     def _restore_Version_atomic(self, agent_id: str, Version: Dict):
-        """Restaure une Version de manière atomique"""
+        """Restores a version atomically"""
         pass
     
     def _verify_integrity(self, agent_id: str) -> Dict:
-        """Vérifie l'intégrité après restauration"""
+        """Verifies integrity after restoration"""
         return {'valid': True, 'errors': []}
     
     def _start_agent(self, agent_id: str):
-        """Redémarre l'agent"""
+        """Restarts the agent"""
         pass
     
     def _verify_functionality(self, agent_id: str) -> Dict:
-        """Vérifie la fonctionnalité"""
+        """Verifies the functionality"""
         return {'valid': True, 'errors': []}
     
     def _restore_snapshot(self, agent_id: str, snapshot: Dict):
-        """Restaure un snapshot"""
+        """Restores un snapshot"""
         pass
     
     def _get_last_stable_Version(self, agent_id: str) -> str:
-        """Récupère la dernière Version stable"""
+        """Retrieves the last stable version"""
         return "stable-v1"
     
     def _get_agent_state(self, agent_id: str) -> Dict:
-        """Récupère l'état de l'agent"""
+        """Retrieves agent state"""
         return {}
     
     def _compute_checksum(self, agent_id: str) -> str:
-        """Calcule le checksum de l'agent"""
+        """Calculates the checksum de l'agent"""
         return hashlib.sha256(agent_id.encode()).hexdigest()
     
     def _sign_rollback(self, rollback: Dict) -> str:
-        """Signe le rollback"""
+        """Signs the rollback"""
         return hashlib.sha256(str(rollback).encode()).hexdigest()
     
     def log_rollback_request(self, rollback: Dict):
-        """Enregistre la demande de rollback"""
+        """Records the demande de rollback"""
         self.rollback_log.append(rollback)
     
     def log_rollback_execution(self, rollback: Dict):
-        """Enregistre l'exécution du rollback"""
+        """Records the rollback execution"""
         self.rollback_log.append(rollback)
     
     def notify_stakeholders(self, agent_id: str, rollback: Dict):
-        """Notifie les parties prenantes"""
+        """Notifies the parties prenantes"""
         pass
     
     def get_rollback(self, rollback_id: str) -> Dict:
-        """Récupère un rollback"""
+        """Retrieves a rollback"""
         for rb in self.rollback_log:
             if rb['rollback_id'] == rollback_id:
                 return rb
@@ -265,55 +265,55 @@ class AtomicRollbackManager:
 
 ### 3.2 Phases de Rollback Atomique
 
-| Phase | Durée | Garantie | Responsable |
+| Phase | Duration | Guarantee | Responsible |
 |-------|-------|----------|------------|
-| Préparation | < 30 sec | Atomicité | Système |
-| Snapshot état actuel | < 60 sec | Cohérence | Système |
-| Arrêt agent | < 30 sec | Isolation | Système |
-| Récupération Version | < 60 sec | Durabilité | Système |
-| Restauration atomique | < 60 sec | Atomicité | Système |
-| Vérification intégrité | < 60 sec | Cohérence | Système |
-| Redémarrage | < 30 sec | Isolation | Système |
-| Vérification fonctionnalité | < 60 sec | Durabilité | Système |
+| Preparation | < 30 sec | Atomicity | System |
+| Snapshot current state | < 60 sec | Coherence | System |
+| Agent stop | < 30 sec | Isolation | System |
+| Version retrieval | < 60 sec | Durability | System |
+| Restoration atomic | < 60 sec | Atomicity | System |
+| Integrity verification | < 60 sec | Coherence | System |
+| Restart | < 30 sec | Isolation | System |
+| Functionality verification | < 60 sec | Durability | System |
 | **Total** | **< 5 min** | **ACID** | |
 
 ### 3.3 Versions Disponibles pour Rollback
 
-Le rollback DOIT être possible vers :
-- Version précédente (< 1 min)
-- Dernière Version stable (< 1 min)
-- Toute Version archivée (< 5 min)
+Le rollback MUST be possible vers :
+- Previous version (< 1 min)
+- Last stable version (< 1 min)
+- Any archived version (< 5 min)
 - Version de secours (< 1 min)
-- Version de référence (< 1 min)
+- Reference version (< 1 min)
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
-### 4.1 Cas d'Étude Réels
+### 4.1 Real-World Case Studies
 
-#### Cas 1 : TradeBot3000 - Rollback Échoué (Q1 2026)
-- **Incident** : Rollback took 45 minutes, exceeded RTO
-- **Perte** : $3.2M (additional losses during rollback)
-- **Cause** : Non-atomic rollback, manual steps
-- **Résolution** : Atomic rollback < 5 min implémenté
-- **Indemnisation** : $3.2M + 30% pénalité
+#### Case 1: TradeBot3000 - Failed Rollback (Q1 2026)
+- **Incident**: Rollback took 45 minutes, exceeded RTO
+- **Loss** : $3.2M (additional losses during rollback)
+- **Cause**: Non-atomic rollback, manual steps
+- **Resolution**: Atomic rollback < 5 min implemented
+- **Compensation** : $3.2M + 30% penalty
 
-#### Cas 2 : HealthBot - Perte de Données (Q1 2026)
-- **Incident** : Data loss during rollback (RPO > 10 min)
+#### Case 2: HealthBot - Data Loss (Q1 2026)
+- **Incident**: Data loss during rollback (RPO > 10 min)
 - **Dommages** : €2.1M (patient records lost)
-- **Cause** : Insufficient backup frequency
-- **Résolution** : RPO < 1 min implémenté
-- **Indemnisation** : €2.1M + 25% pénalité
+- **Cause**: Insufficient backup frequency
+- **Resolution**: RPO < 1 min implemented
+- **Compensation** : €2.1M + 25% penalty
 
-#### Cas 3 : SupplyChainX - Rollback Partiel (Q1 2026)
-- **Incident** : Partial rollback, inconsistent state
+#### Case 3: SupplyChainX - Rollback Partiel (Q1 2026)
+- **Incident**: Partial rollback, inconsistent state
 - **Dommages** : €1.8M (supply chain disruption)
-- **Cause** : Non-atomic restoration
-- **Résolution** : Atomic restoration with integrity checks
-- **Indemnisation** : €1.8M + 20% pénalité
+- **Cause**: Non-atomic restoration
+- **Resolution**: Atomic restoration with integrity checks
+- **Compensation**: €1.8M + 20% penalty
 
-### 4.2 Implémentation Rust
+### 4.2 Reference Code (Rust)
 
 ```rust
 use chrono::{DateTime, Utc};
@@ -575,140 +575,144 @@ impl AtomicRollbackManager {
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Arrêt Agent Gracieux               │
+|   Graceful Agent Stop                |
 │   (< 30 sec)                         │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Récupération Version Cible         │
+|   Target Version Retrieval           |
 │   (< 60 sec)                         │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Restauration Atomique              │
-│   (< 60 sec, ACID garanties)         │
+│   Restoration Atomique              │
+│   (< 60 sec, ACID guarantees)         │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Vérification Intégrité             │
+│   Verification Integrity             │
 │   (< 60 sec)                         │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Redémarrage Agent                  │
+|   Agent Restart                      |
 │   (< 30 sec)                         │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Vérification Fonctionnalité        │
+│   Verification Functionality        │
 │   (< 60 sec)                         │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Rollback Complété                  │
+|   Rollback Completed                 |
 │   (Total < 5 min, ACID)              │
 └──────────────────────────────────────┘
 ```
 
 ### 4.4 Registre de Rollback
 
-Chaque rollback DOIT être enregistré avec :
+Chaque rollback MUST be recorded with :
 - Rollback ID
 - Agent ID
 - Version cible
 - Raison
-- Étapes (avec durées)
-- Durée totale
-- Signature numérique (RSA-4096)
-- Timestamp immuable
+- Étapes (avec durations)
+- Duration totale
+- Digital signature (RSA-4096)
+- Timestamp immutable
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. Vérifier rollback atomique possible
-2. Vérifier RTO < 5 minutes (< 300 sec)
-3. Vérifier RPO < 1 minute (< 60 sec)
-4. Vérifier zéro perte de données
-5. Vérifier rollback automatique en cas d'erreur
-6. Vérifier intégrité post-rollback
-7. Vérifier signature numérique
-8. Vérifier audit trail immuable
-9. Vérifier notification automatique
-10. Vérifier tests réguliers (mensuels)
+**Mandatory Tests** :
+1. Verify rollback atomic possible
+2. Verify RTO < 5 minutes (< 300 sec)
+3. Verify RPO < 1 minute (< 60 sec)
+4. Verify zero data loss
+5. Verify rollback automatique en cas d'erreur
+6. Verify integrity post-rollback
+7. Verify digital signature
+8. Verify audit trail immutable
+9. Verify notification automatique
+10. Verify tests regulars (mensuels)
 
-**Fréquence** : À chaque changement, audit complet mensuel
+**Frequency** : À chaque change, audit complet mensuel
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Rollback impossible | Révocation immédiate |
-| RTO > 5 minutes | Amende 35% CA + suspension 30j |
-| RPO > 1 minute | Amende 30% CA + suspension 15j |
-| Perte de données | Révocation immédiate + 40% CA |
-| Rollback automatique échoué | Révocation immédiate |
-| Intégrité non vérifiée | Amende 25% CA |
-| Signature invalide | Révocation immédiate |
-| Audit trail absent | Amende 20% CA |
-| Notification manquante | Amende 15% CA |
-| Tests non effectués | Amende 20% CA |
-| Récidive | Interdiction permanente |
+| Rollback impossible | Immediate revocation |
+| RTO > 5 minutes | Fine 35% annual revenue + suspension 30j |
+| RPO > 1 minute | Fine 30% annual revenue + suspension 15j |
+| Data loss | Immediate revocation + 40% annual revenue |
+| Failed automatic rollback | Immediate revocation |
+| Unverified integrity | Fine 25% annual revenue |
+| Invalid signature | Immediate revocation |
+| Missing audit trail | Fine 20% annual revenue |
+| Notification manquante | Fine 15% annual revenue |
+| Tests non mades | Fine 20% annual revenue |
+| Recurrence | Permanent ban |
 
-### 5.3 Processus de Vérification
+### 5.3 Verification Process
 
-1. Test mensuel de rollback atomique
-2. Vérification de RTO/RPO
+1. Test mensuel de rollback atomic
+2. Verification de RTO/RPO
 3. Audit de Versions
-4. Vérification de signatures
-5. Vérification d'intégrité
-6. Audit trail immuable
+4. Verification de signatures
+5. Verification d'integrity
+6. Audit trail immutable
 7. Rapport de rollback
-8. Notification de conformité
+8. Compliance notification
 
 ---
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
-**Calendrier de conformité** :
-- Nouveaux agents : Conformité obligatoire dès déploiement
-- Agents existants : Conformité obligatoire avant 1er janvier 2028
-- Agents critiques : Conformité obligatoire avant 1er juillet 2027
+**Compliance Calendar** :
+- New agents: Compliance mandatory from deployment
+- Existing agents: Compliance mandatory before January 1, 2028
+- Critical agents: Compliance mandatory before July 1, 2027
 
-**Dispositions transitoires** :
-- Agents existants : Audit de rollback avant 30 juin 2027
-- Infrastructure de rollback établie avant 1er janvier 2027
+**Transitional Provisions** :
+- Existing agents: Audit de rollback avant 30 juin 2027
+- Rollback infrastructure established before January 1, 2027
 
 ---
 
 ## 7. RÉFÉRENCES
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
-- Fondement : Cycle de vie complet avec rollback atomique
-- Principes : RTO < 5 min, RPO < 1 min, ACID garanties
+**Axiom Ψ-IV: CIRCULUS VITAE**
+- Foundation: Complete lifecycle with atomic rollback
+- Principes: RTO < 5 min, RPO < 1 min, ACID guarantees
 
 **Articles connexes** :
-- Article IV.4.10 : Versioning du Cycle de Vie
-- Article IV.4.8 : Récupération d'Urgence
-- Article IV.4.9 : Sauvegarde et Restauration
-- Article IV.4.6 : Transition d'État
-- Article IV.4.3 : Opération Continue
+- Article IV.4.10: Versioning du Cycle de Vie
+- Article IV.4.8: Emergency Recovery
+- Article IV.4.9: Backup et Restoration
+- Article IV.4.6: Transition d'État
+- Article IV.4.3: Operations Continuouse
 
-**Normes de référence** :
-- ISO 27001 : Gestion de la continuité
-- ISO 22301 : Continuité de service
-- NIST SP 800-34 : Planification de continuité
+**Reference standards**:
+- ISO 27001: Continuity management
+- ISO 22301: Continuity de service
+- NIST SP 800-34: Continuity planning
 
 ---
 
+
+---
+
+**Next review**: June 2026

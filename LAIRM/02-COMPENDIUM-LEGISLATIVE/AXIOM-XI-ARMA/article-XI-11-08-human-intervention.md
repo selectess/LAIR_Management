@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - human intervention
-  - human override
-  - intervention protocols
-  - intervention timing
-  - intervention effectiveness
+tags:
+  - human-intervention
+  - human-override
+  - intervention-protocols
+  - intervention-timing
+  - intervention-effectiveness
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -235,11 +234,11 @@ impl HumanInterventionManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No intervention capability | 80% CA fine |
-| Override time > 2s | 75% CA fine |
-| Override ineffective | 70% CA fine |
-| No documentation | 65% CA fine |
-| Failure not reported | 60% CA fine |
+| No intervention capability | 80% annual revenue fine |
+| Override time > 2s | 75% annual revenue fine |
+| Override ineffective | 70% annual revenue fine |
+| No documentation | 65% annual revenue fine |
+| Failure not reported | 60% annual revenue fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -259,3 +258,7 @@ impl HumanInterventionManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

@@ -6,30 +6,30 @@ last_updated: 2026-03-30
 last_review: 2026-04-03
 Status: Final
 Version: Initiation
-Axiom: V
+axiom: V
 license: CC-BY-SA-4.0
 ---
 
-# SPÉCIFICATION DU PROTOCOLE MCP
-## Model Context Protocol pour Agents Autonomes LAIRM
+# MCP PROTOCOL SPECIFICATION
+## Model Context Protocol for Autonomous Agents LAIRM
 
 ---
 
-## 📋 Vue d'ensemble
+## 📋 Overview
 
-Le protocole MCP (Model Context Protocol) est le protocole de communication standardisé pour l'Interoperability entre agents autonomes dans l'écosystème LAIRM. Il implémente l'**Axiom V (Interoperability)** en fournissant un mécanisme d'échange de CONTEXT sécurisé et auditable.
+The MCP (Model Context Protocol) is the standardized communication protocol for interoperability between autonomous agents in the LAIRM ecosystem. It implements **Axiom V (Interoperability)** by providing a secure and auditable context exchange mechanism.
 
-### Objectifs
-- ✅ Interoperability entre agents hétérogènes
-- ✅ Transmission sécurisée de CONTEXT
-- ✅ Traçabilité complète des échanges
-- ✅ Conformité aux axiomes LAIRM
+### Objectives
+- ✅ Interoperability between heterogeneous agents
+- ✅ Secure context transmission
+- ✅ Complete traceability of exchanges
+- ✅ LAIRM axiom compliance
 
 ---
 
 ## 🔧 Architecture
 
-### Couches du Protocole
+### Protocol Layers
 
 ```
 ┌─────────────────────────────────────┐
@@ -46,22 +46,22 @@ Le protocole MCP (Model Context Protocol) est le protocole de communication stan
 └─────────────────────────────────────┘
 ```
 
-### Composants Principaux
+### Main Components
 
-1. **Message Handler** - Traitement des messages MCP
-2. **Context Manager** - Gestion du CONTEXT d'exécution
-3. **Compliance Verifier** - Vérification de conformité
-4. **Audit Logger** - Enregistrement des échanges
+1. **Message Handler** - MCP message processing
+2. **Context Manager** - Execution context management
+3. **Compliance Verifier** - Compliance verification
+4. **Audit Logger** - Exchange recording
 
 ---
 
-## 📨 Format des Messages
+## 📨 Message Format
 
-### Structure de Base
+### Basic Structure
 
 ```json
 {
-  "Version": "1.0.0",
+  "version": "1.0.0",
   "message_id": "uuid",
   "timestamp": "2026-03-30T10:00:00Z",
   "sender": {
@@ -74,7 +74,7 @@ Le protocole MCP (Model Context Protocol) est le protocole de communication stan
     "agent_name": "string"
   },
   "context": {
-    "axiomes": ["I", "II", "III"],
+    "axioms": ["I", "II", "III"],
     "permissions": ["read", "write"],
     "restrictions": {}
   },
@@ -89,154 +89,154 @@ Le protocole MCP (Model Context Protocol) est le protocole de communication stan
 }
 ```
 
-### Types de Messages
+### Message Types
 
-1. **Request** - Demande d'action
-2. **Response** - Réponse à une demande
-3. **Notification** - Notification d'événement
-4. **Heartbeat** - Vérification de connexion
+1. **Request** - Action request
+2. **Response** - Response to a request
+3. **Notification** - Event notification
+4. **Heartbeat** - Connection verification
 
 ---
 
-## 🔐 Sécurité
+## 🔐 Security
 
-### Authentification
-- Signature numérique (ECDSA-P256)
-- Certificat d'agent (Passport Agentique)
-- Vérification de chaîne de certificats
+### Authentication
+- Digital signature (ECDSA-P256)
+- Agent certificate (Agent Passport)
+- Certificate chain verification
 
-### Chiffrement
-- TLS 1.3 pour transport
-- AES-256-GCM pour payload sensible
-- Échange de clés ECDH
+### Encryption
+- TLS 1.3 for transport
+- AES-256-GCM for sensitive payload
+- ECDH key exchange
 
 ### Audit
-- Enregistrement de tous les échanges
-- Hash SHA-256 pour intégrité
-- Timestamp immuable
+- Recording of all exchanges
+- SHA-256 hash for integrity
+- Immutable timestamp
 
 ---
 
-## 📊 Conformité LAIRM
+## 📊 LAIRM Compliance
 
 ### Axiom I (Suprematia)
-- ✅ Contrôle humain sur tous les échanges
-- ✅ Kill-switch intégré
-- ✅ Supervision continue
+- ✅ Human control over all exchanges
+- ✅ Integrated kill-switch
+- ✅ Continuous supervision
 
 ### Axiom II (Identitas)
-- ✅ Identification unique de Each agent
-- ✅ Signature numérique obligatoire
-- ✅ Traçabilité complète
+- ✅ Unique identification of each agent
+- ✅ Mandatory digital signature
+- ✅ Complete traceability
 
-### Axiom V (INTEROPERABILITAS)
-- ✅ Protocole standardisé
-- ✅ Interoperability garantie
-- ✅ Extensibilité prévue
+### Axiom V (Interoperability)
+- ✅ Standardized protocol
+- ✅ Guaranteed interoperability
+- ✅ Extensibility planned
 
 ### Axiom VI (Auditum)
-- ✅ Audit trail complet
-- ✅ Immuabilité des logs
-- ✅ Vérification d'intégrité
+- ✅ Complete audit trail
+- ✅ Log immutability
+- ✅ Integrity verification
 
 ---
 
-## 🚀 Implémentation
+## 🚀 Implementation
 
-### Exemple Python
+### Python Example
 
 ```python
 from lairm_mcp import MCPClient, MCPServer
 
-# Créer un serveur MCP
+# Create an MCP server
 server = MCPServer(
     agent_id="agent-001",
     port=8080,
-    axiomes=["I", "II", "III", "V", "VI"]
+    axioms=["I", "II", "III", "V", "VI"]
 )
 
-# Enregistrer un handler
+# Register a handler
 @server.on_request("action")
 def handle_action(message):
-    # Vérifier conformité
+    # Verify compliance
     if not server.verify_compliance(message):
         return {"error": "Non-compliant"}
     
-    # Exécuter action
+    # Execute action
     result = execute_action(message.payload)
     
-    # Retourner réponse
-    return {"Status": "success", "data": result}
+    # Return response
+    return {"status": "success", "data": result}
 
-# Démarrer le serveur
+# Start the server
 server.start()
 ```
 
-### Exemple Client
+### Client Example
 
 ```python
 from lairm_mcp import MCPClient
 
-# Créer un client MCP
+# Create an MCP client
 client = MCPClient(
     agent_id="agent-002",
     server_url="https://agent-001:8080"
 )
 
-# Envoyer une requête
+# Send a request
 response = client.request(
     type="action",
     data={"action": "process", "params": {}},
-    axiomes=["I", "II", "III"]
+    axioms=["I", "II", "III"]
 )
 
-# Traiter la réponse
-if response.Status == "success":
-    print(f"Résultat: {response.data}")
+# Process the response
+if response.status == "success":
+    print(f"Result: {response.data}")
 else:
-    print(f"Erreur: {response.error}")
+    print(f"Error: {response.error}")
 ```
 
 ---
 
 ## 📈 Performance
 
-### Latence
-- Requête simple: < 100ms
-- Requête complexe: < 1s
-- Vérification de conformité: < 50ms
+### Latency
+- Simple request: < 100ms
+- Complex request: < 1s
+- Compliance verification: < 50ms
 
-### Débit
-- Messages par seconde: 1000+
-- Connexions simultanées: 10000+
-- Bande passante: 100Mbps+
+### Throughput
+- Messages per second: 1000+
+- Simultaneous connections: 10000+
+- Bandwidth: 100Mbps+
 
 ---
 
 ## 🔄 Versioning
 
-### Version 1.0.0 (Actuelle)
-- ✅ Message format de base
-- ✅ Authentification ECDSA
-- ✅ Audit trail complet
-- ✅ Conformité LAIRM
+### Version 1.0.0 (Current)
+- ✅ Basic message format
+- ✅ ECDSA authentication
+- ✅ Complete audit trail
+- ✅ LAIRM compliance
 
-### Version 1.1.0 (Planifiée)
-- ⏳ Compression de messages
+### Version 1.1.0 (Planned)
+- ⏳ Message compression
 - ⏳ Batch processing
 - ⏳ Streaming support
 
 ---
 
-## 📚 Références
+## 📚 References
 
-- [Axiom V - Interoperability](../../02-COMPENDIUM-LEGISLATIF/Axiom-V-INTEROPERABILITAS/)
-- [Axiom VI - Audit](../../02-COMPENDIUM-LEGISLATIF/Axiom-VI-AUDITUM/)
+- [Axiom V - Interoperability](../../02-COMPENDIUM-LEGISLATIVE/Axiom-V-INTEROPERABILITY/)
+- [Axiom VI - Audit](../../02-COMPENDIUM-LEGISLATIVE/Axiom-VI-AUDITUM/)
 - [Agent Passport Schema](../schemas/agent-passport-schema.json)
 - [Kill-Switch Specification](./kill-switch-spec.md)
 
 ---
 
-**Date of Creation**: 2025-03-18  
+**Date of Creation**: 2024-03-18  
 **Founder**: Mehdi Wahbi
 

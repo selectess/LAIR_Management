@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - distribution monitoring
-  - monitoring systems
-  - real-time monitoring
-  - compliance monitoring
+tags:
+  - distribution-monitoring
+  - monitoring-systems
+  - real-time-monitoring
+  - compliance-monitoring
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -241,11 +240,11 @@ impl MonitoringManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No monitoring system | 85% CA fine |
-| Monitoring failure | 82% CA fine |
-| Alert delay | 80% CA fine |
-| Anomaly missed | 78% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No monitoring system | 85% annual revenue fine |
+| Monitoring failure | 82% annual revenue fine |
+| Alert delay | 80% annual revenue fine |
+| Anomaly missed | 78% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -260,3 +259,7 @@ impl MonitoringManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - internal compliance audit
-  - policy compliance
-  - procedure compliance
-  - internal standards
-  - compliance verification
+tags:
+  - internal-compliance-audit
+  - policy-compliance
+  - procedure-compliance
+  - internal-standards
+  - compliance-verification
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -373,12 +372,12 @@ impl InternalComplianceAuditManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Policy non-compliance | 50% CA fine |
-| Unreported violation | 55% CA fine |
-| Incomplete audit | 45% CA fine |
-| Missing remediation plan | 40% CA fine |
+| Policy non-compliance | 50% annual revenue fine |
+| Unreported violation | 55% annual revenue fine |
+| Incomplete audit | 45% annual revenue fine |
+| Missing remediation plan | 40% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Falsified compliance | Immediate revocation + 70% CA |
+| Falsified compliance | Immediate revocation + 70% annual revenue |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -420,3 +419,7 @@ impl InternalComplianceAuditManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

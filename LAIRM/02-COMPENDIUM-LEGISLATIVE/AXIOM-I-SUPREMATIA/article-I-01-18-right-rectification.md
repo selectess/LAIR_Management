@@ -911,3 +911,7 @@ Implementation of Article I.1.18 will ensure that autonomous agents maintain acc
 *This article is part of the Cybernetic Criterion - International Legislative Framework for Autonomous Intelligent Resources Management (2026-2036)*
 
 *"Accurate data enables just decisions. Justice requires accuracy."*
+
+---
+
+**Next review**: June 2026

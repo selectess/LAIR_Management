@@ -5,11 +5,11 @@ part: I
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - Fundamental Principles
+tags:
+  - Fundamental-Principles
   - Axioms
-  - Agentic Governance
-  - Human Sovereignty
+  - Agentic-Governance
+  - Human-Sovereignty
   - Responsibility
 Status: Final
 Version: Initiation
@@ -356,3 +356,7 @@ The axioms follow a progressive logic: first ensure human control (I), then iden
 - [See Complete Bibliography](../../00-METADATA/bibliography.md)
 
 ---
+
+---
+
+**Next review**: June 2026

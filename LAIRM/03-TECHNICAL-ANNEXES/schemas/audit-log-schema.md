@@ -1,7 +1,7 @@
 ---
 title: "Audit Log Schema"
 type: schema
-Axiom: VI
+axiom: VI
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03

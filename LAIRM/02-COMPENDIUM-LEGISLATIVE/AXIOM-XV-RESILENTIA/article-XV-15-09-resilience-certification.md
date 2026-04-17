@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - resilience certification
-  - certification standards
-  - compliance certification
-  - system certification
+tags:
+  - resilience-certification
+  - certification-standards
+  - compliance-certification
+  - system-certification
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -232,11 +231,11 @@ impl ResilienceCertificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No certification | 80% CA fine |
-| Expired certification | 77% CA fine |
-| False certification | 88% CA fine |
-| Missing renewal | 79% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No certification | 80% annual revenue fine |
+| Expired certification | 77% annual revenue fine |
+| False certification | 88% annual revenue fine |
+| Missing renewal | 79% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -251,3 +250,7 @@ impl ResilienceCertificationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

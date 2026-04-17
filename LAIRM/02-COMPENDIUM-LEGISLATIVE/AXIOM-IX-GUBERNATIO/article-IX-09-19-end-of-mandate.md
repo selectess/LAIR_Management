@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - end of mandate
-  - mandate closure
-  - governance transition
-  - mandate archival
-  - mandate completion
+tags:
+  - end-of-mandate
+  - mandate-closure
+  - governance-transition
+  - mandate-archival
+  - mandate-completion
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -200,13 +199,13 @@ class EndOfMandateManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| Mandate not closed | 70% CA fine |
-| No final report | 60% CA fine |
-| Records not archived | 75% CA fine |
-| Transition not documented | 55% CA fine |
-| Next mandate not scheduled | 50% CA fine |
+| Mandate not closed | 70% annual revenue fine |
+| No final report | 60% annual revenue fine |
+| Records not archived | 75% annual revenue fine |
+| Transition not documented | 55% annual revenue fine |
+| Next mandate not scheduled | 50% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Falsified closure | Immediate revocation + 80% CA |
+| Falsified closure | Immediate revocation + 80% annual revenue |
 
 ---
 
@@ -235,3 +234,7 @@ class EndOfMandateManager:
 
 ---
 
+
+---
+
+**Next review**: June 2026

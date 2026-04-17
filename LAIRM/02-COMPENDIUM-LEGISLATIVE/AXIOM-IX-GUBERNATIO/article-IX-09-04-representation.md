@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
+tags:
   - representation
-  - stakeholder representation
-  - representative selection
-  - representative accountability
-  - representation diversity
+  - stakeholder-representation
+  - representative-selection
+  - representative-accountability
+  - representation-diversity
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -385,13 +384,13 @@ impl RepresentationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No representation structure | 65% CA fine |
-| Lack of diversity | 60% CA fine |
-| Non-transparent selection | 55% CA fine |
-| Undisclosed conflicts | 50% CA fine |
-| No accountability | 45% CA fine |
+| No representation structure | 65% annual revenue fine |
+| Lack of diversity | 60% annual revenue fine |
+| Non-transparent selection | 55% annual revenue fine |
+| Undisclosed conflicts | 50% annual revenue fine |
+| No accountability | 45% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Discrimination in selection | Immediate revocation + 75% CA |
+| Discrimination in selection | Immediate revocation + 75% annual revenue |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -433,3 +432,7 @@ impl RepresentationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

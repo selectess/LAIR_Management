@@ -1,25 +1,25 @@
 ---
-title: "Article VIII.8.2 : Fundamental Values"
-Axiom: Ψ-VIII
-numero: VIII.8.2
+title: "Article VIII.8.2: Fundamental Values"
+axiom: Ψ-VIII
+article_number: VIII.8.2
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Ethics
-  - Values
-  - Principles
+  - ethics
+  - values
+  - principles
 validations:
-  Legal: true
-  Technical: true
-  Editorial: true
+  legal: true
+  technical: true
+  editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article VIII.8.2 : Fundamental Values
-## Axiom Ψ-VIII : ETHICA
+# Article VIII.8.2: Fundamental Values
+## Axiom Ψ-VIII: ETHICA
 
 ---
 
@@ -40,7 +40,7 @@ Every autonomous agent MUST explicitly define and implement fundamental values t
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-VIII : ETHICA**
+**Axiom Ψ-VIII: ETHICA**
 
 Fundamental values form the ethical foundation of autonomous agent behavior. They MUST be explicitly defined to ensure alignment with societal expectations and legal requirements.
 
@@ -294,10 +294,14 @@ class FundamentalValuesManager:
 
 ## REFERENCES
 
-- Axiom Ψ-VIII : ETHICA
-- Chapter 17 : Paradigm Ethics
+- Axiom Ψ-VIII: ETHICA
+- Chapter 17: Paradigm Ethics
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

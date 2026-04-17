@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - disaster recovery
-  - recovery planning
-  - business continuity
-  - contingency planning
+tags:
+  - disaster-recovery
+  - recovery-planning
+  - business-continuity
+  - contingency-planning
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -110,11 +109,11 @@ class DisasterRecoveryManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No recovery plan | 85% CA fine |
-| Plan not tested | 82% CA fine |
-| Plan not updated | 80% CA fine |
-| Plan not documented | 78% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No recovery plan | 85% annual revenue fine |
+| Plan not tested | 82% annual revenue fine |
+| Plan not updated | 80% annual revenue fine |
+| Plan not documented | 78% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -125,3 +124,7 @@ class DisasterRecoveryManager:
 
 ---
 
+
+---
+
+**Next review**: June 2026

@@ -1,25 +1,25 @@
 ---
-title: "Article II.2.13 : Identity Renewal"
-Axiom: Ψ-II
-numero: II.2.13
+title: "Article II.2.13: Identity Renewal"
+axiom: Ψ-II
+article_number: II.2.13
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Identity
-  - Renewal
-  - Maintenance
+  - identity
+  - renewal
+  - maintenance
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article II.2.13 : IDENTITY RENEWAL
-## Axiom Ψ-II : IDENTITAS AGENTICA
+# Article II.2.13: IDENTITY RENEWAL
+## Axiom Ψ-II: IDENTITAS AGENTICA
 
 ---
 
@@ -41,11 +41,11 @@ Every autonomous agent MUST renew its identity and certification periodically (m
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II : IDENTITAS AGENTICA**
+**Axiom Ψ-II: IDENTITAS AGENTICA**
 
 Renewal ensures that identity remains valid and current. It allows regular verification that the agent remains compliant with requirements.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Regular verification
 - Maintained compliance
 - Current metadata
@@ -123,7 +123,7 @@ class RenewalManager:
             'sent_at': datetime.utcnow().isoformat() + 'Z',
             'expires_at': current_cert['expires_at'],
             'days_until_expiration': days_until_expiration,
-            'Status': 'sent'
+            'status': 'sent'
         }
         
         self.renewal_log.append(notice)
@@ -137,7 +137,7 @@ class RenewalManager:
             'agent_id': agent_id,
             'requested_at': datetime.utcnow().isoformat() + 'Z',
             'updated_metadata': updated_metadata,
-            'Status': 'pending'
+            'status': 'pending'
         }
         
         self.renewal_log.append(request)
@@ -174,7 +174,7 @@ class RenewalManager:
             'issued_by': 'LAIRM-Authority',
             'issued_at': datetime.utcnow().isoformat() + 'Z',
             'expires_at': (datetime.utcnow() + timedelta(days=365*3)).isoformat() + 'Z',
-            'Status': 'active',
+            'status': 'active',
             'renewal_of': request['request_id']
         }
         
@@ -190,7 +190,7 @@ class RenewalManager:
             'old_certificate': request.get('old_certificate'),
             'new_certificate': new_cert['certificate_id'],
             'renewed_at': datetime.utcnow().isoformat() + 'Z',
-            'Status': 'completed'
+            'status': 'completed'
         }
         
         self.renewals.append(renewal)
@@ -273,22 +273,22 @@ See Section 3.2 above.
 3. Renewal request test
 4. Verification test
 5. Issuance test
-6. Continuity test
+6. Continuousity test
 7. Logging test
 8. Suspension test
 
-**Frequency** : Quarterly minimum
+**Frequency**: Quarterly minimum
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Missing renewal | Operation suspension, 20% CA fine |
-| Late renewal | Operation suspension, 15% CA fine |
-| Missing verification | Immediate stop, 25% CA fine |
-| Non-renewed certificate | License revocation, 30% CA fine |
-| Missing logging | 10% CA fine |
-| Broken continuity | Immediate stop, 20% CA fine |
+| Missing renewal | Operation suspension, 20% annual revenue fine |
+| Late renewal | Operation suspension, 15% annual revenue fine |
+| Missing verification | Immediate stop, 25% annual revenue fine |
+| Non-renewed certificate | License revocation, 30% annual revenue fine |
+| Missing logging | 10% annual revenue fine |
+| Broken continuity | Immediate stop, 20% annual revenue fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -332,13 +332,17 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.11 : Identity Certification
-- Article II.2.12 : Identity Revocation
-- Chapter 11 : Paradigm of Agent Identity
-- Glossary : Renewal, Certification
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.11: Identity Certification
+- Article II.2.12: Identity Revocation
+- Chapter 11: Paradigm of Agent Identity
+- Glossary: Renewal, Certification
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

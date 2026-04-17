@@ -8,56 +8,56 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Documentation
-  - Cycle de Vie
-  - Immuabilité
-  - Accessibilité
+  - documentation
+  - lifecycle
+  - immutability
+  - accessibility
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article IV.4.11 : DOCUMENTATION DU CYCLE DE VIE
-## Axiom Ψ-IV : CIRCULUS VITAE
+# Article IV.4.11: LIFECYCLE DOCUMENTATION
+## Axiom Ψ-IV: CIRCULUS VITAE
 
 ---
 
-## 1. NORME IMPÉRATIVE
+## 1. IMPERATIVE NORM
 
-Tout agent autonome DOIT avoir une documentation complète du cycle de vie (100% couverture). La documentation DOIT être à jour et accessible publiquement. Elle DOIT inclure tous les changements et décisions. La documentation DOIT être immuable et signée (RSA-4096). Les mises à jour must be en temps réel.
+Every autonomous agent MUST have complete lifecycle documentation (100% coverage). Documentation MUST be current and publicly accessible. It MUST include all changes and decisions. Documentation MUST be immutable and signed (RSA-4096). Updates must be in real-time.
 
-**Exigences minimales** :
-- Documentation complète (100% couverture)
-- Mise à jour en temps réel
-- Accessibilité publique (24/7)
-- Immuabilité garantie (blockchain)
-- Signature numérique (RSA-4096)
-- Audit trail immuable
-- Notification autorités (< 24 heures)
-- Recours possible (appel)
-- Zéro documentation manquante
+**Minimum Requirements** :
+- Complete documentation (100% coverage)
+- Real-time updates
+- Public accessibility (24/7)
+- Guaranteed immutability (blockchain)
+- Digital signature (RSA-4096)
+- Audit trail immutable
+- Authority notification (< 24 hours)
+- Appeal mechanism available
+- Zero missing documentation
 
 ---
 
-## 2. FONDEMENT Legal
+## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
+**Axiom Ψ-IV: CIRCULUS VITAE**
 
-La documentation est essentielle pour la traçabilité et l'audit. Elle DOIT être complète et immuable pour garantir la conformité. Les défaillances de documentation constituent une violation grave.
+Documentation is essential for traceability and audit. It MUST be complete and immutable to guarantee compliance. Documentation failures constitute a serious violation.
 
-**Fundamental Principles** :
-- Documentation complète et immuable
-- Mise à jour en temps réel
-- Accessibilité publique
-- Traçabilité complète
+**Fundamental Principles**:
+- Complete documentation et immutable
+- Real-time updates
+- Public accessibility
+- Complete traceability
 - Responsibility attribuable
 - Transparency publique
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
 ```python
 class DocumentationManager:
@@ -66,19 +66,19 @@ class DocumentationManager:
         self.update_interval = 60  # 1 minute
     
     def create_documentation(self, agent_id, content):
-        """Crée une documentation"""
+        """Creates documentation"""
         doc = {
             'doc_id': str(uuid.uuid4()),
             'agent_id': agent_id,
             'content': content,
             'created': datetime.utcnow().isoformat(),
             'hash': self.compute_hash(content),
-            'Status': 'published'
+            'status': 'published'
         }
         return doc
     
     def verify_coverage(self, agent_id):
-        """Vérifie la couverture de documentation"""
+        """Verifies documentation coverage"""
         agent = self.get_agent(agent_id)
         coverage = self.calculate_coverage(agent)
         return coverage >= self.coverage_target
@@ -86,29 +86,29 @@ class DocumentationManager:
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
-### 4.1 Cas d'Étude Réels
+### 4.1 Real-World Case Studies
 
-#### Cas 1 : TradeBot3000 - Documentation Manquante (Q1 2026)
-- **Incident** : Missing documentation causing compliance violations
-- **Perte** : $1.5M
-- **Résolution** : 100% documentation coverage implémenté
-- **Indemnisation** : $1.5M + 15% pénalité
+#### Case 1: TradeBot3000 - Documentation Manquante (Q1 2026)
+- **Incident**: Missing documentation causing compliance violations
+- **Loss** : $1.5M
+- **Resolution** : 100% documentation coverage implemented
+- **Compensation** : $1.5M + 15% penalty
 
-#### Cas 2 : HealthBot - Documentation Obsolète (Q1 2026)
-- **Incident** : Outdated specifications causing implementation errors
+#### Case 2: HealthBot - Outdated Documentation (Q1 2026)
+- **Incident**: Outdated specifications causing implementation errors
 - **Dommages** : €1.2M
-- **Résolution** : Real-time documentation updates implémenté
-- **Indemnisation** : €1.2M + 15% pénalité
+- **Resolution**: Real-time documentation updates implemented
+- **Compensation**: €1.2M + 15% penalty
 
-#### Cas 3 : SupplyChainX - Audit Trail Incomplet (Q1 2026)
-- **Incident** : Incomplete audit trail causing audit failures
+#### Case 3: SupplyChainX - Audit Trail Incomplet (Q1 2026)
+- **Incident**: Incomplete audit trail causing audit failures
 - **Dommages** : €800k
-- **Résolution** : Immuable audit trail implémenté
-- **Indemnisation** : €800k + 15% pénalité
+- **Resolution**: Immuable audit trail implemented
+- **Compensation** : €800k + 15% penalty
 
-### 4.2 Implémentation Rust
+### 4.2 Reference Code (Rust)
 
 ```rust
 use chrono::{DateTime, Utc};
@@ -166,60 +166,60 @@ impl DocumentationManager {
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. Vérifier couverture 100%
-2. Vérifier mise à jour en temps réel
-3. Vérifier accessibilité publique
-4. Vérifier immuabilité
-5. Vérifier signature
-6. Vérifier audit trail
-7. Vérifier notification
-8. Vérifier intégrité
+**Mandatory Tests** :
+1. Verify coverage 100%
+2. Verify real-time updates
+3. Verify public accessibility
+4. Verify immutability
+5. Verify signature
+6. Verify audit trail
+7. Verify notification
+8. Verify integrity
 
-**Fréquence** : Continu, audit complet mensuel
+**Frequency**: Continuous; full audit monthly
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Documentation manquante | Amende 15% CA |
-| Couverture < 100% | Amende 15% CA |
-| Mise à jour retardée | Amende 10% CA |
-| Accessibilité perdue | Amende 12% CA |
-| Immuabilité compromise | Révocation de licence |
-| Signature invalide | Révocation immédiate |
-| Audit trail absent | Amende 15% CA |
-| Récidive | Interdiction permanente |
+| Documentation manquante | Fine 15% annual revenue |
+| Coverage < 100% | Fine 15% annual revenue |
+| Delayed update | Fine 10% annual revenue |
+| Accessibility lost | Fine 12% annual revenue |
+| Immutability compromised | License revocation |
+| Invalid signature | Immediate revocation |
+| Missing audit trail | Fine 15% annual revenue |
+| Recurrence | Permanent ban |
 
 ---
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
 ---
 
 ## 7. RÉFÉRENCES
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
-- Fondement : Cycle de vie complet
-- Principes : Documentation complète, immuabilité, accessibilité
+**Axiom Ψ-IV: CIRCULUS VITAE**
+- Foundation: Complete lifecycle
+- Principles: Complete documentation, immutability, accessibility
 
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
-### 3.1 Contenu de Documentation
+### 3.1 Content de Documentation
 
 ```python
 class DocumentationManager:
     def create_lifecycle_documentation(self, agent_id):
-        """Crée la documentation du cycle de vie"""
+        """Creates the lifecycle documentation"""
         agent = self.get_agent(agent_id)
         
         documentation = {
@@ -249,14 +249,14 @@ class DocumentationManager:
         return documentation
     
     def update_documentation(self, agent_id, Section, changes):
-        """Met à jour la documentation"""
+        """Updates the documentation"""
         doc = self.get_documentation(agent_id)
         
-        # Créer backup
+        # Create backup
         backup = self.create_doc_backup(doc)
         
         try:
-            # Ajouter changement
+            # Ajouter change
             change = {
                 'Section': Section,
                 'changes': changes,
@@ -273,11 +273,11 @@ class DocumentationManager:
             # Signer documentation
             doc['signature'] = self.sign_documentation(doc)
             
-            # Enregistrer mise à jour
+            # Record update
             self.log_documentation_update(agent_id, change)
             
         except Exception as e:
-            # Restaurer backup
+            # Restoresr backup
             self.restore_doc_backup(agent_id, backup)
             raise
         
@@ -286,51 +286,51 @@ class DocumentationManager:
 
 ### 3.2 Sections de Documentation
 
-| Section | Contenu | Fréquence |
+| Section | Content | Frequency |
 |---------|---------|-----------|
-| Création | Demande, approbation, initialisation | Une fois |
-| Déploiement | Configuration, déploiement, vérification | Une fois |
-| Opération | Opérations, incidents, changements | Continu |
-| Maintenance | Maintenance, mises à jour, tests | Régulier |
+| Creation | Demande, approval, initialisation | Une fois |
+| Deployment | Configuration, deployment, verification | Une fois |
+| Operations | Operationss, incidents, changes | Continuous |
+| Maintenance | Maintenance, updates, tests | Regular |
 | Fin de vie | Archivage, destruction, suppression | Une fois |
 
 ### 3.3 Format de Documentation
 
-La documentation DOIT inclure :
-- Métadonnées (Date, Author, Version)
-- Contenu structuré (sections)
-- Historique des changements
+La documentation MUST inclure :
+- Metadata (Date, Author, Version)
+- Structured content (sections)
+- Historique des changes
 - Hash et signature
-- Références croisées
+- Cross-references
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
 ### 4.1 Structure de Documentation
 
 ```
 Documentation du Cycle de Vie
-├── Métadonnées
+├── Metadata
 │   ├── Agent ID
 │   ├── Date of Creation
 │   ├── Version
 │   └── Author
-├── Création
+├── Creation
 │   ├── Demande
-│   ├── Approbation
+│   ├── Approval
 │   └── Initialisation
-├── Déploiement
+├── Deployment
 │   ├── Configuration
-│   ├── Déploiement
-│   └── Vérification
-├── Opération
-│   ├── Opérations
+│   ├── Deployment
+│   └── Verification
+├── Operations
+│   ├── Operationss
 │   ├── Incidents
-│   └── Changements
+│   └── Changes
 ├── Maintenance
 │   ├── Maintenance
-│   ├── Mises à jour
+│   ├── Updates
 │   └── Tests
 ├── Fin de vie
 │   ├── Archivage
@@ -344,72 +344,76 @@ Documentation du Cycle de Vie
 
 ### 4.2 Registre de Documentation
 
-Chaque documentation DOIT être enregistrée avec :
+Chaque documentation MUST be recorded avec :
 - Agent ID
 - Date of Creation
 - Sections
-- Historique des changements
+- Historique des changes
 - Hash et signature
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. Vérifier documentation complète
-2. Vérifier mise à jour
-3. Vérifier accessibilité
-4. Vérifier immuabilité
-5. Vérifier signature
+**Mandatory Tests** :
+1. Verify complete documentation
+2. Verify update
+3. Verify accessibility
+4. Verify immutability
+5. Verify signature
 
-**Fréquence** : Mensuelle
+**Frequency**: Monthlyle
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Documentation absente | Révocation immédiate |
-| Documentation incomplète | Amende 25% CA |
-| Mise à jour manquante | Amende 20% CA |
-| Immuabilité compromise | Amende 30% CA |
-| Signature absente | Amende 15% CA |
-| Récidive | Interdiction permanente |
+| Missing documentation | Immediate revocation |
+| Incomplete documentation | Fine 25% annual revenue |
+| Missing update | Fine 20% annual revenue |
+| Immutability compromised | Fine 30% annual revenue |
+| Missing signature | Fine 15% annual revenue |
+| Recurrence | Permanent ban |
 
-### 5.3 Processus de Vérification
+### 5.3 Verification Process
 
-1. Vérification mensuelle
-2. Audit de complétude
-3. Vérification d'immuabilité
+1. Verification mensuelle
+2. Completeness audit
+3. Verification d'immutability
 4. Audit de signature
 5. Rapport de documentation
 
 ---
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
-**Calendrier de conformité** :
-- Nouveaux agents : Conformité obligatoire dès déploiement
-- Agents existants : Conformité obligatoire avant 1er janvier 2028
-- Agents critiques : Conformité obligatoire avant 1er juillet 2027
+**Compliance Calendar** :
+- New agents: Compliance mandatory from deployment
+- Existing agents: Compliance mandatory before January 1, 2028
+- Critical agents: Compliance mandatory before July 1, 2027
 
-**Dispositions transitoires** :
-- Agents existants : Audit de documentation avant 30 juin 2027
-- Système de documentation établi avant 1er janvier 2027
+**Transitional Provisions** :
+- Existing agents: Audit de documentation avant 30 juin 2027
+- Documentation system established before January 1, 2027
 
 ---
 
 ## RÉFÉRENCES
 
-- Axiom Ψ-IV : CIRCULUS VITAE
-- Article IV.4.1 : Création et Initialisation
-- Article IV.4.2 : Déploiement en Production
-- Article II.2.7 : Logging Immuable
+- Axiom Ψ-IV: CIRCULUS VITAE
+- Article IV.4.1: Creation et Initialisation
+- Article IV.4.2: Deployment en Production
+- Article II.2.7: Logging Immuable
 
 ---
 
-**Status** : Draft
+**Status**: Draft
 
+
+---
+
+**Next review**: June 2026

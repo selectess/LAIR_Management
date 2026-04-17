@@ -6,47 +6,47 @@ last_updated: 2026-03-30
 last_review: 2026-04-03
 Status: Final
 Version: Initiation
-Axiom: II
+axiom: II
 license: CC-BY-SA-4.0
 ---
 
-# SPÉCIFICATION DID POUR AGENTS AUTONOMES
-## Decentralized Identifiers pour Identité Agentique LAIRM
+# DID SPECIFICATION FOR AUTONOMOUS AGENTS
+## Decentralized Identifiers for LAIRM Agent Identity
 
 ---
 
-## 📋 Vue d'ensemble
+## 📋 Overview
 
-La spécification DID (Decentralized Identifiers) pour agents autonomes implémente l'**Axiom II (Identitas)** en fournissant un système d'identification décentralisé, vérifiable et immuable pour Each agent.
+The DID (Decentralized Identifiers) specification for autonomous agents implements **Axiom II (Identitas)** by providing a decentralized, verifiable, and immutable identification system for each agent.
 
-### Objectifs
-- ✅ Identité unique et vérifiable
-- ✅ Décentralisation (pas de point unique de défaillance)
-- ✅ Immuabilité des identifiants
-- ✅ Interoperability avec standards W3C
+### Objectives
+- ✅ Unique and verifiable identity
+- ✅ Decentralization (no single point of failure)
+- ✅ Immutability of identifiers
+- ✅ Interoperability with W3C standards
 
 ---
 
-## 🔑 Format DID
+## 🔑 DID Format
 
-### Syntaxe
+### Syntax
 
 ```
 did:lairm:agent:<method>:<identifier>
 
-Exemple:
+Example:
 did:lairm:agent:ethereum:0x1234567890abcdef
 did:lairm:agent:solana:9B5X3...
 did:lairm:agent:ipfs:QmXxxx...
 ```
 
-### Composants
+### Components
 
-- **Scheme**: `did` (standard W3C)
-- **Method**: `lairm` (méthode LAIRM)
-- **type**: `agent` (type d'entité)
+- **Scheme**: `did` (W3C standard)
+- **Method**: `lairm` (LAIRM method)
+- **Type**: `agent` (entity type)
 - **Blockchain**: `ethereum|solana|ipfs|...`
-- **Identifier**: Identifiant unique sur la blockchain
+- **Identifier**: Unique identifier on the blockchain
 
 ---
 
@@ -76,11 +76,11 @@ did:lairm:agent:ipfs:QmXxxx...
       "serviceEndpoint": "https://agent.example.com"
     }
   ],
-  "axiomes": {
-    "acceptes": ["I", "II", "III", "V", "VI"],
-    "conformite": {
+  "axioms": {
+    "accepted": ["I", "II", "III", "V", "VI"],
+    "compliance": {
       "score": 98,
-      "derniere_verification": "2026-03-30T10:00:00Z"
+      "last_verification": "2026-03-30T10:00:00Z"
     }
   },
   "created": "2026-03-30T10:00:00Z",
@@ -96,37 +96,37 @@ did:lairm:agent:ipfs:QmXxxx...
 
 ---
 
-## 🔐 Résolution DID
+## 🔐 DID Resolution
 
-### Processus de Résolution
+### Resolution Process
 
-1. **Parser** le DID
-2. **Identifier** la blockchain
-3. **Récupérer** le DID Document
-4. **Valider** la signature
-5. **Retourner** le document
+1. **Parse** the DID
+2. **Identify** the blockchain
+3. **Retrieve** the DID Document
+4. **Validate** the signature
+5. **Return** the document
 
-### Exemple
+### Example
 
 ```python
 from lairm_did import DIDResolver
 
 resolver = DIDResolver()
 
-# Résoudre un DID
+# Resolve a DID
 did = "did:lairm:agent:ethereum:0x1234567890abcdef"
 doc = resolver.resolve(did)
 
-# Vérifier la signature
+# Verify the signature
 if resolver.verify(doc):
-    print("DID valide et vérifiable")
+    print("DID valid and verifiable")
 else:
-    print("DID invalide")
+    print("DID invalid")
 ```
 
 ---
 
-## 🔗 Enregistrement sur Blockchain
+## 🔗 Blockchain Registration
 
 ### Ethereum
 
@@ -174,106 +174,106 @@ pub mod lairm_agent_registry {
 
 ---
 
-## 📊 Conformité LAIRM
+## 📊 LAIRM Compliance
 
 ### Axiom II (Identitas)
-- ✅ Identifiant unique immuable
-- ✅ Signature numérique obligatoire
-- ✅ Traçabilité complète
-- ✅ Audit trail décentralisé
+- ✅ Immutable unique identifier
+- ✅ Mandatory digital signature
+- ✅ Complete traceability
+- ✅ Decentralized audit trail
 
-### Axiom V (INTEROPERABILITAS)
-- ✅ Standard W3C DID
-- ✅ Interoperability multi-blockchain
-- ✅ Résolution standardisée
+### Axiom V (Interoperability)
+- ✅ W3C DID standard
+- ✅ Multi-blockchain interoperability
+- ✅ Standardized resolution
 
 ### Axiom VI (Auditum)
-- ✅ Historique immuable sur blockchain
-- ✅ Vérification cryptographique
-- ✅ Audit trail décentralisé
+- ✅ Immutable history on blockchain
+- ✅ Cryptographic verification
+- ✅ Decentralized audit trail
 
 ---
 
-## 🚀 Implémentation
+## 🚀 Implementation
 
-### Créer un DID
+### Create a DID
 
 ```python
 from lairm_did import DIDFactory
 
 factory = DIDFactory()
 
-# Créer un DID pour un agent
+# Create a DID for an agent
 did = factory.create_agent_did(
     agent_id="agent-001",
     blockchain="ethereum",
     public_key="0x...",
-    axiomes=["I", "II", "III", "V", "VI"]
+    axioms=["I", "II", "III", "V", "VI"]
 )
 
-print(f"DID créé: {did}")
+print(f"DID created: {did}")
 # Output: did:lairm:agent:ethereum:0x1234567890abcdef
 ```
 
-### Vérifier un DID
+### Verify a DID
 
 ```python
 from lairm_did import DIDVerifier
 
 verifier = DIDVerifier()
 
-# Vérifier un DID
+# Verify a DID
 is_valid = verifier.verify(
     did="did:lairm:agent:ethereum:0x1234567890abcdef",
     signature="0x..."
 )
 
 if is_valid:
-    print("DID valide")
+    print("DID valid")
 else:
-    print("DID invalide")
+    print("DID invalid")
 ```
 
 ---
 
-## 📈 Scalabilité
+## 📈 Scalability
 
 ### Performance
-- Résolution: < 100ms
-- Vérification: < 50ms
-- Enregistrement: < 2s (temps de bloc)
+- Resolution: < 100ms
+- Verification: < 50ms
+- Registration: < 2s (block time)
 
-### Capacité
-- Agents supportés: Illimité
-- Transactions par seconde: 1000+
-- Coût par enregistrement: < $1
+### Capacity
+- Supported agents: Unlimited
+- Transactions per second: 1000+
+- Cost per registration: < $1
 
 ---
 
 ## 🔄 Versioning
 
-### Version 1.0.0 (Actuelle)
-- ✅ Format DID de base
-- ✅ Support Ethereum/Solana
-- ✅ Résolution standardisée
-- ✅ Conformité LAIRM
+### Version 1.0.0 (Current)
+- ✅ Basic DID format
+- ✅ Ethereum/Solana support
+- ✅ Standardized resolution
+- ✅ LAIRM compliance
 
-### Version 1.1.0 (Planifiée)
-- ⏳ Support multi-blockchain
-- ⏳ Résolution distribuée
-- ⏳ Caching décentralisé
+### Version 1.1.0 (Planned)
+- ⏳ Multi-blockchain support
+- ⏳ Distributed resolution
+- ⏳ Decentralized caching
 
 ---
 
-## 📚 Références
+## 📚 References
 
 - [W3C DID Specification](https://www.w3.org/TR/did-core/)
-- [Axiom II - Identitas](../../02-COMPENDIUM-LEGISLATIF/Axiom-II-IDENTITAS/)
+- [Axiom II - Identitas](../../02-COMPENDIUM-LEGISLATIVE/Axiom-II-IDENTITAS/)
 - [Agent Passport Schema](../schemas/agent-passport-schema.json)
 - [MCP Protocol Specification](./mcp-protocol-spec.md)
 
 ---
 
-**Date of Creation**: 2025-03-18  
+**Date of Creation**: 2024-03-18  
 **Founder**: Mehdi Wahbi
 

@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - security audit
-  - security assessment
-  - vulnerability audit
-  - penetration testing
-  - security compliance
+tags:
+  - security-audit
+  - security-assessment
+  - vulnerability-audit
+  - penetration-testing
+  - security-compliance
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -362,13 +361,13 @@ impl SecurityAuditManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No security audit | Immediate revocation + 70% CA |
-| Unqualified auditor | Immediate revocation + 65% CA |
-| No penetration test | 60% CA fine |
-| Critical vulnerability not corrected | 70% CA fine |
-| Vulnerability not disclosed | 65% CA fine |
+| No security audit | Immediate revocation + 70% annual revenue |
+| Unqualified auditor | Immediate revocation + 65% annual revenue |
+| No penetration test | 60% annual revenue fine |
+| Critical vulnerability not corrected | 70% annual revenue fine |
+| Vulnerability not disclosed | 65% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Falsified audit | Immediate revocation + 80% CA |
+| Falsified audit | Immediate revocation + 80% annual revenue |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -411,3 +410,7 @@ impl SecurityAuditManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

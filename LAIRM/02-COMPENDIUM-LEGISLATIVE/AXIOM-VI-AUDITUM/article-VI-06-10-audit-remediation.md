@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - audit remediation
-  - corrective actions
-  - remediation tracking
-  - remediation verification
-  - remediation deadline
+tags:
+  - audit-remediation
+  - corrective-actions
+  - remediation-tracking
+  - remediation-verification
+  - remediation-deadline
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -310,13 +309,13 @@ impl AuditRemediationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No remediation plan | 50% CA fine |
-| Missing corrective actions | 40% CA fine |
-| Deadline missed | 55% CA fine |
-| Progress not tracked | 35% CA fine |
-| Remediation not verified | 45% CA fine |
+| No remediation plan | 50% annual revenue fine |
+| Missing corrective actions | 40% annual revenue fine |
+| Deadline missed | 55% annual revenue fine |
+| Progress not tracked | 35% annual revenue fine |
+| Remediation not verified | 45% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Falsified remediation | Immediate revocation + 70% CA |
+| Falsified remediation | Immediate revocation + 70% annual revenue |
 | Recurrence | Permanent ban |
 
 ---
@@ -341,3 +340,7 @@ impl AuditRemediationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

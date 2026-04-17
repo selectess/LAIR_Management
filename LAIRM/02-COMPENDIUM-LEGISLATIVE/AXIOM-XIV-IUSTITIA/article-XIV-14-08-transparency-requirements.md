@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
+tags:
   - transparency
-  - disclosure requirements
-  - public reporting
+  - disclosure-requirements
+  - public-reporting
   - accountability
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -240,11 +239,11 @@ impl TransparencyManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No public disclosure | 80% CA fine |
-| Allocation opacity | 82% CA fine |
-| Record inaccessibility | 80% CA fine |
-| No independent verification | 78% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No public disclosure | 80% annual revenue fine |
+| Allocation opacity | 82% annual revenue fine |
+| Record inaccessibility | 80% annual revenue fine |
+| No independent verification | 78% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -259,3 +258,7 @@ impl TransparencyManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

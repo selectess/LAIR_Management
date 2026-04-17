@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - fault tolerance
-  - tolerance requirements
-  - system redundancy
-  - failure handling
+tags:
+  - fault-tolerance
+  - tolerance-requirements
+  - system-redundancy
+  - failure-handling
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -109,10 +108,10 @@ class FaultToleranceManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No tolerance policy | 75% CA fine |
-| No redundancy | 82% CA fine |
-| No automatic failover | 80% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No tolerance policy | 75% annual revenue fine |
+| No redundancy | 82% annual revenue fine |
+| No automatic failover | 80% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -123,3 +122,7 @@ class FaultToleranceManager:
 
 ---
 
+
+---
+
+**Next review**: June 2026

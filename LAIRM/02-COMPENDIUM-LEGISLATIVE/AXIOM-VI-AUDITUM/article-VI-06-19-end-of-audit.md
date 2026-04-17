@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - end of audit
-  - audit closure
-  - audit report finalization
-  - audit archival
-  - audit completion
+tags:
+  - end-of-audit
+  - audit-closure
+  - audit-report-finalization
+  - audit-archival
+  - audit-completion
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -381,13 +380,13 @@ impl AuditClosureManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Audit not closed | 40% CA fine |
-| No final report | 35% CA fine |
-| Records not archived | 50% CA fine |
+| Audit not closed | 40% annual revenue fine |
+| No final report | 35% annual revenue fine |
+| Records not archived | 50% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| No next audit scheduled | 30% CA fine |
-| Archive integrity compromised | Immediate revocation + 60% CA |
-| Falsified closure | Immediate revocation + 70% CA |
+| No next audit scheduled | 30% annual revenue fine |
+| Archive integrity compromised | Immediate revocation + 60% annual revenue |
+| Falsified closure | Immediate revocation + 70% annual revenue |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -429,3 +428,7 @@ impl AuditClosureManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

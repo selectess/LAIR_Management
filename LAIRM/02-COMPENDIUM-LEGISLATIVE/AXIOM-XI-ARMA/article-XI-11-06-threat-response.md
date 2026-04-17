@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - threat response
-  - response protocols
-  - response timing
-  - response effectiveness
-  - response documentation
+tags:
+  - threat-response
+  - response-protocols
+  - response-timing
+  - response-effectiveness
+  - response-documentation
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -237,10 +236,10 @@ impl ThreatResponseManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Response time > 5s | 65% CA fine |
-| Effectiveness < 90% | 60% CA fine |
-| No documentation | 70% CA fine |
-| No verification | 55% CA fine |
+| Response time > 5s | 65% annual revenue fine |
+| Effectiveness < 90% | 60% annual revenue fine |
+| No documentation | 70% annual revenue fine |
+| No verification | 55% annual revenue fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -260,3 +259,7 @@ impl ThreatResponseManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

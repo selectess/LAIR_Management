@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - end of life
+tags:
+  - end-of-life
   - archival
   - lifecycle
-  - secure destruction
+  - secure-destruction
   - immutability
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -459,251 +458,255 @@ mod tests {
 }
 ```
 
-### 4.3 Processus de Fin de Vie Détaillé
+### 4.3 Detailed End-of-Life Process
 
 ```
 ┌──────────────────────────────────────┐
-│   Demande de Fin de Vie              │
-│   par Déployeur                      │
-│   (Raison documentée)                │
+│   End-of-Life Request                │
+│   by Deployer                        │
+│   (Documented Reason)                │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│  Vérification de Conformité          │
-│  - Pas de dépendances actives        │
-│  - Données transférées               │
-│  - Approbations obtenues (2 niveaux) │
-│  - Notification autorités            │
+│  Compliance Verification             │
+│  - No active dependencies            │
+│  - Data transferred                  │
+│  - Approvals obtained (2 levels)     │
+│  - Authority notification            │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│  Archivage Complet (100%)            │
-│  - Données de l'agent                │
-│  - Audit trail complet               │
+│  Complete Archival (100%)            │
+│  - Agent data                        │
+│  - Complete audit trail              │
 │  - Configuration                     │
-│  - Historique complet                │
-│  - Signature numérique (RSA-4096)    │
-│  - Vérification d'intégrité (SHA256) │
+│  - Complete history                  │
+│  - Digital signature (RSA-4096)      │
+│  - Integrity verification (SHA256)   │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│  Destruction Sécurisée (3x overwrite)│
-│  - Clés privées                      │
-│  - Clés publiques                    │
-│  - Certificats                       │
-│  - Tokens d'authentification         │
-│  - Vérification de destruction       │
+│  Secure Destruction (3x overwrite)   │
+│  - Private keys                      │
+│  - Public keys                       │
+│  - Certificates                      │
+│  - Authentication tokens             │
+│  - Destruction verification          │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│  Suppression du Registre             │
-│  - Registre actif                    │
-│  - Registre de déploiement           │
-│  - Registre de supervision           │
-│  - Enregistrement en archivage       │
+│  Registry Removal                    │
+│  - Active registry                   │
+│  - Deployment registry               │
+│  - Supervision registry              │
+│  - Archival recording                │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│  Enregistrement en Archivage Immuable│
-│  - Registre d'archivage (blockchain) │
-│  - Signature numérique               │
-│  - Timestamp UTC                     │
-│  - Accès permanent garanti           │
+│  Immutable Archival Recording        │
+│  - Archival registry (blockchain)    │
+│  - Digital signature                 │
+│  - UTC timestamp                     │
+│  - Permanent access guaranteed       │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│  Confirmation de Fin de Vie          │
-│  - Certificat de décommission        │
-│  - Accès à l'archive                 │
-│  - Rapport public                    │
+│  End-of-Life Confirmation            │
+│  - Decommission certificate          │
+│  - Archive access                    │
+│  - Public report                     │
 └──────────────────────────────────────┘
 ```
 
-### 4.4 Spécifications Technical Détaillées
+### 4.4 Detailed Technical Specifications
 
-| Aspect | Exigence | Détail |
-|--------|----------|--------|
-| Approbation | 2 niveaux | Technique, Opérationnel |
-| Archivage | 100% complet | Toutes données, audit trail |
-| Destruction | 3x overwrite | Sécurisé, vérifiable |
-| Immuabilité | Blockchain | Accès permanent |
-| Intégrité | SHA-256 | Vérifiable |
-| Signature | RSA-4096 | Immuable |
-| Délai | < 10 jours | Total du processus |
-| Notification | < 24 heures | Autorités et parties prenantes |
-| Accès | Permanent | Archive accessible indéfiniment |
-| Audit | Complet | Historique complet conservé |
+| Aspect | Requirement | Detail |
+|--------|-------------|--------|
+| Approval | 2 levels | Technical, Operational |
+| Archival | 100% complete | All data, audit trail |
+| Destruction | 3x overwrite | Secure, verifiable |
+| Immutability | Blockchain | Permanent access |
+| Integrity | SHA-256 | Verifiable |
+| Signature | RSA-4096 | Immutable |
+| Timeline | < 10 days | Total process |
+| Notification | < 24 hours | Authorities and stakeholders |
+| Access | Permanent | Archive accessible indefinitely |
+| Audit | Complete | Complete history preserved |
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. **Test d'Approbation** : Vérifier que 2 niveaux d'approbation sont présents
-   - Approbation technique
-   - Approbation opérationnelle
+**Mandatory tests** :
+1. **Approval Test**: Verify that 2 levels of approval are present
+   - Technical approval
+   - Operational approval
 
-2. **Test d'Archivage** : Vérifier que archivage est complet
-   - Toutes données archivées
-   - Audit trail complet
-   - Intégrité vérifiée (SHA-256)
-   - Signature valide (RSA-4096)
+2. **Archival Test**: Verify that archival is complete
+   - All data archived
+   - Complete audit trail
+   - Integrity verified (SHA-256)
+   - Valid signature (RSA-4096)
 
-3. **Test de Destruction** : Vérifier que clés sont détruites
-   - Destruction 3x overwrite effectuée
-   - Vérification de destruction
-   - Certificat de destruction
+3. **Destruction Test**: Verify that keys are destroyed
+   - 3x overwrite destruction performed
+   - Destruction verification
+   - Destruction certificate
 
-4. **Test de Suppression** : Vérifier que registre est supprimé
-   - Registre actif supprimé
-   - Registre de déploiement supprimé
-   - Registre de supervision supprimé
+4. **Removal Test**: Verify that registry is removed
+   - Active registry removed
+   - Deployment registry removed
+   - Supervision registry removed
 
-5. **Test d'Immuabilité** : Vérifier que archive est immuable
-   - Archive stockée en blockchain
-   - Accès permanent garanti
-   - Intégrité vérifiable
+5. **Immutability Test**: Verify that archive is immutable
+   - Archive stored in blockchain
+   - Permanent access guaranteed
+   - Integrity verifiable
 
-6. **Test d'Accessibilité** : Vérifier que archive est accessible
-   - Archive accessible indéfiniment
+6. **Accessibility Test**: Verify that archive is accessible
+   - Archive accessible indefinitely
    - Audit possible
-   - Historique complet conservé
+   - Complete history preserved
 
-7. **Test de Notification** : Vérifier que notifications sont envoyées
-   - Notification autorités < 24 heures
-   - Notification parties prenantes
-   - Registre public accessible
+7. **Notification Test**: Verify that notifications are sent
+   - Authority notification < 24 hours
+   - Stakeholder notification
+   - Public registry accessible
 
-8. **Test de Délai** : Vérifier que délai total < 10 jours
-   - Demande à approbation : < 5 jours
-   - Approbation à archivage : < 2 jours
-   - Archivage à destruction : < 1 jour
-   - Destruction à suppression : < 1 jour
-   - Suppression à confirmation : < 1 jour
+8. **Timeline Test**: Verify that total timeline < 10 days
+   - Request to approval : < 5 days
+   - Approval to archival : < 2 days
+   - Archival to destruction : < 1 day
+   - Destruction to removal : < 1 day
+   - Removal to confirmation : < 1 day
 
-**Fréquence** : À chaque fin de vie, audit complet annuel
+**Frequency**: At each end-of-life, complete annual audit
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
-| Violation | Gravité | Sanction | Délai |
-|-----------|---------|----------|-------|
-| Fin de vie sans approbation | Critique | Révocation immédiate + amende 35% CA | Immédiat |
-| Archivage incomplet | Critique | Révocation immédiate + amende 40% CA | Immédiat |
-| Clés non détruites | Critique | Révocation de licence | Immédiat |
-| Registre non supprimé | Haute | Amende 25% CA | 7 jours |
-| Archive non immuable | Critique | Révocation de licence | Immédiat |
-| Archive inaccessible | Critique | Révocation de licence | Immédiat |
-| Délai dépassé | Moyenne | Amende 15% CA | 14 jours |
-| Notification manquante | Moyenne | Amende 12% CA | 14 jours |
-| Intégrité compromise | Critique | Révocation immédiate | Immédiat |
-| Récidive (2e violation) | Critique | Interdiction 1 an | Immédiat |
-| Récidive (3e violation) | Critique | Interdiction permanente | Immédiat |
+| Violation | Severity | Sanction | Timeline |
+|-----------|----------|----------|----------|
+| End-of-life without approval | Critical | Immediate revocation + 35% annual revenue fine | Immediate |
+| Incomplete archival | Critical | Immediate revocation + 40% annual revenue fine | Immediate |
+| Keys not destroyed | Critical | License revocation | Immediate |
+| Registry not removed | High | 25% annual revenue fine | 7 days |
+| Archive not immutable | Critical | License revocation | Immediate |
+| Archive inaccessible | Critical | License revocation | Immediate |
+| Timeline exceeded | Medium | 15% annual revenue fine | 14 days |
+| Missing notification | Medium | 12% annual revenue fine | 14 days |
+| Integrity compromised | Critical | Immediate revocation | Immediate |
+| Recurrence (2nd violation) | Critical | 1-year ban | Immediate |
+| Recurrence (3rd violation) | Critical | Permanent ban | Immediate |
 
-**Calcul des amendes** :
-- CA = Chiffre d'affaires annuel de l'agent
+**Fine calculation** :
+- CA = Annual turnover of the agent
 - Minimum : €50,000
 - Maximum : €5,000,000
 
-### 5.3 Processus de Vérification
+### 5.3 Verification Process
 
-1. **Vérification avant fin de vie**
-   - Vérifier approbations (2 niveaux)
-   - Vérifier dépendances (aucune)
-   - Vérifier données transférées
+1. **Pre-end-of-life verification**
+   - Verify approvals (2 levels)
+   - Verify dependencies (none)
+   - Verify data transferred
 
-2. **Vérification d'archivage**
-   - Vérifier complétude (100%)
-   - Vérifier intégrité (SHA-256)
-   - Vérifier signature (RSA-4096)
-   - Vérifier immuabilité
+2. **Archival verification**
+   - Verify completeness (100%)
+   - Verify integrity (SHA-256)
+   - Verify signature (RSA-4096)
+   - Verify immutability
 
-3. **Vérification de destruction**
-   - Vérifier destruction 3x overwrite
-   - Vérifier certificat de destruction
-   - Vérifier audit trail
+3. **Destruction verification**
+   - Verify 3x overwrite destruction
+   - Verify destruction certificate
+   - Verify audit trail
 
-4. **Audit de conformité**
-   - Vérifier registre supprimé
-   - Vérifier archive accessible
-   - Vérifier notifications envoyées
-   - Vérifier délai respecté
+4. **Compliance audit**
+   - Verify registry removed
+   - Verify archive accessible
+   - Verify notifications sent
+   - Verify timeline respected
 
-5. **Rapport de fin de vie**
-   - Publié après décommission
-   - Accessible à tous
-   - Signature cryptographique
-   - Audit trail complet
+5. **End-of-life report**
+   - Published after decommission
+   - Accessible to all
+   - Cryptographic signature
+   - Complete audit trail
 
-### 5.4 Processus d'Appel
+### 5.4 Appeal Process
 
-1. **Notification de violation** (jour 1)
-   - Envoi de rapport détaillé
-   - Délai de réponse : 30 jours
+1. **Violation notification** (day 1)
+   - Detailed report sent
+   - Response deadline : 30 days
 
-2. **Soumission d'appel** (jours 2-30)
-   - Preuve de conformité
-   - Explications détaillées
-   - Documentation complète
+2. **Appeal submission** (days 2-30)
+   - Proof of compliance
+   - Detailed explanations
+   - Complete documentation
 
-3. **Examen d'appel** (jours 31-60)
-   - Révision par comité indépendant
-   - Vérification des preuves
-   - Décision motivée
+3. **Appeal examination** (days 31-60)
+   - Review by independent committee
+   - Evidence verification
+   - Reasoned decision
 
-4. **Décision finale** (jour 61)
-   - Confirmation ou annulation
-   - Notification officielle
-   - Publication du résultat
-
----
-
-## 6. ENTRÉE EN VIGUEUR
-
-**Date d'entrée en vigueur** : 1er janvier 2027
-
-**Calendrier de conformité** :
-- **Nouveaux agents** : Conformité obligatoire dès déploiement (avant 1er janvier 2027)
-- **Agents existants** : Conformité obligatoire avant 1er janvier 2028
-- **Agents critiques** : Conformité obligatoire avant 1er juillet 2027
-
-**Dispositions transitoires** :
-- **Phase 1 (0-3 mois)** : Mise en place processus d'approbation 2 niveaux
-- **Phase 2 (3-6 mois)** : Mise en place archivage immuable (blockchain)
-- **Phase 3 (6-9 mois)** : Mise en place destruction sécurisée
-- **Phase 4 (9-12 mois)** : Conformité complète
-
-**Obligations immédiates** :
-- Établir processus de fin de vie avant 1er janvier 2027
-- Documenter registre d'archivage avant 1er janvier 2027
-- Notifier autorités avant 1er janvier 2027
+4. **Final decision** (day 61)
+   - Confirmation or cancellation
+   - Official notification
+   - Result publication
 
 ---
 
-## 7. RÉFÉRENCES
+## 6. ENTRY INTO FORCE
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
-- Fondement : Cycle de vie complet de l'agent autonome
-- Principes : Fin de vie contrôlée, archivage immuable, destruction sécurisée
+**Entry into force date**: January 1, 2027
 
-**Articles connexes** :
-- Article IV.4.1 : Création et Initialisation
-- Article IV.4.2 : Déploiement en Production
-- Article IV.4.3 : Opération Continue
-- Article IV.4.4 : Maintenance et Mise à Jour
-- Article II.2.7 : Logging Immuable
+**Compliance timeline** :
+- **New agents**: Mandatory compliance upon deployment (before January 1, 2027)
+- **Existing agents**: Mandatory compliance before January 1, 2028
+- **Critical agents**: Mandatory compliance before July 1, 2027
 
-**Références externes** :
-- The Cybernetic Criterion.md : Principes d'archivage immuable
-- ISO 27001 : Gestion de la sécurité de l'information
-- ISO 27035 : Gestion des incidents de sécurité
-- NIST Cybersecurity Framework : Gestion des risques
-- GDPR : Droit à l'oubli et conservation des données
+**Transitional provisions** :
+- **Phase 1 (0-3 months)**: Implementation of 2-level approval process
+- **Phase 2 (3-6 months)**: Implementation of immutable archival (blockchain)
+- **Phase 3 (6-9 months)**: Implementation of secure destruction
+- **Phase 4 (9-12 months)**: Complete compliance
 
+**Immediate obligations** :
+- Establish end-of-life process before January 1, 2027
+- Document archival registry before January 1, 2027
+- Notify authorities before January 1, 2027
+
+---
+
+## 7. REFERENCES
+
+**Axiom Ψ-IV: CIRCULUS VITAE**
+- Foundation: Complete lifecycle of autonomous agent
+- Principles: Controlled end-of-life, immutable archival, secure destruction
+
+**Related articles** :
+- Article IV.4.1: Creation and Initialization
+- Article IV.4.2: Production Deployment
+- Article IV.4.3: Continuous Operation
+- Article IV.4.4: Maintenance and Updates
+- Article II.2.7: Immutable Logging
+
+**External references** :
+- The Cybernetic Criterion.md: Principles of immutable archival
+- ISO 27001: Information security management
+- ISO 27035: Information security incident management
+- NIST Cybersecurity Framework: Risk management
+- GDPR: Right to be forgotten and data retention
+
+
+---
+
+**Next review**: June 2026

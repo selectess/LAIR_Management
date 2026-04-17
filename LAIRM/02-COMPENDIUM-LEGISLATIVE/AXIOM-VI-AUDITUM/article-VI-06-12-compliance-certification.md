@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - compliance certification
-  - certification process
-  - certification standards
-  - certification audit
-  - certification validity
+tags:
+  - compliance-certification
+  - certification-process
+  - certification-standards
+  - certification-audit
+  - certification-validity
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -408,14 +407,14 @@ impl ComplianceCertificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No certification | Immediate revocation + 60% CA |
-| Unauthorized issuer | Immediate revocation + 55% CA |
-| Incomplete coverage | 50% CA fine |
-| Low compliance score | 45% CA fine |
+| No certification | Immediate revocation + 60% annual revenue |
+| Unauthorized issuer | Immediate revocation + 55% annual revenue |
+| Incomplete coverage | 50% annual revenue fine |
+| Low compliance score | 45% annual revenue fine |
 | Invalid signature | Immediate revocation |
-| Not publicly registered | 40% CA fine |
-| Expired certificate | 50% CA fine |
-| Falsified certificate | Immediate revocation + 75% CA |
+| Not publicly registered | 40% annual revenue fine |
+| Expired certificate | 50% annual revenue fine |
+| Falsified certificate | Immediate revocation + 75% annual revenue |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -457,3 +456,7 @@ impl ComplianceCertificationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

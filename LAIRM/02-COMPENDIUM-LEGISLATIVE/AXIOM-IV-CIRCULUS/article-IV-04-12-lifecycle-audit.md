@@ -8,54 +8,54 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Audit
-  - Cycle de Vie
-  - Immuabilité
-  - Blockchain
+  - audit
+  - lifecycle
+  - immutability
+  - blockchain
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article IV.4.12 : AUDIT DU CYCLE DE VIE
-## Axiom Ψ-IV : CIRCULUS VITAE
+# Article IV.4.12: LIFECYCLE AUDIT
+## Axiom Ψ-IV: CIRCULUS VITAE
 
 ---
 
-## 1. NORME IMPÉRATIVE
+## 1. IMPERATIVE NORM
 
-Tout agent autonome DOIT avoir un audit trail immuable et complet (100% couverture). L'audit trail DOIT être stocké en blockchain. L'audit trail DOIT être accessible publiquement. Les modifications must be impossibles (immuable). L'audit trail DOIT être vérifiable cryptographiquement.
+Every autonomous agent MUST have an immutable and complete audit trail (100% coverage). Audit trail MUST be stored in blockchain. Audit trail MUST be publicly accessible. Modifications must be impossible (immutable). Audit trail MUST be cryptographically verifiable.
 
-**Exigences minimales** :
-- Audit trail immuable (blockchain)
-- 100% couverture
-- Accessibilité publique
-- Vérification cryptographique (SHA-256)
-- Signature numérique (RSA-4096)
-- Notification autorités (< 24 heures)
-- Recours possible (appel)
-- Zéro tampering possible
+**Minimum Requirements** :
+- Immutable audit trail (blockchain)
+- 100% coverage
+- Public accessibility
+- Cryptographic verification (SHA-256)
+- Digital signature (RSA-4096)
+- Authority notification (< 24 hours)
+- Appeal mechanism available
+- Zero tampering possible
 
 ---
 
-## 2. FONDEMENT Legal
+## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
+**Axiom Ψ-IV: CIRCULUS VITAE**
 
-L'audit trail est essentiel pour la Responsibility et la conformité. Il DOIT être immuable et complet. Les défaillances d'audit constituent une violation grave.
+The audit trail is essential for responsibility and compliance. It MUST be immutable and complete. Audit failures constitute a serious violation.
 
-**Fundamental Principles** :
-- Audit trail immuable
-- 100% couverture
-- Accessibilité publique
-- Vérification cryptographique
+**Fundamental Principles**:
+- Audit trail immutable
+- 100% coverage
+- Public accessibility
+- Verification cryptographique
 - Responsibility attribuable
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
 ```python
 class AuditManager:
@@ -64,7 +64,7 @@ class AuditManager:
         self.storage = 'blockchain'
     
     def log_event(self, agent_id, event_type, details):
-        """Enregistre un événement"""
+        """Records an event"""
         event = {
             'event_id': str(uuid.uuid4()),
             'agent_id': agent_id,
@@ -72,12 +72,12 @@ class AuditManager:
             'details': details,
             'timestamp': datetime.utcnow().isoformat(),
             'hash': self.compute_hash(details),
-            'Status': 'recorded'
+            'status': 'recorded'
         }
         return event
     
     def verify_audit_trail(self, agent_id):
-        """Vérifie l'audit trail"""
+        """Verifies the audit trail"""
         events = self.get_events(agent_id)
         for event in events:
             if not self.verify_integrity(event):
@@ -87,29 +87,29 @@ class AuditManager:
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
-### 4.1 Cas d'Étude Réels
+### 4.1 Real-World Case Studies
 
-#### Cas 1 : TradeBot3000 - Audit Trail Gaps (Q1 2026)
-- **Incident** : Audit trail gaps causing compliance violations
+#### Case 1: TradeBot3000 - Audit Trail Gaps (Q1 2026)
+- **Incident**: Audit trail gaps causing compliance violations
 - **Perte** : $2.0M
-- **Résolution** : 100% audit trail coverage implémenté
-- **Indemnisation** : $2.0M + 20% pénalité
+- **Resolution** : 100% audit trail coverage implemented
+- **Compensation** : $2.0M + 20% penalty
 
-#### Cas 2 : HealthBot - Audit Trail Tampering (Q1 2026)
-- **Incident** : Tampering with audit trail causing integrity issues
+#### Case 2: HealthBot - Audit Trail Tampering (Q1 2026)
+- **Incident**: Tampering with audit trail causing integrity issues
 - **Dommages** : €2.5M
-- **Résolution** : Blockchain audit trail implémenté
-- **Indemnisation** : €2.5M + 25% pénalité
+- **Resolution**: Blockchain audit trail implemented
+- **Compensation** : €2.5M + 25% penalty
 
-#### Cas 3 : SupplyChainX - Incomplete Logging (Q1 2026)
-- **Incident** : Incomplete logging causing audit failures
+#### Case 3: SupplyChainX - Incomplete Logging (Q1 2026)
+- **Incident**: Incomplete logging causing audit failures
 - **Dommages** : €1.5M
-- **Résolution** : Immuable audit trail implémenté
-- **Indemnisation** : €1.5M + 20% pénalité
+- **Resolution**: Immuable audit trail implemented
+- **Compensation** : €1.5M + 20% penalty
 
-### 4.2 Implémentation Rust
+### 4.2 Reference Code (Rust)
 
 ```rust
 use chrono::{DateTime, Utc};
@@ -169,82 +169,82 @@ impl AuditManager {
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. Vérifier couverture 100%
-2. Vérifier immuabilité
-3. Vérifier accessibilité
-4. Vérifier intégrité
-5. Vérifier signature
-6. Vérifier blockchain
-7. Vérifier notification
-8. Vérifier vérifiabilité
+**Mandatory Tests** :
+1. Verify couverture 100%
+2. Verify immutability
+3. Verify accessibility
+4. Verify integrity
+5. Verify signature
+6. Verify blockchain
+7. Verify notification
+8. Verify verifiability
 
-**Fréquence** : Continu, audit complet mensuel
+**Frequency**: Continuous; full audit monthly
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Audit trail gaps | Amende 20% CA |
-| Tampering detected | Révocation de licence |
-| Couverture < 100% | Amende 20% CA |
-| Accessibilité perdue | Amende 15% CA |
-| Intégrité compromise | Révocation immédiate |
-| Signature invalide | Révocation immédiate |
-| Blockchain failure | Révocation de licence |
-| Récidive | Interdiction permanente |
+| Audit trail gaps | Fine 20% annual revenue |
+| Tampering detected | License revocation |
+| Couverture < 100% | Fine 20% annual revenue |
+| Accessibility lost | Fine 15% annual revenue |
+| Integrity compromised | Immediate revocation |
+| Invalid signature | Immediate revocation |
+| Blockchain failure | License revocation |
+| Recurrence | Permanent ban |
 
 ---
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
 ---
 
 ## 7. RÉFÉRENCES
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
-- Fondement : Cycle de vie complet
-- Principes : Audit trail immuable, 100% couverture
+**Axiom Ψ-IV: CIRCULUS VITAE**
+- Foundation: Complete lifecycle
+- Principes: Audit trail immutable, 100% couverture
 
-## Axiom Ψ-IV : CIRCULUS VITAE
-
----
-
-## 1. NORME IMPÉRATIVE
-
-Tout agent autonome DOIT être audité régulièrement. L'audit DOIT être indépendant et impartial. Les résultats must be documentés et signés. Les non-conformités must be corrigées dans les délais impartis.
-
-**Exigences minimales** :
-- Audit régulier obligatoire
-- Indépendance garantie
-- Documentation complète
-- Signature numérique
-- Correction obligatoire
+## Axiom Ψ-IV: CIRCULUS VITAE
 
 ---
 
-## 2. FONDEMENT Legal
+## 1. IMPERATIVE NORM
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
+Every autonomous agent MUST be audited regularly. The audit MUST be independent and impartial. Results must be documented and signed. Non-compliances must be corrected within prescribed deadlines.
 
-L'audit est essentiel pour vérifier la conformité. Il DOIT être indépendant et impartial pour garantir l'intégrité.
+**Minimum Requirements** :
+- Regular audit mandatory
+- Independence guaranteed
+- Complete documentation
+- Digital signature
+- Correction mandatory
 
-**Fundamental Principles** :
-- Audit régulier
-- Indépendance
-- Impartialité
+---
+
+## 2. LEGAL FOUNDATION
+
+**Axiom Ψ-IV: CIRCULUS VITAE**
+
+Audit is essential to verify compliance. It MUST be independent and impartial to guarantee integrity.
+
+**Fundamental Principles**:
+- Audit regular
+- Independence
+- Impartiality
 - Documentation
 - Correction
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
 ### 3.1 Processus d'Audit
 
@@ -257,36 +257,36 @@ class AuditManager:
             'audit_id': str(uuid.uuid4()),
             'type': audit_type,
             'scheduled_date': datetime.utcnow().isoformat(),
-            'Status': 'scheduled',
+            'status': 'scheduled',
             'findings': []
         }
         
-        # Enregistrer audit
+        # Record audit
         self.log_audit_schedule(audit)
         
         return audit
     
     def execute_audit(self, audit_id):
-        """Exécute un audit"""
+        """Executes a audit"""
         audit = self.get_audit(audit_id)
         agent_id = audit['agent_id']
         
-        # Vérifier création
+        # Verify creation
         creation_check = self.verify_creation(agent_id)
         
-        # Vérifier déploiement
+        # Verify deployment
         deployment_check = self.verify_deployment(agent_id)
         
-        # Vérifier opération
+        # Verify operations
         operation_check = self.verify_operation(agent_id)
         
-        # Vérifier maintenance
+        # Verify maintenance
         maintenance_check = self.verify_maintenance(agent_id)
         
-        # Vérifier fin de vie
+        # Verify fin de vie
         eol_check = self.verify_end_of_life(agent_id)
         
-        # Compiler résultats
+        # Compiler results
         audit['findings'] = [
             creation_check,
             deployment_check,
@@ -295,13 +295,13 @@ class AuditManager:
             eol_check
         ]
         
-        # Calculer score de conformité
+        # Calculer score de compliance
         audit['compliance_score'] = self.calculate_compliance_score(audit['findings'])
         
         # Signer audit
         audit['signature'] = self.sign_audit(audit)
         
-        # Enregistrer résultats
+        # Record results
         self.log_audit_results(audit)
         
         audit['Status'] = 'completed'
@@ -309,7 +309,7 @@ class AuditManager:
         return audit
     
     def report_audit_findings(self, audit_id):
-        """Génère un rapport d'audit"""
+        """Generates a rapport d'audit"""
         audit = self.get_audit(audit_id)
         
         report = {
@@ -327,25 +327,25 @@ class AuditManager:
 
 ### 3.2 Types d'Audit
 
-| type | Fréquence | Durée | Scope |
+| Type | Frequency | Duration | Scope |
 |------|-----------|-------|-------|
-| Audit complet | Annuelle | 2-3 jours | Tous les aspects |
-| Audit de conformité | Semestrielle | 1 jour | Conformité |
-| Audit de sécurité | Trimestrielle | 1 jour | Sécurité |
-| Audit de performance | Mensuelle | 4 heures | Performance |
+| Audit complet | Annualle | 2-3 days | Tous les aspects |
+| Audit de compliance | Semi-annualle | 1 jour | Compliance |
+| Audit de security | Quarterlyle | 1 jour | Security |
+| Audit de performance | Monthlyle | 4 heures | Performance |
 
-### 3.3 Critères d'Audit
+### 3.3 Audit Criteria
 
-L'audit DOIT vérifier :
-- Création conforme
-- Déploiement conforme
-- Opération conforme
+L'audit MUST verify :
+- Creation conforme
+- Deployment conforme
+- Operations conforme
 - Maintenance conforme
 - Fin de vie conforme
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
 ### 4.1 Processus d'Audit
 
@@ -357,32 +357,32 @@ L'audit DOIT vérifier :
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Vérification de Création           │
-│   (Identité, Configuration)          │
+│   Verification de Creation           │
+|   (Identity, Configuration)          |
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Vérification de Déploiement        │
-│   (Production, Vérification)         │
+│   Verification de Deployment        │
+│   (Production, Verification)         │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Vérification d'Opération           │
-│   (Continuité, Incidents)            │
+│   Verification d'Operations           │
+|   (Continuity, Incidents)            |
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Vérification de Maintenance        │
-│   (Mises à jour, Tests)              │
+│   Verification de Maintenance        │
+|   (Updates, Tests)                   |
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Compilation des Résultats          │
-│   (Score de conformité)              │
+|   Results Compilation                |
+│   (Score de compliance)              │
 └────────────┬─────────────────────────┘
              │
              ▼
@@ -394,73 +394,77 @@ L'audit DOIT vérifier :
 
 ### 4.2 Registre d'Audit
 
-Chaque audit DOIT être enregistré avec :
+Each audit MUST be recorded with:
 - Audit ID
 - Agent ID
 - type d'audit
-- Résultats
-- Score de conformité
+- Results
+- Score de compliance
 - Signature
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. Vérifier audit planifié
-2. Vérifier audit exécuté
-3. Vérifier résultats documentés
-4. Vérifier signature
-5. Vérifier corrections
+**Mandatory Tests** :
+1. Verify audit scheduled
+2. Verify audit executed
+3. Verify results documented
+4. Verify signature
+5. Verify corrections
 
-**Fréquence** : Annuelle
+**Frequency**: Annualle
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Pas d'audit | Révocation immédiate |
-| Audit incomplet | Amende 30% CA |
-| Résultats non documentés | Amende 25% CA |
-| Signature absente | Amende 20% CA |
-| Corrections non effectuées | Amende 25% CA |
-| Récidive | Interdiction permanente |
+| Pas d'audit | Immediate revocation |
+| Audit incomplet | Fine 30% annual revenue |
+| Results non documented | Fine 25% annual revenue |
+| Missing signature | Fine 20% annual revenue |
+| Corrections non madees | Fine 25% annual revenue |
+| Recurrence | Permanent ban |
 
-### 5.3 Processus de Vérification
+### 5.3 Verification Process
 
-1. Vérification annuelle
-2. Audit indépendant
-3. Vérification de résultats
+1. Verification annuelle
+2. Audit independent
+3. Verification de results
 4. Suivi des corrections
 5. Rapport d'audit
 
 ---
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
-**Calendrier de conformité** :
-- Nouveaux agents : Audit obligatoire avant 6 mois
-- Agents existants : Audit obligatoire avant 1er janvier 2028
-- Agents critiques : Audit obligatoire avant 1er juillet 2027
+**Compliance Calendar** :
+- New agents: Audit mandatory avant 6 mois
+- Existing agents: Audit mandatory before January 1, 2028
+- Agents criticals: Audit mandatory before July 1, 2027
 
-**Dispositions transitoires** :
-- Agents existants : Premier audit avant 30 juin 2027
-- Auditeurs certifiés avant 1er janvier 2027
+**Transitional Provisions** :
+- Existing agents: Premier audit avant 30 juin 2027
+- Auditeurs certifieds before January 1, 2027
 
 ---
 
 ## RÉFÉRENCES
 
-- Axiom Ψ-IV : CIRCULUS VITAE
-- Article IV.4.1 : Création et Initialisation
-- Article IV.4.11 : Documentation du Cycle de Vie
-- Article VI.6.1 : Audit Général
+- Axiom Ψ-IV: CIRCULUS VITAE
+- Article IV.4.1: Creation et Initialisation
+- Article IV.4.11: Documentation du Cycle de Vie
+- Article VI.6.1: General Audit
 
 ---
 
-**Status** : Draft
+**Status**: Draft
 
+
+---
+
+**Next review**: June 2026

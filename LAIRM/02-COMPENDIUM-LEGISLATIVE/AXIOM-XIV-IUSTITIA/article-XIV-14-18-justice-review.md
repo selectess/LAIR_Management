@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - justice review
-  - comprehensive review
-  - system review
-  - effectiveness review
+tags:
+  - justice-review
+  - comprehensive-review
+  - system-review
+  - effectiveness-review
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -268,11 +267,11 @@ impl ReviewManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No review | 85% CA fine |
-| Non-independent review | 82% CA fine |
-| Findings not published | 80% CA fine |
-| Recommendations ignored | 88% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No review | 85% annual revenue fine |
+| Non-independent review | 82% annual revenue fine |
+| Findings not published | 80% annual revenue fine |
+| Recommendations ignored | 88% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -287,3 +286,7 @@ impl ReviewManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

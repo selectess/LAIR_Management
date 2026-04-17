@@ -44,7 +44,7 @@ The axiom is organized into three thematic groups addressing lifecycle phases:
 - Maintenance and updates
 - End-of-life and archival
 
-**Group 2: Operational Continuity (Articles 6-11)**
+**Group 2: Operational Continuousity (Articles 6-11)**
 - State transitions and versioning
 - Service continuity requirements
 - Emergency recovery procedures
@@ -67,7 +67,7 @@ The axiom is organized into three thematic groups addressing lifecycle phases:
 
 **State Transition**: Documented movement from one lifecycle phase to another, requiring approval and audit.
 
-**Service Continuity**: Uninterrupted operation of agent functions despite maintenance, updates, or incidents.
+**Service Continuousity**: Uninterrupted operation of agent functions despite maintenance, updates, or incidents.
 
 **Rollback Capability**: Ability to revert to previous agent versions if updates cause problems.
 
@@ -89,7 +89,7 @@ The axiom is organized into three thematic groups addressing lifecycle phases:
 - Maintenance windows: Scheduled service interruptions
 - Performance optimization: Efficiency improvements
 
-### Continuity and Recovery
+### Continuousity and Recovery
 - Backup frequency: Regular automated backups
 - Recovery procedures: Tested restoration processes
 - Failover mechanisms: Automatic redundancy
@@ -158,3 +158,7 @@ Non-compliance with lifecycle requirements triggers:
 **Date of Creation**: 2024-03-18  
 **Founder**: Mehdi Wahbi  
 **Next Review**: January 2027
+
+---
+
+**Next review**: June 2026

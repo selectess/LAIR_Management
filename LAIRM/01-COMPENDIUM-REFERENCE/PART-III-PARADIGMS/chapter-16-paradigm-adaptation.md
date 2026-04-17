@@ -8,12 +8,12 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
+tags:
   - adaptation
   - localization
   - jurisdiction
-  - cultural sensitivity
-  - legal compliance
+  - cultural-sensitivity
+  - legal-compliance
 internal_references:
   - chapter-15-paradigm-audit.md
   - ../PART-II-DIMENSIONS/chapter-07-legal-dimension.md
@@ -102,3 +102,7 @@ Local adaptation (jurisdiction-specific configuration, cultural sensitivity, loc
 
 ---
 
+
+---
+
+**Next review**: June 2026

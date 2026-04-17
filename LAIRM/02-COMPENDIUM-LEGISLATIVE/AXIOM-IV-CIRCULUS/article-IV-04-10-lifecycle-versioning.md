@@ -1,74 +1,74 @@
 ---
-title: "Article IV.4.10 : Versioning du Cycle de Vie"
-Axiom: Ψ-IV
-numero: IV.4.10
+title: "Article IV.4.10: Lifecycle Versioning"
+axiom: Ψ-IV
+article_number: IV.4.10
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Versioning
-  - Cycle de Vie
-  - Atomicité
-  - Rollback
+  - versioning
+  - lifecycle
+  - atomicity
+  - rollback
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article IV.4.10 : VersionING DU CYCLE DE VIE
-## Axiom Ψ-IV : CIRCULUS VITAE
+# Article IV.4.10: LIFECYCLE VERSIONING
+## Axiom Ψ-IV: CIRCULUS VITAE
 
 ---
 
-## 1. NORME IMPÉRATIVE
+## 1. IMPERATIVE NORM
 
-Tout agent autonome DOIT avoir un système de Versioning complet et atomique. Chaque Version DOIT être identifiée de manière unique. Les Versions must be traçables et immuables. Le rollback DOIT être possible vers toute Version antérieure (< 5 minutes). Les Versions must be testées avant déploiement.
+Every autonomous agent MUST have a complete and atomic versioning system. Each version MUST be uniquely identified. Versions must be traceable and immutable. Rollback MUST be possible to any previous version (< 5 minutes). Versions must be tested before deployment.
 
-**Exigences minimales** :
-- Versioning unique (semantic Versioning)
-- Atomicité garantie (tout-ou-rien)
-- Traçabilité complète (immuable)
+**Minimum Requirements** :
+- Unique versioning (semantic versioning)
+- Guaranteed atomicity (all-or-nothing)
+- Complete traceability (immutable)
 - Rollback possible (< 5 minutes)
-- Tests obligatoires (100% couverture)
-- Signature numérique (RSA-4096)
-- Audit trail immuable (blockchain)
-- Notification autorités (< 24 heures)
-- Recours possible (appel)
-- Zéro Version non-testée
-- Traçabilité complète
-- Immuabilité garantie
+- Mandatory tests (100% coverage)
+- Digital signature (RSA-4096)
+- Immutable audit trail (blockchain)
+- Authority notification (< 24 hours)
+- Appeal possible
+- Zero untested version
+- Complete traceability
+- Guaranteed immutability
 - Rollback possible
-- Documentation complète
+- Complete documentation
 
 ---
 
-## 2. FONDEMENT Legal
+## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
+**Axiom Ψ-IV: CIRCULUS VITAE**
 
-Le Versioning est essentiel pour la gestion du cycle de vie. Il DOIT permettre la traçabilité complète et le rollback en cas de problème.
+Versioning is essential for lifecycle management. It MUST enable complete traceability and rollback in case of issues.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Versioning unique
-- Traçabilité
-- Immuabilité
+- Traceability
+- Immutability
 - Rollback
 - Documentation
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
 ### 3.1 Processus de Versioning
 
 ```python
 class VersioningManager:
     def create_Version(self, agent_id, changes, Version_type='patch'):
-        """Crée une nouvelle Version"""
+        """Creates a new version"""
         agent = self.get_agent(agent_id)
         current_Version = agent.get('Version', '1.0.0')
         
@@ -87,47 +87,47 @@ class VersioningManager:
             'signature': self.sign_Version(agent, new_Version)
         }
         
-        # Enregistrer Version
+        # Record Version
         self.store_Version(Version)
         
-        # Mettre à jour agent
+        # Update agent
         agent['Version'] = new_Version
         agent['Version_history'] = agent.get('Version_history', []) + [Version]
         
         return Version
     
     def rollback_to_Version(self, agent_id, target_Version):
-        """Revient à une Version antérieure"""
-        # Récupérer Version cible
+        """Reverts to a previous version"""
+        # Retrieve target version
         target = self.get_Version(agent_id, target_Version)
         
-        # Vérifier signature
+        # Verify signature
         if not self.verify_Version_signature(target):
             raise ValueError("Version signature verification failed")
         
-        # Créer backup de Version actuelle
+        # Create backup of current version
         current_Version = self.get_agent(agent_id)['Version']
         backup = self.create_Version_backup(agent_id, current_Version)
         
         try:
-            # Restaurer Version cible
+            # Restoresr Version cible
             agent = self.get_agent(agent_id)
             agent['state'] = target['state']
             agent['configuration'] = target['configuration']
             agent['Version'] = target_Version
             
-            # Enregistrer rollback
+            # Record rollback
             self.log_rollback(agent_id, current_Version, target_Version)
             
         except Exception as e:
-            # Restaurer backup
+            # Restoresr backup
             self.restore_Version_backup(agent_id, backup)
             raise
         
-        return {'Status': 'rolled_back', 'Version': target_Version}
+        return {'status': 'rolled_back', 'Version': target_Version}
 ```
 
-### 3.2 Schéma de Versioning
+### 3.2 Versioning Schema
 
 | Composant | Format | Exemple |
 |-----------|--------|---------|
@@ -138,17 +138,17 @@ class VersioningManager:
 
 ### 3.3 Historique de Version
 
-Chaque Version DOIT inclure :
-- Numéro de Version
+Chaque Version MUST inclure :
+- Version number
 - Date of Creation
-- Changements apportés
-- Version précédente
+- Changes applied
+- Previous version
 - État de l'agent
 - Hash et signature
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
 ### 4.1 Arbre de Versioning
 
@@ -174,97 +174,97 @@ v1.0.0 (Initial)
 
 ### 4.2 Registre de Versioning
 
-Chaque Version DOIT être enregistrée avec :
-- Numéro de Version
+Chaque Version MUST be recorded avec :
+- Version number
 - Date of Creation
-- Changements
-- Version précédente
+- Changes
+- Previous version
 - Hash et signature
 - Status de rollback
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. Vérifier Versioning unique
-2. Vérifier traçabilité
-3. Vérifier immuabilité
-4. Vérifier rollback
-5. Vérifier documentation
+**Mandatory Tests** :
+1. Verify Versioning unique
+2. Verify traceability
+3. Verify immutability
+4. Verify rollback
+5. Verify documentation
 
-**Fréquence** : À chaque Version
+**Frequency** : À chaque Version
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Versioning absent | Révocation immédiate |
-| Traçabilité manquante | Amende 25% CA |
-| Immuabilité compromise | Amende 30% CA |
-| Rollback impossible | Amende 20% CA |
-| Documentation absente | Amende 15% CA |
-| Récidive | Interdiction permanente |
+| Versioning absent | Immediate revocation |
+| Missing traceability | Fine 25% annual revenue |
+| Immutability compromised | Fine 30% annual revenue |
+| Rollback impossible | Fine 20% annual revenue |
+| Missing documentation | Fine 15% annual revenue |
+| Recurrence | Permanent ban |
 
-### 5.3 Processus de Vérification
+### 5.3 Verification Process
 
-1. Vérification à chaque Version
-2. Audit de traçabilité
+1. Verification at each version
+2. Audit de traceability
 3. Test de rollback
-4. Vérification d'immuabilité
+4. Verify immutability
 5. Rapport de Versioning
 
 ---
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
-**Calendrier de conformité** :
-- Nouveaux agents : Conformité obligatoire dès déploiement
-- Agents existants : Conformité obligatoire avant 1er janvier 2028
-- Agents critiques : Conformité obligatoire avant 1er juillet 2027
+**Compliance Calendar** :
+- New agents: Compliance mandatory from deployment
+- Existing agents: Compliance mandatory before January 1, 2028
+- Critical agents: Compliance mandatory before July 1, 2027
 
-**Dispositions transitoires** :
-- Agents existants : Audit de Versioning avant 30 juin 2027
-- Système de Versioning établi avant 1er janvier 2027
+**Transitional Provisions** :
+- Existing agents: Audit de Versioning avant 30 juin 2027
+- Versioning system established before January 1, 2027
 
 ---
 
 ## RÉFÉRENCES
 
-- Axiom Ψ-IV : CIRCULUS VITAE
-- Article IV.4.4 : Maintenance et Mise à Jour
-- Article IV.4.6 : Transition d'État
-- Article II.2.8 : Versioning
+- Axiom Ψ-IV: CIRCULUS VITAE
+- Article IV.4.4: Maintenance and Updates
+- Article IV.4.6: Transition d'État
+- Article II.2.8: Versioning
 
 ---
 
-**Status** : Draft  
+**Status**: Draft  
 ---
 
-## 2. FONDEMENT Legal
+## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
+**Axiom Ψ-IV: CIRCULUS VITAE**
 
-Le Versioning est essentiel pour la traçabilité et la Responsibility. Chaque Version DOIT être identifiée et traçable. Les Versions non-testées constituent une violation grave.
+Versioning is essential for traceability and responsibility. Each version MUST be identified and traceable. Untested versions constitute a serious violation.
 
-**Fundamental Principles** :
-- Versioning unique et immuable
-- Atomicité garantie (tout-ou-rien)
-- Traçabilité complète
+**Fundamental Principles**:
+- Versioning unique et immutable
+- Guaranteed atomicity (all-or-nothing)
+- Complete traceability
 - Rollback possible et rapide (< 5 minutes)
-- Tests obligatoires (100% couverture)
+- Tests mandatorys (100% coverage)
 - Responsibility attribuable
 - Transparency publique
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
-### 3.1 Système de Versioning
+### 3.1 Versioning System
 
 ```python
 class VersioningManager:
@@ -273,7 +273,7 @@ class VersioningManager:
         self.Version_format = 'semantic'  # major.minor.patch
     
     def create_Version(self, agent_id, Version_string, changes):
-        """Crée une nouvelle Version"""
+        """Creates a new version"""
         Version = {
             'Version_id': str(uuid.uuid4()),
             'agent_id': agent_id,
@@ -281,7 +281,7 @@ class VersioningManager:
             'changes': changes,
             'created': datetime.utcnow().isoformat(),
             'tested': False,
-            'Status': 'draft'
+            'status': 'draft'
         }
         return Version
     
@@ -289,7 +289,7 @@ class VersioningManager:
         """Teste une Version"""
         Version = self.get_Version(Version_id)
         
-        # Exécuter tests
+        # Execute tests
         test_results = {
             'unit_tests': self.run_unit_tests(Version),
             'integration_tests': self.run_integration_tests(Version),
@@ -303,7 +303,7 @@ class VersioningManager:
         return test_results
     
     def deploy_Version(self, Version_id):
-        """Déploie une Version"""
+        """Deploys a version"""
         Version = self.get_Version(Version_id)
         
         if not Version['tested']:
@@ -318,7 +318,7 @@ class VersioningManager:
         """Effectue un rollback"""
         start_time = time.time()
         
-        # Restaurer Version antérieure
+        # Restore previous version
         self.restore_Version(agent_id, target_Version)
         
         rollback_time = time.time() - start_time
@@ -330,48 +330,48 @@ class VersioningManager:
             'agent_id': agent_id,
             'target_Version': target_Version,
             'rollback_time': rollback_time,
-            'Status': 'success'
+            'status': 'success'
         }
 ```
 
-### 3.2 Spécifications de Versioning
+### 3.2 Versioning Specifications
 
-| Métrique | Exigence | Détail |
+| Metric | Requirement | Detail |
 |----------|----------|--------|
 | Format | Semantic | major.minor.patch |
-| Atomicité | Tout-ou-rien | Rollback automatique |
+| Atomicity | All-or-nothing | Automatic rollback |
 | Rollback | < 5 minutes | Rapide et fiable |
-| Tests | 100% couverture | Unitaires, intégration, sécurité |
-| Traçabilité | Immuable | Blockchain |
+| Tests | 100% coverage | Unit, integration, security |
+| Traceability | Immuable | Blockchain |
 | Signature | RSA-4096 | Immuable |
 | Audit trail | Immuable | Blockchain |
-| Notification | < 24 heures | Autorités et parties prenantes |
+| Notification | < 24 heures | Authorities et parties prenantes |
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
-### 4.1 Cas d'Étude Réels
+### 4.1 Real-World Case Studies
 
-#### Cas 1 : TradeBot3000 - Version Mismatch (Q1 2026)
-- **Incident** : Version mismatch causing state inconsistency
-- **Perte** : $2.1M
-- **Résolution** : Atomic Versioning implémenté
-- **Indemnisation** : $2.1M + 25% pénalité
+#### Case 1: TradeBot3000 - Version Mismatch (Q1 2026)
+- **Incident**: Version mismatch causing state inconsistency
+- **Loss** : $2.1M
+- **Resolution**: Atomic Versioning implemented
+- **Compensation** : $2.1M + 25% penalty
 
-#### Cas 2 : HealthBot - Rollback Échoué (Q1 2026)
-- **Incident** : Rollback failure causing data corruption
+#### Case 2: HealthBot - Failed Rollback (Q1 2026)
+- **Incident**: Rollback failure causing data corruption
 - **Dommages** : €1.8M
-- **Résolution** : Rollback < 5 minutes implémenté
-- **Indemnisation** : €1.8M + 30% pénalité
+- **Resolution**: Rollback < 5 minutes implemented
+- **Compensation** : €1.8M + 30% penalty
 
-#### Cas 3 : SupplyChainX - Non-Atomic Update (Q1 2026)
-- **Incident** : Non-atomic Version update causing partial state
+#### Case 3: SupplyChainX - Non-Atomic Update (Q1 2026)
+- **Incident**: Non-atomic Version update causing partial state
 - **Dommages** : €900k
-- **Résolution** : Atomicité garantie
-- **Indemnisation** : €900k + 20% pénalité
+- **Resolution**: Guaranteed atomicity
+- **Compensation** : €900k + 20% penalty
 
-### 4.2 Implémentation Rust
+### 4.2 Reference Code (Rust)
 
 ```rust
 use chrono::{DateTime, Utc};
@@ -468,56 +468,60 @@ mod tests {
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. Vérifier Versioning unique
-2. Vérifier atomicité
-3. Vérifier tests complétés
-4. Vérifier rollback < 5 minutes
-5. Vérifier traçabilité
-6. Vérifier signature
-7. Vérifier audit trail
-8. Vérifier notification
+**Mandatory Tests** :
+1. Verify Versioning unique
+2. Verify atomicity
+3. Verify tests completed
+4. Verify rollback < 5 minutes
+5. Verify traceability
+6. Verify signature
+7. Verify audit trail
+8. Verify notification
 
-**Fréquence** : À chaque Version, audit complet mensuel
+**Frequency** : À chaque Version, audit complet mensuel
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Version non-testée | Révocation immédiate |
-| Rollback > 5 minutes | Amende 20% CA |
-| Atomicité compromise | Amende 25% CA |
-| Traçabilité perdue | Révocation de licence |
-| Signature invalide | Révocation immédiate |
-| Audit trail absent | Amende 15% CA |
-| Notification manquante | Amende 12% CA |
-| Récidive | Interdiction permanente |
+| Untested version | Immediate revocation |
+| Rollback > 5 minutes | Fine 20% annual revenue |
+| Atomicity compromised | Fine 25% annual revenue |
+| Traceability perdue | License revocation |
+| Invalid signature | Immediate revocation |
+| Missing audit trail | Fine 15% annual revenue |
+| Notification manquante | Fine 12% annual revenue |
+| Recurrence | Permanent ban |
 
 ---
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
-**Calendrier de conformité** :
-- **Nouveaux agents** : Conformité obligatoire dès déploiement
-- **Agents existants** : Conformité obligatoire avant 1er janvier 2028
-- **Agents critiques** : Conformité obligatoire avant 1er juillet 2027
+**Compliance Calendar** :
+- **New agents**: Compliance mandatory from deployment
+- **Existing agents**: Compliance mandatory before January 1, 2028
+- **Agents criticals**: Compliance mandatory before July 1, 2027
 
 ---
 
 ## 7. RÉFÉRENCES
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
-- Fondement : Cycle de vie complet
-- Principes : Versioning unique, atomicité, traçabilité
+**Axiom Ψ-IV: CIRCULUS VITAE**
+- Foundation: Complete lifecycle
+- Principles: Unique versioning, atomicity, traceability
 
 **Articles connexes** :
-- Article IV.4.4 : Maintenance et Mise à Jour
-- Article IV.4.6 : Transition d'État
-- Article IV.4.16 : Rollback et Récupération
+- Article IV.4.4: Maintenance and Updates
+- Article IV.4.6: Transition d'État
+- Article IV.4.16: Rollback and Recovery
 
+
+---
+
+**Next review**: June 2026

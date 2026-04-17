@@ -1,21 +1,21 @@
 ---
 title: "Article III.3.2: Creator Liability"
-Axiom: Ψ-III
-numero: III.3.2
+axiom: Ψ-III
+article_number: III.3.2
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Liability
-  - Creator
-  - Damages
-  - Compensation
-  - Legality
+  - liability
+  - creator
+  - damages
+  - compensation
+  - legality
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
@@ -344,3 +344,7 @@ impl CreatorLiabilityManager {
 ---
 
 
+
+---
+
+**Next review**: June 2026

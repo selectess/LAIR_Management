@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - failure response
-  - incident response
-  - emergency response
-  - failure handling
+tags:
+  - failure-response
+  - incident-response
+  - emergency-response
+  - failure-handling
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -236,11 +235,11 @@ impl FailureResponseManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No response plan | 79% CA fine |
-| Manual response | 82% CA fine |
-| Delayed response | 81% CA fine |
-| Missing documentation | 80% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No response plan | 79% annual revenue fine |
+| Manual response | 82% annual revenue fine |
+| Delayed response | 81% annual revenue fine |
+| Missing documentation | 80% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -255,3 +254,7 @@ impl FailureResponseManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

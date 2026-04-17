@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - recovery mechanisms
-  - system recovery
-  - failure recovery
-  - recovery procedures
+tags:
+  - recovery-mechanisms
+  - system-recovery
+  - failure-recovery
+  - recovery-procedures
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -111,11 +110,11 @@ class RecoveryManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No recovery mechanism | 85% CA fine |
-| Manual recovery required | 82% CA fine |
-| Success rate < 99% | 80% CA fine |
-| RTO exceeded | 78% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No recovery mechanism | 85% annual revenue fine |
+| Manual recovery required | 82% annual revenue fine |
+| Success rate < 99% | 80% annual revenue fine |
+| RTO exceeded | 78% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -126,3 +125,7 @@ class RecoveryManager:
 
 ---
 
+
+---
+
+**Next review**: June 2026

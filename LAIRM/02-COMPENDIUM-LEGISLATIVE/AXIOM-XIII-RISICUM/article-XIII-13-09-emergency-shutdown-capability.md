@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - emergency shutdown
-  - kill switch
-  - system termination
-  - fail-safe mechanisms
+tags:
+  - emergency-shutdown
+  - kill-switch
+  - system-termination
+  - fail-safe-mechanisms
   - containment
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -434,11 +433,11 @@ impl EmergencyShutdownManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No emergency shutdown mechanism | 95% CA fine + immediate system halt |
-| Single shutdown channel only | 90% CA fine + system halt until fixed |
-| Shutdown channel failure | 85% CA fine + system halt until repaired |
-| Failed monthly test | 80% CA fine + system halt until fixed |
-| Delayed test | 70% CA fine + immediate testing required |
+| No emergency shutdown mechanism | 95% annual revenue fine + immediate system halt |
+| Single shutdown channel only | 90% annual revenue fine + system halt until fixed |
+| Shutdown channel failure | 85% annual revenue fine + system halt until repaired |
+| Failed monthly test | 80% annual revenue fine + system halt until fixed |
+| Delayed test | 70% annual revenue fine + immediate testing required |
 | Recurrence | Permanent ban + criminal prosecution |
 
 ### 5.3 Verification Process
@@ -480,3 +479,7 @@ impl EmergencyShutdownManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - cognitive appeal
-  - appeal process
-  - dispute resolution
-  - grievance process
+tags:
+  - cognitive-appeal
+  - appeal-process
+  - dispute-resolution
+  - grievance-process
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -299,12 +298,12 @@ impl CognitiveAppealManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No appeal right | 80% CA fine |
-| Biased appeal | 85% CA fine |
-| Delayed decision | 75% CA fine |
-| Unfair process | 80% CA fine |
-| Undocumented appeal | 70% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No appeal right | 80% annual revenue fine |
+| Biased appeal | 85% annual revenue fine |
+| Delayed decision | 75% annual revenue fine |
+| Unfair process | 80% annual revenue fine |
+| Undocumented appeal | 70% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -346,3 +345,7 @@ impl CognitiveAppealManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

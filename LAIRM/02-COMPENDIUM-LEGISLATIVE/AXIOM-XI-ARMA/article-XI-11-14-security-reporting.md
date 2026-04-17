@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - security reporting
-  - incident reporting
-  - breach reporting
-  - vulnerability reporting
-  - security disclosure
+tags:
+  - security-reporting
+  - incident-reporting
+  - breach-reporting
+  - vulnerability-reporting
+  - security-disclosure
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -211,10 +210,10 @@ impl SecurityReportingManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Unreported incident | 85% CA fine |
-| Reporting delayed > 24h | 75% CA fine |
-| Incomplete report | 70% CA fine |
-| No authority submission | 80% CA fine |
+| Unreported incident | 85% annual revenue fine |
+| Reporting delayed > 24h | 75% annual revenue fine |
+| Incomplete report | 70% annual revenue fine |
+| No authority submission | 80% annual revenue fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -234,3 +233,7 @@ impl SecurityReportingManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

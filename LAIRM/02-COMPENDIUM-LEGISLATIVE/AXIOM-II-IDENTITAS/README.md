@@ -105,11 +105,11 @@ All autonomous agents operating under LAIRM governance MUST:
 ### Sanction Framework
 | Violation | Penalty |
 |-----------|---------|
-| Missing DID | 80% CA fine |
-| Incomplete metadata | 75% CA fine |
-| Falsified creation chain | 90% CA fine + license revocation |
-| Unauthorized identity transfer | 85% CA fine |
-| Expired identity | 70% CA fine |
+| Missing DID | 80% annual revenue fine |
+| Incomplete metadata | 75% annual revenue fine |
+| Falsified creation chain | 90% annual revenue fine + license revocation |
+| Unauthorized identity transfer | 85% annual revenue fine |
+| Expired identity | 70% annual revenue fine |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -146,3 +146,7 @@ Axiom II (IDENTITAS AGENTICA) is foundational to the entire LAIRM framework:
 
 ---
 
+
+---
+
+**Next review**: June 2026

@@ -1,71 +1,71 @@
 ---
-title: "Article IV.4.6 : Transition d'État"
-Axiom: Ψ-IV
-numero: IV.4.6
+title: "Article IV.4.6: State Transition"
+axiom: Ψ-IV
+article_number: IV.4.6
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Transition d'État
-  - Atomicité
-  - Cohérence
-  - Cycle de Vie
-  - Machine d'État
+  - state-transition
+  - atomicity
+  - consistency
+  - lifecycle
+  - state-machine
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article IV.4.6 : TRANSITION D'ÉTAT
-## Axiom Ψ-IV : CIRCULUS VITAE
+# Article IV.4.6: STATE TRANSITION
+## Axiom Ψ-IV: CIRCULUS VITAE
 
 ---
 
-## 1. NORME IMPÉRATIVE
+## 1. IMPERATIVE NORM
 
-Tout agent autonome DOIT gérer les transitions d'état de manière contrôlée et documentée. Les transitions must be atomiques et vérifiables. Aucune transition DOIT être effectuée sans approbation préalable. Les états invalides must be rejetés. Les transitions must be immuables et traçables.
+Every autonomous agent MUST manage state transitions in a controlled and documented manner. Transitions must be atomic and verifiable. No transition MUST be performed without prior approval. Invalid states must be rejected. Transitions must be immutable and traceable.
 
-**Exigences minimales** :
-- Transitions d'état contrôlées (machine d'état définie)
-- Atomicité garantie (tout-ou-rien)
-- Documentation complète (immuable)
-- Approbation préalable obligatoire (3 niveaux)
-- Vérification de validité (100%)
+**Minimum Requirements** :
+- Controlled state transitions (defined state machine)
+- Guaranteed atomicity (all-or-nothing)
+- Complete documentation (immutable)
+- Mandatory prior approval (3 levels)
+- Validity verification (100%)
 - Rollback possible (< 5 minutes)
-- Audit trail immuable (blockchain)
-- Notification autorités (< 24 heures)
-- Signature numérique (RSA-4096)
-- Vérification d'intégrité (SHA-256)
-- Recours possible (appel)
-- Zéro transition non-autorisée
+- Immutable audit trail (blockchain)
+- Authority notification (< 24 hours)
+- Digital signature (RSA-4096)
+- Integrity verification (SHA-256)
+- Appeal possible
+- Zero unauthorized transitions
 
 ---
 
-## 2. FONDEMENT Legal
+## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
+**Axiom Ψ-IV: CIRCULUS VITAE**
 
-Les transitions d'état sont critiques pour la gestion du cycle de vie. Elles must be contrôlées pour garantir la cohérence et la traçabilité. Les transitions non-autorisées constituent une violation grave de la Responsibility.
+State transitions are critical for lifecycle management. They must be controlled to guarantee consistency and traceability. Unauthorized transitions constitute a serious violation of Responsibility.
 
-**Fundamental Principles** :
-- Transitions contrôlées et documentées
-- Atomicité garantie (tout-ou-rien)
-- Traçabilité complète et immuable
-- Validation stricte (machine d'état)
-- Approbation obligatoire (3 niveaux)
-- Rollback possible et rapide (< 5 minutes)
-- Responsibility attribuable
-- Transparency publique
+**Fundamental Principles**:
+- Controlled and documented transitions
+- Guaranteed atomicity (all-or-nothing)
+- Complete and immutable traceability
+- Strict validation (state machine)
+- Mandatory approval (3 levels)
+- Possible and rapid rollback (< 5 minutes)
+- Attributable responsibility
+- Public transparency
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
-### 3.1 Processus de Transition
+### 3.1 Transition Process
 
 ```python
 class StateTransitionManager:
@@ -80,11 +80,11 @@ class StateTransitionManager:
     }
     
     def request_transition(self, agent_id, target_state, reason):
-        """Demande une transition d'état"""
+        """Requests a state transition"""
         agent = self.get_agent(agent_id)
         current_state = agent['state']
         
-        # Vérifier validité de la transition
+        # Verify transition validity
         if target_state not in self.VALID_TRANSITIONS.get(current_state, []):
             raise ValueError(f"Invalid transition: {current_state} -> {target_state}")
         
@@ -94,156 +94,156 @@ class StateTransitionManager:
             'to_state': target_state,
             'reason': reason,
             'requested_date': datetime.utcnow().isoformat(),
-            'Status': 'pending',
+            'status': 'pending',
             'approvals': []
         }
         
-        # Enregistrer demande
+        # Record request
         self.log_transition_request(transition)
         
         return transition
     
     def approve_transition(self, transition_id, approver_id):
-        """Approuve une transition"""
+        """Approves a transition"""
         transition = self.get_transition(transition_id)
         
-        # Vérifier autorisation
+        # Verify authorization
         if not self.is_authorized(approver_id, transition['to_state']):
             raise ValueError("Not authorized to approve this transition")
         
-        # Ajouter approbation
+        # Add approval
         transition['approvals'].append({
             'approver_id': approver_id,
             'timestamp': datetime.utcnow().isoformat(),
             'signature': self.sign_approval(approver_id, transition_id)
         })
         
-        # Vérifier si toutes les approbations sont obtenues
+        # Check if all approvals obtained
         if self.all_approvals_obtained(transition):
-            transition['Status'] = 'approved'
+            transition['status'] = 'approved'
         
         return transition
     
     def execute_transition(self, transition_id):
-        """Exécute une transition approuvée"""
+        """Executes an approved transition"""
         transition = self.get_transition(transition_id)
         
-        # Vérifier approbation
-        if transition['Status'] != 'approved':
+        # Verify approval
+        if transition['status'] != 'approved':
             raise ValueError("Transition not approved")
         
         agent_id = transition['agent_id']
         agent = self.get_agent(agent_id)
         
-        # Créer backup
+        # Create backup
         backup = self.create_backup(agent_id)
         
         try:
-            # Exécuter transition atomiquement
+            # Execute transition atomically
             with self.atomic_transaction():
-                # Mettre à jour état
+                # Update state
                 agent['state'] = transition['to_state']
                 agent['state_changed_date'] = datetime.utcnow().isoformat()
                 
-                # Exécuter hooks de transition
+                # Execute transition hooks
                 self.execute_transition_hooks(agent_id, transition)
                 
-                # Enregistrer transition
+                # Record transition
                 self.log_transition_execution(transition)
             
-            transition['Status'] = 'executed'
+            transition['status'] = 'executed'
             transition['executed_date'] = datetime.utcnow().isoformat()
             
         except Exception as e:
-            # Rollback en cas d'erreur
+            # Rollback on error
             self.restore_backup(agent_id, backup)
-            transition['Status'] = 'failed'
+            transition['status'] = 'failed'
             transition['error'] = str(e)
             raise
         
         return transition
 ```
 
-### 3.2 Diagramme d'État
+### 3.2 State Diagram
 
-| État | Description | Transitions Possibles |
-|------|-------------|----------------------|
-| created | Agent créé | initialized, archived |
-| initialized | Agent initialisé | deployed, archived |
-| deployed | Agent déployé | running, paused, archived |
-| running | Agent en exécution | paused, stopped, archived |
-| paused | Agent en pause | running, stopped, archived |
-| stopped | Agent arrêté | running, archived |
-| archived | Agent archivé | (aucune) |
+| State | Description | Possible Transitions |
+|-------|-------------|----------------------|
+| created | Agent created | initialized, archived |
+| initialized | Agent initialized | deployed, archived |
+| deployed | Agent deployed | running, paused, archived |
+| running | Agent running | paused, stopped, archived |
+| paused | Agent paused | running, stopped, archived |
+| stopped | Agent stopped | running, archived |
+| archived | Agent archived | (none) |
 
-### 3.3 Approbations Requises
+### 3.3 Required Approvals
 
-Chaque transition DOIT être approuvée par :
-1. Responsable technique (vérification technique)
-2. Responsable opérationnel (vérification impact)
-3. Autorité de supervision (approbation finale)
+Each transition MUST be approved by :
+1. Technical responsible (technical verification)
+2. Operational responsible (impact verification)
+3. Supervisory authority (final approval)
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
-### 4.1 Cas d'Étude Réels
+### 4.1 Real Case Studies
 
-#### Cas 1 : TradeBot3000 - Transition Invalide (Q1 2026)
+#### Case 1: TradeBot3000 - Invalid Transition (Q1 2026)
 
-**CONTEXT** : TradeBot3000 a effectué une transition d'état invalide.
-
-**Incident** :
-- Transition non-autorisée : running → archived (sans stopped)
-- État incohérent
-- Perte : $2.1M
-- Audit trail incomplet
-
-**Résolution** :
-- Machine d'état stricte implémentée
-- Validation 100% obligatoire
-- Approbation 3 niveaux implémentée
-- Indemnisation : $2.1M + 25% pénalité
-
-**Leçon** : Validation stricte obligatoire
-
-#### Cas 2 : HealthBot - Transition Non-Atomique (Q1 2026)
-
-**CONTEXT** : HealthBot a effectué une transition non-atomique.
+**CONTEXT**: TradeBot3000 performed an invalid state transition.
 
 **Incident** :
-- Transition partiellement exécutée
-- État incohérent
-- Données corrompues
-- Dommages : €1.8M
+- Unauthorized transition : running → archived (without stopped)
+- Inconsistent state
+- Loss : $2.1M
+- Incomplete audit trail
 
-**Résolution** :
-- Atomicité garantie (tout-ou-rien)
-- Rollback automatique implémenté
-- Vérification d'intégrité post-transition
-- Indemnisation : €1.8M + 30% pénalité
+**Resolution** :
+- Strict state machine implemented
+- 100% mandatory validation
+- 3-level approval implemented
+- Compensation : $2.1M + 25% penalty
 
-**Leçon** : Atomicité non-négociable
+**Lesson**: Strict validation mandatory
 
-#### Cas 3 : SupplyChainX - Transition Non-Approuvée (Q1 2026)
+#### Case 2: HealthBot - Non-Atomic Transition (Q1 2026)
 
-**CONTEXT** : SupplyChainX a effectué une transition sans approbation.
+**CONTEXT**: HealthBot performed a non-atomic transition.
 
 **Incident** :
-- Transition non-approuvée
-- Violation de conformité
-- Dommages : €900k
-- Révocation temporaire : 30 jours
+- Partially executed transition
+- Inconsistent state
+- Corrupted data
+- Damages : €1.8M
 
-**Résolution** :
-- Approbation 3 niveaux obligatoire
-- Signature numérique requise
-- Audit trail immuable
-- Indemnisation : €900k + 20% pénalité
+**Resolution** :
+- Guaranteed atomicity (all-or-nothing)
+- Automatic rollback implemented
+- Post-transition integrity verification
+- Compensation : €1.8M + 30% penalty
 
-**Leçon** : Approbation préalable non-négociable
+**Lesson**: Atomicity non-negotiable
 
-### 4.2 Implémentation Rust - Gestion des Transitions
+#### Case 3: SupplyChainX - Unapproved Transition (Q1 2026)
+
+**CONTEXT**: SupplyChainX performed a transition without approval.
+
+**Incident** :
+- Unapproved transition
+- Compliance violation
+- Damages : €900k
+- Temporary revocation : 30 days
+
+**Resolution** :
+- Mandatory 3-level approval
+- Digital signature required
+- Immutable audit trail
+- Compensation : €900k + 20% penalty
+
+**Lesson**: Prior approval non-negotiable
+
+### 4.2 Reference Code (Rust) - Gestion des Transitions
 
 ```rust
 use chrono::{DateTime, Utc};
@@ -429,7 +429,7 @@ mod tests {
 }
 ```
 
-### 4.3 Diagramme d'État Détaillé
+### 4.3 Detailed State Diagram
 
 ```
                     ┌─────────────┐
@@ -466,178 +466,182 @@ mod tests {
               └────────┘
 ```
 
-### 4.4 Spécifications Technical Détaillées
+### 4.4 Detailed Technical Specifications
 
-| Aspect | Exigence | Détail |
-|--------|----------|--------|
-| Machine d'État | 7 états | created, initialized, deployed, running, paused, stopped, archived |
-| Transitions | Valides | Défini dans machine d'état |
-| Approbation | 3 niveaux | Technique, Opérationnel, Supervisory |
-| Atomicité | Tout-ou-rien | Rollback < 5 minutes |
-| Validation | 100% | Avant exécution |
-| Signature | RSA-4096 | Immuable |
-| Audit trail | Immuable | Blockchain |
-| Notification | < 24 heures | Autorités et parties prenantes |
-| Rollback | < 5 minutes | Automatisé |
-| Vérification | SHA-256 | Post-transition |
+| Aspect | Requirement | Detail |
+|--------|-------------|--------|
+| State Machine | 7 states | created, initialized, deployed, running, paused, stopped, archived |
+| Transitions | Valid | Defined in state machine |
+| Approval | 3 levels | Technical, Operational, Supervisory |
+| Atomicity | All-or-nothing | Rollback < 5 minutes |
+| Validation | 100% | Before execution |
+| Signature | RSA-4096 | Immutable |
+| Audit trail | Immutable | Blockchain |
+| Notification | < 24 hours | Authorities and stakeholders |
+| Rollback | < 5 minutes | Automated |
+| Verification | SHA-256 | Post-transition |
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. **Test de Validité** : Vérifier que transition est valide
-   - Vérifier état source valide
-   - Vérifier état cible valide
-   - Vérifier transition autorisée
+**Mandatory tests** :
+1. **Validity Test**: Verify that transition is valid
+   - Verify source state valid
+   - Verify target state valid
+   - Verify transition authorized
 
-2. **Test d'Approbation** : Vérifier que 3 niveaux d'approbation sont présents
-   - Approbation technique
-   - Approbation opérationnelle
-   - Approbation supervisory
+2. **Approval Test**: Verify that 3 levels of approval are present
+   - Technical approval
+   - Operational approval
+   - Supervisory approval
 
-3. **Test d'Atomicité** : Vérifier que transition est atomique
-   - Tout-ou-rien
+3. **Atomicity Test**: Verify that transition is atomic
+   - All-or-nothing
    - Rollback possible
-   - Pas d'état intermédiaire
+   - No intermediate state
 
-4. **Test de Cohérence** : Vérifier que état est cohérent
-   - État source correct
-   - État cible correct
-   - Pas de corruption
+4. **Consistency Test**: Verify that state is consistent
+   - Source state correct
+   - Target state correct
+   - No corruption
 
-5. **Test d'Enregistrement** : Vérifier que transition est enregistrée
-   - Audit trail complet
-   - Signature valide
-   - Timestamp correct
+5. **Recording Test**: Verify that transition is recorded
+   - Complete audit trail
+   - Valid signature
+   - Correct timestamp
 
-6. **Test de Rollback** : Vérifier que rollback est possible
+6. **Rollback Test**: Verify that rollback is possible
    - Rollback < 5 minutes
-   - Restauration complète
-   - Audit trail conservé
+   - Complete restoration
+   - Audit trail preserved
 
-7. **Test de Notification** : Vérifier que notifications sont envoyées
-   - Notification autorités < 24 heures
-   - Notification parties prenantes
-   - Registre public accessible
+7. **Notification Test**: Verify that notifications are sent
+   - Authority notification < 24 hours
+   - Stakeholder notification
+   - Public registry accessible
 
-8. **Test de Signature** : Vérifier que signature est valide
+8. **Signature Test**: Verify that signature is valid
    - RSA-4096
-   - Immuable
-   - Vérifiable
+   - Immutable
+   - Verifiable
 
-**Fréquence** : À chaque transition, audit complet mensuel
+**Frequency**: At each transition, complete monthly audit
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
-| Violation | Gravité | Sanction | Délai |
-|-----------|---------|----------|-------|
-| Transition invalide | Critique | Révocation immédiate + amende 25% CA | Immédiat |
-| Approbation manquante | Haute | Suspension 30 jours + amende 20% CA | 7 jours |
-| Transition non-atomique | Haute | Suspension 30 jours + amende 25% CA | 7 jours |
-| État incohérent | Critique | Révocation de licence | Immédiat |
-| Enregistrement absent | Moyenne | Amende 15% CA | 14 jours |
-| Rollback impossible | Critique | Révocation immédiate | Immédiat |
-| Notification manquante | Moyenne | Amende 12% CA | 14 jours |
-| Signature invalide | Critique | Révocation immédiate | Immédiat |
-| Récidive (2e violation) | Critique | Interdiction 1 an | Immédiat |
-| Récidive (3e violation) | Critique | Interdiction permanente | Immédiat |
+| Violation | Severity | Sanction | Timeline |
+|-----------|----------|----------|----------|
+| Invalid transition | Critical | Immediate revocation + 25% annual revenue fine | Immediate |
+| Missing approval | High | 30-day suspension + 20% annual revenue fine | 7 days |
+| Non-atomic transition | High | 30-day suspension + 25% annual revenue fine | 7 days |
+| Inconsistent state | Critical | License revocation | Immediate |
+| Missing recording | Medium | 15% annual revenue fine | 14 days |
+| Impossible rollback | Critical | Immediate revocation | Immediate |
+| Missing notification | Medium | 12% annual revenue fine | 14 days |
+| Invalid signature | Critical | Immediate revocation | Immediate |
+| Recurrence (2nd violation) | Critical | 1-year ban | Immediate |
+| Recurrence (3rd violation) | Critical | Permanent ban | Immediate |
 
-**Calcul des amendes** :
-- CA = Chiffre d'affaires annuel de l'agent
+**Fine calculation** :
+- CA = Annual turnover of the agent
 - Minimum : €50,000
 - Maximum : €5,000,000
 
-### 5.3 Processus de Vérification
+### 5.3 Verification Process
 
-1. **Vérification avant transition**
-   - Vérifier validité
-   - Vérifier approbations
-   - Vérifier cohérence
+1. **Pre-transition verification**
+   - Verify validity
+   - Verify approvals
+   - Verify consistency
 
-2. **Vérification pendant transition**
-   - Vérifier atomicité
-   - Vérifier rollback ready
-   - Vérifier monitoring
+2. **During-transition verification**
+   - Verify atomicity
+   - Verify rollback ready
+   - Verify monitoring
 
-3. **Vérification après transition**
-   - Vérifier état final
-   - Vérifier intégrité
-   - Vérifier audit trail
+3. **Post-transition verification**
+   - Verify final state
+   - Verify integrity
+   - Verify audit trail
 
-4. **Audit de conformité**
-   - Vérifier registre complet
-   - Vérifier signatures valides
-   - Vérifier notifications envoyées
+4. **Compliance audit**
+   - Verify complete registry
+   - Verify valid signatures
+   - Verify notifications sent
 
-5. **Rapport de transition**
-   - Publié après transition
-   - Accessible à tous
-   - Signature cryptographique
+5. **Transition report**
+   - Published after transition
+   - Accessible to all
+   - Cryptographic signature
 
-### 5.4 Processus d'Appel
+### 5.4 Appeal Process
 
-1. **Notification de violation** (jour 1)
-   - Envoi de rapport détaillé
-   - Délai de réponse : 30 jours
+1. **Violation notification** (day 1)
+   - Detailed report sent
+   - Response deadline : 30 days
 
-2. **Soumission d'appel** (jours 2-30)
-   - Preuve de conformité
-   - Explications détaillées
-   - Documentation complète
+2. **Appeal submission** (days 2-30)
+   - Proof of compliance
+   - Detailed explanations
+   - Complete documentation
 
-3. **Examen d'appel** (jours 31-60)
-   - Révision par comité indépendant
-   - Vérification des preuves
-   - Décision motivée
+3. **Appeal examination** (days 31-60)
+   - Review by independent committee
+   - Evidence verification
+   - Reasoned decision
 
-4. **Décision finale** (jour 61)
-   - Confirmation ou annulation
-   - Notification officielle
-   - Publication du résultat
-
----
-
-## 6. ENTRÉE EN VIGUEUR
-
-**Date d'entrée en vigueur** : 1er janvier 2027
-
-**Calendrier de conformité** :
-- **Nouveaux agents** : Conformité obligatoire dès déploiement (avant 1er janvier 2027)
-- **Agents existants** : Conformité obligatoire avant 1er janvier 2028
-- **Agents critiques** : Conformité obligatoire avant 1er juillet 2027
-
-**Dispositions transitoires** :
-- **Phase 1 (0-3 mois)** : Mise en place machine d'état
-- **Phase 2 (3-6 mois)** : Mise en place approbation 3 niveaux
-- **Phase 3 (6-9 mois)** : Mise en place atomicité et rollback
-- **Phase 4 (9-12 mois)** : Conformité complète
-
-**Obligations immédiates** :
-- Définir machine d'état avant 1er janvier 2027
-- Documenter transitions valides avant 1er janvier 2027
-- Notifier autorités avant 1er janvier 2027
+4. **Final decision** (day 61)
+   - Confirmation or cancellation
+   - Official notification
+   - Result publication
 
 ---
 
-## 7. RÉFÉRENCES
+## 6. ENTRY INTO FORCE
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
-- Fondement : Cycle de vie complet de l'agent autonome
-- Principes : Transitions contrôlées, atomicité, traçabilité
+**Entry into force date**: January 1, 2027
 
-**Articles connexes** :
-- Article IV.4.1 : Création et Initialisation
-- Article IV.4.2 : Déploiement en Production
-- Article IV.4.3 : Opération Continue
-- Article IV.4.4 : Maintenance et Mise à Jour
-- Article IV.4.5 : Fin de Vie et Archivage
+**Compliance timeline** :
+- **New agents**: Mandatory compliance upon deployment (before January 1, 2027)
+- **Existing agents**: Mandatory compliance before January 1, 2028
+- **Critical agents**: Mandatory compliance before July 1, 2027
 
-**Références externes** :
-- The Cybernetic Criterion.md : Principes de transitions d'état
-- ISO 27001 : Gestion de la sécurité de l'information
-- NIST Cybersecurity Framework : Gestion des risques
-- State Machine Theory : Théorie des machines d'état
+**Transitional provisions** :
+- **Phase 1 (0-3 months)**: Implementation of state machine
+- **Phase 2 (3-6 months)**: Implementation of 3-level approval
+- **Phase 3 (6-9 months)**: Implementation of atomicity and rollback
+- **Phase 4 (9-12 months)**: Complete compliance
 
+**Immediate obligations** :
+- Define state machine before January 1, 2027
+- Document valid transitions before January 1, 2027
+- Notify authorities before January 1, 2027
+
+---
+
+## 7. REFERENCES
+
+**Axiom Ψ-IV: CIRCULUS VITAE**
+- Foundation: Complete lifecycle of autonomous agent
+- Principles: Controlled transitions, atomicity, traceability
+
+**Related articles** :
+- Article IV.4.1: Creation and Initialization
+- Article IV.4.2: Production Deployment
+- Article IV.4.3: Continuous Operation
+- Article IV.4.4: Maintenance and Updates
+- Article IV.4.5: End of Life and Archival
+
+**External references** :
+- The Cybernetic Criterion.md: Principles of state transitions
+- ISO 27001: Information security management
+- NIST Cybersecurity Framework: Risk management
+- State Machine Theory: Theory of state machines
+
+
+---
+
+**Next review**: June 2026

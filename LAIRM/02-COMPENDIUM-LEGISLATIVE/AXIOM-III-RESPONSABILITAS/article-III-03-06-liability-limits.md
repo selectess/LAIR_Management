@@ -1,108 +1,108 @@
 ---
-title: "Article III.3.6 : Limites de Responsabilité et Exceptions"
-Axiom: Ψ-III
-numero: III.3.6
+title: "Article III.3.6: Liability Limits and Exceptions"
+axiom: Ψ-III
+article_number: III.3.6
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Responsabilité
-  - Limites
-  - Exceptions
-  - Dommages
+  - responsibility
+  - limits
+  - exceptions
+  - damages
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article III.3.6 : LIMITES DE RESPONSABILITÉ ET EXCEPTIONS
-## Axiom Ψ-III : RESPONSABILITAS AGENTICA
+# Article III.3.6: LIABILITY LIMITS AND EXCEPTIONS
+## Axiom Ψ-III: RESPONSABILITAS AGENTICA
 
 ---
 
-## 1. NORME IMPÉRATIVE
+## 1. IMPERATIVE STANDARD
 
-Il n'existe AUCUNE limite de responsabilité pour les dommages causés par un agent autonome. Le créateur et le déployeur sont responsables de 100% des dommages, sans exception. Les seules exceptions autorisées sont : force majeure, acte de tiers, violation délibérée des instructions par la victime. Toute tentative de limiter la responsabilité est interdite et nulle.
+There are NO liability limits for damages caused by an autonomous agent. The creator and deployer are responsible for 100% of damages, without exception. The only allowed exceptions are: force majeure, act of third party, deliberate violation of instructions by the victim. Any attempt to limit responsibility is prohibited and void.
 
-**Exigences minimales** :
-- Aucune limite de responsabilité (100% des dommages)
-- Responsabilité complète du créateur
-- Responsabilité complète du déployeur
-- Exceptions limitées et strictement définies
-- Force majeure (événements imprévisibles)
-- Acte de tiers (tiers responsable)
-- Violation délibérée (victime responsable)
-- Aucune clause d'exonération tolérée
-- Aucune limitation contractuelle tolérée
-- Recours possibles (appel, révision)
-
----
-
-## 2. FONDEMENT LÉGAL
-
-**Axiom Ψ-III : RESPONSABILITAS AGENTICA**
-
-L'absence de limite de responsabilité garantit que les victimes reçoivent compensation complète pour tous les dommages. Sans cette règle, les créateurs et déployeurs pourraient limiter leur responsabilité et laisser les victimes sans recours.
-
-**Principes Fondamentaux** :
-- Responsabilité illimitée
-- Compensation complète
-- Aucune exonération
-- Exceptions strictes
-- Créateur responsable
-- Déployeur responsable
-- Solidarité garantie
-- Justice pour les victimes
-
-**Justification Légale** :
-- Protection des victimes
-- Garantie de compensation
-- Incitation à la sécurité
-- Gestion des risques
-- Assurance de qualité
-- Prévention des dommages
-- Confiance publique
-- Gestion de la responsabilité
+**Minimum Requirements** :
+- No liability limits (100% of damages)
+- Complete creator responsibility
+- Complete deployer responsibility
+- Limited and strictly defined exceptions
+- Force majeure (unforeseeable events)
+- Act of third party (third party responsible)
+- Deliberate violation (victim responsible)
+- No exoneration clause tolerated
+- No contractual limitation tolerated
+- Possible recourse (appeal, revision)
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 2. LEGAL FOUNDATION
 
-### 3.1 Exceptions Autorisées
+**Axiom Ψ-III: RESPONSABILITAS AGENTICA**
 
-**Force Majeure** :
-- Événements imprévisibles et irrésistibles
-- Catastrophes naturelles
-- Guerres ou conflits armés
-- Pannes d'infrastructure critiques
-- Événements extraordinaires
+The absence of liability limits ensures that victims receive complete compensation for all damages. Without this rule, creators and deployers could limit their responsibility and leave victims without recourse.
 
-**Acte de Tiers** :
-- Tiers responsable de l'incident
-- Tiers a causé le dommage
-- Tiers a violé les protocoles
-- Tiers a sabotage l'agent
-- Tiers a modifié l'agent
+**Fundamental Principles**:
+- Unlimited liability
+- Complete compensation
+- No exoneration
+- Strict exceptions
+- Creator responsible
+- Deployer responsible
+- Guaranteed solidarity
+- Justice for victims
 
-**Violation Délibérée** :
-- Victime a violé délibérément les instructions
-- Victime a ignoré les avertissements
-- Victime a utilisé l'agent de manière abusive
-- Victime a contourné les protections
-- Victime a causé le dommage intentionnellement
+**Legal Justification**:
+- Victim protection
+- Compensation guarantee
+- Safety incentive
+- Risk management
+- Quality assurance
+- Damage prevention
+- Public confidence
+- Responsibility management
 
-### 3.2 Évaluation des Exceptions
+---
+
+## 3. TECHNICAL SPECIFICATION
+
+### 3.1 Allowed Exceptions
+
+**Force Majeure**:
+- Unforeseeable and irresistible events
+- Natural disasters
+- Wars or armed conflicts
+- Critical infrastructure failures
+- Extraordinary events
+
+**Act of Third Party**:
+- Third party responsible for the incident
+- Third party caused the damage
+- Third party violated protocols
+- Third party sabotaged the agent
+- Third party modified the agent
+
+**Deliberate Violation**:
+- Victim deliberately violated instructions
+- Victim ignored warnings
+- Victim used the agent abusively
+- Victim bypassed protections
+- Victim intentionally caused the damage
+
+### 3.2 Exception Evaluation
 
 ```python
 class LiabilityExceptionEvaluator:
-    """Évaluation des exceptions de responsabilité"""
+    """Evaluation of liability exceptions"""
     
     def evaluate_exception(self, incident: dict) -> dict:
-        """Évalue si une exception s'applique"""
+        """Evaluates if an exception applies"""
         
         force_majeure = self._evaluate_force_majeure(incident)
         third_party = self._evaluate_third_party(incident)
@@ -119,63 +119,63 @@ class LiabilityExceptionEvaluator:
         }
     
     def _evaluate_force_majeure(self, incident: dict) -> bool:
-        """Évalue la force majeure"""
+        """Evaluates force majeure"""
         force_majeure_indicators = incident.get('force_majeure_indicators', [])
         return len(force_majeure_indicators) > 0
     
     def _evaluate_third_party(self, incident: dict) -> bool:
-        """Évalue l'acte de tiers"""
+        """Evaluates act of third party"""
         third_party_indicators = incident.get('third_party_indicators', [])
         return len(third_party_indicators) > 0
     
     def _evaluate_victim_violation(self, incident: dict) -> bool:
-        """Évalue la violation délibérée de la victime"""
+        """Evaluates deliberate violation by victim"""
         victim_violation_indicators = incident.get('victim_violation_indicators', [])
         return len(victim_violation_indicators) > 0
 ```
 
-### 3.3 Processus d'Évaluation des Exceptions
+### 3.3 Exception Evaluation Process
 
-1. **Identification de l'Incident**: Identifier l'incident
-2. **Évaluation de Force Majeure**: Évaluer la force majeure
-3. **Évaluation d'Acte de Tiers**: Évaluer l'acte de tiers
-4. **Évaluation de Violation**: Évaluer la violation délibérée
-5. **Détermination d'Exception**: Déterminer si exception s'applique
-6. **Calcul de Responsabilité**: Calculer la responsabilité
-7. **Notification des Parties**: Notifier les parties
-8. **Documentation**: Documenter le processus
+1. **Incident Identification**: Identify the incident
+2. **Force Majeure Evaluation**: Evaluate force majeure
+3. **Third Party Act Evaluation**: Evaluate act of third party
+4. **Violation Evaluation**: Evaluate deliberate violation
+5. **Exception Determination**: Determine if exception applies
+6. **Liability Calculation**: Calculate liability
+7. **Party Notification**: Notify the parties
+8. **Documentation**: Document the process
 
 ---
 
-## 4. IMPLÉMENTATION DE RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
-### 4.1 Études de Cas Réelles
+### 4.1 Real Case Studies
 
-#### Cas 1: Aucune Exception - Responsabilité Complète (Q2 2027)
-- **Incident**: Agent a causé dommages sans exception
-- **Dommages**: €11.2M
-- **Exceptions Évaluées**: Aucune ne s'applique
-- **Responsabilité**: 100% du créateur et déployeur
-- **Compensation**: €11.2M + 70% pénalité = €19.04M
-- **Résultat**: Victime compensée, responsabilité complète
+#### Case 1: No Exception - Complete Responsibility (Q2 2027)
+- **Incident**: Agent caused damages without exception
+- **Damages**: €11.2M
+- **Exceptions Evaluated**: None apply
+- **Responsibility**: 100% of creator and deployer
+- **Compensation**: €11.2M + 70% penalty = €19.04M
+- **Result**: Victim compensated, complete responsibility
 
-#### Cas 2: Force Majeure - Responsabilité Réduite (Q1 2027)
-- **Incident**: Catastrophe naturelle a causé dommages
-- **Dommages**: €8.5M
-- **Exceptions Évaluées**: Force majeure s'applique
-- **Responsabilité**: 0% (force majeure)
+#### Case 2: Force Majeure - Reduced Responsibility (Q1 2027)
+- **Incident**: Natural disaster caused damages
+- **Damages**: €8.5M
+- **Exceptions Evaluated**: Force majeure applies
+- **Responsibility**: 0% (force majeure)
 - **Compensation**: €0 (force majeure)
-- **Résultat**: Victime non compensée (force majeure)
+- **Result**: Victim not compensated (force majeure)
 
-#### Cas 3: Acte de Tiers - Responsabilité Réduite (Q3 2027)
-- **Incident**: Tiers a sabotage l'agent
-- **Dommages**: €9.8M
-- **Exceptions Évaluées**: Acte de tiers s'applique
-- **Responsabilité**: 0% (acte de tiers)
-- **Compensation**: €0 (acte de tiers)
-- **Résultat**: Victime poursuit le tiers
+#### Case 3: Act of Third Party - Reduced Responsibility (Q3 2027)
+- **Incident**: Third party sabotaged the agent
+- **Damages**: €9.8M
+- **Exceptions Evaluated**: Act of third party applies
+- **Responsibility**: 0% (act of third party)
+- **Compensation**: €0 (act of third party)
+- **Result**: Victim pursues third party
 
-### 4.2 Implémentation Rust
+### 4.2 Rust Implementation
 
 ```rust
 use chrono::{DateTime, Utc};
@@ -257,76 +257,80 @@ impl LiabilityManager {
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests Obligatoires** :
-1. Vérifier aucune limite de responsabilité
-2. Vérifier responsabilité complète du créateur
-3. Vérifier responsabilité complète du déployeur
-4. Vérifier exceptions strictement définies
-5. Vérifier aucune clause d'exonération
-6. Vérifier aucune limitation contractuelle
-7. Vérifier compensation complète
-8. Vérifier traçabilité complète
+**Mandatory Tests** :
+1. Verify no liability limits
+2. Verify complete creator responsibility
+3. Verify complete deployer responsibility
+4. Verify strictly defined exceptions
+5. Verify no exoneration clause
+6. Verify no contractual limitation
+7. Verify complete compensation
+8. Verify complete traceability
 
-**Fréquence** : Audit trimestriel de responsabilité
+**Frequency**: Quarterly responsibility audit
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Limite de responsabilité | 95% CA fine |
-| Clause d'exonération | 95% CA fine |
-| Limitation contractuelle | 95% CA fine |
-| Responsabilité incomplète | 90% CA fine |
-| Exception non justifiée | 85% CA fine |
-| Compensation incomplète | 95% CA fine |
-| Traçabilité incomplète | 70% CA fine |
-| Récurrence | Ban permanent + 95% CA |
+| Liability limit | 95% annual revenue fine |
+| Exoneration clause | 95% annual revenue fine |
+| Contractual limitation | 95% annual revenue fine |
+| Incomplete responsibility | 90% annual revenue fine |
+| Unjustified exception | 85% annual revenue fine |
+| Incomplete compensation | 95% annual revenue fine |
+| Incomplete traceability | 70% annual revenue fine |
+| Recurrence | Permanent ban + 95% annual revenue |
 
-### 5.3 Processus de Vérification
+### 5.3 Verification Process
 
-1. Vérification de limite (aucune)
-2. Vérification de clause (aucune)
-3. Vérification de limitation (aucune)
-4. Vérification de responsabilité (complète)
-5. Vérification d'exception (justifiée)
-6. Vérification de compensation (complète)
-7. Vérification de traçabilité (complète)
-8. Rapport de conformité (trimestriel)
-
----
-
-## 6. DATE D'ENTRÉE EN VIGUEUR
-
-**Date d'Entrée en Vigueur** : 1er janvier 2027
-
-**Calendrier de Conformité** :
-- Nouveaux agents : Aucune limite obligatoire dès le déploiement
-- Agents existants : Aucune limite obligatoire avant le 1er juillet 2027
-- Agents critiques : Aucune limite obligatoire avant le 1er avril 2027
-
-**Dispositions Transitoires** :
-- Vérification de limite : Avant le 1er mars 2027
-- Suppression de limite : Avant le 1er janvier 2027
-- Vérification : Trimestrielle à partir du 1er janvier 2027
+1. Limit verification (none)
+2. Clause verification (none)
+3. Limitation verification (none)
+4. Responsibility verification (complete)
+5. Exception verification (justified)
+6. Compensation verification (complete)
+7. Traceability verification (complete)
+8. Compliance report (quarterly)
 
 ---
 
-## RÉFÉRENCES
+## 6. EFFECTIVE DATE
 
-- Axiom Ψ-III : RESPONSABILITAS AGENTICA
-- Article III.3.1 : Responsabilité Civile
-- Article III.3.2 : Responsabilité du Créateur
-- Article III.3.3 : Responsabilité du Déployeur
-- Article III.3.4 : Responsabilité Solidaire
-- Article III.3.5 : Exigences d'Assurance
-- Chapitre 5 : Cadre Juridique
-- Chapitre 12 : Paradigme de Responsabilité
+**Effective Date**: January 1, 2027
+
+**Compliance Calendar** :
+- New agents: No limit mandatory from deployment
+- Existing agents: No limit mandatory before July 1, 2027
+- Critical agents: No limit mandatory before April 1, 2027
+
+**Transitional Provisions** :
+- Limit verification: Before March 1, 2027
+- Limit removal: Before January 1, 2027
+- Verification: Quarterly from January 1, 2027
 
 ---
 
-**Statut** : ✅ Final | **Validation** : Légale ✅ | Technique ✅ | Éditoriale ✅ | **Prochain Examen** : Janvier 2027
+## REFERENCES
 
+- Axiom Ψ-III: RESPONSABILITAS AGENTICA
+- Article III.3.1: Civil Responsibility
+- Article III.3.2: Creator Responsibility
+- Article III.3.3: Deployer Responsibility
+- Article III.3.4: Joint and Several Responsibility
+- Article III.3.5: Insurance Requirements
+- Chapter 5: Legal Framework
+- Chapter 12: Responsibility Paradigm
+
+---
+
+**Next Review**: January 2027
+
+
+---
+
+**Next review**: June 2026

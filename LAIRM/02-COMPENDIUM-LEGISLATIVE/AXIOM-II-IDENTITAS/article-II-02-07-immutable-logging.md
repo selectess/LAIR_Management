@@ -1,5 +1,5 @@
 ---
-title: "Article II.2.7 : Immutable Logging"
+title: "Article II.2.7: Immutable Logging"
 axiom: Ψ-II
 article_number: II.2.7
 Status: Final
@@ -20,8 +20,8 @@ validations:
 license: CC-BY-SA-4.0
 ---
 
-# Article II.2.7 : IMMUTABLE LOGGING
-## Axiom Ψ-II : IDENTITAS AGENTICA
+# Article II.2.7: IMMUTABLE LOGGING
+## Axiom Ψ-II: IDENTITAS AGENTICA
 
 ---
 
@@ -45,11 +45,11 @@ Every autonomous agent MUST record all its logs in an immutable system. Logs mus
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II : IDENTITAS AGENTICA**
+**Axiom Ψ-II: IDENTITAS AGENTICA**
 
 The immutability of logs is the guarantee that evidence cannot be falsified. Without immutability, anyone could modify logs to cover their tracks. Immutability ensures that each log is permanent and verifiable proof.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Absolute immutability (no modification)
 - Guaranteed integrity (hash chain)
 - Verifiability (cryptographic signature)
@@ -80,7 +80,7 @@ The immutability of logs is the guarantee that evidence cannot be falsified. Wit
   "hash": "sha256:abc123def456...",
   "previous_hash": "sha256:def456ghi789...",
   "signature": "RSA-4096-SHA256 (hex)",
-  "Status": "immutable"
+  "status": "immutable"
 }
 ```
 
@@ -189,10 +189,10 @@ class ImmutableLoggingSystem:
 ### 4.1 Use Case: TradeBot3000 Logging (Q1 2026)
 
 **Immutable Logs** :
-1. LOG-20260115100000-1 : Action initiated ($45M)
-2. LOG-20260115100001-2 : Position opened
-3. LOG-20260115100002-3 : Unauthorized action detected
-4. LOG-20260115100003-4 : Audit triggered
+1. LOG-20260115100000-1: Action initiated ($45M)
+2. LOG-20260115100001-2: Position opened
+3. LOG-20260115100002-3: Unauthorized action detected
+4. LOG-20260115100003-4: Audit triggered
 
 **Verification** :
 - ✓ All logs recorded
@@ -217,18 +217,18 @@ class ImmutableLoggingSystem:
 7. Cryptographic verification test
 8. Alerts test (anomalies)
 
-**Frequency** : Monthly for all agents
+**Frequency**: Monthly for all agents
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction | Deadline |
 |-----------|----------|----------|
-| Modified log | Revocation + 50% CA fine | 7 days |
-| Deleted log | Revocation + 55% CA fine | 7 days |
-| Broken chain | Revocation + 60% CA fine | 7 days |
-| Invalid signature | Revocation + 45% CA fine | 7 days |
-| Insufficient retention | 20% CA fine | 14 days |
-| Access denied | 25% CA fine | 14 days |
+| Modified log | Revocation + 50% annual revenue fine | 7 days |
+| Deleted log | Revocation + 55% annual revenue fine | 7 days |
+| Broken chain | Revocation + 60% annual revenue fine | 7 days |
+| Invalid signature | Revocation + 45% annual revenue fine | 7 days |
+| Insufficient retention | 20% annual revenue fine | 14 days |
+| Access denied | 25% annual revenue fine | 14 days |
 | Recurrence | Permanent ban | Immediate |
 
 ---
@@ -264,12 +264,16 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.5 : Audit Trail
-- Article II.2.6 : Complete Traceability
-- The Cybernetic Criterion : Chapters 0-5
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.5: Audit Trail
+- Article II.2.6: Complete Traceability
+- The Cybernetic Criterion: Chapters 0-5
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

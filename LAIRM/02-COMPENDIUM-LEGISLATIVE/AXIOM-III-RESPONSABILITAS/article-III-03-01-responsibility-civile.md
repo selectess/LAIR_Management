@@ -1,27 +1,27 @@
 ---
-title: "Article III.3.1 : Civil Responsibility"
-Axiom: Ψ-III
-numero: III.3.1
+title: "Article III.3.1: Civil Responsibility"
+axiom: Ψ-III
+article_number: III.3.1
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Responsibility
-  - Civil
-  - Damages
-  - Compensation
-  - Legality
+  - responsibility
+  - civil
+  - damages
+  - compensation
+  - legality
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article III.3.1 : CIVIL RESPONSIBILITY
-## Axiom Ψ-III : RESPONSABILITAS AGENTICA
+# Article III.3.1: CIVIL RESPONSIBILITY
+## Axiom Ψ-III: RESPONSABILITAS AGENTICA
 
 ---
 
@@ -29,7 +29,7 @@ license: CC-BY-SA-4.0
 
 Every autonomous agent MUST be civilly responsible for all damages it causes. Civil responsibility MUST cover: material damages, immaterial damages, financial losses, moral prejudice. Creator and deployer are jointly and severally liable.
 
-**Minimum Requirements** :
+**Minimum Requirements**:
 - Mandatory civil responsibility (100% of damages)
 - Insurance coverage (minimum 10M EUR)
 - Creator responsibility (joint and several)
@@ -45,11 +45,11 @@ Every autonomous agent MUST be civilly responsible for all damages it causes. Ci
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-III : RESPONSABILITAS AGENTICA**
+**Axiom Ψ-III: RESPONSABILITAS AGENTICA**
 
 Civil responsibility is the foundation of agent justice. Without civil responsibility, victims have no recourse. Civil responsibility ensures that each agent can be held responsible for its actions and that victims can be compensated.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Absolute responsibility (no exception)
 - Solidarity (creator + deployer)
 - Complete compensation (all damages)
@@ -152,9 +152,13 @@ class CivilLiabilityCalculator:
 
 ### 4.1 Use Case: TradeBot3000 ($45M)
 
-**Incident** : Unauthorized position of $45M
+**Incident**: Unauthorized position of $45M
 **Damages** : $2.3M actual loss
 **Compensation** : $2.3M + costs
 **Timeline** : 15 days
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

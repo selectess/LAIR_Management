@@ -5,12 +5,12 @@ part: I
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - Legal Framework
-  - Legal Instruments
+tags:
+  - Legal-Framework
+  - Legal-Instruments
   - Responsibility
   - Compliance
-  - International Law
+  - International-Law
 Status: Final
 Version: Initiation
 license: CC-BY-SA-4.0
@@ -421,3 +421,7 @@ The LAIRM legal framework establishes clear and equitable responsibility for dam
 - [See Glossary](../../00-METADATA/glossary.md)
 
 ---
+
+---
+
+**Next review**: June 2026

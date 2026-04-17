@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - resource allocation
-  - allocation framework
-  - fair distribution
-  - resource management
+tags:
+  - resource-allocation
+  - allocation-framework
+  - fair-distribution
+  - resource-management
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -330,12 +329,12 @@ impl AllocationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No allocation framework | 75% CA fine |
-| Unfair allocation | 80% CA fine |
-| No stakeholder participation | 78% CA fine |
-| Lack of transparency | 76% CA fine |
-| Equity threshold not met | 82% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No allocation framework | 75% annual revenue fine |
+| Unfair allocation | 80% annual revenue fine |
+| No stakeholder participation | 78% annual revenue fine |
+| Lack of transparency | 76% annual revenue fine |
+| Equity threshold not met | 82% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -350,3 +349,7 @@ impl AllocationManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

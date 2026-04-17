@@ -7,14 +7,13 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - Human Protection
+tags:
+  - human-Protection
   - human-compliance-verification
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -174,9 +173,9 @@ class HumanProtectionManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No policy | 70% CA fine |
-| Non-compliance | 75% CA fine |
-| Records falsified | 90% CA fine |
+| No policy | 70% annual revenue fine |
+| Non-compliance | 75% annual revenue fine |
+| Records falsified | 90% annual revenue fine |
 | Recurrence | Permanent ban |
 
 ---
@@ -191,3 +190,7 @@ class HumanProtectionManager:
 
 ---
 
+
+---
+
+**Next review**: June 2026

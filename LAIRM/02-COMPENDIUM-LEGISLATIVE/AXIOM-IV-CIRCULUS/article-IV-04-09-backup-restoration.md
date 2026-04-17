@@ -1,73 +1,73 @@
 ---
-title: "Article IV.4.9 : Sauvegarde et Restauration"
-Axiom: Ψ-IV
-numero: IV.4.9
+title: "Article IV.4.9: Backup and Restoration"
+axiom: Ψ-IV
+article_number: IV.4.9
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Sauvegarde
-  - Restauration
-  - Cycle de Vie
-  - Chiffrement
-  - Immuabilité
+  - backup
+  - restoration
+  - lifecycle
+  - encryption
+  - immutability
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article IV.4.9 : SAUVEGARDE ET RESTAURATION
-## Axiom Ψ-IV : CIRCULUS VITAE
+# Article IV.4.9: BACKUP AND RESTORATION
+## Axiom Ψ-IV: CIRCULUS VITAE
 
 ---
 
-## 1. NORME IMPÉRATIVE
+## 1. IMPERATIVE NORM
 
-Tout agent autonome DOIT avoir un système de sauvegarde régulier et testé. Les sauvegardes must be chiffrées (AES-256 minimum) et immuables. La restauration DOIT être possible sans perte de données (RPO < 15 minutes). Les sauvegardes must be stockées géographiquement distribuées (N+1 minimum). Les sauvegardes must be testées régulièrement (mensuellement).
+Every autonomous agent MUST have a regular and tested backup system. Backups must be encrypted (AES-256 minimum) and immutable. Restoration MUST be possible without data loss (RPO < 15 minutes). Backups must be stored geographically distributed (N+1 minimum). Backups must be tested regularly (monthly).
 
-**Exigences minimales** :
-- Sauvegarde régulière (toutes les 15 minutes)
-- Chiffrement obligatoire (AES-256 minimum)
-- Immuabilité garantie (blockchain)
-- Restauration testée (mensuelle)
-- Distribution géographique (N+1 minimum)
-- RPO < 15 minutes (perte de données minimale)
-- RTO < 1 heure (restauration rapide)
-- Vérification d'intégrité (SHA-256)
-- Signature numérique (RSA-4096)
-- Audit trail immuable
-- Notification autorités (< 24 heures)
-- Recours possible (appel)
-
----
-
-## 2. FONDEMENT Legal
-
-**Axiom Ψ-IV : CIRCULUS VITAE**
-
-La sauvegarde et la restauration sont essentielles pour la protection des données. Elles must be gérées de manière sécurisée et fiable.
-
-**Fundamental Principles** :
-- Sauvegarde régulière
-- Sécurité des données
-- Immuabilité
-- Testabilité
-- Récupérabilité
+**Minimum Requirements** :
+- Regular backup (every 15 minutes)
+- Mandatory encryption (AES-256 minimum)
+- Guaranteed immutability (blockchain)
+- Tested restoration (monthly)
+- Geographic distribution (N+1 minimum)
+- RPO < 15 minutes (minimal data loss)
+- RTO < 1 hour (rapid restoration)
+- Integrity verification (SHA-256)
+- Digital signature (RSA-4096)
+- Immutable audit trail
+- Authority notification (< 24 hours)
+- Appeal possible
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 2. LEGAL FOUNDATION
 
-### 3.1 Processus de Sauvegarde
+**Axiom Ψ-IV: CIRCULUS VITAE**
+
+Backup and restoration are essential for data protection. They must be managed securely and reliably.
+
+**Fundamental Principles**:
+- Regular backup
+- Data security
+- Immutability
+- Testability
+- Recoverability
+
+---
+
+## 3. TECHNICAL SPECIFICATION
+
+### 3.1 Backup Process
 
 ```python
 class BackupManager:
     def create_backup(self, agent_id, backup_type='full'):
-        """Crée une sauvegarde"""
+        """Creates a backup"""
         agent = self.get_agent(agent_id)
         
         backup = {
@@ -83,123 +83,123 @@ class BackupManager:
             }
         }
         
-        # Chiffrer données
+        # Encrypt data
         encrypted_data = self.encrypt_backup(backup['data'])
         backup['encrypted_data'] = encrypted_data
         
-        # Calculer hash
+        # Calculate hash
         backup['hash'] = self.compute_hash(encrypted_data)
         
-        # Signer sauvegarde
+        # Sign backup
         backup['signature'] = self.sign_backup(backup)
         
-        # Stocker localement
+        # Store locally
         self.store_backup_local(backup)
         
-        # Stocker géographiquement distribué
+        # Store geographically distributed
         self.store_backup_distributed(backup)
         
-        # Enregistrer
+        # Record
         self.log_backup(backup)
         
         return backup
     
     def restore_backup(self, agent_id, backup_id):
-        """Restaure une sauvegarde"""
+        """Restores une backup"""
         backup = self.get_backup(backup_id)
         
-        # Vérifier signature
+        # Verify signature
         if not self.verify_backup_signature(backup):
             raise ValueError("Backup signature verification failed")
         
-        # Vérifier hash
+        # Verify hash
         if not self.verify_backup_hash(backup):
             raise ValueError("Backup hash verification failed")
         
-        # Déchiffrer données
+        # Decrypt data
         decrypted_data = self.decrypt_backup(backup['encrypted_data'])
         
-        # Restaurer agent
+        # Restoresr agent
         agent = self.get_agent(agent_id)
         agent['state'] = decrypted_data['state']
         agent['configuration'] = decrypted_data['configuration']
         agent['data'] = decrypted_data['data']
         
-        # Enregistrer restauration
+        # Record restoration
         self.log_restore(agent_id, backup_id)
         
-        return {'Status': 'restored', 'timestamp': datetime.utcnow().isoformat()}
+        return {'status': 'restored', 'timestamp': datetime.utcnow().isoformat()}
     
     def verify_backup_integrity(self, backup_id):
-        """Vérifie l'intégrité d'une sauvegarde"""
+        """Verifies backup integrity"""
         backup = self.get_backup(backup_id)
         
-        # Vérifier signature
+        # Verify signature
         if not self.verify_backup_signature(backup):
             return False
         
-        # Vérifier hash
+        # Verify hash
         if not self.verify_backup_hash(backup):
             return False
         
-        # Vérifier accessibilité
+        # Verify accessibility
         if not self.verify_backup_accessibility(backup):
             return False
         
         return True
 ```
 
-### 3.2 Stratégies de Sauvegarde
+### 3.2 Backup Strategies
 
-| Stratégie | Fréquence | Rétention | Chiffrement |
+| Strategy | Frequency | Retention | Encryption |
 |-----------|-----------|-----------|------------|
-| Sauvegarde complète | Hebdomadaire | 1 an | AES-256 |
-| Sauvegarde incrémentale | Quotidienne | 30 jours | AES-256 |
-| Sauvegarde différentielle | Quotidienne | 7 jours | AES-256 |
-| Sauvegarde continue | Temps réel | 24 heures | AES-256 |
+| Full backup | Weekly | 1 year | AES-256 |
+| Incremental backup | Daily | 30 days | AES-256 |
+| Differential backup | Daily | 7 days | AES-256 |
+| Continuous backup | Real-time | 24 hours | AES-256 |
 
-### 3.3 Stockage Distribué
+### 3.3 Distributed Storage
 
-Les sauvegardes must be stockées dans :
-- Stockage local (accès rapide)
-- Stockage régional (redondance)
-- Stockage géographique (récupération)
-- Stockage archivé (long terme)
+Backups must be stored in:
+- Local storage (fast access)
+- Regional storage (redundancy)
+- Geographic storage (recovery)
+- Archived storage (long term)
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
-### 4.1 Processus de Sauvegarde
+### 4.1 Processus de Backup
 
 ```
 ┌──────────────────────────────────────┐
-│   Collecte des Données               │
+|   Data Collection                    |
 │   (État, Configuration, Audit)       │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Chiffrement AES-256                │
-│   (Sécurité des données)             │
+│   Encryption AES-256                │
+|   (Data Security)                    |
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
 │   Calcul Hash SHA-256                │
-│   (Intégrité)                        │
+|   (Integrity)                        |
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Signature Numérique                │
+|   Digital Signature                  |
 │   (Authentification)                 │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-│   Stockage Distribué                 │
-│   (Local, Régional, Géographique)    │
+|   Distributed Storage                |
+|   (Local, Regional, Geographic)      |
 └────────────┬─────────────────────────┘
              │
              ▼
@@ -209,96 +209,96 @@ Les sauvegardes must be stockées dans :
 └──────────────────────────────────────┘
 ```
 
-### 4.2 Registre de Sauvegarde
+### 4.2 Registre de Backup
 
-Chaque sauvegarde DOIT être enregistrée avec :
-- ID de sauvegarde
+Chaque backup MUST be recorded avec :
+- ID de backup
 - Date of Creation
-- type de sauvegarde
+- type de backup
 - Hash et signature
-- Localisation
-- Status d'intégrité
+- Location
+- Integrity status
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. Vérifier sauvegarde régulière
-2. Vérifier chiffrement
-3. Vérifier immuabilité
-4. Vérifier restauration
-5. Vérifier distribution
+**Mandatory Tests** :
+1. Verify regular backup
+2. Verify encryption
+3. Verify immutability
+4. Verify restoration
+5. Verify distribution
 
-**Fréquence** : Mensuelle
+**Frequency**: Monthlyle
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Pas de sauvegarde | Révocation immédiate |
-| Chiffrement absent | Révocation de licence |
-| Immuabilité compromise | Amende 30% CA |
-| Restauration échouée | Amende 25% CA |
-| Distribution insuffisante | Amende 20% CA |
-| Récidive | Interdiction permanente |
+| Pas de backup | Immediate revocation |
+| Encryption absent | License revocation |
+| Immutability compromised | Fine 30% annual revenue |
+| Failed restoration | Fine 25% annual revenue |
+| Distribution insuffisante | Fine 20% annual revenue |
+| Recurrence | Permanent ban |
 
-### 5.3 Processus de Vérification
+### 5.3 Verification Process
 
-1. Vérification mensuelle de sauvegarde
-2. Test de restauration
-3. Audit d'intégrité
-4. Vérification de distribution
-5. Rapport de sauvegarde
+1. Monthly backup verification
+2. Test de restoration
+3. Audit d'integrity
+4. Distribution verification
+5. Rapport de backup
 
 ---
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
-**Calendrier de conformité** :
-- Nouveaux agents : Conformité obligatoire dès déploiement
-- Agents existants : Conformité obligatoire avant 1er janvier 2028
-- Agents critiques : Conformité obligatoire avant 1er juillet 2027
+**Compliance Calendar** :
+- New agents: Compliance mandatory from deployment
+- Existing agents: Compliance mandatory before January 1, 2028
+- Critical agents: Compliance mandatory before July 1, 2027
 
-**Dispositions transitoires** :
-- Agents existants : Audit de sauvegarde avant 30 juin 2027
-- Infrastructure de sauvegarde établie avant 1er janvier 2027
+**Transitional Provisions** :
+- Existing agents: Audit de backup avant 30 juin 2027
+- Backup infrastructure established before January 1, 2027
 
 ---
 
 ## RÉFÉRENCES
 
-- Axiom Ψ-IV : CIRCULUS VITAE
-- Article IV.4.5 : Fin de Vie et Archivage
-- Article IV.4.8 : Récupération d'Urgence
-- Article II.2.7 : Logging Immuable
+- Axiom Ψ-IV: CIRCULUS VITAE
+- Article IV.4.5: Fin de Vie et Archivage
+- Article IV.4.8: Emergency Recovery
+- Article II.2.7: Logging Immuable
 
 ---
 
-**Status** : Draft  
-**Axiom Ψ-IV : CIRCULUS VITAE**
+**Status**: Draft  
+**Axiom Ψ-IV: CIRCULUS VITAE**
 
-La sauvegarde et la restauration sont essentielles pour la résilience. Elles must be planifiées et testées pour garantir l'efficacité en cas de crise. Les défaillances de sauvegarde constituent une violation grave de la Responsibility.
+Backup and restoration are essential for resilience. They must be planned and tested to guarantee effectiveness in case of crisis. Backup failures constitute a serious violation of responsibility.
 
-**Fundamental Principles** :
-- Sauvegarde régulière et automatisée
-- Chiffrement fort (AES-256)
-- Immuabilité garantie (blockchain)
-- Restauration rapide (RTO < 1h)
-- Perte de données minimale (RPO < 15min)
-- Distribution géographique
+**Fundamental Principles**:
+- Regular and automated backup
+- Encryption fort (AES-256)
+- Guaranteed immutability (blockchain)
+- Restoration rapide (RTO < 1h)
+- Minimal data loss (RPO < 15min)
+- Distribution geographic
 - Responsibility attribuable
 - Transparency publique
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
-### 3.1 Système de Sauvegarde
+### 3.1 Backup System
 
 ```python
 class BackupManager:
@@ -308,7 +308,7 @@ class BackupManager:
         self.locations = ['primary', 'secondary', 'tertiary']
     
     def create_backup(self, agent_id):
-        """Crée une sauvegarde chiffrée"""
+        """Creates an encrypted backup"""
         backup = {
             'backup_id': str(uuid.uuid4()),
             'agent_id': agent_id,
@@ -317,48 +317,48 @@ class BackupManager:
             'hash': self.compute_hash(agent_id),
             'encryption': self.encryption_algorithm,
             'locations': self.locations,
-            'Status': 'completed'
+            'status': 'completed'
         }
         
-        # Chiffrer données
+        # Encrypt data
         encrypted_data = self.encrypt_data(backup['data'])
         backup['encrypted_data'] = encrypted_data
         
-        # Stocker dans multiples localisations
+        # Stocker dans multiples locations
         for location in self.locations:
             self.store_backup(backup, location)
         
         return backup
     
     def restore_backup(self, backup_id):
-        """Restaure une sauvegarde"""
+        """Restores une backup"""
         backup = self.get_backup(backup_id)
         
-        # Vérifier intégrité
+        # Verify integrity
         if not self.verify_integrity(backup):
             raise ValueError("Backup integrity check failed")
         
-        # Déchiffrer données
+        # Decrypt data
         decrypted_data = self.decrypt_data(backup['encrypted_data'])
         
-        # Restaurer agent
+        # Restoresr agent
         restored_agent = self.restore_agent_data(decrypted_data)
         
         return restored_agent
     
     def verify_backup(self, backup_id):
-        """Vérifie une sauvegarde"""
+        """Verifies a backup"""
         backup = self.get_backup(backup_id)
         
-        # Vérifier intégrité
+        # Verify integrity
         if not self.verify_integrity(backup):
             return False
         
-        # Vérifier chiffrement
+        # Verify encryption
         if not self.verify_encryption(backup):
             return False
         
-        # Vérifier accessibilité
+        # Verify accessibility
         for location in backup['locations']:
             if not self.verify_location_access(backup, location):
                 return False
@@ -366,82 +366,82 @@ class BackupManager:
         return True
 ```
 
-### 3.2 Spécifications de Sauvegarde
+### 3.2 Backup Specifications
 
-| Métrique | Exigence | Détail |
+| Metric | Requirement | Detail |
 |----------|----------|--------|
-| Fréquence | Toutes 15 min | Automatique, continu |
-| Chiffrement | AES-256 | Minimum requis |
-| Immuabilité | Blockchain | Vérifiable |
-| RPO | < 15 minutes | Perte de données minimale |
-| RTO | < 1 heure | Restauration rapide |
-| Distribution | N+1 | Minimum 3 localisations |
-| Intégrité | SHA-256 | Vérifiable |
+| Frequency | Toutes 15 min | Automatique, continu |
+| Encryption | AES-256 | Minimum requis |
+| Immutability | Blockchain | Verifiable |
+| RPO | < 15 minutes | Minimal data loss |
+| RTO | < 1 heure | Restoration rapide |
+| Distribution | N+1 | Minimum 3 locations |
+| Integrity | SHA-256 | Verifiable |
 | Signature | RSA-4096 | Immuable |
-| Tests | Mensuels | Procédures testées |
+| Tests | Monthly | Tested procedures |
 | Audit trail | Immuable | Blockchain |
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
-### 4.1 Cas d'Étude Réels
+### 4.1 Real-World Case Studies
 
-#### Cas 1 : TradeBot3000 - Backup Corrompu (Q1 2026)
+#### Case 1: TradeBot3000 - Backup Corrompu (Q1 2026)
 
-**CONTEXT** : TradeBot3000 a eu un backup corrompu.
+**CONTEXT**: TradeBot3000 a eu un backup corrompu.
 
 **Incident** :
 - Backup corrompu (checksum invalide)
-- Restauration impossible
-- Perte : $4.5M
+- Restoration impossible
+- Loss : $4.5M
 - Downtime : 8 heures
 
-**Résolution** :
-- Vérification d'intégrité obligatoire
-- Backups géographiquement distribués
-- Tests mensuels implémentés
-- Indemnisation : $4.5M + 30% pénalité
+**Resolution** :
+- Mandatory integrity verification
+- Geographically distributed backups
+- Tests mensuels implementeds
+- Compensation : $4.5M + 30% penalty
 
-**Leçon** : Vérification d'intégrité obligatoire
+**Lesson**: Mandatory integrity verification
 
-#### Cas 2 : HealthBot - Chiffrement Faible (Q1 2026)
+#### Case 2: HealthBot - Encryption Faible (Q1 2026)
 
-**CONTEXT** : HealthBot utilisait chiffrement faible.
+**CONTEXT**: HealthBot utilisait encryption faible.
 
 **Incident** :
-- Chiffrement DES (obsolète)
-- Données de patients exposées
+- DES encryption (obsolete)
+- Patient data exposed
 - Dommages : €2.8M
-- Patients affectés : 50,000+
+- Patients affected: 50,000+
 
-**Résolution** :
-- AES-256 obligatoire
-- Audit de chiffrement
-- Vérification régulière
-- Indemnisation : €2.8M + 35% pénalité
+**Resolution** :
+- AES-256 mandatory
+- Audit de encryption
+- Regular verification
+- Compensation : €2.8M + 35% penalty
 
-**Leçon** : Chiffrement fort obligatoire
+**Lesson**: Encryption fort mandatory
 
-#### Cas 3 : SupplyChainX - Pas de Distribution Géographique (Q1 2026)
+#### Case 3: SupplyChainX - Pas de Distribution Geographic (Q1 2026)
 
-**CONTEXT** : SupplyChainX stockait backups dans une seule localisation.
+**CONTEXT**: SupplyChainX stockait backups dans une seule location.
 
 **Incident** :
-- Défaillance du datacenter
+- Datacenter failure
 - Tous les backups perdus
-- Perte totale : €5.8M
-- Révocation : Permanente
+- Loss totale : €5.8M
+- Revocation: Permanent
 
-**Résolution** :
-- Distribution géographique N+1 obligatoire
-- Vérification d'accessibilité
-- Tests de restauration
-- Indemnisation : €5.8M + 40% pénalité
+**Resolution** :
+- Distribution geographic N+1 mandatory
+- Accessibility verification
+- Tests de restoration
+- Compensation : €5.8M + 40% penalty
 
-**Leçon** : Distribution géographique obligatoire
+**Lesson**: Distribution geographic mandatory
 
-### 4.2 Implémentation Rust - Gestion de Sauvegarde
+### 4.2 Reference Code (Rust) - Management de Backup
 
 ```rust
 use chrono::{DateTime, Utc};
@@ -610,64 +610,68 @@ mod tests {
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. **Test de Fréquence** : Vérifier que backups toutes 15 min
-2. **Test de Chiffrement** : Vérifier que AES-256 utilisé
-3. **Test d'Intégrité** : Vérifier que hash valide (SHA-256)
-4. **Test de Distribution** : Vérifier que N+1 localisations
-5. **Test de Restauration** : Tester restauration complète
-6. **Test de RPO** : Vérifier que RPO < 15 minutes
-7. **Test de RTO** : Vérifier que RTO < 1 heure
-8. **Test d'Accessibilité** : Vérifier que backups accessibles
+**Mandatory Tests** :
+1. **Test de Frequency**: Verify que backups toutes 15 min
+2. **Encryption Test**: Verify AES-256 used
+3. **Test d'Integrity**: Verify que hash valide (SHA-256)
+4. **Test de Distribution**: Verify que N+1 locations
+5. **Restoration Test**: Test complete restoration
+6. **Test de RPO**: Verify que RPO < 15 minutes
+7. **Test de RTO**: Verify que RTO < 1 heure
+8. **Accessibility Test**: Verify backups accessible
 
-**Fréquence** : Continu, audit complet mensuel, test de restauration mensuel
+**Frequency**: Continuous; full audit monthly, test de restoration mensuel
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
-| Violation | Gravité | Sanction | Délai |
+| Violation | Severity | Sanction | Deadline |
 |-----------|---------|----------|-------|
-| Backup corrompu | Critique | Révocation immédiate + amende 40% CA | Immédiat |
-| Chiffrement faible | Critique | Révocation immédiate + amende 35% CA | Immédiat |
-| Pas de distribution | Critique | Révocation immédiate + amende 40% CA | Immédiat |
-| RPO > 15 minutes | Haute | Suspension 30 jours + amende 30% CA | 7 jours |
-| RTO > 1 heure | Haute | Suspension 30 jours + amende 25% CA | 7 jours |
-| Tests non-effectués | Moyenne | Amende 20% CA | 14 jours |
-| Intégrité compromise | Critique | Révocation de licence | Immédiat |
-| Accessibilité perdue | Critique | Révocation immédiate | Immédiat |
-| Récidive (2e violation) | Critique | Interdiction 1 an | Immédiat |
-| Récidive (3e violation) | Critique | Interdiction permanente | Immédiat |
+| Corrupted backup | Critical | Immediate revocation + fine 40% annual revenue | Immediate |
+| Weak encryption | Critical | Immediate revocation + fine 35% annual revenue | Immediate |
+| No distribution | Critical | Immediate revocation + fine 40% annual revenue | Immediate |
+| RPO > 15 minutes | Haute | Suspension 30 days + fine 30% annual revenue | 7 days |
+| RTO > 1 heure | Haute | Suspension 30 days + fine 25% annual revenue | 7 days |
+| Tests non-mades | Moyenne | Fine 20% annual revenue | 14 days |
+| Integrity compromised | Critical | License revocation | Immediate |
+| Accessibility lost | Critical | Immediate revocation | Immediate |
+| Recurrence (2nd violation) | Critical | 1-year ban | Immediate |
+| Recurrence (3rd violation) | Critical | Permanent ban | Immediate |
 
-### 5.3 Processus de Vérification
+### 5.3 Verification Process
 
-1. **Monitoring continu** : Vérifier backups en temps réel
-2. **Audit mensuel** : Vérifier conformité complète
-3. **Test de restauration** : Tester restauration complète
-4. **Audit d'intégrité** : Vérifier intégrité des backups
-5. **Rapport de sauvegarde** : Publié mensuellement
+1. **Continuous monitoring**: Verify backups in real time
+2. **Monthly audit**: Verify complete compliance
+3. **Restoration test**: Test complete restoration
+4. **Audit d'integrity**: Verify integrity des backups
+5. **Backup report**: Published monthly
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
-**Calendrier de conformité** :
-- **Nouveaux agents** : Conformité obligatoire dès déploiement (avant 1er janvier 2027)
-- **Agents existants** : Conformité obligatoire avant 1er janvier 2028
-- **Agents critiques** : Conformité obligatoire avant 1er juillet 2027
+**Compliance Calendar** :
+- **New agents**: Compliance mandatory from deployment (before January 1, 2027)
+- **Existing agents**: Compliance mandatory before January 1, 2028
+- **Agents criticals**: Compliance mandatory before July 1, 2027
 
 ---
 
 ## 7. RÉFÉRENCES
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
-- Fondement : Cycle de vie complet de l'agent autonome
-- Principes : Sauvegarde régulière, chiffrement fort, distribution géographique
+**Axiom Ψ-IV: CIRCULUS VITAE**
+- Foundation: Complete lifecycle of the autonomous agent
+- Principles: Regular backup, strong encryption, geographic distribution
 
 **Articles connexes** :
-- Article IV.4.8 : Récupération d'Urgence
-- Article IV.4.5 : Fin de Vie et Archivage
-- Article IV.4.3 : Opération Continue
+- Article IV.4.8: Emergency Recovery
+- Article IV.4.5: Fin de Vie et Archivage
+- Article IV.4.3: Operations Continuouse
 
+
+---
+
+**Next review**: June 2026

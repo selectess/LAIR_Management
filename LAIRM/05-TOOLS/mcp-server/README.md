@@ -10,90 +10,90 @@ license: CC-BY-SA-4.0
 ---
 
 # MCP SERVER LAIRM
-## Interface Standardisée pour Framework LAIRM
+## Standardized Interface for LAIRM Framework
 
 ### Description
 
-Le MCP Server fournit une interface standardisée (Model Context Protocol) pour accéder au framework LAIRM. Il permet aux clients MCP de chercher, récupérer et valider les articles du framework.
+The MCP Server provides a standardized interface (Model Context Protocol) to access the LAIRM framework. It allows MCP clients to search, retrieve, and validate framework articles.
 
-### Fichiers
+### Files
 
-- `lairm_mcp_server.py` - Serveur MCP principal (400+ lignes)
-- `config.yaml` - Configuration du serveur
-- `README.md` - Cette documentation
+- `lairm_mcp_server.py` - Main MCP server (400+ lines)
+- `config.yaml` - Server configuration
+- `README.md` - This documentation
 
-### Fonctionnalités
+### Features
 
-#### Outils MCP Disponibles
+#### Available MCP Tools
 
-1. **search_articles(query, Axiom, Status)**
-   - Chercher articles par query, Axiom ou Status
-   - Retourne liste d'articles correspondants
-   - Supporte filtrage multi-critères
+1. **search_articles(query, axiom, status)**
+   - Search articles by query, axiom, or status
+   - Returns list of matching articles
+   - Supports multi-criteria filtering
 
-2. **get_article(numero)**
-   - Récupérer Article complet par numéro
-   - Retourne contenu, métadonnées, validations
-   - Inclut liens vers articles connexes
+2. **get_article(number)**
+   - Retrieve complete article by number
+   - Returns content, metadata, validations
+   - Includes links to related articles
 
-3. **get_axiome(numero)**
-   - Récupérer Axiom complet
-   - Retourne tous les articles de l'Axiom
-   - Inclut statistiques et conformité
+3. **get_axiom(number)**
+   - Retrieve complete axiom
+   - Returns all articles of the axiom
+   - Includes statistics and compliance
 
 4. **validate_compliance(agent_config)**
-   - Valider conformité d'agent
-   - Vérifie axiomes requis
-   - Retourne score de conformité
+   - Validate agent compliance
+   - Verifies required axioms
+   - Returns compliance score
 
 5. **audit_action(agent_id, action)**
-   - Auditer action d'agent
-   - Enregistre dans audit trail
-   - Retourne hash d'audit
+   - Audit agent action
+   - Records in audit trail
+   - Returns audit hash
 
-### Utilisation
+### Usage
 
-#### Démarrage du Serveur
+#### Start the Server
 
 ```bash
-# Démarrage simple
+# Simple startup
 python mcp-server/lairm_mcp_server.py
 
-# Avec configuration personnalisée
+# With custom configuration
 python mcp-server/lairm_mcp_server.py --config config.yaml
 
-# Avec logging
+# With logging
 LAIRM_LOG_LEVEL=DEBUG python mcp-server/lairm_mcp_server.py
 ```
 
-#### Appel des Outils
+#### Call Tools
 
 ```python
 from lairm_mcp_server import LAIRMMCPServer
 
-# Initialiser serveur
+# Initialize server
 server = LAIRMMCPServer()
 
-# Chercher articles
+# Search articles
 articles = server.search_articles(
     query="kill-switch",
-    Axiom="I",
-    Status="Enrichi"
+    axiom="I",
+    status="Enriched"
 )
 
-# Récupérer Article
-Article = server.get_article("I-01-01")
+# Retrieve article
+article = server.get_article("I-01-01")
 
-# Récupérer Axiom
-Axiom = server.get_axiome("I")
+# Retrieve axiom
+axiom = server.get_axiom("I")
 
-# Valider conformité
+# Validate compliance
 compliance = server.validate_compliance({
     "agent_id": "agent-001",
-    "axiomes": ["I", "II", "III"]
+    "axioms": ["I", "II", "III"]
 })
 
-# Auditer action
+# Audit action
 audit = server.audit_action(
     agent_id="agent-001",
     action="allocate_resource"
@@ -102,7 +102,7 @@ audit = server.audit_action(
 
 ### Configuration
 
-Le fichier `config.yaml` contient:
+The `config.yaml` file contains:
 
 ```yaml
 server:
@@ -111,7 +111,7 @@ server:
   debug: false
 
 resources:
-  articles_path: ../02-COMPENDIUM-LEGISLATIF
+  articles_path: ../02-COMPENDIUM-LEGISLATIVE
   cache_enabled: true
   cache_ttl: 3600
 
@@ -121,38 +121,38 @@ tools:
 
 security:
   require_auth: false
-  allowed_axiomes: [I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX]
+  allowed_axioms: [I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX]
 ```
 
 ### Architecture
 
 ```
-Client MCP
+MCP Client
     ↓
 LAIRMMCPServer
     ├── search_articles()
     ├── get_article()
-    ├── get_axiome()
+    ├── get_axiom()
     ├── validate_compliance()
     └── audit_action()
     ↓
-Framework LAIRM (399 Articles)
+LAIRM Framework (399 Articles)
 ```
 
 ### Performance
 
-- Chargement initial: ~500ms
-- Recherche: ~50ms (avec cache)
-- Récupération Article: ~10ms
-- Validation conformité: ~100ms
+- Initial load: ~500ms
+- Search: ~50ms (with cache)
+- Article retrieval: ~10ms
+- Compliance validation: ~100ms
 
 ### Status
 
-- **Implémentation** : ✅ Complète
-- **Tests** : ✅ Passés
-- **Production** : ✅ Prêt
+- **Implementation** : ✅ Complete
+- **Tests** : ✅ Passed
+- **Production** : ✅ Ready
 
-### Contributeurs
+### Contributors
 
 - Mehdi Wahbi (Founder)
 

@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - cognitive training
-  - provider training
-  - competency verification
-  - professional development
+tags:
+  - cognitive-training
+  - provider-training
+  - competency-verification
+  - professional-development
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -288,12 +287,12 @@ impl CognitiveTrainingManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No training | 80% CA fine |
-| Incomplete training | 75% CA fine |
-| Failed competency | 85% CA fine |
-| Expired training | 70% CA fine |
-| No documentation | 70% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No training | 80% annual revenue fine |
+| Incomplete training | 75% annual revenue fine |
+| Failed competency | 85% annual revenue fine |
+| Expired training | 70% annual revenue fine |
+| No documentation | 70% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -335,3 +334,7 @@ impl CognitiveTrainingManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

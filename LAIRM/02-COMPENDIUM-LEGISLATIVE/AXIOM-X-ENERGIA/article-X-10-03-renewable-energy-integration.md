@@ -1,7 +1,7 @@
 ---
 title: "Article X.3: Renewable Energy Integration"
 axiom: Ψ-X
-numero: X.3
+article_number: X.3
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
@@ -9,12 +9,12 @@ last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
   - ENERGIA
-  - Renewable Energy
-  - Sustainability
+  - renewable-Energy
+  - sustainability
 validations:
-  Legal: true
-  Technical: true
-  Editorial: true
+  legal: true
+  technical: true
+  editorial: true
 license: CC-BY-SA-4.0
 ---
 
@@ -406,3 +406,7 @@ Agents found non-compliant must:
 
 ---
 
+
+---
+
+**Next review**: June 2026

@@ -1,70 +1,70 @@
 ---
-title: "Article IV.4.18 : Traçabilité du Cycle de Vie"
-Axiom: Ψ-IV
-numero: IV.4.18
+title: "Article IV.4.18: Lifecycle Traceability"
+axiom: Ψ-IV
+article_number: IV.4.18
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Traçabilité
-  - Cycle de Vie
-  - Accountability
-  - Audit Trail
-  - Non-Répudiation
+  - traceability
+  - lifecycle
+  - accountability
+  - audit-trail
+  - non-repudiation
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article IV.4.18 : TRAÇABILITÉ DU CYCLE DE VIE
-## Axiom Ψ-IV : CIRCULUS VITAE
+# Article IV.4.18: LIFECYCLE TRACEABILITY
+## Axiom Ψ-IV: CIRCULUS VITAE
 
 ---
 
-## 1. NORME IMPÉRATIVE
+## 1. IMPERATIVE NORM
 
-Tout agent autonome DOIT avoir une traçabilité complète, immuable et vérifiable de son cycle de vie. La traçabilité DOIT inclure tous les acteurs (identifiés), toutes les actions (enregistrées), tous les changements (horodatés), et tous les contextes (IP, localisation, dispositif). La traçabilité DOIT être accessible en < 1 seconde. Zéro action non-traçable tolérée.
+Every autonomous agent MUST have complete, immutable and verifiable traceability of its lifecycle. Traceability MUST include all actors (identified), all actions (recorded), all changes (timestamped), and all contexts (IP, location, device). Traceability MUST be accessible in < 1 second. Zero untraceable action tolerated.
 
-**Exigences minimales** :
-- Traçabilité complète (100% des actions)
+**Minimum Requirements** :
+- Complete traceability (100% des actions)
 - Identification des acteurs (RSA-4096)
-- Enregistrement des actions (immuable)
+- Enregistrement des actions (immutable)
 - Horodatage UTC (RFC 3161)
-- CONTEXT complet (IP, localisation, dispositif)
-- Immuabilité garantie (blockchain)
-- Vérifiabilité cryptographique
-- Accessibilité < 1 seconde
-- Signature numérique (RSA-4096)
-- Audit trail immuable
+- CONTEXT complet (IP, location, dispositif)
+- Guaranteed immutability (blockchain)
+- Cryptographic verifiability
+- Accessibility < 1 second
+- Digital signature (RSA-4096)
+- Audit trail immutable
 
 ---
 
-## 2. FONDEMENT Legal
+## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
+**Axiom Ψ-IV: CIRCULUS VITAE**
 
-La traçabilité est essentielle pour l'accountability et la Responsibility. Elle DOIT être complète, immuable et vérifiable pour garantir la non-répudiation. Chaque action DOIT être attribuable à un acteur identifié. La traçabilité est la preuve de conformité et de Responsibility.
+Traceability is essential for accountability and responsibility. It MUST be complete, immutable and verifiable to guarantee non-repudiation. Each action MUST be attributable to an identified actor. Traceability is the proof of compliance and responsibility.
 
-**Fundamental Principles** :
-- Traçabilité complète (100%)
+**Fundamental Principles**:
+- Complete traceability (100%)
 - Identification des acteurs
 - Enregistrement des actions
-- Horodatage immuable
+- Horodatage immutable
 - CONTEXT complet
-- Immuabilité cryptographique
-- Vérifiabilité
-- Non-répudiation
+- Cryptographic immutability
+- Verifiability
+- Non-repudiation
 - Accountability
 
 ---
 
-## 3. SPÉCIFICATION TECHNIQUE
+## 3. TECHNICAL SPECIFICATION
 
-### 3.1 Processus de Traçabilité Complète
+### 3.1 Complete Traceability Process
 
 ```python
 import uuid
@@ -81,7 +81,7 @@ class CompleteTraceabilityManager:
     
     def trace_action(self, agent_id: str, actor_id: str, action_type: str, 
                     details: Dict, ip_address: str, location: str, device_id: str):
-        """Enregistre une action traçable complète"""
+        """Records a complete traceable action"""
         trace = {
             'trace_id': f"trc-{uuid.uuid4()}",
             'agent_id': agent_id,
@@ -103,7 +103,7 @@ class CompleteTraceabilityManager:
         # Signer trace (RSA-4096)
         trace['signature'] = self._sign_trace_rsa4096(trace)
         
-        # Stocker dans système de traçabilité immuable
+        # Store in immutable traceability system
         trace_key = f"{agent_id}:{trace['sequence_number']}"
         self.trace_log[trace_key] = trace
         
@@ -112,14 +112,14 @@ class CompleteTraceabilityManager:
             self.action_index[actor_id] = []
         self.action_index[actor_id].append(trace['trace_id'])
         
-        # Enregistrer dans audit trail
+        # Record dans audit trail
         self._log_trace(trace)
         
         return trace
     
     def get_complete_trace(self, agent_id: str, start_date: Optional[str] = None,
                           end_date: Optional[str] = None) -> Dict:
-        """Récupère la traçabilité complète"""
+        """Retrieves the complete traceability"""
         traces = self._retrieve_all_traces(agent_id, start_date, end_date)
         
         trace_report = {
@@ -137,7 +137,7 @@ class CompleteTraceabilityManager:
         return trace_report
     
     def verify_trace_integrity(self, agent_id: str) -> Dict:
-        """Vérifie l'intégrité complète de la traçabilité"""
+        """Verifies complete traceability integrity"""
         traces = self._retrieve_all_traces(agent_id)
         
         verification = {
@@ -151,17 +151,17 @@ class CompleteTraceabilityManager:
         }
         
         for trace in traces:
-            # Vérifier signature RSA-4096
+            # Verify signature RSA-4096
             if not self._verify_trace_signature_rsa4096(trace):
                 verification['all_signatures_valid'] = False
                 verification['errors'].append(f"Invalid signature for trace {trace['trace_id']}")
             
-            # Vérifier identité de l'acteur
+            # Verify actor identity
             if not trace['actor_identity_verified']:
                 verification['all_actors_verified'] = False
                 verification['errors'].append(f"Unverified actor {trace['actor_id']}")
             
-            # Vérifier hash
+            # Verify hash
             if not self._verify_trace_hash(trace):
                 verification['all_actions_recorded'] = False
                 verification['errors'].append(f"Hash mismatch for trace {trace['trace_id']}")
@@ -170,7 +170,7 @@ class CompleteTraceabilityManager:
     
     def generate_trace_report(self, agent_id: str, start_date: Optional[str] = None,
                              end_date: Optional[str] = None) -> Dict:
-        """Génère un rapport de traçabilité certifié"""
+        """Generates a certified traceability report"""
         traces = self._retrieve_all_traces(agent_id, start_date, end_date)
         
         report = {
@@ -206,39 +206,39 @@ class CompleteTraceabilityManager:
         return traces
     
     def _compute_trace_hash(self, trace: Dict) -> str:
-        """Calcule le hash SHA-256 de la trace"""
+        """Calculates the hash SHA-256 de la trace"""
         trace_str = str(sorted(trace.items()))
         return hashlib.sha256(trace_str.encode()).hexdigest()
     
     def _sign_trace_rsa4096(self, trace: Dict) -> str:
-        """Signe la trace avec RSA-4096"""
+        """Signs the trace avec RSA-4096"""
         return hashlib.sha256(str(trace).encode()).hexdigest()
     
     def _verify_trace_signature_rsa4096(self, trace: Dict) -> bool:
-        """Vérifie la signature RSA-4096"""
-        return True  # Implémentation complète requise
+        """Verifies the signature RSA-4096"""
+        return True  # Full implementation required
     
     def _verify_trace_hash(self, trace: Dict) -> bool:
-        """Vérifie le hash de la trace"""
+        """Verifies the hash de la trace"""
         expected_hash = self._compute_trace_hash(trace)
         return trace['hash'] == expected_hash
     
     def _verify_actor_identity(self, actor_id: str) -> bool:
-        """Vérifie l'identité de l'acteur"""
+        """Verifies actor identity"""
         return actor_id in self.actor_registry
     
     def _get_next_sequence(self, agent_id: str) -> int:
-        """Récupère le prochain numéro de séquence"""
+        """Retrieves the next sequence number"""
         traces = [t for k, t in self.trace_log.items() if k.startswith(agent_id)]
         return len(traces) + 1
     
     def _get_rfc3161_timestamp(self) -> str:
-        """Récupère un timestamp RFC 3161"""
+        """Retrieves a timestamp RFC 3161"""
         return datetime.utcnow().isoformat() + "Z"
     
     def _retrieve_all_traces(self, agent_id: str, start_date: Optional[str] = None,
                             end_date: Optional[str] = None) -> List[Dict]:
-        """Récupère toutes les traces"""
+        """Retrieves all traces"""
         traces = [t for k, t in self.trace_log.items() if k.startswith(agent_id)]
         
         if start_date:
@@ -249,11 +249,11 @@ class CompleteTraceabilityManager:
         return traces
     
     def _get_unique_actors(self, traces: List[Dict]) -> List[str]:
-        """Récupère les acteurs uniques"""
+        """Retrieves the acteurs uniques"""
         return list(set(t['actor_id'] for t in traces))
     
     def _get_action_summary(self, traces: List[Dict]) -> Dict:
-        """Résume les actions"""
+        """Summarizes the actions"""
         summary = {}
         for trace in traces:
             action = trace['action_type']
@@ -265,20 +265,20 @@ class CompleteTraceabilityManager:
         return sorted(traces, key=lambda t: t['timestamp'])
     
     def _compute_report_hash(self, traces: List[Dict]) -> str:
-        """Calcule le hash du rapport"""
+        """Calculates the hash du rapport"""
         report_str = str([t['hash'] for t in traces])
         return hashlib.sha256(report_str.encode()).hexdigest()
     
     def _sign_report_rsa4096(self, traces: List[Dict]) -> str:
-        """Signe le rapport avec RSA-4096"""
+        """Signs the rapport avec RSA-4096"""
         return hashlib.sha256(str(traces).encode()).hexdigest()
     
     def _log_trace(self, trace: Dict):
-        """Enregistre la trace dans l'audit trail"""
+        """Records the trace dans l'audit trail"""
         pass
 ```
 
-### 3.2 Informations Traçables Complètes
+### 3.2 Complete Traceable Information
 
 | Information | Description | Format | Obligatoire |
 |-------------|-------------|--------|------------|
@@ -287,53 +287,53 @@ class CompleteTraceabilityManager:
 | Actor ID | Identifiant de l'acteur | String | Oui |
 | Action type | type d'action | Enum | Oui |
 | Timestamp | Date et heure UTC | ISO 8601 | Oui |
-| RFC 3161 Timestamp | Timestamp certifié | RFC 3161 | Oui |
+| RFC 3161 Timestamp | Certified timestamp | RFC 3161 | Yes |
 | IP Address | Adresse IP de l'acteur | IPv4/IPv6 | Oui |
-| Location | Localisation géographique | Lat/Long | Oui |
+| Location | Geographic location | Lat/Long | Yes |
 | Device ID | Identifiant du dispositif | String | Oui |
-| Details | Détails de l'action | JSON | Oui |
-| Sequence Number | Numéro de séquence | Integer | Oui |
+| Details | Details de l'action | JSON | Oui |
+| Sequence Number | Sequence number | Integer | Yes |
 | Hash | Hash SHA-256 | Hex | Oui |
 | Signature | Signature RSA-4096 | Hex | Oui |
 
-### 3.3 Acteurs Traçables
+### 3.3 Acteurs Traceables
 
-Les acteurs must be identifiés et vérifiés :
-- Déployeur (deployer_*)
-- Opérateur (operator_*)
+Actors must be identified and verified:
+- Deployer (deployer_*)
+- Operator (operator_*)
 - Superviseur (supervisor_*)
 - Auditeur (auditor_*)
-- Système (system_*)
+- System (system_*)
 - Utilisateur (user_*)
 
 ---
 
-## 4. IMPLÉMENTATION RÉFÉRENCE
+## 4. REFERENCE IMPLEMENTATION
 
-### 4.1 Cas d'Étude Réels
+### 4.1 Real-World Case Studies
 
-#### Cas 1 : TradeBot3000 - Traçabilité Manquante (Q1 2026)
-- **Incident** : Actions not traced, accountability impossible
-- **Perte** : $3.8M (regulatory fines + damages)
-- **Cause** : No traceability system
-- **Résolution** : Complete traceability with actor identification
-- **Indemnisation** : $3.8M + 35% pénalité
+#### Case 1: TradeBot3000 - Traceability Manquante (Q1 2026)
+- **Incident**: Actions not traced, accountability impossible
+- **Loss** : $3.8M (regulatory fines + damages)
+- **Cause**: No traceability system
+- **Resolution**: Complete traceability with actor identification
+- **Compensation** : $3.8M + 35% penalty
 
-#### Cas 2 : HealthBot - Acteur Non-Identifié (Q1 2026)
-- **Incident** : Actions traced but actor not verified
+#### Case 2: HealthBot - Unidentified Actor (Q1 2026)
+- **Incident**: Actions traced but actor not verified
 - **Dommages** : €2.5M (patient safety incidents)
-- **Cause** : Unverified actor identity
-- **Résolution** : RSA-4096 actor verification
-- **Indemnisation** : €2.5M + 30% pénalité
+- **Cause**: Unverified actor identity
+- **Resolution**: RSA-4096 actor verification
+- **Compensation** : €2.5M + 30% penalty
 
-#### Cas 3 : SupplyChainX - Traçabilité Non-Vérifiable (Q1 2026)
-- **Incident** : Traces not cryptographically verifiable
+#### Case 3: SupplyChainX - Non-Verifiable Traceability (Q1 2026)
+- **Incident**: Traces not cryptographically verifiable
 - **Dommages** : €2.3M (audit failures)
-- **Cause** : Missing signatures and hash chain
-- **Résolution** : RSA-4096 signatures + SHA-256 hashing
-- **Indemnisation** : €2.3M + 25% pénalité
+- **Cause**: Missing signatures and hash chain
+- **Resolution**: RSA-4096 signatures + SHA-256 hashing
+- **Compensation** : €2.3M + 25% penalty
 
-### 4.2 Implémentation Rust
+### 4.2 Reference Code (Rust)
 
 ```rust
 use chrono::{DateTime, Utc};
@@ -506,7 +506,7 @@ impl CompleteTraceabilityManager {
 }
 ```
 
-### 4.3 Chaîne de Traçabilité Complète
+### 4.3 Complete Traceability Chain
 
 ```
 Action 1 (Creation by deployer_001)
@@ -534,16 +534,16 @@ Action 3 (Maintenance by technician_001)
 └── Signature: sig3...
 ```
 
-### 4.4 Registre de Traçabilité
+### 4.4 Registre de Traceability
 
-Chaque trace DOIT être enregistrée avec :
+Chaque trace MUST be recorded avec :
 - Trace ID unique
 - Agent ID
-- Actor ID (vérifié)
+- Actor ID (verified)
 - Action type
 - Timestamp UTC (RFC 3161)
 - IP Address
-- Location (géographique)
+- Location (geographic)
 - Device ID
 - Sequence Number
 - Hash SHA-256
@@ -551,86 +551,90 @@ Chaque trace DOIT être enregistrée avec :
 
 ---
 
-## 5. VÉRIFICATION & SANCTIONS
+## 5. VERIFICATION & SANCTIONS
 
-### 5.1 Vérification de Conformité
+### 5.1 Compliance Verification
 
-**Tests obligatoires** :
-1. Vérifier traçabilité complète (100% des actions)
-2. Vérifier identification des acteurs (RSA-4096)
-3. Vérifier enregistrement des actions (immuable)
-4. Vérifier horodatage UTC (RFC 3161)
-5. Vérifier CONTEXT complet (IP, localisation, dispositif)
-6. Vérifier immuabilité (blockchain)
-7. Vérifier vérifiabilité (signatures)
-8. Vérifier accessibilité (< 1 sec)
-9. Vérifier audit trail complet
-10. Vérifier non-répudiation
+**Mandatory Tests** :
+1. Verify complete traceability (100% of actions)
+2. Verify identification des acteurs (RSA-4096)
+3. Verify recording des actions (immutable)
+4. Verify horodatage UTC (RFC 3161)
+5. Verify CONTEXT complet (IP, location, dispositif)
+6. Verify immutability (blockchain)
+7. Verify verifiability (signatures)
+8. Verify accessibility (< 1 sec)
+9. Verify audit trail complet
+10. Verify non-repudiation
 
-**Fréquence** : À chaque action, audit complet mensuel
+**Frequency** : À chaque action, audit complet mensuel
 
-### 5.2 Sanctions pour Non-Conformité
+### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Traçabilité incomplète | Révocation immédiate + 40% CA |
-| Acteur non-identifié | Révocation immédiate |
-| Action non-enregistrée | Révocation immédiate + 35% CA |
-| Immuabilité compromise | Révocation de licence |
-| Vérifiabilité compromise | Révocation immédiate |
-| Horodatage invalide | Amende 30% CA |
-| CONTEXT manquant | Amende 25% CA |
-| Accessibilité > 1 sec | Amende 20% CA |
-| Audit trail absent | Amende 25% CA |
-| Non-répudiation compromise | Révocation immédiate |
-| Récidive | Interdiction permanente |
+| Incomplete traceability | Immediate revocation + 40% annual revenue |
+| Unidentified actor | Immediate revocation |
+| Action non-recorded | Immediate revocation + 35% annual revenue |
+| Immutability compromised | License revocation |
+| Verifiability compromised | Immediate revocation |
+| Horodatage invalide | Fine 30% annual revenue |
+| CONTEXT manquant | Fine 25% annual revenue |
+| Accessibility > 1 sec | Fine 20% annual revenue |
+| Missing audit trail | Fine 25% annual revenue |
+| Non-repudiation compromise | Immediate revocation |
+| Recurrence | Permanent ban |
 
-### 5.3 Processus de Vérification
+### 5.3 Verification Process
 
-1. Vérification mensuelle de traçabilité
-2. Audit d'intégrité des traces
-3. Vérification d'identité des acteurs
+1. Verification mensuelle de traceability
+2. Audit d'integrity des traces
+3. Verification d'identity des acteurs
 4. Audit de signatures
-5. Vérification de horodatage
+5. Verification de horodatage
 6. Audit trail complet
-7. Rapport de traçabilité
-8. Certification légale
+7. Rapport de traceability
+8. Legal certification
 
 ---
 
-## 6. ENTRÉE EN VIGUEUR
+## 6. EFFECTIVE DATE
 
-**Date d'entrée en vigueur** : 1er janvier 2027
+**Effective Date** : 1er janvier 2027
 
-**Calendrier de conformité** :
-- Nouveaux agents : Conformité obligatoire dès création
-- Agents existants : Conformité obligatoire avant 1er janvier 2028
-- Agents critiques : Conformité obligatoire avant 1er juillet 2027
+**Compliance Calendar** :
+- New agents: Compliance mandatory from deployment
+- Existing agents: Compliance mandatory before January 1, 2028
+- Critical agents: Compliance mandatory before July 1, 2027
 
-**Dispositions transitoires** :
-- Agents existants : Audit de traçabilité avant 30 juin 2027
-- Infrastructure de traçabilité établie avant 1er janvier 2027
+**Transitional Provisions** :
+- Existing agents: Audit de traceability avant 30 juin 2027
+- Traceability infrastructure established before January 1, 2027
 
 ---
 
 ## 7. RÉFÉRENCES
 
-**Axiom Ψ-IV : CIRCULUS VITAE**
-- Fondement : Cycle de vie complet avec traçabilité complète
-- Principes : Accountability, non-répudiation, immuabilité
+**Axiom Ψ-IV: CIRCULUS VITAE**
+- Foundation: Complete lifecycle with full traceability
+- Principes: Accountability, non-repudiation, immutability
 
 **Articles connexes** :
-- Article II.2.6 : Traçabilité Complète
-- Article II.2.5 : Audit Trail
-- Article IV.4.17 : Historique Complet
-- Article IV.4.11 : Documentation du Cycle de Vie
-- Article IV.4.12 : Audit du Cycle de Vie
+- Article II.2.6: Complete Traceability
+- Article II.2.5: Audit Trail
+- Article IV.4.17: Historique Complet
+- Article IV.4.11: Documentation du Cycle de Vie
+- Article IV.4.12: Audit du Cycle de Vie
 
-**Normes de référence** :
-- ISO 27001 : Gestion de la traçabilité
-- ISO 27035 : Gestion des incidents
-- RFC 3161 : Timestamping
-- NIST SP 800-92 : Guide de gestion des logs
+**Reference standards**:
+- ISO 27001: Management de la traceability
+- ISO 27035: Management des incidents
+- RFC 3161: Timestamping
+- NIST SP 800-92: Guide de management des logs
 
 ---
 
+
+---
+
+**Next review**: June 2026

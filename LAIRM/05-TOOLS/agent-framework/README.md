@@ -10,126 +10,126 @@ license: CC-BY-SA-4.0
 ---
 
 # AGENT FRAMEWORK LAIRM
-## SDK pour Développer Agents Autonomes Conformes
+## SDK for Developing Compliant Autonomous Agents
 
 ### Description
 
-L'Agent Framework fournit un SDK complet pour développer des agents autonomes conformes au framework LAIRM. Il inclut des décorateurs pour automatiser la vérification de conformité, l'audit et la supervision.
+The Agent Framework provides a complete SDK for developing autonomous agents compliant with the LAIRM framework. It includes decorators to automate compliance verification, audit, and supervision.
 
-### Fichiers
+### Files
 
-- `lairm_agent_sdk.py` - SDK principal (300+ lignes)
-- `README.md` - Cette documentation
+- `lairm_agent_sdk.py` - Main SDK (300+ lines)
+- `README.md` - This documentation
 
-### Fonctionnalités
+### Features
 
-#### Décorateurs
+#### Decorators
 
-1. **@compliant(axiomes=['I', 'II'])**
-   - Vérifier conformité avant exécution
-   - Valide axiomes requis
-   - Lève exception si non-conforme
+1. **@compliant(axioms=['I', 'II'])**
+   - Verify compliance before execution
+   - Validate required axioms
+   - Raise exception if non-compliant
 
 2. **@auditable**
-   - Enregistrer action dans audit trail
-   - Compute hash d'audit
-   - Trace Responsibility
+   - Record action in audit trail
+   - Compute audit hash
+   - Trace responsibility
 
 3. **@responsible**
-   - Tracer Responsibility d'action
-   - Enregistre agent_id et timestamp
-   - Lie à audit trail
+   - Trace action responsibility
+   - Record agent_id and timestamp
+   - Link to audit trail
 
 4. **@supervised**
-   - Demander supervision humaine
-   - Attend approbation avant exécution
-   - Enregistre décision
+   - Request human supervision
+   - Wait for approval before execution
+   - Record decision
 
-#### Classe LAIRMAgentSDK
+#### LAIRMAgentSDK Class
 
 ```python
 class LAIRMAgentSDK:
-    def __init__(self, agent_id, axiomes):
-        # Initialiser SDK
+    def __init__(self, agent_id, axioms):
+        # Initialize SDK
         
-    def check_compliance(self, axiomes):
-        # Vérifier conformité
+    def check_compliance(self, axioms):
+        # Verify compliance
         
     def log_action(self, action, details):
-        # Enregistrer action
+        # Record action
         
     def get_audit_log(self):
-        # Récupérer audit trail
+        # Retrieve audit trail
         
     def get_compliance_status(self):
-        # Obtenir Status de conformité
+        # Get compliance status
 ```
 
-### Utilisation
+### Usage
 
-#### Développer Agent Conforme
+#### Develop Compliant Agent
 
 ```python
 from lairm_agent_sdk import LAIRMAgentSDK, compliant, auditable, responsible
 
-# Initialiser SDK
+# Initialize SDK
 sdk = LAIRMAgentSDK(
     agent_id="agent-001",
-    axiomes=["I", "II", "III"]
+    axioms=["I", "II", "III"]
 )
 
-# Définir action conforme
-@compliant(axiomes=["I", "II"])
+# Define compliant action
+@compliant(axioms=["I", "II"])
 @auditable
 @responsible
 def allocate_resource(resource_type, amount):
-    """Allouer ressource de manière conforme"""
-    # Vérification de conformité automatique
-    # Audit automatique
-    # Responsibility tracée
-    return {"Status": "allocated", "amount": amount}
+    """Allocate resource in a compliant manner"""
+    # Automatic compliance verification
+    # Automatic audit
+    # Responsibility traced
+    return {"status": "allocated", "amount": amount}
 
-# Exécuter action
+# Execute action
 result = allocate_resource("gpu", 4)
 
-# Obtenir audit trail
+# Get audit trail
 audit = sdk.get_audit_log()
 print(f"Audit entries: {len(audit)}")
 
-# Obtenir Status de conformité
-Status = sdk.get_compliance_status()
-print(f"Compliance score: {Status['score']}/100")
+# Get compliance status
+status = sdk.get_compliance_status()
+print(f"Compliance score: {status['score']}/100")
 ```
 
-#### Avec Supervision Humaine
+#### With Human Supervision
 
 ```python
 from lairm_agent_sdk import supervised
 
-@compliant(axiomes=["I", "II", "III"])
-@supervised  # Demande approbation humaine
+@compliant(axioms=["I", "II", "III"])
+@supervised  # Request human approval
 @auditable
 def critical_action(params):
-    """Action critique nécessitant supervision"""
-    # Attend approbation humaine
-    # Enregistre décision
-    # Exécute si approuvé
-    return {"Status": "executed"}
+    """Critical action requiring supervision"""
+    # Wait for human approval
+    # Record decision
+    # Execute if approved
+    return {"status": "executed"}
 
-# Exécuter action
+# Execute action
 result = critical_action({"param": "value"})
 ```
 
-#### Vérification Manuelle
+#### Manual Verification
 
 ```python
-# Vérifier conformité avant action
+# Verify compliance before action
 if sdk.check_compliance(["I", "II"]):
     result = execute_action()
 else:
-    print("Action non-conforme")
+    print("Action non-compliant")
 
-# Enregistrer action manuelle
+# Record action manually
 sdk.log_action(
     action="custom_action",
     details={"param": "value"}
@@ -139,7 +139,7 @@ sdk.log_action(
 ### Architecture
 
 ```
-Agent Autonome
+Autonomous Agent
     ↓
 LAIRMAgentSDK
     ├── @compliant
@@ -151,42 +151,42 @@ Compliance Checker
 Audit Engine
 Agent Framework
     ↓
-Framework LAIRM
+LAIRM Framework
 ```
 
 ### Audit Trail
 
-Chaque action enregistre:
-- `agent_id` - Identifiant d'agent
-- `action` - type d'action
-- `timestamp` - Quand
-- `axiomes` - Axiomes vérifiés
-- `Status` - Résultat
-- `hash` - Hash d'intégrité
+Each action records:
+- `agent_id` - Agent identifier
+- `action` - Action type
+- `timestamp` - When
+- `axioms` - Verified axioms
+- `status` - Result
+- `hash` - Integrity hash
 
-### Conformité
+### Compliance
 
-Vérifications automatiques:
-- ✅ Axiomes requis présents
-- ✅ Permissions d'agent
-- ✅ Status d'agent
-- ✅ Limites de ressources
-- ✅ Historique d'actions
+Automatic checks:
+- ✅ Required axioms present
+- ✅ Agent permissions
+- ✅ Agent status
+- ✅ Resource limits
+- ✅ Action history
 
 ### Performance
 
-- Initialisation: ~50ms
-- Vérification conformité: ~10ms
-- Enregistrement audit: ~5ms
-- Récupération audit: ~20ms
+- Initialization: ~50ms
+- Compliance verification: ~10ms
+- Audit recording: ~5ms
+- Audit retrieval: ~20ms
 
 ### Status
 
-- **Implémentation** : ✅ Complète
-- **Tests** : ✅ Passés
-- **Production** : ✅ Prêt
+- **Implementation** : ✅ Complete
+- **Tests** : ✅ Passed
+- **Production** : ✅ Ready
 
-### Contributeurs
+### Contributors
 
 - Mehdi Wahbi (Founder)
 

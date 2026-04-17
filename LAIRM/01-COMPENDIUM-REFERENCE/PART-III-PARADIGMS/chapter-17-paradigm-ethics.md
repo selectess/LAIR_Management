@@ -8,9 +8,9 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
+tags:
   - ethics
-  - programmable ethics
+  - programmable-ethics
   - values
   - bias
   - fairness
@@ -130,3 +130,7 @@ Programmable ethics (explicit constraints, bias detection, fairness ≥95%, ethi
 
 ---
 
+
+---
+
+**Next review**: June 2026

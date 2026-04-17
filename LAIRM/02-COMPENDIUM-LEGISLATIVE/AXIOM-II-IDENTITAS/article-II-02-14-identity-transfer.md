@@ -1,25 +1,25 @@
 ---
-title: "Article II.2.14 : Identity Transfer"
-Axiom: Ψ-II
-numero: II.2.14
+title: "Article II.2.14: Identity Transfer"
+axiom: Ψ-II
+article_number: II.2.14
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Identity
-  - Transfer
-  - Migration
+  - identity
+  - transfer
+  - migration
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article II.2.14 : IDENTITY TRANSFER
-## Axiom Ψ-II : IDENTITAS AGENTICA
+# Article II.2.14: IDENTITY TRANSFER
+## Axiom Ψ-II: IDENTITAS AGENTICA
 
 ---
 
@@ -41,14 +41,14 @@ Any autonomous agent MAY transfer its identity to a new agent or new instance un
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II : IDENTITAS AGENTICA**
+**Axiom Ψ-II: IDENTITAS AGENTICA**
 
 Identity transfer allows agent migration while maintaining identity continuity and responsibility. It ensures history is not lost.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Identity continuity
 - Maintained traceability
-- Continued responsibility
+- Continuoused responsibility
 - Preserved history
 - Mandatory approval
 
@@ -90,7 +90,7 @@ class IdentityTransferManager:
             'reason': reason,
             'authority_id': authority_id,
             'requested_at': datetime.utcnow().isoformat() + 'Z',
-            'Status': 'pending'
+            'status': 'pending'
         }
         
         self.transfer_log.append(request)
@@ -146,7 +146,7 @@ class IdentityTransferManager:
             'transferred_at': datetime.utcnow().isoformat() + 'Z',
             'identity_transferred': source_identity,
             'history_transferred': source_history,
-            'Status': 'completed'
+            'status': 'completed'
         }
         
         # Archive source agent
@@ -252,20 +252,20 @@ See Section 3.2 above.
 5. Traceability test
 6. History test
 7. Archival test
-8. Continuity test
+8. Continuousity test
 
-**Frequency** : Quarterly minimum
+**Frequency**: Quarterly minimum
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Unauthorized transfer | License revocation, 40% CA fine |
-| Lost traceability | Immediate stop, 45% CA fine |
-| Lost history | Immediate stop, 50% CA fine |
-| Missing approval | Operation suspension, 25% CA fine |
-| Missing archival | Operation suspension, 20% CA fine |
-| Broken responsibility | Immediate stop, 35% CA fine |
+| Unauthorized transfer | License revocation, 40% annual revenue fine |
+| Lost traceability | Immediate stop, 45% annual revenue fine |
+| Lost history | Immediate stop, 50% annual revenue fine |
+| Missing approval | Operation suspension, 25% annual revenue fine |
+| Missing archival | Operation suspension, 20% annual revenue fine |
+| Broken responsibility | Immediate stop, 35% annual revenue fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -309,13 +309,17 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.1 : Agent Passport
-- Article II.2.6 : Complete Traceability
-- Chapter 11 : Paradigm of Agent Identity
-- Glossary : Transfer, Migration
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.1: Agent Passport
+- Article II.2.6: Complete Traceability
+- Chapter 11: Paradigm of Agent Identity
+- Glossary: Transfer, Migration
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

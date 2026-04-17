@@ -6,9 +6,9 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
+tags:
   - paradigms
-  - governance frameworks
+  - governance-frameworks
   - sovereignty
   - identity
   - responsibility
@@ -18,7 +18,7 @@ keywords:
   - adaptation
   - ethics
   - governance
-  - legislative corpus
+  - legislative-corpus
 internal_references:
   - ../PART-II-DIMENSIONS/README.md
   - ../PART-IV-PROSPECTIVE/README.md
@@ -232,3 +232,7 @@ Part IV explores prospective challenges (2026-2050) requiring additional paradig
 
 ---
 
+
+---
+
+**Next review**: June 2026

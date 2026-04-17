@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - equity revision
-  - policy revision
-  - standard revision
-  - continuous improvement
+tags:
+  - equity-revision
+  - policy-revision
+  - standard-revision
+  - continuous-improvement
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -270,11 +269,11 @@ impl RevisionManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No revision | 80% CA fine |
-| Evidence ignored | 78% CA fine |
-| Stakeholder excluded | 82% CA fine |
-| Revision opacity | 80% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No revision | 80% annual revenue fine |
+| Evidence ignored | 78% annual revenue fine |
+| Stakeholder excluded | 82% annual revenue fine |
+| Revision opacity | 80% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -289,3 +288,7 @@ impl RevisionManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

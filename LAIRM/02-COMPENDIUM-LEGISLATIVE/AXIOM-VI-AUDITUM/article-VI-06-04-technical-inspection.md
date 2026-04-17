@@ -7,17 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - technical inspection
-  - architecture verification
-  - code review
-  - dependency analysis
-  - configuration audit
+tags:
+  - technical-inspection
+  - architecture-verification
+  - code-review
+  - dependency-analysis
+  - configuration-audit
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -443,13 +442,13 @@ impl TechnicalInspectionManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No inspection | Immediate revocation + 60% CA |
-| Incomplete coverage | 50% CA fine |
-| Missing documentation | 40% CA fine |
-| Critical defect not corrected | 55% CA fine |
-| Correction deadline missed | 45% CA fine |
-| Automated scanning disabled | 40% CA fine |
-| Falsified report | Immediate revocation + 70% CA |
+| No inspection | Immediate revocation + 60% annual revenue |
+| Incomplete coverage | 50% annual revenue fine |
+| Missing documentation | 40% annual revenue fine |
+| Critical defect not corrected | 55% annual revenue fine |
+| Correction deadline missed | 45% annual revenue fine |
+| Automated scanning disabled | 40% annual revenue fine |
+| Falsified report | Immediate revocation + 70% annual revenue |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -491,3 +490,7 @@ impl TechnicalInspectionManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

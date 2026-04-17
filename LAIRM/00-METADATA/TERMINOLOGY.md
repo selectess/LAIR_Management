@@ -203,3 +203,7 @@ Example: SECTION-NORM-01
 *The Cybernetic Criterion - Terminology and Nomenclature*  
 *Legislature for Autonomous Intelligent Resources Management*  
 *Global Agentive Constitution 2026-2036*
+
+---
+
+**Next review**: June 2026

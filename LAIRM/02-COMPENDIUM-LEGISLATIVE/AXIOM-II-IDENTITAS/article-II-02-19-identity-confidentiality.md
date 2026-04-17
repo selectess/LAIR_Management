@@ -1,25 +1,25 @@
 ---
-title: "Article II.2.19 : Identity Confidentiality"
-Axiom: Ψ-II
-numero: II.2.19
+title: "Article II.2.19: Identity Confidentiality"
+axiom: Ψ-II
+article_number: II.2.19
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Identity
-  - Confidentiality
-  - Data
+  - identity
+  - confidentiality
+  - data
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article II.2.19 : IDENTITY CONFIDENTIALITY
-## Axiom Ψ-II : IDENTITAS AGENTICA
+# Article II.2.19: IDENTITY CONFIDENTIALITY
+## Axiom Ψ-II: IDENTITAS AGENTICA
 
 ---
 
@@ -41,11 +41,11 @@ Every autonomous agent MUST protect the confidentiality of its identity and asso
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II : IDENTITAS AGENTICA**
+**Axiom Ψ-II: IDENTITAS AGENTICA**
 
 Identity confidentiality protects agent sensitive data. It ensures only competent authorities can access data and all access is audited.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Right to confidentiality
 - Controlled access
 - Complete audit
@@ -99,7 +99,7 @@ class IdentityConfidentialityManager:
             'reason': reason,
             'data_type': data_type,
             'requested_at': datetime.utcnow().isoformat() + 'Z',
-            'Status': 'pending'
+            'status': 'pending'
         }
         
         self.access_requests.append(request)
@@ -292,18 +292,18 @@ See Section 3.2 above.
 7. Notification test
 8. Revocation test
 
-**Frequency** : Monthly minimum
+**Frequency**: Monthly minimum
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Uncontrolled access | License revocation, 50% CA fine |
-| Data exposed | Immediate stop, 60% CA fine |
-| Missing logging | 20% CA fine |
-| Missing notification | Operation suspension, 25% CA fine |
-| Missing approval | Immediate stop, 40% CA fine |
-| Lost audit trail | Immediate stop, 55% CA fine |
+| Uncontrolled access | License revocation, 50% annual revenue fine |
+| Data exposed | Immediate stop, 60% annual revenue fine |
+| Missing logging | 20% annual revenue fine |
+| Missing notification | Operation suspension, 25% annual revenue fine |
+| Missing approval | Immediate stop, 40% annual revenue fine |
+| Lost audit trail | Immediate stop, 55% annual revenue fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -347,13 +347,17 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.1 : Agent Passport
-- Article II.2.18 : Identity Security
-- Chapter 11 : Paradigm of Agent Identity
-- Glossary : Confidentiality, Sensitive data
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.1: Agent Passport
+- Article II.2.18: Identity Security
+- Chapter 11: Paradigm of Agent Identity
+- Glossary: Confidentiality, Sensitive data
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026

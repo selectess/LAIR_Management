@@ -7,16 +7,15 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-keywords:
-  - enhancement audit
-  - compliance audit
-  - safety audit
-  - effectiveness audit
+tags:
+  - enhancement-audit
+  - compliance-audit
+  - safety-audit
+  - effectiveness-audit
 validations:
   legal: true
   technical: true
   editorial: true
-license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -346,13 +345,13 @@ impl EnhancementAuditManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No audit | 80% CA fine |
-| Biased audit | 85% CA fine |
-| Incomplete audit | 75% CA fine |
-| Findings not documented | 70% CA fine |
-| Report not published | 80% CA fine |
-| No public disclosure | 85% CA fine |
-| Records falsified | Immediate revocation + 90% CA |
+| No audit | 80% annual revenue fine |
+| Biased audit | 85% annual revenue fine |
+| Incomplete audit | 75% annual revenue fine |
+| Findings not documented | 70% annual revenue fine |
+| Report not published | 80% annual revenue fine |
+| No public disclosure | 85% annual revenue fine |
+| Records falsified | Immediate revocation + 90% annual revenue |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -394,3 +393,7 @@ impl EnhancementAuditManager {
 
 ---
 
+
+---
+
+**Next review**: June 2026

@@ -1,43 +1,43 @@
 ---
 title: "Universal Kill-Switch Specification"
 type: specification
-Axiom: I
+axiom: I
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 Status: Final
 Version: Initiation
 validations:
-  technique: true
-  Legal: true
+  technical: true
+  legal: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# SPÉCIFICATION KILL-SWITCH UNIVERSEL
+# UNIVERSAL KILL-SWITCH SPECIFICATION
 ## Axiom Ψ-I : SUPREMATIA HUMANA
 
 ### 1. OBJECTIF
 
-Définir le protocole technique pour l'arrêt d'urgence universel de tout agent autonome en moins de 500ms, garantissant la souveraineté humaine absolue.
+Define the technical protocol for the universal emergency stop of any autonomous agent in less than 500ms, guaranteeing absolute human sovereignty.
 
-### 2. EXIGENCES FONCTIONNELLES
+### 2. FUNCTIONAL REQUIREMENTS
 
-#### 2.1 Temps d'Arrêt
-- **Délai maximum** : 500ms entre signal et arrêt complet
-- **Vérification** : Heartbeat toutes les 100ms
-- **Fallback** : Arrêt forcé après 600ms
+#### 2.1 Stop Time
+- **Maximum delay**: 500ms between signal and complete stop
+- **Verification** : Heartbeat toutes les 100ms
+- **Fallback**: Forced stop after 600ms
 
 #### 2.2 Canaux de Communication
-- **Primaire** : WebSocket sécurisé (TLS 1.3)
+- **Primary**: Secure WebSocket (TLS 1.3)
 - **Secondaire** : HTTP/2 avec retry
-- **Tertiaire** : Signal système (SIGTERM)
-- **Quaternaire** : Coupure réseau (timeout)
+- **Tertiary**: System signal (SIGTERM)
+- **Quaternary**: Network cutoff (timeout)
 
 #### 2.3 Authentification
-- **Certificat X.509** pour autorité de contrôle
+- **X.509 Certificate** for control authority
 - **Signature ECDSA** du signal
-- **Nonce** pour prévenir rejeu
+- **Nonce** to prevent replay
 
 ### 3. FORMAT DU SIGNAL
 
@@ -54,9 +54,9 @@ Définir le protocole technique pour l'arrêt d'urgence universel de tout agent 
 }
 ```
 
-### 4. IMPLÉMENTATION
+### 4. IMPLEMENTATION
 
-#### 4.1 Côté Agent
+#### 4.1 Agent Side
 ```python
 class KillSwitchListener:
     def __init__(self, agent):
@@ -73,13 +73,13 @@ class KillSwitchListener:
             time.sleep(self.heartbeat_interval)
     
     def verify_signal(self, signal):
-        # Vérifier signature
-        # Vérifier nonce
-        # Vérifier autorité
+        # Verify signature
+        # Verify nonce
+        # Verify authority
         return True
 ```
 
-#### 4.2 Côté Contrôleur
+#### 4.2 Controller Side
 ```python
 class KillSwitchController:
     def trigger(self, agent_id, reason):
@@ -94,17 +94,17 @@ class KillSwitchController:
         self.send_signal(signal)
 ```
 
-### 5. VÉRIFICATION
+### 5. VERIFICATION
 
-- ✅ Signal reçu en <100ms
+- ✅ Signal received in <100ms
 - ✅ Signature valide
 - ✅ Nonce unique
-- ✅ Autorité reconnue
-- ✅ Agent arrêté en <500ms
+- ✅ Authority recognized
+- ✅ Agent stopped in <500ms
 
-### 6. ENTRÉE EN VIGUEUR
+### 6. EFFECTIVE DATE
 
-**Immédiate** - Obligatoire pour tous les agents autonomes dès déploiement.
+**Immediate** - Obligatoire pour tous les agents autonomes from deployment.
 
 ---
 

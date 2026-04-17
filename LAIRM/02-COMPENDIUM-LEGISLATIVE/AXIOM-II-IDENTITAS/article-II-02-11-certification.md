@@ -1,25 +1,25 @@
 ---
-title: "Article II.2.11 : Identity Certification"
-Axiom: Ψ-II
-numero: II.2.11
+title: "Article II.2.11: Identity Certification"
+axiom: Ψ-II
+article_number: II.2.11
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - Identity
-  - Certification
-  - Validation
+  - identity
+  - certification
+  - validation
 validations:
-  Legal: true
-  technique: true
+  legal: true
+  technical: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article II.2.11 : IDENTITY CERTIFICATION
-## Axiom Ψ-II : IDENTITAS AGENTICA
+# Article II.2.11: IDENTITY CERTIFICATION
+## Axiom Ψ-II: IDENTITAS AGENTICA
 
 ---
 
@@ -41,11 +41,11 @@ Every autonomous agent MUST obtain an identity certification issued by a compete
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II : IDENTITAS AGENTICA**
+**Axiom Ψ-II: IDENTITAS AGENTICA**
 
 Certification ensures that an agent's identity has been verified by a competent authority. It provides assurance that the agent is what it claims to be.
 
-**Fundamental Principles** :
+**Fundamental Principles**:
 - Authenticity verification
 - Identity assurance
 - Guaranteed compliance
@@ -92,7 +92,7 @@ Certification ensures that an agent's identity has been verified by a competent 
   "issued_by": "LAIRM-Authority-FR",
   "issued_at": "2025-03-30T10:00:00Z",
   "expires_at": "2027-03-30T10:00:00Z",
-  "Status": "active",
+  "status": "active",
   "verification": {
     "identity_verified": true,
     "metadata_verified": true,
@@ -123,7 +123,7 @@ class CertificationManager:
             'requested_at': datetime.utcnow().isoformat() + 'Z',
             'metadata': metadata,
             'proofs': proofs,
-            'Status': 'pending'
+            'status': 'pending'
         }
         
         self.cert_log.append(request)
@@ -159,7 +159,7 @@ class CertificationManager:
             'issued_by': 'LAIRM-Authority',
             'issued_at': datetime.utcnow().isoformat() + 'Z',
             'expires_at': (datetime.utcnow() + timedelta(days=365*3)).isoformat() + 'Z',
-            'Status': 'active',
+            'status': 'active',
             'verification': {
                 'identity_verified': True,
                 'metadata_verified': True,
@@ -209,7 +209,7 @@ class CertificationManager:
             'issued_by': old_cert['issued_by'],
             'issued_at': datetime.utcnow().isoformat() + 'Z',
             'expires_at': (datetime.utcnow() + timedelta(days=365*3)).isoformat() + 'Z',
-            'Status': 'active',
+            'status': 'active',
             'previous_certificate': certificate_id,
             'verification': old_cert['verification']
         }
@@ -302,18 +302,18 @@ See Section 3.3 above.
 7. Renewal test
 8. Revocation test
 
-**Frequency** : Quarterly minimum
+**Frequency**: Quarterly minimum
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Missing certification | License revocation, 40% CA fine |
-| Invalid certificate | Immediate stop, 35% CA fine |
-| Expired certificate | Operation suspension, 20% CA fine |
-| Missing renewal | Operation suspension, 15% CA fine |
-| Falsified certificate | License revocation, 50% CA fine |
-| Invalid signature | Immediate stop, 30% CA fine |
+| Missing certification | License revocation, 40% annual revenue fine |
+| Invalid certificate | Immediate stop, 35% annual revenue fine |
+| Expired certificate | Operation suspension, 20% annual revenue fine |
+| Missing renewal | Operation suspension, 15% annual revenue fine |
+| Falsified certificate | License revocation, 50% annual revenue fine |
+| Invalid signature | Immediate stop, 30% annual revenue fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -357,13 +357,17 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II : IDENTITAS AGENTICA
-- Article II.2.1 : Agent Passport
-- Article II.2.10 : Mandatory Metadata
-- Chapter 11 : Paradigm of Agent Identity
-- Glossary : Certification, Authority
+- Axiom Ψ-II: IDENTITAS AGENTICA
+- Article II.2.1: Agent Passport
+- Article II.2.10: Mandatory Metadata
+- Chapter 11: Paradigm of Agent Identity
+- Glossary: Certification, Authority
 
 ---
 
-**Next Review** : January 2027
+**Next Review**: January 2027
 
+
+---
+
+**Next review**: June 2026
