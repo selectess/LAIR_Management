@@ -10,8 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* ── Manifesto page overrides — same tokens as style.css ── */
-
     .manifesto-hero {
       padding: 140px var(--space-6) 80px;
       background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-blue-dark) 100%);
@@ -36,9 +34,7 @@
       gap: 3rem;
       flex-wrap: wrap;
     }
-    .manifesto-stats .stat-item {
-      text-align: center;
-    }
+    .manifesto-stats .stat-item { text-align: center; }
     .manifesto-stats .stat-number {
       display: block;
       font-family: var(--font-display);
@@ -52,8 +48,6 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-
-    /* ── Content ── */
     .manifesto-body {
       max-width: 1280px;
       margin: 0 auto;
@@ -70,8 +64,6 @@
       transition: color 0.2s;
     }
     .back-home:hover { color: var(--accent-gold); }
-
-    /* ── TOC pills ── */
     .toc-pills {
       display: flex;
       flex-wrap: wrap;
@@ -102,11 +94,7 @@
       font-family: var(--font-body);
       font-weight: 500;
     }
-
-    /* ── Doc sections ── */
-    .doc-section {
-      margin-bottom: 60px;
-    }
+    .doc-section { margin-bottom: 60px; }
     .doc-section-title {
       font-family: var(--font-display);
       font-size: clamp(1.5rem, 3vw, 2rem);
@@ -124,14 +112,19 @@
       color: var(--text-muted);
       font-weight: 400;
     }
+    .doc-section-intro {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+      max-width: 900px;
+    }
     .doc-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 0.4rem;
     }
-    .doc-grid li {
-      list-style: none;
-    }
+    .doc-grid li { list-style: none; }
     .doc-grid li a {
       display: block;
       color: var(--text-secondary);
@@ -147,8 +140,6 @@
       background: rgba(201,169,98,0.06);
       border-left-color: var(--accent-gold);
     }
-
-    /* ── Axiom cards ── */
     .axiom-doc-card {
       background: var(--background-secondary);
       border: 2px solid var(--border-default);
@@ -166,7 +157,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
     .axiom-doc-symbol {
       font-family: var(--font-display);
@@ -200,6 +191,16 @@
       transition: opacity 0.2s;
     }
     .axiom-doc-readme:hover { opacity: 0.7; }
+    .axiom-doc-description {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.75;
+      margin: 0 0 1rem;
+      padding: 0.75rem 1rem;
+      background: rgba(201,169,98,0.04);
+      border-left: 3px solid var(--accent-gold);
+      border-radius: 0 6px 6px 0;
+    }
     .axiom-doc-articles {
       list-style: none;
       padding: 0;
@@ -220,7 +221,6 @@
       color: var(--accent-gold);
       background: rgba(201,169,98,0.06);
     }
-
     @media (max-width: 768px) {
       .manifesto-stats { gap: 1.5rem; }
       .manifesto-body { padding: 40px var(--space-4); }
@@ -230,7 +230,6 @@
 </head>
 <body>
 
-  <!-- Navbar — identical to index.html -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <div class="nav-logo">
@@ -247,7 +246,6 @@
     </div>
   </nav>
 
-  <!-- Hero -->
   <section class="manifesto-hero">
     <div class="container">
       <h1>Complete Documentation</h1>
@@ -262,11 +260,9 @@
     </div>
   </section>
 
-  <!-- Body -->
   <div class="manifesto-body">
     <a href="index.html" class="back-home">← Back to Home</a>
 
-    <!-- Quick nav pills -->
     <nav class="toc-pills">
       <a href="#foundations" class="toc-pill section-pill">Foundations</a>
       <a href="#reference" class="toc-pill section-pill">Reference</a>
@@ -294,7 +290,6 @@
       <a href="#tools" class="toc-pill section-pill">Tools</a>
     </nav>
 
-    <!-- 1. Foundations -->
     <section class="doc-section" id="foundations">
       <h2 class="doc-section-title">Foundations &amp; Metadata <span class="count">9 documents</span></h2>
       <ul class="doc-grid">
@@ -310,7 +305,6 @@
       </ul>
     </section>
 
-    <!-- 2. Reference Compendium -->
     <section class="doc-section" id="reference">
       <h2 class="doc-section-title">Reference Compendium <span class="count">28 chapters</span></h2>
       <ul class="doc-grid">
@@ -345,9 +339,9 @@
       </ul>
     </section>
 
-    <!-- 3. Legislative Corpus -->
     <section class="doc-section" id="legislative">
       <h2 class="doc-section-title">Legislative Corpus <span class="count">19 axioms · 361 articles</span></h2>
+      <p class="doc-section-intro">The legislative corpus translates nine foundational paradigms into 361 executable articles organized as a 19×19 matrix. Each axiom addresses a critical dimension of autonomous agent governance. Each article follows a six-section structure: imperative norm, legal foundation, technical specification, reference implementation, verification &amp; sanctions, and effective date.</p>
 
           <div class="axiom-doc-card scroll-animate" id="axiom-i">
             <div class="axiom-doc-header">
@@ -358,6 +352,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">The foundational axiom establishing absolute human authority over all autonomous agents. No agent may operate without human oversight, a mandatory kill-switch (≤500ms), and continuous supervision. Covers 19 articles spanning emergency shutdown, override mechanisms, human audit rights, license revocation, and individual rights including the right to explanation, rectification, and opposition. This axiom is the non-negotiable bedrock of the entire LAIRM framework.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-01-kill-switch-universalis.md" target="_blank">Kill Switch Universalis</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-I-SUPREMATIA/article-I-01-02-human-override.md" target="_blank">Human Override</a></li>
@@ -389,6 +384,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Every autonomous agent must possess a unique, cryptographically verifiable decentralized identifier (DID) in W3C format, registered in a public blockchain registry. The Agent Passport records the complete creation chain — creator, deployer, supervisor — with immutable signatures. This axiom covers identity lifecycle from creation to deletion, including versioning, transfer, fusion, recovery, security, and confidentiality across 19 articles.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-01-agent-passport.md" target="_blank">Agent Passport</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-II-IDENTITAS/article-II-02-02-unique-identifier.md" target="_blank">Unique Identifier</a></li>
@@ -420,6 +416,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Establishes clear liability chains ensuring victims always receive compensation. Civil responsibility is distributed across creators, deployers, and operators with joint and several liability. Mandatory insurance (minimum €10M per agent), a national guarantee fund, and a 30-day compensation deadline are required. The 19 articles cover civil responsibility, insurance requirements, victim indemnification, incident registries, operator training, and administrative sanctions.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-01-responsibility-civile.md" target="_blank">Responsibility Civile</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-III-RESPONSABILITAS/article-III-03-02-creator-responsibility.md" target="_blank">Creator Responsibility</a></li>
@@ -451,6 +448,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Governs the complete lifecycle of autonomous agents from initialization to end-of-support. Every phase — creation, deployment, operation, maintenance, and archival — requires documented approval, immutable audit trails, and compliance verification. The axiom mandates rollback capability, backup and restoration procedures, change notification and approval workflows, and complete history traceability across 19 articles.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-01-agent-creation-initialization.md" target="_blank">Agent Creation Initialization</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IV-CIRCULUS/article-IV-04-02-production-deployment.md" target="_blank">Production Deployment</a></li>
@@ -478,10 +476,11 @@
               <div class="axiom-doc-symbol">Ψ-V</div>
               <div class="axiom-doc-info">
                 <h3 class="axiom-doc-latin">INTEROPERABILITAS</h3>
-                <p class="axiom-doc-english">Open Standards</p>
+                <p class="axiom-doc-english">Open Standards & Interoperability</p>
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Prohibits proprietary lock-in by mandating open, publicly documented standards for all agent interfaces. Covers mandatory standards adoption, communication protocols, public APIs, data formats, system integration patterns, backward compatibility, API versioning, documentation requirements, interoperability testing, and certification. The 19 articles ensure any agent can communicate with any other agent using standardized, auditable protocols.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-01-mandatory-standards.md" target="_blank">Mandatory Standards</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-V-INTEROPERABILITAS/article-V-05-02-communication-protocols.md" target="_blank">Communication Protocols</a></li>
@@ -513,6 +512,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Requires tamper-proof, blockchain-anchored logging of all agent actions with a minimum 7-year retention period. Independent auditors must verify compliance across all axioms. The 19 articles cover internal and external audits, compliance verification, technical and security inspections, audit reports, remediation tracking, compliance certification, and regulatory compliance audits. No audit record may ever be modified or deleted.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-01-internal-audit.md" target="_blank">Internal Audit</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VI-AUDITUM/article-VI-06-02-external-audit.md" target="_blank">External Audit</a></li>
@@ -544,6 +544,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Governs how agents learn, evolve, and adapt while maintaining compliance. All learning must be supervised, approved, and reversible. Drift detection systems identify problematic behavioral changes; drift correction restores compliance. The 19 articles cover continuous learning, behavioral adaptation, model evolution, software updates, performance improvement, feedback iteration, supervised and unsupervised learning, model validation, testing, deployment, monitoring, optimization, archiving, and recovery.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-01-continuous-learning.md" target="_blank">Continuous Learning</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VII-ADAPTATIO/article-VII-07-02-behavioral-adaptation.md" target="_blank">Behavioral Adaptation</a></li>
@@ -575,6 +576,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Mandates explicit ethical frameworks embedded in agent design. Agents must align with human values, respect human dignity, promote wellbeing, and operate within defined moral boundaries. Fairness thresholds (≥95%), bias detection, and ethical audits are required. The 19 articles address ethical principles, fundamental values, decision morality, human wellbeing, dignity, distributive justice, procedural equity, transparency, responsibility, cultural values, rights respect, harm prevention, and ethical consent.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-01-ethical-principles.md" target="_blank">Ethical Principles</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-VIII-ETHICA/article-VIII-08-02-fundamental-values.md" target="_blank">Fundamental Values</a></li>
@@ -606,6 +608,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Establishes multi-stakeholder democratic governance combining human wisdom with algorithmic efficiency. Citizen participation, transparent decision-making, equitable representation, and collective decision-making are mandatory. The 19 articles cover agent governance principles, citizen participation, decision-making processes, representation, political accountability, government transparency, public consultation, democratic debate, voting and consensus, governance policy, audit, compliance, remediation, and inclusive participation.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-01-agent-governance.md" target="_blank">Agent Governance</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-IX-GUBERNATIO/article-IX-09-02-citizen-participation.md" target="_blank">Citizen Participation</a></li>
@@ -637,6 +640,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Addresses the massive energy consumption of autonomous agents threatening global sustainability. Renewable energy priority, efficiency standards, consumption tracking, and equitable energy distribution are mandated. The 19 articles cover energy sovereignty, independence, renewable integration, efficiency, storage, distribution, monitoring, reporting, optimization, policy, audit, compliance, remediation, accessibility, equity, collaboration, appeals, and revision.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-01-energy-sovereignty.md" target="_blank">Energy Sovereignty</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-X-ENERGIA/article-X-10-02-energy-independence.md" target="_blank">Energy Independence</a></li>
@@ -668,6 +672,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Establishes strict human control over autonomous weapons systems. Meaningful human authorization is required for all weapons use; lethal autonomous decision-making is prohibited. Safety mechanisms, conflict prevention, escalation control, and international humanitarian law compliance are mandatory. The 19 articles cover weapons control, safety mechanisms, conflict prevention, disarmament, threat detection and response, escalation control, human intervention, security audits, compliance, remediation, certification, monitoring, reporting, and abuse prevention.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-01-autonomous-weapons-control.md" target="_blank">Autonomous Weapons Control</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XI-ARMA/article-XI-11-02-weapons-safety-mechanisms.md" target="_blank">Weapons Safety Mechanisms</a></li>
@@ -695,10 +700,11 @@
               <div class="axiom-doc-symbol">Ψ-XII</div>
               <div class="axiom-doc-info">
                 <h3 class="axiom-doc-latin">COGNITIO AUGMENTATA</h3>
-                <p class="axiom-doc-english">Cognitive Enhancement</p>
+                <p class="axiom-doc-english">Cognitive Enhancement Governance</p>
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Governs brain-computer interfaces and cognitive augmentation technologies. All enhancements must be voluntary, informed, reversible within 30 days, and equitably accessible (cost ≤5% annual income). Identity preservation (≥95% personality continuity) and cognitive privacy (AES-256) are required. The 19 articles cover cognitive sovereignty, informed consent, reversibility, enhancement equity, identity preservation, privacy, audit, compliance, remediation, certification, monitoring, reporting, appeals, revision, transparency, sanctions, training, and liability.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-01-cognitive-sovereignty.md" target="_blank">Cognitive Sovereignty</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XII-COGNITIO/article-XII-12-02-informed-consent.md" target="_blank">Informed Consent</a></li>
@@ -730,6 +736,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Addresses catastrophic risks from advanced AI systems. AGI development is restricted; ASI development is prohibited until proven safe. Mandatory safety research, alignment verification, containment protocols, and international coordination are required before any advanced development proceeds. The 19 articles cover existential risk assessment, alignment verification, safety research mandate, international coordination, containment protocols, staged development, AGI restrictions, ASI prohibition, emergency shutdown, fail-safe mechanisms, safety certification, risk monitoring, incident response, transparency, appeals, sanctions, and governance.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-01-existential-risk-assessment.md" target="_blank">Existential Risk Assessment</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIII-RISICUM/article-XIII-13-02-alignment-verification.md" target="_blank">Alignment Verification</a></li>
@@ -761,6 +768,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Ensures AI-generated wealth and benefits are distributed fairly across society. Mandatory benefit sharing, transparent resource allocation, and stakeholder participation prevent wealth concentration. The 19 articles cover distributive justice principles, resource allocation frameworks, wealth distribution mechanisms, economic equity standards, benefit sharing requirements, cost allocation fairness, stakeholder participation, transparency requirements, equity auditing, fairness certification, compliance, distribution monitoring, remediation, appeals, verification, sanctions, revision, and justice review.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-01-distributive-justice-principles.md" target="_blank">Distributive Justice Principles</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIV-IUSTITIA/article-XIV-14-02-resource-allocation-framework.md" target="_blank">Resource Allocation Framework</a></li>
@@ -792,6 +800,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Prevents cascading failures in interconnected agentic systems. Fault tolerance, redundancy, disaster recovery planning, and circuit breakers for critical infrastructure are mandatory. Regular resilience testing verifies effectiveness. The 19 articles cover systemic resilience principles, fault tolerance, failure detection, recovery mechanisms, disaster recovery planning, backup systems, redundancy requirements, resilience testing, certification, compliance, monitoring, failure response, recovery verification, appeals, verification standards, sanctions, revision, and review.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-01-systemic-resilience-principles.md" target="_blank">Systemic Resilience Principles</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XV-RESILENTIA/article-XV-15-02-fault-tolerance-requirements.md" target="_blank">Fault Tolerance Requirements</a></li>
@@ -823,6 +832,7 @@
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Extends LAIRM governance to orbital space, celestial bodies, and extraterrestrial environments. Space traffic control, orbital debris management, satellite coordination, and equitable orbital resource allocation are mandated. The 19 articles cover orbital governance principles, resource management, satellite coordination protocols, spectrum management, debris mitigation, space traffic control, orbital slot allocation, satellite licensing, compliance auditing, resource certification, monitoring systems, debris tracking, remediation, appeal mechanisms, verification standards, sanctions, international governance, review procedures, and end of mandate.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-01-orbital-space-governance-principles.md" target="_blank">Orbital Space Governance Principles</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVI-SPATIUM/article-XVI-16-02-orbital-resource-management.md" target="_blank">Orbital Resource Management</a></li>
@@ -850,10 +860,11 @@
               <div class="axiom-doc-symbol">Ψ-XVII</div>
               <div class="axiom-doc-info">
                 <h3 class="axiom-doc-latin">HUMANITAS TRANSFORMATA</h3>
-                <p class="axiom-doc-english">Human Transformation</p>
+                <p class="axiom-doc-english">Human Transformation Governance</p>
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Governs the fundamental transformation of human nature through agentic augmentation. Human dignity, autonomy, employment rights, education, health, privacy, cultural preservation, and community rights are protected. The 19 articles cover human-agent coexistence principles, dignity protection, autonomy preservation, employment rights, education and reskilling, health and wellbeing, privacy protection, cultural preservation, community rights, participation in governance, compliance verification, monitoring systems, remediation procedures, appeal mechanisms, rights verification, sanctions, international governance, review procedures, and end of mandate.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-01-human-agent-coexistence-principles.md" target="_blank">Human Agent Coexistence Principles</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVII-HUMANITAS/article-XVII-17-02-human-dignity-protection.md" target="_blank">Human Dignity Protection</a></li>
@@ -881,10 +892,11 @@
               <div class="axiom-doc-symbol">Ψ-XVIII</div>
               <div class="axiom-doc-info">
                 <h3 class="axiom-doc-latin">CHARTA COSMICA</h3>
-                <p class="axiom-doc-english">Cosmic Charter</p>
+                <p class="axiom-doc-english">Cosmic Charter & Transplanetary Governance</p>
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">Establishes governance for autonomous agents operating across multiple planetary bodies. Transplanetary justice, multi-world coordination, cosmic equity, and interplanetary responsibility span Earth, orbital stations, lunar settlements, and Martian colonies. The 19 articles cover transplanetary rights principles, multi-world governance, orbital station autonomy, lunar settlement rights, Martian autonomy, interplanetary commerce, cosmic resource distribution, transplanetary justice, communication standards, space debris management, habitat protection, emergency response, equity verification, appeal mechanisms, sanctions, rights revision, governance review, cosmic justice audit, and end of mandate.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-01-transplanetary-rights-principles.md" target="_blank">Transplanetary Rights Principles</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XVIII-CHARTA-COSMICA/article-XVIII-18-02-multi-world-governance-framework.md" target="_blank">Multi World Governance Framework</a></li>
@@ -912,10 +924,11 @@
               <div class="axiom-doc-symbol">Ψ-XIX</div>
               <div class="axiom-doc-info">
                 <h3 class="axiom-doc-latin">IUSTITIA MUNDANA</h3>
-                <p class="axiom-doc-english">Global Justice</p>
+                <p class="axiom-doc-english">Global Justice Framework</p>
               </div>
               <a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/README.md" target="_blank" class="axiom-doc-readme">README →</a>
             </div>
+            <p class="axiom-doc-description">The capstone axiom ensuring AI-generated wealth benefits all of humanity equitably. Geoeconomic equity prevents regional disadvantage; North-South equity mechanisms ensure fair benefit flow to developing nations; vulnerable population protections are mandatory. Wealth concentration limits and planetary benefit sharing are enforced. The 19 articles cover global justice principles, geoeconomic equity, wealth distribution, international fairness, vulnerable population protection, North-South equity, planetary benefit sharing, global wealth tracking, equity auditing, fairness certification, compliance verification, distribution monitoring, remediation, appeals, verification, sanctions, international governance, justice review, and end of mandate.</p>
             <ul class="axiom-doc-articles">
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-01-global-justice-principles.md" target="_blank">Global Justice Principles</a></li>
               <li><a href="https://github.com/selectess/LAIR_Management/blob/main/LAIRM/02-COMPENDIUM-LEGISLATIVE/AXIOM-XIX-IUSTITIA-MUNDANA/article-XIX-19-02-geoeconomic-equity-standards.md" target="_blank">Geoeconomic Equity Standards</a></li>
@@ -940,7 +953,6 @@
           </div>
     </section>
 
-    <!-- 4. Technical Annexes -->
     <section class="doc-section" id="technical">
       <h2 class="doc-section-title">Technical Annexes <span class="count">specifications, schemas, implementations</span></h2>
       <ul class="doc-grid">
@@ -956,7 +968,6 @@
       </ul>
     </section>
 
-    <!-- 5. Reports -->
     <section class="doc-section" id="reports">
       <h2 class="doc-section-title">Reports &amp; Analyses <span class="count">case studies, impact analyses</span></h2>
       <ul class="doc-grid">
@@ -968,16 +979,14 @@
       </ul>
     </section>
 
-    <!-- 6. Tools -->
     <section class="doc-section" id="tools">
       <h2 class="doc-section-title">Development Tools <span class="count">SDK, audit engine, compliance checker</span></h2>
       <ul class="doc-grid">
       </ul>
     </section>
 
-  </div><!-- /manifesto-body -->
+  </div>
 
-  <!-- Footer — identical to index.html -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
