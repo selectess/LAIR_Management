@@ -20,7 +20,7 @@ validations:
 license: CC-BY-SA-4.0
 ---
 
-# Article I.1.3: CONTINUOUS SUPERVISION
+# Article I.1.3: CONTINUOUS SUPERVISIONw
 ## Axiom Ψ-I: SUPREMATIA HUMANA
 
 ---

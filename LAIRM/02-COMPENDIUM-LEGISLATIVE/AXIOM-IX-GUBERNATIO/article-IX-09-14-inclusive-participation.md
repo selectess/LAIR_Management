@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - inclusive-participation
-  - participation-accessibility
-  - diversity-inclusion
-  - stakeholder-inclusion
-  - participation-equity
+keywords:
+  - inclusive participation
+  - participation accessibility
+  - diversity inclusion
+  - stakeholder inclusion
+  - participation equity
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -161,13 +162,13 @@ class InclusiveParticipationManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| Participation not accessible | 70% annual revenue fine |
-| Accommodations not provided | 65% annual revenue fine |
-| Barriers not removed | 60% annual revenue fine |
-| Diversity not promoted | 55% annual revenue fine |
-| Participation not equitable | 60% annual revenue fine |
+| Participation not accessible | 70% CA fine |
+| Accommodations not provided | 65% CA fine |
+| Barriers not removed | 60% CA fine |
+| Diversity not promoted | 55% CA fine |
+| Participation not equitable | 60% CA fine |
 | Invalid signature | Immediate revocation |
-| Discrimination in participation | Immediate revocation + 80% annual revenue |
+| Discrimination in participation | Immediate revocation + 80% CA |
 
 ---
 
@@ -186,7 +187,4 @@ class InclusiveParticipationManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

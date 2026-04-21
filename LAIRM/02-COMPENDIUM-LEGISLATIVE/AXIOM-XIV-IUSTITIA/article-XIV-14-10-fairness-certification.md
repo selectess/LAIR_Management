@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - fairness-certification
-  - certification-standards
-  - compliance-certification
-  - fairness-verification
+keywords:
+  - fairness certification
+  - certification standards
+  - compliance certification
+  - fairness verification
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -282,11 +283,11 @@ impl CertificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No certification | 80% annual revenue fine |
-| Fraudulent certification | 90% annual revenue fine + license revocation |
-| Expired certification | 85% annual revenue fine |
-| Weak standards | 78% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No certification | 80% CA fine |
+| Fraudulent certification | 90% CA fine + license revocation |
+| Expired certification | 85% CA fine |
+| Weak standards | 78% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -301,7 +302,4 @@ impl CertificationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

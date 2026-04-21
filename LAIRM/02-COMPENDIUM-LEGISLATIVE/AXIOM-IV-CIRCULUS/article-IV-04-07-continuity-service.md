@@ -1,5 +1,5 @@
 ---
-title: "Article IV.4.7: Service Continuousity"
+title: "Article IV.4.7: Service Continuity"
 axiom: Ψ-IV
 article_number: IV.4.7
 Status: Final
@@ -8,11 +8,11 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - service-continuity
+  - service continuity
   - redundancy
   - failover
-  - high-availability
-  - 99.99%-uptime
+  - high availability
+  - 99.99% uptime
 validations:
   legal: true
   technical: true
@@ -27,7 +27,7 @@ license: CC-BY-SA-4.0
 
 ## 1. IMPERATIVE NORM
 
-Every autonomous agent MUST guarantee service continuity during all phases of the lifecycle. Continuousity MUST be maintained during updates, state transitions, and maintenance operations. Interruptions must be minimal and planned. Uptime MUST be ≥ 99.99% (< 52 minutes downtime/year).
+Every autonomous agent MUST guarantee service continuity during all phases of the lifecycle. Continuity MUST be maintained during updates, state transitions, and maintenance operations. Interruptions must be minimal and planned. Uptime MUST be ≥ 99.99% (< 52 minutes downtime/year).
 
 **Minimum Requirements** :
 - Guaranteed service continuity (99.99% uptime)
@@ -51,7 +51,7 @@ Every autonomous agent MUST guarantee service continuity during all phases of th
 
 Service continuity is essential for agent reliability. It MUST be maintained to guarantee availability and trust. Unplanned interruptions constitute a serious violation of Responsibility.
 
-**Fundamental Principles**:
+**Fundamental Principles** :
 - Continuous availability (99.99% uptime)
 - Minimal and planned interruptions
 - Guaranteed redundancy (N+1)
@@ -65,10 +65,10 @@ Service continuity is essential for agent reliability. It MUST be maintained to 
 
 ## 3. TECHNICAL SPECIFICATION
 
-### 3.1 Continuousity Architecture
+### 3.1 Continuity Architecture
 
 ```python
-class ServiceContinuousityManager:
+class ServiceContinuityManager:
     def __init__(self):
         self.uptime_target = 0.9999  # 99.99%
         self.failover_timeout = 100  # ms
@@ -175,7 +175,7 @@ class ServiceContinuousityManager:
 
 #### Case 1: TradeBot3000 - Single Point of Failure (Q1 2026)
 
-**CONTEXT**: TradeBot3000 had no redundancy.
+**CONTEXT** : TradeBot3000 had no redundancy.
 
 **Incident** :
 - Primary instance failed
@@ -189,11 +189,11 @@ class ServiceContinuousityManager:
 - 24/7 monitoring
 - Compensation : $5.2M + 20% penalty
 
-**Lesson**: Redundancy mandatory
+**Lesson** : Redundancy mandatory
 
 #### Case 2: HealthBot - Failover Failed (Q1 2026)
 
-**CONTEXT**: HealthBot had redundancy but failover failed.
+**CONTEXT** : HealthBot had redundancy but failover failed.
 
 **Incident** :
 - Failover timeout : 2 seconds
@@ -206,11 +206,11 @@ class ServiceContinuousityManager:
 - Real-time alerts
 - Compensation : €2.5M + 25% penalty
 
-**Lesson**: Rapid failover mandatory
+**Lesson** : Rapid failover mandatory
 
 #### Case 3: SupplyChainX - Misconfigured Load Balancer (Q1 2026)
 
-**CONTEXT**: SupplyChainX had misconfigured load balancer.
+**CONTEXT** : SupplyChainX had misconfigured load balancer.
 
 **Incident** :
 - Unequal load distribution
@@ -224,7 +224,7 @@ class ServiceContinuousityManager:
 - Overload alerts
 - Compensation : €1.8M + 15% penalty
 
-**Lesson**: Equitable load balancing mandatory
+**Lesson** : Equitable load balancing mandatory
 
 ### 4.2 Detailed Technical Specifications
 
@@ -241,10 +241,10 @@ class ServiceContinuousityManager:
 | Notification | < 24 hours | Authorities and stakeholders |
 | Signature | RSA-4096 | Immutable |
 
-### 4.3 Continuousity Process
+### 4.3 Continuity Process
 
 ```python
-class ContinuousityManager:
+class ContinuityManager:
     def ensure_continuity(self, agent_id, operation):
         """Ensures continuity during an operation"""
         agent = self.get_agent(agent_id)
@@ -310,7 +310,7 @@ class ContinuousityManager:
         return {'status': 'switched', 'timestamp': datetime.utcnow().isoformat()}
 ```
 
-### 4.4 Continuousity Levels
+### 4.4 Continuity Levels
 
 | Level | RTO | RPO | Redundancy |
 |-------|-----|-----|-----------|
@@ -319,12 +319,12 @@ class ContinuousityManager:
 | Normal | < 1 h | < 1 h | Local |
 | Basic | < 4 h | < 4 h | Backup |
 
-### 4.5 Continuousity Strategies
+### 4.5 Continuity Strategies
 
-- **Active-active redundancy**: Two active instances
-- **Active-passive redundancy**: One active, one standby
-- **Distributed redundancy**: Instances distributed geographically
-- **Periodic backup**: Regular backup with recovery
+- **Active-active redundancy** : Two active instances
+- **Active-passive redundancy** : One active, one standby
+- **Distributed redundancy** : Instances distributed geographically
+- **Periodic backup** : Regular backup with recovery
 
 ---
 
@@ -333,71 +333,67 @@ class ContinuousityManager:
 ### 5.1 Compliance Verification
 
 **Mandatory tests** :
-1. **Uptime Test**: Verify that uptime ≥ 99.99%
-2. **Failover Test**: Verify that failover < 100ms
-3. **Health Check Test**: Verify that health checks every 5 sec
-4. **Redundancy Test**: Verify that N+1 is present
-5. **Load Balancing Test**: Verify that distribution is equitable
-6. **Monitoring Test**: Verify that monitoring 24/7
-7. **Alerts Test**: Verify that alerts < 1 minute
-8. **Recovery Test**: Verify that recovery < 5 minutes
+1. **Uptime Test** : Verify that uptime ≥ 99.99%
+2. **Failover Test** : Verify that failover < 100ms
+3. **Health Check Test** : Verify that health checks every 5 sec
+4. **Redundancy Test** : Verify that N+1 is present
+5. **Load Balancing Test** : Verify that distribution is equitable
+6. **Monitoring Test** : Verify that monitoring 24/7
+7. **Alerts Test** : Verify that alerts < 1 minute
+8. **Recovery Test** : Verify that recovery < 5 minutes
 
-**Frequency**: Continuous, complete monthly audit
+**Frequency** : Continuous, complete monthly audit
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Severity | Sanction | Timeline |
 |-----------|----------|----------|----------|
-| Uptime < 99.99% | High | 15% annual revenue fine per hour | 14 days |
-| Failover > 100ms | High | 20% annual revenue fine | 7 days |
-| Missing health check | Medium | 12% annual revenue fine | 14 days |
+| Uptime < 99.99% | High | 15% CA fine per hour | 14 days |
+| Failover > 100ms | High | 20% CA fine | 7 days |
+| Missing health check | Medium | 12% CA fine | 14 days |
 | Missing redundancy | Critical | Immediate revocation | Immediate |
-| Failing load balancing | High | 18% annual revenue fine | 7 days |
+| Failing load balancing | High | 18% CA fine | 7 days |
 | Missing monitoring | Critical | Immediate revocation | Immediate |
-| Alerts > 1 minute | Medium | 10% annual revenue fine | 14 days |
-| Recovery > 5 minutes | High | 15% annual revenue fine | 7 days |
+| Alerts > 1 minute | Medium | 10% CA fine | 14 days |
+| Recovery > 5 minutes | High | 15% CA fine | 7 days |
 | Recurrence (2nd violation) | Critical | 1-year ban | Immediate |
 | Recurrence (3rd violation) | Critical | Permanent ban | Immediate |
 
 ### 5.3 Verification Process
 
-1. **Continuous monitoring**: Verify uptime in real-time
-2. **Monthly audit**: Verify complete compliance
-3. **Failover test**: Test automatic failover
-4. **Load audit**: Verify equitable distribution
-5. **Continuousity report**: Published monthly
+1. **Continuous monitoring** : Verify uptime in real-time
+2. **Monthly audit** : Verify complete compliance
+3. **Failover test** : Test automatic failover
+4. **Load audit** : Verify equitable distribution
+5. **Continuity report** : Published monthly
 
 ## 6. ENTRY INTO FORCE
 
-**Entry into force date**: January 1, 2027
+**Entry into force date** : January 1, 2027
 
 **Compliance timeline** :
-- **New agents**: Mandatory compliance upon deployment (before January 1, 2027)
-- **Existing agents**: Mandatory compliance before January 1, 2028
-- **Critical agents**: Mandatory compliance before July 1, 2027
+- **New agents** : Mandatory compliance upon deployment (before January 1, 2027)
+- **Existing agents** : Mandatory compliance before January 1, 2028
+- **Critical agents** : Mandatory compliance before July 1, 2027
 
 **Transitional provisions** :
-- **Phase 1 (0-3 months)**: Implementation of N+1 redundancy
-- **Phase 2 (3-6 months)**: Implementation of failover < 100ms
-- **Phase 3 (6-9 months)**: Implementation of 24/7 monitoring
-- **Phase 4 (9-12 months)**: Complete compliance
+- **Phase 1 (0-3 months)** : Implementation of N+1 redundancy
+- **Phase 2 (3-6 months)** : Implementation of failover < 100ms
+- **Phase 3 (6-9 months)** : Implementation of 24/7 monitoring
+- **Phase 4 (9-12 months)** : Complete compliance
 
 ---
 
 ## 7. REFERENCES
 
 **Axiom Ψ-IV: CIRCULUS VITAE**
-- Foundation: Complete lifecycle of autonomous agent
-- Principles: Service continuity, redundancy, rapid failover
+- Foundation : Complete lifecycle of autonomous agent
+- Principles : Service continuity, redundancy, rapid failover
 
 **Related articles** :
-- Article IV.4.1: Creation and Initialization
-- Article IV.4.2: Production Deployment
-- Article IV.4.3: Continuous Operation
-- Article IV.4.4: Maintenance and Updates
-- Article IV.4.8: Emergency Recovery
+- Article IV.4.1 : Creation and Initialization
+- Article IV.4.2 : Production Deployment
+- Article IV.4.3 : Continuous Operation
+- Article IV.4.4 : Maintenance and Updates
+- Article IV.4.8 : Emergency Recovery
 
-
----
-
-**Next review**: June 2026

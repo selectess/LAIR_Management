@@ -145,8 +145,10 @@ Axiom Ψ-I (SUPREMATIA HUMANA) is the foundational axiom that establishes human 
 
 ## DOCUMENT STATUS
 
+**Status**: Final  
 **Version**: Initiation  
 **Date Created**: March 18, 2024  
+**Last Updated**: March 30, 2026  
 **Next Review**: June 2026  
 **License**: CC-BY-SA-4.0
 
@@ -170,7 +172,4 @@ For contribution guidelines, see the main LAIRM documentation.
 
 For detailed discussion of governance models and international coordination, see Chapter 18: Paradigm of Governance.
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

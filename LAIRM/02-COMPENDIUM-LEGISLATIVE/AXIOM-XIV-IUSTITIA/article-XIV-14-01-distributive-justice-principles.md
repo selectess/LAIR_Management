@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - distributive-justice
-  - fairness-principles
-  - equity-standards
-  - resource-allocation
-  - benefit-distribution
+keywords:
+  - distributive justice
+  - fairness principles
+  - equity standards
+  - resource allocation
+  - benefit distribution
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -429,12 +430,12 @@ impl DistributiveJusticeManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No justice policy | 70% annual revenue fine |
-| Unfair allocation | 75% annual revenue fine |
-| Inequitable distribution | 80% annual revenue fine |
-| Disproportionate costs | 78% annual revenue fine |
-| Wealth concentration | 85% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No justice policy | 70% CA fine |
+| Unfair allocation | 75% CA fine |
+| Inequitable distribution | 80% CA fine |
+| Disproportionate costs | 78% CA fine |
+| Wealth concentration | 85% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -475,7 +476,4 @@ impl DistributiveJusticeManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

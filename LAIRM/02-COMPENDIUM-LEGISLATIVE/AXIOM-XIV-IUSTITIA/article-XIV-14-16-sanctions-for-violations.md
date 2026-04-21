@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
+keywords:
   - sanctions
-  - violation-sanctions
+  - violation sanctions
   - enforcement
   - penalties
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -264,11 +265,11 @@ impl SanctionsManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No sanction imposed | 85% annual revenue fine |
-| Sanction not enforced | 88% annual revenue fine |
-| Disproportionate penalty | 82% annual revenue fine |
-| Sanction opacity | 80% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No sanction imposed | 85% CA fine |
+| Sanction not enforced | 88% CA fine |
+| Disproportionate penalty | 82% CA fine |
+| Sanction opacity | 80% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -283,7 +284,4 @@ impl SanctionsManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

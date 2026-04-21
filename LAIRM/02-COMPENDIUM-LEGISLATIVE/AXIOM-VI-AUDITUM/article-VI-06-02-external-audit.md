@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - external-audit
-  - independent-verification
+keywords:
+  - external audit
+  - independent verification
   - compliance
-  - auditor-independence
-  - third-party-verification
+  - auditor independence
+  - third-party verification
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -455,13 +456,13 @@ impl ExternalAuditManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No external audit | Immediate revocation + 55% annual revenue |
-| Non-independent auditor | Immediate revocation + 50% annual revenue |
-| Conflicts of interest | Immediate revocation + 50% annual revenue |
-| Missing documentation | 40% annual revenue fine |
-| Report not public | 35% annual revenue fine |
-| Authority not notified | 30% annual revenue fine |
-| Falsified report | Immediate revocation + 65% annual revenue |
+| No external audit | Immediate revocation + 55% CA |
+| Non-independent auditor | Immediate revocation + 50% CA |
+| Conflicts of interest | Immediate revocation + 50% CA |
+| Missing documentation | 40% CA fine |
+| Report not public | 35% CA fine |
+| Authority not notified | 30% CA fine |
+| Falsified report | Immediate revocation + 65% CA |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -503,7 +504,4 @@ impl ExternalAuditManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

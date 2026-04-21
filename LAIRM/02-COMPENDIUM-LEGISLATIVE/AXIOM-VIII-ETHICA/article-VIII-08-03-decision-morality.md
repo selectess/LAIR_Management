@@ -1,25 +1,25 @@
 ---
-title: "Article VIII.8.3: Decision Morality"
-axiom: Ψ-VIII
-article_number: VIII.8.3
+title: "Article VIII.8.3 : Decision Morality"
+Axiom: Ψ-VIII
+numero: VIII.8.3
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - ethics
-  - decision-Making
-  - morality
+  - Ethics
+  - Decision-Making
+  - Morality
 validations:
-  legal: true
-  technical: true
-  editorial: true
+  Legal: true
+  Technical: true
+  Editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article VIII.8.3: Decision Morality
-## Axiom Ψ-VIII: ETHICA
+# Article VIII.8.3 : Decision Morality
+## Axiom Ψ-VIII : ETHICA
 
 ---
 
@@ -40,7 +40,7 @@ Every autonomous agent MUST evaluate the moral implications of decisions before 
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-VIII: ETHICA**
+**Axiom Ψ-VIII : ETHICA**
 
 Moral decision-making ensures that autonomous agents do not cause harm and respect ethical principles. Moral assessment MUST be mandatory to prevent unethical outcomes.
 
@@ -333,14 +333,11 @@ class DecisionMoralityManager:
 
 ## REFERENCES
 
-- Axiom Ψ-VIII: ETHICA
-- Chapter 17: Paradigm Ethics
+- Axiom Ψ-VIII : ETHICA
+- Chapter 17 : Paradigm Ethics
 
 ---
 
-**Next Review**: January 2027
+**Next Review** : January 2027
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

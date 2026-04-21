@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - abuse-prevention
-  - misuse-prevention
-  - unauthorized-use
-  - access-control
-  - usage-monitoring
+keywords:
+  - abuse prevention
+  - misuse prevention
+  - unauthorized use
+  - access control
+  - usage monitoring
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -237,10 +238,10 @@ impl AbusePrevention Manager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No access control | 80% annual revenue fine |
-| No usage monitoring | 75% annual revenue fine |
-| Abuse not detected | 70% annual revenue fine |
-| Abuse not reported | 75% annual revenue fine |
+| No access control | 80% CA fine |
+| No usage monitoring | 75% CA fine |
+| Abuse not detected | 70% CA fine |
+| Abuse not reported | 75% CA fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -260,7 +261,4 @@ impl AbusePrevention Manager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - audit-report
-  - audit-documentation
-  - findings-documentation
+keywords:
+  - audit report
+  - audit documentation
+  - findings documentation
   - recommendations
-  - audit-trail
+  - audit trail
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA-4.0
 license: CC-BY-SA-4.0
 ---
 
@@ -394,13 +395,13 @@ impl AuditReportManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Incomplete report | 40% annual revenue fine |
-| Missing findings | 35% annual revenue fine |
-| Missing recommendations | 30% annual revenue fine |
+| Incomplete report | 40% CA fine |
+| Missing findings | 35% CA fine |
+| Missing recommendations | 30% CA fine |
 | Invalid signature | Immediate revocation |
-| Report not published | 45% annual revenue fine |
-| Publication deadline missed | 40% annual revenue fine |
-| Falsified report | Immediate revocation + 70% annual revenue |
+| Report not published | 45% CA fine |
+| Publication deadline missed | 40% CA fine |
+| Falsified report | Immediate revocation + 70% CA |
 | Recurrence | Permanent ban |
 
 ---
@@ -425,7 +426,4 @@ impl AuditReportManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

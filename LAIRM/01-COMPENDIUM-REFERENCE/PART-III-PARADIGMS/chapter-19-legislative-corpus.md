@@ -5,10 +5,10 @@ part: III
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
-  - legislative-corpus
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
+  - legislative corpus
   - axioms
   - articles
   - executability
@@ -204,7 +204,3 @@ The LAIRM legislative corpus (361 articles in 19 axioms) translates paradigms in
 
 ---
 
-
----
-
-**Next review**: June 2026

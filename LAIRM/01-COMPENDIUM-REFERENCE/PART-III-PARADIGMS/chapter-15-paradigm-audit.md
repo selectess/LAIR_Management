@@ -6,15 +6,15 @@ associated_axiom: Ψ-VI AUDITABILITAS
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
   - audit
   - immutability
   - blockchain
   - traceability
   - transparency
-  - audit-trails
+  - audit trails
 internal_references:
   - chapter-14-paradigm-interoperability.md
   - chapter-11-paradigm-identity.md
@@ -111,7 +111,3 @@ Immutable audit trails (blockchain-based, cryptographically verified, 7-year ret
 
 ---
 
-
----
-
-**Next review**: June 2026

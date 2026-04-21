@@ -387,9 +387,11 @@ The Boeing 737 MAX MCAS failures represent one of the deadliest automated system
 
 **Document Status**: Final  
 **Verification**: All facts verified against official sources  
+**Last Updated**: April 2, 2026  
 **Next Review**: April 2, 2027
 
 ---
 
 *This case study is based entirely on publicly available information from official investigations, regulatory filings, congressional reports, legal documents, and peer-reviewed publications. All sources are cited and verifiable.*
 
+**Last Reviewed**: April 3, 2026

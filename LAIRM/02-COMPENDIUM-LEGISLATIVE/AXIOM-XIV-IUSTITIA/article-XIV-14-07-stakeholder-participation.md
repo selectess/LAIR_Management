@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - stakeholder-participation
-  - participation-rights
-  - stakeholder-voice
-  - democratic-participation
+keywords:
+  - stakeholder participation
+  - participation rights
+  - stakeholder voice
+  - democratic participation
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -337,12 +338,12 @@ impl ParticipationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No participation policy | 75% annual revenue fine |
-| Stakeholder exclusion | 82% annual revenue fine |
-| Unequal voting rights | 80% annual revenue fine |
-| Unilateral decisions | 85% annual revenue fine |
-| Lack of transparency | 78% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No participation policy | 75% CA fine |
+| Stakeholder exclusion | 82% CA fine |
+| Unequal voting rights | 80% CA fine |
+| Unilateral decisions | 85% CA fine |
+| Lack of transparency | 78% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -357,7 +358,4 @@ impl ParticipationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - orbital-governance
-  - space-governance
-  - orbital-principles
-  - space-principles
+keywords:
+  - orbital governance
+  - space governance
+  - orbital principles
+  - space principles
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -235,11 +236,11 @@ impl OrbitalGovernanceManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No governance policy | 76% annual revenue fine |
-| Unregistered activity | 80% annual revenue fine |
-| Non-transparent operations | 82% annual revenue fine |
-| Non-compliant activity | 81% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No governance policy | 76% CA fine |
+| Unregistered activity | 80% CA fine |
+| Non-transparent operations | 82% CA fine |
+| Non-compliant activity | 81% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -250,7 +251,4 @@ impl OrbitalGovernanceManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

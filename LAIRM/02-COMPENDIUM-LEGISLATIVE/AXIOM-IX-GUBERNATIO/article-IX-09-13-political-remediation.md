@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - political-remediation
-  - remediation-process
-  - corrective-action
-  - remediation-tracking
-  - remediation-verification
+keywords:
+  - political remediation
+  - remediation process
+  - corrective action
+  - remediation tracking
+  - remediation verification
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -164,13 +165,13 @@ class PoliticalRemediationManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No remediation | 75% annual revenue fine |
-| Delayed remediation | 60% annual revenue fine |
-| Ineffective remediation | 65% annual revenue fine |
-| Progress not tracked | 50% annual revenue fine |
-| Completion not verified | 55% annual revenue fine |
+| No remediation | 75% CA fine |
+| Delayed remediation | 60% CA fine |
+| Ineffective remediation | 65% CA fine |
+| Progress not tracked | 50% CA fine |
+| Completion not verified | 55% CA fine |
 | Invalid signature | Immediate revocation |
-| Falsified remediation | Immediate revocation + 80% annual revenue |
+| Falsified remediation | Immediate revocation + 80% CA |
 
 ---
 
@@ -189,7 +190,4 @@ class PoliticalRemediationManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

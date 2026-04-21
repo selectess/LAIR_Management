@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - abuse-response
-  - response-protocols
-  - response-timing
-  - response-effectiveness
-  - response-documentation
+keywords:
+  - abuse response
+  - response protocols
+  - response timing
+  - response effectiveness
+  - response documentation
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -240,10 +241,10 @@ impl AbuseResponseManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Response time > 2 min | 70% annual revenue fine |
-| Access not disabled | 75% annual revenue fine |
-| No documentation | 65% annual revenue fine |
-| No verification | 60% annual revenue fine |
+| Response time > 2 min | 70% CA fine |
+| Access not disabled | 75% CA fine |
+| No documentation | 65% CA fine |
+| No verification | 60% CA fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -263,7 +264,4 @@ impl AbuseResponseManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

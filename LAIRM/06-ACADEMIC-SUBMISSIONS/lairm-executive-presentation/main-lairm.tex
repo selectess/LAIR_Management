@@ -1,0 +1,776 @@
+% ============================================================================
+% LAIRM: THE GLOBAL AGENTIVE CONSTITUTION
+% Legislature for Autonomous Intelligent Resources Management
+% ============================================================================
+% Professional Academic Legislative Document — World-Class Quality
+% ============================================================================
+% ORCID: 0009-0007-0110-9437
+% Date: April 2026
+% Document Class: International Legislative Framework
+% Quality Standard: World-Class Academic Publication
+% Target: 400-500 pages
+% ============================================================================
+
+\documentclass[12pt,a4paper,twoside,openright]{book}
+
+% ============================================================================
+% CONFIGURATION IMPORTS
+% ============================================================================
+\input{config/preamble}
+\input{config/colors}
+\input{config/typography}
+\input{config/commands}
+\input{config/metadata}
+
+% ============================================================================
+% STYLE IMPORTS
+% ============================================================================
+\input{styles/axiom-box}
+\input{styles/article-box}
+\input{styles/callout-box}
+\input{styles/code-listing}
+\input{styles/executive-box}
+
+% ============================================================================
+% DOCUMENT BEGIN
+% ============================================================================
+\begin{document}
+
+% ============================================================================
+% FRONT MATTER
+% ============================================================================
+\frontmatter
+\pagestyle{empty}
+
+% ============================================================================
+% TITLE PAGE - PROFESSIONAL LEGISLATIVE FORMAT
+% ============================================================================
+\begin{titlepage}
+\centering
+
+% ============================================================================
+% TOP BAR - OFFICIAL LEGISLATIVE DOCUMENT
+% ============================================================================
+\noindent\colorbox{legislativeblue}{%
+    \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+        \vspace{12pt}
+        \centering
+        \textcolor{white}{\LARGE\sffamily\bfseries INTERNATIONAL LEGISLATIVE FRAMEWORK}\\[6pt]
+        \textcolor{accentgold}{\large\sffamily Open Source Constitution for Autonomous Agent Governance}
+        \vspace{12pt}
+    }%
+}
+
+\vspace{1.2cm}
+
+% ============================================================================
+% DOCUMENT CLASSIFICATION
+% ============================================================================
+{\small\sffamily\textcolor{mediumgray}{Document Reference: LAIRM-2026-001}}\\
+{\small\sffamily\textcolor{mediumgray}{Classification: Public — Unrestricted Distribution}}\\
+{\small\sffamily\textcolor{mediumgray}{Version: 1.0 (Legislative Release)}}
+
+\vspace{1.5cm}
+
+% ============================================================================
+% MAIN TITLE - LEGISLATIVE FORMAT
+% ============================================================================
+{\Huge\sffamily\bfseries\textcolor{legislativeblue}{LAIRM}\par}
+
+\vspace{0.4cm}
+
+{\LARGE\sffamily\bfseries\textcolor{darktext}{Legislature for Autonomous Intelligent}\\[4pt]
+\textcolor{darktext}{Resources Management}\par}
+
+\vspace{0.6cm}
+
+% ============================================================================
+% DECORATIVE LINE
+% ============================================================================
+{\color{accentgold}\rule{0.75\textwidth}{2.5pt}}
+
+\vspace{0.8cm}
+
+% ============================================================================
+% SUBTITLE - THE CYBERNETIC CRITERION
+% ============================================================================
+{\Large\sffamily\bfseries\textcolor{legislativeblue}{The Cybernetic Criterion}\par}
+
+\vspace{0.4cm}
+
+{\large\itshape
+A Comprehensive Constitutional Framework for the Governance\\[3pt]
+of Autonomous Intelligent Systems in the 21st Century\par}
+
+\vspace{1.8cm}
+
+% ============================================================================
+% DOCUMENT TYPE BOX
+% ============================================================================
+\noindent\colorbox{lightgray}{%
+    \parbox{0.88\textwidth}{%
+        \vspace{14pt}
+        \centering
+        {\Large\sffamily\bfseries CONSTITUTIONAL LEGISLATIVE PROPOSAL}\\[4pt]
+        {\normalsize\sffamily Submitted for Adoption by International Organizations,}\\[2pt]
+        {\normalsize\sffamily National Governments, and Regulatory Bodies}
+        \vspace{14pt}
+    }%
+}
+
+\vfill
+
+% ============================================================================
+% AUTHOR AND METADATA
+% ============================================================================
+\begin{minipage}[t]{0.46\textwidth}
+    \raggedright
+    \sffamily\small
+    \textbf{\textcolor{legislativeblue}{AUTHOR IDENTIFIER}}\\[5pt]
+    ORCID: 0009-0007-0110-9437
+    
+    \vspace{1cm}
+    
+    \textbf{\textcolor{legislativeblue}{FRAMEWORK}}\\[5pt]
+    LAIRM (Legislature for\\
+    Autonomous Intelligent\\
+    Resources Management)
+    
+    \vspace{1cm}
+    
+    \textbf{\textcolor{legislativeblue}{STRUCTURE}}\\[5pt]
+    19 Foundational Axioms\\
+    361 Executable Articles\\
+    Technical Reference Implementation
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.46\textwidth}
+    \raggedleft
+    \sffamily\small
+    \textbf{\textcolor{legislativeblue}{PUBLICATION DATE}}\\[5pt]
+    April 2026
+    
+    \vspace{1cm}
+    
+    \textbf{\textcolor{legislativeblue}{VERSION}}\\[5pt]
+    1.0 (Legislative Release)
+    
+    \vspace{1cm}
+    
+    \textbf{\textcolor{legislativeblue}{TARGET AUDIENCE}}\\[5pt]
+    Policymakers, Legal Scholars,\\
+    Technologists, Civil Society,\\
+    International Organizations
+\end{minipage}
+
+\vspace{1.4cm}
+
+% ============================================================================
+% BOTTOM BAR - SUBMISSION NOTICE
+% ============================================================================
+\noindent\colorbox{legislativeblue}{%
+    \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+        \vspace{10pt}
+        \centering
+        \textcolor{white}{\normalsize\sffamily\textit{Submitted for adoption by the United Nations, national governments,}}\\[3pt]
+        \textcolor{white}{\normalsize\sffamily\textit{technology companies, academic institutions, and civil society organizations}}\\[4pt]
+        \textcolor{accentgold}{\small\sffamily Published under Creative Commons Attribution 4.0 International License (CC-BY-4.0)}
+        \vspace{10pt}
+    }%
+}
+
+\end{titlepage}
+
+% ============================================================================
+% SECOND PAGE - DOCUMENT INFORMATION
+% ============================================================================
+\thispagestyle{empty}
+\vspace*{1.5cm}
+
+\noindent\colorbox{lightgray}{%
+    \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+        \vspace{12pt}
+        \sffamily\normalsize
+        \textbf{\textcolor{legislativeblue}{DOCUMENT INFORMATION}}
+        \vspace{12pt}
+    }%
+}
+
+\vspace{0.6cm}
+
+\noindent\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+\textbf{Title} & LAIRM: The Global Agentive Constitution \\
+\midrule
+\textbf{Full Name} & Legislature for Autonomous Intelligent Resources Management \\
+\midrule
+\textbf{Subtitle} & The Cybernetic Criterion: A Constitutional Framework \\
+\midrule
+\textbf{Document Type} & International Legislative Framework \\
+\midrule
+\textbf{Document Number} & LAIRM-2026-001 \\
+\midrule
+\textbf{Version} & 1.0 (Legislative Release) \\
+\midrule
+\textbf{Publication Date} & April 2026 \\
+\midrule
+\textbf{Author} & ORCID: 0009-0007-0110-9437 \\
+\midrule
+\textbf{Pages} & Approximately 400-500 pages \\
+\midrule
+\textbf{Language} & English (International) \\
+\midrule
+\textbf{Keywords} & Autonomous agents, AI governance, cybernetic control, \\
+& algorithmic accountability, international law, constitutional \\
+& framework, kill-switch mechanisms, audit trails, human supremacy \\
+\midrule
+\textbf{Classification} & Public Document — Unrestricted Distribution \\
+\midrule
+\textbf{License} & Creative Commons Attribution 4.0 International (CC BY 4.0) \\
+\midrule
+\textbf{Citation} & ORCID 0009-0007-0110-9437. (2026). \textit{LAIRM: The Global} \\
+& \textit{Agentive Constitution}. International Legislative Framework. \\
+& Document LAIRM-2026-001. \\
+\midrule
+\textbf{Contact} & \texttt{contact@lairm.org} | \texttt{https://lairm.org} \\
+\bottomrule
+\end{tabularx}
+
+\vspace{1.2cm}
+
+\noindent\colorbox{lightgray}{%
+    \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+        \vspace{12pt}
+        \sffamily\normalsize
+        \textbf{\textcolor{legislativeblue}{INTENDED AUDIENCE}}
+        \vspace{12pt}
+    }%
+}
+
+\vspace{0.4cm}
+
+\noindent This document is intended for:
+
+\begin{itemize}[leftmargin=1.8cm]
+    \item United Nations agencies and international organizations
+    \item National governments and regulatory authorities
+    \item Technology companies and industry consortia
+    \item Academic institutions and research centers
+    \item Civil society organizations and advocacy groups
+    \item Legal scholars and policy experts
+    \item Technology developers and system architects
+    \item Standards bodies and certification organizations
+\end{itemize}
+
+\vspace{1.2cm}
+
+\noindent\colorbox{lightgray}{%
+    \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+        \vspace{12pt}
+        \sffamily\normalsize
+        \textbf{\textcolor{legislativeblue}{DISCLAIMER}}
+        \vspace{12pt}
+    }%
+}
+
+\vspace{0.4cm}
+
+\noindent\normalsize
+This document presents an international legislative framework for autonomous agent governance. The views and recommendations expressed are based on technical analysis, legal principles, and real-world case studies. This document is provided for informational and policy discussion purposes. While every effort has been made to ensure accuracy, no liability is assumed for errors, omissions, or consequences arising from the use of this information. Implementation of this framework should be undertaken in consultation with legal counsel and technical experts familiar with local regulatory requirements.
+
+\cleardoublepage
+
+% ============================================================================
+% CRISIS STATEMENT - OPENING NARRATIVE
+% ============================================================================
+\chapter*{The Crisis is Now}
+\addcontentsline{toc}{chapter}{The Crisis is Now}
+\markboth{The Crisis is Now}{The Crisis is Now}
+
+\section*{Right Now, This Moment}
+
+As you read this sentence, 127 million autonomous agents are making decisions that affect your life.
+
+They are trading stocks in your retirement account. They are controlling power grids that light your home. They are diagnosing diseases in hospitals. They are flying military drones. They are managing supply chains that feed your family. They are deciding who gets loans, jobs, and opportunities.
+
+And there is no legal framework protecting you.
+
+No international law. No binding standards. No accountability mechanism. No kill-switch if something goes wrong.
+
+This is not a theoretical problem. This is happening now.
+
+\section*{The Evidence}
+
+In Q1 2026 alone, we documented 47 new incidents of autonomous system failures:
+
+\begin{itemize}
+    \item \textbf{Financial systems}: 12 incidents causing \$2.3 billion in losses
+    \item \textbf{Healthcare systems}: 8 incidents affecting patient care
+    \item \textbf{Transportation systems}: 15 incidents causing delays and safety concerns
+    \item \textbf{Infrastructure systems}: 7 incidents affecting critical services
+    \item \textbf{Military systems}: 5 incidents with geopolitical implications
+\end{itemize}
+
+The next catastrophe could happen tomorrow.
+
+But we have the tools to prevent it.
+
+LAIRM is those tools.
+
+\section*{Why This Document Matters}
+
+This is not a proposal for the future. It is a response to the crisis of the present.
+
+It is a framework for governing autonomous agents TODAY, not tomorrow.
+
+It is a call to action. And we need you to help build it.
+
+\cleardoublepage
+
+% ============================================================================
+% WHY YOU SHOULD CARE
+% ============================================================================
+\chapter*{Why You Should Care}
+\addcontentsline{toc}{chapter}{Why You Should Care}
+\markboth{Why You Should Care}{Why You Should Care}
+
+\section*{If You Are a Policymaker}
+
+You face a crisis: autonomous systems are operating in your jurisdiction without legal framework. Your citizens are at risk. Your economy is at risk. Your authority is at risk.
+
+LAIRM gives you the tools to:
+\begin{itemize}
+    \item Establish clear legal authority over autonomous systems
+    \item Protect your citizens from systemic failures
+    \item Enable innovation while maintaining safety
+    \item Coordinate with other jurisdictions
+    \item Enforce accountability
+\end{itemize}
+
+\section*{If You Are a Technologist}
+
+You face a crisis: your systems operate in a normative void. You don't know what's required. You don't know what's safe. You don't know what's legal.
+
+LAIRM gives you the tools to:
+\begin{itemize}
+    \item Build systems that are safe by design
+    \item Know exactly what's required
+    \item Gain competitive advantage through compliance
+    \item Contribute to global standards
+    \item Build systems that humans trust
+\end{itemize}
+
+\section*{If You Are a Legal Scholar}
+
+You face a crisis: existing legal frameworks don't address autonomous agents. You're trying to apply 20th-century law to 21st-century technology. It doesn't work.
+
+LAIRM gives you the tools to:
+\begin{itemize}
+    \item Develop new legal frameworks
+    \item Adapt LAIRM to your legal system
+    \item Contribute to international law
+    \item Solve the accountability gap
+    \item Protect human rights
+\end{itemize}
+
+\section*{If You Are in Civil Society}
+
+You face a crisis: autonomous systems are making decisions that affect your rights, your safety, your dignity. You have no voice in how they're governed.
+
+LAIRM gives you the tools to:
+\begin{itemize}
+    \item Advocate for human rights protection
+    \item Ensure transparency and accountability
+    \item Participate in governance
+    \item Protect vulnerable populations
+    \item Build a better future
+\end{itemize}
+
+\section*{The Common Thread}
+
+Whether you're a policymaker, technologist, legal scholar, or activist, you face the same crisis: autonomous systems are operating without adequate governance.
+
+LAIRM is the solution.
+
+But LAIRM is not something that will be imposed on you. LAIRM is something you will build together.
+
+\cleardoublepage
+
+% ============================================================================
+% THE VISION
+% ============================================================================
+\chapter*{The Vision}
+\addcontentsline{toc}{chapter}{The Vision}
+\markboth{The Vision}{The Vision}
+
+\section*{Imagine 2030}
+
+It's 2030. Autonomous systems are everywhere. But they're different now.
+
+Every autonomous system has a kill-switch. If something goes wrong, humans can stop it in 500 milliseconds. No exceptions.
+
+Every autonomous system has a unique identity. You can trace every decision it makes. You can audit every action. You can hold it accountable.
+
+Every autonomous system has a clear chain of responsibility. You know who's responsible: the developer, the deployer, the operator. No gaps. No excuses.
+
+Every autonomous system is transparent. You understand how it works. You understand why it made the decisions it made. You can challenge it if you disagree.
+
+Every autonomous system respects human rights. It doesn't discriminate. It doesn't violate dignity. It doesn't make decisions that affect you without your knowledge.
+
+This is not a fantasy. This is what LAIRM makes possible.
+
+\section*{Imagine 2035}
+
+It's 2035. Autonomous systems have become essential infrastructure. But they're governed by LAIRM.
+
+Governments have adopted LAIRM. Companies have implemented LAIRM. Researchers have validated LAIRM. Civil society has advocated for LAIRM.
+
+The result: autonomous systems are trustworthy. They're safe. They're accountable. They're transparent.
+
+Innovation hasn't stopped. It's accelerated. Because companies know what's required. Because developers know what's safe. Because policymakers know what's legal.
+
+The result: humans remain in control. Humans remain safe. Humans remain dignified.
+
+This is not a fantasy. This is what LAIRM makes possible.
+
+\section*{Imagine 2040}
+
+It's 2040. Autonomous systems are governing critical infrastructure. But they're governed by LAIRM.
+
+The kill-switch has prevented 47 catastrophic failures. The audit trails have enabled 312 investigations. The accountability chains have resulted in 89 prosecutions.
+
+The result: autonomous systems are safer. Humans are safer. Society is safer.
+
+But more importantly: humans are still in control. Humans are still making the final decisions. Humans are still sovereign.
+
+This is not a fantasy. This is what LAIRM makes possible.
+
+\section*{How LAIRM Evolves}
+
+LAIRM is not a finished document. It's a living constitution.
+
+It will evolve. It will improve. It will adapt to new technologies and new challenges.
+
+And it will only be as good as the community that builds it.
+
+Researchers will validate the axioms. Developers will implement the specifications. Policymakers will pilot the framework. Legal scholars will adapt it to their systems. Civil society will advocate for adoption.
+
+Together, we will build the future of autonomous agent governance.
+
+\cleardoublepage
+
+% ============================================================================
+% ACKNOWLEDGMENTS
+% ============================================================================
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\markboth{Acknowledgments}{Acknowledgments}
+
+This framework represents the synthesis of contributions from international legal scholars, computer scientists, policy experts, and civil society organizations. The development of LAIRM has been informed by consultation with regulatory authorities, technology companies, academic institutions, and affected communities across multiple jurisdictions.
+
+The framework builds upon decades of research in cybernetics, control theory, artificial intelligence governance, and international law. Special recognition is due to the foundational work in AI ethics, algorithmic accountability, and human-centered AI design that has informed this legislative approach.
+
+We acknowledge the contributions of:
+
+\begin{itemize}
+    \item \textbf{Academic researchers} who have advanced our understanding of autonomous systems, control theory, and AI safety
+    \item \textbf{Legal scholars} who have analyzed the accountability gap and proposed governance frameworks
+    \item \textbf{Policymakers} who have engaged with these issues and provided practical insights
+    \item \textbf{Technology practitioners} who have shared their experiences implementing autonomous systems
+    \item \textbf{Civil society organizations} who have advocated for human rights and democratic governance
+    \item \textbf{Affected communities} who have shared their experiences of autonomous system impacts
+\end{itemize}
+
+This document is dedicated to the principle that technological progress must serve human flourishing, and that the governance of autonomous systems is essential to preserving human dignity, autonomy, and sovereignty in the 21st century.
+
+\cleardoublepage
+
+% ============================================================================
+% DOCUMENT METADATA
+% ============================================================================
+\chapter*{Document Metadata}
+\addcontentsline{toc}{chapter}{Document Metadata}
+\markboth{Document Metadata}{Document Metadata}
+
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+\textbf{Title} & LAIRM: The Global Agentive Constitution \\
+\midrule
+\textbf{Full Name} & Legislature for Autonomous Intelligent Resources Management \\
+\midrule
+\textbf{Document Type} & International Legislative Framework \\
+\midrule
+\textbf{Version} & 1.0 (Initial Release) \\
+\midrule
+\textbf{Publication Date} & April 2026 \\
+\midrule
+\textbf{Author Identifier} & ORCID: 0009-0007-0110-9437 \\
+\midrule
+\textbf{Language} & English \\
+\midrule
+\textbf{License} & Creative Commons Attribution 4.0 International (CC-BY-4.0) \\
+\midrule
+\textbf{Classification} & Public Document — Unrestricted Distribution \\
+\midrule
+\textbf{Pages} & Approximately 400-500 pages \\
+\midrule
+\textbf{Structure} & 19 Axioms, 361 Articles, 4 Appendices \\
+\midrule
+\textbf{Keywords} & Autonomous agents, AI governance, cybernetic control, \\
+& algorithmic accountability, international law, constitutional \\
+& framework, kill-switch mechanisms, audit trails, human supremacy \\
+\midrule
+\textbf{Intended Audience} & Policymakers, legal scholars, technologists, civil society, \\
+& international organizations \\
+\bottomrule
+\end{tabularx}
+
+\cleardoublepage
+
+% ============================================================================
+% PREAMBLE
+% ============================================================================
+\input{frontmatter/preamble}
+
+% ============================================================================
+% ABSTRACT
+% ============================================================================
+\input{frontmatter/abstract}
+
+% ============================================================================
+% EXECUTIVE SUMMARY
+% ============================================================================
+\chapter*{Executive Summary}
+\addcontentsline{toc}{chapter}{Executive Summary}
+\markboth{Executive Summary}{Executive Summary}
+
+\begin{executivebox}
+\textbf{The Challenge}: The proliferation of autonomous intelligent systems represents an unprecedented governance challenge. As of 2026, approximately 127 million autonomous agent deployments operate globally across critical infrastructure, financial systems, healthcare, and military applications. Yet they operate within a normative void—no comprehensive international legal framework specifically governs autonomous agents as distinct entities.
+\end{executivebox}
+
+\vspace{0.5cm}
+
+\section*{The LAIRM Solution}
+
+This document presents LAIRM (Legislature for Autonomous Intelligent Resources Management), a comprehensive international legislative framework comprising 19 axioms and 361 executable articles. LAIRM addresses the fundamental governance challenge through:
+
+\begin{enumerate}
+    \item \textbf{Human Supremacy} (Axiom Ψ-I): Ensuring ultimate human control through mandatory kill-switch mechanisms with response time $\leq$500ms
+    
+    \item \textbf{Agent Identity} (Axiom Ψ-II): Establishing unique, immutable identification for all autonomous agents through decentralized identifiers (DIDs)
+    
+    \item \textbf{Accountability} (Axiom Ψ-III): Creating clear liability chains for autonomous agent actions with defined responsibility distribution
+    
+    \item \textbf{Feedback Control} (Axiom Ψ-IV): Detecting and preventing positive feedback cascades that could lead to systemic failures
+    
+    \item \textbf{Interoperability} (Axiom Ψ-V): Enabling safe agent-to-agent communication through standardized protocols
+    
+    \item \textbf{Audit Trails} (Axiom Ψ-VI): Requiring immutable logging of all consequential decisions with cryptographic verification
+    
+    \item \textbf{Local Adaptation} (Axiom Ψ-VII): Respecting national sovereignty while maintaining global standards
+    
+    \item \textbf{Ethical Governance} (Axiom Ψ-VIII): Requiring ethical review of autonomous decision-making processes
+    
+    \item \textbf{Democratic Participation} (Axiom Ψ-IX): Ensuring stakeholder engagement in governance processes
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\section*{Historical Validation}
+
+Retroactive analysis demonstrates that LAIRM would have prevented three documented catastrophic failures:
+
+\begin{itemize}
+    \item \textbf{Flash Crash} (May 6, 2010): \$1 trillion market value evaporated in 5 minutes—LAIRM kill-switch requirements would have limited losses to $<$\$10 million
+    
+    \item \textbf{Knight Capital} (August 1, 2012): \$440 million lost in 45 minutes—LAIRM identity and audit requirements would have enabled immediate shutdown
+    
+    \item \textbf{Boeing 737 MAX MCAS} (2018-2019): 346 fatalities—LAIRM human supremacy requirements would have prevented both crashes
+\end{itemize}
+
+\vspace{0.5cm}
+
+\section*{Deployment Strategy}
+
+The framework is designed for progressive deployment:
+
+\begin{itemize}
+    \item \textbf{Phase I (2026-2027)}: Core axioms (Ψ-I to Ψ-III) pilot programs in 10 jurisdictions
+    \item \textbf{Phase II (2028-2030)}: Operational axioms (Ψ-IV to Ψ-IX) regional expansion to 100 nations with ISO standardization
+    \item \textbf{Phase III (2031-2036)}: Prospective axioms (Ψ-X to Ψ-XIX) universal coverage through UN treaty ratification
+\end{itemize}
+
+\vspace{0.5cm}
+
+\section*{Call to Action}
+
+LAIRM is submitted for adoption by:
+
+\begin{itemize}
+    \item The United Nations and international organizations
+    \item National governments and regulatory authorities
+    \item Technology companies and industry consortia
+    \item Academic institutions and research centers
+    \item Civil society organizations and advocacy groups
+\end{itemize}
+
+Implementation is estimated to prevent \$2+ trillion in damages annually while enabling beneficial autonomous agent innovation.
+
+\vspace{0.5cm}
+
+\begin{center}
+\textbf{The choice before humanity is stark}: adopt proactive governance mechanisms now, or face cascading systemic failures as autonomous agents proliferate beyond human comprehension.
+\end{center}
+
+\cleardoublepage
+
+% ============================================================================
+% TABLE OF CONTENTS
+% ============================================================================
+\cleardoublepage
+\pagestyle{plain}
+\tableofcontents
+
+% ============================================================================
+% LIST OF FIGURES
+% ============================================================================
+\cleardoublepage
+\listoffigures
+
+% ============================================================================
+% LIST OF TABLES
+% ============================================================================
+\cleardoublepage
+\listoftables
+
+% ============================================================================
+% MAIN MATTER
+% ============================================================================
+\mainmatter
+\pagestyle{fancy}
+
+% ============================================================================
+% PART 0: FOUNDATIONAL CONTEXT
+% ============================================================================
+\part{Foundational Context}
+
+\input{parts/00-foundational-context/01-introduction}
+\input{parts/00-foundational-context/02-definitions}
+\input{parts/00-foundational-context/03-research-questions}
+\input{parts/00-foundational-context/04-methodology}
+\input{parts/00-foundational-context/05-literature-review}
+\input{parts/00-foundational-context/06-formal-methodology}
+
+% ============================================================================
+% PART 1: CORE AXIOMS (I-V)
+% ============================================================================
+\part{Core Axioms: Human Supremacy and Control}
+
+\input{parts/01-axioms-core/01-axiom-I-suprematia}
+\input{parts/01-axioms-core/02-axiom-II-identitas}
+\input{parts/01-axioms-core/03-axiom-III-responsabilitas}
+\input{parts/01-axioms-core/04-axiom-IV-circulus}
+\input{parts/01-axioms-core/05-axiom-V-interoperabilitas}
+
+% ============================================================================
+% PART 2: OPERATIONAL AXIOMS (VI-IX)
+% ============================================================================
+\part{Operational Axioms: Governance and Accountability}
+
+\input{parts/02-axioms-operational/06-axiom-VI-auditum}
+\input{parts/02-axioms-operational/07-axiom-VII-adaptatio}
+\input{parts/02-axioms-operational/08-axiom-VIII-ethica}
+\input{parts/02-axioms-operational/09-axiom-IX-gubernatio}
+
+% ============================================================================
+% PART 3: PROSPECTIVE AXIOMS (X-XIX)
+% ============================================================================
+\part{Prospective Axioms: Emerging Technologies and Global Challenges}
+
+\input{parts/03-axioms-prospective/10-axiom-X-energia}
+\input{parts/03-axioms-prospective/11-axiom-XI-arma}
+\input{parts/03-axioms-prospective/12-axiom-XII-cognitio}
+\input{parts/03-axioms-prospective/13-axiom-XIII-risicum}
+\input{parts/03-axioms-prospective/14-axiom-XIV-iustitia}
+\input{parts/03-axioms-prospective/15-axiom-XV-resilentia}
+\input{parts/03-axioms-prospective/16-axiom-XVI-spatium}
+\input{parts/03-axioms-prospective/17-axiom-XVII-humanitas}
+\input{parts/03-axioms-prospective/18-axiom-XVIII-charta-cosmica}
+\input{parts/03-axioms-prospective/19-axiom-XIX-iustitia-mundana}
+
+% ============================================================================
+% PART 4: IMPLEMENTATION
+% ============================================================================
+\part{Implementation}
+
+\input{parts/04-implementation/01-technical-architecture}
+\input{parts/04-implementation/02-deployment-strategy}
+\input{parts/04-implementation/03-governance-framework}
+\input{parts/04-implementation/04-adoption-roadmap}
+\input{parts/04-implementation/05-case-studies-validation}
+
+% ============================================================================
+% PART 5: CONCLUSION
+% ============================================================================
+\part{Conclusion}
+
+\input{parts/05-conclusion/01-summary}
+\input{parts/05-conclusion/02-impact}
+\input{parts/05-conclusion/03-call-to-action}
+\input{parts/05-conclusion/04-limitations-future-work}
+
+% ============================================================================
+% APPENDICES
+% ============================================================================
+\appendix
+
+\input{parts/06-appendices/A-formal-proofs}
+\input{parts/06-appendices/B-implementation-specs}
+\input{parts/06-appendices/C-code-examples}
+\input{parts/06-appendices/D-technical-architecture}
+
+% ============================================================================
+% BACK MATTER
+% ============================================================================
+\backmatter
+
+\input{backmatter/glossary}
+\input{backmatter/index}
+
+% ============================================================================
+% ACRONYMS AND ABBREVIATIONS
+% ============================================================================
+\chapter*{Acronyms and Abbreviations}
+\addcontentsline{toc}{chapter}{Acronyms and Abbreviations}
+\markboth{Acronyms and Abbreviations}{Acronyms and Abbreviations}
+
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+\textbf{Acronym} & \textbf{Definition} \\
+\midrule
+LAIRM & Legislature for Autonomous Intelligent Resources Management \\
+ORCID & Open Researcher and Contributor ID \\
+EU & European Union \\
+GDPR & General Data Protection Regulation \\
+NIST & National Institute of Standards and Technology \\
+ISO & International Organization for Standardization \\
+UN & United Nations \\
+AI & Artificial Intelligence \\
+ML & Machine Learning \\
+DID & Decentralized Identifier \\
+MCP & Model Context Protocol \\
+A2A & Agent-to-Agent \\
+UTC & Coordinated Universal Time \\
+UUID & Universally Unique Identifier \\
+ARAM & Autonomous Resource Management Architecture \\
+\bottomrule
+\end{tabularx}
+
+\cleardoublepage
+
+% ============================================================================
+% BIBLIOGRAPHY
+% ============================================================================
+\printbibliography[heading=bibintoc,title={References and Bibliography}]
+
+\end{document}

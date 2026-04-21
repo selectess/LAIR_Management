@@ -904,14 +904,12 @@ Implementation of Article I.1.18 will ensure that autonomous agents maintain acc
 ---
 
 **Article I.1.18: Right to Rectification**  
+**Status**: Final  
 **Effective Date**: 1 January 2027  
+**Last Reviewed**: April 4, 2026
 
 ---
 
 *This article is part of the Cybernetic Criterion - International Legislative Framework for Autonomous Intelligent Resources Management (2026-2036)*
 
 *"Accurate data enables just decisions. Justice requires accuracy."*
-
----
-
-**Next review**: June 2026

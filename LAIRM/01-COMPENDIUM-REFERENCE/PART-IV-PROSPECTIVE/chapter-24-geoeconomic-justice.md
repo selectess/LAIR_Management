@@ -6,15 +6,15 @@ associated_axiom: Ψ-XIV IUSTITIA MUNDANA
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
-  - geoeconomic-justice
-  - global-inequality
-  - technology-transfer
-  - digital-divide
-  - just-transition
-  - capacity-building
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
+  - geoeconomic justice
+  - global inequality
+  - technology transfer
+  - digital divide
+  - just transition
+  - capacity building
 internal_references:
   - ../PART-II-DIMENSIONS/chapter-09-economic-dimension.md
   - ../PART-III-PARADIGMS/chapter-16-paradigm-adaptation.md
@@ -123,7 +123,3 @@ Geoeconomic justice (technology transfer, capacity building, equitable access, j
 ---
 
 
-
----
-
-**Next review**: June 2026

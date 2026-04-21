@@ -8,9 +8,9 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - recourse
-  - deployer
-  - responsibility
+  - Recourse
+  - Deployer
+  - Responsibility
 validations:
   legal: true
   technical: true
@@ -188,10 +188,10 @@ Each deployer MUST maintain an immutable registry of:
 
 | Violation | Sanction |
 |-----------|----------|
-| Responsibility not established | 20% annual revenue fine |
-| Recourse refused | 25% annual revenue fine |
-| Insufficient insurance | Suspension, 20% annual revenue fine |
-| Incomplete registry | 10% annual revenue fine |
+| Responsibility not established | 20% CA fine |
+| Recourse refused | 25% CA fine |
+| Insufficient insurance | Suspension, 20% CA fine |
+| Incomplete registry | 10% CA fine |
 | Repairs not performed | License revocation |
 | Recurrence | Permanent ban |
 
@@ -231,7 +231,3 @@ Each deployer MUST maintain an immutable registry of:
 
 **Status**: Final
 
-
----
-
-**Next review**: June 2026

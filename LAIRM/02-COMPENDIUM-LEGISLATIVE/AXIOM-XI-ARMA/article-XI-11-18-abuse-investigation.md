@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - abuse-investigation
-  - incident-investigation
-  - investigation-process
-  - investigation-timeline
-  - investigation-findings
+keywords:
+  - abuse investigation
+  - incident investigation
+  - investigation process
+  - investigation timeline
+  - investigation findings
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -239,11 +240,11 @@ impl AbuseInvestigationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No investigation | 75% annual revenue fine |
-| Investigation delayed > 24h | 70% annual revenue fine |
-| Investigation delayed > 30 days | 65% annual revenue fine |
-| Findings not documented | 60% annual revenue fine |
-| No remediation plan | 55% annual revenue fine |
+| No investigation | 75% CA fine |
+| Investigation delayed > 24h | 70% CA fine |
+| Investigation delayed > 30 days | 65% CA fine |
+| Findings not documented | 60% CA fine |
+| No remediation plan | 55% CA fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -263,7 +264,4 @@ impl AbuseInvestigationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

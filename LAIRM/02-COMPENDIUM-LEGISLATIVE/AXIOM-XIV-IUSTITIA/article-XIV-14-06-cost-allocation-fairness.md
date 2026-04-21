@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - cost-allocation
-  - fair-costs
-  - cost-distribution
+keywords:
+  - cost allocation
+  - fair costs
+  - cost distribution
   - fairness
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -341,12 +342,12 @@ impl CostManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No cost policy | 75% annual revenue fine |
-| Unfair allocation | 80% annual revenue fine |
-| Vulnerable harm | 85% annual revenue fine |
-| Lack of transparency | 78% annual revenue fine |
-| Equity threshold not met | 80% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No cost policy | 75% CA fine |
+| Unfair allocation | 80% CA fine |
+| Vulnerable harm | 85% CA fine |
+| Lack of transparency | 78% CA fine |
+| Equity threshold not met | 80% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -361,7 +362,4 @@ impl CostManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

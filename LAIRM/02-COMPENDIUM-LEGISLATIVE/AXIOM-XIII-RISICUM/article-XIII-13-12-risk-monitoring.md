@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - risk-monitoring
-  - continuous-monitoring
-  - risk-assessment
-  - incident-detection
-  - monitoring-systems
+keywords:
+  - risk monitoring
+  - continuous monitoring
+  - risk assessment
+  - incident detection
+  - monitoring systems
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -459,11 +460,11 @@ impl RiskMonitoringManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No risk monitoring system | 95% annual revenue fine + immediate system halt |
-| Monitoring system non-functional | 90% annual revenue fine + system halt until fixed |
-| Failed incident detection | 85% annual revenue fine + system halt until fixed |
-| Delayed incident reporting | 80% annual revenue fine + system halt until fixed |
-| Automatic response failure | 90% annual revenue fine + system halt until fixed |
+| No risk monitoring system | 95% CA fine + immediate system halt |
+| Monitoring system non-functional | 90% CA fine + system halt until fixed |
+| Failed incident detection | 85% CA fine + system halt until fixed |
+| Delayed incident reporting | 80% CA fine + system halt until fixed |
+| Automatic response failure | 90% CA fine + system halt until fixed |
 | Recurrence | Permanent ban + criminal prosecution |
 
 ### 5.3 Verification Process
@@ -506,7 +507,4 @@ impl RiskMonitoringManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

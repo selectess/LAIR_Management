@@ -56,7 +56,7 @@ Complete history is essential for audit, traceability and responsibility. It MUS
 - Cryptographic verifiability
 - Indefinite retention
 - Geographic redundancy
-- Non-repudiation
+- Non-répudiation
 - Audit trail complet
 
 ---
@@ -80,7 +80,7 @@ class ImmutableHistoryManager:
         self.geographic_replicas = []
     
     def record_event(self, agent_id: str, event_type: str, details: Dict, severity: str = 'info'):
-        """Records an event immutably"""
+        """Records a event de manière immutable"""
         event = {
             'event_id': f"evt-{uuid.uuid4()}",
             'agent_id': agent_id,
@@ -102,10 +102,10 @@ class ImmutableHistoryManager:
         event_key = f"{agent_id}:{event['sequence_number']}"
         self.event_log[event_key] = event
         
-        # Maintain hash chain
+        # Maintenir chaîne de hash
         self.hash_chain[agent_id] = event['hash']
         
-        # Replicate geographically
+        # Répliquer géographiquement
         self._replicate_to_geographic_sites(event)
         
         # Record dans index
@@ -161,21 +161,21 @@ class ImmutableHistoryManager:
         """Interroge l'historique avec filtres"""
         events = self._retrieve_all_events(agent_id)
         
-        # Filter par type d'event
+        # Filtrer par type d'event
         if 'event_type' in query:
             events = [e for e in events if e['event_type'] == query['event_type']]
         
-        # Filter by severity
+        # Filtrer par sévérité
         if 'severity' in query:
             events = [e for e in events if e['severity'] == query['severity']]
         
-        # Filter par Date
+        # Filtrer par Date
         if 'start_date' in query:
             events = [e for e in events if e['timestamp'] >= query['start_date']]
         if 'end_date' in query:
             events = [e for e in events if e['timestamp'] <= query['end_date']]
         
-        # Filter par details
+        # Filtrer par details
         if 'details_filter' in query:
             events = [e for e in events if self._match_details(e['details'], query['details_filter'])]
         
@@ -203,7 +203,7 @@ class ImmutableHistoryManager:
         return self.hash_chain.get(agent_id)
     
     def _get_next_sequence(self, agent_id: str) -> int:
-        """Retrieves the next sequence number"""
+        """Retrieves the prochain numéro de séquence"""
         events = [e for k, e in self.event_log.items() if k.startswith(agent_id)]
         return len(events) + 1
     
@@ -235,7 +235,7 @@ class ImmutableHistoryManager:
         return hashlib.sha256(str(history).encode()).hexdigest()
     
     def _verify_chain_integrity(self, events: List[Dict]) -> bool:
-        """Verifies integrity of the chain"""
+        """Verifies integrity de la chaîne"""
         for i, event in enumerate(events):
             if i > 0:
                 if event['previous_hash'] != events[i-1]['hash']:
@@ -255,8 +255,8 @@ class ImmutableHistoryManager:
         return events
     
     def _replicate_to_geographic_sites(self, event: Dict):
-        """Replicates the event geographically"""
-        # Replication to 3+ sites
+        """Réplique l'event géographiquement"""
+        # Réplication à 3+ sites
         pass
     
     def _index_event(self, agent_id: str, event: Dict):
@@ -271,28 +271,28 @@ class ImmutableHistoryManager:
         return True
 ```
 
-### 3.2 Types of Recorded Events
+### 3.2 Types d'Événements Enregistrés
 
-| Type | Description | Frequency | Severity |
+| type | Description | Fréquence | Sévérité |
 |------|-------------|-----------|----------|
 | creation | Creation d'agent | Une fois | info |
 | deployment | Deployment | Une fois | info |
-| state_change | State change | Variable | info |
+| state_change | Change d'état | Variable | info |
 | config_change | Change de configuration | Variable | info |
-| maintenance | Maintenance | Regular | info |
+| maintenance | Maintenance | Régulier | info |
 | incident | Incident | À la demande | warning |
 | error | Erreur | Variable | error |
-| security_event | Security event | Variable | critical |
+| security_event | Événement de security | Variable | critical |
 | end_of_life | Fin de vie | Une fois | info |
 
 ### 3.3 Stockage d'Historique Immuable
 
-History MUST be stored in:
-- Blockchain or equivalent (immutable)
+L'historique MUST be stocké dans :
+- Blockchain ou équivalent (immutable)
 - Index pour recherche < 1 sec
-- Archive pour long term (indefinite)
-- Backup redondant (3+ sites geographics)
-- Encryption AES-256 en transit
+- Archive pour long terme (indéfini)
+- Backup redondant (3+ sites géographiques)
+- Chiffrement AES-256 en transit
 - Signature RSA-4096 pour chaque event
 
 ---
@@ -301,9 +301,9 @@ History MUST be stored in:
 
 ### 4.1 Real-World Case Studies
 
-#### Case 1: TradeBot3000 - Altered History (Q1 2026)
+#### Case 1: TradeBot3000 - Historique Altéré (Q1 2026)
 - **Incident**: History tampered, events deleted
-- **Loss** : $4.1M (regulatory fines + damages)
+- **Perte** : $4.1M (regulatory fines + damages)
 - **Cause**: Non-immutable history storage
 - **Resolution**: Blockchain-based immutable history
 - **Compensation** : $4.1M + 35% penalty
@@ -315,7 +315,7 @@ History MUST be stored in:
 - **Resolution**: Geographic replication (3+ sites)
 - **Compensation** : €2.8M + 30% penalty
 
-#### Case 3: SupplyChainX - Non-Verifiable History (Q1 2026)
+#### Case 3: SupplyChainX - Historique Non-Vérifiable (Q1 2026)
 - **Incident**: History not cryptographically verifiable
 - **Dommages** : €2.2M (audit failures, compliance violations)
 - **Cause**: Missing signatures and hash chain
@@ -515,7 +515,7 @@ impl ImmutableHistoryManager {
 }
 ```
 
-### 4.3 Immutable History Chain
+### 4.3 Chaîne d'Historique Immuable
 
 ```
 Event 1 (Creation)
@@ -551,11 +551,11 @@ Chaque event MUST be recorded avec :
 - type d'event
 - Details complets
 - Timestamp immutable
-- Sequence number
+- Numéro de séquence
 - Hash SHA-256
 - Signature RSA-4096
-- Previous hash (chain)
-- Replication geographic (3+ sites)
+- Previous hash (chaîne)
+- Réplication géographique (3+ sites)
 
 ---
 
@@ -582,27 +582,27 @@ Chaque event MUST be recorded avec :
 | Violation | Sanction |
 |-----------|----------|
 | Historique incomplet | Immediate revocation + 40% annual revenue |
-| Immutability compromised | License revocation |
-| Accessibility > 1 sec | Fine 30% annual revenue |
-| Verifiability compromised | Immediate revocation |
+| Immuabilité compromise | License revocation |
+| Accessibilité > 1 sec | Fine 30% annual revenue |
+| Vérireliability compromise | Immediate revocation |
 | Conservation insuffisante | Fine 35% annual revenue |
 | Redondance manquante | Fine 30% annual revenue |
-| Broken hash chain | Immediate revocation |
+| Chaîne de hash brisée | Immediate revocation |
 | Invalid signature | Immediate revocation |
-| Loss d'event | Immediate revocation + 50% annual revenue |
+| Perte d'event | Immediate revocation + 50% annual revenue |
 | Missing audit trail | Fine 25% annual revenue |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
 
-1. Verification mensuelle d'integrity
-2. Audit de hash chain
+1. Verification mensuelle d'intégrité
+2. Audit de chaîne de hash
 3. Verification de signatures
 4. Audit de conservation
 5. Verification de redondance
 6. Audit trail complet
 7. Rapport d'historique
-8. Legal certification
+8. Certification légale
 
 ---
 
@@ -617,7 +617,7 @@ Chaque event MUST be recorded avec :
 
 **Transitional Provisions** :
 - Existing agents: Audit d'historique avant 30 juin 2027
-- History infrastructure established before January 1, 2027
+- Infrastructure d'historique établie before January 1, 2027
 
 ---
 
@@ -625,19 +625,19 @@ Chaque event MUST be recorded avec :
 
 **Axiom Ψ-IV: CIRCULUS VITAE**
 - Foundation: Complete lifecycle with immutable history
-- Principes: Immutability, traceability, non-repudiation
+- Principes: Immuabilité, traceability, non-repudiation
 
 **Articles connexes** :
 - Article II.2.7: Logging Immuable
 - Article II.2.9: Historique Complet
 - Article IV.4.11: Documentation du Cycle de Vie
 - Article IV.4.12: Audit du Cycle de Vie
-- Article IV.4.18: Traceability du Cycle de Vie
+- Article IV.4.18: Traçabilité du Cycle de Vie
 
-**Reference standards**:
-- ISO 27001: Management des logs
-- ISO 27035: Management des incidents
-- NIST SP 800-92: Guide de management des logs
+**Normes de référence** :
+- ISO 27001: Gestion des logs
+- ISO 27035: Gestion des incidents
+- NIST SP 800-92: Guide de gestion des logs
 - RFC 3161: Timestamping
 
 ---

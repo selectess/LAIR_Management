@@ -261,7 +261,7 @@ class PassportVerifier:
         return did in self.revocation_list
     
     def _verify_certificates(self, passport: dict) -> bool:
-        """Verifies compliance certificates"""
+        """Vérifie les certificats de conformité"""
         compliance = passport.get('compliance', {})
         certifications = compliance.get('certifications', [])
         return len(certifications) > 0
@@ -332,7 +332,7 @@ class PassportGenerator:
             'timestamp': datetime.utcnow().isoformat(),
             'did': did,
             'creator': agent_config['creator']['name'],
-            'status': 'generated'
+            'Status': 'generated'
         })
         
         return passport

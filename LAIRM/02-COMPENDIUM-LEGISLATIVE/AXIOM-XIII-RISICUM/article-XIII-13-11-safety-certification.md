@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - safety-certification
-  - certification-process
-  - safety-standards
-  - compliance-verification
-  - certification-authority
+keywords:
+  - safety certification
+  - certification process
+  - safety standards
+  - compliance verification
+  - certification authority
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -513,11 +514,11 @@ impl CertificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Deployment without certification | 95% annual revenue fine + immediate system halt |
-| Certification expired | 90% annual revenue fine + system halt until renewed |
-| Failed renewal | 85% annual revenue fine + system halt until fixed |
-| Non-compliance detected | 80% annual revenue fine + certification revocation |
-| Concealment of non-compliance | 95% annual revenue fine + criminal prosecution |
+| Deployment without certification | 95% CA fine + immediate system halt |
+| Certification expired | 90% CA fine + system halt until renewed |
+| Failed renewal | 85% CA fine + system halt until fixed |
+| Non-compliance detected | 80% CA fine + certification revocation |
+| Concealment of non-compliance | 95% CA fine + criminal prosecution |
 | Recurrence | Permanent ban + criminal prosecution |
 
 ### 5.3 Verification Process
@@ -558,7 +559,4 @@ impl CertificationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

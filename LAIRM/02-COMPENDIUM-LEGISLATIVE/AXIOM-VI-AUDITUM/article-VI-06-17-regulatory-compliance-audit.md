@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - regulatory-compliance-audit
-  - regulatory-standards
-  - compliance-verification
-  - regulatory-reporting
-  - compliance-remediation
+keywords:
+  - regulatory compliance audit
+  - regulatory standards
+  - compliance verification
+  - regulatory reporting
+  - compliance remediation
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -385,12 +386,12 @@ impl RegulatoryComplianceAuditManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Regulatory non-compliance | 60% annual revenue fine |
-| Unreported violation | Immediate revocation + 70% annual revenue |
-| Incomplete audit | 50% annual revenue fine |
-| Missing remediation plan | 45% annual revenue fine |
+| Regulatory non-compliance | 60% CA fine |
+| Unreported violation | Immediate revocation + 70% CA |
+| Incomplete audit | 50% CA fine |
+| Missing remediation plan | 45% CA fine |
 | Invalid signature | Immediate revocation |
-| Falsified compliance | Immediate revocation + 80% annual revenue |
+| Falsified compliance | Immediate revocation + 80% CA |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -433,7 +434,4 @@ impl RegulatoryComplianceAuditManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

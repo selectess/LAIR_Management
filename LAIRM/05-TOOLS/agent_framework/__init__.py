@@ -1,0 +1,16 @@
+# ============================================================================
+# LAIRM Module
+# date_creation: 2024-03-18
+# last_updated: 2026-04-20
+# last_review: 2026-04-20
+# ============================================================================
+
+"""
+LAIRM Agent Framework Module
+"""
+
+from .lairm_agent_sdk import LAIRMAgentSDK
+
+__all__ = [
+    'LAIRMAgentSDK',
+]

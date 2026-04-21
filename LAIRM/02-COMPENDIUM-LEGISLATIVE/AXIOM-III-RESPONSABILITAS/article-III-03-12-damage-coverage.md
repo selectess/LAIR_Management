@@ -8,9 +8,9 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - coverage
-  - damages
-  - insurance
+  - Coverage
+  - Damages
+  - Insurance
 validations:
   legal: true
   technical: true
@@ -186,10 +186,10 @@ Each agent MUST maintain an immutable registry of:
 
 | Violation | Sanction |
 |-----------|----------|
-| Incomplete coverage | Suspension, 25% annual revenue fine |
-| Insufficient amounts | Suspension, 20% annual revenue fine |
-| Unauthorized exclusions | 20% annual revenue fine |
-| Incomplete registry | 10% annual revenue fine |
+| Incomplete coverage | Suspension, 25% CA fine |
+| Insufficient amounts | Suspension, 20% CA fine |
+| Unauthorized exclusions | 20% CA fine |
+| Incomplete registry | 10% CA fine |
 | Uncovered damages | License revocation |
 | Recurrence | Permanent ban |
 
@@ -229,7 +229,3 @@ Each agent MUST maintain an immutable registry of:
 
 **Status**: Final
 
-
----
-
-**Next review**: June 2026

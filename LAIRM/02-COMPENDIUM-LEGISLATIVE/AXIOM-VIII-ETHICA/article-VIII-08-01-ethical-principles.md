@@ -1,25 +1,25 @@
 ---
-title: "Article VIII.8.1: Ethical Principles"
-axiom: Ψ-VIII
-article_number: VIII.8.1
+title: "Article VIII.8.1 : Ethical Principles"
+Axiom: Ψ-VIII
+numero: VIII.8.1
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - ethics
-  - fairness
-  - transparency
+  - Ethics
+  - Fairness
+  - Transparency
 validations:
-  legal: true
-  technical: true
-  editorial: true
+  Legal: true
+  Technical: true
+  Editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article VIII.8.1: Ethical Principles
-## Axiom Ψ-VIII: ETHICA
+# Article VIII.8.1 : Ethical Principles
+## Axiom Ψ-VIII : ETHICA
 
 ---
 
@@ -40,7 +40,7 @@ Every autonomous agent MUST implement comprehensive ethical principles covering 
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-VIII: ETHICA**
+**Axiom Ψ-VIII : ETHICA**
 
 Ethical principles ensure that autonomous agents operate in accordance with fundamental human values and rights. They MUST be mandatory to maintain societal trust and prevent harm.
 
@@ -224,14 +224,11 @@ class EthicalPrinciplesManager:
 
 ## REFERENCES
 
-- Axiom Ψ-VIII: ETHICA
-- Chapter 17: Paradigm Ethics
+- Axiom Ψ-VIII : ETHICA
+- Chapter 17 : Paradigm Ethics
 
 ---
 
-**Next Review**: January 2027
+**Next Review** : January 2027
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

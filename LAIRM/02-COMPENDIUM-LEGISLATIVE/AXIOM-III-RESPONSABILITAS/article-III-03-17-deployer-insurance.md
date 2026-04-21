@@ -8,9 +8,9 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - insurance
-  - deployer
-  - responsibility
+  - Insurance
+  - Deployer
+  - Responsibility
 validations:
   legal: true
   technical: true
@@ -181,11 +181,11 @@ Each deployer MUST maintain an immutable registry of:
 
 | Violation | Sanction |
 |-----------|----------|
-| No insurance | Immediate suspension, 30% annual revenue fine |
-| Insufficient coverage | Suspension, 25% annual revenue fine |
-| Expired policy | Suspension, 20% annual revenue fine |
-| Premium not paid | Suspension, 15% annual revenue fine |
-| Incomplete registry | 10% annual revenue fine |
+| No insurance | Immediate suspension, 30% CA fine |
+| Insufficient coverage | Suspension, 25% CA fine |
+| Expired policy | Suspension, 20% CA fine |
+| Premium not paid | Suspension, 15% CA fine |
+| Incomplete registry | 10% CA fine |
 | Recurrence | License revocation |
 
 ### 5.3 Verification Process
@@ -224,7 +224,3 @@ Each deployer MUST maintain an immutable registry of:
 
 **Status**: Final
 
-
----
-
-**Next review**: June 2026

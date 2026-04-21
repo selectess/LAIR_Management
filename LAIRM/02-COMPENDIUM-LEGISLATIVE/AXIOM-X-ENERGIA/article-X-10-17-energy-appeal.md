@@ -1,7 +1,7 @@
 ---
 title: "Article X.17: Energy Appeal"
 axiom: Ψ-X
-article_number: X.17
+numero: X.17
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
@@ -9,12 +9,12 @@ last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
   - ENERGIA
-  - energy-Appeal
-  - dispute-Resolution
+  - Energy Appeal
+  - Dispute Resolution
 validations:
-  legal: true
-  technical: true
-  editorial: true
+  Legal: true
+  Technical: true
+  Editorial: true
 license: CC-BY-SA-4.0
 ---
 
@@ -268,7 +268,4 @@ class EnergyAppealManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

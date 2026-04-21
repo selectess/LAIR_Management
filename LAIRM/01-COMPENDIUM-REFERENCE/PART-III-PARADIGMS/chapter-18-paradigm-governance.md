@@ -6,13 +6,13 @@ associated_axiom: Ψ-IX GUBERNATIO
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
   - governance
-  - hybrid-governance
-  - human-agent-collaboration
-  - decentralized-governance
+  - hybrid governance
+  - human-agent collaboration
+  - decentralized governance
   - DAO
 internal_references:
   - chapter-17-paradigm-ethics.md
@@ -117,7 +117,3 @@ Hybrid governance (separation of powers, complementary roles, transparent proces
 
 ---
 
-
----
-
-**Next review**: June 2026

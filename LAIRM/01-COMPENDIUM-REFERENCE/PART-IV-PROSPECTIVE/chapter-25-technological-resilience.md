@@ -6,15 +6,15 @@ associated_axiom: Ψ-XV RESILENTIA SYSTEMATICA
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
-  - technological-resilience
-  - systemic-risk
-  - cascading-failures
-  - critical-infrastructure
-  - resilience-engineering
-  - graceful-degradation
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
+  - technological resilience
+  - systemic risk
+  - cascading failures
+  - critical infrastructure
+  - resilience engineering
+  - graceful degradation
 internal_references:
   - ../PART-III-PARADIGMS/chapter-13-paradigm-supervision.md
   - chapter-20-energy-sovereignty.md
@@ -133,7 +133,3 @@ Technological resilience (systemic risk assessment, resilience engineering, circ
 ---
 
 
-
----
-
-**Next review**: June 2026

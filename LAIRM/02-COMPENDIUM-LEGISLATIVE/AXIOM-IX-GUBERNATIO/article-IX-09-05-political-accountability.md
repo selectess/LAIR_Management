@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - political-accountability
-  - accountability-mechanisms
-  - performance-metrics
-  - accountability-reporting
-  - accountability-enforcement
+keywords:
+  - political accountability
+  - accountability mechanisms
+  - performance metrics
+  - accountability reporting
+  - accountability enforcement
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -364,12 +365,12 @@ impl PoliticalAccountabilityManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No accountability framework | 65% annual revenue fine |
-| Undefined metrics | 55% annual revenue fine |
-| No reporting | 60% annual revenue fine |
-| Violations not enforced | 70% annual revenue fine |
+| No accountability framework | 65% CA fine |
+| Undefined metrics | 55% CA fine |
+| No reporting | 60% CA fine |
+| Violations not enforced | 70% CA fine |
 | Invalid signature | Immediate revocation |
-| Falsified metrics | Immediate revocation + 75% annual revenue |
+| Falsified metrics | Immediate revocation + 75% CA |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -411,7 +412,4 @@ impl PoliticalAccountabilityManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

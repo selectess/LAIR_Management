@@ -8,9 +8,9 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - mediation
-  - conflicts
-  - resolution
+  - Mediation
+  - Conflicts
+  - Resolution
 validations:
   legal: true
   technical: true
@@ -189,11 +189,11 @@ Each agent MUST maintain an immutable registry of:
 
 | Violation | Sanction |
 |-----------|----------|
-| Mediation refused | 20% annual revenue fine |
-| Unqualified mediator | 15% annual revenue fine |
-| Deadline exceeded | 10% annual revenue fine |
-| Agreement not executed | 25% annual revenue fine |
-| Incomplete registry | 10% annual revenue fine |
+| Mediation refused | 20% CA fine |
+| Unqualified mediator | 15% CA fine |
+| Deadline exceeded | 10% CA fine |
+| Agreement not executed | 25% CA fine |
+| Incomplete registry | 10% CA fine |
 | Recurrence | License revocation |
 
 ### 5.3 Verification Process
@@ -232,7 +232,3 @@ Each agent MUST maintain an immutable registry of:
 
 **Status**: Final
 
-
----
-
-**Next review**: June 2026

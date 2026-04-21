@@ -8,9 +8,9 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - training
-  - operators
-  - competency
+  - Training
+  - Operators
+  - Competency
 validations:
   legal: true
   technical: true
@@ -198,8 +198,8 @@ Each operator MUST have an immutable registry of:
 |-----------|----------|
 | Training not completed | Operation suspension |
 | Expired certification | Immediate suspension |
-| Insufficient content | 10% annual revenue fine |
-| Incomplete registry | 5% annual revenue fine |
+| Insufficient content | 10% CA fine |
+| Incomplete registry | 5% CA fine |
 | Uncertified operator | License revocation |
 | Recurrence | Permanent ban |
 
@@ -239,7 +239,3 @@ Each operator MUST have an immutable registry of:
 
 **Status**: Final
 
-
----
-
-**Next review**: June 2026

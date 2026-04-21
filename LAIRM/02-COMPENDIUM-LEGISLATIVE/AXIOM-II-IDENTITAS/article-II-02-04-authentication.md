@@ -261,11 +261,11 @@ impl AuthenticationSession {
 | Violation | Sanction | Deadline |
 |-----------|----------|----------|
 | MFA absent | Immediate stop | Immediate |
-| Single factor | Operation suspension + 25% annual revenue fine | 7 days |
-| Expired delay | Operation suspension + 20% annual revenue fine | 14 days |
-| Unlimited attempts | License revocation + 35% annual revenue fine | 7 days |
-| Missing logging | 15% annual revenue fine | 14 days |
-| False authentication | License revocation + 40% annual revenue fine | 7 days |
+| Single factor | Operation suspension + 25% CA fine | 7 days |
+| Expired delay | Operation suspension + 20% CA fine | 14 days |
+| Unlimited attempts | License revocation + 35% CA fine | 7 days |
+| Missing logging | 15% CA fine | 14 days |
+| False authentication | License revocation + 40% CA fine | 7 days |
 | Recurrence | Permanent ban | Immediate |
 
 ---
@@ -301,15 +301,15 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II: IDENTITAS AGENTICA
-- Article II.2.1: Agent Passport
-- RFC 6238: TOTP Algorithm
-- NIST SP 800-63B: Authentication Guidelines
-- The Cybernetic Criterion: Chapters 0-5
+- Axiom Ψ-II : IDENTITAS AGENTICA
+- Article II.2.1 : Agent Passport
+- RFC 6238 : TOTP Algorithm
+- NIST SP 800-63B : Authentication Guidelines
+- The Cybernetic Criterion : Chapters 0-5
 
 ---
 
-**Next Review**: January 2027
+**Next Review** : January 2027
 
 
 ---

@@ -6,16 +6,16 @@ associated_axiom: Ψ-I SUPREMATIA HUMANA
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
   - sovereignty
-  - human-control
-  - kill-switch
-  - human-override
-  - agentic-autonomy
-  - human-authority
-  - intervention-rights
+  - human control
+  - kill switch
+  - human override
+  - agentic autonomy
+  - human authority
+  - intervention rights
 internal_references:
   - ../PART-I-FOUNDATIONS/chapter-00-general-introduction.md
   - ../PART-II-DIMENSIONS/chapter-06-technical-dimension.md
@@ -855,13 +855,13 @@ This case demonstrates that LAIRM compliance is economically viable and substant
 
 ---
 
-## 10.7 Alternative Approaches and Critical
+## 10.7 Alternative Approaches and Critique
 
 ### 10.7.1 Techno-Optimist Approach: Minimal Human Intervention
 
 **Proposal**: Allow agents maximum autonomy with minimal human intervention, trusting algorithmic optimization.
 
-**Critical**:
+**Critique**:
 
 1. **Epistemological Flaw**: Assumes algorithms have complete knowledge, ignoring contextual factors and tacit knowledge [35].
 
@@ -877,7 +877,7 @@ LAIRM rejects this approach as philosophically unsound and empirically dangerous
 
 **Proposal**: Prohibit all autonomous agents due to uncontrollable risks.
 
-**Critical**:
+**Critique**:
 
 1. **Infeasibility**: Autonomous agents already widely deployed; complete ban unenforceable.
 
@@ -895,7 +895,7 @@ LAIRM rejects this approach as impractical and unnecessarily restrictive. Regula
 
 **Proposal**: Grant autonomous agents legal personhood with rights and obligations, similar to corporations [38].
 
-**Critical**:
+**Critique**:
 
 1. **Conceptual Incoherence**: Rights presuppose interests; agents lack subjective experience and therefore lack interests [39].
 
@@ -1082,7 +1082,7 @@ The paradigm of human sovereignty ensures that technological progress serves hum
 
 [16] Medical Device Safety Commission. (2026). Case report: Memorial Hospital diagnostic agent override denial (MDSC-2026-018). U.S. Government Publishing Office.
 
-[17] Dreyfus, H. L. (1992). *What Computers Still Can't Do: A Critical of Artificial Reason*. MIT Press.
+[17] Dreyfus, H. L. (1992). *What Computers Still Can't Do: A Critique of Artificial Reason*. MIT Press.
 
 [18] Anderson, E. (1993). *Value in Ethics and Economics*. Harvard University Press.
 
@@ -1145,7 +1145,4 @@ The paradigm of human sovereignty ensures that technological progress serves hum
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

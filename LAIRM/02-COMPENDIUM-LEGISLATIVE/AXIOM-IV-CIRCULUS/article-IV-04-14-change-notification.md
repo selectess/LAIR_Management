@@ -345,13 +345,13 @@ impl ChangeNotificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Notification > 24 hours | 35% annual revenue fine |
-| Stakeholder omitted | 40% annual revenue fine |
-| Incomplete details | 30% annual revenue fine |
+| Notification > 24 hours | 35% CA fine |
+| Stakeholder omitted | 40% CA fine |
+| Incomplete details | 30% CA fine |
 | Immutability compromised | License revocation |
 | Invalid signature | Immediate revocation |
-| Missing audit trail | 40% annual revenue fine |
-| Delivery unconfirmed | 35% annual revenue fine |
+| Audit trail absent | 40% CA fine |
+| Delivery unconfirmed | 35% CA fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process

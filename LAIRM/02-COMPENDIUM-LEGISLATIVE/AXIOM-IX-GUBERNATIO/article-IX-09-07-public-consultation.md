@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - public-consultation
-  - consultation-process
-  - stakeholder-input
-  - consultation-feedback
-  - consultation-documentation
+keywords:
+  - public consultation
+  - consultation process
+  - stakeholder input
+  - consultation feedback
+  - consultation documentation
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -194,13 +195,13 @@ class PublicConsultationManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No consultation | 65% annual revenue fine |
-| Inaccessible process | 55% annual revenue fine |
-| Feedback not documented | 50% annual revenue fine |
-| Feedback not considered | 60% annual revenue fine |
-| Results not communicated | 45% annual revenue fine |
+| No consultation | 65% CA fine |
+| Inaccessible process | 55% CA fine |
+| Feedback not documented | 50% CA fine |
+| Feedback not considered | 60% CA fine |
+| Results not communicated | 45% CA fine |
 | Invalid signature | Immediate revocation |
-| Falsified consultation | Immediate revocation + 75% annual revenue |
+| Falsified consultation | Immediate revocation + 75% CA |
 
 ---
 
@@ -219,7 +220,4 @@ class PublicConsultationManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

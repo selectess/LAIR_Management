@@ -6,15 +6,15 @@ associated_axiom: Ψ-IV SUPERVISIO CONTINUA
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
   - supervision
   - monitoring
   - escalation
-  - closed-loop
-  - anomaly-detection
-  - human-oversight
+  - closed loop
+  - anomaly detection
+  - human oversight
 internal_references:
   - chapter-12-paradigm-responsibility.md
   - chapter-10-paradigm-sovereignty.md
@@ -147,7 +147,4 @@ Continuous supervision with risk-based ratios (1:50 to 1:1000), real-time monito
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

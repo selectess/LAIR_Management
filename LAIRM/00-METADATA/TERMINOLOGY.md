@@ -196,6 +196,8 @@ Example: SECTION-NORM-01
 ---
 
 **Document created**: March 30, 2026  
+**Last Reviewed**: April 3, 2026  
+**Status**: Final  
 **Version**: Initiation
 
 ---
@@ -203,7 +205,3 @@ Example: SECTION-NORM-01
 *The Cybernetic Criterion - Terminology and Nomenclature*  
 *Legislature for Autonomous Intelligent Resources Management*  
 *Global Agentive Constitution 2026-2036*
-
----
-
-**Next review**: June 2026

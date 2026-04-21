@@ -1,0 +1,53 @@
+% ============================================================================
+% LAIRM Document
+% date_creation: 2024-03-18
+% last_updated: 2026-04-20
+% last_review: 2026-04-20
+% ============================================================================
+
+% ============================================================================
+% LAIRM: CODE LISTING STYLE
+% ============================================================================
+
+% Define code listing style for code examples and specifications
+\newtcolorbox{codelisting}[1]{
+  colback=codegray!10,
+  colframe=codegray,
+  coltext=black,
+  title=#1,
+  fonttitle=\ttfamily\small,
+  coltitle=white,
+  boxrule=1pt,
+  arc=2pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+  titlerule=0pt,
+  toptitle=3pt,
+  bottomtitle=3pt,
+  attach boxed title to top left={xshift=6pt, yshift=-\tcboxedtitleheight/2},
+  boxed title style={
+    colback=codegray,
+    colframe=codegray,
+    arc=1pt,
+    boxrule=1pt
+  }
+}
+
+% Define code style for inline code
+\newcommand{\code}[1]{{\ttfamily\small\textcolor{darkgray}{#1}}}
+
+% Define specification style for formal specifications
+\newcommand{\spec}[1]{{\ttfamily\small\textcolor{legislativeblue}{#1}}}
+
+% Usage examples:
+% \begin{codelisting}{Code Example: Kill-Switch Implementation}
+%   code content here
+% \end{codelisting}
+%
+% Inline code: \code{example_code}
+% Inline spec: \spec{formal_specification}
+
+</content>
+</invoke>

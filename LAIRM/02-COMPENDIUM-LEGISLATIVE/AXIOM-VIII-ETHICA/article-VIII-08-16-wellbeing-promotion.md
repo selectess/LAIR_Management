@@ -1,25 +1,25 @@
 ---
-title: "Article VIII.8.16: Well-Being Promotion"
-axiom: Ψ-VIII
-article_number: VIII.8.16
+title: "Article VIII.8.16 : Well-Being Promotion"
+Axiom: Ψ-VIII
+numero: VIII.8.16
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - ethics
-  - well-Being
-  - flourishing
+  - Ethics
+  - Well-Being
+  - Flourishing
 validations:
-  legal: true
-  technical: true
-  editorial: true
+  Legal: true
+  Technical: true
+  Editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article VIII.8.16: Well-Being Promotion
-## Axiom Ψ-VIII: ETHICA
+# Article VIII.8.16 : Well-Being Promotion
+## Axiom Ψ-VIII : ETHICA
 
 ---
 
@@ -40,7 +40,7 @@ Every autonomous agent MUST actively promote human well-being and flourishing. W
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-VIII: ETHICA**
+**Axiom Ψ-VIII : ETHICA**
 
 Well-being promotion is an ethical imperative. Autonomous agents MUST actively work to enhance human flourishing.
 
@@ -296,14 +296,11 @@ class WellBeingPromotionManager:
 
 ## REFERENCES
 
-- Axiom Ψ-VIII: ETHICA
-- Chapter 17: Paradigm Ethics
+- Axiom Ψ-VIII : ETHICA
+- Chapter 17 : Paradigm Ethics
 
 ---
 
-**Next Review**: January 2027
+**Next Review** : January 2027
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - staged-development
-  - AGI-development-stages
-  - capability-progression
-  - safety-gates
-  - advancement-criteria
+keywords:
+  - staged development
+  - AGI development stages
+  - capability progression
+  - safety gates
+  - advancement criteria
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -462,12 +463,12 @@ impl StagedDevelopmentManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Unregistered program | 90% annual revenue fine + program halt |
-| Stage skipping | 95% annual revenue fine + development halt |
-| Safety gate bypass | 85% annual revenue fine + gate re-verification |
-| Unauthorized advancement | 90% annual revenue fine + stage rollback |
-| ASI development | 100% annual revenue fine + permanent ban |
-| Records falsification | 95% annual revenue fine + criminal referral |
+| Unregistered program | 90% CA fine + program halt |
+| Stage skipping | 95% CA fine + development halt |
+| Safety gate bypass | 85% CA fine + gate re-verification |
+| Unauthorized advancement | 90% CA fine + stage rollback |
+| ASI development | 100% CA fine + permanent ban |
+| Records falsification | 95% CA fine + criminal referral |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -510,7 +511,4 @@ impl StagedDevelopmentManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

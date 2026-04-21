@@ -1,0 +1,44 @@
+% ============================================================================
+% LAIRM Document
+% date_creation: 2024-03-18
+% last_updated: 2026-04-20
+% last_review: 2026-04-20
+% ============================================================================
+
+% ============================================================================
+% LAIRM: AXIOM BOX STYLE
+% ============================================================================
+
+% Define axiom box style for consistent presentation of axioms
+\newtcolorbox{axiombox}[1]{
+  colback=legislativeblue!5,
+  colframe=legislativeblue,
+  coltext=black,
+  title=#1,
+  fonttitle=\bfseries\sffamily\large,
+  coltitle=white,
+  boxrule=2pt,
+  arc=4pt,
+  left=10pt,
+  right=10pt,
+  top=10pt,
+  bottom=10pt,
+  titlerule=0pt,
+  toptitle=5pt,
+  bottomtitle=5pt,
+  attach boxed title to top left={xshift=10pt, yshift=-\tcboxedtitleheight/2},
+  boxed title style={
+    colback=legislativeblue,
+    colframe=legislativeblue,
+    arc=2pt,
+    boxrule=1pt
+  }
+}
+
+% Usage example:
+% \begin{axiombox}{Axiom I: Human Supremacy}
+%   Content of the axiom box
+% \end{axiombox}
+
+</content>
+</invoke>

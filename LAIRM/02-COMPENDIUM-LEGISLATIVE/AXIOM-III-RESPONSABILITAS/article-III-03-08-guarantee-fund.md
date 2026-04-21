@@ -8,9 +8,9 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - fund
-  - guarantee
-  - protection
+  - Fund
+  - Guarantee
+  - Protection
 validations:
   legal: true
   technical: true
@@ -18,8 +18,8 @@ validations:
 license: CC-BY-SA-4.0
 ---
 
-# Article III.3.8: NATIONAL GUARANTEE FUND
-## Axiom Ψ-III: RESPONSABILITAS JURIDICA
+# Article III.3.8 : NATIONAL GUARANTEE FUND
+## Axiom Ψ-III : RESPONSABILITAS JURIDICA
 
 ---
 
@@ -38,11 +38,11 @@ A national guarantee fund MUST be established to cover damages caused by uninsur
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-III: RESPONSABILITAS JURIDICA**
+**Axiom Ψ-III : RESPONSABILITAS JURIDICA**
 
 The guarantee fund is the safety net ensuring that no victim remains without indemnification. This fund is essential to maintain public confidence in the Responsibility system.
 
-**Fundamental Principles**:
+**Fundamental Principles** :
 - Universal indemnification guarantee
 - Solidarity between deployers
 - Victim protection
@@ -191,17 +191,17 @@ The fund MUST maintain an immutable registry of :
 4. Verify complete registry
 5. Verify transparent management
 
-**Frequency**: Minimum monthly
+**Frequency** : Minimum monthly
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
 | Minimum balance not maintained | Increase contributions 50% |
-| Contributions not received | 20% annual revenue fine |
-| Payments refused | 25% annual revenue fine |
-| Incomplete registry | 15% annual revenue fine |
-| Non-transparent management | 10% annual revenue fine |
+| Contributions not received | 20% CA fine |
+| Payments refused | 25% CA fine |
+| Incomplete registry | 15% CA fine |
+| Non-transparent management | 10% CA fine |
 | Recurrence | Government intervention |
 
 ### 5.3 Verification Process
@@ -240,7 +240,3 @@ The fund MUST maintain an immutable registry of :
 
 **Status**: Final
 
-
----
-
-**Next review**: June 2026

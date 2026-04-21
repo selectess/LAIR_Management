@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - political-appeal
-  - appeal-process
-  - appeal-mechanism
-  - appeal-review
-  - appeal-resolution
+keywords:
+  - political appeal
+  - appeal process
+  - appeal mechanism
+  - appeal review
+  - appeal resolution
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -176,13 +177,13 @@ class PoliticalAppealManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No appeal mechanism | 75% annual revenue fine |
-| Appeals not accessible | 65% annual revenue fine |
-| Unfair review | 70% annual revenue fine |
-| Delayed resolution | 60% annual revenue fine |
-| Decisions not documented | 55% annual revenue fine |
+| No appeal mechanism | 75% CA fine |
+| Appeals not accessible | 65% CA fine |
+| Unfair review | 70% CA fine |
+| Delayed resolution | 60% CA fine |
+| Decisions not documented | 55% CA fine |
 | Invalid signature | Immediate revocation |
-| Falsified appeal process | Immediate revocation + 80% annual revenue |
+| Falsified appeal process | Immediate revocation + 80% CA |
 
 ---
 
@@ -201,7 +202,4 @@ class PoliticalAppealManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

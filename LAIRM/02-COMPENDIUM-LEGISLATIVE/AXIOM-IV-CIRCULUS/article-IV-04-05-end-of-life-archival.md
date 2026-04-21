@@ -546,62 +546,62 @@ mod tests {
 ### 5.1 Compliance Verification
 
 **Mandatory tests** :
-1. **Approval Test**: Verify that 2 levels of approval are present
+1. **Approval Test** : Verify that 2 levels of approval are present
    - Technical approval
    - Operational approval
 
-2. **Archival Test**: Verify that archival is complete
+2. **Archival Test** : Verify that archival is complete
    - All data archived
    - Complete audit trail
    - Integrity verified (SHA-256)
    - Valid signature (RSA-4096)
 
-3. **Destruction Test**: Verify that keys are destroyed
+3. **Destruction Test** : Verify that keys are destroyed
    - 3x overwrite destruction performed
    - Destruction verification
    - Destruction certificate
 
-4. **Removal Test**: Verify that registry is removed
+4. **Removal Test** : Verify that registry is removed
    - Active registry removed
    - Deployment registry removed
    - Supervision registry removed
 
-5. **Immutability Test**: Verify that archive is immutable
+5. **Immutability Test** : Verify that archive is immutable
    - Archive stored in blockchain
    - Permanent access guaranteed
    - Integrity verifiable
 
-6. **Accessibility Test**: Verify that archive is accessible
+6. **Accessibility Test** : Verify that archive is accessible
    - Archive accessible indefinitely
    - Audit possible
    - Complete history preserved
 
-7. **Notification Test**: Verify that notifications are sent
+7. **Notification Test** : Verify that notifications are sent
    - Authority notification < 24 hours
    - Stakeholder notification
    - Public registry accessible
 
-8. **Timeline Test**: Verify that total timeline < 10 days
+8. **Timeline Test** : Verify that total timeline < 10 days
    - Request to approval : < 5 days
    - Approval to archival : < 2 days
    - Archival to destruction : < 1 day
    - Destruction to removal : < 1 day
    - Removal to confirmation : < 1 day
 
-**Frequency**: At each end-of-life, complete annual audit
+**Frequency** : At each end-of-life, complete annual audit
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Severity | Sanction | Timeline |
 |-----------|----------|----------|----------|
-| End-of-life without approval | Critical | Immediate revocation + 35% annual revenue fine | Immediate |
-| Incomplete archival | Critical | Immediate revocation + 40% annual revenue fine | Immediate |
+| End-of-life without approval | Critical | Immediate revocation + 35% CA fine | Immediate |
+| Incomplete archival | Critical | Immediate revocation + 40% CA fine | Immediate |
 | Keys not destroyed | Critical | License revocation | Immediate |
-| Registry not removed | High | 25% annual revenue fine | 7 days |
+| Registry not removed | High | 25% CA fine | 7 days |
 | Archive not immutable | Critical | License revocation | Immediate |
 | Archive inaccessible | Critical | License revocation | Immediate |
-| Timeline exceeded | Medium | 15% annual revenue fine | 14 days |
-| Missing notification | Medium | 12% annual revenue fine | 14 days |
+| Timeline exceeded | Medium | 15% CA fine | 14 days |
+| Missing notification | Medium | 12% CA fine | 14 days |
 | Integrity compromised | Critical | Immediate revocation | Immediate |
 | Recurrence (2nd violation) | Critical | 1-year ban | Immediate |
 | Recurrence (3rd violation) | Critical | Permanent ban | Immediate |
@@ -666,18 +666,18 @@ mod tests {
 
 ## 6. ENTRY INTO FORCE
 
-**Entry into force date**: January 1, 2027
+**Entry into force date** : January 1, 2027
 
 **Compliance timeline** :
-- **New agents**: Mandatory compliance upon deployment (before January 1, 2027)
-- **Existing agents**: Mandatory compliance before January 1, 2028
-- **Critical agents**: Mandatory compliance before July 1, 2027
+- **New agents** : Mandatory compliance upon deployment (before January 1, 2027)
+- **Existing agents** : Mandatory compliance before January 1, 2028
+- **Critical agents** : Mandatory compliance before July 1, 2027
 
 **Transitional provisions** :
-- **Phase 1 (0-3 months)**: Implementation of 2-level approval process
-- **Phase 2 (3-6 months)**: Implementation of immutable archival (blockchain)
-- **Phase 3 (6-9 months)**: Implementation of secure destruction
-- **Phase 4 (9-12 months)**: Complete compliance
+- **Phase 1 (0-3 months)** : Implementation of 2-level approval process
+- **Phase 2 (3-6 months)** : Implementation of immutable archival (blockchain)
+- **Phase 3 (6-9 months)** : Implementation of secure destruction
+- **Phase 4 (9-12 months)** : Complete compliance
 
 **Immediate obligations** :
 - Establish end-of-life process before January 1, 2027
@@ -688,23 +688,23 @@ mod tests {
 
 ## 7. REFERENCES
 
-**Axiom Ψ-IV: CIRCULUS VITAE**
-- Foundation: Complete lifecycle of autonomous agent
-- Principles: Controlled end-of-life, immutable archival, secure destruction
+**Axiom Ψ-IV : CIRCULUS VITAE**
+- Foundation : Complete lifecycle of autonomous agent
+- Principles : Controlled end-of-life, immutable archival, secure destruction
 
 **Related articles** :
-- Article IV.4.1: Creation and Initialization
-- Article IV.4.2: Production Deployment
-- Article IV.4.3: Continuous Operation
-- Article IV.4.4: Maintenance and Updates
-- Article II.2.7: Immutable Logging
+- Article IV.4.1 : Creation and Initialization
+- Article IV.4.2 : Production Deployment
+- Article IV.4.3 : Continuous Operation
+- Article IV.4.4 : Maintenance and Updates
+- Article II.2.7 : Immutable Logging
 
 **External references** :
-- The Cybernetic Criterion.md: Principles of immutable archival
-- ISO 27001: Information security management
-- ISO 27035: Information security incident management
-- NIST Cybersecurity Framework: Risk management
-- GDPR: Right to be forgotten and data retention
+- The Cybernetic Criterion.md : Principles of immutable archival
+- ISO 27001 : Information security management
+- ISO 27035 : Information security incident management
+- NIST Cybersecurity Framework : Risk management
+- GDPR : Right to be forgotten and data retention
 
 
 ---

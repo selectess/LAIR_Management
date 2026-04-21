@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - equitable-representation
-  - representation-equity
-  - fair-representation
-  - representation-balance
-  - representation-fairness
+keywords:
+  - equitable representation
+  - representation equity
+  - fair representation
+  - representation balance
+  - representation fairness
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -162,13 +163,13 @@ class EquitableRepresentationManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| Inequitable representation | 70% annual revenue fine |
-| Disproportional balance | 65% annual revenue fine |
-| Underrepresented excluded | 75% annual revenue fine |
-| Equity not monitored | 55% annual revenue fine |
-| Adjustments not made | 60% annual revenue fine |
+| Inequitable representation | 70% CA fine |
+| Disproportional balance | 65% CA fine |
+| Underrepresented excluded | 75% CA fine |
+| Equity not monitored | 55% CA fine |
+| Adjustments not made | 60% CA fine |
 | Invalid signature | Immediate revocation |
-| Discrimination in representation | Immediate revocation + 85% annual revenue |
+| Discrimination in representation | Immediate revocation + 85% CA |
 
 ---
 
@@ -187,7 +188,4 @@ class EquitableRepresentationManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

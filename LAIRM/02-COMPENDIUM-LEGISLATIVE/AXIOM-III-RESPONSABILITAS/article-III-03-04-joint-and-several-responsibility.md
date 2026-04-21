@@ -321,7 +321,3 @@ impl JointLiabilityManager {
 
 **Next Review**: January 2027
 
-
----
-
-**Next review**: June 2026

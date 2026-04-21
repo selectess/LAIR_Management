@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - cognitive-monitoring
-  - health-monitoring
-  - safety-monitoring
-  - adverse-effect-detection
+keywords:
+  - cognitive monitoring
+  - health monitoring
+  - safety monitoring
+  - adverse effect detection
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -340,12 +341,12 @@ impl CognitiveMonitoringManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No monitoring | 85% annual revenue fine |
-| Monitoring downtime | 70% annual revenue fine |
-| Adverse effect not detected | 80% annual revenue fine |
-| Monitoring data breached | 90% annual revenue fine |
-| Invasive monitoring | 75% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No monitoring | 85% CA fine |
+| Monitoring downtime | 70% CA fine |
+| Adverse effect not detected | 80% CA fine |
+| Monitoring data breached | 90% CA fine |
+| Invasive monitoring | 75% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -387,7 +388,4 @@ impl CognitiveMonitoringManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

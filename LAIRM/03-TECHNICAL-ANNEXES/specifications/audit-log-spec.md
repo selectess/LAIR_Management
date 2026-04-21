@@ -6,30 +6,30 @@ last_updated: 2026-03-30
 last_review: 2026-04-03
 Status: Final
 Version: Initiation
-axiom: VI
+Axiom: VI
 license: CC-BY-SA-4.0
 ---
 
-# IMMUTABLE AUDIT LOG SPECIFICATION
-## Blockchain-like Audit Trail for LAIRM
+# SPÉCIFICATION DES LOGS D'AUDIT IMMUABLES
+## Audit Trail Blockchain-like pour LAIRM
 
 ---
 
-## 📋 Overview
+## 📋 Vue d'ensemble
 
-The immutable audit log specification implements **Axiom VI (Auditum)** by providing a system for recording agent actions that is immutable, verifiable, and decentralized.
+La spécification des logs d'audit immuables implémente l'**Axiom VI (Auditum)** en fournissant un système d'enregistrement des actions d'agents qui est immuable, vérifiable et décentralisé.
 
-### Objectives
-- ✅ Log immutability
-- ✅ Cryptographic verification
-- ✅ Complete traceability
-- ✅ LAIRM axiom compliance
+### Objectifs
+- ✅ Immuabilité des logs
+- ✅ Vérification cryptographique
+- ✅ Traçabilité complète
+- ✅ Conformité aux axiomes LAIRM
 
 ---
 
-## 🔗 Blockchain-like Architecture
+## 🔗 Architecture Blockchain-like
 
-### Audit Chain
+### Chaîne d'Audit
 
 ```
 ┌─────────────────┐
@@ -41,7 +41,7 @@ The immutable audit log specification implements **Axiom VI (Auditum)** by provi
 │  - Signature    │
 └────────┬────────┘
          │
-         ↓ (previous block hash)
+         ↓ (hash du bloc précédent)
 ┌─────────────────┐
 │  Audit Entry 2  │
 │  - Agent ID     │
@@ -51,7 +51,7 @@ The immutable audit log specification implements **Axiom VI (Auditum)** by provi
 │  - Signature    │
 └────────┬────────┘
          │
-         ↓ (previous block hash)
+         ↓ (hash du bloc précédent)
 ┌─────────────────┐
 │  Audit Entry 3  │
 │  - Agent ID     │
@@ -62,17 +62,17 @@ The immutable audit log specification implements **Axiom VI (Auditum)** by provi
 └─────────────────┘
 ```
 
-### Components
+### Composants
 
-1. **Audit Entry** - Record of an action
-2. **Hash Chain** - Chain of hashes for immutability
-3. **Signature** - Digital signature of each entry
-4. **Timestamp** - Immutable timestamp
-5. **Verification** - Integrity verification
+1. **Audit Entry** - Enregistrement d'une action
+2. **Hash Chain** - Chaîne de hashes pour immuabilité
+3. **Signature** - Signature numérique de chaque entrée
+4. **Timestamp** - Horodatage immuable
+5. **Verification** - Vérification d'intégrité
 
 ---
 
-## 📝 Audit Entry Format
+## 📝 Format des Entrées d'Audit
 
 ### Structure
 
@@ -94,7 +94,7 @@ The immutable audit log specification implements **Axiom VI (Auditum)** by provi
     "error": null
   },
   "compliance": {
-    "axioms": ["I", "II", "III", "V", "VI"],
+    "axiomes": ["I", "II", "III", "V", "VI"],
     "verified": true,
     "score": 98
   },
@@ -119,16 +119,16 @@ The immutable audit log specification implements **Axiom VI (Auditum)** by provi
 
 ---
 
-## 🔐 Immutability
+## 🔐 Immuabilité
 
-### Hash Chain
+### Chaîne de Hashes
 
 ```python
 from lairm_audit import AuditLogger
 
 logger = AuditLogger()
 
-# Log an action
+# Enregistrer une action
 entry = logger.log_action(
     agent_id="agent-001",
     action_type="execute",
@@ -137,72 +137,72 @@ entry = logger.log_action(
     result="success"
 )
 
-# Verify integrity
+# Vérifier l'intégrité
 is_valid = logger.verify_integrity(entry)
-print(f"Integrity verified: {is_valid}")
+print(f"Intégrité vérifiée: {is_valid}")
 
-# Verify complete chain
+# Vérifier la chaîne complète
 chain_valid = logger.verify_chain()
-print(f"Chain valid: {chain_valid}")
+print(f"Chaîne valide: {chain_valid}")
 ```
 
-### Integrity Verification
+### Vérification d'Intégrité
 
 ```python
-# Verify a specific entry
+# Vérifier une entrée spécifique
 entry = logger.get_entry(entry_id)
 
-# Verify the hash
+# Vérifier le hash
 if entry.current_hash == hash(entry.data):
-    print("Hash valid")
+    print("Hash valide")
 else:
-    print("Hash invalid - Tampering detected!")
+    print("Hash invalide - Tampering détecté!")
 
-# Verify the signature
+# Vérifier la signature
 if logger.verify_signature(entry):
-    print("Signature valid")
+    print("Signature valide")
 else:
-    print("Signature invalid")
+    print("Signature invalide")
 ```
 
 ---
 
-## 📊 LAIRM Compliance
+## 📊 Conformité LAIRM
 
 ### Axiom VI (Auditum)
-- ✅ Complete audit trail
-- ✅ Guaranteed immutability
-- ✅ Cryptographic verification
-- ✅ Complete traceability
+- ✅ Audit trail complet
+- ✅ Immuabilité garantie
+- ✅ Vérification cryptographique
+- ✅ Traçabilité complète
 
 ### Axiom II (Identitas)
-- ✅ Unique identification of each action
-- ✅ Mandatory digital signature
-- ✅ Agent traceability
+- ✅ Identification unique de chaque action
+- ✅ Signature numérique obligatoire
+- ✅ Traçabilité de l'agent
 
 ### Axiom I (Suprematia)
-- ✅ Human supervision possible
-- ✅ Audit trail for control
-- ✅ Anomaly detection
+- ✅ Supervision humaine possible
+- ✅ Audit trail pour contrôle
+- ✅ Détection d'anomalies
 
 ---
 
-## 🚀 Implementation
+## 🚀 Implémentation
 
-### Audit Logger
+### Logger d'Audit
 
 ```python
 from lairm_audit import AuditLogger, AuditStorage
 
-# Create logger with decentralized storage
+# Créer un logger avec stockage décentralisé
 logger = AuditLogger(
     storage=AuditStorage(
-        backend="ipfs",  # or "ethereum", "solana"
+        backend="ipfs",  # ou "ethereum", "solana"
         replication_factor=3
     )
 )
 
-# Log an action
+# Enregistrer une action
 entry = logger.log_action(
     agent_id="agent-001",
     action_type="execute",
@@ -211,55 +211,55 @@ entry = logger.log_action(
     result="success"
 )
 
-print(f"Entry logged: {entry.entry_id}")
+print(f"Entrée enregistrée: {entry.entry_id}")
 ```
 
-### Audit Query
+### Requête d'Audit
 
 ```python
-# Retrieve agent history
+# Récupérer l'historique d'un agent
 history = logger.get_agent_history(
     agent_id="agent-001",
     start_time="2026-03-30T00:00:00Z",
     end_time="2026-03-30T23:59:59Z"
 )
 
-# Filter by action type
+# Filtrer par type d'action
 executions = [e for e in history if e.action.type == "execute"]
 
-# Analyze results
+# Analyser les résultats
 successes = len([e for e in executions if e.action.result == "success"])
 failures = len([e for e in executions if e.action.result == "failure"])
 
-print(f"Successes: {successes}, Failures: {failures}")
+print(f"Succès: {successes}, Échecs: {failures}")
 ```
 
 ---
 
 ## 📈 Performance
 
-### Latency
-- Logging: < 10ms
-- Verification: < 50ms
-- Query: < 100ms
+### Latence
+- Enregistrement: < 10ms
+- Vérification: < 50ms
+- Requête: < 100ms
 
-### Capacity
-- Entries per second: 100000+
-- Storage per entry: ~1KB
-- Retention: Unlimited (immutable)
+### Capacité
+- Entrées par seconde: 100000+
+- Stockage par entrée: ~1KB
+- Rétention: Illimitée (immuable)
 
 ---
 
-## 💾 Decentralized Storage
+## 💾 Stockage Décentralisé
 
 ### Options
 
-1. **IPFS** - Distributed storage
-2. **Ethereum** - Public blockchain
-3. **Solana** - High-performance blockchain
-4. **Hybrid** - Combination of multiple
+1. **IPFS** - Stockage distribué
+2. **Ethereum** - Blockchain publique
+3. **Solana** - Blockchain haute performance
+4. **Hybrid** - Combinaison de plusieurs
 
-### IPFS Example
+### Exemple IPFS
 
 ```python
 from lairm_audit import IPFSAuditStorage
@@ -269,78 +269,80 @@ storage = IPFSAuditStorage(
     replication_factor=3
 )
 
-# Store an entry
+# Enregistrer une entrée
 cid = storage.store(entry)
-print(f"Stored on IPFS: {cid}")
+print(f"Stocké sur IPFS: {cid}")
 
-# Retrieve an entry
+# Récupérer une entrée
 retrieved = storage.retrieve(cid)
 ```
 
 ---
 
-## 🔍 Audit Analysis
+## 🔍 Analyse d'Audit
 
-### Anomaly Detection
+### Détection d'Anomalies
 
 ```python
 from lairm_audit import AuditAnalyzer
 
 analyzer = AuditAnalyzer()
 
-# Analyze patterns
+# Analyser les patterns
 anomalies = analyzer.detect_anomalies(
     agent_id="agent-001",
-    window_size=3600  # 1 hour
+    window_size=3600  # 1 heure
 )
 
 for anomaly in anomalies:
-    print(f"Anomaly detected: {anomaly.type}")
+    print(f"Anomalie détectée: {anomaly.type}")
     print(f"  - Timestamp: {anomaly.timestamp}")
-    print(f"  - Confidence: {anomaly.confidence}")
+    print(f"  - Confiance: {anomaly.confidence}")
 ```
 
-### Audit Reports
+### Rapports d'Audit
 
 ```python
-# Generate a report
+# Générer un rapport
 report = analyzer.generate_report(
     agent_id="agent-001",
     start_time="2026-03-01T00:00:00Z",
     end_time="2026-03-31T23:59:59Z"
 )
 
-print(f"Total actions: {report.total_actions}")
-print(f"Success rate: {report.success_rate}%")
-print(f"Anomalies detected: {len(report.anomalies)}")
+print(f"Total d'actions: {report.total_actions}")
+print(f"Taux de succès: {report.success_rate}%")
+print(f"Anomalies détectées: {len(report.anomalies)}")
 ```
 
 ---
 
 ## 🔄 Versioning
 
-### Version 1.0.0 (Current)
-- ✅ Hash chain
-- ✅ Digital signature
-- ✅ IPFS storage
-- ✅ LAIRM compliance
+### Version 1.0.0 (Actuelle)
+- ✅ Chaîne de hashes
+- ✅ Signature numérique
+- ✅ Stockage IPFS
+- ✅ Conformité LAIRM
 
-### Version 1.1.0 (Planned)
+### Version 1.1.0 (Planifiée)
 - ⏳ Compression
 - ⏳ Sharding
-- ⏳ Advanced analysis
+- ⏳ Analyse avancée
 
 ---
 
-## 📚 References
+## 📚 Références
 
-- [Axiom VI - Audit](../../02-COMPENDIUM-LEGISLATIVE/Axiom-VI-AUDITUM/)
-- [Axiom II - Identitas](../../02-COMPENDIUM-LEGISLATIVE/Axiom-II-IDENTITAS/)
+- [Axiom VI - Audit](../../02-COMPENDIUM-LEGISLATIF/Axiom-VI-AUDITUM/)
+- [Axiom II - Identitas](../../02-COMPENDIUM-LEGISLATIF/Axiom-II-IDENTITAS/)
 - [Agent Passport Schema](../schemas/agent-passport-schema.json)
 - [MCP Protocol Specification](./mcp-protocol-spec.md)
 
 ---
 
-**Date of Creation**: 2024-03-18  
+**Date of Creation**: 2025-03-18  
+**Last Updated**: 2026-03-30  
 **Founder**: Mehdi Wahbi
 
+**Last Reviewed**: April 3, 2026

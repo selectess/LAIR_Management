@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - abuse-detection
-  - misuse-detection
-  - anomaly-detection
-  - pattern-analysis
-  - detection-systems
+keywords:
+  - abuse detection
+  - misuse detection
+  - anomaly detection
+  - pattern analysis
+  - detection systems
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -238,10 +239,10 @@ impl AbuseDetectionManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Accuracy < 95% | 70% annual revenue fine |
-| False positive > 5% | 65% annual revenue fine |
-| No detection | 75% annual revenue fine |
-| Reporting delayed > 30 min | 60% annual revenue fine |
+| Accuracy < 95% | 70% CA fine |
+| False positive > 5% | 65% CA fine |
+| No detection | 75% CA fine |
+| Reporting delayed > 30 min | 60% CA fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -261,7 +262,4 @@ impl AbuseDetectionManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

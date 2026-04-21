@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - end-of-mandate
-  - mandate-termination
-  - enhancement-discontinuation
-  - mandate-conclusion
+keywords:
+  - end of mandate
+  - mandate termination
+  - enhancement discontinuation
+  - mandate conclusion
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -54,7 +55,7 @@ Enhancement mandate termination ensures periodic review and renewal. Pre-expirat
 - Transparency
 - Accountability
 - Oversight
-- Continuousity assurance
+- Continuity assurance
 
 **Legal Justification**:
 - Periodic review assurance
@@ -64,7 +65,7 @@ Enhancement mandate termination ensures periodic review and renewal. Pre-expirat
 - Regulatory compliance
 - Ethical responsibility
 - Liability management
-- Continuousity assurance
+- Continuity assurance
 
 ---
 
@@ -338,12 +339,12 @@ impl EnhancementMandateTerminationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No end date | 80% annual revenue fine |
-| No pre-expiration review | 75% annual revenue fine |
-| No renewal/termination decision | 75% annual revenue fine |
-| Termination not documented | 70% annual revenue fine |
-| Termination not transparent | 80% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No end date | 80% CA fine |
+| No pre-expiration review | 75% CA fine |
+| No renewal/termination decision | 75% CA fine |
+| Termination not documented | 70% CA fine |
+| Termination not transparent | 80% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -385,7 +386,4 @@ impl EnhancementMandateTerminationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

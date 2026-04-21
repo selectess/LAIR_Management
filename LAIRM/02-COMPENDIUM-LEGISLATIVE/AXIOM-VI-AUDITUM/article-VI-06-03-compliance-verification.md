@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - compliance-verification
-  - standards-verification
-  - LAIRM-framework
-  - systematic-verification
-  - non-conformity-correction
+keywords:
+  - compliance verification
+  - standards verification
+  - LAIRM framework
+  - systematic verification
+  - non-conformity correction
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -465,13 +466,13 @@ impl ComplianceVerificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No verification | Immediate revocation + 60% annual revenue |
-| Incomplete coverage | 50% annual revenue fine |
-| Missing documentation | 40% annual revenue fine |
-| Non-conformity not corrected | 45% annual revenue fine |
-| Correction deadline missed | 35% annual revenue fine |
-| Report not public | 30% annual revenue fine |
-| Falsified report | Immediate revocation + 70% annual revenue |
+| No verification | Immediate revocation + 60% CA |
+| Incomplete coverage | 50% CA fine |
+| Missing documentation | 40% CA fine |
+| Non-conformity not corrected | 45% CA fine |
+| Correction deadline missed | 35% CA fine |
+| Report not public | 30% CA fine |
+| Falsified report | Immediate revocation + 70% CA |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -513,7 +514,4 @@ impl ComplianceVerificationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

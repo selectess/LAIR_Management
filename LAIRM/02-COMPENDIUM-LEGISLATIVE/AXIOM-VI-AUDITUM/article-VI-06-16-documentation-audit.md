@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - documentation-audit
-  - documentation-completeness
-  - documentation-accuracy
-  - documentation-accessibility
-  - documentation-versioning
+keywords:
+  - documentation audit
+  - documentation completeness
+  - documentation accuracy
+  - documentation accessibility
+  - documentation versioning
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -392,13 +393,13 @@ impl DocumentationAuditManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Completeness < 95% | 45% annual revenue fine |
-| Accuracy < 95% | 40% annual revenue fine |
-| Accessibility < 95% | 35% annual revenue fine |
-| Documentation > 30 days old | 30% annual revenue fine |
-| No version control | 35% annual revenue fine |
+| Completeness < 95% | 45% CA fine |
+| Accuracy < 95% | 40% CA fine |
+| Accessibility < 95% | 35% CA fine |
+| Documentation > 30 days old | 30% CA fine |
+| No version control | 35% CA fine |
 | Invalid signature | Immediate revocation |
-| Falsified documentation | Immediate revocation + 60% annual revenue |
+| Falsified documentation | Immediate revocation + 60% CA |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -440,7 +441,4 @@ impl DocumentationAuditManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

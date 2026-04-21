@@ -215,10 +215,10 @@ Audit trail MUST include:
 ### 4.1 Use Case: TradeBot3000 Audit Trail (Q1 2026)
 
 **Immutable Logs**:
-1. AUDIT-20260115100000-1: Action initiated ($45M)
-2. AUDIT-20260115100001-2: Position opened
-3. AUDIT-20260115100002-3: Unauthorized action detected
-4. AUDIT-20260115100003-4: Audit triggered
+1. AUDIT-20260115100000-1 : Action initiated ($45M)
+2. AUDIT-20260115100001-2 : Position opened
+3. AUDIT-20260115100002-3 : Unauthorized action detected
+4. AUDIT-20260115100003-4 : Audit triggered
 
 **Verification**:
 - ✓ All actions recorded
@@ -326,11 +326,11 @@ impl AuditTrail {
 | Violation | Sanction | Deadline |
 |-----------|----------|----------|
 | Missing action | Immediate stop | Immediate |
-| Modified entry | License revocation + 50% annual revenue fine | 7 days |
-| Broken chain | License revocation + 60% annual revenue fine | 7 days |
-| Invalid signature | License revocation + 45% annual revenue fine | 7 days |
-| Insufficient retention | 20% annual revenue fine | 14 days |
-| Access denied | 25% annual revenue fine | 14 days |
+| Modified entry | License revocation + 50% CA fine | 7 days |
+| Broken chain | License revocation + 60% CA fine | 7 days |
+| Invalid signature | License revocation + 45% CA fine | 7 days |
+| Insufficient retention | 20% CA fine | 14 days |
+| Access denied | 25% CA fine | 14 days |
 | Recurrence | Permanent ban | Immediate |
 
 ---
@@ -366,14 +366,14 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II: IDENTITAS AGENTICA
-- Article II.2.1: Agent Passport
-- Article II.2.6: Complete Traceability
-- The Cybernetic Criterion: Chapters 0-5
+- Axiom Ψ-II : IDENTITAS AGENTICA
+- Article II.2.1 : Agent Passport
+- Article II.2.6 : Complete Traceability
+- The Cybernetic Criterion : Chapters 0-5
 
 ---
 
-**Next Review**: January 2027
+**Next Review** : January 2027
 
 
 ---

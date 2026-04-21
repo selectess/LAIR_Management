@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - reliability-audit
-  - uptime-verification
-  - error-rate-monitoring
-  - recovery-time-assessment
-  - redundancy-verification
+keywords:
+  - reliability audit
+  - uptime verification
+  - error rate monitoring
+  - recovery time assessment
+  - redundancy verification
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -417,13 +418,13 @@ impl ReliabilityAuditManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Uptime < 99.9% | 45% annual revenue fine |
-| Error rate > 0.1% | 40% annual revenue fine |
-| Recovery time > 15 min | 35% annual revenue fine |
-| Redundancy < N+1 | 50% annual revenue fine |
-| Missing documentation | 30% annual revenue fine |
+| Uptime < 99.9% | 45% CA fine |
+| Error rate > 0.1% | 40% CA fine |
+| Recovery time > 15 min | 35% CA fine |
+| Redundancy < N+1 | 50% CA fine |
+| Missing documentation | 30% CA fine |
 | Invalid signature | Immediate revocation |
-| Falsified metrics | Immediate revocation + 65% annual revenue |
+| Falsified metrics | Immediate revocation + 65% CA |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -465,7 +466,4 @@ impl ReliabilityAuditManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

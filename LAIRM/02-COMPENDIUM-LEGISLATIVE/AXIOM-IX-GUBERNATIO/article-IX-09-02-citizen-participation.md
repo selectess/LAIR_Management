@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - citizen-participation
-  - stakeholder-engagement
-  - public-involvement
-  - democratic-participation
-  - community-input
+keywords:
+  - citizen participation
+  - stakeholder engagement
+  - public involvement
+  - democratic participation
+  - community input
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -408,13 +409,13 @@ impl CitizenParticipationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No participation channels | 60% annual revenue fine |
-| Inaccessible participation | 55% annual revenue fine |
-| No feedback mechanism | 50% annual revenue fine |
-| Feedback not responded | 45% annual revenue fine |
-| Poor documentation | 40% annual revenue fine |
+| No participation channels | 60% CA fine |
+| Inaccessible participation | 55% CA fine |
+| No feedback mechanism | 50% CA fine |
+| Feedback not responded | 45% CA fine |
+| Poor documentation | 40% CA fine |
 | Invalid signature | Immediate revocation |
-| Exclusion of stakeholders | Immediate revocation + 70% annual revenue |
+| Exclusion of stakeholders | Immediate revocation + 70% CA |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -456,7 +457,4 @@ impl CitizenParticipationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

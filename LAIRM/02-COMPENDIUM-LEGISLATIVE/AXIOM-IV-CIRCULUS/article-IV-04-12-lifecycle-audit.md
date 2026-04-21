@@ -358,7 +358,7 @@ L'audit MUST verify :
              ▼
 ┌──────────────────────────────────────┐
 │   Verification de Creation           │
-|   (Identity, Configuration)          |
+│   (Identité, Configuration)          │
 └────────────┬─────────────────────────┘
              │
              ▼
@@ -370,18 +370,18 @@ L'audit MUST verify :
              ▼
 ┌──────────────────────────────────────┐
 │   Verification d'Operations           │
-|   (Continuity, Incidents)            |
+│   (Continuousité, Incidents)            │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
 │   Verification de Maintenance        │
-|   (Updates, Tests)                   |
+│   (Mises à jour, Tests)              │
 └────────────┬─────────────────────────┘
              │
              ▼
 ┌──────────────────────────────────────┐
-|   Results Compilation                |
+│   Compilation des Résultats          │
 │   (Score de compliance)              │
 └────────────┬─────────────────────────┘
              │
@@ -394,11 +394,11 @@ L'audit MUST verify :
 
 ### 4.2 Registre d'Audit
 
-Each audit MUST be recorded with:
+Chaque audit MUST be enregistré avec :
 - Audit ID
 - Agent ID
 - type d'audit
-- Results
+- Résultats
 - Score de compliance
 - Signature
 
@@ -409,9 +409,9 @@ Each audit MUST be recorded with:
 ### 5.1 Compliance Verification
 
 **Mandatory Tests** :
-1. Verify audit scheduled
-2. Verify audit executed
-3. Verify results documented
+1. Verify audit planifié
+2. Verify audit exécuté
+3. Verify results documentés
 4. Verify signature
 5. Verify corrections
 
@@ -423,7 +423,7 @@ Each audit MUST be recorded with:
 |-----------|----------|
 | Pas d'audit | Immediate revocation |
 | Audit incomplet | Fine 30% annual revenue |
-| Results non documented | Fine 25% annual revenue |
+| Résultats non documentés | Fine 25% annual revenue |
 | Missing signature | Fine 20% annual revenue |
 | Corrections non madees | Fine 25% annual revenue |
 | Recurrence | Permanent ban |
@@ -449,7 +449,7 @@ Each audit MUST be recorded with:
 
 **Transitional Provisions** :
 - Existing agents: Premier audit avant 30 juin 2027
-- Auditeurs certifieds before January 1, 2027
+- Auditeurs certifiés before January 1, 2027
 
 ---
 
@@ -458,7 +458,7 @@ Each audit MUST be recorded with:
 - Axiom Ψ-IV: CIRCULUS VITAE
 - Article IV.4.1: Creation et Initialisation
 - Article IV.4.11: Documentation du Cycle de Vie
-- Article VI.6.1: General Audit
+- Article VI.6.1: Audit Général
 
 ---
 

@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - cognitive-sovereignty
-  - cognitive-autonomy
-  - brain-computer-interfaces
-  - neural-augmentation
-  - cognitive-rights
+keywords:
+  - cognitive sovereignty
+  - cognitive autonomy
+  - brain-computer interfaces
+  - neural augmentation
+  - cognitive rights
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -388,13 +389,13 @@ impl CognitiveSovereigntyManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No cognitive sovereignty | 80% annual revenue fine |
-| Coercive enhancement | 90% annual revenue fine + license revocation |
-| Inadequate consent | 75% annual revenue fine |
-| Risks not disclosed | 70% annual revenue fine |
-| Reversibility not provided | 85% annual revenue fine |
-| Autonomy violated | 80% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No cognitive sovereignty | 80% CA fine |
+| Coercive enhancement | 90% CA fine + license revocation |
+| Inadequate consent | 75% CA fine |
+| Risks not disclosed | 70% CA fine |
+| Reversibility not provided | 85% CA fine |
+| Autonomy violated | 80% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -436,7 +437,4 @@ impl CognitiveSovereigntyManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

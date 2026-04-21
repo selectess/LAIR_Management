@@ -697,7 +697,4 @@ class InterventionNotActiveError(Exception):
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

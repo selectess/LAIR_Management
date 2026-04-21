@@ -110,7 +110,7 @@ class VersioningManager:
         backup = self.create_Version_backup(agent_id, current_Version)
         
         try:
-            # Restoresr Version cible
+            # Restaurer Version cible
             agent = self.get_agent(agent_id)
             agent['state'] = target['state']
             agent['configuration'] = target['configuration']
@@ -120,7 +120,7 @@ class VersioningManager:
             self.log_rollback(agent_id, current_Version, target_Version)
             
         except Exception as e:
-            # Restoresr backup
+            # Restaurer backup
             self.restore_Version_backup(agent_id, backup)
             raise
         
@@ -202,18 +202,18 @@ Chaque Version MUST be recorded avec :
 | Violation | Sanction |
 |-----------|----------|
 | Versioning absent | Immediate revocation |
-| Missing traceability | Fine 25% annual revenue |
-| Immutability compromised | Fine 30% annual revenue |
+| Traçabilité manquante | Fine 25% annual revenue |
+| Immuabilité compromise | Fine 30% annual revenue |
 | Rollback impossible | Fine 20% annual revenue |
 | Missing documentation | Fine 15% annual revenue |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
 
-1. Verification at each version
+1. Verification à chaque Version
 2. Audit de traceability
 3. Test de rollback
-4. Verify immutability
+4. Verification d'immuabilité
 5. Rapport de Versioning
 
 ---
@@ -229,14 +229,14 @@ Chaque Version MUST be recorded avec :
 
 **Transitional Provisions** :
 - Existing agents: Audit de Versioning avant 30 juin 2027
-- Versioning system established before January 1, 2027
+- Système de Versioning établi before January 1, 2027
 
 ---
 
 ## RÉFÉRENCES
 
 - Axiom Ψ-IV: CIRCULUS VITAE
-- Article IV.4.4: Maintenance and Updates
+- Article IV.4.4: Maintenance et Mise à Jour
 - Article IV.4.6: Transition d'État
 - Article II.2.8: Versioning
 
@@ -249,14 +249,14 @@ Chaque Version MUST be recorded avec :
 
 **Axiom Ψ-IV: CIRCULUS VITAE**
 
-Versioning is essential for traceability and responsibility. Each version MUST be identified and traceable. Untested versions constitute a serious violation.
+Le Versioning est essentiel pour la traceability et la Responsibility. Chaque Version MUST be identifiée et traçable. Les Versions non-testées constituent une violation grave.
 
 **Fundamental Principles**:
 - Versioning unique et immutable
-- Guaranteed atomicity (all-or-nothing)
+- Atomicité garantie (tout-ou-rien)
 - Complete traceability
 - Rollback possible et rapide (< 5 minutes)
-- Tests mandatorys (100% coverage)
+- Tests mandatorys (100% couverture)
 - Responsibility attribuable
 - Transparency publique
 
@@ -264,7 +264,7 @@ Versioning is essential for traceability and responsibility. Each version MUST b
 
 ## 3. TECHNICAL SPECIFICATION
 
-### 3.1 Versioning System
+### 3.1 Système de Versioning
 
 ```python
 class VersioningManager:
@@ -303,7 +303,7 @@ class VersioningManager:
         return test_results
     
     def deploy_Version(self, Version_id):
-        """Deploys a version"""
+        """Déploie une Version"""
         Version = self.get_Version(Version_id)
         
         if not Version['tested']:
@@ -318,7 +318,7 @@ class VersioningManager:
         """Effectue un rollback"""
         start_time = time.time()
         
-        # Restore previous version
+        # Restaurer Version antérieure
         self.restore_Version(agent_id, target_Version)
         
         rollback_time = time.time() - start_time
@@ -336,13 +336,13 @@ class VersioningManager:
 
 ### 3.2 Versioning Specifications
 
-| Metric | Requirement | Detail |
+| Métrique | Exigence | Détail |
 |----------|----------|--------|
 | Format | Semantic | major.minor.patch |
-| Atomicity | All-or-nothing | Automatic rollback |
+| Atomicité | Tout-ou-rien | Rollback automatique |
 | Rollback | < 5 minutes | Rapide et fiable |
-| Tests | 100% coverage | Unit, integration, security |
-| Traceability | Immuable | Blockchain |
+| Tests | 100% couverture | Unitaires, intégration, security |
+| Traçabilité | Immuable | Blockchain |
 | Signature | RSA-4096 | Immuable |
 | Audit trail | Immuable | Blockchain |
 | Notification | < 24 heures | Authorities et parties prenantes |
@@ -355,11 +355,11 @@ class VersioningManager:
 
 #### Case 1: TradeBot3000 - Version Mismatch (Q1 2026)
 - **Incident**: Version mismatch causing state inconsistency
-- **Loss** : $2.1M
+- **Perte** : $2.1M
 - **Resolution**: Atomic Versioning implemented
 - **Compensation** : $2.1M + 25% penalty
 
-#### Case 2: HealthBot - Failed Rollback (Q1 2026)
+#### Case 2: HealthBot - Rollback Échoué (Q1 2026)
 - **Incident**: Rollback failure causing data corruption
 - **Dommages** : €1.8M
 - **Resolution**: Rollback < 5 minutes implemented
@@ -368,7 +368,7 @@ class VersioningManager:
 #### Case 3: SupplyChainX - Non-Atomic Update (Q1 2026)
 - **Incident**: Non-atomic Version update causing partial state
 - **Dommages** : €900k
-- **Resolution**: Guaranteed atomicity
+- **Resolution**: Atomicité garantie
 - **Compensation** : €900k + 20% penalty
 
 ### 4.2 Reference Code (Rust)
@@ -474,8 +474,8 @@ mod tests {
 
 **Mandatory Tests** :
 1. Verify Versioning unique
-2. Verify atomicity
-3. Verify tests completed
+2. Verify atomicité
+3. Verify tests complétés
 4. Verify rollback < 5 minutes
 5. Verify traceability
 6. Verify signature
@@ -488,10 +488,10 @@ mod tests {
 
 | Violation | Sanction |
 |-----------|----------|
-| Untested version | Immediate revocation |
+| Version non-testée | Immediate revocation |
 | Rollback > 5 minutes | Fine 20% annual revenue |
-| Atomicity compromised | Fine 25% annual revenue |
-| Traceability perdue | License revocation |
+| Atomicité compromise | Fine 25% annual revenue |
+| Traçabilité perdue | License revocation |
 | Invalid signature | Immediate revocation |
 | Missing audit trail | Fine 15% annual revenue |
 | Notification manquante | Fine 12% annual revenue |
@@ -514,12 +514,12 @@ mod tests {
 
 **Axiom Ψ-IV: CIRCULUS VITAE**
 - Foundation: Complete lifecycle
-- Principles: Unique versioning, atomicity, traceability
+- Principes: Versioning unique, atomicité, traceability
 
 **Articles connexes** :
-- Article IV.4.4: Maintenance and Updates
+- Article IV.4.4: Maintenance et Mise à Jour
 - Article IV.4.6: Transition d'État
-- Article IV.4.16: Rollback and Recovery
+- Article IV.4.16: Rollback et Récupération
 
 
 ---

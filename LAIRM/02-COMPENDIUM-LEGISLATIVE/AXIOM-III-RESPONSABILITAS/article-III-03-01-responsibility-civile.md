@@ -8,11 +8,11 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - responsibility
-  - civil
-  - damages
-  - compensation
-  - legality
+  - Responsibility
+  - Civil
+  - Damages
+  - Compensation
+  - Legality
 validations:
   legal: true
   technical: true
@@ -49,7 +49,7 @@ Every autonomous agent MUST be civilly responsible for all damages it causes. Ci
 
 Civil responsibility is the foundation of agent justice. Without civil responsibility, victims have no recourse. Civil responsibility ensures that each agent can be held responsible for its actions and that victims can be compensated.
 
-**Fundamental Principles**:
+**Fundamental Principles** :
 - Absolute responsibility (no exception)
 - Solidarity (creator + deployer)
 - Complete compensation (all damages)
@@ -152,13 +152,9 @@ class CivilLiabilityCalculator:
 
 ### 4.1 Use Case: TradeBot3000 ($45M)
 
-**Incident**: Unauthorized position of $45M
+**Incident** : Unauthorized position of $45M
 **Damages** : $2.3M actual loss
 **Compensation** : $2.3M + costs
 **Timeline** : 15 days
-**Next Review**: January 2027
+**Next Review** : January 2027
 
-
----
-
-**Next review**: June 2026

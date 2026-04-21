@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - appeal-mechanisms
-  - appeals-process
-  - dispute-resolution
-  - grievance-procedures
+keywords:
+  - appeal mechanisms
+  - appeals process
+  - dispute resolution
+  - grievance procedures
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -240,11 +241,11 @@ impl AppealMechanismManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No appeal mechanism | 81% annual revenue fine |
-| Denied appeal | 84% annual revenue fine |
-| Delayed decision | 83% annual revenue fine |
-| Missing documentation | 82% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No appeal mechanism | 81% CA fine |
+| Denied appeal | 84% CA fine |
+| Delayed decision | 83% CA fine |
+| Missing documentation | 82% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -259,7 +260,4 @@ impl AppealMechanismManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

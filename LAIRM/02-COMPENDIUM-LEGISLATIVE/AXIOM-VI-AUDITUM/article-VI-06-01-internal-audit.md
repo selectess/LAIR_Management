@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - internal-audit
+keywords:
+  - internal audit
   - verification
   - compliance
-  - audit-trail
+  - audit trail
   - remediation
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -407,13 +408,13 @@ impl InternalAuditManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No audit | Immediate revocation + 50% annual revenue |
-| Incomplete audit | 60-day suspension + 40% annual revenue |
-| Missing documentation | 35% annual revenue fine |
-| Remediation not completed | 30% annual revenue fine |
-| Falsified audit | Immediate revocation + 60% annual revenue |
+| No audit | Immediate revocation + 50% CA |
+| Incomplete audit | 60-day suspension + 40% CA |
+| Missing documentation | 35% CA fine |
+| Remediation not completed | 30% CA fine |
+| Falsified audit | Immediate revocation + 60% CA |
 | Invalid signature | Immediate revocation |
-| Non-independent auditor | Immediate revocation + 45% annual revenue |
+| Non-independent auditor | Immediate revocation + 45% CA |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -453,9 +454,6 @@ impl InternalAuditManager {
 
 ---
 
-**Status** : ✅ Final | **Validation**: Legal ✅ | Technical ✅ | Editorial ✅ | **Next Review**: January 2027
+**Status** : ✅ Final | **Validation** : Legal ✅ | Technical ✅ | Editorial ✅ | **Next Review** : January 2027
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

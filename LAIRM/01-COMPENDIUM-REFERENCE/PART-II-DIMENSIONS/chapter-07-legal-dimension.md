@@ -5,17 +5,17 @@ associated_axiom: Ψ-III RESPONSABILITAS CASCADE
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
   - liability
-  - legal-attribution
-  - cascade-responsibility
+  - legal attribution
+  - cascade responsibility
   - creator
   - deployer
   - supervisor
   - insurance
-  - legal-recourse
+  - legal recourse
 internal_references:
   - ../PART-I-FOUNDATIONS/chapter-05-legal-framework.md
   - ../PART-III-PARADIGMS/chapter-12-paradigm-responsibility.md
@@ -945,7 +945,4 @@ The legal architecture presented in this chapter provides the foundation for acc
 - **Legislative Corpus**: Articles implementing cascade liability
 
 ---
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

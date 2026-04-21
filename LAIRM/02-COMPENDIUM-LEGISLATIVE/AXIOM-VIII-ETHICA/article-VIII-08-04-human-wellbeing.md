@@ -1,25 +1,25 @@
 ---
-title: "Article VIII.8.4: Human Well-Being"
-axiom: Ψ-VIII
-article_number: VIII.8.4
+title: "Article VIII.8.4 : Human Well-Being"
+Axiom: Ψ-VIII
+numero: VIII.8.4
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - ethics
-  - well-Being
-  - human-Centered
+  - Ethics
+  - Well-Being
+  - Human-Centered
 validations:
-  legal: true
-  technical: true
-  editorial: true
+  Legal: true
+  Technical: true
+  Editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article VIII.8.4: Human Well-Being
-## Axiom Ψ-VIII: ETHICA
+# Article VIII.8.4 : Human Well-Being
+## Axiom Ψ-VIII : ETHICA
 
 ---
 
@@ -40,7 +40,7 @@ Every autonomous agent MUST prioritize human well-being in all decisions and act
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-VIII: ETHICA**
+**Axiom Ψ-VIII : ETHICA**
 
 Human well-being is the ultimate measure of ethical agent behavior. Autonomous agents MUST be designed and operated to enhance, not diminish, human well-being.
 
@@ -359,14 +359,11 @@ class HumanWellBeingManager:
 
 ## REFERENCES
 
-- Axiom Ψ-VIII: ETHICA
-- Chapter 17: Paradigm Ethics
+- Axiom Ψ-VIII : ETHICA
+- Chapter 17 : Paradigm Ethics
 
 ---
 
-**Next Review**: January 2027
+**Next Review** : January 2027
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

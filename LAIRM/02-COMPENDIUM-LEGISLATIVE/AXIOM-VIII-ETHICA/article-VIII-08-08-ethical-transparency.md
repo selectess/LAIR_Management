@@ -1,25 +1,25 @@
 ---
-title: "Article VIII.8.8: Ethical Transparency"
-axiom: Ψ-VIII
-article_number: VIII.8.8
+title: "Article VIII.8.8 : Ethical Transparency"
+Axiom: Ψ-VIII
+numero: VIII.8.8
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - ethics
-  - transparency
-  - accountability
+  - Ethics
+  - Transparency
+  - Accountability
 validations:
-  legal: true
-  technical: true
-  editorial: true
+  Legal: true
+  Technical: true
+  Editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article VIII.8.8: Ethical Transparency
-## Axiom Ψ-VIII: ETHICA
+# Article VIII.8.8 : Ethical Transparency
+## Axiom Ψ-VIII : ETHICA
 
 ---
 
@@ -40,7 +40,7 @@ Every autonomous agent MUST maintain complete transparency regarding ethical pri
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-VIII: ETHICA**
+**Axiom Ψ-VIII : ETHICA**
 
 Ethical transparency enables stakeholders to understand and evaluate agent behavior. Autonomous agents MUST be transparent about their ethical commitments.
 
@@ -286,14 +286,11 @@ class EthicalTransparencyManager:
 
 ## REFERENCES
 
-- Axiom Ψ-VIII: ETHICA
-- Chapter 17: Paradigm Ethics
+- Axiom Ψ-VIII : ETHICA
+- Chapter 17 : Paradigm Ethics
 
 ---
 
-**Next Review**: January 2027
+**Next Review** : January 2027
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

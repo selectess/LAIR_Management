@@ -8,10 +8,10 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - emergency-recovery
+  - emergency recovery
   - RTO
   - RPO
-  - disaster-recovery
+  - disaster recovery
   - resilience
 validations:
   legal: true
@@ -51,7 +51,7 @@ Every autonomous agent MUST have a documented and tested emergency recovery plan
 
 Emergency recovery is essential for resilience. It MUST be planned and tested to guarantee effectiveness in case of crisis. Recovery failures constitute a serious violation of Responsibility.
 
-**Fundamental Principles**:
+**Fundamental Principles** :
 - Rapid recovery (RTO < 1 hour)
 - Minimal data loss (RPO < 15 minutes)
 - Tested procedures (monthly)
@@ -91,23 +91,23 @@ class DisasterRecoveryManager:
         """Executes the recovery plan"""
         recovery_plan = self.get_recovery_plan(agent_id)
         
-        # Step 1: Stop failed instance
+        # Step 1 : Stop failed instance
         self.stop_failed_instance(agent_id)
         
-        # Step 2: Retrieve latest backup
+        # Step 2 : Retrieve latest backup
         backup = self.retrieve_latest_backup(agent_id)
         
-        # Step 3: Restore data
+        # Step 3 : Restore data
         self.restore_data(agent_id, backup)
         
-        # Step 4: Restart agent
+        # Step 4 : Restart agent
         self.restart_agent(agent_id)
         
-        # Step 5: Verify integrity
+        # Step 5 : Verify integrity
         if not self.verify_integrity(agent_id):
             raise ValueError("Integrity check failed")
         
-        # Step 6: Record recovery
+        # Step 6 : Record recovery
         self.log_recovery(agent_id, backup)
         
         return {'status': 'recovered', 'timestamp': datetime.utcnow().isoformat()}
@@ -148,10 +148,10 @@ class DisasterRecoveryManager:
 
 ### 3.3 Backup Strategies
 
-- **Continuous backup**: Real-time replication
-- **Hourly backup**: Backup every hour
-- **Daily backup**: Backup once per day
-- **Weekly backup**: Backup once per week
+- **Continuous backup** : Real-time replication
+- **Hourly backup** : Backup every hour
+- **Daily backup** : Backup once per day
+- **Weekly backup** : Backup once per week
 
 ---
 
@@ -225,17 +225,17 @@ Each recovery MUST be recorded with :
 4. Verify regular tests
 5. Verify automated procedures
 
-**Frequency**: Quarterly
+**Frequency** : Quarterly
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
 | No recovery plan | Immediate revocation |
-| RTO > 1 hour | 30% annual revenue fine |
-| RPO > 15 minutes | 25% annual revenue fine |
-| Tests not performed | 20% annual revenue fine |
-| Procedures not automated | 15% annual revenue fine |
+| RTO > 1 hour | 30% CA fine |
+| RPO > 15 minutes | 25% CA fine |
+| Tests not performed | 20% CA fine |
+| Procedures not automated | 15% CA fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -250,15 +250,15 @@ Each recovery MUST be recorded with :
 
 ## 6. ENTRY INTO FORCE
 
-**Entry into force date**: January 1, 2027
+**Entry into force date** : January 1, 2027
 
 **Compliance timeline** :
-- Critical agents: Mandatory compliance upon deployment
-- Important agents: Mandatory compliance before July 1, 2027
-- Other agents: Mandatory compliance before January 1, 2028
+- Critical agents : Mandatory compliance upon deployment
+- Important agents : Mandatory compliance before July 1, 2027
+- Other agents : Mandatory compliance before January 1, 2028
 
 **Transitional provisions** :
-- Existing agents: Recovery audit before June 30, 2027
+- Existing agents : Recovery audit before June 30, 2027
 - Backup infrastructure established before January 1, 2027
 
 ---
@@ -267,14 +267,10 @@ Each recovery MUST be recorded with :
 
 - Axiom Ψ-IV: CIRCULUS VITAE
 - Article IV.4.5: End of Life and Archival
-- Article IV.4.7: Service Continuousity
+- Article IV.4.7: Service Continuity
 - Article IV.4.9: Backup and Restoration
 
 ---
 
-**Status**: Draft
+**Status** : Draft
 
-
----
-
-**Next review**: June 2026

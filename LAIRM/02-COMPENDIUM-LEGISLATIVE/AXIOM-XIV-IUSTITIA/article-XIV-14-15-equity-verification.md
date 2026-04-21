@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - equity-verification
-  - verification-procedures
-  - fairness-verification
-  - compliance-verification
+keywords:
+  - equity verification
+  - verification procedures
+  - fairness verification
+  - compliance verification
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -235,11 +236,11 @@ impl VerificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No independent verification | 85% annual revenue fine |
-| Weak procedures | 82% annual revenue fine |
-| Results not published | 80% annual revenue fine |
-| Verification failure | 78% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No independent verification | 85% CA fine |
+| Weak procedures | 82% CA fine |
+| Results not published | 80% CA fine |
+| Verification failure | 78% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -254,7 +255,4 @@ impl VerificationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

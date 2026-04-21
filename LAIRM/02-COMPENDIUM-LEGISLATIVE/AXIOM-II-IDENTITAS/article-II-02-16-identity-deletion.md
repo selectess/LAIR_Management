@@ -41,11 +41,11 @@ Any autonomous agent MAY request deletion of its identity after end of life. Del
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II: IDENTITAS AGENTICA**
+**Axiom Ψ-II : IDENTITAS AGENTICA**
 
 Identity deletion respects the right to be forgotten while maintaining traceability for audit. It ensures sensitive data is protected after end of life.
 
-**Fundamental Principles**:
+**Fundamental Principles** :
 - Right to be forgotten
 - Complete archival
 - Maintained traceability
@@ -90,7 +90,7 @@ class IdentityDeletionManager:
             'reason': reason,
             'authority_id': authority_id,
             'requested_at': datetime.utcnow().isoformat() + 'Z',
-            'status': 'pending'
+            'Status': 'pending'
         }
         
         self.deletion_log.append(request)
@@ -158,7 +158,7 @@ class IdentityDeletionManager:
             'agent_id': request['agent_id'],
             'deleted_at': datetime.utcnow().isoformat() + 'Z',
             'archive_id': archive['archive_id'],
-            'status': 'completed'
+            'Status': 'completed'
         }
         
         # Delete agent
@@ -297,18 +297,18 @@ See Section 3.2 above.
 7. Encryption test
 8. Logging test
 
-**Frequency**: Quarterly minimum
+**Frequency** : Quarterly minimum
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Unauthorized deletion | License revocation, 45% annual revenue fine |
-| Lost archive | Immediate stop, 50% annual revenue fine |
-| Missing encryption | Immediate stop, 40% annual revenue fine |
-| Missing approval | Operation suspension, 30% annual revenue fine |
-| Lost history | Immediate stop, 55% annual revenue fine |
-| Recovery impossible | Immediate stop, 45% annual revenue fine |
+| Unauthorized deletion | License revocation, 45% CA fine |
+| Lost archive | Immediate stop, 50% CA fine |
+| Missing encryption | Immediate stop, 40% CA fine |
+| Missing approval | Operation suspension, 30% CA fine |
+| Lost history | Immediate stop, 55% CA fine |
+| Recovery impossible | Immediate stop, 45% CA fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -352,15 +352,15 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II: IDENTITAS AGENTICA
-- Article II.2.1: Agent Passport
-- Article II.2.12: Identity Revocation
-- Chapter 11: Paradigm of Agent Identity
-- Glossary: Deletion, Archival
+- Axiom Ψ-II : IDENTITAS AGENTICA
+- Article II.2.1 : Agent Passport
+- Article II.2.12 : Identity Revocation
+- Chapter 11 : Paradigm of Agent Identity
+- Glossary : Deletion, Archival
 
 ---
 
-**Next Review**: January 2027
+**Next Review** : January 2027
 
 
 ---

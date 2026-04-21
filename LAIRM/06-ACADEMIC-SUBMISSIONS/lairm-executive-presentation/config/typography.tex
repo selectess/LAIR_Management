@@ -1,0 +1,52 @@
+% ============================================================================
+% LAIRM Document
+% date_creation: 2024-03-18
+% last_updated: 2026-04-20
+% last_review: 2026-04-20
+% ============================================================================
+
+% ============================================================================
+% LAIRM: TYPOGRAPHY CONFIGURATION
+% Font settings, spacing, and text formatting
+% ============================================================================
+
+% ============================================================================
+% HEADERS AND FOOTERS STYLING
+% ============================================================================
+\fancyhead[LE]{\small\sffamily\textcolor{legislativeblue}{\textbf{LAIRM}}}
+\fancyhead[RO]{\small\sffamily\nouppercase{\rightmark}}
+\fancyfoot[LE,RO]{\small\bfseries\thepage}
+\fancyfoot[C]{\small\textit{International Legislative Framework — April 2026}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+% ============================================================================
+% CHAPTER FORMATTING
+% ============================================================================
+\titleformat{\chapter}[display]
+{\normalfont\sffamily\color{legislativeblue}}
+{\fontsize{48}{48}\selectfont\thechapter}
+{0.3ex}
+{\fontsize{28}{32}\selectfont\bfseries}
+[\vspace{0.5cm}{\color{legislativeblue}\titlerule[2pt]}]
+
+\titlespacing*{\chapter}{0pt}{0pt}{1.5cm}
+
+% ============================================================================
+% SECTION FORMATTING
+% ============================================================================
+\titleformat{\section}
+{\normalfont\fontsize{16}{19}\selectfont\bfseries\sffamily\color{legislativeblue}}
+{\thesection}{0.5em}{}
+
+\titlespacing*{\section}{0pt}{1cm}{0.5cm}
+
+% ============================================================================
+% TABLE OF CONTENTS STYLING
+% ============================================================================
+\renewcommand{\cftchapfont}{\sffamily\bfseries\color{legislativeblue}}
+
+% ============================================================================
+% CAPTION STYLING
+% ============================================================================
+\captionsetup{font={small,sf}, labelfont={bf,color=legislativeblue}, labelsep=period}

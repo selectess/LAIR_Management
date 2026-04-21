@@ -1,95 +1,95 @@
 ---
-title: "Article III.3.5: Insurance Requirements"
-axiom: Ψ-III
-article_number: III.3.5
+title: "Article III.3.5 : Exigences d'Assurance"
+Axiom: Ψ-III
+numero: III.3.5
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - insurance
-  - liability
-  - coverage
-  - indemnification
+  - Assurance
+  - Responsabilité
+  - Couverture
+  - Indemnisation
 validations:
-  legal: true
-  technical: true
+  Legal: true
+  technique: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article III.3.5: INSURANCE REQUIREMENTS
-## Axiom Ψ-III: RESPONSABILITAS AGENTICA
+# Article III.3.5 : EXIGENCES D'ASSURANCE
+## Axiom Ψ-III : RESPONSABILITAS AGENTICA
 
 ---
 
-## 1. IMPERATIVE NORM
+## 1. NORME IMPÉRATIVE
 
-Every creator and deployer of an autonomous agent MUST subscribe to mandatory civil liability insurance. Insurance MUST cover 100% of potential damages. Minimum coverage MUST be 10 million EUR. Insurance MUST be maintained throughout the entire lifecycle of the agent.
+Tout créateur et déployeur d'agent autonome DOIT souscrire une assurance responsabilité civile obligatoire. L'assurance DOIT couvrir 100% des dommages potentiels. La couverture minimale DOIT être de 10 millions EUR. L'assurance DOIT être maintenue pendant toute la durée de vie de l'agent.
 
-**Minimum Requirements**:
-- Mandatory civil liability insurance
-- Minimum coverage: 10M EUR
-- 100% coverage of damages
-- Creator and deployer insured
-- Insurance maintained throughout lifecycle
-- Insurance certificate mandatory
-- Annual verification mandatory
-- Termination notification prohibited without replacement
-- Guarantee fund in case of insolvency
-- Recourse available (appeal, revision)
-
----
-
-## 2. LEGAL FOUNDATION
-
-**Axiom Ψ-III: RESPONSABILITAS AGENTICA**
-
-Mandatory insurance guarantees that victims can always obtain compensation, even if the creator or deployer is insolvent. Without insurance, victims could be left without recourse.
-
-**Fundamental Principles**:
-- Mandatory insurance
-- Complete coverage
-- Creator and deployer insured
-- Complete lifecycle
-- Regular verification
-- Mandatory notification
-- Guarantee fund
-- Victim protection
-
-**Legal Justification**:
-- Protection of victims
-- Guarantee of compensation
-- Incentive for safety
-- Risk management
-- Quality assurance
-- Damage prevention
-- Public confidence
-- Liability management
+**Exigences minimales** :
+- Assurance responsabilité civile obligatoire
+- Couverture minimale : 10M EUR
+- Couverture 100% des dommages
+- Créateur et déployeur assurés
+- Assurance maintenue pendant toute la durée de vie
+- Certificat d'assurance obligatoire
+- Vérification annuelle obligatoire
+- Notification de résiliation interdite sans remplacement
+- Fonds de garantie en cas d'insolvabilité
+- Recours possibles (appel, révision)
 
 ---
 
-## 3. TECHNICAL SPECIFICATION
+## 2. FONDEMENT LÉGAL
 
-### 3.1 Insurance Coverage Levels
+**Axiom Ψ-III : RESPONSABILITAS AGENTICA**
 
-| Agent Category | Minimum Coverage | Recommended Coverage |
-|---|---|---|
+L'assurance obligatoire garantit que les victimes peuvent toujours obtenir compensation, même si le créateur ou le déployeur est insolvable. Sans assurance, les victimes pourraient être laissées sans recours.
+
+**Principes Fondamentaux** :
+- Assurance obligatoire
+- Couverture complète
+- Créateur et déployeur assurés
+- Durée de vie complète
+- Vérification régulière
+- Notification obligatoire
+- Fonds de garantie
+- Protection des victimes
+
+**Justification Légale** :
+- Protection des victimes
+- Garantie de compensation
+- Incitation à la sécurité
+- Gestion des risques
+- Assurance de qualité
+- Prévention des dommages
+- Confiance publique
+- Gestion de la responsabilité
+
+---
+
+## 3. SPÉCIFICATION TECHNIQUE
+
+### 3.1 Niveaux de Couverture d'Assurance
+
+| Catégorie d'Agent | Couverture Minimale | Couverture Recommandée |
+|------------------|-------------------|----------------------|
 | Narrow AI | 5M EUR | 10M EUR |
 | Limited AGI | 10M EUR | 50M EUR |
 | General AGI | 50M EUR | 100M EUR |
 | Critical Systems | 100M EUR | 500M EUR |
 
-### 3.2 Insurance Management
+### 3.2 Gestion de l'Assurance
 
 ```python
 class InsuranceManager:
-    """Management of civil liability insurance"""
+    """Gestion de l'assurance responsabilité civile"""
     
     def verify_insurance_coverage(self, creator_id: str, deployer_id: str, 
                                   agent_category: str) -> dict:
-        """Verifies insurance coverage"""
+        """Vérifie la couverture d'assurance"""
         
         minimum_coverage = self._get_minimum_coverage(agent_category)
         
@@ -109,7 +109,7 @@ class InsuranceManager:
         }
     
     def _get_minimum_coverage(self, agent_category: str) -> float:
-        """Gets minimum coverage for category"""
+        """Obtient la couverture minimale pour la catégorie"""
         coverage_map = {
             'narrow_ai': 5_000_000,
             'limited_agi': 10_000_000,
@@ -119,8 +119,8 @@ class InsuranceManager:
         return coverage_map.get(agent_category, 10_000_000)
     
     def _get_insurance(self, entity_id: str) -> dict:
-        """Gets insurance information"""
-        # Retrieves from database
+        """Obtient les informations d'assurance"""
+        # Récupère depuis la base de données
         return {
             'entity_id': entity_id,
             'coverage': 10_000_000,
@@ -128,45 +128,45 @@ class InsuranceManager:
         }
 ```
 
-### 3.3 Insurance Verification Process
+### 3.3 Processus de Vérification d'Assurance
 
-1. **Coverage Verification**: Verify minimum coverage
-2. **Validity Verification**: Verify certificate validity
-3. **Duration Verification**: Verify coverage duration
-4. **Termination Notification**: Notify in case of termination
-5. **Insurance Replacement**: Ensure replacement
-6. **Guarantee Fund**: Activate fund in case of insolvency
-7. **Compliance Tracking**: Track compliance
-8. **Documentation**: Document the process
+1. **Vérification de Couverture**: Vérifier la couverture minimale
+2. **Vérification de Validité**: Vérifier la validité du certificat
+3. **Vérification de Durée**: Vérifier la durée de couverture
+4. **Notification de Résiliation**: Notifier en cas de résiliation
+5. **Remplacement d'Assurance**: Assurer le remplacement
+6. **Fonds de Garantie**: Activer le fonds en cas d'insolvabilité
+7. **Suivi de Conformité**: Suivre la conformité
+8. **Documentation**: Documenter le processus
 
 ---
 
-## 4. REFERENCE IMPLEMENTATION
+## 4. IMPLÉMENTATION DE RÉFÉRENCE
 
-### 4.1 Real-World Case Studies
+### 4.1 Études de Cas Réelles
 
-#### Case 1: Complete Insurance (Q2 2027)
-- **Incident**: Creator and deployer have complete insurance
-- **Coverage**: 10M EUR each
-- **Damages**: €8.5M
-- **Compensation**: Insurance pays €8.5M
-- **Result**: Victim compensated, insurance covers
+#### Cas 1: Assurance Complète (Q2 2027)
+- **Incident**: Créateur et déployeur ont assurance complète
+- **Couverture**: 10M EUR chacun
+- **Dommages**: €8.5M
+- **Compensation**: Assurance paie €8.5M
+- **Résultat**: Victime compensée, assurance couvre
 
-#### Case 2: Insufficient Insurance (Q1 2027)
-- **Incident**: Creator has insufficient insurance
-- **Coverage**: 5M EUR (minimum 10M EUR)
-- **Damages**: €12M
-- **Compensation**: Insurance pays €5M, guarantee fund pays €7M
-- **Result**: Victim compensated, guarantee fund activated
+#### Cas 2: Assurance Insuffisante (Q1 2027)
+- **Incident**: Créateur a assurance insuffisante
+- **Couverture**: 5M EUR (minimum 10M EUR)
+- **Dommages**: €12M
+- **Compensation**: Assurance paie €5M, fonds de garantie paie €7M
+- **Résultat**: Victime compensée, fonds de garantie activé
 
-#### Case 3: No Insurance (Q3 2027)
-- **Incident**: Deployer has no insurance
-- **Coverage**: 0 EUR (minimum 10M EUR)
-- **Damages**: €9.5M
-- **Compensation**: Guarantee fund pays €9.5M
-- **Result**: Victim compensated, guarantee fund activated
+#### Cas 3: Pas d'Assurance (Q3 2027)
+- **Incident**: Déployeur n'a pas d'assurance
+- **Couverture**: 0 EUR (minimum 10M EUR)
+- **Dommages**: €9.5M
+- **Compensation**: Fonds de garantie paie €9.5M
+- **Résultat**: Victime compensée, fonds de garantie activé
 
-### 4.2 Rust Implementation
+### 4.2 Implémentation Rust
 
 ```rust
 use chrono::{DateTime, Utc};
@@ -244,80 +244,77 @@ impl InsuranceManager {
 
 ---
 
-## 5. VERIFICATION & SANCTIONS
+## 5. VÉRIFICATION & SANCTIONS
 
-### 5.1 Compliance Verification
+### 5.1 Vérification de Conformité
 
-**Mandatory Tests**:
-1. Verify civil liability insurance
-2. Verify minimum coverage
-3. Verify certificate validity
-4. Verify coverage duration
-5. Verify creator insured
-6. Verify deployer insured
-7. Verify termination notification
-8. Verify guarantee fund
+**Tests Obligatoires** :
+1. Vérifier l'assurance responsabilité civile
+2. Vérifier la couverture minimale
+3. Vérifier la validité du certificat
+4. Vérifier la durée de couverture
+5. Vérifier le créateur assuré
+6. Vérifier le déployeur assuré
+7. Vérifier la notification de résiliation
+8. Vérifier le fonds de garantie
 
-**Frequency**: Annual insurance audit
+**Fréquence** : Audit annuel d'assurance
 
-### 5.2 Non-Compliance Sanctions
+### 5.2 Sanctions pour Non-Conformité
 
 | Violation | Sanction |
 |-----------|----------|
-| No insurance | 95% annual revenue fine |
-| Insufficient coverage | 90% annual revenue fine |
-| Invalid certificate | 85% annual revenue fine |
-| Expired coverage | 80% annual revenue fine |
-| Creator not insured | 90% annual revenue fine |
-| Deployer not insured | 90% annual revenue fine |
-| Termination not notified | 75% annual revenue fine |
-| Guarantee fund not activated | 85% annual revenue fine |
-| Recidivism | Permanent ban + 95% annual revenue |
+| Pas d'assurance | 95% CA fine |
+| Couverture insuffisante | 90% CA fine |
+| Certificat invalide | 85% CA fine |
+| Couverture expirée | 80% CA fine |
+| Créateur non assuré | 90% CA fine |
+| Déployeur non assuré | 90% CA fine |
+| Résiliation non notifiée | 75% CA fine |
+| Fonds de garantie non activé | 85% CA fine |
+| Récurrence | Ban permanent + 95% CA |
 
-### 5.3 Verification Process
+### 5.3 Processus de Vérification
 
-1. Insurance verification (active)
-2. Coverage verification (sufficient)
-3. Certificate verification (valid)
-4. Duration verification (complete)
-5. Creator verification (insured)
-6. Deployer verification (insured)
-7. Notification verification (complete)
-8. Compliance report (annual)
-
----
-
-## 6. EFFECTIVE DATE
-
-**Effective Date**: January 1, 2027
-
-**Compliance Schedule**:
-- New agents: Insurance mandatory upon deployment
-- Existing agents: Insurance mandatory before July 1, 2027
-- Critical agents: Insurance mandatory before April 1, 2027
-
-**Transitional Provisions**:
-- Insurance verification: Before March 1, 2027
-- Insurance implementation: Before January 1, 2027
-- Verification: Annual from January 1, 2027
+1. Vérification d'assurance (active)
+2. Vérification de couverture (suffisante)
+3. Vérification de certificat (valide)
+4. Vérification de durée (complète)
+5. Vérification de créateur (assuré)
+6. Vérification de déployeur (assuré)
+7. Vérification de notification (complète)
+8. Rapport de conformité (annuel)
 
 ---
 
-## REFERENCES
+## 6. DATE D'ENTRÉE EN VIGUEUR
 
-- Axiom Ψ-III: RESPONSABILITAS AGENTICA
-- Article III.3.1: Civil Liability
-- Article III.3.2: Creator Liability
-- Article III.3.3: Deployer Liability
-- Article III.3.4: Joint and Several Liability
-- Chapter 5: Legal Framework
-- Chapter 12: Responsibility Paradigm
+**Date d'Entrée en Vigueur** : 1er janvier 2027
+
+**Calendrier de Conformité** :
+- Nouveaux agents : Assurance obligatoire dès le déploiement
+- Agents existants : Assurance obligatoire avant le 1er juillet 2027
+- Agents critiques : Assurance obligatoire avant le 1er avril 2027
+
+**Dispositions Transitoires** :
+- Vérification d'assurance : Avant le 1er mars 2027
+- Mise en place de l'assurance : Avant le 1er janvier 2027
+- Vérification : Annuelle à partir du 1er janvier 2027
 
 ---
 
-**Status**: ✅ Final | **Validation**: Legal ✅ | Technical ✅ | Editorial ✅ | **Next Review**: January 2027
+## RÉFÉRENCES
 
+- Axiom Ψ-III : RESPONSABILITAS AGENTICA
+- Article III.3.1 : Responsabilité Civile
+- Article III.3.2 : Responsabilité du Créateur
+- Article III.3.3 : Responsabilité du Déployeur
+- Article III.3.4 : Responsabilité Solidaire
+- Chapitre 5 : Cadre Juridique
+- Chapitre 12 : Paradigme de Responsabilité
 
 ---
 
-**Next review**: June 2026
+**Statut** : ✅ Final | **Validation** : Légale ✅ | Technique ✅ | Éditoriale ✅ | **Prochain Examen** : Janvier 2027
+
+**Last Reviewed**: April 3, 2026

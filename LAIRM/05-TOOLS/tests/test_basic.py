@@ -1,3 +1,10 @@
+# ============================================================================
+# LAIRM Module
+# date_creation: 2024-03-18
+# last_updated: 2026-04-20
+# last_review: 2026-04-20
+# ============================================================================
+
 """
 Basic tests for LAIRM Tools
 """
@@ -8,7 +15,8 @@ from pathlib import Path
 
 def test_project_structure():
     """Test that the project structure is correct."""
-    base_path = Path(__file__).parent.parent.parent.parent
+    # Go up to LAIRM directory: tests -> 05-TOOLS -> LAIRM
+    base_path = Path(__file__).parent.parent.parent
     
     # Check main directories exist
     assert (base_path / "00-METADATA").exists()

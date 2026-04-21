@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - decision-making-process
-  - decision-framework
-  - decision-criteria
-  - decision-documentation
-  - decision-transparency
+keywords:
+  - decision-making process
+  - decision framework
+  - decision criteria
+  - decision documentation
+  - decision transparency
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -380,13 +381,13 @@ impl DecisionMakingManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No decision criteria | 55% annual revenue fine |
-| Undocumented rationale | 50% annual revenue fine |
-| No stakeholder communication | 45% annual revenue fine |
-| No appeal mechanism | 60% annual revenue fine |
+| No decision criteria | 55% CA fine |
+| Undocumented rationale | 50% CA fine |
+| No stakeholder communication | 45% CA fine |
+| No appeal mechanism | 60% CA fine |
 | Invalid signature | Immediate revocation |
-| Arbitrary decisions | Immediate revocation + 70% annual revenue |
-| Falsified documentation | Immediate revocation + 75% annual revenue |
+| Arbitrary decisions | Immediate revocation + 70% CA |
+| Falsified documentation | Immediate revocation + 75% CA |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -428,7 +429,4 @@ impl DecisionMakingManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

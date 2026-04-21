@@ -6,11 +6,11 @@ associated_axiom: Ψ-VIII ETHICA
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
   - ethics
-  - programmable-ethics
+  - programmable ethics
   - values
   - bias
   - fairness
@@ -130,7 +130,3 @@ Programmable ethics (explicit constraints, bias detection, fairness ≥95%, ethi
 
 ---
 
-
----
-
-**Next review**: June 2026

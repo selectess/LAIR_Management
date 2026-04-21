@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - resilience-revision
-  - policy-revision
-  - standard-updates
-  - continuous-improvement
+keywords:
+  - resilience revision
+  - policy revision
+  - standard updates
+  - continuous improvement
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -235,11 +236,11 @@ impl ResilienceRevisionManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Skipped revision | 82% annual revenue fine |
-| Incomplete coverage | 81% annual revenue fine |
-| Missing documentation | 80% annual revenue fine |
-| Outdated standards | 83% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| Skipped revision | 82% CA fine |
+| Incomplete coverage | 81% CA fine |
+| Missing documentation | 80% CA fine |
+| Outdated standards | 83% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -254,7 +255,4 @@ impl ResilienceRevisionManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

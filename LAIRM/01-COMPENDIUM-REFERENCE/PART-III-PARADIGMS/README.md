@@ -4,11 +4,11 @@ part: III
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
   - paradigms
-  - governance-frameworks
+  - governance frameworks
   - sovereignty
   - identity
   - responsibility
@@ -18,7 +18,7 @@ tags:
   - adaptation
   - ethics
   - governance
-  - legislative-corpus
+  - legislative corpus
 internal_references:
   - ../PART-II-DIMENSIONS/README.md
   - ../PART-IV-PROSPECTIVE/README.md
@@ -226,13 +226,12 @@ Part IV explores prospective challenges (2026-2050) requiring additional paradig
 
 ## Document Information
 
+**Status**: Final  
 **Word Count**: ~2,400 words  
+**Last Updated**: March 30, 2026  
 **Contributors**: Mehdi Wahbi  
 **License**: CC-BY-SA 4.0 International
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

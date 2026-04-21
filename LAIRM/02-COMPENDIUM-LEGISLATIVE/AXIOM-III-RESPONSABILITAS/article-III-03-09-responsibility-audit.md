@@ -8,9 +8,9 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - audit
-  - responsibility
-  - verification
+  - Audit
+  - Responsibility
+  - Verification
 validations:
   legal: true
   technical: true
@@ -214,11 +214,11 @@ Each agent MUST maintain an immutable registry of:
 
 | Violation | Sanction |
 |-----------|----------|
-| Audit not conducted | Suspension, 20% annual revenue fine |
-| Incomplete report | 15% annual revenue fine |
-| Corrections not applied | Suspension, 25% annual revenue fine |
-| Incomplete registry | 10% annual revenue fine |
-| Results not public | 15% annual revenue fine |
+| Audit not conducted | Suspension, 20% CA fine |
+| Incomplete report | 15% CA fine |
+| Corrections not applied | Suspension, 25% CA fine |
+| Incomplete registry | 10% CA fine |
+| Results not public | 15% CA fine |
 | Recurrence | License revocation |
 
 ### 5.3 Verification Process
@@ -257,7 +257,3 @@ Each agent MUST maintain an immutable registry of:
 
 **Status**: Final
 
-
----
-
-**Next review**: June 2026

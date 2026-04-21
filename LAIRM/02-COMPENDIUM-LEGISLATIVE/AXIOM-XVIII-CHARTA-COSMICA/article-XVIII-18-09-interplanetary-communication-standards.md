@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - transplanetary-rights
-  - cosmic-charter
-  - multi-world-governance
+keywords:
+  - transplanetary rights
+  - cosmic charter
+  - multi-world governance
   - interplanetary-communication-standards
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -189,10 +190,10 @@ class TransplanetaryManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No interplanetary communication standards | 70% annual revenue fine |
-| Coordination failure | 75% annual revenue fine |
-| Fairness breach | 78% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No interplanetary communication standards | 70% CA fine |
+| Coordination failure | 75% CA fine |
+| Fairness breach | 78% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -216,7 +217,4 @@ class TransplanetaryManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

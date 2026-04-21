@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - cognitive-revision
-  - policy-revision
-  - requirement-update
-  - standard-evolution
+keywords:
+  - cognitive revision
+  - policy revision
+  - requirement update
+  - standard evolution
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -290,12 +291,12 @@ impl CognitiveRevisionManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No review | 75% annual revenue fine |
-| Evidence ignored | 80% annual revenue fine |
-| Findings not documented | 70% annual revenue fine |
-| Revision not published | 80% annual revenue fine |
-| Revision not transparent | 75% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No review | 75% CA fine |
+| Evidence ignored | 80% CA fine |
+| Findings not documented | 70% CA fine |
+| Revision not published | 80% CA fine |
+| Revision not transparent | 75% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -337,7 +338,4 @@ impl CognitiveRevisionManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

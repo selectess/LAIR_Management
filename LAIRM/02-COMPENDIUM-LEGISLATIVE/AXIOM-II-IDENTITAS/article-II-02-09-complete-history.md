@@ -45,11 +45,11 @@ Every autonomous agent MUST maintain a complete and immutable history of all its
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II: IDENTITAS AGENTICA**
+**Axiom Ψ-II : IDENTITAS AGENTICA**
 
 Complete history is permanent proof of every event in an agent's life. Without history, no responsibility is possible. History ensures that every event can be audited and that actions can be verified.
 
-**Fundamental Principles**:
+**Fundamental Principles** :
 - Complete traceability (all events)
 - Immutability (no deletion)
 - Transparency (public access)
@@ -109,7 +109,7 @@ Complete history is permanent proof of every event in an agent's life. Without h
   "hash": "sha256:abc123...",
   "previous_hash": "sha256:def456...",
   "signature": "RSA-4096-SHA256 (hex)",
-  "status": "immutable"
+  "Status": "immutable"
 }
 ```
 
@@ -231,13 +231,13 @@ class CompleteHistory:
 ### 4.1 Use Case: TradeBot3000 History (Q1 2026)
 
 **Recorded Events** :
-1. EVENT-20260115100000: Agent created
-2. EVENT-20260115110000: Model deployed
-3. EVENT-20260115120000: Action executed ($45M)
-4. EVENT-20260115120500: Violation detected
-5. EVENT-20260115130000: Audit started
-6. EVENT-20260115140000: Audit completed
-7. EVENT-20260115150000: License revoked
+1. EVENT-20260115100000 : Agent created
+2. EVENT-20260115110000 : Model deployed
+3. EVENT-20260115120000 : Action executed ($45M)
+4. EVENT-20260115120500 : Violation detected
+5. EVENT-20260115130000 : Audit started
+6. EVENT-20260115140000 : Audit completed
+7. EVENT-20260115150000 : License revoked
 
 **Verification** :
 - ✓ All events recorded
@@ -262,18 +262,18 @@ class CompleteHistory:
 7. Retention test (7 years)
 8. Alerts test (anomalies)
 
-**Frequency**: Monthly for all agents
+**Frequency** : Monthly for all agents
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction | Deadline |
 |-----------|----------|----------|
-| Deleted event | Revocation + 50% annual revenue fine | 7 days |
-| Modified event | Revocation + 55% annual revenue fine | 7 days |
-| Broken chain | Revocation + 60% annual revenue fine | 7 days |
-| Incomplete history | 30% annual revenue fine | 14 days |
-| Access denied | 25% annual revenue fine | 14 days |
-| Insufficient retention | 20% annual revenue fine | 14 days |
+| Deleted event | Revocation + 50% CA fine | 7 days |
+| Modified event | Revocation + 55% CA fine | 7 days |
+| Broken chain | Revocation + 60% CA fine | 7 days |
+| Incomplete history | 30% CA fine | 14 days |
+| Access denied | 25% CA fine | 14 days |
+| Insufficient retention | 20% CA fine | 14 days |
 | Recurrence | Permanent ban | Immediate |
 
 ---
@@ -309,14 +309,14 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II: IDENTITAS AGENTICA
-- Article II.2.5: Audit Trail
-- Article II.2.7: Immutable Logging
-- The Cybernetic Criterion: Chapters 0-5
+- Axiom Ψ-II : IDENTITAS AGENTICA
+- Article II.2.5 : Audit Trail
+- Article II.2.7 : Immutable Logging
+- The Cybernetic Criterion : Chapters 0-5
 
 ---
 
-**Next Review**: January 2027
+**Next Review** : January 2027
 
 
 ---

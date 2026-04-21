@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - economic-equity
-  - equity-standards
-  - fairness-standards
-  - economic-justice
+keywords:
+  - economic equity
+  - equity standards
+  - fairness standards
+  - economic justice
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -372,12 +373,12 @@ impl EquityManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No equity standards | 75% annual revenue fine |
-| Wage fairness violation | 82% annual revenue fine |
-| Income equality violation | 80% annual revenue fine |
-| No compensation transparency | 78% annual revenue fine |
-| Benefit equity violation | 80% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No equity standards | 75% CA fine |
+| Wage fairness violation | 82% CA fine |
+| Income equality violation | 80% CA fine |
+| No compensation transparency | 78% CA fine |
+| Benefit equity violation | 80% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -392,7 +393,4 @@ impl EquityManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

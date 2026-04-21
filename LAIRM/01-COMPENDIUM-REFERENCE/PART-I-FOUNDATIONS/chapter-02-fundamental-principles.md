@@ -3,13 +3,13 @@ title: "Chapter 2: Fundamental Principles of LAIRM"
 number: 2
 part: I
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
-  - Fundamental-Principles
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
+  - Fundamental Principles
   - Axioms
-  - Agentic-Governance
-  - Human-Sovereignty
+  - Agentic Governance
+  - Human Sovereignty
   - Responsibility
 Status: Final
 Version: Initiation
@@ -346,6 +346,9 @@ The axioms follow a progressive logic: first ensure human control (I), then iden
 
 **End of Chapter 2: Fundamental Principles of LAIRM**
 
+**Last Updated**: 2026-03-30  
+**Last Reviewed**: 2026-04-03  
+**Status**: Final  
 **Version**: Initiation
 
 **Related Chapters**:
@@ -356,7 +359,3 @@ The axioms follow a progressive logic: first ensure human control (I), then iden
 - [See Complete Bibliography](../../00-METADATA/bibliography.md)
 
 ---
-
----
-
-**Next review**: June 2026

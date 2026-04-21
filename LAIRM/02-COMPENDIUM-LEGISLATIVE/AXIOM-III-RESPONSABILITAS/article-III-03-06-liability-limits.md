@@ -1,26 +1,26 @@
 ---
-title: "Article III.3.6: Liability Limits and Exceptions"
-axiom: Ψ-III
-article_number: III.3.6
+title: "Article III.3.6 : Liability Limits and Exceptions"
+Axiom: Ψ-III
+numero: III.3.6
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - responsibility
-  - limits
-  - exceptions
-  - damages
+  - Responsibility
+  - Limits
+  - Exceptions
+  - Damages
 validations:
-  legal: true
-  technical: true
+  Legal: true
+  technique: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
 
-# Article III.3.6: LIABILITY LIMITS AND EXCEPTIONS
-## Axiom Ψ-III: RESPONSABILITAS AGENTICA
+# Article III.3.6 : LIABILITY LIMITS AND EXCEPTIONS
+## Axiom Ψ-III : RESPONSABILITAS AGENTICA
 
 ---
 
@@ -271,20 +271,20 @@ impl LiabilityManager {
 7. Verify complete compensation
 8. Verify complete traceability
 
-**Frequency**: Quarterly responsibility audit
+**Frequency** : Quarterly responsibility audit
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Liability limit | 95% annual revenue fine |
-| Exoneration clause | 95% annual revenue fine |
-| Contractual limitation | 95% annual revenue fine |
-| Incomplete responsibility | 90% annual revenue fine |
-| Unjustified exception | 85% annual revenue fine |
-| Incomplete compensation | 95% annual revenue fine |
-| Incomplete traceability | 70% annual revenue fine |
-| Recurrence | Permanent ban + 95% annual revenue |
+| Liability limit | 95% CA fine |
+| Exoneration clause | 95% CA fine |
+| Contractual limitation | 95% CA fine |
+| Incomplete responsibility | 90% CA fine |
+| Unjustified exception | 85% CA fine |
+| Incomplete compensation | 95% CA fine |
+| Incomplete traceability | 70% CA fine |
+| Recurrence | Permanent ban + 95% CA |
 
 ### 5.3 Verification Process
 
@@ -301,36 +301,32 @@ impl LiabilityManager {
 
 ## 6. EFFECTIVE DATE
 
-**Effective Date**: January 1, 2027
+**Effective Date** : January 1, 2027
 
 **Compliance Calendar** :
-- New agents: No limit mandatory from deployment
-- Existing agents: No limit mandatory before July 1, 2027
-- Critical agents: No limit mandatory before April 1, 2027
+- New agents : No limit mandatory from deployment
+- Existing agents : No limit mandatory before July 1, 2027
+- Critical agents : No limit mandatory before April 1, 2027
 
 **Transitional Provisions** :
-- Limit verification: Before March 1, 2027
-- Limit removal: Before January 1, 2027
-- Verification: Quarterly from January 1, 2027
+- Limit verification : Before March 1, 2027
+- Limit removal : Before January 1, 2027
+- Verification : Quarterly from January 1, 2027
 
 ---
 
 ## REFERENCES
 
-- Axiom Ψ-III: RESPONSABILITAS AGENTICA
-- Article III.3.1: Civil Responsibility
-- Article III.3.2: Creator Responsibility
-- Article III.3.3: Deployer Responsibility
-- Article III.3.4: Joint and Several Responsibility
-- Article III.3.5: Insurance Requirements
-- Chapter 5: Legal Framework
-- Chapter 12: Responsibility Paradigm
+- Axiom Ψ-III : RESPONSABILITAS AGENTICA
+- Article III.3.1 : Civil Responsibility
+- Article III.3.2 : Creator Responsibility
+- Article III.3.3 : Deployer Responsibility
+- Article III.3.4 : Joint and Several Responsibility
+- Article III.3.5 : Insurance Requirements
+- Chapter 5 : Legal Framework
+- Chapter 12 : Responsibility Paradigm
 
 ---
 
-**Next Review**: January 2027
+**Next Review** : January 2027
 
-
----
-
-**Next review**: June 2026

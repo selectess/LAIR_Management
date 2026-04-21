@@ -41,11 +41,11 @@ Any competent authority MAY recover the identity of a deleted or archived agent 
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II: IDENTITAS AGENTICA**
+**Axiom Ψ-II : IDENTITAS AGENTICA**
 
 Identity recovery enables audit and investigation while protecting confidentiality. It ensures archived data remains accessible to competent authorities.
 
-**Fundamental Principles**:
+**Fundamental Principles** :
 - Controlled access
 - Possible audit
 - Protected confidentiality
@@ -89,7 +89,7 @@ class IdentityRecoveryManager:
             'reason': reason,
             'authority_id': authority_id,
             'requested_at': datetime.utcnow().isoformat() + 'Z',
-            'status': 'pending'
+            'Status': 'pending'
         }
         
         self.recovery_log.append(request)
@@ -151,7 +151,7 @@ class IdentityRecoveryManager:
             'recovered_by': request['authority_id'],
             'reason': request['reason'],
             'data': decrypted_data,
-            'status': 'completed'
+            'Status': 'completed'
         }
         
         # Register recovery
@@ -285,18 +285,18 @@ See Section 3.2 above.
 7. Restoration test
 8. Confidentiality test
 
-**Frequency**: Quarterly minimum
+**Frequency** : Quarterly minimum
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Unauthorized recovery | License revocation, 50% annual revenue fine |
-| Uncontrolled access | Immediate stop, 45% annual revenue fine |
-| Confidentiality violated | Immediate stop, 55% annual revenue fine |
-| Missing approval | Operation suspension, 35% annual revenue fine |
-| Missing logging | 20% annual revenue fine |
-| Decryption failed | Immediate stop, 40% annual revenue fine |
+| Unauthorized recovery | License revocation, 50% CA fine |
+| Uncontrolled access | Immediate stop, 45% CA fine |
+| Confidentiality violated | Immediate stop, 55% CA fine |
+| Missing approval | Operation suspension, 35% CA fine |
+| Missing logging | 20% CA fine |
+| Decryption failed | Immediate stop, 40% CA fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -340,15 +340,15 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II: IDENTITAS AGENTICA
-- Article II.2.16: Identity Deletion
-- Article II.2.12: Identity Revocation
-- Chapter 11: Paradigm of Agent Identity
-- Glossary: Recovery, Restoration
+- Axiom Ψ-II : IDENTITAS AGENTICA
+- Article II.2.16 : Identity Deletion
+- Article II.2.12 : Identity Revocation
+- Chapter 11 : Paradigm of Agent Identity
+- Glossary : Recovery, Restoration
 
 ---
 
-**Next Review**: January 2027
+**Next Review** : January 2027
 
 
 ---

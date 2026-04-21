@@ -8,9 +8,9 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - registry
-  - incidents
-  - transparency
+  - Registry
+  - Incidents
+  - Transparency
 validations:
   legal: true
   technical: true
@@ -181,10 +181,10 @@ The public registry MUST allow:
 
 | Violation | Sanction |
 |-----------|----------|
-| Incident not recorded | 25% annual revenue fine |
-| Registry not public | 20% annual revenue fine |
+| Incident not recorded | 25% CA fine |
+| Registry not public | 20% CA fine |
 | Data modified | License revocation |
-| Incomplete information | 15% annual revenue fine |
+| Incomplete information | 15% CA fine |
 | Hidden incident | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -224,7 +224,3 @@ The public registry MUST allow:
 
 **Status**: Final
 
-
----
-
-**Next review**: June 2026

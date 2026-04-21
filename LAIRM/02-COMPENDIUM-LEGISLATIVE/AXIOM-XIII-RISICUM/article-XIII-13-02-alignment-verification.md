@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - alignment-verification
-  - value-alignment
-  - AGI-safety
-  - formal-verification
-  - alignment-testing
+keywords:
+  - alignment verification
+  - value alignment
+  - AGI safety
+  - formal verification
+  - alignment testing
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -481,12 +482,12 @@ impl AlignmentVerificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No alignment verification | 95% annual revenue fine |
-| Unverified deployment | 100% annual revenue fine + license revocation |
-| Misalignment not detected | 90% annual revenue fine |
-| Misalignment not reported | 85% annual revenue fine |
-| Corrigibility not verified | 80% annual revenue fine |
-| Records falsified | Immediate revocation + 95% annual revenue |
+| No alignment verification | 95% CA fine |
+| Unverified deployment | 100% CA fine + license revocation |
+| Misalignment not detected | 90% CA fine |
+| Misalignment not reported | 85% CA fine |
+| Corrigibility not verified | 80% CA fine |
+| Records falsified | Immediate revocation + 95% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -528,7 +529,4 @@ impl AlignmentVerificationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - agent-governance
-  - governance-structure
-  - oversight-mechanisms
-  - control-systems
-  - accountability-framework
+keywords:
+  - agent governance
+  - governance structure
+  - oversight mechanisms
+  - control systems
+  - accountability framework
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -463,13 +464,13 @@ impl AgentGovernanceManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No governance structure | Immediate revocation + 75% annual revenue |
-| Inadequate oversight | 60% annual revenue fine |
-| Weak control systems | 55% annual revenue fine |
-| Undefined decision framework | 50% annual revenue fine |
-| No accountability | 65% annual revenue fine |
+| No governance structure | Immediate revocation + 75% CA |
+| Inadequate oversight | 60% CA fine |
+| Weak control systems | 55% CA fine |
+| Undefined decision framework | 50% CA fine |
+| No accountability | 65% CA fine |
 | Invalid signature | Immediate revocation |
-| Falsified governance | Immediate revocation + 80% annual revenue |
+| Falsified governance | Immediate revocation + 80% CA |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -511,7 +512,4 @@ impl AgentGovernanceManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

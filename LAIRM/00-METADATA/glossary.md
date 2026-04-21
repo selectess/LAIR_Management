@@ -179,7 +179,7 @@ This glossary establishes the canonical terminology used throughout the LAIRM co
 
 **LLM (Large Language Model)**: Large-scale language model (typically >1 billion parameters) pre-trained on massive text corpora.
 
-**LoRA (Low-Rank Adaptation)**: Efficient language model adaptation technical enabling fine-tuning with reduced computational resources.
+**LoRA (Low-Rank Adaptation)**: Efficient language model adaptation technique enabling fine-tuning with reduced computational resources.
 
 ## M
 
@@ -219,19 +219,19 @@ This glossary establishes the canonical terminology used throughout the LAIRM co
 
 ## Q
 
-**QLoRA (Quantized Low-Rank Adaptation)**: Advanced language model fine-tuning technical combining quantization and low-rank adaptation for maximum memory efficiency.
+**QLoRA (Quantized Low-Rank Adaptation)**: Advanced language model fine-tuning technique combining quantization and low-rank adaptation for maximum memory efficiency.
 
 **Quadratic Voting**: Voting mechanism where the cost of an additional vote increases quadratically, used in LAIRM-compliant DAOs to limit plutocracy (Article Ψ-IX.5.6).
 
 ## R
 
-**RAG (Retrieval-Augmented Generation)**: Technical combining information retrieval and text generation, enabling autonomous agents to access external knowledge bases to improve their responses.
+**RAG (Retrieval-Augmented Generation)**: Technique combining information retrieval and text generation, enabling autonomous agents to access external knowledge bases to improve their responses.
 
 **Responsibility cascade**: Legal responsibility distribution model proposed by LAIRM (Axiom Ψ-III) according to a 40/40/20 ratio between model creator, agent deployer, and human supervisor.
 
 **Neural network**: Computational model inspired by biological brain functioning, composed of artificial neurons organized in layers.
 
-**RLHF (Reinforcement Learning from Human Feedback)**: Language model training technical using human feedback to align model behavior with human preferences.
+**RLHF (Reinforcement Learning from Human Feedback)**: Language model training technique using human feedback to align model behavior with human preferences.
 
 **RNN (Recurrent Neural Network)**: Neural network architecture adapted to sequence processing, where connections form cycles enabling memory of previous states.
 
@@ -243,7 +243,7 @@ This glossary establishes the canonical terminology used throughout the LAIRM co
 
 **Shakey**: First autonomous mobile robot developed at Stanford Research Institute (1966-1972), capable of planning and navigation.
 
-**SLAM (Simultaneous Localization and Mapping)**: Technical enabling an autonomous agent to build a map of its environment while simultaneously localizing itself, used in lunar rovers.
+**SLAM (Simultaneous Localization and Mapping)**: Technique enabling an autonomous agent to build a map of its environment while simultaneously localizing itself, used in lunar rovers.
 
 **Smart contract**: Self-executing program deployed on a blockchain, whose terms are directly written in code. Used for implementing DAOs and LAIRM audit mechanisms.
 
@@ -308,8 +308,7 @@ This glossary establishes the canonical terminology used throughout the LAIRM co
 
 ---
 
+**Last Updated**: 2026-03-30  
+**Last Reviewed**: 2026-04-03  
+**Status**: Final  
 **Version**: Initiation
-
----
-
-**Next review**: June 2026

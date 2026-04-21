@@ -901,14 +901,12 @@ Implementation of Article I.1.17 will ensure that autonomous agents remain trans
 ---
 
 **Article I.1.17: Right to Explanation**  
+**Status**: Final  
 **Effective Date**: 1 January 2027  
+**Last Reviewed**: April 3, 2026
 
 ---
 
 *This article is part of the Cybernetic Criterion - International Legislative Framework for Autonomous Intelligent Resources Management (2026-2036)*
 
 *"Transparency enables authority. Authority requires understanding."*
-
----
-
-**Next review**: June 2026

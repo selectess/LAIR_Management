@@ -8,11 +8,11 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - state-transition
+  - state transition
   - atomicity
   - consistency
   - lifecycle
-  - state-machine
+  - state machine
 validations:
   legal: true
   technical: true
@@ -51,7 +51,7 @@ Every autonomous agent MUST manage state transitions in a controlled and documen
 
 State transitions are critical for lifecycle management. They must be controlled to guarantee consistency and traceability. Unauthorized transitions constitute a serious violation of Responsibility.
 
-**Fundamental Principles**:
+**Fundamental Principles** :
 - Controlled and documented transitions
 - Guaranteed atomicity (all-or-nothing)
 - Complete and immutable traceability
@@ -191,7 +191,7 @@ Each transition MUST be approved by :
 
 #### Case 1: TradeBot3000 - Invalid Transition (Q1 2026)
 
-**CONTEXT**: TradeBot3000 performed an invalid state transition.
+**CONTEXT** : TradeBot3000 performed an invalid state transition.
 
 **Incident** :
 - Unauthorized transition : running → archived (without stopped)
@@ -205,11 +205,11 @@ Each transition MUST be approved by :
 - 3-level approval implemented
 - Compensation : $2.1M + 25% penalty
 
-**Lesson**: Strict validation mandatory
+**Lesson** : Strict validation mandatory
 
 #### Case 2: HealthBot - Non-Atomic Transition (Q1 2026)
 
-**CONTEXT**: HealthBot performed a non-atomic transition.
+**CONTEXT** : HealthBot performed a non-atomic transition.
 
 **Incident** :
 - Partially executed transition
@@ -223,11 +223,11 @@ Each transition MUST be approved by :
 - Post-transition integrity verification
 - Compensation : €1.8M + 30% penalty
 
-**Lesson**: Atomicity non-negotiable
+**Lesson** : Atomicity non-negotiable
 
 #### Case 3: SupplyChainX - Unapproved Transition (Q1 2026)
 
-**CONTEXT**: SupplyChainX performed a transition without approval.
+**CONTEXT** : SupplyChainX performed a transition without approval.
 
 **Incident** :
 - Unapproved transition
@@ -241,9 +241,9 @@ Each transition MUST be approved by :
 - Immutable audit trail
 - Compensation : €900k + 20% penalty
 
-**Lesson**: Prior approval non-negotiable
+**Lesson** : Prior approval non-negotiable
 
-### 4.2 Reference Code (Rust) - Gestion des Transitions
+### 4.2 Implémentation Rust - Gestion des Transitions
 
 ```rust
 use chrono::{DateTime, Utc};
@@ -488,59 +488,59 @@ mod tests {
 ### 5.1 Compliance Verification
 
 **Mandatory tests** :
-1. **Validity Test**: Verify that transition is valid
+1. **Validity Test** : Verify that transition is valid
    - Verify source state valid
    - Verify target state valid
    - Verify transition authorized
 
-2. **Approval Test**: Verify that 3 levels of approval are present
+2. **Approval Test** : Verify that 3 levels of approval are present
    - Technical approval
    - Operational approval
    - Supervisory approval
 
-3. **Atomicity Test**: Verify that transition is atomic
+3. **Atomicity Test** : Verify that transition is atomic
    - All-or-nothing
    - Rollback possible
    - No intermediate state
 
-4. **Consistency Test**: Verify that state is consistent
+4. **Consistency Test** : Verify that state is consistent
    - Source state correct
    - Target state correct
    - No corruption
 
-5. **Recording Test**: Verify that transition is recorded
+5. **Recording Test** : Verify that transition is recorded
    - Complete audit trail
    - Valid signature
    - Correct timestamp
 
-6. **Rollback Test**: Verify that rollback is possible
+6. **Rollback Test** : Verify that rollback is possible
    - Rollback < 5 minutes
    - Complete restoration
    - Audit trail preserved
 
-7. **Notification Test**: Verify that notifications are sent
+7. **Notification Test** : Verify that notifications are sent
    - Authority notification < 24 hours
    - Stakeholder notification
    - Public registry accessible
 
-8. **Signature Test**: Verify that signature is valid
+8. **Signature Test** : Verify that signature is valid
    - RSA-4096
    - Immutable
    - Verifiable
 
-**Frequency**: At each transition, complete monthly audit
+**Frequency** : At each transition, complete monthly audit
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Severity | Sanction | Timeline |
 |-----------|----------|----------|----------|
-| Invalid transition | Critical | Immediate revocation + 25% annual revenue fine | Immediate |
-| Missing approval | High | 30-day suspension + 20% annual revenue fine | 7 days |
-| Non-atomic transition | High | 30-day suspension + 25% annual revenue fine | 7 days |
+| Invalid transition | Critical | Immediate revocation + 25% CA fine | Immediate |
+| Missing approval | High | 30-day suspension + 20% CA fine | 7 days |
+| Non-atomic transition | High | 30-day suspension + 25% CA fine | 7 days |
 | Inconsistent state | Critical | License revocation | Immediate |
-| Missing recording | Medium | 15% annual revenue fine | 14 days |
+| Missing recording | Medium | 15% CA fine | 14 days |
 | Impossible rollback | Critical | Immediate revocation | Immediate |
-| Missing notification | Medium | 12% annual revenue fine | 14 days |
+| Missing notification | Medium | 12% CA fine | 14 days |
 | Invalid signature | Critical | Immediate revocation | Immediate |
 | Recurrence (2nd violation) | Critical | 1-year ban | Immediate |
 | Recurrence (3rd violation) | Critical | Permanent ban | Immediate |
@@ -602,18 +602,18 @@ mod tests {
 
 ## 6. ENTRY INTO FORCE
 
-**Entry into force date**: January 1, 2027
+**Entry into force date** : January 1, 2027
 
 **Compliance timeline** :
-- **New agents**: Mandatory compliance upon deployment (before January 1, 2027)
-- **Existing agents**: Mandatory compliance before January 1, 2028
-- **Critical agents**: Mandatory compliance before July 1, 2027
+- **New agents** : Mandatory compliance upon deployment (before January 1, 2027)
+- **Existing agents** : Mandatory compliance before January 1, 2028
+- **Critical agents** : Mandatory compliance before July 1, 2027
 
 **Transitional provisions** :
-- **Phase 1 (0-3 months)**: Implementation of state machine
-- **Phase 2 (3-6 months)**: Implementation of 3-level approval
-- **Phase 3 (6-9 months)**: Implementation of atomicity and rollback
-- **Phase 4 (9-12 months)**: Complete compliance
+- **Phase 1 (0-3 months)** : Implementation of state machine
+- **Phase 2 (3-6 months)** : Implementation of 3-level approval
+- **Phase 3 (6-9 months)** : Implementation of atomicity and rollback
+- **Phase 4 (9-12 months)** : Complete compliance
 
 **Immediate obligations** :
 - Define state machine before January 1, 2027
@@ -625,23 +625,19 @@ mod tests {
 ## 7. REFERENCES
 
 **Axiom Ψ-IV: CIRCULUS VITAE**
-- Foundation: Complete lifecycle of autonomous agent
-- Principles: Controlled transitions, atomicity, traceability
+- Foundation : Complete lifecycle of autonomous agent
+- Principles : Controlled transitions, atomicity, traceability
 
 **Related articles** :
-- Article IV.4.1: Creation and Initialization
-- Article IV.4.2: Production Deployment
-- Article IV.4.3: Continuous Operation
-- Article IV.4.4: Maintenance and Updates
-- Article IV.4.5: End of Life and Archival
+- Article IV.4.1 : Creation and Initialization
+- Article IV.4.2 : Production Deployment
+- Article IV.4.3 : Continuous Operation
+- Article IV.4.4 : Maintenance and Updates
+- Article IV.4.5 : End of Life and Archival
 
 **External references** :
-- The Cybernetic Criterion.md: Principles of state transitions
-- ISO 27001: Information security management
-- NIST Cybersecurity Framework: Risk management
-- State Machine Theory: Theory of state machines
+- The Cybernetic Criterion.md : Principles of state transitions
+- ISO 27001 : Information security management
+- NIST Cybersecurity Framework : Risk management
+- State Machine Theory : Theory of state machines
 
-
----
-
-**Next review**: June 2026

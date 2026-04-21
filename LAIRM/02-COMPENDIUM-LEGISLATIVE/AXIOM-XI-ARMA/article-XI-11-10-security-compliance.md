@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - security-compliance
-  - compliance-verification
-  - compliance-monitoring
-  - compliance-enforcement
-  - compliance-reporting
+keywords:
+  - security compliance
+  - compliance verification
+  - compliance monitoring
+  - compliance enforcement
+  - compliance reporting
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -236,10 +237,10 @@ impl SecurityComplianceManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Non-compliant system | 70% annual revenue fine |
-| Violation not reported | 65% annual revenue fine |
-| No corrective action | 60% annual revenue fine |
-| Action not completed | 55% annual revenue fine |
+| Non-compliant system | 70% CA fine |
+| Violation not reported | 65% CA fine |
+| No corrective action | 60% CA fine |
+| Action not completed | 55% CA fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -259,7 +260,4 @@ impl SecurityComplianceManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

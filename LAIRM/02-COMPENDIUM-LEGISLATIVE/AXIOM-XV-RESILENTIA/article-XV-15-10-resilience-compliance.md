@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - resilience-compliance
-  - compliance-standards
-  - regulatory-compliance
-  - compliance-verification
+keywords:
+  - resilience compliance
+  - compliance standards
+  - regulatory compliance
+  - compliance verification
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -231,11 +232,11 @@ impl ResilienceComplianceManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No compliance verification | 77% annual revenue fine |
-| Missing audit trail | 80% annual revenue fine |
-| False compliance reports | 87% annual revenue fine |
-| Outdated compliance status | 78% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No compliance verification | 77% CA fine |
+| Missing audit trail | 80% CA fine |
+| False compliance reports | 87% CA fine |
+| Outdated compliance status | 78% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -250,7 +251,4 @@ impl ResilienceComplianceManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

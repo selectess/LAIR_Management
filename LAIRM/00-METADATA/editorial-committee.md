@@ -96,7 +96,3 @@ The LAIRM project welcomes contributions from all participants in the AI ecosyst
 ---
 
 **Version**: Initiation
-
----
-
-**Next review**: June 2026

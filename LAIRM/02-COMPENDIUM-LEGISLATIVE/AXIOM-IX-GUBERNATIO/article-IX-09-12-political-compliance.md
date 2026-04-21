@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - political-compliance
-  - compliance-verification
-  - compliance-standards
-  - compliance-reporting
-  - compliance-enforcement
+keywords:
+  - political compliance
+  - compliance verification
+  - compliance standards
+  - compliance reporting
+  - compliance enforcement
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -163,11 +164,11 @@ class PoliticalComplianceManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No verification | 65% annual revenue fine |
-| Violations not reported | 70% annual revenue fine |
-| Remediation not tracked | 55% annual revenue fine |
+| No verification | 65% CA fine |
+| Violations not reported | 70% CA fine |
+| Remediation not tracked | 55% CA fine |
 | Invalid signature | Immediate revocation |
-| Falsified compliance | Immediate revocation + 75% annual revenue |
+| Falsified compliance | Immediate revocation + 75% CA |
 
 ---
 
@@ -186,7 +187,4 @@ class PoliticalComplianceManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

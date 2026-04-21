@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - international-coordination
-  - AGI-safety
-  - global-governance
-  - information-sharing
-  - verification-protocols
+keywords:
+  - international coordination
+  - AGI safety
+  - global governance
+  - information sharing
+  - verification protocols
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -487,14 +488,14 @@ impl InternationalCoordinationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No coordination agreement | 85% annual revenue fine |
-| Unilateral AGI development | 95% annual revenue fine + development halt |
-| Research sharing refusal | 80% annual revenue fine |
-| Verification non-compliance | 90% annual revenue fine |
-| Incident non-reporting | 75% annual revenue fine |
-| Dispute non-resolution | 85% annual revenue fine |
-| Transparency violation | 70% annual revenue fine |
-| Recurrence | Membership suspension + 95% annual revenue |
+| No coordination agreement | 85% CA fine |
+| Unilateral AGI development | 95% CA fine + development halt |
+| Research sharing refusal | 80% CA fine |
+| Verification non-compliance | 90% CA fine |
+| Incident non-reporting | 75% CA fine |
+| Dispute non-resolution | 85% CA fine |
+| Transparency violation | 70% CA fine |
+| Recurrence | Membership suspension + 95% CA |
 
 ### 5.3 Verification Process
 
@@ -536,7 +537,4 @@ impl InternationalCoordinationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

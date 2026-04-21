@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - orbital-resources
-  - space-management
-  - satellite-coordination
-  - orbital-debris
-  - resource-allocation
+keywords:
+  - orbital resources
+  - space management
+  - satellite coordination
+  - orbital debris
+  - resource allocation
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -423,12 +424,12 @@ impl OrbitalResourceManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No orbital policy | 70% annual revenue fine |
-| Debris accumulation | 75% annual revenue fine |
-| Coordination failure | 78% annual revenue fine |
-| Unfair spectrum allocation | 80% annual revenue fine |
-| Slot violation | 82% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No orbital policy | 70% CA fine |
+| Debris accumulation | 75% CA fine |
+| Coordination failure | 78% CA fine |
+| Unfair spectrum allocation | 80% CA fine |
+| Slot violation | 82% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -468,9 +469,6 @@ impl OrbitalResourceManager {
 
 ---
 
-**Status** : ✅ Final | **Validation**: Legal ✅ | Technical ✅ | Editorial ✅ | **Next Review**: January 2027
+**Status** : ✅ Final | **Validation** : Legal ✅ | Technical ✅ | Editorial ✅ | **Next Review** : January 2027
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

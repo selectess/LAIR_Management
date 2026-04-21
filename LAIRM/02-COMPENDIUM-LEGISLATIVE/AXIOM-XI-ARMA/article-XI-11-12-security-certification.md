@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - security-certification
-  - certification-process
-  - certification-standards
-  - certification-renewal
-  - certification-verification
+keywords:
+  - security certification
+  - certification process
+  - certification standards
+  - certification renewal
+  - certification verification
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -237,10 +238,10 @@ impl SecurityCertificationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No certification | 80% annual revenue fine + operation suspension |
-| Expired certificate | 75% annual revenue fine + operation suspension |
-| Failed assessment | 70% annual revenue fine |
-| Unauthorized issuer | 65% annual revenue fine |
+| No certification | 80% CA fine + operation suspension |
+| Expired certificate | 75% CA fine + operation suspension |
+| Failed assessment | 70% CA fine |
+| Unauthorized issuer | 65% CA fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -260,7 +261,4 @@ impl SecurityCertificationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

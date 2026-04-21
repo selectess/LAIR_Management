@@ -4,15 +4,15 @@ part: II
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
   - dimensions
   - technical
   - legal
   - ethical
   - economic
-  - multidimensional-analysis
+  - multidimensional analysis
 internal_references:
   - ../PART-I-FOUNDATIONS/chapter-02-fundamental-principles.md
   - ../PART-III-PARADIGMS/README.md
@@ -316,13 +316,12 @@ Part III builds upon this dimensional analysis to present nine paradigmatic fram
 
 ## Document Information
 
+**Status**: Final  
 **Word Count**: ~2,100 words  
+**Last Updated**: March 30, 2026  
 **Contributors**: Mehdi Wahbi  
 **License**: CC-BY-SA-4.0
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

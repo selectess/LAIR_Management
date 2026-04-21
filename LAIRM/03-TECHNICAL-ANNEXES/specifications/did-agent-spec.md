@@ -6,7 +6,7 @@ last_updated: 2026-03-30
 last_review: 2026-04-03
 Status: Final
 Version: Initiation
-axiom: II
+Axiom: II
 license: CC-BY-SA-4.0
 ---
 

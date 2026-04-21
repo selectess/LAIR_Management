@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - global-justice
-  - geoeconomic-equity
-  - international-fairness
+keywords:
+  - global justice
+  - geoeconomic equity
+  - international fairness
   - equity-verification
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -197,10 +198,10 @@ class GlobalJusticeManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No global justice policy | 70% annual revenue fine |
-| Inequitable distribution | 80% annual revenue fine |
-| Vulnerable harm | 85% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No global justice policy | 70% CA fine |
+| Inequitable distribution | 80% CA fine |
+| Vulnerable harm | 85% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -224,7 +225,4 @@ class GlobalJusticeManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

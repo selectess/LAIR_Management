@@ -8,11 +8,11 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - prescription
-  - deadlines
-  - procedure
-  - justice
-  - recourse
+  - Prescription
+  - Deadlines
+  - Procedure
+  - Justice
+  - Recourse
 validations:
   legal: true
   technical: true
@@ -274,12 +274,12 @@ Each agent MUST maintain an immutable registry of:
 | Violation | Sanction | Deadline |
 |-----------|----------|----------|
 | Prescription not respected | Immediate revocation | Immediate |
-| Notification not sent | 15% annual revenue fine | 14 days |
-| Suspension not applied | 20% annual revenue fine | 14 days |
-| Incomplete registry | 10% annual revenue fine | 14 days |
+| Notification not sent | 15% CA fine | 14 days |
+| Suspension not applied | 20% CA fine | 14 days |
+| Incomplete registry | 10% CA fine | 14 days |
 | Fraud detected | License revocation | 7 days |
-| Recourse refused | 15% annual revenue fine | 14 days |
-| Audit trail modified | 25% annual revenue fine | 7 days |
+| Recourse refused | 15% CA fine | 14 days |
+| Audit trail modified | 25% CA fine | 7 days |
 | Recurrence | Permanent ban | Immediate |
 
 ### 5.3 Verification Process
@@ -322,7 +322,3 @@ Each agent MUST maintain an immutable registry of:
 
 ---
 
-
----
-
-**Next review**: June 2026

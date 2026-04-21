@@ -41,11 +41,11 @@ Any competent authority MUST be able to revoke an agent's identity in case of se
 
 ## 2. LEGAL FOUNDATION
 
-**Axiom Ψ-II: IDENTITAS AGENTICA**
+**Axiom Ψ-II : IDENTITAS AGENTICA**
 
 Revocation is the ultimate control mechanism. It ensures that any non-compliant or dangerous agent can be permanently stopped.
 
-**Fundamental Principles**:
+**Fundamental Principles** :
 - Ultimate control
 - Guaranteed security
 - Absolute irreversibility
@@ -95,7 +95,7 @@ class RevocationManager:
             'reason': reason,
             'authority_id': authority_id,
             'requested_at': datetime.utcnow().isoformat() + 'Z',
-            'status': 'pending'
+            'Status': 'pending'
         }
         
         self.revocation_log.append(request)
@@ -126,7 +126,7 @@ class RevocationManager:
             'reason': request['reason'],
             'authority_id': request['authority_id'],
             'executed_at': datetime.utcnow().isoformat() + 'Z',
-            'status': 'executed'
+            'Status': 'executed'
         }
         
         # Stop agent
@@ -151,7 +151,7 @@ class RevocationManager:
             'appellant_id': appellant_id,
             'appeal_reason': appeal_reason,
             'appealed_at': datetime.utcnow().isoformat() + 'Z',
-            'status': 'pending'
+            'Status': 'pending'
         }
         
         revocation['appeals'] = revocation.get('appeals', [])
@@ -244,18 +244,18 @@ See Section 3.2 above.
 7. Logging test
 8. Irreversibility test
 
-**Frequency**: Quarterly minimum
+**Frequency** : Quarterly minimum
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction |
 |-----------|----------|
-| Impossible revocation | License revocation, 40% annual revenue fine |
-| Non-immediate stop | Immediate stop, 35% annual revenue fine |
-| Missing archival | Operation suspension, 20% annual revenue fine |
-| Missing logging | 15% annual revenue fine |
-| Impossible appeal | Operation suspension, 15% annual revenue fine |
-| Reversible revocation | Immediate stop, 40% annual revenue fine |
+| Impossible revocation | License revocation, 40% CA fine |
+| Non-immediate stop | Immediate stop, 35% CA fine |
+| Missing archival | Operation suspension, 20% CA fine |
+| Missing logging | 15% CA fine |
+| Impossible appeal | Operation suspension, 15% CA fine |
+| Reversible revocation | Immediate stop, 40% CA fine |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -299,15 +299,15 @@ For detailed discussion of decentralized governance models and international com
 
 ## REFERENCES
 
-- Axiom Ψ-II: IDENTITAS AGENTICA
-- Article II.2.1: Agent Passport
-- Article II.2.11: Identity Certification
-- Chapter 11: Paradigm of Agent Identity
-- Glossary: Revocation, Archival
+- Axiom Ψ-II : IDENTITAS AGENTICA
+- Article II.2.1 : Agent Passport
+- Article II.2.11 : Identity Certification
+- Chapter 11 : Paradigm of Agent Identity
+- Glossary : Revocation, Archival
 
 ---
 
-**Next Review**: January 2027
+**Next Review** : January 2027
 
 
 ---

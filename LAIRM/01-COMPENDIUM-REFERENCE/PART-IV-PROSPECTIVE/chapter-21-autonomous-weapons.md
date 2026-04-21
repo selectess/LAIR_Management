@@ -6,15 +6,15 @@ associated_axiom: Ψ-XI ARMA PROHIBITA
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
-  - autonomous-weapons
-  - lethal-autonomous-weapons-systems
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
+  - autonomous weapons
+  - lethal autonomous weapons systems
   - LAWS
-  - meaningful-human-control
-  - international-humanitarian-law
-  - weapons-prohibition
+  - meaningful human control
+  - international humanitarian law
+  - weapons prohibition
 internal_references:
   - ../PART-III-PARADIGMS/chapter-10-paradigm-sovereignty.md
   - ../PART-II-DIMENSIONS/chapter-07-legal-dimension.md
@@ -110,7 +110,3 @@ Absolute prohibition of fully autonomous weapons (LAWS) with meaningful human co
 ---
 
 
-
----
-
-**Next review**: June 2026

@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - democratic-debate
-  - debate-process
-  - stakeholder-discussion
-  - debate-documentation
-  - debate-facilitation
+keywords:
+  - democratic debate
+  - debate process
+  - stakeholder discussion
+  - debate documentation
+  - debate facilitation
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -192,12 +193,12 @@ class DemocraticDebateManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No debate | 65% annual revenue fine |
-| Suppressed perspectives | 70% annual revenue fine |
-| Contributions not documented | 50% annual revenue fine |
-| Outcomes not documented | 55% annual revenue fine |
+| No debate | 65% CA fine |
+| Suppressed perspectives | 70% CA fine |
+| Contributions not documented | 50% CA fine |
+| Outcomes not documented | 55% CA fine |
 | Invalid signature | Immediate revocation |
-| Falsified debate | Immediate revocation + 75% annual revenue |
+| Falsified debate | Immediate revocation + 75% CA |
 
 ---
 
@@ -216,7 +217,4 @@ class DemocraticDebateManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

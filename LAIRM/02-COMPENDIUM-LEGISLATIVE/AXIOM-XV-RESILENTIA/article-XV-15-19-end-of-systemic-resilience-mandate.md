@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - end-of-mandate
-  - mandate-conclusion
-  - final-provisions
+keywords:
+  - end of mandate
+  - mandate conclusion
+  - final provisions
   - transition
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -268,11 +269,11 @@ impl MandateConclusionManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Incomplete conclusion | 84% annual revenue fine |
-| Records not archived | 85% annual revenue fine |
-| Missing documentation | 83% annual revenue fine |
-| Unverified conclusion | 83% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| Incomplete conclusion | 84% CA fine |
+| Records not archived | 85% CA fine |
+| Missing documentation | 83% CA fine |
+| Unverified conclusion | 83% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -317,7 +318,4 @@ All 19 articles of AXIOM-XV: RESILENTIA SYSTEMICA have been completed:
 
 All articles include comprehensive legal foundations, technical specifications, reference implementations with case studies, Rust implementations, verification procedures, and sanction schedules.
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

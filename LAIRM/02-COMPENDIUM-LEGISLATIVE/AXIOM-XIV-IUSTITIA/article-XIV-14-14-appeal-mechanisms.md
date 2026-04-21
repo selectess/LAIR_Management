@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - appeal-mechanisms
-  - appeals-process
-  - dispute-resolution
-  - fairness-appeals
+keywords:
+  - appeal mechanisms
+  - appeals process
+  - dispute resolution
+  - fairness appeals
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -276,11 +277,11 @@ impl AppealManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No appeal mechanism | 85% annual revenue fine |
-| Appeal access denial | 82% annual revenue fine |
-| Biased review | 88% annual revenue fine |
-| Decision opacity | 80% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No appeal mechanism | 85% CA fine |
+| Appeal access denial | 82% CA fine |
+| Biased review | 88% CA fine |
+| Decision opacity | 80% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -295,7 +296,4 @@ impl AppealManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

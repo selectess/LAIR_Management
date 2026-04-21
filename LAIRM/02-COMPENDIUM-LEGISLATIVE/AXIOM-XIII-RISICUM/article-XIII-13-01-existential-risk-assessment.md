@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - existential-risk
-  - AGI-safety
+keywords:
+  - existential risk
+  - AGI safety
   - superintelligence
-  - risk-assessment
-  - alignment-problem
+  - risk assessment
+  - alignment problem
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -479,12 +480,12 @@ impl RiskAssessmentManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No risk assessment | 90% annual revenue fine + development halt |
-| Inadequate assessment | 80% annual revenue fine |
-| Risk concealment | 95% annual revenue fine + license revocation |
-| High-risk development | 85% annual revenue fine + immediate halt |
+| No risk assessment | 90% CA fine + development halt |
+| Inadequate assessment | 80% CA fine |
+| Risk concealment | 95% CA fine + license revocation |
+| High-risk development | 85% CA fine + immediate halt |
 | Critical-risk development | Permanent ban + criminal referral |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -525,7 +526,4 @@ impl RiskAssessmentManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

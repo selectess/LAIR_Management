@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - interoperability-certification
-  - compliance-certification
-  - standards-verification
-  - third-party-certification
-  - certification-registry
+keywords:
+  - interoperability certification
+  - compliance certification
+  - standards verification
+  - third-party certification
+  - certification registry
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -327,7 +328,7 @@ class InteroperabilityCertificationManager:
 - **Compensation**: $8.1M + 60% penalty
 
 #### Case 2: IntegrationService - Expired Certification (Q1 2026)
-- **Incident**: Continuoused operation with expired certification
+- **Incident**: Continued operation with expired certification
 - **Damages**: €4.5M (compliance violations)
 - **Root Cause**: No renewal requirement
 - **Resolution**: Mandatory annual renewal
@@ -518,7 +519,4 @@ impl CertificationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - performance-audit
-  - performance-metrics
-  - SLA-compliance
-  - load-testing
-  - capacity-planning
+keywords:
+  - performance audit
+  - performance metrics
+  - SLA compliance
+  - load testing
+  - capacity planning
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -194,13 +195,13 @@ class PerformanceAuditManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No performance audit | 50% annual revenue fine |
-| SLA violation | 55% annual revenue fine |
-| No load testing | 45% annual revenue fine |
-| No capacity planning | 40% annual revenue fine |
-| Metrics not documented | 35% annual revenue fine |
-| Violations not tracked | 40% annual revenue fine |
-| Falsified audit | Immediate revocation + 70% annual revenue |
+| No performance audit | 50% CA fine |
+| SLA violation | 55% CA fine |
+| No load testing | 45% CA fine |
+| No capacity planning | 40% CA fine |
+| Metrics not documented | 35% CA fine |
+| Violations not tracked | 40% CA fine |
+| Falsified audit | Immediate revocation + 70% CA |
 | Recurrence | Permanent ban |
 
 ---
@@ -220,7 +221,4 @@ class PerformanceAuditManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

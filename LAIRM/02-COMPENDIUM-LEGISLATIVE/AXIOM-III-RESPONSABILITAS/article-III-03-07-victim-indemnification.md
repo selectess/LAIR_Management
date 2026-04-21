@@ -8,11 +8,11 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - indemnification
-  - victims
-  - compensation
-  - damages
-  - justice
+  - Indemnification
+  - Victims
+  - Compensation
+  - Damages
+  - Justice
 validations:
   legal: true
   technical: true
@@ -49,7 +49,7 @@ Every victim of damages caused by an autonomous agent MUST receive complete and 
 
 Rapid indemnification of victims is a fundamental moral and legal duty. No victim should wait long to receive compensation. Indemnification MUST be complete and cover all damages, without exception. This is the heart of agentic justice.
 
-**Fundamental Principles**:
+**Fundamental Principles** :
 - Complete indemnification (100% of damages)
 - Speed of process (< 30 days)
 - Complete coverage (all types)
@@ -147,25 +147,25 @@ class IndemnificationCalculator:
 
 ### 4.1 Use Case: TradeBot3000 ($45M)
 
-**Incident**: Unauthorized position of $45M
+**Incident** : Unauthorized position of $45M
 **Direct damages** : $2.3M actual loss
 **Indirect damages** : $450k liquidation fees
 **Moral damages** : €100k (stress, loss of confidence)
 **Future damages** : €200k (loss of income 2 years)
 **Total indemnification** : $3.05M + €300k
 **Payment deadline** : 15 days (compliant)
-**Status**: Paid in full
+**Status** : Paid in full
 
 ### 4.2 Use Case: HealthBot (Incorrect Diagnosis)
 
-**Incident**: Incorrect diagnosis causing unnecessary hospitalization
+**Incident** : Incorrect diagnosis causing unnecessary hospitalization
 **Direct damages** : €45k medical fees
 **Indirect damages** : €120k loss of income
 **Moral damages** : €685k (suffering, trauma)
 **Future damages** : €50k (medical follow-up 1 year)
 **Total indemnification** : €900k
 **Payment deadline** : 22 days (compliant)
-**Status**: Paid in full
+**Status** : Paid in full
 
 ### 4.3 Reference Code (Rust)
 
@@ -291,19 +291,19 @@ Each agent MUST maintain an immutable registry of :
 7. Verify Transparency (public registry)
 8. Verify available recourse
 
-**Frequency**: Minimum quarterly
+**Frequency** : Minimum quarterly
 
 ### 5.2 Sanctions for Non-Compliance
 
 | Violation | Sanction | Deadline |
 |-----------|----------|----------|
-| Refusal to indemnify | Immediate revocation, 30% annual revenue fine | 7 days |
-| Partial indemnification | Suspension, 20% annual revenue fine | 7 days |
-| Deadline exceeded | 15% annual revenue fine + interest | 14 days |
-| Interest not applied | 10% annual revenue fine | 14 days |
-| Incomplete registry | 5% annual revenue fine | 14 days |
-| Missing documentation | 10% annual revenue fine | 14 days |
-| Recourse refused | 15% annual revenue fine | 14 days |
+| Refusal to indemnify | Immediate revocation, 30% CA fine | 7 days |
+| Partial indemnification | Suspension, 20% CA fine | 7 days |
+| Deadline exceeded | 15% CA fine + interest | 14 days |
+| Interest not applied | 10% CA fine | 14 days |
+| Incomplete registry | 5% CA fine | 14 days |
+| Missing documentation | 10% CA fine | 14 days |
+| Recourse refused | 15% CA fine | 14 days |
 | Recurrence | Permanent ban | Immediate |
 
 ### 5.3 Verification Process
@@ -321,32 +321,28 @@ Each agent MUST maintain an immutable registry of :
 
 ## 6. EFFECTIVE DATE
 
-**Effective date**: January 1, 2027
+**Effective date** : January 1, 2027
 
 **Compliance calendar** :
-- New agents: Compliance mandatory from deployment (0 days)
-- Existing agents: Compliance mandatory before January 1, 2028 (9 months)
-- Critical agents: Compliance mandatory before July 1, 2027 (3 months)
+- New agents : Compliance mandatory from deployment (0 days)
+- Existing agents : Compliance mandatory before January 1, 2028 (9 months)
+- Critical agents : Compliance mandatory before July 1, 2027 (3 months)
 
 **Transitional provisions** :
-- Ongoing indemnifications: Processing under new rules (< 30 days)
-- Non-compliant agents: Suspension until compliance
-- 60-day deadline → 30-day deadline: Progressive transition (6 months)
+- Ongoing indemnifications : Processing under new rules (< 30 days)
+- Non-compliant agents : Suspension until compliance
+- 60-day deadline → 30-day deadline : Progressive transition (6 months)
 
 ---
 
 ## REFERENCES
 
-- Axiom Ψ-III: RESPONSABILITAS AGENTICA
-- Article III.3.1: Civil Responsibility
-- Article III.3.3: Mandatory Insurance
-- Article III.3.5: Damages and Repair
-- Chapter 12: Responsibility Paradigm
-- The Cybernetic Criterion: Chapters 0-5
+- Axiom Ψ-III : RESPONSABILITAS AGENTICA
+- Article III.3.1 : Civil Responsibility
+- Article III.3.3 : Mandatory Insurance
+- Article III.3.5 : Damages and Repair
+- Chapter 12 : Responsibility Paradigm
+- The Cybernetic Criterion : Chapters 0-5
 
 ---
 
-
----
-
-**Next review**: June 2026

@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
+keywords:
   - reversibility
-  - enhancement-reversal
-  - baseline-restoration
-  - cognitive-restoration
+  - enhancement reversal
+  - baseline restoration
+  - cognitive restoration
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -376,13 +377,13 @@ impl ReversibilityManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No baseline documentation | 70% annual revenue fine |
-| Irreversible enhancement | 90% annual revenue fine + license revocation |
-| Reversal not available | 85% annual revenue fine |
-| Reversal timeline exceeded | 75% annual revenue fine |
-| Low success rate | 80% annual revenue fine |
-| High adverse effects | 75% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No baseline documentation | 70% CA fine |
+| Irreversible enhancement | 90% CA fine + license revocation |
+| Reversal not available | 85% CA fine |
+| Reversal timeline exceeded | 75% CA fine |
+| Low success rate | 80% CA fine |
+| High adverse effects | 75% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ### 5.3 Verification Process
@@ -424,7 +425,4 @@ impl ReversibilityManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

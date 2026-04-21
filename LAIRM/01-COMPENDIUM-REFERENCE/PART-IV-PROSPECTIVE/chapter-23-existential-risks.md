@@ -6,15 +6,15 @@ associated_axiom: Ψ-XIII RISICUM EXISTENTIALE
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
-  - existential-risk
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
+  - existential risk
   - superintelligence
   - AGI
   - ASI
-  - alignment-problem
-  - control-problem
+  - alignment problem
+  - control problem
   - x-risk
 internal_references:
   - ../PART-III-PARADIGMS/chapter-10-paradigm-sovereignty.md
@@ -123,7 +123,3 @@ Existential risk management (mandatory safety research, international coordinati
 ---
 
 
-
----
-
-**Next review**: June 2026

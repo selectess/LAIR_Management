@@ -3,12 +3,12 @@ title: "Chapter 3: Systemic Architecture of LAIRM"
 number: 3
 part: I
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
-  - Systemic-Architecture
-  - Technical-Components
-  - LAIRM-Infrastructure
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
+  - Systemic Architecture
+  - Technical Components
+  - LAIRM Infrastructure
   - Interoperability
   - Deployment
 Status: Final
@@ -460,6 +460,9 @@ The systemic architecture of LAIRM rests on four principal components: (1) the A
 
 **End of Chapter 3: Systemic Architecture of LAIRM**
 
+**Last Updated**: 2026-03-30  
+**Last Reviewed**: 2026-04-03  
+**Status**: Final  
 **Version**: Initiation
 
 **Related Chapters**:
@@ -469,7 +472,3 @@ The systemic architecture of LAIRM rests on four principal components: (1) the A
 - [See Glossary](../../00-METADATA/glossary.md)
 
 ---
-
----
-
-**Next review**: June 2026

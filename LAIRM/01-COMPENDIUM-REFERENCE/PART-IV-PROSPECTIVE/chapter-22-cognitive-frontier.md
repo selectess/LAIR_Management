@@ -6,15 +6,15 @@ associated_axiom: Ψ-XII COGNITIO LIMITA
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
-  - cognitive-enhancement
-  - brain-computer-interfaces
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
+  - cognitive enhancement
+  - brain-computer interfaces
   - BCI
-  - neural-augmentation
-  - cognitive-sovereignty
-  - human-enhancement
+  - neural augmentation
+  - cognitive sovereignty
+  - human enhancement
 internal_references:
   - ../PART-III-PARADIGMS/chapter-10-paradigm-sovereignty.md
   - chapter-27-humanity-2-0.md
@@ -121,7 +121,3 @@ Cognitive sovereignty (right to unaugmented cognition, informed consent, reversi
 ---
 
 
-
----
-
-**Next review**: June 2026

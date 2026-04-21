@@ -34,7 +34,7 @@ Every autonomous agent MUST have complete, immutable and verifiable traceability
 - Identification des acteurs (RSA-4096)
 - Enregistrement des actions (immutable)
 - Horodatage UTC (RFC 3161)
-- CONTEXT complet (IP, location, dispositif)
+- CONTEXT complet (IP, localisation, dispositif)
 - Guaranteed immutability (blockchain)
 - Cryptographic verifiability
 - Accessibility < 1 second
@@ -253,7 +253,7 @@ class CompleteTraceabilityManager:
         return list(set(t['actor_id'] for t in traces))
     
     def _get_action_summary(self, traces: List[Dict]) -> Dict:
-        """Summarizes the actions"""
+        """Résume les actions"""
         summary = {}
         for trace in traces:
             action = trace['action_type']
@@ -278,7 +278,7 @@ class CompleteTraceabilityManager:
         pass
 ```
 
-### 3.2 Complete Traceable Information
+### 3.2 Informations Traceables Complètes
 
 | Information | Description | Format | Obligatoire |
 |-------------|-------------|--------|------------|
@@ -287,23 +287,23 @@ class CompleteTraceabilityManager:
 | Actor ID | Identifiant de l'acteur | String | Oui |
 | Action type | type d'action | Enum | Oui |
 | Timestamp | Date et heure UTC | ISO 8601 | Oui |
-| RFC 3161 Timestamp | Certified timestamp | RFC 3161 | Yes |
+| RFC 3161 Timestamp | Timestamp certifié | RFC 3161 | Oui |
 | IP Address | Adresse IP de l'acteur | IPv4/IPv6 | Oui |
-| Location | Geographic location | Lat/Long | Yes |
+| Location | Localisation géographique | Lat/Long | Oui |
 | Device ID | Identifiant du dispositif | String | Oui |
 | Details | Details de l'action | JSON | Oui |
-| Sequence Number | Sequence number | Integer | Yes |
+| Sequence Number | Numéro de sequence | Integer | Oui |
 | Hash | Hash SHA-256 | Hex | Oui |
 | Signature | Signature RSA-4096 | Hex | Oui |
 
 ### 3.3 Acteurs Traceables
 
-Actors must be identified and verified:
-- Deployer (deployer_*)
-- Operator (operator_*)
+Les acteurs must be identifiés et vérifiés :
+- Déployeur (deployer_*)
+- Opérateur (operator_*)
 - Superviseur (supervisor_*)
 - Auditeur (auditor_*)
-- System (system_*)
+- Système (system_*)
 - Utilisateur (user_*)
 
 ---
@@ -314,19 +314,19 @@ Actors must be identified and verified:
 
 #### Case 1: TradeBot3000 - Traceability Manquante (Q1 2026)
 - **Incident**: Actions not traced, accountability impossible
-- **Loss** : $3.8M (regulatory fines + damages)
+- **Perte** : $3.8M (regulatory fines + damages)
 - **Cause**: No traceability system
 - **Resolution**: Complete traceability with actor identification
 - **Compensation** : $3.8M + 35% penalty
 
-#### Case 2: HealthBot - Unidentified Actor (Q1 2026)
+#### Case 2: HealthBot - Acteur Non-Identifié (Q1 2026)
 - **Incident**: Actions traced but actor not verified
 - **Dommages** : €2.5M (patient safety incidents)
 - **Cause**: Unverified actor identity
 - **Resolution**: RSA-4096 actor verification
 - **Compensation** : €2.5M + 30% penalty
 
-#### Case 3: SupplyChainX - Non-Verifiable Traceability (Q1 2026)
+#### Case 3: SupplyChainX - Traceability Non-Vérifiable (Q1 2026)
 - **Incident**: Traces not cryptographically verifiable
 - **Dommages** : €2.3M (audit failures)
 - **Cause**: Missing signatures and hash chain
@@ -506,7 +506,7 @@ impl CompleteTraceabilityManager {
 }
 ```
 
-### 4.3 Complete Traceability Chain
+### 4.3 Chaîne de Traceability Complète
 
 ```
 Action 1 (Creation by deployer_001)
@@ -539,11 +539,11 @@ Action 3 (Maintenance by technician_001)
 Chaque trace MUST be recorded avec :
 - Trace ID unique
 - Agent ID
-- Actor ID (verified)
+- Actor ID (vérifié)
 - Action type
 - Timestamp UTC (RFC 3161)
 - IP Address
-- Location (geographic)
+- Location (géographique)
 - Device ID
 - Sequence Number
 - Hash SHA-256
@@ -556,16 +556,16 @@ Chaque trace MUST be recorded avec :
 ### 5.1 Compliance Verification
 
 **Mandatory Tests** :
-1. Verify complete traceability (100% of actions)
+1. Verify traceability complète (100% des actions)
 2. Verify identification des acteurs (RSA-4096)
 3. Verify recording des actions (immutable)
 4. Verify horodatage UTC (RFC 3161)
-5. Verify CONTEXT complet (IP, location, dispositif)
+5. Verify CONTEXT complet (IP, localisation, dispositif)
 6. Verify immutability (blockchain)
 7. Verify verifiability (signatures)
-8. Verify accessibility (< 1 sec)
+8. Verify accessibilité (< 1 sec)
 9. Verify audit trail complet
-10. Verify non-repudiation
+10. Verify non-répudiation
 
 **Frequency** : À chaque action, audit complet mensuel
 
@@ -573,28 +573,28 @@ Chaque trace MUST be recorded avec :
 
 | Violation | Sanction |
 |-----------|----------|
-| Incomplete traceability | Immediate revocation + 40% annual revenue |
-| Unidentified actor | Immediate revocation |
+| Traceability incomplète | Immediate revocation + 40% annual revenue |
+| Acteur non-identifié | Immediate revocation |
 | Action non-recorded | Immediate revocation + 35% annual revenue |
-| Immutability compromised | License revocation |
-| Verifiability compromised | Immediate revocation |
+| Immuabilité compromise | License revocation |
+| Vérifiabilité compromise | Immediate revocation |
 | Horodatage invalide | Fine 30% annual revenue |
 | CONTEXT manquant | Fine 25% annual revenue |
-| Accessibility > 1 sec | Fine 20% annual revenue |
+| Accessibilité > 1 sec | Fine 20% annual revenue |
 | Missing audit trail | Fine 25% annual revenue |
-| Non-repudiation compromise | Immediate revocation |
+| Non-répudiation compromise | Immediate revocation |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
 
 1. Verification mensuelle de traceability
-2. Audit d'integrity des traces
+2. Audit d'intégrité des traces
 3. Verification d'identity des acteurs
 4. Audit de signatures
 5. Verification de horodatage
 6. Audit trail complet
 7. Rapport de traceability
-8. Legal certification
+8. Certification légale
 
 ---
 
@@ -609,7 +609,7 @@ Chaque trace MUST be recorded avec :
 
 **Transitional Provisions** :
 - Existing agents: Audit de traceability avant 30 juin 2027
-- Traceability infrastructure established before January 1, 2027
+- Infrastructure de traceability établie before January 1, 2027
 
 ---
 
@@ -617,20 +617,20 @@ Chaque trace MUST be recorded avec :
 
 **Axiom Ψ-IV: CIRCULUS VITAE**
 - Foundation: Complete lifecycle with full traceability
-- Principes: Accountability, non-repudiation, immutability
+- Principes: Accountability, non-répudiation, immuabilité
 
 **Articles connexes** :
-- Article II.2.6: Complete Traceability
+- Article II.2.6: Traceability Complète
 - Article II.2.5: Audit Trail
 - Article IV.4.17: Historique Complet
 - Article IV.4.11: Documentation du Cycle de Vie
 - Article IV.4.12: Audit du Cycle de Vie
 
-**Reference standards**:
-- ISO 27001: Management de la traceability
-- ISO 27035: Management des incidents
+**Normes de référence** :
+- ISO 27001: Gestion de la traceability
+- ISO 27035: Gestion des incidents
 - RFC 3161: Timestamping
-- NIST SP 800-92: Guide de management des logs
+- NIST SP 800-92: Guide de gestion des logs
 
 ---
 

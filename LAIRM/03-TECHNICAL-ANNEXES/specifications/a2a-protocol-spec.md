@@ -6,7 +6,7 @@ last_updated: 2026-03-30
 last_review: 2026-04-03
 Status: Final
 Version: Initiation
-axiom: V
+Axiom: V
 license: CC-BY-SA-4.0
 ---
 
@@ -329,3 +329,4 @@ print(f"Response: {response}")
 - [DID Agent Specification](./did-agent-spec.md)
 - [Agent Passport Schema](../schemas/agent-passport-schema.md)
 
+**Last Reviewed**: April 3, 2026

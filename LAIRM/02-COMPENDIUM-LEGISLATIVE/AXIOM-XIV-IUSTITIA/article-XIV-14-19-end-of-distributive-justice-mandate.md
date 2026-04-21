@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - mandate-termination
-  - end-of-mandate
-  - mandate-conclusion
-  - final-provisions
+keywords:
+  - mandate termination
+  - end of mandate
+  - mandate conclusion
+  - final provisions
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -285,11 +286,11 @@ impl ConclusionManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No final verification | 85% annual revenue fine |
-| Records not archived | 88% annual revenue fine |
-| Stakeholders not notified | 82% annual revenue fine |
-| Transition mismanaged | 80% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No final verification | 85% CA fine |
+| Records not archived | 88% CA fine |
+| Stakeholders not notified | 82% CA fine |
+| Transition mismanaged | 80% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -315,7 +316,4 @@ impl ConclusionManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

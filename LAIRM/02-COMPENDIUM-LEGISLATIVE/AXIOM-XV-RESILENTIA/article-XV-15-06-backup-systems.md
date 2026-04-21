@@ -7,15 +7,16 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - backup-systems
-  - data-backup
-  - system-backup
-  - backup-procedures
+keywords:
+  - backup systems
+  - data backup
+  - system backup
+  - backup procedures
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -109,11 +110,11 @@ class BackupManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No backup system | 85% annual revenue fine |
-| Irregular backups | 82% annual revenue fine |
-| Backups not tested | 80% annual revenue fine |
-| Backup corruption | 88% annual revenue fine |
-| Records falsified | Immediate revocation + 90% annual revenue |
+| No backup system | 85% CA fine |
+| Irregular backups | 82% CA fine |
+| Backups not tested | 80% CA fine |
+| Backup corruption | 88% CA fine |
+| Records falsified | Immediate revocation + 90% CA |
 | Recurrence | Permanent ban + criminal referral |
 
 ---
@@ -124,7 +125,3 @@ class BackupManager:
 
 ---
 
-
----
-
-**Next review**: June 2026

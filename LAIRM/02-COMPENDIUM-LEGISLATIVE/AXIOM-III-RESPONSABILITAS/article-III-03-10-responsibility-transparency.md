@@ -8,11 +8,11 @@ date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - transparency
-  - responsibility
-  - publicity
-  - registry
-  - trust
+  - Transparency
+  - Responsibility
+  - Publicity
+  - Registry
+  - Trust
 validations:
   legal: true
   technical: true
@@ -272,13 +272,13 @@ Each agent MUST have a public profile containing:
 
 | Violation | Sanction | Deadline |
 |-----------|----------|----------|
-| Report not published | Suspension, 20% annual revenue fine | 7 days |
-| Incomplete report | 15% annual revenue fine | 14 days |
-| Inaccurate data | 20% annual revenue fine | 14 days |
-| Public access refused | 25% annual revenue fine | 14 days |
+| Report not published | Suspension, 20% CA fine | 7 days |
+| Incomplete report | 15% CA fine | 14 days |
+| Inaccurate data | 20% CA fine | 14 days |
+| Public access refused | 25% CA fine | 14 days |
 | Report modified | License revocation | 7 days |
-| Non-readable format | 10% annual revenue fine | 14 days |
-| Incomplete history | 10% annual revenue fine | 14 days |
+| Non-readable format | 10% CA fine | 14 days |
+| Incomplete history | 10% CA fine | 14 days |
 | Recurrence | Permanent ban | Immediate |
 
 ### 5.3 Verification Process
@@ -321,7 +321,3 @@ Each agent MUST have a public profile containing:
 
 ---
 
-
----
-
-**Next review**: June 2026

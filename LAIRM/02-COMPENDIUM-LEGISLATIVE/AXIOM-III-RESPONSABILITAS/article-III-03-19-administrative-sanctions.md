@@ -259,7 +259,3 @@ Each agent MUST maintain an immutable registry of:
 
 **Status**: Final
 
-
----
-
-**Next review**: June 2026

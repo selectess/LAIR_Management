@@ -7,7 +7,7 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
+keywords:
   - sanctions
   - penalties
   - enforcement
@@ -17,6 +17,7 @@ validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -255,10 +256,10 @@ class SanctionsSystem:
 
 | Severity | Financial Penalty | License Revocation | Criminal Referral |
 |----------|------------------|-------------------|-------------------|
-| Low | 50% annual revenue | No | No |
-| Medium | 75% annual revenue | No | No |
-| High | 90% annual revenue | Yes | No |
-| Critical | 100% annual revenue | Yes | Yes |
+| Low | 50% CA | No | No |
+| Medium | 75% CA | No | No |
+| High | 90% CA | Yes | No |
+| Critical | 100% CA | Yes | Yes |
 
 ### 3.3 Sanctions Process
 
@@ -282,7 +283,7 @@ class SanctionsSystem:
 - **Organization**: Advanced AI Research Institute, Location: Germany
 - **Violation**: Delayed incident reporting (safety protocol breach)
 - **Severity**: Low
-- **Damages**: €2.5M (50% annual revenue fine)
+- **Damages**: €2.5M (50% CA fine)
 - **License Revocation**: No
 - **Remediation**: Compliance training, enhanced monitoring protocols
 - **Outcome**: Fine paid, compliance improved, quarterly audits implemented
@@ -292,7 +293,7 @@ class SanctionsSystem:
 - **Organization**: SynergyAI Development Consortium, Location: European Union
 - **Violation**: Emergency shutdown failure (critical safety system non-functional)
 - **Severity**: High
-- **Damages**: €45M (90% annual revenue fine)
+- **Damages**: €45M (90% CA fine)
 - **License Revocation**: Yes (immediate)
 - **Investigation**: Criminal investigation initiated, facility inspected
 - **Outcome**: License revoked, criminal investigation ongoing, permanent development ban
@@ -302,7 +303,7 @@ class SanctionsSystem:
 - **Organization**: Classified unauthorized research group, Location: undisclosed
 - **Violation**: ASI development attempt (highest severity violation)
 - **Severity**: Critical
-- **Damages**: €50M (100% annual revenue fine)
+- **Damages**: €50M (100% CA fine)
 - **License Revocation**: Yes (permanent)
 - **Criminal Referral**: Yes (criminal prosecution initiated)
 - **Outcome**: Criminal prosecution, permanent ban, facility seized, €50M fine imposed
@@ -423,11 +424,11 @@ impl SanctionsManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No sanctions system | 95% annual revenue fine + system halt |
-| Sanctions not issued | 90% annual revenue fine + system halt |
-| Enforcement delayed | 85% annual revenue fine + system halt |
-| Penalties not collected | 80% annual revenue fine + system halt |
-| Records falsified | 100% annual revenue fine + criminal prosecution |
+| No sanctions system | 95% CA fine + system halt |
+| Sanctions not issued | 90% CA fine + system halt |
+| Enforcement delayed | 85% CA fine + system halt |
+| Penalties not collected | 80% CA fine + system halt |
+| Records falsified | 100% CA fine + criminal prosecution |
 | Recurrence | Permanent ban + criminal prosecution |
 
 ### 5.3 Verification Process
@@ -470,7 +471,4 @@ impl SanctionsManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

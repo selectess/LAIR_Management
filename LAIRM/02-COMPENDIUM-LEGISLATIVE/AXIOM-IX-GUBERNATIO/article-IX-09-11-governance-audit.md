@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - governance-audit
-  - audit-process
-  - governance-verification
-  - audit-findings
-  - audit-remediation
+keywords:
+  - governance audit
+  - audit process
+  - governance verification
+  - audit findings
+  - audit remediation
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -202,13 +203,13 @@ class GovernanceAuditManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No audit | 75% annual revenue fine |
-| Non-independent auditor | 65% annual revenue fine |
-| Incomplete coverage | 55% annual revenue fine |
-| Findings not documented | 50% annual revenue fine |
-| Recommendations not implemented | 60% annual revenue fine |
+| No audit | 75% CA fine |
+| Non-independent auditor | 65% CA fine |
+| Incomplete coverage | 55% CA fine |
+| Findings not documented | 50% CA fine |
+| Recommendations not implemented | 60% CA fine |
 | Invalid signature | Immediate revocation |
-| Falsified audit | Immediate revocation + 80% annual revenue |
+| Falsified audit | Immediate revocation + 80% CA |
 
 ---
 
@@ -227,7 +228,4 @@ class GovernanceAuditManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

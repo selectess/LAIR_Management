@@ -96,7 +96,7 @@ class EndOfSupportManager:
             'signature': None
         }
         
-        # Sign definition
+        # Signer définition
         eos['signature'] = self._sign_eos_definition(eos)
         
         # Record
@@ -133,7 +133,7 @@ class EndOfSupportManager:
         # Signer annonce
         announcement['signature'] = self._sign_announcement(announcement)
         
-        # Create announcement message
+        # Créer message d'annonce
         message = self._create_announcement_message(announcement)
         
         # Envoyer annonce
@@ -145,7 +145,7 @@ class EndOfSupportManager:
         return announcement
     
     def provide_security_support(self, agent_id: str):
-        """Provides security support until end date"""
+        """Fournit le support de security jusqu'à la fin"""
         eos = self.eos_registry.get(agent_id)
         if not eos:
             raise ValueError("End of support not defined")
@@ -156,12 +156,12 @@ class EndOfSupportManager:
         if datetime.utcnow() > end_datetime:
             raise ValueError("End of support Date has passed")
         
-        # Retrieve pending security updates
+        # Récupérer mises à jour de security en attente
         security_updates = self._get_pending_security_updates(agent_id)
         
         applied_updates = []
         for update in security_updates:
-            # Apply update
+            # Appliquer mise à jour
             self._apply_security_update(agent_id, update)
             
             # Record
@@ -220,7 +220,7 @@ class EndOfSupportManager:
             'responsible': 'Support Team'
         })
         
-        # Phase 4: Graceful decommission (30 days after)
+        # Phase 4: Décommission gracieuse (30 days après)
         transition_plan['phases'].append({
             'phase': 'graceful_decommission',
             'scheduled_date': (end_datetime + timedelta(days=30)).isoformat(),
@@ -229,11 +229,11 @@ class EndOfSupportManager:
             'responsible': 'Operations Team'
         })
         
-        # Phase 5: Indefinite archival
+        # Phase 5: Archivage indéfini
         transition_plan['phases'].append({
             'phase': 'indefinite_archival',
             'scheduled_date': (end_datetime + timedelta(days=37)).isoformat(),
-            'duration_days': -1,  # Indefinite
+            'duration_days': -1,  # Indéfini
             'description': 'Archive agent data indefinitely',
             'responsible': 'Archive Team'
         })
@@ -247,7 +247,7 @@ class EndOfSupportManager:
         return transition_plan
     
     def _create_eos_phases(self, end_datetime: datetime) -> List[Dict]:
-        """Creates les phases de fin de support"""
+        """Crée les phases de fin de support"""
         return [
             {'phase': 'active_support', 'duration_months': 18},
             {'phase': 'security_updates_only', 'duration_months': 0},
@@ -264,7 +264,7 @@ class EndOfSupportManager:
         return hashlib.sha256(str(announcement).encode()).hexdigest()
     
     def _sign_update(self, update: Dict) -> str:
-        """Signs the update"""
+        """Signs the mise à jour"""
         return hashlib.sha256(str(update).encode()).hexdigest()
     
     def _sign_transition_plan(self, plan: Dict) -> str:
@@ -272,7 +272,7 @@ class EndOfSupportManager:
         return hashlib.sha256(str(plan).encode()).hexdigest()
     
     def _create_announcement_message(self, announcement: Dict) -> str:
-        """Creates le message announcement"""
+        """Crée le message d'annonce"""
         return f"Agent {announcement['agent_id']} support ends on {announcement['end_date']}"
     
     def _notify_stakeholders(self, agent_id: str, eos: Dict):
@@ -284,34 +284,34 @@ class EndOfSupportManager:
         pass
     
     def _get_pending_security_updates(self, agent_id: str) -> List[Dict]:
-        """Retrieves the updates de security en attente"""
+        """Retrieves the mises à jour de security en attente"""
         return []
     
     def _apply_security_update(self, agent_id: str, update: Dict):
-        """Applique une update de security"""
+        """Applique une mise à jour de security"""
         pass
 ```
 
 ### 3.2 Phases de Fin de Support
 
-| Phase | Duration | Activities | Responsible |
+| Phase | Durée | Activités | Responsable |
 |-------|-------|-----------|------------|
-| Support actif | 18 months | Updates, support | Support Team |
+| Support actif | 18 months | Mises à jour, support | Support Team |
 | Archivage | 30 days avant | Archivage data | Operations |
 | Notification finale | 7 days avant | Communication | Communications |
-| End of support | Day 0 | Support stop | Support Team |
-| Decommission | 30 days after | Graceful decommission | Operations |
-| Indefinite archival | Indefinite | Conservation data | Archive Team |
+| Fin de support | Jour J | Arrêt support | Support Team |
+| Décommission | 30 days après | Décommission gracieuse | Operations |
+| Archivage indéfini | Indéfini | Conservation data | Archive Team |
 
 ### 3.3 Obligations de Support
 
-Until end of support, the deployer MUST:
-- Fournir updates de security (100%)
+Jusqu'à la fin de support, le déployeur MUST :
+- Fournir mises à jour de security (100%)
 - Corriger bugs criticals (< 24 heures)
-- Maintain up-to-date documentation
+- Maintenir documentation (à jour)
 - Supporter les utilisateurs (< 4 heures)
-- Plan transition (documented)
-- Archiver data (indefinite)
+- Planifier transition (documentée)
+- Archiver data (indéfini)
 
 ---
 
@@ -321,12 +321,12 @@ Until end of support, the deployer MUST:
 
 #### Case 1: TradeBot3000 - Fin de Support Abrupte (Q1 2026)
 - **Incident**: Abrupt end of support without notice
-- **Loss** : $5.2M (business disruption + damages)
+- **Perte** : $5.2M (business disruption + damages)
 - **Cause**: No end-of-support planning
 - **Resolution** : 18-month notice + transition plan
 - **Compensation** : $5.2M + 40% penalty
 
-#### Case 2: HealthBot - Lost Data (Q1 2026)
+#### Case 2: HealthBot - Données Perdues (Q1 2026)
 - **Incident**: Patient data lost during decommission
 - **Dommages** : €3.1M (GDPR fines + damages)
 - **Cause**: No archival plan
@@ -548,7 +548,7 @@ impl EndOfSupportManager {
 ### 4.3 Calendrier de Fin de Support
 
 ```
-Jour 0: Definition de la fin de support
+Jour 0: Définition de la fin de support
 ├── End Date: 2027-09-30
 ├── Annonce: 2026-03-30
 └── Phases: 5
@@ -559,9 +559,9 @@ Jour 548: Annonce de la fin de support
 └── Plan de transition: Disponible
 
 Jour 1096: Archivage des data
-├── Duration: 7 days
-├── Responsible: Operations Team
-└── Verification: Complete
+├── Durée: 7 days
+├── Responsable: Operations Team
+└── Verification: Complète
 
 Jour 1103: Notification finale
 ├── Message: "Support ends in 7 days"
@@ -569,19 +569,19 @@ Jour 1103: Notification finale
 └── Plan: Transition en cours
 
 Jour 1110: Fin de support
-├── Support: Stopped
-├── Archival: Completed
-└── Decommission: Initiated
+├── Support: Arrêté
+├── Archivage: Complété
+└── Décommission: Initiée
 
-Jour 1140: Decommission graceful
-├── Duration: 7 days
-├── Responsible: Operations Team
-└── Verification: Complete
+Jour 1140: Décommission gracieuse
+├── Durée: 7 days
+├── Responsable: Operations Team
+└── Verification: Complète
 
-Jour 1147: Indefinite archival
-├── Duration: Indefinitee
-├── Responsible: Archive Team
-└── Retention: Permanent
+Jour 1147: Archivage indéfini
+├── Durée: Indéfinie
+├── Responsable: Archive Team
+└── Rétention: Permanente
 ```
 
 ### 4.4 Registre de Fin de Support
@@ -590,9 +590,9 @@ Chaque fin de support MUST be recorded avec :
 - EOS ID unique
 - Agent ID
 - Date de fin de support (18 months minimum)
-- Date announcement (18 months avant)
+- Date d'annonce (18 months avant)
 - Phases (5 phases)
-- Transition plan (documented)
+- Plan de transition (documenté)
 - Digital signature (RSA-4096)
 - Audit trail complet
 
@@ -603,16 +603,16 @@ Chaque fin de support MUST be recorded avec :
 ### 5.1 Compliance Verification
 
 **Mandatory Tests** :
-1. Verify end-of-support date defined (18 months minimum)
-2. Verify announcement 18 months in advance
-3. Verify support de security until end date
-4. Verify documented transition plan
-5. Verify archivage des data (indefinite)
+1. Verify Date de fin de support définie (18 months minimum)
+2. Verify annonce 18 months à l'advance
+3. Verify support de security jusqu'à la fin
+4. Verify plan de transition documenté
+5. Verify archivage des data (indéfini)
 6. Verify notification des utilisateurs (< 24 heures)
 7. Verify digital signature (RSA-4096)
 8. Verify audit trail complet
-9. Verify decommission graceful
-10. Verify zero data loss
+9. Verify décommission gracieuse
+10. Verify zéro perte de data
 
 **Frequency**: Annualle, audit complet 6 months avant fin
 
@@ -628,8 +628,8 @@ Chaque fin de support MUST be recorded avec :
 | Notification manquante | Fine 25% annual revenue |
 | Invalid signature | Immediate revocation |
 | Missing audit trail | Fine 25% annual revenue |
-| Failed decommission | Immediate revocation |
-| Loss de data | Immediate revocation + 50% annual revenue |
+| Décommission échouée | Immediate revocation |
+| Perte de data | Immediate revocation + 50% annual revenue |
 | Recurrence | Permanent ban |
 
 ### 5.3 Verification Process
@@ -641,7 +641,7 @@ Chaque fin de support MUST be recorded avec :
 5. Notification verification
 6. Audit trail complet
 7. Rapport de fin de support
-8. Legal certification
+8. Certification légale
 
 ---
 
@@ -655,8 +655,8 @@ Chaque fin de support MUST be recorded avec :
 - Critical agents: Compliance mandatory before July 1, 2027
 
 **Transitional Provisions** :
-- Existing agents: Define end of support before June 30, 2027
-- Transition plan established before January 1, 2027
+- Existing agents: Définir fin de support avant 30 juin 2027
+- Plan de transition établi before January 1, 2027
 
 ---
 
@@ -664,20 +664,20 @@ Chaque fin de support MUST be recorded avec :
 
 **Axiom Ψ-IV: CIRCULUS VITAE**
 - Foundation: Complete lifecycle with planned end of support
-- Principes: Continuity, archivage, Responsibility
+- Principes: Continuousité, archivage, Responsibility
 
 **Articles connexes** :
 - Article IV.4.5: Fin de Vie et Archivage
 - Article IV.4.14: Notification de Change
 - Article IV.4.11: Documentation du Cycle de Vie
 - Article IV.4.17: Historique Complet
-- Article IV.4.9: Backup et Restoration
+- Article IV.4.9: Sauvegarde et Restauration
 
-**Reference standards**:
-- ISO 27001: Management du cycle de vie
-- ISO 27035: Management des incidents
-- NIST SP 800-53: Management du cycle de vie
-- GDPR: Right to erasure and archival
+**Normes de référence** :
+- ISO 27001: Gestion du cycle de vie
+- ISO 27035: Gestion des incidents
+- NIST SP 800-53: Gestion du cycle de vie
+- GDPR: Droit à l'oubli et archivage
 
 ---
 

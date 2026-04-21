@@ -1,21 +1,21 @@
 ---
 title: "Article III.3.3: Deployer Liability"
-axiom: Ψ-III
-article_number: III.3.3
+Axiom: Ψ-III
+numero: III.3.3
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
 tags:
-  - liability
-  - deployer
-  - damages
-  - compensation
-  - legality
+  - Liability
+  - Deployer
+  - Damages
+  - Compensation
+  - Legality
 validations:
-  legal: true
-  technical: true
+  Legal: true
+  technique: true
   editorial: true
 license: CC-BY-SA-4.0
 ---
@@ -343,8 +343,6 @@ impl DeployerLiabilityManager {
 
 ---
 
+**Status**: ✅ Final | **Validation**: Legal ✅ | Technical ✅ | Editorial ✅ | **Next Review**: January 2027
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

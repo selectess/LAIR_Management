@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - mandate-termination
-  - end-conditions
-  - safety-achievement
-  - mandate-conclusion
-  - legacy-provisions
+keywords:
+  - mandate termination
+  - end conditions
+  - safety achievement
+  - mandate conclusion
+  - legacy provisions
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -436,10 +437,10 @@ impl MandateTerminationManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| Premature termination | 100% annual revenue fine + mandate reinstatement |
-| Criteria not met | 95% annual revenue fine + mandate continuation |
-| No legacy provisions | 90% annual revenue fine + mandate continuation |
-| Records falsified | 100% annual revenue fine + criminal prosecution |
+| Premature termination | 100% CA fine + mandate reinstatement |
+| Criteria not met | 95% CA fine + mandate continuation |
+| No legacy provisions | 90% CA fine + mandate continuation |
+| Records falsified | 100% CA fine + criminal prosecution |
 | Recurrence | Permanent ban + criminal prosecution |
 
 ### 5.3 Verification Process
@@ -482,7 +483,4 @@ impl MandateTerminationManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

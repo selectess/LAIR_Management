@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - voting-process
-  - consensus-building
-  - voting-mechanisms
-  - voting-documentation
-  - voting-transparency
+keywords:
+  - voting process
+  - consensus building
+  - voting mechanisms
+  - voting documentation
+  - voting transparency
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -203,12 +204,12 @@ class VotingAndConsensusManager:
 
 | Violation | Sanction |
 |-----------|----------|
-| No voting mechanism | 70% annual revenue fine |
-| Vote manipulation | Immediate revocation + 80% annual revenue |
-| Consensus not pursued | 55% annual revenue fine |
-| Results not verifiable | 60% annual revenue fine |
+| No voting mechanism | 70% CA fine |
+| Vote manipulation | Immediate revocation + 80% CA |
+| Consensus not pursued | 55% CA fine |
+| Results not verifiable | 60% CA fine |
 | Invalid signature | Immediate revocation |
-| Falsified voting | Immediate revocation + 85% annual revenue |
+| Falsified voting | Immediate revocation + 85% CA |
 
 ---
 
@@ -227,7 +228,4 @@ class VotingAndConsensusManager:
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

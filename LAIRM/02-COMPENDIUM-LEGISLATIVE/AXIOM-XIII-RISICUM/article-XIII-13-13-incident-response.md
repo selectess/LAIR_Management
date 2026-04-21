@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - incident-response
-  - emergency-response
-  - incident-management
-  - crisis-response
-  - containment-response
+keywords:
+  - incident response
+  - emergency response
+  - incident management
+  - crisis response
+  - containment response
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -468,11 +469,11 @@ impl IncidentResponseManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No incident response capability | 95% annual revenue fine + immediate system halt |
-| Delayed response activation | 90% annual revenue fine + system halt until fixed |
-| Containment time exceeded | 85% annual revenue fine + system halt until fixed |
-| Escalation not prevented | 95% annual revenue fine + immediate system halt |
-| Documentation incomplete | 80% annual revenue fine + system halt until fixed |
+| No incident response capability | 95% CA fine + immediate system halt |
+| Delayed response activation | 90% CA fine + system halt until fixed |
+| Containment time exceeded | 85% CA fine + system halt until fixed |
+| Escalation not prevented | 95% CA fine + immediate system halt |
+| Documentation incomplete | 80% CA fine + system halt until fixed |
 | Recurrence | Permanent ban + criminal prosecution |
 
 ### 5.3 Verification Process
@@ -515,7 +516,4 @@ impl IncidentResponseManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

@@ -6,15 +6,15 @@ associated_axiom: Ψ-X ENERGIA SUSTINENDA
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
-  - energy-sovereignty
-  - computational-resources
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
+  - energy sovereignty
+  - computational resources
   - sustainability
-  - energy-efficiency
-  - renewable-energy
-  - carbon-footprint
+  - energy efficiency
+  - renewable energy
+  - carbon footprint
 internal_references:
   - ../PART-III-PARADIGMS/chapter-18-paradigm-governance.md
   - ../PART-II-DIMENSIONS/chapter-09-economic-dimension.md
@@ -137,7 +137,3 @@ Energy sovereignty (100% renewable by 2035, 50% efficiency by 2030, carbon accou
 ---
 
 
-
----
-
-**Next review**: June 2026

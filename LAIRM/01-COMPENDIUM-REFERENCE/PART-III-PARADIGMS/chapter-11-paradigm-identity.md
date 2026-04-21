@@ -6,16 +6,16 @@ associated_axiom: Ψ-II IDENTITAS AGENTICA
 Status: Final
 Version: Initiation
 date_creation: 2024-03-18
-last_updated: 2026-03-30
-last_review: 2026-04-03
-tags:
-  - agentic-identity
-  - agent-passport
+last_updated: 2026-04-20
+last_review: 2026-04-20
+keywords:
+  - agentic identity
+  - agent passport
   - DID
   - traceability
   - accountability
-  - decentralized-identifiers
-  - cryptographic-verification
+  - decentralized identifiers
+  - cryptographic verification
 internal_references:
   - chapter-10-paradigm-sovereignty.md
   - ../PART-II-DIMENSIONS/chapter-07-legal-dimension.md
@@ -1245,7 +1245,4 @@ The paradigm of agentic identity transforms autonomous agents from anonymous sys
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

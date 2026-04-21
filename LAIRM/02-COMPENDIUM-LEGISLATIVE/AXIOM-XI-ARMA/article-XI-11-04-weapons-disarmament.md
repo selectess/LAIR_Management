@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
+keywords:
   - disarmament
-  - weapons-deactivation
-  - safe-disposal
+  - weapons deactivation
+  - safe disposal
   - decommissioning
   - end-of-life
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -251,10 +252,10 @@ impl WeaponsDisarmamentManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No disarmament capability | 70% annual revenue fine |
-| Unsafe deactivation | 65% annual revenue fine |
-| Environmental violation | 75% annual revenue fine |
-| No verification | 60% annual revenue fine |
+| No disarmament capability | 70% CA fine |
+| Unsafe deactivation | 65% CA fine |
+| Environmental violation | 75% CA fine |
+| No verification | 60% CA fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -274,7 +275,4 @@ impl WeaponsDisarmamentManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

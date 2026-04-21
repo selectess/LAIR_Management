@@ -7,16 +7,17 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - escalation-control
-  - escalation-limits
-  - force-levels
-  - escalation-monitoring
-  - escalation-prevention
+keywords:
+  - escalation control
+  - escalation limits
+  - force levels
+  - escalation monitoring
+  - escalation prevention
 validations:
   legal: true
   technical: true
   editorial: true
+license: CC-BY-SA 4.0 International
 license: CC-BY-SA-4.0
 ---
 
@@ -242,10 +243,10 @@ impl EscalationControlManager {
 
 | Violation | Sanction |
 |-----------|----------|
-| No escalation limits | 70% annual revenue fine |
-| Disproportionate escalation | 75% annual revenue fine |
-| No monitoring | 65% annual revenue fine |
-| Violation not reported | 60% annual revenue fine |
+| No escalation limits | 70% CA fine |
+| Disproportionate escalation | 75% CA fine |
+| No monitoring | 65% CA fine |
+| Violation not reported | 60% CA fine |
 | Records falsified | Immediate revocation |
 | Recurrence | Permanent ban |
 
@@ -265,7 +266,4 @@ impl EscalationControlManager {
 
 ---
 
-
----
-
-**Next review**: June 2026
+**Last Reviewed**: April 3, 2026

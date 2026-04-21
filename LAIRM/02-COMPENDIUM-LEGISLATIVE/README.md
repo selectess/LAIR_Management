@@ -5,12 +5,12 @@ Version: Initiation
 date_creation: 2024-03-18
 last_updated: 2026-03-30
 last_review: 2026-04-03
-tags:
-  - legislative-corpus
+keywords:
+  - legislative corpus
   - axioms
   - articles
-  - executable-law
-  - agentic-regulation
+  - executable law
+  - agentic regulation
 license: CC-BY-SA-4.0
 ---
 
@@ -84,11 +84,13 @@ The LAIRM Legislative Compendium translates the theoretical paradigms (Part III)
 **Ψ-XVII HUMANITAS TRANSFORMATA** (19 articles)
 - Human augmentation, post-human futures, species identity preservation
 
-**Ψ-XVIII CHARTA COSMICA** (19 articles)
-- Transplanetary governance, multi-world coordination, cosmic equity, interplanetary justice
+### Reserved Axioms (Ψ-XVIII to Ψ-XIX)
 
-**Ψ-XIX IUSTITIA MUNDANA** (19 articles)
-- Global justice, geoeconomic equity, wealth distribution, international fairness
+**Ψ-XVIII RESERVED** (19 articles)
+- Reserved for future governance challenges
+
+**Ψ-XIX RESERVED** (19 articles)
+- Reserved for future governance challenges
 
 ---
 
@@ -126,8 +128,8 @@ Each article contains six mandatory sections:
 | Ψ-XV | 19 | Draft | 2028-06-01 |
 | Ψ-XVI | 19 | Draft | 2035-01-01 |
 | Ψ-XVII | 19 | Draft | 2045-01-01 |
-| Ψ-XVIII | 19 | Final | 2050-01-01 |
-| Ψ-XIX | 19 | Final | 2050-01-01 |
+| Ψ-XVIII | 19 | Reserved | TBD |
+| Ψ-XIX | 19 | Reserved | TBD |
 
 ---
 
@@ -155,7 +157,3 @@ Use legal foundations for litigation and interpretation.
 
 ---
 
-
----
-
-**Next review**: June 2026
