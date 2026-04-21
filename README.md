@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="ImFro.jpeg" alt="LAIRM - The Cybernetic Criterion" width="720">
+  <img src="image.jpeg" alt="LAIRM - The Cybernetic Criterion" width="720">
   
   <h1>LAIRM</h1>
   <h3>The Cybernetic Criterion</h3>
