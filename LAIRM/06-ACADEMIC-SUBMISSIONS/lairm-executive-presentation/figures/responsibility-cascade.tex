@@ -20,7 +20,7 @@
     };
     
     % Responsibility distribution
-    \node[draw,fill=unblue!20,minimum width=2.5cm,minimum height=1.2cm,rounded corners] (dev) at (1,5.5) {
+    \node[draw,fill=legislativeblue!20,minimum width=2.5cm,minimum height=1.2cm,rounded corners] (dev) at (1,5.5) {
         \textbf{Developer}\\
         \textbf{40\%}\\
         Algorithm design\\
@@ -28,7 +28,7 @@
         Objective function
     };
     
-    \node[draw,fill=unblue!20,minimum width=2.5cm,minimum height=1.2cm,rounded corners] (deploy) at (5,5.5) {
+    \node[draw,fill=legislativeblue!20,minimum width=2.5cm,minimum height=1.2cm,rounded corners] (deploy) at (5,5.5) {
         \textbf{Deployer}\\
         \textbf{40\%}\\
         System integration\\
@@ -36,7 +36,7 @@
         Deployment decisions
     };
     
-    \node[draw,fill=unblue!20,minimum width=2.5cm,minimum height=1.2cm,rounded corners] (op) at (9,5.5) {
+    \node[draw,fill=legislativeblue!20,minimum width=2.5cm,minimum height=1.2cm,rounded corners] (op) at (9,5.5) {
         \textbf{Operator}\\
         \textbf{20\%}\\
         Parameter setting\\
@@ -74,13 +74,13 @@
     \draw[->,line width=1.5pt] (op) -- (opliab);
     
     % Total accountability
-    \node[draw,fill=ungold!20,minimum width=7cm,minimum height=0.8cm,rounded corners] (total) at (5,1) {
+    \node[draw,fill=accentgold!20,minimum width=7cm,minimum height=0.8cm,rounded corners] (total) at (5,1) {
         \textbf{100\% Accountability} — No responsibility gap
     };
     
-    \draw[->,line width=2pt,color=ungold] (devliab) -- (total);
-    \draw[->,line width=2pt,color=ungold] (deployliab) -- (total);
-    \draw[->,line width=2pt,color=ungold] (opliab) -- (total);
+    \draw[->,line width=2pt,color=accentgold] (devliab) -- (total);
+    \draw[->,line width=2pt,color=accentgold] (deployliab) -- (total);
+    \draw[->,line width=2pt,color=accentgold] (opliab) -- (total);
     
 \end{tikzpicture}
 \caption{Responsibility cascade model: Distributed liability eliminates accountability gaps}

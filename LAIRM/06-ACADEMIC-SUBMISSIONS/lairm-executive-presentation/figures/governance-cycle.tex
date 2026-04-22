@@ -15,44 +15,44 @@
     \node[font=\small,color=darkgray] at (5,8.6) {Closed-loop control system for autonomous agents};
     
     % Central agent
-    \node[draw,fill=unblue!20,circle,minimum size=1.5cm] (agent) at (5,5) {
+    \node[draw,fill=legislativeblue!20,circle,minimum size=1.5cm] (agent) at (5,5) {
         \textbf{Autonomous}\\
         \textbf{Agent}
     };
     
     % Cycle steps
-    \node[draw,fill=ungold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (monitor) at (8,5) {
+    \node[draw,fill=accentgold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (monitor) at (8,5) {
         \textbf{1. Monitor}\\
         Real-time observation
     };
     
-    \node[draw,fill=ungold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (detect) at (8,3) {
+    \node[draw,fill=accentgold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (detect) at (8,3) {
         \textbf{2. Detect}\\
         Anomaly detection
     };
     
-    \node[draw,fill=ungold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (alert) at (5,1.5) {
+    \node[draw,fill=accentgold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (alert) at (5,1.5) {
         \textbf{3. Alert}\\
         Human notification
     };
     
-    \node[draw,fill=ungold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (intervene) at (2,3) {
+    \node[draw,fill=accentgold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (intervene) at (2,3) {
         \textbf{4. Intervene}\\
         Human override
     };
     
-    \node[draw,fill=ungold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (correct) at (2,5) {
+    \node[draw,fill=accentgold!20,minimum width=2cm,minimum height=0.8cm,rounded corners] (correct) at (2,5) {
         \textbf{5. Correct}\\
         Adjust parameters
     };
     
     % Arrows forming cycle
-    \draw[->,line width=2pt,color=unblue] (agent) -- (monitor);
-    \draw[->,line width=2pt,color=unblue] (monitor) -- (detect);
-    \draw[->,line width=2pt,color=unblue] (detect) -- (alert);
-    \draw[->,line width=2pt,color=unblue] (alert) -- (intervene);
-    \draw[->,line width=2pt,color=unblue] (intervene) -- (correct);
-    \draw[->,line width=2pt,color=unblue] (correct) -- (agent);
+    \draw[->,line width=2pt,color=legislativeblue] (agent) -- (monitor);
+    \draw[->,line width=2pt,color=legislativeblue] (monitor) -- (detect);
+    \draw[->,line width=2pt,color=legislativeblue] (detect) -- (alert);
+    \draw[->,line width=2pt,color=legislativeblue] (alert) -- (intervene);
+    \draw[->,line width=2pt,color=legislativeblue] (intervene) -- (correct);
+    \draw[->,line width=2pt,color=legislativeblue] (correct) -- (agent);
     
     % Audit trail
     \node[draw,fill=lightgray,minimum width=2.5cm,minimum height=0.8cm,rounded corners] (audit) at (5,7) {
@@ -74,7 +74,7 @@
     \draw[->,line width=2pt,color=red] (killswitch) -- (agent);
     
     % Feedback loop label
-    \node[font=\small\itshape,color=unblue] at (5,-0.5) {Continuous feedback loop ensures human supremacy};
+    \node[font=\small\itshape,color=legislativeblue] at (5,-0.5) {Continuous feedback loop ensures human supremacy};
     
 \end{tikzpicture}
 \caption{Cybernetic governance cycle: Closed-loop control with human-in-the-loop}

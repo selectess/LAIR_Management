@@ -1,27 +1,39 @@
 % ============================================================================
 % LAIRM Document
 % date_creation: 2024-03-18
-% last_updated: 2026-04-20
-% last_review: 2026-04-20
+% last_updated: 2026-04-22
+% last_review: 2026-04-22
 % ============================================================================
 
 % ============================================================================
-% LAIRM: CUSTOM COMMANDS AND MACROS
-% Reusable commands for consistent formatting throughout the document
+% LAIRM: CUSTOM COMMANDS
+% Custom LaTeX commands for the document
 % ============================================================================
 
 % ============================================================================
-% DOCUMENT-SPECIFIC COMMANDS
+% DOCUMENT METADATA COMMANDS
 % ============================================================================
 
-% LAIRM acronym formatting
-\newcommand{\lairm}{\textsc{Lairm}}
-
-% Axiom reference formatting (e.g., Ψ-I)
-\newcommand{\axiomref}[1]{\textit{Ψ-#1}}
+% Document number
+\newcommand{\docnumber}{LAIRM-2026-001}
 
 % ============================================================================
-% USAGE EXAMPLES
+% ACRONYM COMMANDS
 % ============================================================================
-% \lairm                    → Produces "LAIRM" in small caps
-% \axiomref{I}              → Produces "Ψ-I" in italics
+
+% LAIRM acronym
+\newcommand{\lairm}{\textbf{LAIRM}}
+
+% ARAM acronym
+\newcommand{\aram}{\textbf{ARAM}}
+
+% ============================================================================
+% REFERENCE COMMANDS
+% ============================================================================
+
+% Axiom reference command
+\newcommand{\axiomref}[1]{\textbf{Axiom~#1}}
+
+% Article reference command
+\newcommand{\articleref}[1]{\textbf{Article~#1}}
+
