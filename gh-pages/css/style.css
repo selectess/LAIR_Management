@@ -5,10 +5,9 @@
   --background-secondary: #ffffff;
   --background-tertiary: #e8dfd0;
 
-  /* Accent - Gold/Midnight Blue palette */
+  /* Accent - Gold/Blue palette */
   --accent-gold: #c9a962;
-  --accent-blue: #0a1929;
-  --accent-blue-dark: #051018;
+  --accent-blue: #003366;
   --accent-beige: #d4c4a8;
 
   /* Text */
@@ -153,46 +152,67 @@ body {
   animation: fadeIn 1s ease-out;
   position: relative;
   z-index: 2;
+  background: rgba(245, 240, 232, 0.85);
+  padding: var(--space-12) var(--space-8);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(10px);
 }
 
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 900;
-  color: #003366;
+  font-weight: 800;
+  color: var(--accent-blue);
   margin-bottom: var(--space-4);
   animation: slideUp 0.8s ease-out;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 20px rgba(255, 255, 255, 0.8);
 }
 
 .hero-subtitle {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.75rem);
-  color: #ffffff;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  background: linear-gradient(135deg, #c9a962 0%, #d4c4a8 50%, #c9a962 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: var(--space-6);
   animation: slideUp 0.8s ease-out 0.2s both;
-  font-weight: 800;
-  letter-spacing: 0.05em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 30px rgba(201, 169, 98, 0.5);
+  filter: drop-shadow(0 2px 4px rgba(201, 169, 98, 0.3));
+  position: relative;
 }
 
 .hero-subtitle::before {
-  display: none;
+  content: 'The Cybernetic Criterion';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #c9a962 0%, #d4c4a8 50%, #c9a962 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: blur(8px);
+  opacity: 0.6;
+  z-index: -1;
 }
 
 .hero-description {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: #003366;
+  color: var(--text-secondary);
   margin-bottom: var(--space-8);
   line-height: 1.8;
   animation: slideUp 0.8s ease-out 0.4s both;
-  font-weight: 700;
 }
 
 .hero-period {
   display: block;
   margin-top: var(--space-2);
-  font-weight: 900;
-  color: #ffffff;
+  font-weight: 600;
+  color: var(--accent-gold);
 }
 
 .hero-cta {
@@ -201,7 +221,6 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   animation: slideUp 0.8s ease-out 0.6s both;
-  margin-top: var(--space-16);
 }
 
 /* Buttons */
