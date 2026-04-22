@@ -1,17 +1,43 @@
 <div align="center">
   <img src="image.jpeg" alt="LAIRM - The Cybernetic Criterion" width="720">
   
-  <h1>LAIRM</h1>
-  <h3>The Cybernetic Criterion</h3>
+  <h1>LAIRM: The Global Agentive Constitution</h1>
+  <h2>The Cybernetic Criterion</h2>
   <p><strong>Legislature for Autonomous Intelligent Resources Management</strong></p>
   <p><em>Global Agentive Constitution 2026–2036</em></p>
   
   [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19699117.svg)](https://doi.org/10.5281/zenodo.19699117)
+  [![Published on Zenodo](https://img.shields.io/badge/Published%20on-Zenodo-blue)](https://zenodo.org/record/19699117)
   <img src="https://img.shields.io/badge/Axioms-19-blue" alt="19 Axioms">
   <img src="https://img.shields.io/badge/Articles-361-green" alt="361 Articles">
   <img src="https://img.shields.io/badge/Chapters-28-orange" alt="28 Chapters">
   <img src="https://img.shields.io/badge/License-CC--BY--SA--4.0-purple" alt="CC-BY-SA-4.0">
 </div>
+
+---
+
+## 📚 Academic Publication
+
+**Published on Zenodo with permanent DOI:**
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19699117.svg)](https://doi.org/10.5281/zenodo.19699117)
+
+- **DOI**: [10.5281/zenodo.19699117](https://doi.org/10.5281/zenodo.19699117)
+- **Zenodo Record**: [zenodo.org/record/19699117](https://zenodo.org/record/19699117)
+- **License**: CC-BY-4.0 (Open Access)
+- **Archived**: CERN infrastructure (long-term preservation)
+- **Discoverable**: Google Scholar, OpenAIRE, CrossRef
+
+**Citation:**
+```bibtex
+@software{lairm2026,
+  title={LAIRM: The Global Agentive Constitution - The Cybernetic Criterion},
+  author={wahbi, mehdi},
+  year={2026},
+  doi={10.5281/zenodo.19699117},
+  url={https://doi.org/10.5281/zenodo.19699117}
+}
+```
 
 ---
 
