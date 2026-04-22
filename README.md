@@ -6,6 +6,7 @@
   <p><strong>Legislature for Autonomous Intelligent Resources Management</strong></p>
   <p><em>Global Agentive Constitution 2026–2036</em></p>
   
+  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19699117.svg)](https://doi.org/10.5281/zenodo.19699117)
   <img src="https://img.shields.io/badge/Axioms-19-blue" alt="19 Axioms">
   <img src="https://img.shields.io/badge/Articles-361-green" alt="361 Articles">
   <img src="https://img.shields.io/badge/Chapters-28-orange" alt="28 Chapters">

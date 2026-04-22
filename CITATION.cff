@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: "LAIRM: The Global Agentive Constitution"
+message: "If you use this software or document, please cite it using these metadata."
+type: software
+authors:
+  - family-names: "wahbi"
+    given-names: "mehdi"
+    affiliation: "LAIRM International Framework"
+    orcid: "https://orcid.org/0009-0007-0110-9437"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.19699117"
+  - type: url
+    value: "https://zenodo.org/record/19699117"
+repository-code: "https://github.com/selectess/LAIR_Management"
+url: "https://selectess.github.io/LAIR_Management/"
+abstract: "Comprehensive international legislative framework for autonomous agent governance. Includes 19 foundational axioms, 361 executable articles, and technical reference implementation (ARAM). Addresses human supremacy, perpetual accountability, and operational transparency for autonomous intelligent systems."
+keywords:
+  - "autonomous agents"
+  - "AI governance"
+  - "cybernetic control"
+  - "algorithmic accountability"
+  - "constitutional framework"
+  - "agent regulation"
+  - "ARAM architecture"
+  - "kill-switch mechanisms"
+  - "audit trails"
+  - "international law"
+  - "UN framework"
+license: "CC-BY-4.0"
+version: "1.0"
+date-released: 2026-04-22
