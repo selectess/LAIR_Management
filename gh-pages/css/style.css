@@ -141,11 +141,34 @@ body {
   justify-content: center;
   text-align: center;
   padding: var(--space-24) var(--space-6);
-  background-image: url('../images/herobackground.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-blue-dark) 100%);
   position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(201, 169, 98, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(201, 169, 98, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(201,169,98,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -153,67 +176,111 @@ body {
   animation: fadeIn 1s ease-out;
   position: relative;
   z-index: 2;
-  background: rgba(245, 240, 232, 0.85);
-  padding: var(--space-12) var(--space-8);
-  border-radius: 1.5rem;
-  backdrop-filter: blur(10px);
+  padding: var(--space-16) var(--space-8);
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: var(--space-2) var(--space-6);
+  background: rgba(201, 169, 98, 0.15);
+  border: 1px solid var(--accent-gold);
+  border-radius: 2rem;
+  color: var(--accent-gold);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+  animation: slideUp 0.8s ease-out;
 }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-size: clamp(3rem, 10vw, 6rem);
   font-weight: 800;
-  color: var(--accent-blue);
+  color: white;
   margin-bottom: var(--space-4);
-  animation: slideUp 0.8s ease-out;
+  animation: slideUp 0.8s ease-out 0.1s both;
   letter-spacing: -0.02em;
-  text-shadow: 0 2px 20px rgba(255, 255, 255, 0.8);
+  line-height: 1.1;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-beige));
+  margin: 0 auto var(--space-6);
+  animation: slideUp 0.8s ease-out 0.2s both;
+  border-radius: 2px;
 }
 
 .hero-subtitle {
   font-family: var(--font-display);
-  font-size: clamp(1.25rem, 3vw, 2rem);
-  background: linear-gradient(135deg, #c9a962 0%, #d4c4a8 50%, #c9a962 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--accent-gold);
   margin-bottom: var(--space-6);
-  animation: slideUp 0.8s ease-out 0.2s both;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-shadow: 0 0 30px rgba(201, 169, 98, 0.5);
-  filter: drop-shadow(0 2px 4px rgba(201, 169, 98, 0.3));
-  position: relative;
-}
-
-.hero-subtitle::before {
-  content: 'The Cybernetic Criterion';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(135deg, #c9a962 0%, #d4c4a8 50%, #c9a962 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: blur(8px);
-  opacity: 0.6;
-  z-index: -1;
+  animation: slideUp 0.8s ease-out 0.3s both;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .hero-description {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: var(--space-8);
   line-height: 1.8;
   animation: slideUp 0.8s ease-out 0.4s both;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-period {
   display: block;
-  margin-top: var(--space-2);
+  margin-top: var(--space-3);
   font-weight: 600;
   color: var(--accent-gold);
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+  animation: slideUp 0.8s ease-out 0.5s both;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(201, 169, 98, 0.3);
 }
 
 .hero-cta {
@@ -240,7 +307,7 @@ body {
 
 .btn-primary {
   background: var(--accent-gold);
-  color: white;
+  color: var(--accent-blue);
   border-color: var(--accent-gold);
 }
 
@@ -253,15 +320,16 @@ body {
 
 .btn-secondary {
   background: transparent;
-  color: var(--accent-gold);
-  border-color: var(--accent-gold);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .btn-secondary:hover {
-  background: var(--accent-gold);
-  color: white;
+  background: white;
+  color: var(--accent-blue);
+  border-color: white;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(201, 169, 98, 0.35);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
 }
 
 /* Sections */
@@ -796,6 +864,22 @@ body {
     padding: var(--space-16) var(--space-4);
   }
 
+  .hero-content {
+    padding: var(--space-12) var(--space-6);
+  }
+
+  .hero-stats {
+    gap: var(--space-4);
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
   .section {
     padding: var(--space-16) var(--space-4);
   }
@@ -817,14 +901,30 @@ body {
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .hero-subtitle {
     font-size: 1.25rem;
   }
 
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: var(--space-1) var(--space-4);
+  }
+
   .section-title {
     font-size: 1.75rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
   }
 }
