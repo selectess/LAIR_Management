@@ -12,49 +12,100 @@
   <style>
     .manifesto-hero {
       padding: 140px var(--space-6) 80px;
-      background: linear-gradient(135deg, var(--accent-beige) 0%, #c4b498 100%);
+      background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-blue-dark) 100%);
       text-align: center;
       border-bottom: 3px solid var(--accent-gold);
+      position: relative;
+      overflow: hidden;
+    }
+    .manifesto-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(201, 169, 98, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(201, 169, 98, 0.08) 0%, transparent 50%);
+      pointer-events: none;
     }
     .manifesto-hero .hero-logo {
-      width: 220px;
+      width: 180px;
       height: auto;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       display: block;
       margin-left: auto;
       margin-right: auto;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    }
+    .manifesto-hero .hero-badge {
+      display: inline-block;
+      padding: var(--space-2) var(--space-6);
+      background: rgba(201, 169, 98, 0.15);
+      border: 1px solid var(--accent-gold);
+      border-radius: 2rem;
+      color: var(--accent-gold);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
     .manifesto-hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      color: var(--accent-blue);
-      margin-bottom: 0.75rem;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      color: white;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .manifesto-hero .hero-divider {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-gold), var(--accent-beige));
+      border-radius: 2px;
     }
     .manifesto-hero .hero-sub {
       font-family: var(--font-display);
-      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
       color: var(--accent-gold);
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
     }
     .manifesto-stats {
       display: flex;
       justify-content: center;
-      gap: 3rem;
+      align-items: center;
+      gap: var(--space-6);
       flex-wrap: wrap;
+      margin-bottom: 2rem;
     }
-    .manifesto-stats .stat-item { text-align: center; }
+    .manifesto-stats .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-1);
+    }
     .manifesto-stats .stat-number {
       display: block;
       font-family: var(--font-display);
       font-size: 2.5rem;
       font-weight: 800;
       color: var(--accent-gold);
+      line-height: 1;
     }
     .manifesto-stats .stat-label {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.7);
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.7);
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+    }
+    .manifesto-stats .stat-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(201, 169, 98, 0.3);
     }
     .manifesto-body {
       max-width: 1280px;
@@ -231,6 +282,7 @@
     }
     @media (max-width: 768px) {
       .manifesto-stats { gap: 1.5rem; }
+      .manifesto-stats .stat-divider { display: none; }
       .manifesto-body { padding: 40px var(--space-4); }
       .axiom-doc-articles { grid-template-columns: 1fr; }
     }
@@ -257,12 +309,28 @@
   <section class="manifesto-hero">
     <div class="container">
       <img src="images/logo-manifest.png" alt="LAIRM Logo" class="hero-logo">
-      <h1>Complete Documentation</h1>
-      <p class="hero-sub">The Cybernetic Criterion</p>
+      <div class="hero-badge" style="margin-bottom: 1rem;">Complete Documentation</div>
+      <h1>The Cybernetic Criterion</h1>
+      <div class="hero-divider" style="margin: 0 auto 1.5rem;"></div>
+      <p class="hero-sub">Global Agentive Constitution 2026–2036</p>
       <div class="manifesto-stats">
-        <div class="doc-section-intro" style="color: var(--accent-blue); max-width: 900px; margin: 0 auto; font-size: 1rem; line-height: 1.8;">
-          <strong style="color: var(--accent-gold);">Abstract:</strong> The LAIRM (Legislature for Autonomous Intelligent Resources Management) framework establishes a comprehensive constitutional governance system for autonomous intelligent agents. This compendium synthesizes 19 foundational axioms into 361 executable articles, organized across 28 reference chapters and 456 verified documents. The framework addresses critical dimensions including human supremacy, agent identity verification, cascading responsibility, lifecycle management, interoperability standards, audit mechanisms, continuous adaptation, ethical principles, existential risk mitigation, geoeconomic justice, technological resilience, spatial jurisdiction, human-agent coexistence, transplanetary governance, and global justice. Each axiom follows a 19-article matrix structure, establishing binding legal, technical, and ethical requirements for autonomous agent deployment, operation, and oversight. The Cybernetic Criterion represents a unified approach to AI governance grounded in human authority, transparent accountability, and systemic resilience.
+        <div class="stat-item">
+          <span class="stat-number">19</span>
+          <span class="stat-label">Axioms</span>
         </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">361</span>
+          <span class="stat-label">Articles</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">28</span>
+          <span class="stat-label">Chapters</span>
+        </div>
+      </div>
+      <div class="doc-section-intro" style="color: var(--accent-beige); max-width: 900px; margin: 2rem auto 0; font-size: 1rem; line-height: 1.8;">
+        <strong style="color: var(--accent-gold);">Abstract:</strong> The LAIRM (Legislature for Autonomous Intelligent Resources Management) framework establishes a comprehensive constitutional governance system for autonomous intelligent agents. This compendium synthesizes 19 foundational axioms into 361 executable articles, organized across 28 reference chapters and 456 verified documents. The framework addresses critical dimensions including human supremacy, agent identity verification, cascading responsibility, lifecycle management, interoperability standards, audit mechanisms, continuous adaptation, ethical principles, existential risk mitigation, geoeconomic justice, technological resilience, spatial jurisdiction, human-agent coexistence, transplanetary governance, and global justice. Each axiom follows a 19-article matrix structure, establishing binding legal, technical, and ethical requirements for autonomous agent deployment, operation, and oversight. The Cybernetic Criterion represents a unified approach to AI governance grounded in human authority, transparent accountability, and systemic resilience.
       </div>
     </div>
   </section>
@@ -1021,5 +1089,19 @@
   </footer>
 
   <script src="js/main.js"></script>
+  
+  <!-- Zenodo Publication Section -->
+  <div style="background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%); padding: 40px 20px; text-align: center; margin-top: 60px; border-top: 3px solid #c9a962;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #1a2332; margin-bottom: 15px;">Academic Publication</h3>
+      <p style="color: #555; font-size: 0.95rem; margin-bottom: 20px;">This document is published on Zenodo with a permanent DOI for academic citation and long-term archival.</p>
+      <p style="margin-bottom: 15px;">
+        <a href="https://doi.org/10.5281/zenodo.19699117" target="_blank" style="display: inline-block; padding: 12px 24px; background: #1a2332; color: #c9a962; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.95rem;">
+          📚 View on Zenodo: DOI 10.5281/zenodo.19699117
+        </a>
+      </p>
+      <img src="https://zenodo.org/badge/DOI/10.5281%2Fzenodo.19699117.svg" alt="DOI Badge" style="margin-top: 15px;">
+    </div>
+  </div>
 </body>
 </html>
